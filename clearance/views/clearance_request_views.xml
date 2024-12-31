@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem
+        id="clearance_menu_root"
+        name="Clearance"
+        web_icon="clearance,static/description/icon.png"
+        groups="clearance.group_reception_responsible,sales_team.group_sale_manager,clearance.group_data_entry,clearance.group_translation_officer,clearance.group_shipping_agent_responsible,clearance.group_admin_setting,clearance.group_customs_declaration_responsible,clearance.group_customs_responsible"
+    />
+    <menuitem
+        id="clearance_configuration_menu"
+        name="Configuration"
+        parent="clearance_menu_root"
+        groups="clearance.group_admin_setting"
+    />
+    <record id="clearance_request_view_search" model="ir.ui.view">
+        <field name="name">clearance.request.view.search</field>
+        <field name="model">clearance.request</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="partner_id" />
+                <field name="partner_email" />
+                <field name="partner_phone" />
+                <field name="user_id" />
+                <field name="shipping_number" />
+                <field name="statement_number" />
+                <field name="total_weight" />
+                <group expand="0" string="Group By">
+                    <filter string="State" name="state" context="{'group_by':'state'}" />
+                    <filter string="Customer" name="partner_id" context="{'group_by':'partner_id'}" />
+                    <filter string="Request type" name="request_type" context="{'group_by':'request_type'}" />
+                    <filter string="Receipt method" name="receipt_method" context="{'group_by':'receipt_method'}" />
+                    <filter string="Responsible" name="responsible" context="{'group_by':'user_id'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+    <record id="clearance_request_view_kanban" model="ir.ui.view">
+        <field name="name">clearance.request.view.kanban</field>
+        <field name="model">clearance.request</field>
+        <field name="arch" type="xml">
+            <kanban
+                default_group_by="state"
+                class="o_kanban_small_column o_opportunity_kanban"
+                archivable="false"
+                sample="1"
+                quick_create="false"
+            >
+                <field name="date" />
+                <field name="name" />
+                <field name="partner_id" />
+                <field name="request_type" />
+                <field name="receipt_method" />
+                <field name="activity_ids" />
+                <field name="activity_state" />
+                <field name="state" />
+                <templates>
+                    <t t-name="kanban-tooltip">
+                    </t>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_card oe_kanban_global_click oe_semantic_html_override">
+                            <div class="oe_kanban_content" tooltip="kanban-tooltip">
+                                <div class="o_kanban_record_top">
+                                    <div class="o_kanban_record_headings">
+                                        <strong class="o_kanban_record_title">
+                                            <field name="name" />
+                                        </strong>
+                                    </div>
+                                </div>
+                                <div class="o_kanban_record_body">
+                                    <span name="date">Date:
+                                        <field name="date" />
+                                        <br />
+                                    </span>
+                                    <span name="date">Customer:
+                                        <field name="partner_id" />
+                                        <br />
+                                    </span>
+                                    <span>Request type:
+                                        <field name="request_type" />
+                                        <br />
+                                    </span>
+                                    <span name="receipt_method">Receipt method:
+                                        <field name="receipt_method" />
+                                        <br />
+                                    </span>
+                                </div>
+                                <div class="o_kanban_record_bottom">
+                                    <div class="oe_kanban_bottom_left">
+                                    </div>
+                                    <div class="oe_kanban_bottom_right">
+                                        <div class="o_kanban_inline_block ml4 mr4">
+                                            <field name="activity_ids" widget="kanban_activity" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="oe_clear" />
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+    <record id="clearance_request_view_tree" model="ir.ui.view">
+        <field name="name">clearance.request.view.tree</field>
+        <field name="model">clearance.request</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="date" />
+                <field name="shipping_number" string="B/L No" />
+                <field name="statement_number" />
+                <field name="partner_id" />
+                <field name="number_shipment" string="Number" class="text-center" />
+                <field name="shipment_type" optional="hide" />
+                <field name="deadline_shipment_receive" />
+                <field name="request_type" />
+                <field name="receipt_method" optional="hide" />
+                <field name="user_id" invisible="context.get('my_order', False)" optional="hide" />
+                <field
+                    name="state"
+                    decoration-primary="state=='draft'"
+                    decoration-info="state=='customs_statement'"
+                    decoration-danger="state=='customs_clearance'"
+                    decoration-warning="state=='transport'"
+                />
+                <field name="is_not_shipping_agent_data" width="2px;" widget="widget_shipping_agent_data" />
+                <field name="is_not_customs_declaration_data" width="2px;" widget="widget_customs_declaration_data" />
+                <field name="is_not_goods_data" width="2px;" widget="widget_is_not_goods_data" />
+                <field name="is_equals_weight" width="2px;" widget="widget_is_equals_weight" />
+                <field name="is_not_customs_data" width="2px;" widget="widget_is_not_customs_data" />
+            </tree>
+        </field>
+    </record>
+    <record id="clearance_request_view_form" model="ir.ui.view">
+        <field name="name">clearance.request.view.form</field>
+        <field name="model">clearance.request</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button
+                        name="action_cancel"
+                        string="Cancel"
+                        type="object"
+                        attrs="{'invisible':[('state', '=','canceled')]}"
+                        class="btn btn-danger"
+                        groups="clearance.group_responsible_cancel"
+                    />
+                    <button
+                        name="set_to_draft"
+                        string="Set To Draft"
+                        type="object"
+                        attrs="{'invisible':[('state','=','draft')]}"
+                        class="btn-primary"
+                        groups="clearance.group_set_to_draft_clearance"
+                    />
+                    <button
+                        name="action_send"
+                        string="Send"
+                        type="object"
+                        states="draft"
+                        class="btn-primary"
+                        groups="clearance.group_reception_responsible,sales_team.group_sale_manager,clearance.group_data_entry"
+                    />
+                    <button
+                        name="action_customs_statement"
+                        string="Validate"
+                        type="object"
+                        states="customs_clearance"
+                        class="btn-success"
+                        groups="clearance.group_translation_officer"
+                    />
+                    <button
+                        name="action_transport"
+                        string="Validate"
+                        type="object"
+                        states="customs_statement"
+                        class="btn-success"
+                        groups="clearance.group_customs_declaration_responsible,clearance.group_customs_responsible"
+                    />
+                    <field
+                        name="state"
+                        widget="statusbar"
+                        statusbar_visible="draft,customs_clearance,customs_statement,transport"
+                    />
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="attachment_tree_view" type="object" icon="fa-files-o">
+                            <field
+                                name="attachment_count"
+                                class="o_stat_value"
+                                string="Attachments"
+                                widget="statinfo"
+                            />
+                        </button>
+                        <button
+                            name="sales_tree_view"
+                            type="object"
+                            icon="fa-signal"
+                            attrs="{'invisible': [('state', '=', 'draft')]}"
+                            groups="account.group_account_manager"
+                        >
+                            <field name="sales_number" class="o_stat_value" string="Sales" widget="statinfo" />
+                        </button>
+                        <button
+                            name="action_view_invoices"
+                            type="object"
+                            icon="fa-pencil-square-o"
+                            attrs="{'invisible': [('state', '=', 'draft')]}"
+                            groups="clearance.group_customs_responsible"
+                        >
+                            <field
+                                name="invoices_amount"
+                                class="o_stat_value"
+                                string="Invoices"
+                                widget="statinfo"
+                                groups="clearance.group_customs_responsible"
+                            />
+                        </button>
+                        <button
+                            name="payments_tree_view"
+                            type="object"
+                            icon="fa-money"
+                            attrs="{'invisible': [('state', '=', 'draft')]}"
+                            groups="clearance.group_customs_responsible"
+                        >
+                            <field name="payments_amount" class="o_stat_value" string="Payments" widget="statinfo" />
+                        </button>
+                    </div>
+                    <field name="is_not_shipping_agent_data" invisible="1" />
+                    <field name="is_not_customs_declaration_data" invisible="1" />
+                    <field name="is_not_goods_data" invisible="1" />
+                    <field name="is_not_customs_data" invisible="1" />
+                    <field name="is_equals_weight" invisible="1" />
+                    <span
+                        attrs="{'invisible': ['|', ('is_equals_weight','=', False), ('request_type','in', ['storage','transport'])]}"
+                        class="fa fa-building pull-right"
+                        style="color:blue;"
+                        role="img"
+                        aria-label="Warning: The total weight of shipment type lines must be equals to total weight"
+                        title="Warning: The total weight of shipment type lines must be equals to total weight"
+                    />
+                    <span
+                        attrs="{'invisible': ['|', ('is_not_customs_data','=', False), ('request_type','in', ['storage','transport'])]}"
+                        class="fa fa-money pull-right"
+                        style="color:red;"
+                        role="img"
+                        aria-label="Warning: All Customs data must be filled"
+                        title="Warning: All Customs data must be filled"
+                    />
+                    <span
+                        attrs="{'invisible': ['|', ('is_not_goods_data','=', False), ('request_type','in', ['storage','transport'])]}"
+                        class="fa fa-cubes pull-right"
+                        style="color:red;"
+                        role="img"
+                        aria-label="Warning: All Goods data must be filled"
+                        title="Warning: All Goods data must be filled"
+                    />
+                    <span
+                        attrs="{'invisible': ['|', ('is_not_customs_declaration_data','=', False), ('request_type','in', ['storage','transport'])]}"
+                        class="fa fa-file pull-right"
+                        style="color:red;"
+                        role="img"
+                        aria-label="Warning: All Customs Declaration data must be filled"
+                        title="Warning: All Customs Declaration data must be filled"
+                    />
+                    <span
+                        attrs="{'invisible': ['|', ('is_not_shipping_agent_data','=',False), ('request_type','in', ['storage','transport'])]}"
+                        class="fa fa-ship pull-right"
+                        style="color:red;"
+                        role="img"
+                        aria-label="Warning: All shipping agent data must be filled"
+                        title="Warning: All shipping agent data must be filled"
+                    />
+                    <group>
+                        <group string="Master data" id="clearance_master_data">
+                            <field name="name" attrs="{'invisible': [('id','=',False)]}" />
+                            <field name="date" />
+                            <field name="partner_id" options="{'no_create': True}" />
+                            <field name="partner_email" />
+                            <field name="partner_phone" />
+                            <field name="reference" />
+                            <field name="request_type" widget="radio" options="{'horizontal': true}" />
+                            <field name="receipt_method" widget="radio" options="{'horizontal': true}" />
+                            <field name="other_ids" widget="many2many_tags" />
+                            <field
+                                name="company_id"
+                                groups="base.group_multi_company"
+                                options="{'no_create': True,'no_open': True}"
+                            />
+                            <field name="service_type" widget="radio" options="{'horizontal': true}" />
+                        </group>
+                        <group string="Shipping Policy">
+                            <field name="shipping_number" />
+                            <field name="vessel" />
+                            <field name="port_lading" />
+                            <field name="shipping_type" widget="radio" options="{'horizontal': true}" />
+                            <field name="shipment_type" widget="radio" options="{'horizontal': true}" />
+                            <field
+                                name="shipment_type_lcl_id"
+                                widget="radio"
+                                options="{'horizontal': true}"
+                                attrs="{'invisible': [('shipment_type','!=','lcl')]}"
+                            />
+                            <field
+                                name="total_weight"
+                                force_save="1"
+                                attrs="{'invisible': [('shipment_type','!=','fcl')]}"
+                            />
+                            <label for="number_shipment" />
+                            <div class="o_row">
+                                <field name="number_shipment" force_save="1" />
+                                <button
+                                    name="create_shipment_lines"
+                                    type="object"
+                                    attrs="{'invisible': [('state', '!=', 'draft')]}"
+                                    aria-label="Create Shipment Details"
+                                    title="Create Shipment Details"
+                                    class="btn btn-primary fa fa-copy"
+                                    role="img"
+                                />
+                            </div>
+                            <field name="shipment_type_line_ids" string="Shipment details">
+                                <tree editable="1" create="0">
+                                    <field name="clearance_request_id" invisible="1" />
+                                    <field
+                                        name="service_id"
+                                        attrs="{'column_invisible': ['|',('parent.shipment_type','!=','other'),('parent.request_type','!=','other_service')], 'required': [('parent.shipment_type','=','other'),('parent.request_type','=','other_service')]}"
+                                    />
+                                    <field
+                                        name="quantity"
+                                        attrs="{'column_invisible': ['|',('parent.shipment_type','!=','other'),('parent.request_type','!=','other_service')], 'required': [('parent.shipment_type','=','other'),('parent.request_type','=','other_service')]}"
+                                    />
+                                    <field
+                                        name="truck_type_id"
+                                        options="{'no_create':True, 'no_open':True}"
+                                        attrs="{'column_invisible': ['|',('parent.shipment_type','!=','other'),('parent.request_type','not in', ['storage','transport'])], 'required': [('parent.shipment_type','=','other'),('parent.request_type','in', ['storage','transport'])]}"
+                                    />
+                                    <field
+                                        name="route_id"
+                                        options="{'no_create':True, 'no_open':True}"
+                                        attrs="{'column_invisible': ['|',('parent.shipment_type','!=','other'),('parent.request_type','not in', ['storage','transport'])], 'required': [('parent.shipment_type','=','other'),('parent.request_type','in', ['storage','transport'])]}"
+                                    />
+                                    <field
+                                        name="container_number"
+                                        attrs="{'column_invisible': ['|', ('parent.shipment_type_lcl_id','=',%(clearance.clearance_shipment_type_lcl_normal)d),('parent.shipment_type','=','other')], 'required': [('parent.shipment_type','=','fcl')]}"
+                                    />
+                                    <field
+                                        name="container_category_id"
+                                        attrs="{'column_invisible': ['|', ('parent.shipment_type_lcl_id','=',%(clearance.clearance_shipment_type_lcl_normal)d),('parent.shipment_type','=','other')], 'required': [('parent.shipment_type','=','fcl')]}"
+                                        options="{'no_create': True}"
+                                        required="1"
+                                    />
+                                    <field name="company_id" invisible="1" />
+                                    <field
+                                        name="shipment_type_size_id"
+                                        options="{'no_create': True}"
+                                        attrs="{'column_invisible': [('parent.shipment_type','not in',['lcl', 'fcl'])], 'required': [('parent.shipment_type','in',['lcl', 'fcl'])]}"
+                                    />
+                                    <field
+                                        name="type_lcl"
+                                        attrs="{'column_invisible': [('parent.shipment_type_lcl_id','!=',%(clearance.clearance_shipment_type_lcl_normal)d)], 'required': [('parent.shipment_type','=','lcl')]}"
+                                    />
+                                    <field
+                                        name="uom_id"
+                                        options="{'no_open': True, 'no_create': True}"
+                                        groups="uom.group_uom"
+                                        attrs="{'column_invisible': ['|', ('parent.shipment_type_lcl_id','=',%(clearance.clearance_shipment_type_lcl_normal)d),('parent.shipment_type','=','other')], 'required': [('parent.shipment_type','=','fcl')]}"
+                                    />
+                                    <field
+                                        name="weight"
+                                        attrs="{'column_invisible': ['|', ('parent.shipment_type_lcl_id','=',%(clearance.clearance_shipment_type_lcl_normal)d),('parent.shipment_type','=','other')], 'required': [('parent.shipment_type','=','fcl')]}"
+                                        sum="Total"
+                                    />
+                                </tree>
+                            </field>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="supplier_invoices" string="Supplier invoices">
+                            <group>
+                                <field name="clearance_invoice_ids" nolabel="1">
+                                    <tree editable="1">
+                                        <field name="number" />
+                                        <field name="invoice_number" />
+                                        <field name="invoice_type" />
+                                        <field name="supplier_name" />
+                                        <field name="delivery_method" />
+                                        <field name="shipping" />
+                                        <field name="currency_code" />
+                                        <field name="country_code" />
+                                        <field name="currency_id" options="{'no_create': True, 'no_open': True}" />
+                                        <field name="total" />
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                        <page
+                            name="traduction_data"
+                            string="Traduction Data"
+                            attrs="{'invisible': ['|', ('state','=','draft'), ('request_type', '!=', 'clearance')]}"
+                        >
+                            <group>
+                                <field name="clearance_goods_definition_ids" nolabel="1">
+                                    <tree editable="1">
+                                        <field name="clearance_request_id" invisible="1" />
+                                        <field name="goods_definition_id" options="{'no_create': True}" />
+                                        <field name="fee_category" required="1" />
+                                        <field name="goods_description" />
+                                        <field name="standing_weight" />
+                                        <field name="net_weight" />
+                                        <field name="quantity" />
+                                        <field name="unity_code" />
+                                        <field name="value_foreign_currency" />
+                                        <field name="user" />
+                                        <field name="exemption_number" />
+                                        <field name="paragraph" />
+                                        <field name="insurance" />
+                                    </tree>
+                                </field>
+                            </group>
+                            <field name="description" placeholder="Add description" />
+                        </page>
+                        <page
+                            name="shipping_agent_data"
+                            string=" Shipping Agent Data"
+                            attrs="{'invisible': ['|', ('state','=','draft'),('request_type', '!=', 'clearance')]}"
+                        >
+                            <group>
+                                <group>
+                                    <field name="shipping_agent_id" readonly="1" force_save="1" />
+                                    <field name="expected_date_shipment" readonly="1" force_save="1" />
+                                    <field name="last_date_empty_container" readonly="1" force_save="1" />
+                                    <field
+                                        name="repayment"
+                                        readonly="1"
+                                        force_save="1"
+                                        options="{'horizontal': true}"
+                                        widget="radio"
+                                    />
+                                    <field
+                                        name="payment_fees_id"
+                                        readonly="1"
+                                        force_save="1"
+                                        attrs="{'invisible': ['|', ('payment_fees_id','=',False), ('repayment','!=','company')]}"
+                                    />
+                                </group>
+                                <group>
+                                    <field
+                                        name="insurance"
+                                        readonly="1"
+                                        force_save="1"
+                                        options="{'horizontal': true}"
+                                        widget="radio"
+                                    />
+                                    <label for="amount_insurance" attrs="{'invisible': [('insurance','=','no')]}" />
+                                    <div class="o_row">
+                                        <field
+                                            name="amount_insurance"
+                                            readonly="1"
+                                            force_save="1"
+                                            attrs="{'invisible': [('insurance','=','no')]}"
+                                        />
+                                        <button
+                                            name="payment_insurance"
+                                            string="Create Payments Insurance"
+                                            type="object"
+                                            attrs="{'invisible':['|', ('payment_insurance_id', '!=', False), ('insurance', '=', 'no')]}"
+                                            class="oe_highlight"
+                                            groups="clearance.group_shipping_agent_responsible"
+                                        />
+                                    </div>
+                                    <field
+                                        name="payment_insurance_id"
+                                        readonly="1"
+                                        force_save="1"
+                                        attrs="{'invisible':['|', ('payment_insurance_id', '=', False), ('insurance', '=', 'no')]}"
+                                    />
+                                    <field name="delivery_authorization_number" readonly="1" force_save="1" />
+                                    <field
+                                        name="attachment_delivery_authorization_ids"
+                                        widget="many2many_binary"
+                                        readonly="1"
+                                        force_save="1"
+                                    />
+                                </group>
+                            </group>
+                            <button
+                                name="payment_fees"
+                                string="Create Payments Fees"
+                                type="object"
+                                attrs="{'invisible':['|', ('payment_fees_id', '!=', False), ('repayment', '!=', 'company')]}"
+                                class="oe_highlight"
+                                groups="clearance.group_shipping_agent_responsible"
+                                style="margin-left: 8%;margin-right: 8%;"
+                            />
+                        </page>
+                        <page
+                            name="customs_declaration"
+                            string="Customs Declaration"
+                            attrs="{'invisible': ['|', ('state','in',['draft', 'customs_clearance']), ('request_type', '!=', 'clearance')]}"
+                        >
+                            <group>
+                                <group>
+                                    <field name="clearance_document_number" readonly="1" force_save="1" />
+                                    <field name="clearance_document_date" readonly="1" force_save="1" />
+                                    <field name="statement_number" readonly="1" force_save="1" />
+                                    <field name="release_statement_date" readonly="1" force_save="1" />
+                                    <field
+                                        name="repayment_statement"
+                                        readonly="1"
+                                        force_save="1"
+                                        options="{'horizontal': true}"
+                                        widget="radio"
+                                    />
+                                    <field
+                                        name="supplier_statement_id"
+                                        readonly="1"
+                                        force_save="1"
+                                        options="{'no_open': True, 'no_create': True}"
+                                        attrs="{'invisible': [('repayment_statement','!=','company')]}"
+                                    />
+                                    <field
+                                        name="payment_fees_statement_id"
+                                        readonly="1"
+                                        force_save="1"
+                                        attrs="{'invisible': ['|', ('payment_fees_statement_id','=',False), ('repayment_statement','!=','company')]}"
+                                    />
+                                </group>
+                                <group>
+                                    <field name="deadline_shipment_receive" readonly="1" force_save="1" />
+                                    <field name="is_cleared" readonly="1" force_save="1" />
+                                    <field
+                                        name="release_date"
+                                        attrs="{'invisible': [('is_cleared','=',False)]}"
+                                        readonly="1"
+                                        force_save="1"
+                                    />
+                                    <field
+                                        name="attachment_clearing_ids"
+                                        attrs="{'invisible': [('is_cleared','=',False)]}"
+                                        widget="many2many_binary"
+                                        readonly="1"
+                                        force_save="1"
+                                    />
+                                </group>
+                            </group>
+                            <button
+                                name="payment_fees_statement"
+                                string="Create Payments Fees"
+                                type="object"
+                                attrs="{'invisible':['|', ('payment_fees_statement_id', '!=', False), ('repayment_statement', '!=', 'company')]}"
+                                class="oe_highlight"
+                                groups="clearance.group_customs_declaration_responsible"
+                                style="margin-left: 8%;margin-right: 8%;"
+                            />
+                        </page>
+                        <page
+                            name="goods"
+                            string="Goods"
+                            attrs="{'invisible': ['|', ('id','=',False),('request_type','=','other_service')]}"
+                        >
+                            <group>
+                                <field name="statement_line_ids" nolabel="1" readonly="1" force_save="1">
+                                    <tree editable="1" create="0" delete="0">
+                                        <field name="clearance_request_id" invisible="1" />
+                                        <field name="company_id" invisible="1" />
+                                        <field
+                                            name="container_number"
+                                            attrs="{'column_invisible': [('parent.shipment_type','=','other')], 'required': [('parent.shipment_type','!=','other')]}"
+                                        />
+                                        <field
+                                            name="container_category_id"
+                                            attrs="{'column_invisible': [('parent.shipment_type','!=','fcl')], 'required': [('parent.shipment_type','=','fcl')]}"
+                                            options="{'no_create': True}"
+                                            required="1"
+                                        />
+                                        <field
+                                            name="truck_type_id"
+                                            options="{'no_create':True, 'no_open':True}"
+                                            attrs="{'column_invisible': [('parent.shipment_type','!=','other')], 'required': [('parent.shipment_type','=','other')]}"
+                                        />
+                                        <field name="route_ids" invisible="1" />
+                                        <field
+                                            name="route_id"
+                                            domain="[('company_id','=', company_id), ('id','in', route_ids)]"
+                                            attrs="{'required': [('parent.state','in', ['customs_statement', 'transport'])]}"
+                                        />
+                                        <field
+                                            name="shipment_from"
+                                            attrs="{'column_invisible': [('parent.shipment_type','=','other')],
+                                             'required': [('parent.state','in', ['customs_statement', 'transport']), ('parent.shipment_type','!=','other')]}"
+                                        />
+                                        <field
+                                            name="shipment_to"
+                                            attrs="{'column_invisible': [('parent.shipment_type','=','other')],
+                                             'required': [('parent.state','in', ['customs_statement', 'transport']), ('parent.shipment_type','!=','other')]}"
+                                        />
+                                        <field name="delivery_date" required="1" />
+                                        <field
+                                            name="deadline_shipment_receive"
+                                            attrs="{'column_invisible': [('parent.shipment_type','=','other')],
+                                             'required': [('parent.shipment_type','!=','other')]}"
+                                        />
+                                        <field
+                                            name="last_date_empty_container"
+                                            attrs="{'column_invisible': [('parent.shipment_type','=','other')],
+                                             'required': [('parent.shipment_type','!=','other')]}"
+                                        />
+                                        <field name="customer_location" required="1" />
+                                        <field
+                                            name="shipment_type_size_id"
+                                            options="{'no_create': True}"
+                                            attrs="{'column_invisible': [('parent.shipment_type','=','other')],
+                                             'required': [('parent.shipment_type','!=','other')]}"
+                                        />
+                                        <field
+                                            name="type_lcl"
+                                            attrs="{'column_invisible': [('parent.shipment_type','!=','lcl')], 'required': [('parent.shipment_type','=','lcl')]}"
+                                            readonly="1"
+                                        />
+                                        <field
+                                            name="uom_id"
+                                            options="{'no_open': True, 'no_create': True}"
+                                            groups="uom.group_uom"
+                                            attrs="{'column_invisible': [('parent.shipment_type','!=','fcl')], 'required': [('parent.shipment_type','=','fcl')]}"
+                                        />
+                                        <field
+                                            name="weight"
+                                            attrs="{'column_invisible': [('parent.shipment_type','!=','fcl')], 'required': [('parent.shipment_type','=','fcl')]}"
+                                        />
+                                    </tree>
+                                </field>
+                            </group>
+                            <group>
+                                <field
+                                    name="attachment_goods_ids"
+                                    widget="many2many_binary"
+                                    nolabel="1"
+                                    readonly="1"
+                                    force_save="1"
+                                />
+                            </group>
+                        </page>
+                        <page
+                            name="customs"
+                            string="Other fees"
+                            attrs="{'invisible': ['|', ('state','in',['draft', 'customs_clearance']), ('request_type', '!=', 'clearance')]}"
+                        >
+                            <group>
+                                <field name="payment_fees_customs_ids" nolabel="1" colspan="4" readonly="1">
+                                    <tree editable="1">
+                                        <field name="clearance_request_id" invisible="1" />
+                                        <field name="fees_type_id" required="1" />
+                                        <field name="repayment" required="1" />
+                                        <field name="supplier_id" options="{'no_create': True}" required="1" />
+                                        <field name="payment_customs_id" readonly="1" force_save="1" />
+                                        <button
+                                            name="payment_fees_statement"
+                                            string="Create Payments Fees"
+                                            type="object"
+                                            attrs="{'invisible':['|', ('payment_customs_id', '!=', False),('repayment', '=', 'customer')]}"
+                                            class="oe_highlight"
+                                            groups="clearance.group_customs_responsible"
+                                        />
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" />
+                    <field name="activity_ids" widget="mail_activity" />
+                    <field name="message_ids" widget="mail_thread" />
+                </div>
+            </form>
+        </field>
+    </record>
+    <record id="clearance_request_view_form_inherit_shipping_agent" model="ir.ui.view">
+        <field name="name">clearance.request.view.form.inherit.shipping.agent</field>
+        <field name="model">clearance.request</field>
+        <field name="inherit_id" ref="clearance.clearance_request_view_form" />
+        <field name="groups_id" eval="[(6, 0, [ref('clearance.group_shipping_agent_responsible')])]" />
+        <field name="arch" type="xml">
+            <field name="shipping_agent_id" position="attributes">
+                <attribute name="readonly">0</attribute>
+            </field>
+            <field name="expected_date_shipment" position="attributes">
+                <attribute name="readonly">0</attribute>
+            </field>
+            <field name="last_date_empty_container" position="attributes">
+                <attribute name="readonly">0</attribute>
+            </field>
+            <field name="repayment" position="attributes">
+                <attribute name="readonly">0</attribute>
+            </field>
+            <xpath expr="//page[@name='shipping_agent_data']//field[@name='insurance']" position="attributes">
+                <attribute name="readonly">0</attribute>
+            </xpath>
+            <field name="amount_insurance" position="attributes">
+                <attribute name="readonly">0</attribute>
+            </field>
+            <field name="delivery_authorization_number" position="attributes">
+                <attribute name="readonly">0</attribute>
+            </field>
+            <field name="attachment_delivery_authorization_ids" position="attributes">
+                <attribute name="readonly">0</attribute>
+            </field>
+        </field>
+    </record>
+    <record id="clearance_request_view_form_inherit_declaration_responsible" model="ir.ui.view">
+        <field name="name">clearance.request.view.form.inherit.declaration.responsible
+        </field>
+        <field name="model">clearance.request</field>
+        <field name="inherit_id" ref="clearance.clearance_request_view_form" />
+        <field name="groups_id" eval="[(6, 0, [ref('clearance.group_customs_declaration_responsible')])]" />
+        <field name="arch" type="xml">
+            <field name="statement_line_ids" position="attributes">
+                <attribute name="readonly">0</attribute>
+            </field>
+            <field name="clearance_document_number" position="attributes">
+                <attribute name="readonly">0</attribute>
+            </field>
+            <field name="clearance_document_date" position="attributes">
+                <attribute name="readonly">0</attribute>
+            </field>
+            <field name="statement_number" position="attributes">
+                <attribute name="readonly">0</attribute>
+            </field>
+            <field name="release_statement_date" position="attributes">
+                <attribute name="readonly">0</attribute>
+            </field>
+            <field name="repayment_statement" position="attributes">
+                <attribute name="readonly">0</attribute>
+            </field>
+            <field name="deadline_shipment_receive" position="attributes">
+                <attribute name="readonly">0</attribute>
+            </field>
+            <field name="is_cleared" position="attributes">
+                <attribute name="readonly">0</attribute>
+            </field>
+            <field name="release_date" position="attributes">
+                <attribute name="readonly">0</attribute>
+            </field>
+            <field name="attachment_goods_ids" position="attributes">
+                <attribute name="readonly">0</attribute>
+            </field>
+            <field name="attachment_clearing_ids" position="attributes">
+                <attribute name="readonly">0</attribute>
+            </field>
+            <field name="supplier_statement_id" position="attributes">
+                <attribute name="readonly">0</attribute>
+            </field>
+        </field>
+    </record>
+    <record id="clearance_request_view_form_inherit_customs_responsible" model="ir.ui.view">
+        <field name="name">clearance.request.view.form.inherit.customs.responsible
+        </field>
+        <field name="model">clearance.request</field>
+        <field name="inherit_id" ref="clearance.clearance_request_view_form" />
+        <field name="groups_id" eval="[(6, 0, [ref('clearance.group_customs_responsible')])]" />
+        <field name="arch" type="xml">
+            <field name="payment_fees_customs_ids" position="attributes">
+                <attribute name="readonly">0</attribute>
+            </field>
+        </field>
+    </record>
+    <record id="clearance_request_action" model="ir.actions.act_window">
+        <field name="name">Clearance Requests</field>
+        <field name="res_model">clearance.request</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem
+        id="clearance_request_menu"
+        name="Clearance Requests"
+        parent="clearance_menu_root"
+        action="clearance_request_action"
+        sequence="1"
+    />
+    <record id="clearance_request_action_my" model="ir.actions.act_window">
+        <field name="name">My Orders</field>
+        <field name="res_model">clearance.request</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'my_order' : True}</field>
+        <field
+            name="domain"
+        >[('user_id', '=', uid), ('state', 'in',('draft', 'customs_clearance', 'customs_statement'))]
+        </field>
+    </record>
+    <menuitem
+        id="clearance_request_menu_my"
+        name="My Orders"
+        parent="clearance_menu_root"
+        action="clearance_request_action_my"
+        sequence="2"
+    />
+</odoo>

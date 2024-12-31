@@ -1,0 +1,134 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_extra_products
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-07 11:01+0000\n"
+"PO-Revision-Date: 2022-11-07 11:01+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_extra_products
+#: model:ir.model.fields,field_description:pos_extra_products.field_pos_notes__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: pos_extra_products
+#: model:ir.model.fields,field_description:pos_extra_products.field_pos_notes__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: pos_extra_products
+#: model:ir.model.fields,field_description:pos_extra_products.field_pos_config__display_name
+#: model:ir.model.fields,field_description:pos_extra_products.field_pos_notes__display_name
+#: model:ir.model.fields,field_description:pos_extra_products.field_product_template__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: pos_extra_products
+#: model_terms:ir.ui.view,arch_db:pos_extra_products.view_pos_config_form_inherit_pos_extra_products
+msgid "Display extra products"
+msgstr "عرض منتجات إضافية"
+
+#. module: pos_extra_products
+#: model:ir.model.fields,field_description:pos_extra_products.field_pos_config__extra_products
+msgid "Extra products"
+msgstr "منتجات اضافية"
+
+#. module: pos_extra_products
+#: model:ir.model.fields,field_description:pos_extra_products.field_pos_config__id
+#: model:ir.model.fields,field_description:pos_extra_products.field_pos_notes__id
+#: model:ir.model.fields,field_description:pos_extra_products.field_product_template__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: pos_extra_products
+#: model:ir.model.fields,field_description:pos_extra_products.field_product_product__is_extra
+#: model:ir.model.fields,field_description:pos_extra_products.field_product_template__is_extra
+msgid "Is Extra"
+msgstr "منتج إضافي"
+
+#. module: pos_extra_products
+#: model:ir.model.fields,field_description:pos_extra_products.field_pos_config____last_update
+#: model:ir.model.fields,field_description:pos_extra_products.field_pos_notes____last_update
+#: model:ir.model.fields,field_description:pos_extra_products.field_product_template____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: pos_extra_products
+#: model:ir.model.fields,field_description:pos_extra_products.field_pos_notes__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: pos_extra_products
+#: model:ir.model.fields,field_description:pos_extra_products.field_pos_notes__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: pos_extra_products
+#: model:ir.model.fields,field_description:pos_extra_products.field_pos_notes__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: pos_extra_products
+#. openerp-web
+#: code:addons/pos_extra_products/static/src/xml/ProductNotesPopup.xml:0
+#, python-format
+msgid "None"
+msgstr ""
+
+#. module: pos_extra_products
+#. openerp-web
+#: code:addons/pos_extra_products/static/src/xml/Orderline.xml:0
+#: code:addons/pos_extra_products/static/src/xml/Orderline.xml:0
+#, python-format
+msgid "Note"
+msgstr "الملاحظة"
+
+#. module: pos_extra_products
+#. openerp-web
+#: code:addons/pos_extra_products/static/src/xml/ProductNotesPopup.xml:0
+#: model:ir.model,name:pos_extra_products.model_pos_notes
+#, python-format
+msgid "Notes"
+msgstr "الملاحظات"
+
+#. module: pos_extra_products
+#: model:ir.model,name:pos_extra_products.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "إعدادات نقطة البيع"
+
+#. module: pos_extra_products
+#. openerp-web
+#: code:addons/pos_extra_products/static/src/js/Orderline.js:0
+#: model:ir.actions.act_window,name:pos_extra_products.pos_notes_action
+#: model:ir.ui.menu,name:pos_extra_products.pos_notes_menu
+#, python-format
+msgid "Product Notes"
+msgstr "ملاحظات المنتج"
+
+#. module: pos_extra_products
+#: model:ir.model,name:pos_extra_products.model_product_template
+msgid "Product Template"
+msgstr "قالب المنتج"
+
+#. module: pos_extra_products
+#. openerp-web
+#: code:addons/pos_extra_products/static/src/xml/Orderline.xml:0
+#, python-format
+msgid "props.line.product.is_extra ? 'padding-left: 10% !important;' : ''"
+msgstr ""
+
+#. module: pos_extra_products
+#. openerp-web
+#: code:addons/pos_extra_products/static/src/xml/Orderline.xml:0
+#, python-format
+msgid "props.line.product.is_extra ? 'padding-right: 20% !important;' : ''"
+msgstr ""

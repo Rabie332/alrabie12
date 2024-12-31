@@ -1,0 +1,153 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pw_pos_order_type
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-17 10:37+0000\n"
+"PO-Revision-Date: 2022-08-17 10:37+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pw_pos_order_type
+#: model:ir.model.fields,field_description:pw_pos_order_type.field_pos_order_type__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: pw_pos_order_type
+#: model:ir.model.fields,field_description:pw_pos_order_type.field_pos_order_type__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: pw_pos_order_type
+#: model:ir.model.fields,field_description:pw_pos_order_type.field_pos_config__default_type_id
+msgid "Default Order Type"
+msgstr "نوع الطلب الافتراضي"
+
+#. module: pw_pos_order_type
+#: model_terms:ir.ui.view,arch_db:pw_pos_order_type.pos_config_view_form_pos_sale
+msgid "Default Type"
+msgstr "النوع الافتراضي"
+
+#. module: pw_pos_order_type
+#: model:ir.model.fields,field_description:pw_pos_order_type.field_pos_config__display_name
+#: model:ir.model.fields,field_description:pw_pos_order_type.field_pos_order__display_name
+#: model:ir.model.fields,field_description:pw_pos_order_type.field_pos_order_line__display_name
+#: model:ir.model.fields,field_description:pw_pos_order_type.field_pos_order_type__display_name
+#: model:ir.model.fields,field_description:pw_pos_order_type.field_report_pos_order__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: pw_pos_order_type
+#: model:ir.model.fields,field_description:pw_pos_order_type.field_pos_config__enable_order_type
+msgid "Enable Order Types"
+msgstr "تفعيل أنواع الطلبات"
+
+#. module: pw_pos_order_type
+#: model:ir.model.fields,field_description:pw_pos_order_type.field_pos_config__id
+#: model:ir.model.fields,field_description:pw_pos_order_type.field_pos_order__id
+#: model:ir.model.fields,field_description:pw_pos_order_type.field_pos_order_line__id
+#: model:ir.model.fields,field_description:pw_pos_order_type.field_pos_order_type__id
+#: model:ir.model.fields,field_description:pw_pos_order_type.field_report_pos_order__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: pw_pos_order_type
+#: model:ir.model.fields,field_description:pw_pos_order_type.field_pos_config____last_update
+#: model:ir.model.fields,field_description:pw_pos_order_type.field_pos_order____last_update
+#: model:ir.model.fields,field_description:pw_pos_order_type.field_pos_order_line____last_update
+#: model:ir.model.fields,field_description:pw_pos_order_type.field_pos_order_type____last_update
+#: model:ir.model.fields,field_description:pw_pos_order_type.field_report_pos_order____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: pw_pos_order_type
+#: model:ir.model.fields,field_description:pw_pos_order_type.field_pos_order_type__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: pw_pos_order_type
+#: model:ir.model.fields,field_description:pw_pos_order_type.field_pos_order_type__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: pw_pos_order_type
+#: model:ir.model.fields,field_description:pw_pos_order_type.field_pos_order_type__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: pw_pos_order_type
+#. openerp-web
+#: code:addons/pw_pos_order_type/static/src/xml/pos.xml:0
+#: model:ir.model.fields,field_description:pw_pos_order_type.field_pos_order__order_type_id
+#: model:ir.model.fields,field_description:pw_pos_order_type.field_pos_order_line__order_type_id
+#: model:ir.model.fields,field_description:pw_pos_order_type.field_report_pos_order__order_type_id
+#: model_terms:ir.ui.view,arch_db:pw_pos_order_type.pos_order_type_view_form
+#, python-format
+msgid "Order Type"
+msgstr "نوع الطلب"
+
+#. module: pw_pos_order_type
+#: model_terms:ir.ui.view,arch_db:pw_pos_order_type.pos_config_view_form_pos_sale
+msgid "Order Types"
+msgstr "أنواع الطلبات"
+
+#. module: pw_pos_order_type
+#: model_terms:ir.ui.view,arch_db:pw_pos_order_type.pos_order_type_view_form
+msgid "POS Order Type"
+msgstr "نوع طلب نقاط البيع"
+
+#. module: pw_pos_order_type
+#: model:ir.model,name:pw_pos_order_type.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "إعدادات نقطة البيع"
+
+#. module: pw_pos_order_type
+#: model:ir.model,name:pw_pos_order_type.model_pos_order_line
+msgid "Point of Sale Order Lines"
+msgstr "بنود طلب نقطة البيع"
+
+#. module: pw_pos_order_type
+#: model:ir.model,name:pw_pos_order_type.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "أوامر نقطة البيع"
+
+#. module: pw_pos_order_type
+#: model:ir.model,name:pw_pos_order_type.model_report_pos_order
+msgid "Point of Sale Orders Report"
+msgstr "تقرير أوامر نقطة البيع"
+
+#. module: pw_pos_order_type
+#: model:ir.actions.act_window,name:pw_pos_order_type.action_pos_order_type
+#: model:ir.ui.menu,name:pw_pos_order_type.pos_quotation_menu
+#: model_terms:ir.ui.view,arch_db:pw_pos_order_type.pos_order_type_tree_view
+msgid "Pos Order Type"
+msgstr "أنواع طلبات البيع"
+
+#. module: pw_pos_order_type
+#. openerp-web
+#: code:addons/pw_pos_order_type/static/src/js/OrderTypeButton.js:0
+#, python-format
+msgid "Select Order Type"
+msgstr "حدد نوع الطلب"
+
+#. module: pw_pos_order_type
+#: model_terms:ir.ui.view,arch_db:pw_pos_order_type.pos_config_view_form_pos_sale
+msgid "Set order type in pos order"
+msgstr "حدد نوع الطلب في طلب نقاط البيع"
+
+#. module: pw_pos_order_type
+#: model:ir.model.fields,field_description:pw_pos_order_type.field_pos_config__order_type_ids
+msgid "order Types"
+msgstr "أنواع الطلبات"
+
+#. module: pw_pos_order_type
+#: model:ir.model,name:pw_pos_order_type.model_pos_order_type
+msgid "pos.order.type"
+msgstr ""

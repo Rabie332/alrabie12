@@ -1,0 +1,22 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_profile_expense
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-12 06:39+0000\n"
+"PO-Revision-Date: 2021-07-12 06:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_profile_expense
+#: model:ir.actions.act_window,name:hr_profile_expense.my_expense_action
+#: model:ir.ui.menu,name:hr_profile_expense.my_expense_menu
+msgid "My Expenses"
+msgstr "مصروفاتي"

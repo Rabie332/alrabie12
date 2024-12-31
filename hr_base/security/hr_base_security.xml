@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="hr_employee_information_setting_rule" model="ir.rule">
+        <field name="name">Employee Information Setting company rule</field>
+        <field name="model_id" ref="model_hr_employee_information_setting" />
+        <field name="domain_force">['|', ('company_id', 'in', company_ids), ('company_id', '=', False)]</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="hr_resignation_view_search" model="ir.ui.view">
+        <field name="name">hr.resignation.search</field>
+        <field name="model">hr.resignation</field>
+        <field name="arch" type="xml">
+            <search string="Resignation">
+                <field name="name" />
+                <field
+                    name="employee_id"
+                    string="Employee"
+                    filter_domain="['|', ('employee_id.identification_id','ilike',self),('employee_id.name','ilike',self)]"
+                />
+                <group expand="0" string="Group By">
+                    <filter name="employee_id" string="Employee" context="{'group_by':'employee_id'}" />
+                    <filter name="department_id" string="Department" context="{'group_by':'department_id'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="hr_resignation_tree" model="ir.ui.view">
+        <field name="name">hr.resignation.tree</field>
+        <field name="model">hr.resignation</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree name="Resignation" duplicate="0">
+                <field name="employee_id" widget="many2one_avatar_employee" />
+                <field name="number" invisible="1" />
+                <field name="name" />
+                <field name="job_id" />
+                <field name="department_id" />
+                <field name="residence_end_date" />
+                <field name="last_worked_date" />
+                <field name="request_type_id" invisible="1" />
+                <field name="resignation_reason" invisible="1" />
+                <field name="stage_id" />
+                <field name="state" invisible="1" />
+                <field name="company_id" groups="base.group_multi_company" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="hr_resignation_form" model="ir.ui.view">
+        <field name="name">hr.resignation.form</field>
+        <field name="model">hr.resignation</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="request.request_view_form" />
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <header position="inside">
+                <button
+                    string="Print Clearance Certificate"
+                    name="%(action_report_clearance_certificate)d"
+                    type="action"
+                    class="oe_highlight"
+                    attrs="{'invisible': [('state', '!=', 'done')]}"
+                />
+            </header>
+            <field name="stage_id" position="attributes">
+                <attribute name="attrs">{'invisible': [('request_type_id', '=', False)]}
+                </attribute>
+            </field>
+            <field name="request_type_id" position="attributes">
+                <attribute name="attrs">{'readonly':[('state', '!=', 'draft')]}</attribute>
+            </field>
+            <button name="action_refuse" position="replace">
+                <button
+                    name="%(request_refuse.action_refuse_wizard)d"
+                    context="{'action_name': 'action_refuse','field_name': 'refuse_reason'}"
+                    string="Refuse"
+                    class="btn-danger"
+                    type="action"
+                    confirm="Are you sure you want to do this?"
+                    attrs="{'invisible':[('display_button_refuse', '=', False)]}"
+                />
+            </button>
+            <sheet position="inside">
+                 <group>
+                    <group>
+                        <label for="name" />
+                        <h1>
+                            <field
+                                name="name"
+                                readonly="1"
+                                required="0"
+                                force-save="1"
+                                attrs="{'invisible': [('id','=', False)]}"
+                            />
+                        </h1>
+                    </group>
+                </group>
+                <group>
+                    <group string="Employee Informations">
+                        <field
+                            name="employee_id"
+                            invisible="context.get('my_request', False)"
+                            required="1"
+                            attrs="{'readonly':[('state', '!=', 'draft')]}"
+                            options='{"no_open": True, "no_create": True}'
+                        />
+                        <field name="number" force_save="1" />
+                        <field name="residence_end_date" force_save="1" />
+                        <field
+                            name="company_id"
+                            force_save="1"
+                            attrs="{'readonly':[('state', '!=', 'draft')]}"
+                            readonly="context.get('my_request', False)"
+                            groups="base.group_multi_company"
+                        />
+                        <field name="job_id" force_save="1" options='{"no_open": True, "no_create": True}' />
+                        <field name="department_id" force_save="1" options='{"no_open": True, "no_create": True}' />
+                        <field name="is_finished" invisible="1" />
+                    </group>
+                    <group string="Request information">
+                        <field
+                            name="request_type_id"
+                            required="1"
+                            attrs="{'readonly':[('state', '!=', 'draft')]}"
+                            options='{"no_open": True, "no_create": True}'
+                        />
+                        <field name="last_worked_date" required="1" attrs="{'readonly':[('state', '!=', 'draft')]}" />
+                        <field name="resignation_reason" required="1" attrs="{'readonly':[('state', '!=', 'draft')]}" />
+                        <field name="refuse_reason" force_save="1" states="cancel" />
+                    </group>
+                </group>
+            </sheet>
+        </field>
+    </record>
+
+    <record id="hr_resignation_view_kanban" model="ir.ui.view">
+        <field name="name">hr.resignation.kanban</field>
+        <field name="model">hr.resignation</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="request.request_view_kanban" />
+        <field name="arch" type="xml">
+            <div name="card_body" position="inside">
+                <br />
+                <span name="employee_id">Employee :
+                    <field name="employee_id" />
+                    <br />
+                </span>
+
+                <span name="job_id">Job :
+                    <field name="job_id" />
+                    <br />
+                </span>
+
+                <span name="department_id">Department :
+                    <field name="department_id" />
+                    <br />
+                </span>
+
+                <span name="residence_end_date">Residence Expiration Date :
+                    <field name="residence_end_date" />
+                    <br />
+                </span>
+
+                <span name="last_worked_date">Last worked date :
+                    <field name="last_worked_date" />
+                    <br />
+                </span>
+            </div>
+
+        </field>
+    </record>
+
+    <record id="hr_resignation_action" model="ir.actions.act_window">
+        <field name="name">Resignations</field>
+        <field name="res_model">hr.resignation</field>
+        <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <record id="employees_resigned_action" model="ir.actions.act_window">
+        <field name="name">Employees resigned</field>
+        <field name="res_model">hr.employee</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="domain">[('active', '=', False)]</field>
+    </record>
+
+    <menuitem id="hr_resignation_request_menu_root" name="Resignations" sequence="10" parent="hr.menu_hr_root" />
+
+    <menuitem
+        id="hr_resignation_request_menu"
+        name="Resignations"
+        sequence="2"
+        parent="hr_resignation.hr_resignation_request_menu_root"
+        action="hr_resignation_action"
+    />
+    <menuitem
+        id="employees_resigned_menu"
+        name="Employees resigned"
+        sequence="5"
+        parent="hr_resignation.hr_resignation_request_menu_root"
+        action="employees_resigned_action"
+    />
+
+    <menuitem id="resignation_self_service_root" parent="request.self_services_menu" name="Resignation" />
+    <record model="ir.actions.act_window" id="hr_resignation_action_my">
+        <field name="name">Resignation</field>
+        <field name="res_model">hr.resignation</field>
+        <field name="domain">[('employee_id.user_id','=', uid)]</field>
+        <field name="context">{'my_request' : True}</field>
+        <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <menuitem
+        id="hr_resignation_extension_menu_my"
+        sequence="4"
+        parent="resignation_self_service_root"
+        action="hr_resignation_action_my"
+    />
+
+</odoo>

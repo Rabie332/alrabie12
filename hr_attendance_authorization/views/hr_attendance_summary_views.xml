@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+
+    <record id="hr_attendance_summary_view_form_inherit_hr_attendance_authorization" model="ir.ui.view">
+        <field name="name">hr.attendance.summary.view.form.inherit.authorization</field>
+        <field name="model">hr.attendance.summary</field>
+        <field name="inherit_id" ref="hr_attendance_summary.hr_attendance_summary_view_form" />
+        <field name="arch" type="xml">
+            <field name="overtime_hours" position="after">
+                 <field name="authorization_hours" widget="float_time" />
+            </field>
+        </field>
+    </record>
+
+
+</odoo>

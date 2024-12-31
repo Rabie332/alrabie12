@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record
+        id="fleet_vehicle_view_form_inherit_hr_fleet_information"
+        model="ir.ui.view"
+    >
+        <field name="name">fleet.vehicle.view.form.inherit.information</field>
+        <field name="model">fleet.vehicle</field>
+        <field name="inherit_id" ref="fleet.fleet_vehicle_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='residual_value']" position="after">
+                <field name="periodic_inspection_number" />
+                <field name="periodic_inspection_end_date" />
+                <field name="driving_license_number" />
+                <field name="driving_license_end_date" />
+
+            </xpath>
+            <xpath expr="//field[@name='next_assignation_date']" position="after">
+                <field name="driver_license_expiry_date" />
+                <field name="driver_expiry_date" />
+            </xpath>
+            <xpath expr="//field[@name='location']" position="after">
+                <separator string="Driver informations" />
+                <field name="play_card_number" />
+                <field name="play_card_end_date" />
+                <field name="expiry_card_number" />
+                <field name="expiry_card_end_date" />
+                <field name="insurance_number" />
+                <field name="insurance_end_date" />
+                <field name="port_permit_number" />
+                <field name="port_permit_end_date" />
+                <field name="insurance_no_cargo" />
+                <field name="insurance_no_cargo_end_date" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

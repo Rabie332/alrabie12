@@ -1,0 +1,17 @@
+<templates id="template" xml:space="preserve">
+    <t
+        t-name="Chrome"
+        t-inherit="point_of_sale.Chrome"
+        t-inherit-mode="extension"
+        owl="1"
+    >
+        <xpath expr="//div[hasclass('pos')]" position="inside">
+            <Notification
+                t-if="state.notification.isShown"
+                message="state.notification.message"
+                duration="state.notification.duration"
+                t-transition="fade"
+            />
+        </xpath>
+    </t>
+</templates>

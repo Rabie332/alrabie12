@@ -1,0 +1,84 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_request_approvals
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-07 16:55+0000\n"
+"PO-Revision-Date: 2022-03-07 16:55+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account_request_approvals
+#: code:addons/account_request_approvals/models/request_approval.py:0
+#: code:addons/account_request_approvals/models/request_approval.py:0
+#, python-format
+msgid "Customer Invoices"
+msgstr "فواتير العملاء"
+
+#. module: account_request_approvals
+#: code:addons/account_request_approvals/models/request_approval.py:0
+#, python-format
+msgid "Dashboard"
+msgstr "لوحة معلومات"
+
+#. module: account_request_approvals
+#: model:ir.model.fields,field_description:account_request_approvals.field_request_approval__display_name
+#: model:ir.model.fields,field_description:account_request_approvals.field_res_users__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: account_request_approvals
+#: model:ir.model.fields,field_description:account_request_approvals.field_request_approval__id
+#: model:ir.model.fields,field_description:account_request_approvals.field_res_users__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: account_request_approvals
+#: model:ir.model.fields.selection,name:account_request_approvals.selection__request_approval__type__in_invoice
+msgid "In Invoice"
+msgstr "فاتورة دفع"
+
+#. module: account_request_approvals
+#: model:ir.model.fields,field_description:account_request_approvals.field_request_approval____last_update
+#: model:ir.model.fields,field_description:account_request_approvals.field_res_users____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: account_request_approvals
+#: model:ir.model.fields,field_description:account_request_approvals.field_request_approval__name
+msgid "Name"
+msgstr "المسمى"
+
+#. module: account_request_approvals
+#: model:ir.model.fields.selection,name:account_request_approvals.selection__request_approval__type__out_invoice
+msgid "Out Invoice"
+msgstr "فاتورة صادرة"
+
+#. module: account_request_approvals
+#: model:ir.model,name:account_request_approvals.model_request_approval
+msgid "Request Approval"
+msgstr "طلب الموافقة"
+
+#. module: account_request_approvals
+#: code:addons/account_request_approvals/models/request_approval.py:0
+#: code:addons/account_request_approvals/models/request_approval.py:0
+#, python-format
+msgid "Supplier Invoices"
+msgstr "فواتير الموردين"
+
+#. module: account_request_approvals
+#: model:ir.model.fields,field_description:account_request_approvals.field_request_approval__type
+msgid "Type"
+msgstr "النوع"
+
+#. module: account_request_approvals
+#: model:ir.model,name:account_request_approvals.model_res_users
+msgid "Users"
+msgstr "المستخدمون"

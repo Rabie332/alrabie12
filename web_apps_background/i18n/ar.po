@@ -1,0 +1,53 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* web_apps_background
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-24 14:33+0000\n"
+"PO-Revision-Date: 2020-07-24 15:38+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: ar\n"
+"X-Generator: Poedit 2.3.1\n"
+
+#. module: web_apps_background
+#: model_terms:ir.ui.view,arch_db:web_apps_background.res_config_settings_view_form
+msgid ""
+"<span class=\"o_form_label\">Background Image</span>\n"
+"                            <span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" aria-label=\"Values set here are company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
+msgstr ""
+"<span class=\"o_form_label\">صورة الخلفية</span>\n"
+"                            <span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" aria-label=\"Values set here are company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
+
+#. module: web_apps_background
+#: model:ir.model.fields,field_description:web_apps_background.field_res_company__background_image
+#: model:ir.model.fields,field_description:web_apps_background.field_res_config_settings__theme_background_image
+msgid "Apps Menu Background Image"
+msgstr "صورة خلفية قائمة التطبيقات"
+
+#. module: web_apps_background
+#: model_terms:ir.ui.view,arch_db:web_apps_background.res_config_settings_view_form
+msgid "Backend Theme"
+msgstr "صورة الخلفية"
+
+#. module: web_apps_background
+#: model:ir.model,name:web_apps_background.model_res_company
+msgid "Companies"
+msgstr "الشركات"
+
+#. module: web_apps_background
+#: model:ir.model,name:web_apps_background.model_res_config_settings
+msgid "Config Settings"
+msgstr "ضبط الإعدادات"
+
+#. module: web_apps_background
+#: model_terms:ir.ui.view,arch_db:web_apps_background.res_config_settings_view_form
+msgid "Set the background image for the apps menu"
+msgstr "تعيين صورة الخلفية لقائمة التطبيقات"

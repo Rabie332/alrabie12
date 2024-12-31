@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="pos_vat_report">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-set="company" t-value="request.env.company" />
+                <t t-call="web.internal_layout">
+                    <div class="page">
+                        <div class="oe_structure" />
+                        <div class="col-12">
+                            <center>
+                                <strong>Point of sale VAT report</strong>
+                            </center>
+                        </div>
+                        <br />
+                        <br />
+                        <br />
+                        <table width="100%">
+                            <tr>
+                                <th>Date from:</th>
+                                <th>Date to:</th>
+                                <th t-if="o.pos_id">Point of Sale:</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span t-esc="o.date_from" />
+                                </td>
+                                <td>
+                                    <span t-esc="o.date_to" />
+                                </td>
+                                <td t-if="o.pos_id">
+                                    <span t-esc="o.pos_id.name" />
+                                </td>
+                            </tr>
+                        </table>
+                        <br />
+                        <table class="table nowrap table-bordered" style="border:0px">
+                            <thead>
+                                <tr>
+                                    <th>Bill number</th>
+                                    <th>Date</th>
+                                    <th>Taxable amount</th>
+                                    <th>Tax amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="get_lines(o)" t-as="line">
+                                    <tr>
+                                        <td>
+                                            <span t-esc="line.name" />
+                                        </td>
+                                        <td>
+                                            <span t-esc="line.date_order" />
+                                        </td>
+                                        <td>
+                                            <span t-field="line.amount_total" />
+                                        </td>
+                                        <td>
+                                            <span t-field="line.amount_tax" />
+                                        </td>
+                                    </tr>
+                                </t>
+                                <tr style="border :0px">
+                                    <td style="border :0px" />
+                                    <td style="border :0px" />
+                                    <td>
+                                        <span
+                                            t-esc="'%.2f' % sum(get_lines(o).mapped('amount_total'))"
+                                        />
+                                    </td>
+                                    <td>
+                                        <span
+                                            t-esc="'%.2f' % sum(get_lines(o).mapped('amount_tax'))"
+                                        />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

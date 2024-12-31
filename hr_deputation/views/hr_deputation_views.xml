@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="action_accept_deputation_requests" model="ir.actions.server">
+        <field name="name">Accept</field>
+        <field name="model_id" ref="hr_deputation.model_hr_deputation" />
+        <field name="binding_model_id" ref="hr_deputation.model_hr_deputation" />
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">
+            if records:
+            action = records.open_multi_accept_wizard()
+        </field>
+    </record>
+
+    <record id="action_refuse_deputation_requests" model="ir.actions.server">
+        <field name="name">Refuse</field>
+        <field name="model_id" ref="hr_deputation.model_hr_deputation" />
+        <field name="binding_model_id" ref="hr_deputation.model_hr_deputation" />
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">
+            if records:
+            action = records.open_multi_refuse_wizard()
+        </field>
+    </record>
+
+
+
+    <record id="hr_deputation_view_search" model="ir.ui.view">
+        <field name="name">hr.deputation.filter</field>
+        <field name="model">hr.deputation</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="request.request_view_search" />
+        <field name="arch" type="xml">
+            <field name="employee_id" position="after">
+                <field name="name" />
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]" />
+                <filter name="type_internal" string="Internal Deputation" domain="[('type', '=', 'internal')]" />
+                <filter name="type_external" string="External Deputation" domain="[('type', '=', 'external')]" />
+            </field>
+            <filter name="stage" position="after">
+                <filter name="employee_id" string="Employee" context="{'group_by': 'employee_id'}" />
+                <filter name="create_date" string="Application Date" context="{'group_by': 'create_date'}" />
+                <filter name="request_type_id" string="Deputation Type" context="{'group_by': 'request_type_id'}" />
+            </filter>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="hr_deputation_tree">
+        <field name="name">hr.deputation.tree</field>
+        <field name="model">hr.deputation</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="date" />
+                <field name="request_type_id" />
+                <field name="type" string="Deputation" />
+                <field name="employee_id" widget="many2one_avatar_employee" />
+                <field name="date_from" />
+                <field name="date_to" />
+                <field name="duration" />
+                <field name="travel_days" />
+                <field name="total" />
+                <field name="stage_id" />
+                <field name="state" invisible="1" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="hr_deputation_view_form" model="ir.ui.view">
+        <field name="name">hr.deputation.form</field>
+        <field name="model">hr.deputation</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="request.request_view_form" />
+        <field name="arch" type="xml">
+            <header position="inside">
+                <field name="display_button_cancel" invisible='1' />
+                <field name="display_button_extend" invisible='1' />
+                <field name="display_button_cut" invisible='1' />
+                <field name="is_started" invisible='1' />
+                <field name="is_finished" invisible='1' />
+                <field name="is_extended" invisible='1' />
+                <field name="is_cut" invisible='1' />
+                <field name="state" invisible="1" />
+                <field name="display_button_previous" invisible="1" />
+
+                <!-- Deputation Extension -->
+
+                <button
+                    name="button_extend"
+                    string="Extension deputation"
+                    type="object"
+                    class="oe_highlight"
+                    attrs="{'invisible':[('display_button_extend','=',False)] }"
+                />
+
+                <!-- Deputation Cancel -->
+
+                <button
+                    name="button_cancel"
+                    string="Cancel Deputation"
+                    type="object"
+                    class="oe_highlight"
+                    attrs="{'invisible':[('display_button_cancel','=',False)] }"
+                />
+
+                <!-- Deputation Cut-->
+
+                <button
+                    name="button_cut"
+                    string="Cut Deputation"
+                    type="object"
+                    class="oe_highlight"
+                    attrs="{'invisible':[('display_button_cut','=',False)] }"
+                />
+                <button
+                    name="action_previous_stage"
+                    class="btn-success"
+                    string="Return to previous stage"
+                    type="object"
+                    attrs="{'invisible':[('display_button_previous', '=', False)]}"
+                />
+
+                <!-- Deputation Report-->
+                <button
+                    name="%(hr_deputation.hr_deputation_report_action)d"
+                    string="Print Deputation"
+                    type="action"
+                    class="oe_highlight"
+                    attrs="{'invisible':[('state','!=','done')] }"
+                />
+
+                <button
+                    name="action_cancel"
+                    string="Cancel"
+                    class="btn-warning"
+                    type="object"
+                    groups="hr.group_hr_manager"
+                    attrs="{'invisible': ['|', ('state', 'in', ['draft','cancel']), ('is_paid','=', True)]}"
+                />
+            </header>
+            <button name="action_refuse" position="replace">
+                <button
+                    name="%(request_refuse.action_refuse_wizard)d"
+                    context="{'action_name': 'action_refuse','field_name': 'refuse_reason'}"
+                    string="Refuse"
+                    class="btn-danger"
+                    type="action"
+                    confirm="Are you sure you want to do this?"
+                    attrs="{'invisible':[('display_button_refuse', '=', False)]}"
+                />
+            </button>
+            <group name="principal" position="replace" />
+            <field name="stage_id" position="attributes">
+                <attribute name="attrs">{'invisible': [('request_type_id', '=', False)]}
+                </attribute>
+            </field>
+            <sheet position="inside">
+                <widget
+                    name="web_ribbon"
+                    title="Canceled"
+                    bg_color="bg-danger"
+                    attrs="{'invisible': [('state', '!=', 'cancel')]}"
+                />
+                <widget
+                    name="web_ribbon"
+                    title="Paid"
+                    bg_color="bg-success"
+                    attrs="{'invisible': ['|',('is_paid', '=', False),('state', '!=', 'done')]}"
+                />
+                <group>
+                    <group>
+                        <field name="id" invisible='1' />
+                        <field name="is_paid" invisible="1" />
+                        <field name="name" readonly="1" force_save="1" attrs="{'invisible':[('id', '==', False)]}" />
+                        <field name="date" readonly="1" force_save="1" attrs="{'invisible':[('id', '==', False)]}" />
+                        <field
+                            name="employee_id"
+                            invisible="context.get('my_request', False)"
+                            required="1"
+                            string="Employee"
+                        />
+                        <field name="number" force_save="1" />
+                        <field name="job_id" invisible="context.get('my_request', False)" force_save="1" />
+                        <field name="department_id" force_save="1" invisible="context.get('my_request', False)" />
+
+                        <field name="company_id" groups="base.group_multi_company" />
+                        <field name="type" options="{'horizontal': true}" widget="radio" />
+                        <field name="read_reviewed_policies_regulations" />
+                        <field name="task_name" string="Description" />
+
+                    </group>
+                    <group>
+                        <field name="active" invisible="1" />
+                        <field name="request_type_id" options='{"no_open": True, "no_create": True}' />
+                        <field name="transportation_type" options="{'horizontal': true}" widget="radio" />
+                        <field name="date_from" required="1" />
+                        <field name="date_to" required="1" />
+                        <field name="duration" force_save="1" />
+                        <field name="duration_holiday_days" attrs="{'invisible': [('duration_holiday_days', '=',0)]}" />
+
+                        <field name="extension_duration" attrs="{'invisible':[('extension_duration','=',0)]}" />
+                        <field name="travel_days" force_save="1" />
+                        <field name="distance" attrs="{'invisible': [('transportation_type', '=','air_travel')]}" />
+                        <field
+                            name="city_id"
+                            options='{"no_open": True, "no_create": True}'
+                            attrs="{'invisible':[('type', '!=','internal')], 'required':[('type','=','internal')]}"
+                        />
+                        <field
+                            name="refuse_reason"
+                            readonly="1"
+                            force_save="1"
+                            attrs="{'invisible' : [('state', '!=', 'cancel')]}"
+                        />
+                    </group>
+                </group>
+                <notebook>
+                    <page string="Deputation Details">
+                        <group name="amount_details">
+                            <group>
+                                <field name="food" />
+                                <field name="hosing" />
+                                <field name="transport" />
+                                <field name="need_fees" force_save="1" />
+                                <field
+                                    name="include_ticket_total_amount"
+                                    attrs="{'invisible': [('transportation_type', '=','overland')]}"
+                                />
+                                <field
+                                    name="ticket_type"
+                                    attrs="{'invisible': [('transportation_type', '=','overland')]}"
+                                />
+                            </group>
+                            <group>
+                                <field name="display_ticket_amount" invisible="1" />
+                                <field name="show_kilometer_amount" invisible="1" />
+                                <field
+                                    name="ticket_price"
+                                    attrs="{'invisible': [('transportation_type', '=','overland'), '|', '|', ('kilometer_amount_overland', '!=',0), ('distance', '=',0),  ('display_ticket_amount', '=',False)],
+                                    'required': [('transportation_type', '=','overland'), ('kilometer_amount_overland', '=',0),  ('distance', '!=',0),  ('display_ticket_amount', '=',True)]}"
+                                />
+                                <field
+                                    name="kilometer_amount_overland"
+                                    attrs="{'invisible': ['|', ('kilometer_amount_overland', '=',0), ('distance', '=',0)]}"
+                                />
+
+                                <field name="fees_amount" attrs="{'invisible':[('need_fees', '=', False)]}" />
+                                <field
+                                    name="kilometer_amount"
+                                    attrs="{'invisible': ['|', '|', ('distance', '=', 0), ('show_kilometer_amount', '=', False), ('transportation_type', '=','air_travel')]}"
+                                />
+                                <field
+                                    name="deputation_allowance"
+                                    attrs="{'invisible': ['|', ('kilometer_amount', '>', 0), ('show_kilometer_amount', '=', True)]}"
+                                    force_save="1"
+                                />
+                                <field
+                                    name="amount_holidays"
+                                    attrs="{'invisible': [('amount_holidays', '=',0)]}"
+                                    force_save="1"
+                                />
+                                <field
+                                    name="amount_normal_days"
+                                    attrs="{'invisible': [('amount_holidays', '=',0)]}"
+                                    force_save="1"
+                                />
+                                <field name="total" force_save="1" />
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="task_name" string="Description" invisible="1" />
+
+                            </group>
+                            <group>
+                                <field
+                                    name="location_ids"
+                                    attrs="{'invisible':[('type', '!=','external')], 'required':[('type','=','external')]}"
+                                >
+                                    <tree editable="bottom">
+                                        <field name="country_id" />
+                                        <field name="city_name" />
+                                    </tree>
+                                </field>
+                            </group>
+                        </group>
+                        <group string="Travel Dates" attrs="{'invisible':[('display_travel_dates','=',False)]}">
+                            <field name="display_travel_dates" invisible="1" />
+                            <field name="date_from_travel" attrs="{'invisible':[('display_travel_dates','=',False)]}" />
+                            <field name="date_to_travel" attrs="{'invisible':[('display_travel_dates','=',False)]}" />
+                            <field name="travel_days_setting" attrs="{'invisible':[('travel_days','!=','1')]}" />
+
+                        </group>
+                    </page>
+                    <page name="general" string="General Information">
+                        <group>
+                            <group>
+                                <field name="note" string="Notes" placeholder="Clarification about the mission ..." />
+                            </group>
+                        </group>
+                    </page>
+                    <page name="attachments" string="Attachments">
+                        <br />
+                        <field name="attachment_ids" widget="many2many_binary" />
+                    </page>
+                </notebook>
+            </sheet>
+        </field>
+    </record>
+
+    <record id="hr_deputation_view_kanban" model="ir.ui.view">
+        <field name="name">hr.deputation.kanban</field>
+        <field name="model">hr.deputation</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="request.request_view_kanban" />
+        <field name="arch" type="xml">
+            <div name="card_body" position="inside">
+                <br />
+                <span name="name" t-if="record.name.raw_value">Request Number :
+                    <field name="name" />
+                    <br />
+                </span>
+
+                <span name="date_from" t-if="record.date_from.raw_value">Date From :
+                    <field name="date_from" />
+                    <br />
+                </span>
+                <span name="date_to" t-if="record.date_to.raw_value">Date To :
+                    <field name="date_to" />
+                    <br />
+                </span>
+                <span name="request_type_id" t-if="record.request_type_id.raw_value">Deputation Type:
+                    <field name="request_type_id" />
+                    <br />
+                </span>
+            </div>
+
+        </field>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="action_hr_deputation_all">
+        <field name="name">Deputations</field>
+        <field name="res_model">hr.deputation</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="context">{'search_default_my_deputations':1}</field>
+
+    </record>
+    <menuitem
+        id="menu_hr_deputation_all"
+        name="Deputations"
+        sequence="1"
+        parent="menu_hr_deputation_root"
+        action="action_hr_deputation_all"
+    />
+
+    <record model="ir.actions.act_window" id="action_hr_deputation_my">
+        <field name="name">Deputation Requests</field>
+        <field name="res_model">hr.deputation</field>
+        <field name="domain">[('employee_id.user_id','=', uid)]</field>
+        <field name="context">{'my_request' : True}</field>
+        <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <menuitem
+        id="menu_hr_deputation_my"
+        sequence="1"
+        parent="deputation_self_service_root"
+        action="action_hr_deputation_my"
+    />
+
+    <!--    Drive actions Menu -->
+
+    <menuitem
+        id="hr_deputation_menu_drive_actions"
+        sequence="2"
+        name="Deputation"
+        parent="request.self_service_menu_drive_action"
+    />
+
+    <record model="ir.ui.view" id="hr_deputation_tree_drive_actions">
+        <field name="name">hr.deputation.tree</field>
+        <field name="model">hr.deputation</field>
+        <field name="arch" type="xml">
+            <tree create='0' edit='0'>
+                <field name="name" />
+                <field name="date" />
+                <field name="request_type_id" />
+                <field name="type" string="Deputation" />
+                <field name="employee_id" widget="many2one_avatar_employee" />
+                <field name="date_from" />
+                <field name="date_to" />
+                <field name="travel_days" />
+                <field name="stage_id" />
+                <field name="state" invisible="1" />
+                <field name="company_id" groups="base.group_multi_company" />
+            </tree>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_hr_deputation_drive_actions">
+        <field name="name">Deputation Requests</field>
+        <field name="res_model">hr.deputation</field>
+        <field name="context">{'group_by':'stage_id'}</field>
+        <field
+            name="view_ids"
+            eval="[(5, 0, 0),
+                         (0, 0, {'view_mode': 'tree', 'view_id': ref('hr_deputation.hr_deputation_tree_drive_actions')})]"
+        />
+    </record>
+
+    <menuitem
+        id="menu_hr_deputation_drive_actions"
+        sequence="1"
+        parent="hr_deputation_menu_drive_actions"
+        action="action_hr_deputation_drive_actions"
+    />
+    <!--add new action for my deputation-->
+    <record id="hr_deputation_action" model="ir.actions.act_window">
+        <field name="name">My Requests</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.deputation</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="domain">[('employee_id.user_id','=',uid)]</field>
+    </record>
+    <!--add new action for all deputation-->
+    <record id="hr_deputation_action_manager" model="ir.actions.act_window">
+        <field name="name">All Requests</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.deputation</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="domain">[]</field>
+    </record>
+    <!--menu all request for manager-->
+    <menuitem
+        id="hr_deputation_manager_menu"
+        name="All Requests"
+        parent="hr_deputation.menu_hr_deputation_root"
+        action="hr_deputation_action_manager"
+        groups="hr_deputation.group_hr_deputation_user"
+        sequence="2"
+    />
+    <!--Add menu My Requests deputation-->
+    <menuitem
+        id="deputation_my_request_menu"
+        name="My Requests"
+        parent="hr_deputation.menu_hr_deputation_root"
+        action="hr_deputation_action"
+        sequence="1"
+    />
+
+</odoo>

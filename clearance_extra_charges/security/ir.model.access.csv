@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_clearance_extra_charges_wizard,clearance.extra.charges.wizard.model,clearance_extra_charges.model_clearance_extra_charges_wizard,clearance.group_responsible_cancel,1,1,1,1

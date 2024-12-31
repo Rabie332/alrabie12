@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="report_reservation_promissory">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <div class="header" />
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="row">
+                            <div class="col-3">
+                            </div>
+                            <div class="col-6 text-center">
+                                <center>
+                                    <h1 style="color:#507298;padding-top:20px;">
+                                        <strong style="font-size: 25px;">
+                                             Promissory Notes Report
+                                        </strong>
+                                    </h1>
+                                </center>
+                            </div>
+                            <div class="col-3">
+                                <img
+                                    style="max-height:120px !important;"
+                                    width="80%"
+                                    t-att-src="'data:image/png;base64,%s' % to_text(user.company_id.sudo().logo)"
+                                />
+
+                            </div>
+                        </div>
+                        <div class="oe_structure" />
+                         <div class="col-12 text-center">
+                              <strong>Period :</strong>
+                            <span t-field="o.date_from" />
+                            -
+                            <span t-field="o.date_to" />
+                            <br />
+                            <br />
+
+                        </div>
+                        <br />
+                        <table class="table nowrap table-bordered">
+                            <tr style="background-color: #00b7ff;
+  color: #fff;">
+                                <td><strong>Promissory Numer</strong></td>
+                                <td><strong>Customer Name</strong></td>
+                                <td><strong>Amount</strong></td>
+                                <td><strong>Residual</strong></td>
+                                <td><strong>Collection voucher numbers</strong></td>
+                                <td><strong>Create Date</strong></td>
+                                <td><strong>Time</strong></td>
+                                <td><strong>Due date</strong></td>
+                                <td><strong>Reservation Number</strong></td>
+                                <td><strong>Notes</strong></td>
+                            </tr>
+                            <t t-foreach="get_lines(o)" t-as="line">
+
+                                <tr>
+
+                                    <td><span t-esc="line.promissory_number" /></td>
+                                    <td><span t-esc="line.partner_id.name" /></td>
+                                    <td><span t-esc="line.amount" /></td>
+                                    <td><span t-esc="line.amount if line.state != posted else 0" /></td>
+                                    <td />
+                                    <td><span t-field="line.create_date" t-options="{'format': 'yyyy-MM-dd'}" /></td>
+                                    <td><span t-field="line.create_date" t-options="{'format': 'HH:mm:ss'}" /></td>
+                                    <td><span t-field="line.promissory_due_date" />
+                                    </td>
+                                      <td><span t-field="line.reservation_id.reservation_no" />
+                                    </td>
+                                     <td>
+                                    </td>
+
+
+                                </tr>
+
+                            </t>
+
+                        </table>
+
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

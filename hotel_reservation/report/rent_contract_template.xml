@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+  <template id="report_rent_contract_template">
+    <t t-call="web.html_container">
+      <t t-foreach="docs" t-as="o">
+        <div class="header" />
+        <div class="footer" />
+        <t t-call="web.external_layout">
+          <div class="page" style="font-size:11px;">
+            <div class="oe_structure" />
+            <!--  Header -->
+            <table style="width: 100%;border: 1pt solid black; border-collapse:separate; border-radius:8pt;">
+              <tr>
+                <td width="10%" valign="middle" align="left"></td>
+                <td valign="middle" align="center" width="70%">
+                  <address
+                                  style="font-size:13px;"
+                                  t-field="o.company_id.partner_id"
+                                  t-options='{"widget": "contact", "fields": ["name", "address", "phone"], "no_marker": True}'
+                              />
+                </td>
+                <td valign="middle" align="center" width="10%">
+                  <img
+                                  t-if="o.company_id.logo"
+                                  t-att-src="image_data_uri(o.company_id.logo)"
+                                  alt="Company Logo"
+                                  style="padding:5%;width:120px;"
+                              />
+                </td>
+              </tr>
+            </table>
+            <!-- End of Header -->
+            <!-- Contract Date and Number -->
+            <table style="width: 100%; height:30pt;">
+              <tr>
+                <td width="30%">
+                  <strong style="margin:5%;">التاريخ:</strong>
+                  <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')" style="margin:5%;"
+                  />
+                  <br/>
+                  <strong style="margin:5%;">الموافق الى:</strong>
+                  <span t-esc="o.get_hijri_date(context_timestamp(datetime.datetime.now()), '/')"
+                  />
+                </td>
+                <td width="40%" style="text-align:center;">
+                  <strong style="font-size:13px;">عقد الايجار</strong>
+                </td>
+                <td width="30%">
+                  <strong style="margin:5%;">رقم الحجز</strong>
+                  <span t-field="o.reservation_no" />
+                  <br />
+                  <strong style="margin:5%;">الرقم الضريبي</strong>
+                  <span t-field="o.company_id.vat" />
+                </td>
+              </tr>
+            </table>
+            <table class="table table-bordered" style="width: 97%; border: 1pt solid black; border-collapse: separate; border-radius: 8pt; margin: 10px;">
+              <tr>
+                <td colspan="4" style="font-size: 13px;">
+                  <strong style="margin: 2%;">العقد:</strong>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong style="margin: 7%;">تاريخ بدء العقد:</strong>
+                  <br/>
+                  <strong style="margin: 7%;">الموافق الى:</strong>
+                  <br/>
+                  <strong style="margin: 7%;">نوع الايجار:</strong>
+                  <br t-if="o.reservation_type == 'individual'"/>
+                  <strong style="margin: 7%;" t-if="o.reservation_type == 'individual'">Rent
+                    <span t-field="o.rent"/>:
+                  </strong>
+                  <br/>
+                  <strong style="margin: 7%;">الاجمالي:</strong>
+                  <br/>
+                  <strong style="margin: 7%;">التكلفة النهائية:</strong>
+                  <br/>
+                  <strong style="margin: 7%;">التأمين:</strong>
+                  <br/>
+                  <strong style="margin: 7%;" t-if="o.is_returnable">المبلغ المسترجع:</strong>
+                  <br/>
+                  <strong style="margin: 7%;">الضرائب:</strong>
+                </td>
+                <td>
+                  <span t-field="o.checkin"/>
+                  <br/>
+                  <span t-esc="o.get_hijri_date(o.checkin, '/')"/>
+                  <br/>
+                  <span t-field="o.rent"/>
+                  <br t-if="o.reservation_type == 'individual'"/>
+                  <span t-if="o.reservation_type == 'individual'" t-esc="'%.1f' % (o.room_rate)"/>
+                  <br/>
+                  <span t-field="o.total_cost"/>
+                  <br/>
+                  <span t-field="o.final_cost"/>
+                  <br/>
+                  <span t-field="o.insurance"/>
+                  <br/>
+                  <span t-if="o.is_returnable" t-field="o.returnable_amount"/>
+                  <br/>
+                  <span t-field="o.taxes_info"/>
+                </td>
+                <td>
+                  <strong style="margin: 2%;">تاريخ انتهاء العقد:</strong>
+                  <br/>
+                  <strong style="margin: 2%;">الموافق الى:</strong>
+                  <br/>
+                  <strong style="margin: 2%;">الشقة:</strong>
+                  <br/>
+                  <strong style="margin: 2%;">المدة:</strong>
+                  <br/>
+                  <strong style="margin: 2%;">الخصم:</strong>
+                  <br/>
+                  <strong style="margin: 2%;">المدفوعات:</strong>
+                </td>
+                <td>
+                  <span t-field="o.checkout"/>
+                  <br/>
+                  <span t-esc="o.get_hijri_date(o.checkout, '/')"/>
+                  <br/>
+                  <span t-esc="', '.join(reserve.name for reserve in o.reservation_line.mapped('room_id'))"/>
+                  <br/>
+                  <span t-field="o.duration"/>
+                  <span t-if="o.rent=='daily'">ليلة</span>
+                  <span t-if="o.rent=='monthly'">شهر</span>
+                  <span t-if="o.rent=='hours'">ساعة</span>
+                  <br/>
+                  <span t-field="o.discount"/>
+                  <br/>
+                  <span t-field="o.payments_count"/>
+                </td>
+              </tr>
+            </table>
+            <table class="table table-bordered" style="width: 97%; border: 1pt solid black; border-collapse: separate; border-radius: 8pt; margin: 10px;">
+              <tr>
+                <td colspan="8" style="font-size: 12px;">
+                  <strong style="margin: 2%;">غرف: </strong>
+                  <br/>
+                </td>
+              </tr>
+              <tr>
+                <td t-if="o.reservation_type != 'individual'">
+                  <strong>الاسم</strong>
+                </td>
+                <td>
+                  <strong>الغرفة</strong>
+                </td>
+                <td t-if="o.reservation_type != 'individual'">
+                  <strong>تسجيل الدخول</strong>
+                </td>
+                <td t-if="o.reservation_type != 'individual'">
+                  <strong>تسجيل الخروح</strong>
+                </td>
+                <td t-if="o.reservation_type != 'individual'">
+                  <strong>تاريخ التمديد</strong>
+                </td>
+                <td>
+                  <strong>أيام الذروة</strong>
+                </td>
+                <td>
+                  <strong>سعر الذروة</strong>
+                </td>
+                <td>
+                  <strong>سعر الغرفة</strong>
+                </td>
+              </tr>
+              <tr t-foreach="o.reservation_line" t-as="reservation_line">
+                <td t-if="o.reservation_type != 'individual'" style="text-align: center;">
+                  <t t-esc="reservation_line.partner_id.name" t-if="reservation_line.tenant == 'person'"/>
+                  <t t-esc="reservation_line.partner_company_id.name" t-if="reservation_line.tenant != 'person'"/>
+                </td>
+                <td style="text-align: center;">
+                  <t t-esc="reservation_line.room_id.name"/>
+                </td>
+                <td t-if="o.reservation_type != 'individual'" style="text-align: center;">
+                  <span t-field="reservation_line.date_check_in"/>
+                </td>
+                <td t-if="o.reservation_type != 'individual'" style="text-align: center;">
+                  <span t-field="reservation_line.date_check_out"/>
+                </td>
+                <td t-if="o.reservation_type != 'individual'" style="text-align: center;">
+                  <span t-field="reservation_line.date_extension"/>
+                </td>
+                <td style="text-align: center;">
+                  <t t-esc="reservation_line.peak_days"/>
+                </td>
+                <td style="text-align: center;">
+                  <t t-esc="reservation_line.peak_price"/>
+                </td>
+                <td style="text-align: center;">
+                  <t t-esc="reservation_line.total_room_rate"/>
+                </td>
+              </tr>
+            </table>
+            <table class="table table-bordered" style="width: 97%; border: 1pt solid black; border-collapse: separate; border-radius: 8pt; margin: 10px;" t-if="len(o.history_room_ids.filtered(lambda history: not history.is_no_calculated))">
+              <tr>
+                <td colspan="4" style="font-size: 12px;">
+                  <strong style="margin: 2%;">تاريخ الغرفة: </strong>
+                  <br/>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>تاريخ الحجز</strong>
+                </td>
+                <td>
+                  <strong>تاريخ التغيير</strong>
+                </td>
+                <td>
+                  <strong>الغرفة القديمة</strong>
+                </td>
+                <td>
+                  <strong>الغرفة الجديدة</strong>
+                </td>
+              </tr>
+              <tr t-foreach="o.history_room_ids.filtered(lambda history: not history.is_no_calculated)" t-as="history_room">
+                <td style="text-align: center;">
+                  <t t-esc="history_room.reservation_date"/>
+                </td>
+                <td style="text-align: center;">
+                  <t t-esc="history_room.change_date"/>
+                </td>
+                <td style="text-align: center;">
+                  <t t-esc="history_room.old_room_id.name"/>
+                </td>
+                <td style="text-align: center;">
+                  <t t-esc="history_room.room_id.name"/>
+                </td>
+              </tr>
+            </table>
+            <table class="table table-bordered" style="width: 97%; border: 1pt solid black; border-collapse: separate; border-radius: 8pt; margin: 10px;">
+              <tr>
+                <td colspan="4" style="font-size: 13px;">
+                  <strong style="margin: 2%;">العميل: </strong>
+                  <br/>
+                </td>
+              </tr>
+              <tr>
+                <td width="20%">
+                  <strong style="margin: 7%;">اسم العميل:</strong>
+                  <br/>
+                  <strong style="margin: 7%;">نوع الاثبات:</strong>
+                  <br/>
+                  <strong style="margin: 7%;">الجوال:</strong>
+                  <br/>
+                </td>
+                <td width="30%">
+                  <span t-field="o.partner_id.name"/>
+                  <br/>
+                  <t t-if="o.partner_id.identification_id">
+                    <span>الهوية</span>
+                  </t>
+                  <t t-elif="o.partner_id.passport_id">
+                    <span>الجواز</span>
+                  </t>
+                  <t t-elif="o.partner_id.residence_number">
+                    <span>الاقامة</span>
+                  </t>
+                  <t t-elif="o.partner_id.company_type =='company'">
+                    <span>الرقم الضريبي</span>
+                  </t>
+                  <t t-else="">
+                    <br/>
+                  </t>
+                  <br/>
+                  <span t-field="o.partner_id.mobile"/>
+                  <br/>
+                </td>
+                <td width="20%">
+                  <strong style="margin: 7%;">الجنسية:</strong>
+                  <br/>
+                  <strong style="margin: 7%;">رقم الاثبات:</strong>
+                  <br/>
+                  <strong style="margin: 7%;">عدد الضيوف:</strong>
+                  <br/>
+                </td>
+                <td width="30%">
+                  <span t-field="o.partner_id.country_id.name"/>
+                  <br/>
+                  <t t-if="o.partner_id.identification_id">
+                    <span t-field="o.partner_id.identification_id"/>
+                  </t>
+                  <t t-elif="o.partner_id.passport_id">
+                    <span t-field="o.partner_id.passport_id"/>
+                  </t>
+                  <t t-elif="o.partner_id.residence_number">
+                    <span t-field="o.partner_id.residence_number"/>
+                  </t>
+                  <t t-elif="o.partner_id.company_type =='company'">
+                    <span t-field="o.partner_id.vat"/>
+                  </t>
+                  <t t-else="">
+                    </t>
+                  <br/>
+                  <t t-if="o.reservation_type == 'individual'">
+                    <span t-esc="o.adults + o.children"/>
+                  </t>
+                  <t t-else="">
+                    <span t-esc="sum(o.reservation_line.mapped('adults') + o.reservation_line.mapped('children'))"/>
+                  </t>
+                </td>
+              </tr>
+            </table>
+            <table class="table table-bordered" style="width: 97%; border: 1pt solid black; border-collapse: separate; border-radius: 8pt; margin: 10px;">
+              <tr>
+                <td>
+                  <strong>الشروط</strong>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <t t-set="condition_objs" t-value="request.env['reservation.condition'].search([('company_id', '=', o.company_id.id)])"/>
+                  <div>
+                    <t t-foreach="condition_objs" t-as="condition_obj">
+                      <p t-esc="condition_obj.conditions"/>
+                    </t>
+                  </div>
+                  <br/>
+                  <div class="pull-left" style="margin: 1%;">
+                    <strong>توقيع العميل: --------------</strong>
+                  </div>
+                  <div class="pull-right" style="margin: 1%;">
+                    <strong>توقيع المسؤول: --------------</strong>
+                    <br/>
+                    <strong>
+                      <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')"/>
+                    </strong>
+                  </div>
+                </td>
+              </tr>
+            </table>
+            <footer class="footer">
+              <br />
+              <strong>سجل الشركة:</strong>
+              <span t-field="o.company_id.company_registry" />
+            </footer>
+          </div>
+        </t>
+      </t>
+    </t>
+  </template>
+</odoo>

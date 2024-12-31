@@ -1,0 +1,21 @@
+{
+    "name": "Purchase Request Management",
+    "version": "14.0.1.0.1",
+    "author": "Eng. Fares",
+    "depends": ["request", "purchase"],
+    "data": [
+        "security/ir.model.access.csv",
+        "security/purchase_request_security.xml",
+        "data/purchase_request_data.xml",
+        "report/purchase_request_templates.xml",
+        "report/purchase_requests_template.xml",
+        "report/purchase_request_reports.xml",
+        "views/menus.xml",
+        "views/purchase_request_views.xml",
+        "wizard/purchase_wizard_views.xml",
+    ],
+    "demo": [],
+    "installable": True,
+    "application": True,
+    "license": "LGPL-3",
+}

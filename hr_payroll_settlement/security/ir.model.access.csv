@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+hr_settlement_base_user,hr_settlement,model_hr_settlement,base.group_user,1,1,1,0

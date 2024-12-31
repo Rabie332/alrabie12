@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+"base.access_ir_attachment_group_user","base.ir_attachment group_user","base.model_ir_attachment","base.group_user",1,1,1,0
+"access_ir_attachment_group_dms_manager","base.ir_attachment group_dms_manager","base.model_ir_attachment","dms.group_dms_manager",1,1,1,1
+"access_realestate_contract_service","realestate_contract_service","model_realestate_contract_service","base.group_user",1,1,1,1
+access_product_template_create_user,product.template.create.user,product.model_product_template,farha_custom.group_create_product,1,1,1,0
+access_product_product_create_user,product.product.create.user,product.model_product_product,farha_custom.group_create_product,1,1,1,0

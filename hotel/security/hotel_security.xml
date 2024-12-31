@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+
+      <record id="hms_category" model="ir.module.category">
+        <field name="name">Hotel Management</field>
+    </record>
+
+    <!--Group for hotel user -->
+    <record id="group_hotel_user" model="res.groups">
+        <field name="name">Hotel Management / User</field>
+        <field eval="[(4, ref('base.user_root'))]" name="implied_ids" />
+        <field name="category_id" ref="hms_category" />
+    </record>
+    <!--Group for hotel manager -->
+    <record id="group_hotel_manager" model="res.groups">
+        <field name="name">Hotel Management/ Manager</field>
+        <field
+            eval="[(4, ref('hotel.group_hotel_user')), (4, ref('account.group_account_invoice'))]"
+            name="implied_ids"
+        />
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]" />
+        <field name="category_id" ref="hms_category" />
+    </record>
+
+    <record id="group_reporting_officer" model="res.groups">
+        <field name="name">Reporting Officer</field>
+         <field name="category_id" ref="hotel.hms_category" />
+        <field name="implied_ids" eval="[(4, ref('hotel.group_hotel_user'))]" />
+    </record>
+
+    <record id="group_room_management" model="res.groups">
+        <field name="name">Rooms management officer</field>
+         <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]" />
+        <field name="implied_ids" eval="[(4, ref('hotel.group_hotel_user'))]" />
+         <field name="category_id" ref="hotel.hms_category" />
+    </record>
+
+    <record id="hotel_lost_found_rule" model="ir.rule">
+        <field name="name">Lost and found multi-hotel</field>
+        <field name="model_id" ref="model_hotel_lost_found" />
+        <field name="global" eval="True" />
+        <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]
+        </field>
+    </record>
+
+</odoo>

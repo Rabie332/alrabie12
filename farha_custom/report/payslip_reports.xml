@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+
+    <record id="payslip_run_bank_report_xlsx" model="ir.actions.report">
+        <field name="name">Payroll submitted to the bank</field>
+        <field name="model">report.farha_custom.report_payslip_run_bank_xlsx</field>
+        <field name="report_name">farha_custom.report_payslip_run_bank_xlsx</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_file">farha_custom.report_payslip_run_bank_xlsx</field>
+    </record>
+
+</odoo>

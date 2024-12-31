@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+  <template id="transportation_request_report">
+    <t t-call="web.html_container">
+      <t t-call="web.internal_layout">
+        <div class="page">
+          <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6 text-center">
+              <center>
+                <h1 style="color:#507298; padding-top:20px;">
+                  <strong style="font-size: 25px;">
+                    Container's in
+                    <span>
+                      <t t-if="docs.transport_type == 'customer'">Customer</t>
+                      <t t-elif="docs.transport_type == 'warehouse'">Yard</t>
+                      <t t-elif="docs.transport_type == 'port'">Port</t>
+                    </span>
+                  </strong>
+                </h1>
+              </center>
+            </div>
+            <div class="col-3">
+              <img style="max-height:120px !important;" width="80%" t-att-src="'data:image/png;base64,%s' % to_text(user.company_id.sudo().logo)" />
+            </div>
+          </div>
+          <div class="oe_structure"></div>
+          <div class="col-12 text-center">
+            <strong>Period :</strong>
+            <br />
+            <br />
+          </div>
+          <br />
+          <div class="col-12 text-center">
+            <table class="table table-bordered table-sm" style="font-size:14px; width:100%;padding: 0px 8px 0px 8px">
+              <thead>
+                <tr style="background:#192d5a; background: linear-gradient(#49708f, #293f50);color: #fff;width:100%">
+                  <th width="5%">S.N</th>
+                  <th width="7%">Job No</th>
+                  <th width="7%">Partner</th>
+                  <th width="12%">Containers</th>
+                  <th width="7%">B/L</th>
+                  <th width="7%">Quantity</th>
+                  <th width="7%">Schedule Delivery Date</th>
+                  <th width="7%">Pull Out Date</th>
+                  <th width="7%">Last Date for Return Empty Containers</th>
+                  <th width="7%">State</th>
+                </tr>
+              </thead>
+              <tbody>
+                <t t-set="line_index" t-value="0" />
+                <t t-foreach="lines" t-as="line">
+                  <tr>
+                    <td class="text-center">
+                      <span t-esc="line_index + 1" />
+                    </td>
+                    <td>
+                      <span t-esc="line['name']" />
+                    </td>
+                    <td>
+                      <span t-esc="line['partner']" />
+                    </td>
+                    <td width="15%">
+                      <t t-foreach="line['containers']" t-as="container">
+                        <span t-esc="container" />
+                        <br/>
+                      </t>
+                    </td>
+                    <td>
+                      <span t-esc="line['shipping_number']" />
+                    </td>
+                    <td>
+                      <t t-if="line['shipment_type_line_ids']">
+                        <t t-set="shipment" t-value="line['shipment_type_line_ids'][0]" />
+                        <t t-esc="line['number_shipment']" /> X
+                        <t t-esc="shipment['shipment_type_size_name']" />
+                      </t>
+                      <t t-else="-">
+                      </t>
+                    </td>
+                    <td width="15%">
+                      <t t-if="line['order_ids'] and line['order_ids'][-1]['line_ids']">
+                        <t t-foreach="line['order_ids'][-1]['line_ids']" t-as="order">
+                          <span t-esc="order['delivery_date'].strftime('%Y-%m-%d')" />
+                          <br />
+                        </t>
+                      </t>
+                    </td>
+                    <td>
+                      <t t-if="line['order_ids'] and line['order_ids'][0]['line_ids']">
+                        <span t-esc="line['order_ids'][0]['line_ids'][0]['create_date'].strftime('%Y-%m-%d')" />
+                      </t>
+                    </td>
+                    <td>
+                      <t t-if="line['last_date_empty_container']">
+                        <span t-esc="line['last_date_empty_container'].strftime('%Y-%m-%d')" />
+                      </t>
+                      <t t-else="">
+                        -
+                      </t>
+                    </td>
+                    <td>
+                      <span t-esc="line['state']" />
+                    </td>
+                  </tr>
+                  <t t-set="line_index" t-value="line_index + 1" />
+                </t>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </t>
+    </t>
+  </template>
+</odoo>

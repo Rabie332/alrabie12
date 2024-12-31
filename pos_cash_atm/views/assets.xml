@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template
+        id="assets_pos"
+        name="pos_cash_atm assets"
+        inherit_id="point_of_sale.assets"
+    >
+        <xpath expr="." position="inside">
+            <script
+                type="text/javascript"
+                src="/pos_cash_atm/static/src/js/models.js"
+            />
+            <script
+                type="text/javascript"
+                src="/pos_cash_atm/static/src/js/Chrome.js"
+            />
+            <script
+                type="text/javascript"
+                src="/pos_cash_atm/static/src/js/PopUpSelectionBox.js"
+            />
+              <script
+                type="text/javascript"
+                src="/pos_cash_atm/static/src/js/ReportScreen.js"
+            />
+        </xpath>
+    </template>
+
+
+</odoo>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_pos_pos_form" model="ir.ui.view">
+        <field name="name">pos.order.form.inherit</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='refund']" position="after">
+                <button type="object" name="action_send_pos_einvoices" class="oe_highlight"
+                    string="Send E-invoice" attrs="{'invisible': ['|',('state', '!=', 'invoiced'),('l10n_sa_send_state', 'in', ('reported', 'cleared'))]}"/>
+            </xpath>
+            <xpath expr="//page[@name='extra']" position="inside">
+                <group name="einvoicing" string="E-invoicing">
+                    <field name="l10n_sa_send_state"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_pos_order_tree" model="ir.ui.view">
+        <field name="name">pos.order.tree.inherit</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_order_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='state']" position="after">
+                <field name="l10n_sa_send_state"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="send_xml_invoice_action">
+        <field name="name">Send E-invoices</field>
+        <field name="model_id" ref="point_of_sale.model_pos_order"/>
+        <field name="binding_model_id" ref="point_of_sale.model_pos_order"/>
+        <field name="state">code</field>
+        <field name="code">
+records.action_send_pos_einvoices()
+        </field>
+    </record>
+
+</odoo>

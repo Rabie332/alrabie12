@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_hr_covenant_manger_hr,name_hr_covenant_manager_hr,model_hr_covenant,hr.group_hr_manager,1,1,1,0
+access_hr_covenant_user,name_hr_covenant_user,model_hr_covenant,base.group_user,1,1,0,0
+access_hr_covenant_type_manger_hr,name_hr_covenant_type_manager_hr,model_hr_covenant_type,hr.group_hr_manager,1,1,1,0
+access_hr_covenant_type_user,name_hr_covenant_type_user,model_hr_covenant_type,base.group_user,1,1,0,0
+access_hr_covenant_wizard_group_covenant,name_hr_covenant_wizard_group_covenant,model_hr_covenant_wizard,base.group_user,1,1,1,0

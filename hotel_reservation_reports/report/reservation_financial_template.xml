@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_reservation_financial">
+        <t t-call="web.html_container">
+            <style>
+                /* Custom CSS to adjust table layout and spacing */
+                .page {
+                    padding: 15px;
+                }
+                .table {
+                    font-size: 10px; /* Adjust font size to ensure content fits */
+                    margin-bottom: 10px; /* Adjust bottom margin to control space between tables */
+                }
+                .table-bordered th,
+                .table-bordered td {
+                    padding: 4px; /* Adjust padding to save space */
+                }
+                .header, .footer {
+                    font-size: 10px;
+                }
+            </style>
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="header"></div>
+                        <div class="row">
+                            <div class="col-3"></div>
+                            <div class="col-6 text-center">
+                                <h1 style="color:#507298; padding-top:20px; font-size: 25px;">
+                                    <strong>Fund Movement Report</strong>
+                                </h1>
+                            </div>
+                            <div class="col-3">
+                                <img style="max-height:120px !important;" width="80%" t-att-src="'data:image/png;base64,%s' % to_text(user.company_id.sudo().logo)" />
+                            </div>
+                        </div>
+                        <!-- Period Section -->
+                        <div class="col-12 text-center">
+                            <strong>Period: </strong>
+                            <span t-field="o.date_from"/> -
+                            <span t-field="o.date_to"/>
+                            <br/>
+                            <br/>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <h3>Inbound Payments</h3>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr style="background-color: #00b7ff; color: #fff;">
+                                            <td>
+                                                <strong>Reservation Num</strong>
+                                            </td>
+                                            <td>
+                                                <strong>Payment Num</strong>
+                                            </td>
+                                            <td>
+                                                <strong>Date</strong>
+                                            </td>
+                                            <td>
+                                                <strong>Ref</strong>
+                                            </td>
+                                            <td>
+                                                <strong>Payment Method</strong>
+                                            </td>
+                                            <td>
+                                                <strong>Amount</strong>
+                                            </td>
+                                            <td>
+                                                <strong>Insurance</strong>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-set="payments_inbound" t-value="get_lines(o).filtered(lambda payment_inbound: payment_inbound.payment_type == 'inbound' and payment_inbound.support_type_id.name == 'Inbound')"/>
+                                        <t t-foreach="payments_inbound" t-as="payment">
+                                            <tr>
+                                                <td>
+                                                    <span t-field="payment.reservation_id"/>
+                                                </td>
+                                                <td>
+                                                    <span t-esc="payment.name"/>
+                                                </td>
+                                                <td>
+                                                    <span t-field="payment.create_date" t-options="{'format': 'dd/MM/yyyy'}"/>
+                                                    <br/>
+                                                    <span t-field="payment.create_date" t-options="{'format': 'HH:mm:ss'}"/>
+                                                </td>
+                                                <td>
+                                                    <span t-esc="payment.reservation_id.reservation_line.room_id.name"/>
+                                                </td>
+                                                <td>
+                                                    <span t-esc="payment.payment_method_id.name"/>
+                                                </td>
+                                                <td>
+                                                    <span t-esc="payment.amount"/>
+                                                </td>
+                                                <td>
+                                                    <span t-field="payment.reservation_id.total_inbound_insurance"/>
+                                                </td>
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-6">
+                                <h3>Outbound Payments</h3>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <td>
+                                                <strong>Reservation Num</strong>
+                                            </td>
+                                            <td>
+                                                <strong>Payment Num</strong>
+                                            </td>
+                                            <td>
+                                                <strong>Date</strong>
+                                            </td>
+                                            <td>
+                                                <strong>Ref</strong>
+                                            </td>
+                                            <td>
+                                                <strong>Payment Method</strong>
+                                            </td>
+                                            <td>
+                                                <strong>Amount</strong>
+                                            </td>
+                                            <td>
+                                                <strong>Return Insurance Amount</strong>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-set="payments_outbound" t-value="get_lines(o).filtered(lambda payment_outbound: payment_outbound.payment_type == 'outbound' and payment_outbound.support_type_id.name == 'Rent Refund')"/>
+                                        <t t-foreach="payments_outbound" t-as="payment">
+                                            <tr>
+                                                <td>
+                                                    <span t-field="payment.reservation_id"/>
+                                                </td>
+                                                <td>
+                                                    <span t-esc="payment.name"/>
+                                                </td>
+                                                <td>
+                                                    <span t-field="payment.create_date" t-options="{'format': 'dd/MM/yyyy'}"/>
+                                                    <br/>
+                                                    <span t-field="payment.create_date" t-options="{'format': 'HH:mm:ss'}"/>
+                                                </td>
+                                                <td>
+                                                    <span t-esc="payment.reservation_id.reservation_line.room_id.name"/>
+                                                </td>
+                                                <td>
+                                                    <span t-esc="payment.payment_method_id.name"/>
+                                                </td>
+                                                <td>
+                                                    <span t-esc="payment.amount"/>
+                                                </td>
+                                                <td>
+                                                    <span t-field="payment.reservation_id.total_outbound_insurance"/>
+                                                </td>
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <table class="table">
+                                    <tfoot>
+                                        <tr>
+                                            <td>
+                                                <strong>اجمالي سندات القبض:</strong>
+                                                <span t-esc="total_inbound"/>
+                                            </td>
+                                            <td>
+                                                <strong>اجمالي سندات الصرف:</strong>
+                                                <span t-esc="total_outbound"/>
+                                            </td>
+                                            <td>
+                                                <strong>الصافي:</strong>
+                                                <span t-esc="net"/>
+                                            </td>
+                                            <td>
+                                                <strong>صافي التأمينات:</strong>
+                                                <span t-esc="total_insurance"/>
+                                            </td>
+                                            <td>
+                                                <strong>اجمالي الصندوق:</strong>
+                                                <span t-esc="total_fund"/>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

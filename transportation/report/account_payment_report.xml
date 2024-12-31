@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template
+        id="report_payment_receipt_document_inherit_transportation"
+        inherit_id="account.report_payment_receipt_document"
+    >
+        <xpath expr="//table" position="before">
+            <t t-if="o.is_reward_drivers">
+            <br />
+            <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th><span>Receipt Serial Number</span></th>
+                            <th><span>Shipping Order Number</span></th>
+                            <th><span>Vehicle Number</span></th>
+                            <th><span>Route</span></th>
+                            <th><span>Customer Name</span></th>
+                            <th><span>Container Number</span></th>
+                            <th><span>Reward</span></th>
+                            <th><span>Minimum amount</span></th>
+                            <th><span>Residual</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr t-foreach="o.shipping_line_ids" t-as="shipping_line">
+                                <td><t t-esc="o.name" /></td>
+                                <td><span t-field="o.shipping_order_number" /></td>
+                                <td> <t t-esc="shipping_line.vehicle_id.name" /></td>
+                                <td><t t-esc="shipping_line.route_id.name" /></td>
+                                <td> <t t-esc="o.shipping_order_id.clearance_request_id.partner_id.name" /></td>
+                                <td> <t t-esc="shipping_line.container_number" /></td>
+                                <td><t t-esc="o.reward" /></td>
+                                <td><t t-esc="shipping_line.route_id.minimum_amount" /></td>
+                                <td><t t-esc="o.residual_reward" /></td>
+                            </tr>
+                    </tbody>
+                </table>
+            <br />
+            <br />
+            </t>
+
+        </xpath>
+    </template>
+</odoo>

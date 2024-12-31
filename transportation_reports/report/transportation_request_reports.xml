@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- <record id="transportation_request_partner_xlsx" model="ir.actions.report">
+        <field name="name">transportation request Partner Excel</field>
+        <field name="model">report.transportation.transportation_request_partner_xlsx</field>
+        <field name="report_name">transportation.transportation_request_partner_xlsx</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_file">transportation.transportation_request_xlsx</field>
+    </record>
+    <record id="transportation_request_xlsx" model="ir.actions.report">
+        <field name="name">transportation request Excel</field>
+        <field name="model">report.transportation.transportation_request_xlsx</field>
+        <field name="report_name">transportation.transportation_request_xlsx</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_file">transportation.transportation_request_xlsx</field>
+    </record> -->
+</odoo>

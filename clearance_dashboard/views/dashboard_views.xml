@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="assets_backend" name="clearance assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/clearance_dashboard/static/src/js/transportation_dashboard.js" />
+            <script type="text/javascript" src="/clearance_dashboard/static/src/js/clearance_dashboard.js" />
+            <link rel="stylesheet" href="/clearance_dashboard/static/src/css/transportation_dashboard.css" />
+        </xpath>
+    </template>
+    <menuitem
+        id="clearance.clearance_menu_root"
+        name="Clearance"
+        groups="clearance.group_reception_responsible,sales_team.group_sale_manager,clearance.group_data_entry,clearance.group_translation_officer,clearance.group_shipping_agent_responsible,clearance.group_admin_setting,clearance.group_customs_declaration_responsible,clearance.group_customs_responsible,clearance_dashboard.group_clearance_dashboard"
+    />
+    <record id="clearance_dashboard_action" model="ir.actions.client">
+        <field name="name">Dashboard</field>
+        <field name="tag">clearance_dashboard</field>
+    </record>
+    <menuitem
+        id="clearance_dashboard_menu"
+        name="Dashboard"
+        parent="clearance.clearance_menu_root"
+        sequence="0"
+        groups="clearance_dashboard.group_clearance_dashboard"
+        action="clearance_dashboard_action"
+    />
+    <record id="transport_dashboard_action" model="ir.actions.client">
+        <field name="name">Dashboard</field>
+        <field name="tag">transport_dashboard</field>
+    </record>
+    <menuitem
+        id="transport_dashboard_menu"
+        name="Dashboard"
+        parent="transportation.transportation_menu_root"
+        sequence="0"
+        groups="clearance_dashboard.group_clearance_dashboard"
+        action="transport_dashboard_action"
+    />
+</odoo>

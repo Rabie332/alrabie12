@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="invoice_qr_code_template">
+
+        <t t-call="web.frontend_layout">
+            <t t-set="html_data" t-value="{'style': 'height: 100%;'}" />
+            <t t-set="body_classname" t-value="'bg-100'" />
+            <t t-set="no_header" t-value="True" />
+            <t t-set="no_footer" t-value="True" />
+
+            <div class="container py-5">
+                <div class="card-body">
+                    <div
+                        t-attf-class="text-center pb-3 border-bottom {{'mb-3' if form_small else 'mb-4'}}"
+                    >
+                        <img
+                            t-attf-src="/web/binary/company_logo{{ '?dbname='+db if db else '' }}"
+                            alt="Logo"
+                            style="max-height:120px; max-width: 100%; width:auto"
+                        />
+                    </div>
+
+                    <div class="clearfix mb16" style="margin-top: 50px;">
+                        <form
+                            action="/qr_code_action"
+                            method="post"
+                            role="form"
+                        >
+                            <div class="tab-content">
+                                <div class="text-center">
+                                    <div class="col-sm-12">
+                                        <p
+                                            class="alert alert-danger"
+                                            t-if="error"
+                                            role="alert"
+                                        >
+                                            <t t-esc="error" />
+                                        </p>
+                                        <div class="input-group">
+                                            <input
+                                                name="number"
+                                                type="hidden"
+                                                t-att-value="number"
+                                            />
+                                            <div class="form-group col-sm-12">
+                                                <input
+                                                    name="code_carrier"
+                                                    type="text"
+                                                    class="form-control"
+                                                    placeholder="Veuillez saisir votre code"
+                                                    required="required"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="text-center pt-3"
+                                style="margin-top:50px;"
+                            >
+                                <button
+                                    type="submit"
+                                    class="btn btn-primary"
+                                >Confirmer</button>
+                                <div class="clearfix" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </t>
+
+    </template>
+
+    <template id="invoice_qr_code_success_template">
+
+        <t t-call="web.frontend_layout">
+            <t t-set="html_data" t-value="{'style': 'height: 100%;'}" />
+            <t t-set="body_classname" t-value="'bg-100'" />
+            <t t-set="no_header" t-value="True" />
+            <t t-set="no_footer" t-value="True" />
+
+            <div class="container py-5">
+                <div class="card-body">
+                    <div
+                        t-attf-class="text-center pb-3 border-bottom {{'mb-3' if form_small else 'mb-4'}}"
+                    >
+                        <img
+                            t-attf-src="/web/binary/company_logo{{ '?dbname='+db if db else '' }}"
+                            alt="Logo"
+                            style="max-height:120px; max-width: 100%; width:auto"
+                        />
+                    </div>
+
+                    <div class="clearfix mb16" style="margin-top: 50px;">
+                        <div class="tab-content">
+                            <div class="text-center">
+                                <div class="col-sm-12">
+                                    <p class="alert alert-success">
+                                        La mise à jour d'état du document est effectué avec succées.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+
+    </template>
+
+
+</odoo>

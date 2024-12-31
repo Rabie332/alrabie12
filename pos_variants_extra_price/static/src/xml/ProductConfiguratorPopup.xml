@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+    <t
+        t-name="RadioProductAttribute"
+        t-inherit="point_of_sale.RadioProductAttribute"
+        t-inherit-mode="extension"
+        owl="1"
+    >
+        <xpath expr="//div[hasclass('configurator_radio')]" position="attributes">
+            <attribute name="style">line-height: 2;</attribute>
+        </xpath>
+    </t>
+</templates>

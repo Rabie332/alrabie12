@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+     <!-- Request-related subtypes for messaging / Chatter -->
+
+    <record id="mt_hr_settlement_approved" model="mail.message.subtype">
+        <field name="name">Approved</field>
+        <field name="res_model">hr.settlement</field>
+        <field name="description">Request approved</field>
+    </record>
+
+    <record id="mt_hr_loan_refused" model="mail.message.subtype">
+        <field name="name">Refused</field>
+        <field name="res_model">hr.settlement</field>
+        <field name="default" eval="False" />
+        <field name="description">Request refused</field>
+    </record>
+
+    <!-- Request specific activities -->
+
+    <record id="mail_hr_settlement_approval" model="mail.activity.type">
+        <field name="name">Request Approval</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="category">validation</field>
+        <field name="res_model_id" ref="hr_payroll_settlement.model_hr_settlement" />
+    </record>
+</odoo>

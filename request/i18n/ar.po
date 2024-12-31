@@ -1,0 +1,760 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* request
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-05 10:46+0000\n"
+"PO-Revision-Date: 2023-06-05 10:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: request
+#: model:ir.model,name:request.model_request_type
+msgid " Request Type"
+msgstr "النوع"
+
+#. module: request
+#: code:addons/request/models/request.py:0
+#, python-format
+msgid "%s have an %s request on : %s "
+msgstr "لدى %s طلب %s في %s"
+
+#. module: request
+#: model_terms:ir.ui.view,arch_db:request.mail_activity_view_kanban
+msgid "<i class=\"fa fa-clock-o\" title=\"Date\"/>"
+msgstr "<i class=\"fa fa-clock-o\" title=\"التاريخ\"/>"
+
+#. module: request
+#: model_terms:ir.ui.view,arch_db:request.request_stage_from_view
+msgid "<span class=\"ml8\">Days</span>"
+msgstr "<span class=\"ml8\">أيام</span>"
+
+#. module: request
+#: model_terms:ir.ui.view,arch_db:request.mail_activity_view_kanban
+msgid ""
+"<span>\n"
+"                                                <i class=\"fa fa-clock-o\" title=\"Date\"/>\n"
+"                                            </span>"
+msgstr ""
+"<span>\n"
+"                                                <i class=\"fa fa-clock-o\" title=\"التاريخ\"/>\n"
+"                                            </span>"
+
+#. module: request
+#: model_terms:ir.ui.view,arch_db:request.request_view_form
+msgid "Accept"
+msgstr "موافق"
+
+#. module: request
+#: model_terms:ir.ui.view,arch_db:request.confirm_action_wizard_view_form
+msgid "Accept all requests"
+msgstr "الموافقة على كل الطلبات"
+
+#. module: request
+#: model_terms:ir.ui.view,arch_db:request.mail_activity_view_search
+msgid "Act. next 6 months"
+msgstr "فعل. الأشهر الستة القادمة"
+
+#. module: request
+#: model_terms:ir.ui.view,arch_db:request.mail_activity_view_search
+msgid "Act. next month"
+msgstr "فعل. الشهر القادم"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__message_needaction
+msgid "Action Needed"
+msgstr "الإجراءات اللازمة"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_mail_activity_type__category
+msgid "Action to Perform"
+msgstr "إجراء للتنفيذ"
+
+#. module: request
+#: model:ir.model.fields,help:request.field_mail_activity_type__category
+msgid ""
+"Actions may trigger specific behavior like opening calendar view or "
+"automatically mark as done when a document is uploaded"
+msgstr ""
+"قد تؤدي الإجراءات إلى سلوك معين مثل فتح طريقة عرض التقويم أو وضع علامة "
+"\"تم\" عليها تلقائيًا عند تحميل مستند"
+
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_mail_activity__active
+#: model:ir.model.fields,field_description:request.field_request__active
+#: model:ir.model.fields,field_description:request.field_request_stage__active
+#: model:ir.model.fields,field_description:request.field_request_type__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: request
+#: model:ir.model,name:request.model_mail_activity
+#: model_terms:ir.ui.view,arch_db:request.mail_activity_view_form_board
+msgid "Activity"
+msgstr "النشاط"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "نشاط استثناء الديكور"
+
+#. module: request
+#: model_terms:ir.ui.view,arch_db:request.mail_activity_view_form_board
+msgid "Activity Form"
+msgstr "النشاط"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: request
+#: model:ir.model,name:request.model_mail_activity_type
+msgid "Activity Type"
+msgstr "نوع النشاط"
+
+#. module: request
+#: model_terms:ir.ui.view,arch_db:request.request_stage_from_view
+msgid "Add a description..."
+msgstr "...إضافة وصف "
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request_stage__move_next_stage
+msgid "Allow automatic transition to the next stage"
+msgstr "الانتقال التلقائي إلى المرحلة التالية"
+
+#. module: request
+#: model:ir.actions.act_window,name:request.mail_activity_action_approval_requests
+#: model:ir.ui.menu,name:request.mail_activity_menu_approval_requests
+msgid "Approval requests"
+msgstr "طلبات الإعتماد"
+
+#. module: request
+#: model_terms:ir.ui.view,arch_db:request.request_stage_from_view
+#: model_terms:ir.ui.view,arch_db:request.request_stage_search_view
+msgid "Archived"
+msgstr "مؤرشف"
+
+#. module: request
+#: model_terms:ir.ui.view,arch_db:request.confirm_action_wizard_view_form
+msgid ""
+"Are you sure you want to accept all\n"
+"                    requests ?"
+msgstr "هل أنت متأكد أنك تريد الموافقة على جميع الطلبات؟"
+
+#. module: request
+#: model_terms:ir.ui.view,arch_db:request.confirm_action_wizard_view_form
+msgid ""
+"Are you sure you want to refuse all\n"
+"                    requests ?"
+msgstr "هل أنت متأكد أنك تريد رفض جميع الطلبات؟"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request_stage__assign_type
+msgid "Assign Type"
+msgstr "نوع التعيين"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request_stage__res_model_id
+#: model:ir.model.fields,field_description:request.field_request_type__res_model_id
+msgid "Associated Model"
+msgstr "النموذج"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_mail_activity__calendar_event_id_partner_ids
+msgid "Attendees"
+msgstr "الحضور"
+
+#. module: request
+#: model:ir.actions.server,name:request.cron_request_next_stage_automatic_ir_actions_server
+#: model:ir.cron,cron_name:request.cron_request_next_stage_automatic
+#: model:ir.cron,name:request.cron_request_next_stage_automatic
+msgid "Automatic transition to the next stage"
+msgstr "الانتقال التلقائي إلى المرحلة التالية"
+
+#. module: request
+#: model:ir.model.fields.selection,name:request.selection__request__state__cancel
+#: model:ir.model.fields.selection,name:request.selection__request_stage__state__cancel
+msgid "Cancel"
+msgstr "ملغى"
+
+#. module: request
+#: model_terms:ir.ui.view,arch_db:request.confirm_action_wizard_view_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: request
+#: model_terms:ir.ui.view,arch_db:request.request_view_form
+msgid "Canceled"
+msgstr "ملغى"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request_type__code
+msgid "Code"
+msgstr "الرمز"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__company_id
+msgid "Company"
+msgstr "المؤسسة"
+
+#. module: request
+#: model:ir.model,name:request.model_confirm_action_wizard
+msgid "Confirm Action"
+msgstr "تأكيد الإجراء"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_confirm_action_wizard__create_uid
+#: model:ir.model.fields,field_description:request.field_request_stage__create_uid
+#: model:ir.model.fields,field_description:request.field_request_type__create_uid
+msgid "Created by"
+msgstr "انشأ من قبل"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_confirm_action_wizard__create_date
+#: model:ir.model.fields,field_description:request.field_request_stage__create_date
+#: model:ir.model.fields,field_description:request.field_request_type__create_date
+msgid "Created on"
+msgstr "أنشأت في"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request_stage__default_role_ids
+msgid "Default roles"
+msgstr "الأدوار"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request_stage__default_user_id
+msgid "Default user"
+msgstr "مستخدم"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__department_id
+msgid "Department"
+msgstr "إدارة"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request_stage__description
+msgid "Description"
+msgstr "وصف"
+
+#. module: request
+#: model_terms:ir.ui.view,arch_db:request.mail_activity_view_kanban
+msgid "Details"
+msgstr "التفاصيل"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__display_button_accept
+msgid "Display Button Accept"
+msgstr "عرض زر قبول"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__display_button_previous
+msgid "Display Button Previous"
+msgstr "عرض زر سابق"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__display_button_refuse
+msgid "Display Button Refuse"
+msgstr "عرض زر رفض"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__display_button_send
+msgid "Display Button Send"
+msgstr "عرض زر إرسال"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_confirm_action_wizard__display_name
+#: model:ir.model.fields,field_description:request.field_mail_activity__display_name
+#: model:ir.model.fields,field_description:request.field_mail_activity_type__display_name
+#: model:ir.model.fields,field_description:request.field_request__display_name
+#: model:ir.model.fields,field_description:request.field_request_stage__display_name
+#: model:ir.model.fields,field_description:request.field_request_type__display_name
+#: model:ir.model.fields,field_description:request.field_res_users__display_name
+msgid "Display Name"
+msgstr "المسمى"
+
+#. module: request
+#: model:ir.model.fields.selection,name:request.selection__request__state__done
+#: model:ir.model.fields.selection,name:request.selection__request_stage__state__done
+msgid "Done"
+msgstr "تم"
+
+#. module: request
+#: model:ir.model.fields.selection,name:request.selection__request__state__draft
+#: model:ir.model.fields.selection,name:request.selection__request_stage__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: request
+#: model:ir.ui.menu,name:request.drive_actions_menu
+msgid "Drive Actions"
+msgstr "محرك الإجراءات"
+
+#. module: request
+#: model:ir.ui.menu,name:request.self_service_menu_drive_action
+msgid "Drive actions for self services"
+msgstr "محرك الإجراءات للخدمات الذاتية"
+
+#. module: request
+#: model_terms:ir.ui.view,arch_db:request.request_view_kanban
+msgid "Dropdown menu"
+msgstr "القائمة المنسدلة"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_mail_activity__duration
+msgid "Duration"
+msgstr "المدة الزمنية"
+
+#. module: request
+#: model_terms:ir.ui.view,arch_db:request.request_view_kanban
+msgid "Edit"
+msgstr "تحرير"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request_stage__mail_template_id
+msgid "Email Template"
+msgstr "قالب البريد الإلكتروني"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__employee_id
+#: model_terms:ir.ui.view,arch_db:request.request_view_search
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: request
+#: model:ir.ui.menu,name:request.external_services_menu
+msgid "External services"
+msgstr "الخدمات الخارجية"
+
+#. module: request
+#: model:ir.model.fields.selection,name:request.selection__mail_activity_type__category__feedback
+msgid "Feedback"
+msgstr "ردود الفعل"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request_stage__fold
+msgid "Folded in Kanban"
+msgstr "مطوية في كانبان"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: request
+#: model_terms:ir.ui.view,arch_db:request.request_view_search
+msgid "Group by"
+msgstr "تجميع حسب"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_confirm_action_wizard__id
+#: model:ir.model.fields,field_description:request.field_mail_activity__id
+#: model:ir.model.fields,field_description:request.field_mail_activity_type__id
+#: model:ir.model.fields,field_description:request.field_request__id
+#: model:ir.model.fields,field_description:request.field_request_stage__id
+#: model:ir.model.fields,field_description:request.field_request_type__id
+#: model:ir.model.fields,field_description:request.field_res_users__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__activity_exception_icon
+msgid "Icon"
+msgstr "أيقونة"
+
+#. module: request
+#: model:ir.model.fields,help:request.field_request__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "أيقونة للإشارة إلى نشاط استثنائي."
+
+#. module: request
+#: model:ir.model.fields,help:request.field_request__message_needaction
+#: model:ir.model.fields,help:request.field_request__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم تحديده  ، فإن الرسائل الجديدة تتطلب اهتمامك."
+
+#. module: request
+#: model:ir.model.fields,help:request.field_request__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده ، فبعض الرسائل بها خطأ في التسليم"
+
+#. module: request
+#: model:ir.model.fields.selection,name:request.selection__request__state__in_progress
+#: model:ir.model.fields.selection,name:request.selection__request_stage__state__in_progress
+msgid "In progress"
+msgstr "جاري"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__job_id
+msgid "Job"
+msgstr "الوظيفة"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__kanban_color
+msgid "Kanban Color Index"
+msgstr "لون كانبان"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_confirm_action_wizard____last_update
+#: model:ir.model.fields,field_description:request.field_mail_activity____last_update
+#: model:ir.model.fields,field_description:request.field_mail_activity_type____last_update
+#: model:ir.model.fields,field_description:request.field_request____last_update
+#: model:ir.model.fields,field_description:request.field_request_stage____last_update
+#: model:ir.model.fields,field_description:request.field_request_type____last_update
+#: model:ir.model.fields,field_description:request.field_res_users____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_confirm_action_wizard__write_uid
+#: model:ir.model.fields,field_description:request.field_request_stage__write_uid
+#: model:ir.model.fields,field_description:request.field_request_type__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_confirm_action_wizard__write_date
+#: model:ir.model.fields,field_description:request.field_request_stage__write_date
+#: model:ir.model.fields,field_description:request.field_request_type__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: request
+#: model_terms:ir.ui.view,arch_db:request.mail_activity_view_form_board
+msgid "Log a note..."
+msgstr "سجل ملاحظة..."
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: request
+#: model:res.groups,name:request.group_stages_manager
+msgid "Manage Stages"
+msgstr "إدارة المراحل "
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__manager_id
+msgid "Manager"
+msgstr "مشرف"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: request
+#: model_terms:ir.ui.view,arch_db:request.request_view_search
+msgid "My Requests"
+msgstr "طلباتي"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request_type__name
+msgid "Name"
+msgstr "المسمى"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "أخر موعد للنشاط المقبل"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__name
+msgid "Number"
+msgstr "المسمى"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: request
+#: model:ir.model.fields,help:request.field_request__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: request
+#: model:ir.model.fields,help:request.field_request__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل مع خطأ في التسليم"
+
+#. module: request
+#: model:ir.model.fields,help:request.field_request__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل غير المقروءة"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_mail_activity__res_model_id_name
+#: model_terms:ir.ui.view,arch_db:request.mail_activity_view_search
+msgid "Origin"
+msgstr "الأصل"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request_stage__code
+msgid "Python Code"
+msgstr "بايثون كود"
+
+#. module: request
+#: model:ir.model.fields.selection,name:request.selection__request_stage__assign_type__python
+msgid "Python Expression"
+msgstr "مصطلح بايثون"
+
+#. module: request
+#: model_terms:ir.ui.view,arch_db:request.request_view_form
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: request
+#: model_terms:ir.ui.view,arch_db:request.confirm_action_wizard_view_form
+msgid "Refuse all requests"
+msgstr "رفض كل الطلبات"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request_stage__res_model
+#: model:ir.model.fields,field_description:request.field_request_type__res_model
+msgid "Related Document Model"
+msgstr "نموذج وثيقة ذات صلة"
+
+#. module: request
+#: model:ir.model,name:request.model_request
+msgid "Request"
+msgstr "طلب"
+
+#. module: request
+#: model_terms:ir.ui.view,arch_db:request.request_stage_from_view
+msgid "Request Stage"
+msgstr "مرحلة الطلب"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__date
+msgid "Request date"
+msgstr "تاريخ الطلب"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: request
+#: model:ir.model.fields.selection,name:request.selection__request_stage__assign_type__role
+msgid "Role"
+msgstr "الدور"
+
+#. module: request
+#: model:ir.ui.menu,name:request.self_services_menu
+msgid "Self services"
+msgstr "الخدمات الذاتية"
+
+#. module: request
+#: model_terms:ir.ui.view,arch_db:request.request_view_form
+msgid "Send"
+msgstr "إرسال"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request_stage__sequence
+msgid "Sequence"
+msgstr "تسلسل"
+
+#. module: request
+#: model_terms:ir.ui.view,arch_db:request.mail_activity_view_search
+msgid "Show activities scheduled for next 6 months."
+msgstr "عرض الأنشطة المجدولة لمدة 6 أشهر القادمة."
+
+#. module: request
+#: model_terms:ir.ui.view,arch_db:request.mail_activity_view_search
+msgid "Show activities scheduled for next month."
+msgstr "عرض الأنشطة المجدولة للشهر المقبل."
+
+#. module: request
+#: model:ir.model,name:request.model_request_stage
+#: model:ir.model.fields,field_description:request.field_request__stage_id
+#: model_terms:ir.ui.view,arch_db:request.request_view_search
+msgid "Stage"
+msgstr "مرحلة"
+
+#. module: request
+#: model_terms:ir.ui.view,arch_db:request.request_stage_from_view
+msgid "Stage Description"
+msgstr "وصف المرحلة"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request_stage__name
+msgid "Stage Name"
+msgstr "إسم المرحلة"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_mail_activity__calendar_event_id_start
+msgid "Start"
+msgstr "بداية"
+
+#. module: request
+#: model:ir.model.fields,help:request.field_mail_activity__calendar_event_id_start
+msgid "Start date of an event, without time for full days events"
+msgstr "تاريخ بدء حدث ، بدون وقت أحداث الأيام الكاملة"
+
+#. module: request
+#: model_terms:ir.ui.view,arch_db:request.mail_activity_view_form_board
+msgid "Start meeting"
+msgstr "ابدأ الاجتماع"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__state
+#: model:ir.model.fields,field_description:request.field_request_stage__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: request
+#: model:ir.model.fields,help:request.field_request__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request_stage__days_number
+#: model_terms:ir.ui.view,arch_db:request.request_stage_from_view
+msgid "The number of waiting days"
+msgstr "عدد أيام الانتظار"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__request_type_id
+msgid "Type"
+msgstr "النوع"
+
+#. module: request
+#: model:ir.model.fields,help:request.field_request__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع نشاط الاستثناء في السجل."
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request_stage__request_type_ids
+msgid "Types"
+msgstr "الأنواع"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__message_unread
+msgid "Unread Messages"
+msgstr "رسائل غير مقروءة"
+
+#. module: request
+#: model:ir.model.fields,field_description:request.field_request__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عداد الرسائل غير المقروءة"
+
+#. module: request
+#: model:ir.model.fields.selection,name:request.selection__request_stage__assign_type__user
+#: model_terms:ir.ui.view,arch_db:request.mail_activity_view_search
+msgid "User"
+msgstr "المستخدم"
+
+#. module: request
+#: model:ir.model,name:request.model_res_users
+msgid "Users"
+msgstr "المستخدمون"
+
+#. module: request
+#: model_terms:ir.ui.view,arch_db:request.request_stage_from_view
+msgid "Validate"
+msgstr "الإعتماد"
+
+#. module: request
+#: model:ir.model.fields.selection,name:request.selection__mail_activity_type__category__validation
+msgid "Validation"
+msgstr "التأكيد"
+
+#. module: request
+#: code:addons/request/models/request.py:0
+#: code:addons/request/models/request.py:0
+#, python-format
+msgid "Warning"
+msgstr "تنبيه"
+
+#. module: request
+#: code:addons/request/wizard/confirm_action_wizard.py:0
+#, python-format
+msgid "You cannot refuse the request {}."
+msgstr "لا يمكنك رفض الطلب  {}."
+
+
+#. module: request
+#: code:addons/request/models/request.py:0
+#, python-format
+msgid "You cannot delete a request which is in {0} stage."
+msgstr "لا يمكنك حذف طلب في المرحلة {0}."
+
+
+#. module: request
+#: code:addons/request/wizard/confirm_action_wizard.py:0
+#, python-format
+msgid "You cannot accept the request {}."
+msgstr "لا يمكنك الموافقة على الطلب {}."
+
+#. module: request
+#: model_terms:ir.ui.view,arch_db:request.mail_activity_view_form_board
+msgid "e.g. Discuss proposal"
+msgstr "على سبيل المثال ناقش الاقتراح"
+
+#. module: request
+#: model_terms:ir.ui.view,arch_db:request.confirm_action_wizard_view_form
+msgid "or"
+msgstr "أو"

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem
+        id="hotel_room_management_menu_root"
+        name="Rooms Management"
+        sequence="4"
+        groups="hotel.group_room_management,hotel.group_hotel_manager"
+        web_icon="hotel_room,static/description/icon.png"
+    />
+
+    <record id="hotel.lost_stuff_menu" model="ir.ui.menu">
+        <field name="parent_id" ref="hotel_room_management_menu_root" />
+        <field name="sequence">11</field>
+    </record>
+    <record id="hotel.found_stuff_menu" model="ir.ui.menu">
+        <field name="parent_id" ref="hotel_room_management_menu_root" />
+        <field name="sequence">12</field>
+    </record>
+    <record id="hotel.hotel_verification_menu" model="ir.ui.menu">
+        <field name="parent_id" ref="hotel_room_management_menu_root" />
+        <field name="sequence">13</field>
+    </record>
+
+
+    <menuitem
+        id="hotel.menu_hotel_room"
+        name="Rooms"
+        parent="hotel_room_management_menu_root"
+        action="hotel.action_hotel_room_form"
+        sequence="10"
+    />
+
+     <menuitem
+        id="hotel.menu_open_hotel_room_type_form_tree"
+        name="Room Types"
+        action="hotel.open_hotel_room_type_form_tree"
+        sequence="5"
+        parent="hotel.menu_open_hotel_room_form"
+    />
+
+        <menuitem
+        id="hotel.hotel_configuration_menu"
+        name="Configuration"
+        sequence="30"
+        parent="hotel_room_management_menu_root"
+    />
+
+     <menuitem
+        id="hotel.menu_open_hotel_room_form"
+        name="Rooms"
+        action=""
+        sequence="1"
+        parent="hotel.hotel_configuration_menu"
+    />
+    <menuitem
+        id="hotel.menu_open_hotel_floor_form_tree"
+        name="Floors"
+        sequence="10"
+        parent="hotel.menu_open_hotel_room_form"
+    />
+</odoo>

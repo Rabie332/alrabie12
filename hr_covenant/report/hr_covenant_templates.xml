@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+<template id="report_covenant_resume">
+     <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <div class="header" />
+                 <div class="footer" />
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="col-xs-12 text-center">
+                            <h3 style="color:#395870;">
+                                <strong>
+                                    Resume Covenants
+                                </strong>
+
+                            </h3>
+                        </div>
+
+                        <div class="col-xs-12 text-center">
+                            <strong>Period:</strong>
+                            <span t-esc="o.date_from" />
+                            -
+                            <span t-esc="o.date_to" />
+
+                        </div>
+
+
+                        <table width="100%" style="font-size:18px;border: 2px solid black;">
+                            <!-- head table -->
+                            <thead>
+                                <tr style="border: 2px solid black;background:#4682B4;" class="text-center">
+                                    <th style="border: 2px solid black;width:5%;">Number</th>
+                                     <th style="border: 2px solid black;width:7%;">Employee</th>
+                                    <th style="border: 2px solid black;width:5%;">Job Number</th>
+                                    <th style="border: 2px solid black;width:7%;">Department</th>
+                                    <th style="border: 2px solid black;width:7%;">Date</th>
+                                    <th style="border: 2px solid black;width:10%;">Covenant Type</th>
+                                    <th style="border: 2px solid black;width:5%;">Description</th>
+                                      <th style="border: 2px solid black;width:5%;">Stage</th>
+                                    <th style="border: 2px solid black;width:5%;">Retrieval</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="covenants" t-as="covenant">
+                                    <tr>
+                                        <td style="border: 2px solid black;width:5%;" class="text-center">
+                                            <span t-esc="covenant.name" />
+                                        </td>
+                                        <td style="border: 2px solid black;width:7%;" class="text-center">
+                                            <span t-field="covenant.employee_id.name" />
+                                        </td>
+                                        <td style="border: 2px solid black;width:5%;" class="text-center">
+                                            <t t-if="covenant.employee_id.number">
+                                            <span t-field="covenant.employee_id.number" /></t>
+                                            <t t-else="">
+                                                <span style="margin-left:8px">-</span>
+                                            </t>
+                                        </td>
+
+                                        <td style="border: 2px solid black;width:7%;" class="text-center">
+                                            <span t-field="covenant.department_id.name" />
+                                        </td>
+
+                                        <td style="border: 2px solid black;width:7%;" class="text-center">
+                                            <span t-field="covenant.date" t-options="{'format': 'yyyy-MM-dd'}" />
+                                        </td>
+                                        <td style="border: 2px solid black;width:10%;" class="text-center">
+                                            <span t-field="covenant.covenant_type_id.name" />
+                                        </td>
+                                        <td style="border: 2px solid black;width:5%;" class="text-center">
+                                             <span t-field="covenant.description" />
+
+                                        </td>
+                                        <td style="border: 2px solid black;width:5%;" class="text-center">
+                                             <span t-field="covenant.stage_id.name" />
+
+                                        </td>
+                                         <td style="border: 2px solid black;width:5%;" class="text-center">
+                                             <t t-if="covenant.retrieval">
+                                                 <span>Retrieved</span>
+                                             </t>
+                                             <t t-else="">
+                                                 <span>At Employee</span>
+                                             </t>
+
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+     </t>
+</template>
+
+</odoo>

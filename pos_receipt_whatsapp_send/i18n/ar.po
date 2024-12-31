@@ -1,0 +1,122 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_receipt_whatsapp_send
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-14 13:50+0000\n"
+"PO-Revision-Date: 2022-09-14 13:50+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_receipt_whatsapp_send
+#. openerp-web
+#: code:addons/pos_receipt_whatsapp_send/static/src/js/ReceiptScreen.js:0
+#, python-format
+msgid ""
+"\n"
+"\n"
+"\n"
+"Total amount:"
+msgstr ""
+"\n"
+"\n"
+"\n"
+"المبلغ الإجمالي:"
+
+#. module: pos_receipt_whatsapp_send
+#. openerp-web
+#: code:addons/pos_receipt_whatsapp_send/static/src/js/ReceiptScreen.js:0
+#, python-format
+msgid ""
+"\n"
+"\n"
+"Thank you"
+msgstr ""
+"\n"
+"\n"
+"شكرًا لك"
+
+#. module: pos_receipt_whatsapp_send
+#. openerp-web
+#: code:addons/pos_receipt_whatsapp_send/static/src/js/ReceiptScreen.js:0
+#, python-format
+msgid ""
+"\n"
+" Price: "
+msgstr ""
+"\n"
+" السعر: "
+
+#. module: pos_receipt_whatsapp_send
+#. openerp-web
+#: code:addons/pos_receipt_whatsapp_send/static/src/js/ReceiptScreen.js:0
+#, python-format
+msgid ""
+"\n"
+" quantity: "
+msgstr ""
+"\n"
+" الكمية: "
+
+#. module: pos_receipt_whatsapp_send
+#. openerp-web
+#: code:addons/pos_receipt_whatsapp_send/static/src/js/ReceiptScreen.js:0
+#, python-format
+msgid ""
+"\n"
+"Changes: "
+msgstr ""
+"\n"
+"الباقي: "
+
+#. module: pos_receipt_whatsapp_send
+#. openerp-web
+#: code:addons/pos_receipt_whatsapp_send/static/src/js/ReceiptScreen.js:0
+#, python-format
+msgid ""
+"\n"
+"Here is the Order: %s amounting in %s from %s\n"
+"Following are your order details."
+msgstr ""
+"\n"
+"هذا هو طلبك: %s بمبلغ %s من %s\n"
+"فيما يلي تفاصيل طلبك."
+
+#. module: pos_receipt_whatsapp_send
+#. openerp-web
+#: code:addons/pos_receipt_whatsapp_send/static/src/js/ReceiptScreen.js:0
+#, python-format
+msgid ""
+"\n"
+"Taxes: "
+msgstr ""
+"\n"
+"الضرائب: "
+
+#. module: pos_receipt_whatsapp_send
+#. openerp-web
+#: code:addons/pos_receipt_whatsapp_send/static/src/js/ReceiptScreen.js:0
+#, python-format
+msgid "Dear "
+msgstr "عزيزي "
+
+#. module: pos_receipt_whatsapp_send
+#. openerp-web
+#: code:addons/pos_receipt_whatsapp_send/static/src/js/ReceiptScreen.js:0
+#, python-format
+msgid "Dear customer"
+msgstr "عزيزي الزبون"
+
+#. module: pos_receipt_whatsapp_send
+#. openerp-web
+#: code:addons/pos_receipt_whatsapp_send/static/src/xml/ReceiptScreen.xml:0
+#, python-format
+msgid "Send receipt to customer Whatsapp"
+msgstr "أرسل الإيصال إلى واتساب العميل "

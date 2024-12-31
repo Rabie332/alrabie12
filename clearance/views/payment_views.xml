@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Form View Inherit -->
+    <record id="account_payment_view_form_inherit_clearance" model="ir.ui.view">
+        <field name="name">account.payment.view.form.inherit.clearance</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_form" />
+        <field name="arch" type="xml">
+            <field name="ref" position="attributes">
+                <attribute name="attrs">{"required": [("clearance_request_id", "!=", False)]}</attribute>
+            </field>
+            <field name="id" position="before">
+                <div class="oe_button_box" name="button_box">
+                    <button name="attachment_tree_view" type="object" icon="fa-files-o">
+                        <field
+                            name="attachment_count"
+                            class="o_stat_value"
+                            string="Attachments"
+                            widget="statinfo"
+                        />
+                    </button>
+                </div>
+            </field>
+            <field name="payment_method_id" position="after">
+                <field name="clearance_request_id" invisible="1" />
+                <field
+                    name="code_supplier"
+                    attrs="{'invisible': [('payment_method_id', 'not in', [%(clearance.account_payment_method_pay_in)d, %(clearance.account_payment_method_pay_out)d])], 'required': [('payment_method_id', 'in', [%(clearance.account_payment_method_pay_in)d, %(clearance.account_payment_method_pay_out)d])]}"
+                />
+                <field
+                    name="pay_number"
+                    attrs="{'invisible': [('payment_method_id', 'not in', [%(clearance.account_payment_method_pay_in)d, %(clearance.account_payment_method_pay_out)d])], 'required': [('payment_method_id', 'in', [%(clearance.account_payment_method_pay_in)d, %(clearance.account_payment_method_pay_out)d])]}"
+                />
+             </field>
+            <field name="move_id" position="after">
+                <field name="request_number" />
+            </field>
+        </field>
+    </record>
+    <record id="view_account_payment_tree_inherit_clearance" model="ir.ui.view">
+        <field name="name">account.payment.view.tree.inherit.clearance</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_tree" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="request_number" />
+           </field>
+        </field>
+    </record>
+</odoo>

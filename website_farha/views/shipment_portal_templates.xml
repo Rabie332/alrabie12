@@ -1,0 +1,82 @@
+<odoo>
+
+    <template id="portal_my_shipments" name="Shipments">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True" />
+
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Shipments</t>
+            </t>
+            <t t-if="not shipments">
+                <p>There are no records.</p>
+            </t>
+            <t t-if="shipments" t-call="portal.portal_table">
+                <thead>
+                    <tr class="active">
+                        <th>Container Number</th>
+                        <th>Category</th>
+                        <th>Size</th>
+                        <th>Route</th>
+                        <th>Deadline shipment</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <t t-foreach="shipments" t-as="shipment">
+                        <tr>
+                            <td>
+                                <span t-field="shipment.container_number" />
+                            </td>
+                            <td>
+                                <span t-field="shipment.container_category_id.name" />
+                            </td>
+                            <td>
+                                <span t-field="shipment.shipment_type_size_id.name" />
+                            </td>
+                            <td>
+                                <span t-field="shipment.route_id" />
+                            </td>
+                            <td>
+                                <span t-field="shipment.delivery_date" />
+                            </td>
+                            <td>
+                                <span t-field="shipment.clearance_request_id.state" />
+                            </td>
+                        </tr>
+                    </t>
+                </tbody>
+            </t>
+        </t>
+    </template>
+
+    <template
+        id="portal_my_home_inherit_website_farha_shipment"
+        name="Portal My Home:Requests"
+        inherit_id="portal.portal_my_home"
+    >
+        <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+            <t t-call="portal.portal_docs_entry">
+                <t t-set="title">Shipments</t>
+                <t t-set="url" t-value="'/my/shipments'" />
+                <t t-set="placeholder_count" t-value="'shipment_count'" />
+            </t>
+        </xpath>
+    </template>
+
+    <template
+        id="portal_my_home_menu_shipment"
+        name="Portal layout : requests menu"
+        inherit_id="portal.portal_breadcrumbs"
+        priority="30"
+    >
+        <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
+            <li t-if="page_name == 'shipment'" t-attf-class="breadcrumb-item #{'active ' if not request else ''}">
+                <a t-if="shipment" t-attf-href="/my/shipments?{{ keep_query() }}">My Shipments</a>
+                <t t-else="">My Shipments</t>
+            </li>
+        </xpath>
+    </template>
+
+
+
+</odoo>

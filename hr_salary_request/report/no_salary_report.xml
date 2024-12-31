@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="no_salary_definition_report">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <div class="header">
+                    <div class="row">
+                        <div class="col-12" style="text-align: right;direction:rtl;">
+                            <p>الرقم المرجعي</p>
+                            <p t-field="o.name" />
+                        </div>
+                        <div class="col-4" style="text-align: right;direction:rtl;">
+                            <p>Date
+                                <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y/%m/%d')" />
+                            </p>
+                        </div>
+                        <div class="col-6" />
+                        <div class="col-2">
+                            <img
+                                t-if="o.company_id.logo"
+                                t-att-src="image_data_uri(o.company_id.logo)"
+                                style="padding: height: 140px; width: 140px;"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div class="footer" />
+                <t t-call="web.external_layout">
+                    <div class="row">
+                        <div class="col-12 center">
+                            <center>
+                                <span>Definition Without Salary</span>
+                            </center>
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td width="20%" style="background-color: #ecf0f5;">
+                                    <strong>Name</strong>
+                                </td>
+                                <td width="30%">
+                                    <span t-field="o.employee_id.name" />
+                                </td>
+                                <td width="20%" style="background-color: #ecf0f5;">
+                                    <strong>Job</strong>
+                                </td>
+                                <td width="30%">
+                                    <t t-if="o.employee_id.job_id">
+                                        <span t-field="o.employee_id.job_id.name" />
+                                    </t>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%" style="background-color: #ecf0f5;">
+                                    <strong>Department</strong>
+                                </td>
+                                <td width="30%">
+                                    <t t-if="o.employee_id.department_id">
+                                        <span t-field="o.employee_id.department_id.name" />
+                                    </t>
+                                </td>
+                                <td width="20%" style="background-color: #ecf0f5;">
+                                    <strong>Functional number</strong>
+                                </td>
+                                <td width="30%">
+                                    <span t-field="o.employee_id.number" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%" style="background-color: #ecf0f5;">
+                                    <strong>Identification Number</strong>
+                                </td>
+                                <td width="30%">
+                                    <t t-if="o.employee_id.residence_id">
+                                        <span t-field="o.employee_id.residence_id" />
+                                    </t>
+                                    <t t-else="">
+                                        <span t-field="o.employee_id.identification_id" />
+                                    </t>
+                                </td>
+                                <td width="20%" style="background-color: #ecf0f5;">
+                                    <strong>Date of hiring</strong>
+                                </td>
+                                <td width="30%">
+                                    <span t-field="o.employee_id.date_direct_action" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%" style="background-color: #ecf0f5;">
+                                    <strong>Destination</strong>
+                                </td>
+                                <td width="30%">
+                                    <span t-field="o.destined_to" />
+                                </td>
+                                <td width="20%" style="background-color: #ecf0f5;">
+                                    <strong>Date order</strong>
+                                </td>
+                                <td width="30%">
+                                    <span t-field="o.date" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br />
+                    <div class="row">
+                        <div class="col-1" />
+                        <div class="col-11">
+                            <p>Hello,</p>
+                            <br />
+                            <p>
+                                <strong>
+                                    The company
+                                    <span t-field="o.company_id.name" /> states that the employee whose
+                                    data is shown above works for us to date,
+                                    and upon his request, this definition was given without any responsibility on the
+                                    part of the company.
+                                </strong>
+                            </p>
+                            <br />
+                            <br />
+                            <p>Due respect .</p>
+                        </div>
+                    </div>
+                    <t t-set="approvals" t-value="o.sudo().get_approvals()" />
+                    <table class="table table-sm table-bordered" width="100%" style="font-size:16px; border:none;">
+                        <tr>
+                            <td
+                                colspan="4"
+                                width="40%"
+                                style="background-color:#282D61; color:#FFFFFF; font-weight:bold; border:none;"
+                            >Stages Of Request Approval
+                            </td>
+                        </tr>
+                        <t t-foreach="approvals" t-as="approval">
+                            <tr>
+                                <td style="background-color:#F0EFEF; color:#A79559; border-left:none;">
+                                    <t t-esc="approval.get('stage', false)" />
+                                </td>
+                                <td style="background-color:#F0EFEF;">
+                                    <t t-esc="approval.get('date', False)" />
+                                </td>
+                                <td style="background-color:#F0EFEF; border-right:none;">
+                                    <t t-esc="approval.get('approver_name', false)" />
+                                </td>
+                                <td style="background-color:#F0EFEF;">
+                                    <img
+                                        t-if="approval.get('signature', false)"
+                                        t-att-src="image_data_uri(approval.get('signature', false))"
+                                        width="150px"
+                                        height="50px"
+                                    />
+                                </td>
+                            </tr>
+                        </t>
+                    </table>
+                </t>
+            </t>
+        </t>
+    </template>
+    <record id="action_report_no_salary_definition" model="ir.actions.report">
+        <field name="name">No Salary Definition</field>
+        <field name="print_report_name">(object.name + '_no_salary_definition.pdf')</field>
+        <field name="model">hr.salary.request</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hr_salary_request.no_salary_definition_report</field>
+        <field name="report_file">hr_salary_request.no_salary_definition_report</field>
+        <field name="binding_model_id" eval="False" />
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

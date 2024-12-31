@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+
+    <!-- Mail Activity Type-->
+
+    <record id="mail_hr_deputation_approval" model="mail.activity.type">
+        <field name="name">Deputation is ready to be approved</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="res_model_id" ref="hr_deputation.model_hr_deputation" />
+        <field name="category">validation</field>
+    </record>
+
+    <record id="mail_hr_deputation_cut_approval" model="mail.activity.type">
+        <field name="name">Deputation Cut is ready to be approved</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="res_model_id" ref="hr_deputation.model_hr_deputation_cut" />
+        <field name="category">validation</field>
+    </record>
+
+    <record id="mail_hr_deputation_extension_approval" model="mail.activity.type">
+        <field name="name">Deputation Extension is ready to be approved</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="res_model_id" ref="hr_deputation.model_hr_deputation_extension" />
+        <field name="category">validation</field>
+    </record>
+
+    <record id="mail_hr_deputation_cancellation_approval" model="mail.activity.type">
+        <field name="name">Deputation Cancellation is ready to be approved</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="res_model_id" ref="hr_deputation.model_hr_deputation_cancellation" />
+        <field name="category">validation</field>
+    </record>
+
+        <!-- Mail Activities Type feedback -->
+
+    <record id="mail_hr_deputation_feedback" model="mail.activity.type">
+        <field name="name">Deputation is done</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="res_model_id" ref="hr_deputation.model_hr_deputation" />
+        <field name="category">feedback</field>
+    </record>
+
+    <record id="mail_hr_deputation_cut_feedback" model="mail.activity.type">
+        <field name="name">Deputation cut is done</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="res_model_id" ref="hr_deputation.model_hr_deputation_cut" />
+        <field name="category">feedback</field>
+    </record>
+
+    <record id="mail_hr_deputation_extension_feedback" model="mail.activity.type">
+        <field name="name">Deputation extension is done</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="res_model_id" ref="hr_deputation.model_hr_deputation_extension" />
+        <field name="category">feedback</field>
+    </record>
+
+    <record id="mail_hr_deputation_cancellation_feedback" model="mail.activity.type">
+        <field name="name">Deputation cancellation is done</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="res_model_id" ref="hr_deputation.model_hr_deputation_cancellation" />
+        <field name="category">feedback</field>
+    </record>
+
+     <!-- Mail Message Subtype-->
+
+    <record id="mt_hr_deputation_approved" model="mail.message.subtype">
+        <field name="name">Approved</field>
+        <field name="res_model">hr.deputation</field>
+        <field name="description">Deputation is approved</field>
+    </record>
+
+    <record id="mt_hr_deputation_refused" model="mail.message.subtype">
+        <field name="name">Refused</field>
+        <field name="res_model">hr.deputation</field>
+        <field name="description">Deputation is refused</field>
+    </record>
+
+    <record id="mt_hr_deputation_cut_approved" model="mail.message.subtype">
+        <field name="name">Approved</field>
+        <field name="res_model">hr.deputation.cut</field>
+        <field name="description">Deputation Cut is approved</field>
+    </record>
+
+    <record id="mt_hr_deputation_cut_refused" model="mail.message.subtype">
+        <field name="name">Refused</field>
+        <field name="res_model">hr.deputation.cut</field>
+        <field name="description">Deputation Cut is refused</field>
+    </record>
+
+    <record id="mt_hr_deputation_extension_approved" model="mail.message.subtype">
+        <field name="name">Approved</field>
+        <field name="res_model">hr.deputation.extension</field>
+        <field name="description">Deputation Extension is approved</field>
+    </record>
+
+    <record id="mt_hr_deputation_extension_refused" model="mail.message.subtype">
+        <field name="name">Refused</field>
+        <field name="res_model">hr.deputation.extension</field>
+        <field name="description">Deputation Extension is refused</field>
+    </record>
+
+    <record id="mt_hr_deputation_cancellation_approved" model="mail.message.subtype">
+        <field name="name">Approved</field>
+        <field name="res_model">hr.deputation.cancellation</field>
+        <field name="description">Deputation Cancellation is approved</field>
+    </record>
+
+    <record id="mt_hr_deputation_cancellation_refused" model="mail.message.subtype">
+        <field name="name">Refused</field>
+        <field name="res_model">hr.deputation.cancellation</field>
+        <field name="description">Deputation Cancellation is refused</field>
+    </record>
+
+</odoo>

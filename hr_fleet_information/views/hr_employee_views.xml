@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Employee Form View Inherit -->
+
+    <record id="view_employee_form_inherit_hr_fleet_information" model="ir.ui.view">
+        <field name="name">hr.employee.form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr_base.view_employee_form_inherit" />
+        <field name="arch" type="xml">
+              <field name="driving_license_end_date" position="before">
+             <field name="driving_permit_number" />
+              </field>
+               <field name="driving_license_end_date" position="after">
+                <field name="port_licence_number" />
+                <field name="port_licence_end_date" />
+                <field name="play_card_number" />
+                <field name="play_card_end_date" />
+               </field>
+
+
+
+
+
+        </field>
+    </record>
+</odoo>

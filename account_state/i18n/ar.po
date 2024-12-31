@@ -1,0 +1,189 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_state
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-26 16:44+0000\n"
+"PO-Revision-Date: 2022-12-26 16:44+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account_state
+#: model:res.groups,name:account_state.group_account_confirm_user
+msgid "Accounting Confirm"
+msgstr "تأكيد الفواتير"
+
+#. module: account_state
+#: model:res.groups,name:account_state.group_account_reviewer
+msgid "Accounting Review"
+msgstr "مراجعة الفواتير"
+
+#. module: account_state
+#: model:ir.model.fields.selection,name:account_state.selection__account_move__state__cancel
+msgid "Cancelled"
+msgstr "ملغي"
+
+#. module: account_state
+#: model:ir.model.fields.selection,name:account_state.selection__account_move__state__confirm
+#: model_terms:ir.ui.view,arch_db:account_state.account_state_account_move_view_form_inherit_account_state
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: account_state
+#: model:ir.model.fields,field_description:account_state.field_account_move__display_name
+#: model:ir.model.fields,field_description:account_state.field_res_groups__display_name
+#: model:ir.model.fields,field_description:account_state.field_validate_account_move__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: account_state
+#: model:ir.model.fields.selection,name:account_state.selection__account_move__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: account_state
+#: model:ir.model.fields,field_description:account_state.field_account_move__id
+#: model:ir.model.fields,field_description:account_state.field_res_groups__id
+#: model:ir.model.fields,field_description:account_state.field_validate_account_move__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: account_state
+#: model:ir.model,name:account_state.model_account_move
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: account_state
+#: model:ir.model.fields,field_description:account_state.field_account_move____last_update
+#: model:ir.model.fields,field_description:account_state.field_res_groups____last_update
+#: model:ir.model.fields,field_description:account_state.field_validate_account_move____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: account_state
+#: model_terms:ir.ui.view,arch_db:account_state.review_account_move_view
+msgid "Review Journal Entries"
+msgstr "ارسال للمراجعة"
+
+#. module: account_state
+#: model:ir.actions.act_window,name:account_state.action_review_account_move
+msgid "Review entries"
+msgstr "ارسال للمراجعة"
+
+#. module: account_state
+#: model:ir.model.fields.selection,name:account_state.selection__account_move__state__reviewed
+#: model_terms:ir.ui.view,arch_db:account_state.account_state_account_move_view_form_inherit_account_state
+msgid "Reviewed"
+msgstr "تمت المراجعة"
+
+#. module: account_state
+#: model_terms:ir.ui.view,arch_db:account_state.reviewed_account_move_view
+msgid "Reviewed Journal Entries"
+msgstr "مراجعة"
+
+#. module: account_state
+#: model:ir.actions.act_window,name:account_state.action_reviewed_account_move
+msgid "Reviewed entries"
+msgstr "مراجعة"
+
+#. module: account_state
+#: model:ir.model.fields,field_description:account_state.field_account_move__state
+#: model:ir.model.fields,field_description:account_state.field_account_payment__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: account_state
+#: model:mail.activity.type,name:account_state.mail_assigned_entry_to_confirm
+msgid "The entry is ready for confirmation"
+msgstr "القيد جاهز للإعتماد"
+
+#. module: account_state
+#: model:mail.activity.type,name:account_state.mail_assigned_invoice_to_confirm
+msgid "The invoice is ready for confirmation"
+msgstr "الفاتورة جاهزة للإعتماد"
+
+#. module: account_state
+#: model:mail.activity.type,name:account_state.mail_assigned_invoice_to_review
+msgid "The invoice is ready for review"
+msgstr "الفاتورة جاهزة للمراجعة"
+
+#. module: account_state
+#: model:mail.activity.type,name:account_state.mail_assigned_move_to_review
+msgid "The move is ready for review"
+msgstr "القيد جاهز للمراجعة"
+
+#. module: account_state
+#: code:addons/account_state/models/account_move.py:0
+#, python-format
+msgid "There are no journal items in the confirm state to post."
+msgstr "لا يوجد عناصر دفتر اليومية في مرحلة تأكيد لنشرها "
+
+#. module: account_state
+#: code:addons/account_state/models/account_move.py:0
+#, python-format
+msgid "There are no journal items in the draft state to review."
+msgstr "لا يوجد عناصر دفاتر يومية في مرحلة مسودة لارسالها"
+
+#. module: account_state
+#: code:addons/account_state/models/account_move.py:0
+#, python-format
+msgid "There are no journal items in the reviewed state to confirm."
+msgstr "لا يوجد عناصر دفاتر يومية مراجعة لتأكيدها"
+
+#. module: account_state
+#: code:addons/account_state/models/account_move.py:0
+#, python-format
+msgid "There are no journal items in the under_review state to reviewed."
+msgstr "لا يوجد عناصر دفاتر يومية تحت المراجعة لمراجعتها"
+
+#. module: account_state
+#: model_terms:ir.ui.view,arch_db:account_state.account_state_account_move_view_form_inherit_account_state
+msgid "To Review"
+msgstr "للمراجعة"
+
+#. module: account_state
+#: model:ir.model.fields.selection,name:account_state.selection__account_move__state__under_review
+msgid "Under Review"
+msgstr "تحت المراجعة"
+
+#. module: account_state
+#: model_terms:ir.ui.view,arch_db:account_state.account_state_account_move_view_form_inherit_account_state
+msgid "Validate"
+msgstr "إعتماد"
+
+#. module: account_state
+#: model:ir.model,name:account_state.model_validate_account_move
+msgid "Validate Account Move"
+msgstr "اعتماد حركة محاسبية"
+
+#. module: account_state
+#: model:ir.model.fields.selection,name:account_state.selection__account_move__state__posted
+msgid "Validated"
+msgstr "إعتماد"
+
+#. module: account_state
+#: model_terms:ir.ui.view,arch_db:account_state.confirm_account_move_view
+msgid "Confirm Journal Entries"
+msgstr "تأكيد عناصر اليومية"
+
+#. module: account_state
+#: model:ir.actions.act_window,name:account_state.action_confirm_account_move
+msgid "Confirm entries"
+msgstr "تأكيد القيود اليومية"
+
+#. module: account_state
+#: model:mail.activity.type,name:account_state.mail_assigned_entry_to_under_review
+msgid "The entry is ready for approve"
+msgstr "القيد جاهز للموافقة عليه"
+
+#. module: account_state
+#: model:mail.activity.type,name:account_state.mail_assigned_invoice_to_under_review
+msgid "The invoice is ready for approve"
+msgstr "الفاتورة جاهزة للموافقة عليها"

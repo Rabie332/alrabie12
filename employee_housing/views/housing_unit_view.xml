@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--this file for action, last menu & views-->
+<odoo>
+    <record id="housing_unit_action" model="ir.actions.act_window">
+        <field name="name">Unit</field>
+        <field name="res_model">housing.unit</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first Building unit
+            </p>
+            <p>
+                here you can add all your real estate units
+            </p>
+        </field>
+    </record>
+    <menuitem id="menu_housing_unit"
+              name="Units"
+              parent="menu_housing_root"
+              action="housing_unit_action" sequence="2"
+              
+    />
+    <record id="housing_unit_tree_view" model="ir.ui.view">
+        <field name="name">housing.unit.tree.view</field>
+        <field name="model">housing.unit</field>
+        <field name="arch" type="xml">
+            <tree string="Units"
+                  decoration-danger="state == 'full'"
+                  decoration-warning="state == 'partially_full'"
+                  decoration-success="state == 'available'">
+                <field name="name"/>
+                <field name="state"/>
+                <field name="number" optional="hide"/>
+                <field name="rooms" optional="hide"/>
+                <field name="bathroom" optional="hide"/>
+                <field name="type_id"/>
+                <field name="building_id" optional="hide"/>
+            </tree>
+        </field>
+    </record>
+    <record id="housing_unit_form_view" model="ir.ui.view">
+        <field name="name">housing.unit.form.view</field>
+        <field name="model">housing.unit</field>
+        <field name="arch" type="xml">
+            <form string="Unit">
+                <header>
+                    <field name="state" widget="statusbar" statusbar_visible="available,partially_full,full"/>
+                </header>
+                <sheet>
+                    <widget name="web_ribbon" title="Available" bg_color="bg-success"
+                            attrs="{'invisible': [('state', '!=', 'available')]}"/>
+                    <widget name="web_ribbon" title="Full" bg_color="bg-danger"
+                            attrs="{'invisible': [('state', '!=', 'full')]}"/>
+                    <widget name="web_ribbon" title="Partially Full" bg_color="bg-warning"
+                            attrs="{'invisible': [('state', '!=', 'partially_full')]}"/>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="number"/>
+                            <field name="type_id"/>
+                            <field name="building_id"/>
+                            <field name="max_capacity"/>
+                        </group>
+                        <group>
+                            <field name="elec_account"/>
+                            <field name="water_account"/>
+                            <field name="occupancy"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Description">
+                            <group>
+                                <field name="rooms"/>
+                                <field name="bathroom"/>
+                                <field name="kitchen"/>
+                                <field name="hall"/>
+                                <field name="floor"/>
+                            </group>
+                        </page>
+                        <page string="Tenant">
+                            <group>
+                                <field name="tenant_ids"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <record id="housing_unit_search_view" model="ir.ui.view">
+        <field name="name">housing.unit.search.view</field>
+        <field name="model">housing.unit</field>
+        <field name="arch" type="xml">
+            <search string="Unit">
+                <field name="name" string="unit"/>
+                <field name="state"/>
+                <field name="type_id" string="Unit Type"/>
+                <filter name="state" string="Full" domain="[('state', '=', 'full')]"/>
+                <filter name="state" string="Partially Full" domain="[('state', '=', 'partially_full')]"/>
+                <filter name="state" string="Available" domain="[('state', '=', 'available')]"/>
+                <group expand="1" string="Group By">
+                    <filter string="State" name="state" context="{'group_by':'state'}"/>
+                    <filter string="Building" name="building" context="{'group_by':'building_id'}"/>
+                    <filter string="Unit Type" name="type_id" context="{'group_by':'type_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+    <record id="housing_unit_kanban_view" model="ir.ui.view">
+        <field name="name">housing.unit.kanban.view</field>
+        <field name="model">housing.unit</field>
+        <field name="arch" type="xml">
+            <kanban records_draggable="false" quick_create="false" group_create="false"
+                    group_delete="false" group_edit="false">
+                <field name="building_id"/>
+                <field name="type_id"/>
+                <field name="number"/>
+                <field name="max_capacity"/>
+                <field name="max_rate"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <div class="text-center">
+                                <h4 class="d-flex">
+                                    <field name="building_id" class="ml-1"/>
+                                    <field name="type_id" class="ml-1"/>
+                                    <field name="number"/>
+                                </h4>
+                            </div>
+                            <hr class="mt8 mb8"/>
+                            <div>
+                                <field name="occupancy" widget="gauge"
+                        options="{'max_field': 'max_rate', 'style':'width:100%; height: 150px;',
+                        'title': 'Occupancy Rate %',}">
+                </field>
+                            </div>
+                            <hr class="mt8 mb8"/>
+                            <div>
+                                <strong>Total Capacity:
+                                    <field name="max_capacity"/>
+                                </strong>
+                                <br/>
+                                <field name="state"/>
+                                <br/>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+</odoo>

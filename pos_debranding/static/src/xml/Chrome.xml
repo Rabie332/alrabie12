@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+    <t
+        t-name="Chrome"
+        t-inherit="point_of_sale.Chrome"
+        t-inherit-mode="extension"
+        owl="1"
+    >
+        <xpath expr="//div[hasclass('pos-branding')]/img" position="replace">
+            <t t-if="state.uiState === 'READY' and env.pos.config.display_logo">
+                <img
+                    class="pos-logo"
+                    t-on-click="trigger('toggle-debug-widget')"
+                    t-att-src="'/web/image?model=pos.config&amp;field=pos_logo&amp;id=' + env.pos.config.id"
+                    alt="Logo"
+                />
+            </t>
+            <t t-else="">
+                <img
+                    class="pos-logo"
+                    t-on-click="trigger('toggle-debug-widget')"
+                    src="/point_of_sale/static/src/img/logo.png"
+                    alt="Logo"
+                />
+            </t>
+        </xpath>
+    </t>
+</templates>

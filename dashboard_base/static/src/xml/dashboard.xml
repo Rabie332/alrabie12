@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="dashboard_base.DashboardMain">
+        <div class="dashboard_main">
+            <div class="wrapper">
+                <div class="content">
+                    <section class="content">
+                        <div class="dashboard_content" />
+                    </section>
+                </div>
+            </div>
+        </div>
+    </t>
+    <t t-name="dashboard_base.smart_buttons">
+        <div class="col-md-12 col-sm-12 col-xs-12" style="display: flex;">
+            <t t-foreach="widget.smart_buttons" t-as="smart_button">
+                <div class="col-md-2 col-sm-3 col-xs-12">
+                    <div t-att-class="'small-box '+ smart_button.color_class">
+                        <div class="inner">
+                            <h4 class="box-number">
+                                <t t-esc="smart_button.value" />
+                            </h4>
+                            <p>
+                                <strong>
+                                    <t t-esc="smart_button.name" />
+                                </strong>
+                            </p>
+                        </div>
+                        <div class="icon">
+                            <i t-att-class="smart_button.icon" />
+                        </div>
+                        <t t-if="!smart_button.no_display">
+                            <a
+                                href="#"
+                                class="small-box-footer o_dashboard_action"
+                                t-att-action_name="smart_button.action_name"
+                                t-att-custom_action="smart_button.custom_action"
+                                t-att-context="smart_button.context"
+                            >
+                                Details
+                        </a>
+                        </t>
+                        <t t-else="">
+                            <span class="small-box-footer">
+                                <br />
+                            </span>
+                        </t>
+                    </div>
+                </div>
+            </t>
+        </div>
+    </t>
+    <t t-name="dashboard_base.DateRangeButtons">
+        <div
+            id="DateRangeButtons"
+            class="btn-group o_date_range_buttons d-none d-md-inline-flex float-right"
+        >
+            <button
+                class="btn btn-secondary js_date_range"
+                id="date_range_day"
+                data-date="day"
+            >Today</button>
+            <button
+                class="btn btn-secondary js_date_range"
+                id="date_range_week"
+                data-date="week"
+            >First Week</button>
+            <button
+                class="btn btn-secondary js_date_range"
+                id="date_range_month"
+                data-date="month"
+            >First Month</button>
+            <button
+                class="btn btn-secondary js_date_range"
+                id="date_range_year"
+                data-date="year"
+            >First Year</button>
+            <button
+                class="btn btn-secondary js_date_range"
+                id="date_range_custom_date"
+                data-date="custom_date"
+            >Custom date</button>
+        </div>
+        <br />
+        <br />
+        <div
+            id="custom_date"
+            class="btn-group d-none  d-md-flex float-right hide"
+            style="margin-right: 20px;margin-top:5px;"
+        >
+            <strong style="margin-right: 5px;margin-left: 5px;">From </strong>
+            <input
+                type="date"
+                class="js_date_from"
+                name="date_from_calender"
+                id="date_from_calender"
+            />
+            <strong style="margin-right: 5px;margin-left: 5px;">To </strong>
+            <input
+                type="date"
+                class="js_date_to"
+                name="date_to_calender"
+                id="date_to_calender"
+            />
+        </div>
+    </t>
+</templates>

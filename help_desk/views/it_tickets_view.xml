@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="view_tickets_search" model="ir.ui.view">
+    <field name="name">it.tickets.search</field>
+    <field name="model">it.tickets</field>
+    <field name="arch" type="xml">
+      <search string="IT Tickets">
+        <separator/>
+        <filter name="filter_archived" string="Archived" domain="[('active', '=', False)]"/>
+        <separator/>
+        <filter name="filter_state" string="state filter" domain="[('state', '=', 'draft')]"/>
+        <!-- State field must be present to evaluate in attrs -->
+      </search>
+    </field>
+  </record>
+  <record id="view_tickets_tree" model="ir.ui.view">
+    <field name="name">it.tickets.tree</field>
+    <field name="model">it.tickets</field>
+    <field name="arch" type="xml">
+      <tree string="IT Tickets">
+        <field name="name"/>
+        <field name="assigned_to"/>
+        <field name="ticket_department"/>
+        <field name="state"/>
+        <field name="kind_of_odoo_probelm" attrs="{'invisible': [('assigned_to', '!=', 'odoo team')]}"/>
+        <field name="create_date"/>
+        <field name="employee_id" />
+      </tree>
+    </field>
+  </record>
+  <record id="view_tickets_form" model="ir.ui.view">
+    <field name="name">it.tickets.form</field>
+    <field name="model">it.tickets</field>
+    <field name="arch" type="xml">
+      <form string="IT Ticket">
+        <header>
+          <button name="to_on_hold" string="Send" class="oe_highlight" type="object" states="draft"/>
+          <button name="to_in_progress" string="In Progress" class="oe_highlight" type="object" states="on hold"/>
+          <button name="to_resolved" string="Resolved" class="oe_highlight" type="object" states="in progress"/>
+          <button name="to_denied" string="Denied" class="oe_highlight" type="object" states="on hold, in progress"/>
+          <button name="to_draft" string="Set to Draft" class="oe_highlight" type="object" attrs="{'invisible': [('show_to_draft_button', '=', False)]}"/>
+          <field name="state" widget="statusbar" clickable="True"/>
+        </header>
+        <sheet>
+          <group>
+            <group>
+              <field name="show_to_draft_button" invisible="1"/>
+              <field name="id"  invisible="1"/>
+              <field name="name"/>
+              <field name="assigned_to"/>
+              <field name="kind_of_odoo_probelm" attrs="{'invisible': [('assigned_to', '!=', 'odoo team')], 'required': [('assigned_to', '=', 'odoo team')]}" />
+              <field name="ticket_department" options="{'no_create': True}"/>
+              <field name="create_date"/>
+              <field name="employee_id" />
+              <field name="active" invisible="1"/>
+              <!-- <field name="attachment" widget="many2many_binary"/> -->
+            </group>
+          </group>
+          <group>
+            <field name="ticket_description"/>
+          </group>
+        </sheet>
+        <div class="oe_chatter">
+          <field name="message_follower_ids" widget="mail_followers"/>
+          <field name="activity_ids" widget="mail_activity"/>
+          <field name="message_ids" widget="mail_thread"/>
+        </div>
+      </form>
+    </field>
+  </record>
+  <record id="view_tickets_kanban" model="ir.ui.view">
+    <field name="name">it.tickets.kanban</field>
+    <field name="model">it.tickets</field>
+    <field name="arch" type="xml">
+      <kanban default_group_by="stage_id">
+        <field name="state"/>
+        <field name="stage_id"/>
+        <templates>
+          <t t-name="kanban-box">
+            <div class="oe_kanban_global_click">
+              <span>Title :
+                <field name="name"/>
+                <br/>
+              </span>
+              <span>Assigned To :
+                <field name="assigned_to"/>
+                <br/>
+              </span>
+              <span>Department :
+                <field name="ticket_department"/>
+                <br/>
+              </span>
+              <span>Stage:
+                <field name="state"/>
+                <br/>
+              </span>
+              <span>Problem Type :
+                <field name="kind_of_odoo_probelm"/>
+                <br/>
+              </span>
+              <span>Employee ID :
+                <field name="employee_id"/>
+                <br/>
+              </span>
+            </div>
+          </t>
+        </templates>
+      </kanban>
+    </field>
+  </record>
+  <!-- Add other necessary view definitions below -->
+  <record id="action_it_tickets" model="ir.actions.act_window">
+    <field name="name">IT Tickets</field>
+    <field name="res_model">it.tickets</field>
+    <field name="view_mode">kanban,tree,form</field>
+  </record>
+  <menuitem id="menu_help_desk" name="Helpdesk" sequence="10" web_icon="help_desk,static/description/icon.png"/>
+  <menuitem id="menu_it_tickets" name="Tickets" parent="menu_help_desk" action="action_it_tickets" sequence="0"/>
+</odoo>

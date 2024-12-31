@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t t-name="dms_dashboard.graphs">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="box box-success pull-right">
+                            <div class="box-header with-border">
+                                <strong>Documents by type</strong>
+                            </div>
+                            <div class="box-body">
+                                <div class="chart">
+                                    <canvas id="pieChartType" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="box box-success pull-left">
+                            <div class="box-header with-border">
+                                <strong>Documents flow</strong>
+                            </div>
+                            <div class="box-body">
+                                <div class="chart">
+                                    <canvas id="linedocuments" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="box box-success pull-right">
+                            <div class="box-header with-border">
+                                <strong>Documents by folder</strong>
+                            </div>
+                            <div class="box-body">
+                                <div class="chart">
+                                    <canvas id="barChartDocumentsFolders" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="box box-success pull-right">
+                    <div class="box-header with-border">
+                        <strong>Folders by tag</strong>
+                    </div>
+                    <div class="box-body">
+                        <div class="chart">
+                            <canvas id="barChartTagsFolders" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="box box-success pull-left">
+                    <div class="box-header with-border">
+                        <strong>Top 5 extension by documents</strong>
+                    </div>
+                    <div class="box-body">
+                        <div class="chart">
+                            <canvas id="doughnutDocuments" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <t t-call="dms_dashboard.last_documents" />
+            </div>
+
+        </div>
+    </t>
+
+    <t t-name="dms_dashboard.last_documents">
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                <h3 class="box-title">Latest 10 documents</h3>
+                <div class="box-body">
+                    <ul id="list-document" class="products-list product-list-in-box ">
+                        <t t-foreach="widget.data.documents_last" t-as="last_document">
+                            <li class="item">
+                                 <a t-att-href="last_document.details_url">
+                                    <div class="col-md-8 col-sm-8">
+                                        <div class="product-info">
+                                             <span
+                                                id="document-type"
+                                                class="product-title"
+                                            >
+                                                 <t t-esc="last_document.name" />
+                                             </span>
+                                        </div>
+                                        <t t-if="last_document.description">
+                                            <div class="product-info">
+                                                <t t-esc="last_document.description" />
+                                            </div>
+                                        </t>
+                                        <small>
+                                            <t t-esc="last_document.user" />
+                                            <br />
+                                            <t t-esc="last_document.date" />
+                                        </small>
+                                    </div>
+                                    <div
+                                        class="col-md-4 col-sm-4 pull-right"
+                                        style="padding-right:120px;"
+                                    >
+                                        <span>
+                                            <i
+                                                t-att-class="last_document.icon"
+                                                style="color:#0b93ae;"
+                                            />
+                                       </span>
+                                    </div>
+                                 </a>
+                            </li>
+                        </t>
+                    </ul>
+                </div>
+            </div>
+        </div>
+   </t>
+
+
+</templates>

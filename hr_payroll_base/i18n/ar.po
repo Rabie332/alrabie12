@@ -1,0 +1,164 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_payroll_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-23 14:00+0000\n"
+"PO-Revision-Date: 2021-09-23 14:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_payroll_base
+#: model_terms:ir.ui.view,arch_db:hr_payroll_base.hr_payslip_run_form_inherit
+msgid "Approve"
+msgstr "موافقة"
+
+#. module: hr_payroll_base
+#: model:ir.model.fields.selection,name:hr_payroll_base.selection__hr_payslip_run__state__close
+msgid "Close"
+msgstr "إقفال"
+
+#. module: hr_payroll_base
+#: model:ir.model.fields,field_description:hr_payroll_base.field_hr_payslip__display_name
+#: model:ir.model.fields,field_description:hr_payroll_base.field_hr_payslip_run__display_name
+#: model:ir.model.fields,field_description:hr_payroll_base.field_hr_period__display_name
+#: model:ir.model.fields,field_description:hr_payroll_base.field_hr_salary_rule__display_name
+#: model:ir.model.fields,field_description:hr_payroll_base.field_report_hr_payroll_base_report_payslip_run_xlsx__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: hr_payroll_base
+#: model:ir.model.fields.selection,name:hr_payroll_base.selection__hr_payslip_run__state__done
+msgid "Done"
+msgstr "المنتهية"
+
+#. module: hr_payroll_base
+#: model:ir.model,name:hr_payroll_base.model_hr_period
+msgid "HR Period"
+msgstr "فترة الموارد البشرية"
+
+#. module: hr_payroll_base
+#: model:ir.model.fields,field_description:hr_payroll_base.field_hr_payslip__id
+#: model:ir.model.fields,field_description:hr_payroll_base.field_hr_payslip_run__id
+#: model:ir.model.fields,field_description:hr_payroll_base.field_hr_period__id
+#: model:ir.model.fields,field_description:hr_payroll_base.field_hr_salary_rule__id
+#: model:ir.model.fields,field_description:hr_payroll_base.field_report_hr_payroll_base_report_payslip_run_xlsx__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: hr_payroll_base
+#: model:ir.model.fields,field_description:hr_payroll_base.field_hr_payslip____last_update
+#: model:ir.model.fields,field_description:hr_payroll_base.field_hr_payslip_run____last_update
+#: model:ir.model.fields,field_description:hr_payroll_base.field_hr_period____last_update
+#: model:ir.model.fields,field_description:hr_payroll_base.field_hr_salary_rule____last_update
+#: model:ir.model.fields,field_description:hr_payroll_base.field_report_hr_payroll_base_report_payslip_run_xlsx____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_payroll_base
+#: model:ir.model.fields,field_description:hr_payroll_base.field_hr_payslip_line__need_to_print
+#: model:ir.model.fields,field_description:hr_payroll_base.field_hr_salary_rule__need_to_print
+msgid "Need to print"
+msgstr "تحتاج إلى طباعة"
+
+#. module: hr_payroll_base
+#: model:ir.model.fields,field_description:hr_payroll_base.field_hr_payslip__total_payslip
+msgid "Net"
+msgstr "صافي"
+
+#. module: hr_payroll_base
+#: model:ir.model,name:hr_payroll_base.model_hr_payslip
+msgid "Pay Slip"
+msgstr "قسيمة الراتب"
+
+#. module: hr_payroll_base
+#: model:ir.model,name:hr_payroll_base.model_hr_payslip_run
+msgid "Payslip Batches"
+msgstr "دفعات الراتب"
+
+#. module: hr_payroll_base
+#: model:ir.actions.report,name:hr_payroll_base.payslip_run_report_xlsx
+#: model:ir.model,name:hr_payroll_base.model_report_hr_payroll_base_report_payslip_run_xlsx
+msgid "Payslip Run Report Excel"
+msgstr "تقرير مسير الرواتب إكسل"
+
+#. module: hr_payroll_base
+#: model:ir.model.fields,field_description:hr_payroll_base.field_hr_payslip__hr_period_id
+#: model:ir.model.fields,field_description:hr_payroll_base.field_hr_payslip_run__hr_period_id
+msgid "Period"
+msgstr "فترة"
+
+#. module: hr_payroll_base
+#: model_terms:ir.ui.view,arch_db:hr_payroll_base.hr_payslip_run_form_inherit
+msgid "Print payslip run"
+msgstr "طباعة المسير "
+
+#. module: hr_payroll_base
+#: model:ir.model,name:hr_payroll_base.model_hr_salary_rule
+msgid "Salary Rule"
+msgstr "قاعدة مرتبات"
+
+#. module: hr_payroll_base
+#: code:addons/hr_payroll_base/models/hr_payslip.py:0
+#, python-format
+msgid "Salary Slip of %s for %s"
+msgstr "قسيمة مرتب %s لـ%s"
+
+#. module: hr_payroll_base
+#: model:ir.model.fields,field_description:hr_payroll_base.field_hr_payslip_run__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: hr_payroll_base
+#: model:ir.model.fields,field_description:hr_payroll_base.field_hr_payslip_run__category_ids
+msgid "Tags"
+msgstr "الوسوم"
+
+#. module: hr_payroll_base
+#: model:ir.model.fields,field_description:hr_payroll_base.field_hr_payslip_run__total_slips
+msgid "Total Salary"
+msgstr "إجمالي الراتب"
+
+#. module: hr_payroll_base
+#: model:ir.model.fields,field_description:hr_payroll_base.field_hr_payroll_structure__active
+msgid "Active"
+msgstr "مفعل"
+
+#. module: hr_payroll_base
+#: model_terms:ir.ui.view,arch_db:hr_payroll_base.view_hr_payroll_structure_filter_inherit_hr_payroll_base
+msgid "Archived"
+msgstr "مؤرشف"
+
+#. module: hr_payroll_base
+#: model_terms:ir.ui.view,arch_db:hr_payroll_base.report_payslip_inherit_hr_payroll_sa
+#: model_terms:ir.ui.view,arch_db:hr_payroll_base.report_payslipdetails_inherit_hr_payroll_sa
+msgid "Residence Number"
+msgstr "رقم الإقامة"
+
+#. module: hr_payroll_base
+#: model_terms:ir.ui.view,arch_db:hr_payroll_base.report_payslip_inherit_hr_payroll_sa
+#: model_terms:ir.ui.view,arch_db:hr_payroll_base.report_payslipdetails_inherit_hr_payroll_sa
+msgid "Identification No"
+msgstr "رقم الهوية"
+
+#. module: hr_payroll_base
+#: model:ir.model.fields,field_description:hr_payroll_base.field_hr_payslip__difference_old_new_payslip
+msgid "Difference"
+msgstr "الفرق"
+
+#. module: hr_payroll_base
+#: model:ir.model.fields,field_description:hr_payroll_base.field_hr_payslip__old_total_payslip
+msgid "Old Net"
+msgstr "الراتب السابق"
+
+#. module: hr_payroll_base
+#: model:hr.salary.rule,name:hr_payroll_base.hr_rule_gosi
+msgid "Gosi"
+msgstr "التأمينات الإجتماعية"

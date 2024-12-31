@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+     <record id="partner_reclamation_view_search" model="ir.ui.view">
+        <field name="name">partner.reclamation.view.search</field>
+        <field name="model">partner.reclamation</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="partner_id" />
+                <filter name='draft' domain="[('state','=','draft')]" string="Draft" />
+                <filter name='progress' domain="[('state','=','progress')]" string="In progress" />
+                <filter name='cancel' domain="[('state','=','cancel')]" string="Cancelled" />
+                <filter name='solved' domain="[('state','=','solved')]" string="Solved" />
+                <group expand="0" string="Group By">
+                    <filter
+                        name="partner_id"
+                        string="Guest"
+                        icon="terp-personal"
+                        domain="[]"
+                        context="{'group_by':'partner_id'}"
+                    />
+                    <filter name="state" string="State" domain="[]" context="{'group_by':'state'}" />
+                    <filter
+                        name='date_by_month'
+                        string="Reclamation By Month"
+                        domain="[]"
+                        context="{'group_by':'date'}"
+                    />
+                    <filter name="company_id" string="Company" domain="[]" context="{'group_by':'company_id'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+
+     <record id="partner_reclamation_view_tree" model="ir.ui.view">
+        <field name="name">partner.reclamation.view.tree</field>
+        <field name="model">partner.reclamation</field>
+        <field name="arch" type="xml">
+            <tree decoration-muted="state=='cancel'">
+                <field name="name" />
+                <field name="date" />
+                <field name="partner_id" />
+                <field name="company_id" groups="base.group_multi_company" />
+                <field
+                    name="state"
+                    decoration-success="state == 'solved'"
+                    decoration-info="state == 'draft'"
+                    decoration-danger="state == 'cancel'"
+                    decoration-warning="state == 'progress'"
+                    widget="badge"
+                />
+            </tree>
+        </field>
+    </record>
+    <record id="partner_reclamation_view_form" model="ir.ui.view">
+        <field name="name">partner.reclamation.view.form</field>
+        <field name="model">partner.reclamation</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_progress" type="object" string="Send" states="draft" class="oe_highlight" />
+                    <button name="action_solved" string="Confirm" states="progress" class="btn-success" type="object" />
+
+                    <button
+                        name="action_cancel"
+                        string="Cancelled"
+                        states="progress"
+                        class="btn-danger"
+                        type="object"
+                    />
+
+                    <field name="state" widget="statusbar" statusbar_visible="draft,progress,solved" />
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" />
+                        </h1>
+                    </div>
+                    <group>
+                    <group>
+                        <field name="active" invisible="1" />
+                        <field name="date" />
+                         <field
+                                name="partner_id"
+                                context="{'default_customer_rank': 1}"
+                                options="{'no_create':True,'no_open':True}"
+                            />
+
+                    </group>
+                        <group>
+                            <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}" />
+                        </group>
+                    </group>
+                     <notebook>
+                        <page name="complaint_text" string='Complaint text'>
+                             <field name="complaint_text" />
+                        </page>
+                     </notebook>
+                </sheet>
+                 <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+     <record id="partner_reclamation_action" model="ir.actions.act_window">
+        <field name="name">Guest Complaints</field>
+        <field name="res_model">partner.reclamation</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+     <menuitem
+        name="Guest Complaints"
+        id="partner_reclamation_menu"
+        action="partner_reclamation_action"
+        sequence="15"
+        parent="hotel_room_management_menu_root"
+    />
+
+</odoo>

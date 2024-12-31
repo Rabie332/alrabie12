@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Tree View for User Notify Line -->
+        <record id="view_user_notify_line_tree" model="ir.ui.view">
+            <field name="name">user.notify.line.tree</field>
+            <field name="model">user.notify.line</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="user"/>
+                    <field name="state" widget="badge"/>
+                    <field name="datetime" widget="remaining_days"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="fixing_salary_report">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <div class="header">
+                    <div class="row">
+                        <div class="col-12" style="text-align: right;direction:rtl;">
+                            <p>الرقم المرجعي</p>
+                            <p t-field="o.name" />
+                        </div>
+                        <div class="col-4" style="text-align: right;direction:rtl;">
+                            <p>التاريخ
+                                <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y/%m/%d')" />
+                                م
+                            </p>
+                        </div>
+                        <div class="col-6" />
+                        <div class="col-2">
+                            <img
+                                t-if="o.company_id.logo"
+                                t-att-src="image_data_uri(o.company_id.logo)"
+                                style="padding: height: 140px; width: 140px;"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div class="footer" />
+                <t t-call="web.external_layout">
+                    <div class="row" style="font-size: 15px; font-weight: bold;">
+                        <div class="col-12">
+                            <p>سعادة / الرئيس التنفيذي
+                                <t t-if="o.company_id.manager_id">
+                                    <span t-field="o.company_id.manager_id.name" />
+                                </t>
+
+                                الموقر
+                            </p>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-1" />
+                        <div class="col-11">
+                            <p>تحية طيبة وبعد ...</p>
+                            <br />
+                            <p>أفيد سعادتكم برغبتي الاستفادة من خدمات بنك
+                                <span t-field="o.employee_id.bank_account_id.bank_id" />
+                                لتمويل الأفراد، ولهذا أرغب بأن يتم
+                                صرف راتبي الشهري وجميع مستحقات نهاية خدمتي وذلك بإيداعها بحسابي لدى بنك
+                                <span t-field="o.employee_id.bank_account_id.bank_id" />
+                                رقم
+                                <span t-field="o.employee_id.bank_account_id.acc_number" />
+                                وذلك اعتباراً من راتب شهر
+                                <span t-esc="o.date.strftime('%Y/%m')" />
+                                ، كما أرجو من سعادتكم
+                                أنه في حال انتهاء
+                                خدماتي لأي سبب من الأسباب بأن يتم تحويل كل مستحقاتي إن وجدت إلى حسابي أعلاه بعد
+                                إخطار بنك
+                                <span t-field="o.employee_id.bank_account_id.bank_id" />
+                                بذلك، وألا يتم إلغاء هذا الإجراء إلا بخطاب موجه لكم من البنك
+                                المذكور
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6" />
+                        <div class="col-6">مقدمه :</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6" />
+                        <div class="col-6">التوقيع :</div>
+                    </div>
+                    <div class="row" style="font-size: 15px; font-weight: bold;">
+                        <div class="col-3">
+                            <p>السادة/</p>
+                        </div>
+                        <div class="col-9">
+                            <p>المحترمين</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1" />
+                        <div class="col-11">
+                            <p>تحية طيبة وبعد ...</p>
+                            <br />
+                            <p style="font-size: 15px; font-weight: bold;">الموضوع: رواتب ومستحقات موظفنا السيد :
+                                <span t-field="o.employee_id" />
+                            </p>
+                            <p>نفيدكم بأن المذكور أعلاه ،
+                                <span t-field="o.employee_id.country_id" />
+                                الجنسية، يحمل هوية
+                                <span t-field="o.employee_id.residence_id" />
+                                عمل موظف لدينا ويرغب بالاستفادة من خدمات البنك
+                                لديكم،
+                                وبناء على ذلك فإننا نتعهد بأن نقوم بتحويل مرتباته الشهرية في تواريخ استحقاقاتها،
+                                وكذلك نتعهد بأنه في حال إنهاء أو انتهاء خدمات الموظف المذكور لدينا لأي سبب كان أن
+                                يتم تحويل جميع مستحقاته إلى حسابه المذكور أعلاه إن وجدت حينذاك من مكافأة أو معاش أو
+                                أية مبالغ أخرى، ونحيطكم علماً بأن تستمر تعهداتنا وتكون سارية المفعول لحين إنهاء أو
+                                انتهاء خدمة المذكور لدينا أو حتى استلامنا لإشعار خطي منكم بإعفائنا من التزاماتنا
+                                الواردة أعلاه .
+                            </p>
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+                    <div class="row">
+                        <t t-set="approvals" t-value="o.sudo().get_approvals()" />
+                        <table class="table table-sm table-bordered" width="100%" style="font-size:16px; border:none;">
+                            <tr>
+                                <td
+                                    colspan="4"
+                                    width="40%"
+                                    style="background-color:#282D61; color:#FFFFFF; font-weight:bold; border:none;"
+                                >Stages Of Request Approval
+                                </td>
+                            </tr>
+                            <t t-foreach="approvals" t-as="approval">
+                                <tr>
+                                    <td style="background-color:#F0EFEF; color:#A79559; border-left:none;">
+                                        <t t-esc="approval.get('stage', false)" />
+                                    </td>
+                                    <td style="background-color:#F0EFEF;">
+                                        <t t-esc="approval.get('date', False)" />
+                                    </td>
+                                    <td style="background-color:#F0EFEF; border-right:none;">
+                                        <t t-esc="approval.get('approver_name', false)" />
+                                    </td>
+                                    <td style="background-color:#F0EFEF;">
+                                        <img
+                                            t-if="approval.get('signature', false)"
+                                            t-att-src="image_data_uri(approval.get('signature', false))"
+                                            width="150px"
+                                            height="50px"
+                                        />
+                                    </td>
+                                </tr>
+                            </t>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+    <record id="action_report_fixing_salary" model="ir.actions.report">
+        <field name="name">Fixing Salary</field>
+        <field name="print_report_name">(object.name + '_fixing_salary.pdf')</field>
+        <field name="model">hr.salary.request</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hr_salary_request.fixing_salary_report</field>
+        <field name="report_file">hr_salary_request.fixing_salary_report</field>
+        <field name="binding_model_id" eval="False" />
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

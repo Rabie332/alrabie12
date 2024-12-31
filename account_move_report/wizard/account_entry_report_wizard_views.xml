@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="account_entry_report_wizard_view_form" model="ir.ui.view">
+        <field name="name">account.entry.report.wizard.form</field>
+        <field name="model">account.entry.report.wizard</field>
+        <field name="arch" type="xml">
+            <form delete="0" create="0">
+                <sheet>
+                    <group col="4">
+                        <field name="date_from" />
+                        <field name="date_to" />
+                        <field name="is_posted_entry" />
+                    </group>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <button
+                        name="print_report"
+                        string="Print Entries Report PDF"
+                        type="object"
+                        class="btn btn-primary"
+                        icon="fa-print"
+                        style="margin:5px;"
+                    />
+                    <button
+                        name="print_xls_report"
+                        string="Print Entries Report XLS"
+                        type="object"
+                        class="btn btn-primary"
+                        icon="fa-print"
+                        style="margin:5px;"
+                    />
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="account_entry_report_wizard_action" model="ir.actions.act_window">
+        <field name="name">Entries Report wizard</field>
+        <field name="res_model">account.entry.report.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="account_entry_report_wizard_view_form" />
+        <field name="target">inline</field>
+        <field name="binding_type">report</field>
+    </record>
+
+    <menuitem
+        id="account_entry_report_wizard_menu"
+        name="Entries Report"
+        parent="account.account_reports_management_menu"
+        sequence="35"
+        action="account_entry_report_wizard_action"
+    />
+
+</odoo>

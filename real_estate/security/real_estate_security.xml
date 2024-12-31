@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!--    Real estate Category -->
+    <record model="ir.module.category" id="real_estate_category">
+        <field name="name">Real Estate</field> </record>
+
+    <!--    Groups -->
+
+    <!--    Real estate Manager-->
+    <record id="group_real_estate_manager" model="res.groups">
+        <field name="name">Real estate Manager</field>
+        <field name="category_id" ref="real_estate_category" />
+    </record>
+
+      <record id="realestate_building_company_rules" model="ir.rule">
+        <field name="name">Building of Company</field>
+        <field name="model_id" ref="real_estate.model_realestate_building" />
+        <field
+            name="domain_force"
+        >['|',('company_id','=',False), ('company_id', 'in', company_ids)]
+        </field>
+      </record>
+
+     <record id="unit_reservation_company_rules" model="ir.rule">
+        <field name="name">Unit Reservation of Company</field>
+        <field name="model_id" ref="real_estate.model_unit_reservation" />
+        <field
+            name="domain_force"
+        >['|',('company_id','=',False), ('company_id', 'in', company_ids)]
+        </field>
+      </record>
+
+       <record id="realestate_contract_company_rules" model="ir.rule">
+        <field name="name">Realestate Contract of Company</field>
+        <field name="model_id" ref="real_estate.model_realestate_contract" />
+        <field
+            name="domain_force"
+        >['|',('company_id','=',False), ('company_id', 'in', company_ids)]
+        </field>
+      </record>
+
+     <record id="sale_commission_company_rules" model="ir.rule">
+        <field name="name">Sale Commission of Company</field>
+        <field name="model_id" ref="real_estate.model_sale_commission" />
+        <field
+            name="domain_force"
+        >['|',('company_id','=',False), ('company_id', 'in', company_ids)]
+        </field>
+      </record>
+</odoo>

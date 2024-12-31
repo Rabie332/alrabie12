@@ -1,0 +1,725 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_resignation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-14 16:20+0000\n"
+"PO-Revision-Date: 2021-06-14 16:20+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_resignation
+#: model:ir.actions.report,print_report_name:hr_resignation.action_report_clearance_certificate
+msgid "(object.employee_id.name + '_clearance_certificate.pdf')"
+msgstr ""
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.clearance_certificate_report
+msgid ""
+",\n"
+"                                    <br/>\n"
+"                                    citizen:"
+msgstr ""
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.clearance_certificate_report
+msgid ""
+",\n"
+"                                    <br/>\n"
+"                                    الجنسـية:"
+msgstr ""
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.clearance_certificate_report
+msgid ""
+".\n"
+"                                    <br/>\n"
+"                                    <br/>\n"
+"                                    Throughout his service, we found discipline, good conduct as his behavior.\n"
+"                                    <br/>\n"
+"                                    <br/>\n"
+"                                    Through this company emphasizes that he had been discharged from all its\n"
+"                                    obligations to the company no longer has the tip of any claim or demand.\n"
+"                                    <br/>\n"
+"                                    <br/>\n"
+"                                    This certificate is issued upon his request\n"
+"                                    without any obligation on our part.\n"
+"                                    <br/>"
+msgstr ""
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.clearance_certificate_report
+msgid ""
+"<br/>\n"
+"                                    ID No."
+msgstr ""
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.clearance_certificate_report
+msgid ""
+"<br/>\n"
+"                                    بـرقم الهويـة"
+msgstr ""
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.clearance_certificate_report
+msgid ""
+"<br/>\n"
+"                                    بــأن السـيد"
+msgstr ""
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.clearance_certificate_report
+msgid ""
+"<span style=\"font-size:20px; color:gray\">\n"
+"                                Address:\n"
+"                            </span>\n"
+"                            <br/>\n"
+"                            <br/>"
+msgstr ""
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.clearance_certificate_report
+msgid ""
+"<span style=\"font-size:20px; color:gray\">\n"
+"                                Email:\n"
+"                            </span>\n"
+"                            <br/>\n"
+"                            <br/>"
+msgstr ""
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.clearance_certificate_report
+msgid ""
+"<span style=\"font-size:20px; color:gray\">\n"
+"                                Phone:\n"
+"                            </span>\n"
+"                            <br/>\n"
+"                            <br/>"
+msgstr ""
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.clearance_certificate_report
+msgid ""
+"<span style=\"font-size:22px; font-weight:bold;\">\n"
+"                                    Ch. Executive Officer\n"
+"                                </span>"
+msgstr ""
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.clearance_certificate_report
+msgid ""
+"<span style=\"font-size:22px; font-weight:bold;\">\n"
+"                                Service and Clearance Certificate\n"
+"                                </span>"
+msgstr ""
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.clearance_certificate_report
+msgid ""
+"<span style=\"font-size:22px; font-weight:bold;\">\n"
+"                                شـهادة خـدمة وإخلاء طرف\n"
+"                                </span>"
+msgstr ""
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.clearance_certificate_report
+msgid ""
+"<span style=\"font-size:28px; font-weight:bold;\">\n"
+"                                والله الموفق...\n"
+"                                </span>"
+msgstr ""
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "زخرفة استثناء النشاط"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__employee_id
+msgid "Applicant"
+msgstr "المتقدم"
+
+#. module: hr_resignation
+#: model:mail.message.subtype,name:hr_resignation.mt_hr_resignation_approved
+msgid "Approved"
+msgstr "موافق عليه"
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.hr_resignation_form
+msgid "Are you sure you want to do this?"
+msgstr "هل أنت متأكد ؟"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__company_id
+msgid "Company"
+msgstr "المؤسسة"
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.clearance_certificate_report
+msgid ""
+"Company\n"
+"                                    <br/>\n"
+"                                    certifies that Mr."
+msgstr ""
+
+#. module: hr_resignation
+#: model:ir.model,name:hr_resignation.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__create_uid
+msgid "Created by"
+msgstr "انشأ من قبل"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__create_date
+msgid "Created on"
+msgstr "تم إنشاؤها من قبل"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__department_id
+#: model_terms:ir.ui.view,arch_db:hr_resignation.hr_resignation_view_search
+msgid "Department"
+msgstr "الإدارة "
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.hr_resignation_view_kanban
+msgid "Department :"
+msgstr "الإدارة :"
+
+#. module: hr_resignation
+#: model:request.stage,name:hr_resignation.hr_resignation_stage_direct_manager
+msgid "Direct Manager"
+msgstr "المدير المباشر"
+
+#. module: hr_resignation
+#: model:request.type,name:hr_resignation.hr_resignation_type_dismissal
+msgid "Dismissal"
+msgstr "إقالة"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__display_button_accept
+msgid "Display Button Accept"
+msgstr "عرض زر قبول"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__display_button_refuse
+msgid "Display Button Refuse"
+msgstr "عرض زر رفض"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__display_button_send
+msgid "Display Button Send"
+msgstr "عرض زر إرسال"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__display_name
+#: model:ir.model.fields,field_description:hr_resignation.field_res_partner__display_name
+msgid "Display Name"
+msgstr "المسمى"
+
+#. module: hr_resignation
+#: model:request.stage,name:hr_resignation.hr_resignation_stage_done
+msgid "Done"
+msgstr "أعتمد"
+
+#. module: hr_resignation
+#: model:request.stage,name:hr_resignation.hr_resignation_stage_draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.hr_resignation_view_search
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.hr_resignation_view_kanban
+msgid "Employee :"
+msgstr "الموظف :"
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.hr_resignation_form
+msgid "Employee Informations"
+msgstr "معلومات الموظف"
+
+#. module: hr_resignation
+#: model:ir.actions.act_window,name:hr_resignation.employees_resigned_action
+#: model:ir.ui.menu,name:hr_resignation.employees_resigned_menu
+msgid "Employees resigned"
+msgstr "المستقيلين"
+
+#. module: hr_resignation
+#: model:request.type,name:hr_resignation.hr_resignation_type_end_contract
+msgid "End Contract"
+msgstr "إنهاء العقد"
+
+#. module: hr_resignation
+#: model:request.stage,name:hr_resignation.hr_resignation_stage_executive_manager
+msgid "Executive Manager"
+msgstr "المدير التنفيذي"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__message_follower_ids
+msgid "Followers"
+msgstr "متابعون"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: hr_resignation
+#: model:ir.model.fields,help:hr_resignation.field_hr_resignation__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "رمز الخط الرائع ، على سبيل المثال FA المهام"
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.hr_resignation_view_search
+msgid "Group By"
+msgstr "مجموعة من"
+
+#. module: hr_resignation
+#: model:request.stage,name:hr_resignation.hr_resignation_stage_hr_manager
+msgid "HR Manager"
+msgstr "مدير الموارد البشرية"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__id
+#: model:ir.model.fields,field_description:hr_resignation.field_res_partner__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__activity_exception_icon
+msgid "Icon"
+msgstr "أيقونة"
+
+#. module: hr_resignation
+#: model:ir.model.fields,help:hr_resignation.field_hr_resignation__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr " أيقونة للإشارة إلى نشاط مستثنى ."
+
+#. module: hr_resignation
+#: model:ir.model.fields,help:hr_resignation.field_hr_resignation__message_needaction
+#: model:ir.model.fields,help:hr_resignation.field_hr_resignation__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم تحديد ذلك ، فإن الرسائل الجديدة تتطلب اهتمامك."
+
+#. module: hr_resignation
+#: model:ir.model.fields,help:hr_resignation.field_hr_resignation__message_has_error
+#: model:ir.model.fields,help:hr_resignation.field_hr_resignation__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده ، فبعض الرسائل بها خطأ في التسليم."
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__message_is_follower
+msgid "Is Follower"
+msgstr "هو متابع"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__job_id
+msgid "Job"
+msgstr "الوظيفة"
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.hr_resignation_view_kanban
+msgid "Job :"
+msgstr "الوظيفة :"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__number
+msgid "Job number"
+msgstr "الرقم الوظيفي"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__kanban_color
+msgid "Kanban Color Index"
+msgstr "مؤشر لون كانبان"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation____last_update
+#: model:ir.model.fields,field_description:hr_resignation.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__last_worked_date
+msgid "Last worked date"
+msgstr "تاريخ آخر يوم عمل"
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.hr_resignation_view_kanban
+msgid "Last worked date :"
+msgstr "تاريخ آخر يوم عمل :"
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.hr_resignation_view_kanban
+msgid "Residence Expiration Date :"
+msgstr "تاريخ انتهاء الاقامة :"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__manager_id
+msgid "Manager"
+msgstr "المدير"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__message_ids
+msgid "Messages"
+msgstr "رسائل"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__name
+#: model:ir.model.fields,field_description:hr_resignation.field_res_partner__name
+#: model:ir.model.fields,field_description:hr_resignation.field_res_users__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "أخر موعد لنشاط التالي"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: hr_resignation
+#: model:request.type,name:hr_resignation.hr_resignation_type_not_renew
+msgid "Not Renew"
+msgstr "غير قابل للتجديد"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: hr_resignation
+#: model:ir.model.fields,help:hr_resignation.field_hr_resignation__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: hr_resignation
+#: model:ir.model.fields,help:hr_resignation.field_hr_resignation__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل مع خطأ التسليم"
+
+#. module: hr_resignation
+#: model:ir.model.fields,help:hr_resignation.field_hr_resignation__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل غير المقروءة"
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.hr_resignation_form
+msgid "Print Clearance Certificate"
+msgstr "طباعة شـهادة خـدمة وإخلاء طرف"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__refuse_reason
+msgid "Refusal reason"
+msgstr "سبب الرفض"
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.hr_resignation_form
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: hr_resignation
+#: model:mail.message.subtype,name:hr_resignation.mt_hr_resignation_refused
+#: model:request.stage,name:hr_resignation.hr_resignation_stage_refused
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__date
+msgid "Request date"
+msgstr "تاريخ الطلب"
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.hr_resignation_form
+msgid "Request information"
+msgstr "معلومات الطلب"
+
+#. module: hr_resignation
+#: model:ir.actions.act_window,name:hr_resignation.hr_resignation_action_my
+#: model:ir.model,name:hr_resignation.model_hr_resignation
+#: model:ir.ui.menu,name:hr_resignation.hr_resignation_extension_menu_my
+#: model:ir.ui.menu,name:hr_resignation.resignation_self_service_root
+#: model:request.type,name:hr_resignation.hr_resignation_type_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.hr_resignation_view_search
+msgid "Resignation"
+msgstr "الإستقالة"
+
+#. module: hr_resignation
+#: model:ir.actions.act_window,name:hr_resignation.hr_resignation_stage_action
+#: model:ir.ui.menu,name:hr_resignation.hr_resignation_stage_menu
+msgid "Resignation Stages"
+msgstr "مراحل الإستقالة"
+
+#. module: hr_resignation
+#: model:ir.actions.act_window,name:hr_resignation.hr_resignation_type_action
+#: model:ir.ui.menu,name:hr_resignation.hr_resignation_type_menu
+msgid "Resignation Types"
+msgstr "أنواع الإستقالة"
+
+#. module: hr_resignation
+#: model:mail.message.subtype,description:hr_resignation.mt_hr_resignation_approved
+msgid "Resignation is approved"
+msgstr "تمت الموافقة على الاستقالة"
+
+#. module: hr_resignation
+#: model:mail.activity.type,name:hr_resignation.mail_hr_resignation_feedback
+msgid "Resignation is done"
+msgstr "تمت الاستقالة"
+
+#. module: hr_resignation
+#: model:mail.activity.type,name:hr_resignation.mail_hr_resignation_approval
+msgid "Resignation is ready to be approved"
+msgstr "الاستقالة جاهزة للموافقة عليها"
+
+#. module: hr_resignation
+#: model:mail.message.subtype,description:hr_resignation.mt_hr_resignation_refused
+msgid "Resignation is refused"
+msgstr "رفضت الاستقالة"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__resignation_reason
+msgid "Resignation reason"
+msgstr "اسباب الاستقالة"
+
+#. module: hr_resignation
+#: model:ir.actions.act_window,name:hr_resignation.hr_resignation_action
+#: model:ir.ui.menu,name:hr_resignation.hr_resignation_request_menu
+#: model:ir.ui.menu,name:hr_resignation.hr_resignation_request_menu_root
+msgid "Resignations"
+msgstr "الإستقالات"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: hr_resignation
+#: model:ir.actions.report,name:hr_resignation.action_report_clearance_certificate
+msgid "Service and Clearance Certificate - شـهادة خـدمة وإخلاء طرف"
+msgstr "Service and Clearance Certificate - شـهادة خـدمة وإخلاء طرف"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__stage_id
+msgid "Stage"
+msgstr "المرحلة"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: hr_resignation
+#: model:ir.model.fields,help:hr_resignation.field_hr_resignation__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__request_type_id
+msgid "Type"
+msgstr "النوع"
+
+#. module: hr_resignation
+#: model:ir.model.fields,help:hr_resignation.field_hr_resignation__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع نشاط المستثنى في السجل."
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__message_unread
+msgid "Unread Messages"
+msgstr "رسائل غير مقروءة"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عداد الرسائل غير المقروءة"
+
+#. module: hr_resignation
+#: code:addons/hr_resignation/models/hr_resignation.py:0
+#, python-format
+msgid "You cannot resign for the same employee more than once."
+msgstr "لا يمكنك تقديم الاستقالة لنفس الموظف أكثر من مرة."
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.clearance_certificate_report
+msgid "logo"
+msgstr ""
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.clearance_certificate_report
+msgid ""
+"up to\n"
+"                                    <br/>"
+msgstr ""
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.clearance_certificate_report
+msgid ""
+"،\n"
+"                                    <br/>\n"
+"                                     Has worked as"
+msgstr ""
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.clearance_certificate_report
+msgid ""
+"،\n"
+"                                    <br/>\n"
+"                                     for the period from"
+msgstr ""
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.clearance_certificate_report
+msgid ""
+"،\n"
+"                                    <br/>\n"
+"                                     خـلال الفتـرة مـن"
+msgstr ""
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.clearance_certificate_report
+msgid ""
+"،\n"
+"                                    <br/>\n"
+"                                     قـد عمــل لـدينا بوظيفـة"
+msgstr ""
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.clearance_certificate_report
+msgid "التاريخ"
+msgstr ""
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.clearance_certificate_report
+msgid "تفــيد شــركة"
+msgstr ""
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.clearance_certificate_report
+msgid ""
+"م حتى\n"
+"                                    <br/>"
+msgstr ""
+
+#. module: hr_resignation
+#: model_terms:ir.ui.view,arch_db:hr_resignation.clearance_certificate_report
+msgid ""
+"م.\n"
+"                                    <br/>\n"
+"                                    <br/>\n"
+"                                    وكان المذكور طيلة فترة عمله بالشركة حسن السيرة والسلوك.\n"
+"                                    <br/>\n"
+"                                    <br/>\n"
+"                                    ومن خلال هذا تؤكد الشركة انه قد تم إبراء\n"
+"                                    ذمته من كل ما عليه من إلتزامات للشركة ولم\n"
+"                                    يعد لها من طرفه أي دعوى أو طلب.\n"
+"                                    <br/>\n"
+"                                    <br/>\n"
+"                                    وقد أعطيت له هذه الشهادة بناءً على طلبه\n"
+"                                    دون أدنى مسؤولية على الشركة.\n"
+"                                    <br/>"
+msgstr ""
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__residence_end_date
+msgid "Residence Expiration Date"
+msgstr "تاريخ انتهاء الاقامة"
+
+#. module: hr_resignation
+#: model:ir.cron,cron_name:hr_resignation.ir_resignation_inactive_employee_cron
+#: model:ir.cron,name:hr_resignation.ir_resignation_inactive_employee_cron
+msgid "Make employee inactive after last day of work"
+msgstr "أرشفة الموظف بعد آخر يوم عمل"
+
+#. module: hr_resignation
+#: model:ir.model.fields,field_description:hr_resignation.field_hr_resignation__is_finished
+msgid "Is Finished"
+msgstr "منتهية"

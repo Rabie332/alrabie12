@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+ <record id="hr_authorization_wizard_view_form" model="ir.ui.view">
+            <field name="name">hr.authorization.wizard.form</field>
+            <field name="model">hr.authorization.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <separator string="Period" name="period" />
+                        <group>
+                        <group>
+
+
+                            <field name="date_from" />
+                        </group>
+                        <group>
+                            <field name="date_to" />
+                        </group>
+                        </group>
+                        <separator string="Other Options" name="Other Options" />
+                        <group>
+                                                        <field name="department_id" options="{'no_create': True}" />
+
+                            <field name="employee_id" options="{'no_create': True}" />
+                            <field
+                            name="stage_id"
+                            options="{'no_create': True}"
+                            domain="[('res_model','=','hr.authorization')]"
+                        />
+
+
+                        </group>
+                    </sheet>
+                    <footer>
+                    <button
+                        name="print_report"
+                        string="Print PDF Report"
+                        type="object"
+                        class="btn-primary"
+                        icon="fa-floppy-o"
+                    />
+                        <button
+                        name="print_xls_report"
+                        string="Print xlsx Report"
+                        type="object"
+                        class="btn-primary"
+                        icon="fa-floppy-o"
+                    />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="hr_authorization_resume_wizard_action" model="ir.actions.act_window">
+            <field name="name">Hr Authorizations Resume</field>
+            <field name="res_model">hr.authorization.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem
+        id="hr_authorization_reports_menu"
+        parent="hr_authorization.hr_authorization_menu_root"
+        name="Reports"
+        sequence="4"
+        groups="hr_authorization.group_hr_authorization_manager"
+    />
+         <menuitem
+        id="hr_authorization_resume_wizard_menu"
+        parent="hr_authorization.hr_authorization_reports_menu"
+        name="Authorization Resume Report"
+        action="hr_authorization_resume_wizard_action"
+        sequence="1"
+        groups="hr_authorization.group_hr_authorization_manager"
+    />
+
+
+
+
+</odoo>

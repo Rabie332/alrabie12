@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+
+    <t
+        t-name="OrderReceipt"
+        t-inherit="point_of_sale.OrderReceipt"
+        t-inherit-mode="extension"
+        owl="1"
+    >
+        <xpath expr="//t[@t-if='receipt.company.logo']" position="replace">
+            <t t-if="env.pos.config.display_logo">
+                <img
+                    class="pos-receipt-logo"
+                    t-att-src="'/web/image?model=pos.config&amp;field=pos_logo&amp;id=' + env.pos.config.id"
+                    alt="Logo"
+                />
+                <br />
+            </t>
+            <t t-else="">
+                <t t-if="receipt.company.logo">
+                    <img
+                        class="pos-receipt-logo"
+                        t-att-src="receipt.company.logo"
+                        alt="Logo"
+                    />
+                    <br />
+                </t>
+                <t t-if="!receipt.company.logo">
+                    <h2 class="pos-receipt-center-align">
+                        <t t-esc="receipt.company.name" />
+                    </h2>
+                    <br />
+                </t>
+            </t>
+        </xpath>
+        <xpath expr="//t[@t-if='!receipt.company.logo']" position="replace" />
+    </t>
+
+</templates>

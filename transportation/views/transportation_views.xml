@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="transportation_financial_settings_view_search" model="ir.ui.view">
+        <field name="name">transportation.financial.settings.view.search</field>
+        <field name="model">transportation.financial.settings</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="journal_id" />
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]" />
+            </search>
+        </field>
+    </record>
+    <record id="transportation_financial_settings_view_tree" model="ir.ui.view">
+        <field name="name">transportation.financial.settings.view.tree</field>
+        <field name="model">transportation.financial.settings</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}" />
+                <field
+                    name="journal_id"
+                    options="{'no_create': True}"
+                    domain="['|', ('company_id', '=', company_id), ('company_id', '=', False)]"
+                />
+                <field name="active" invisible="1" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="transportation_financial_settings_action" model="ir.actions.act_window">
+        <field name="name">Financial Settings</field>
+        <field name="res_model">transportation.financial.settings</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem
+        id="transportation_financial_settings_menu"
+        name="Financial Settings"
+        action="transportation_financial_settings_action"
+        parent="clearance.clearance_configuration_menu"
+        sequence="20"
+    />
+
+    <record id="shipping_order_view_search" model="ir.ui.view">
+        <field name="name">shipping.order.view.search</field>
+        <field name="model">shipping.order</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="transport_type" />
+                <group expand="0" string="Group By">
+                    <filter string="Company" name="company_id" context="{'group_by':'company_id'}" />
+                    <filter string="Transport type" name="transport_type" context="{'group_by':'transport_type'}" />
+                    <filter
+                        string="Clearance"
+                        name="clearance_request_id"
+                        context="{'group_by':'clearance_request_id'}"
+                    />
+                    <filter string="State" name="state" context="{'group_by':'state'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+
+    <record id="shipping_order_view_tree" model="ir.ui.view">
+        <field name="name">shipping.order.view.tree</field>
+        <field name="model">shipping.order</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="transport_type" />
+                <field name="clearance_request_id" string="Transaction Number" />
+                <field name="partner_id" />
+                <field name="create_date" />
+                <field name="state" />
+                <field name="company_id" groups="base.group_multi_company" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="shipping_order_view_form" model="ir.ui.view">
+        <field name="name">shipping.order.view.form</field>
+        <field name="model">shipping.order</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+
+                    <button
+                        name="set_to_draft"
+                        type="object"
+                        string="Set To Draft"
+                        class="btn-primary"
+                        attrs="{'invisible': [('is_set_to_draft','=',False)]}"
+                        groups="transportation.group_set_to_draft_responsible"
+                    />
+                    <button
+                        name="action_cancel"
+                        string="Cancel"
+                        type="object"
+                        attrs="{'invisible':[('state', '=','canceled')]}"
+                        class="btn btn-danger"
+                        groups="clearance.group_responsible_cancel"
+                    />
+                    <button
+                        name="create_rewards_payments"
+                        string="Create Drivers Rewards"
+                        type="object"
+                        class="btn-primary"
+                        groups="transportation.group_transportation_responsible"
+                        attrs="{'invisible': ['|', ('state','!=','done'), ('is_paid','=',True)]}"
+                    />
+                    <button
+                        name="action_done"
+                        string="Confirm"
+                        type="object"
+                        states="draft"
+                        class="btn-success"
+                        groups="transportation.group_transportation_responsible"
+                    />
+                    <button
+                        name="action_closed"
+                        string="Close"
+                        type="object"
+                        states="done"
+                        class="btn-success"
+                        groups="transportation.group_transportation_responsible"
+                    />
+
+                    <field name="state" widget="statusbar" statusbar_visible="draft,done,closed,cancel" />
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button
+                            name="shipping_order_view"
+                            type="object"
+                            icon="fa-truck"
+                            attrs="{'invisible': ['|', ('transport_type','!=','warehouse'), ('state', '=', 'draft')]}"
+                        >
+                            <field
+                                name="shipping_order_number"
+                                class="o_stat_value"
+                                string="Shipping Orders From Yard"
+                                widget="statinfo"
+                            />
+
+                        </button>
+                        <button
+                            name="action_makeMeeting"
+                            class="oe_stat_button"
+                            icon="fa-calendar"
+                            type="object"
+                            help="Schedule appointment for this shipping order"
+                        >
+                            <field name="meeting_count" widget="statinfo" string="Meetings" />
+                        </button>
+                        <button name="payment_orders_covenant" type="object" icon="fa-money" style="width:25%;">
+                            <field
+                                name="payments_covenant_number"
+                                class="o_stat_value"
+                                string="Payments Covenant"
+                                widget="statinfo"
+                            />
+                        </button>
+                        <button name="payment_drivers" type="object" icon="fa-gift" style="width:15%;">
+                            <field
+                                name="payments_drivers_number"
+                                class="o_stat_value"
+                                string="Drivers Rewards"
+                                widget="statinfo"
+                            />
+                        </button>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="transport_type" widget="radio" options="{'horizontal': true}" />
+                            <field name="is_set_to_draft" invisible="1" />
+                            <field name="create_date" readonly="1" attrs="{'invisible': [('create_date','=',False)]}" />
+                            <field name="is_paid" invisible="1" />
+                        </group>
+                        <group>
+                            <field name="clearance_request_id" options="{'no_create': True}" invisible="1" />
+                            <field
+                                name="company_id"
+                                groups="base.group_multi_company"
+                                options="{'no_create': True}"
+                                attrs="{'readonly': [('clearance_request_id','!=',False)]}"
+                                force_save="1"
+                                required="1"
+                            />
+                            <field
+                                name="partner_id"
+                                options="{'no_create': True,'no_edit':True}"
+                                attrs="{'readonly': [('clearance_request_id', '!=', False)]}"
+                            />
+                            <field name="statement_number" />
+                            <field name="shipping_number" />
+                            <field name="used_goods" invisible="1" />
+                            <field name="shipment_type" invisible="1" />
+                            <field name="request_type" invisible="1" />
+                            <field name="service_ids" invisible="1" />
+
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="goods" string="Goods">
+                            <group>
+                                <field name="line_ids" nolabel="1" context="{'default_shipping_datetime': create_date}">
+                                    <tree
+                                        editable="1"
+                                        decoration-success="confirmed == True"
+                                        decoration-info="confirmed == False"
+                                    >
+                                        <field name="confirmed" invisible="1" />
+                                        <field name="number" readonly="1" force_save="1" />
+                                        <field name="shipping_order_id" invisible="1" />
+                                        <field name="is_user_groups_only_delivery" invisible="1" />
+                                        <field
+                                            name="goods_id"
+                                            domain="[('id', 'in', parent.used_goods)]"
+                                            attrs="{'required': [('parent.shipment_type','in',['fcl','lcl']),('parent.request_type','!=','transport')], 'readonly': [('is_user_groups_only_delivery','=',True)]}"
+                                        />
+                                        <field name="shipping_order_id" invisible="1" />
+                                        <field name="company_id" invisible="1" />
+                                        <field name="state" invisible="1" />
+                                        <field
+                                            name="container_number"
+                                            attrs="{'column_invisible': [('parent.shipment_type','=','other')],'readonly': [('is_user_groups_only_delivery','=',True)], 'required':[('parent.shipment_type','in',['fcl','lcl'])]}"
+                                        />
+                                        <field
+                                            name="container_category_id"
+                                            required="1"
+                                            attrs="{'column_invisible': [('parent.shipment_type','=','other')],'readonly': [('is_user_groups_only_delivery','=',True)], 'required':[('parent.shipment_type','in',['fcl','lcl'])]}"
+                                        />
+                                        <field name="route_ids" invisible="1" />
+
+                                        <field
+                                            name="route_id"
+                                            required="1"
+                                            attrs="{'readonly': [('is_user_groups_only_delivery','=',True)]}"
+                                            domain="[('id', 'in', route_ids)]"
+                                        />
+                                        <field
+                                            name="shipment_from"
+                                            required="1"
+                                            attrs="{'readonly': [('is_user_groups_only_delivery','=',True)]}"
+                                        />
+                                        <field
+                                            name="shipment_to"
+                                            required="1"
+                                            attrs="{'readonly': [('is_user_groups_only_delivery','=',True)]}"
+                                        />
+                                        <field
+                                            name="delivery_date"
+                                            required="1"
+                                            attrs="{'readonly': [('is_user_groups_only_delivery','=',True)]}"
+                                        />
+
+                                        <field
+                                            name="shipment_type_size_id"
+                                            options="{'no_create': True}"
+                                            required="1"
+                                            attrs="{'column_invisible': [('parent.shipment_type','=','other')],'readonly': [('is_user_groups_only_delivery','=',True)], 'required':[('parent.shipment_type','in',['fcl','lcl'])]}"
+                                        />
+                                        <field
+                                            name="type_lcl"
+                                            attrs="{'column_invisible': [('parent.shipment_type','!=','lcl')], 'required': [('parent.shipment_type','=','lcl')], 'readonly': [('is_user_groups_only_delivery','=',True)]}"
+                                        />
+                                        <field
+                                            name="uom_id"
+                                            options="{'no_open': True, 'no_create': True}"
+                                            groups="uom.group_uom"
+                                            attrs="{'column_invisible': [('parent.shipment_type','!=','fcl')], 'required': [('parent.shipment_type','=','fcl')], 'readonly': [('is_user_groups_only_delivery','=',True)]}"
+                                        />
+                                        <field
+                                            name="weight"
+                                            attrs="{'column_invisible': [('parent.shipment_type','!=','fcl')], 'required': [('parent.shipment_type','=','fcl')], 'readonly': [('is_user_groups_only_delivery','=',True)]}"
+                                        />
+                                        <field
+                                            name="shipping_datetime"
+                                            attrs="{'readonly': [('is_user_groups_only_delivery','=',True)]}"
+                                        />
+                                        <field
+                                            name="vehicle_id"
+                                            required="1"
+                                            attrs="{'readonly': [('is_user_groups_only_delivery','=',True)]}"
+                                        />
+                                        <field name="driver_id" readonly="1" force_save="1" />
+                                        <field
+                                            name="location_number"
+                                            readonly="1"
+                                            force_save="1"
+                                            attrs="{'column_invisible': [('parent.transport_type','!=','warehouse')]}"
+                                        />
+                                        <field name="payment_reward_id" readonly="1" force_save="1" />
+                                        <field name="is_paid" invisible="1" />
+                                        <field
+                                            name="service_id"
+                                            domain="[('id', 'in', parent.service_ids)]"
+                                            options="{'no_create': True}"
+                                            attrs="{'column_invisible': [('parent.transport_type','!=','warehouse')]}"
+                                        />
+                                        <button
+                                            title="Create Driver Reward"
+                                            type="object"
+                                            icon="fa-money"
+                                            name="create_reward_payment"
+                                            groups="transportation.group_transportation_responsible"
+                                            attrs="{'column_invisible': [('parent.is_paid','=',False)],
+                                             'invisible': ['|', ('payment_reward_id','!=', False), ('parent.state', 'in', ['closed', 'canceled'])]}"
+                                        />
+
+                                        <button
+                                            name="print_way_bill_report"
+                                            title="WAY BILL"
+                                            icon="fa-print"
+                                            style="color:green;"
+                                            type="object"
+                                            attrs="{'invisible': [('parent.state', 'in', ['closed', 'canceled'])]}"
+                                        />
+                                        <button
+                                            name="print_payment_order_report"
+                                            title="Cash Receipt"
+                                            icon="fa-download"
+                                            style="color:blue;"
+                                            type="object"
+                                            attrs="{'invisible': ['|', ('payment_reward_id', '=', False), ('parent.state', 'in', ['closed', 'canceled'])]}"
+                                        />
+
+                                        <!-- The code is commented will be used in the future-->
+                                        <button
+                                            string="Shipping orders Details"
+                                            type="object"
+                                            class="btn-success"
+                                            name="send_whatsapp_message"
+                                            groups="transportation.group_transportation_responsible"
+                                            attrs="{'invisible': [('state','!=','transport'), ('state','!=',False)]}"
+                                        />
+                                        <button
+                                            string="Start Receipt and Delivery "
+                                            type="object"
+                                            class="btn-success"
+                                            name="send_whatsapp_message_delivery"
+                                            groups="transportation.group_delivery_responsible"
+                                            attrs="{'invisible': [('state','!=','delivery'), ('state','!=',False)]}"
+                                        />
+
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" />
+                    <field name="activity_ids" widget="mail_activity" />
+                    <field name="message_ids" widget="mail_thread" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="shipping_order_view_form_inherit_groups_delivery" model="ir.ui.view">
+        <field name="name">shipping.order.view.form.inherit.delivery</field>
+        <field name="model">shipping.order</field>
+        <field name="inherit_id" ref="transportation.shipping_order_view_form" />
+        <field name="groups_id" eval="[(6, 0, [ref('transportation.group_delivery_responsible')])]" />
+        <field name="arch" type="xml">
+            <field name="location_number" position="attributes">
+                <attribute name="readonly">0</attribute>
+                <attribute name="attrs">{'column_invisible': [('parent.transport_type','!=','warehouse')]}</attribute>
+            </field>
+        </field>
+    </record>
+
+
+    <record id="shipping_order_action" model="ir.actions.act_window">
+        <field name="name">Shipping Orders</field>
+        <field name="res_model">shipping.order</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="shipping_order_action_clearance" model="ir.actions.act_window">
+        <field name="name">Shipping Orders</field>
+        <field name="res_model">shipping.order</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('clearance_request_id', '=', active_id)]</field>
+    </record>
+    <record id="shipping_order_action_warehouse" model="ir.actions.act_window">
+        <field name="name">Shipping Orders From Yard</field>
+        <field name="res_model">shipping.order</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('shipping_order_id', '=', active_id)]</field>
+    </record>
+    <record id="shipping_order_action_independents" model="ir.actions.act_window">
+        <field name="name">Independents Shipping Orders</field>
+        <field name="res_model">shipping.order</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('clearance_request_id', '=', False)]</field>
+    </record>
+
+
+    <menuitem
+        id="independents_shipping_order_menu"
+        name="Independents Shipping Orders"
+        parent="transportation.transportation_menu_root"
+        action="shipping_order_action_independents"
+        sequence="10"
+        groups="transportation.group_transportation_responsible,transportation.group_delivery_responsible"
+    />
+    <record id="transportation_shipments_orders_action" model="ir.actions.act_window">
+        <field name="name">Shipments Orders</field>
+        <field name="res_model">shipping.order</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'create': False,'edit': False,'delete': False}</field>
+        <field name="domain">[('clearance_request_id', '!=', False)]</field>
+    </record>
+
+    <menuitem
+        id="shipments_orders_menu"
+        name="Shipments Orders"
+        parent="transportation.transportation_menu_root"
+        action="transportation_shipments_orders_action"
+        sequence="6"
+        groups="transportation.group_transportation_responsible,transportation.group_delivery_responsible"
+    />
+
+</odoo>

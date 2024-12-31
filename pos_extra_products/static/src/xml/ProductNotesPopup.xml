@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="ProductNotesPopup" owl="1">
+        <div role="dialog" class="modal-dialog">
+            <Draggable>
+                <div class="popup popup-confirm">
+                    <header class="title drag-handle">
+                        <t t-esc="props.title" />
+                    </header>
+                    <main class="body">
+                        <div class="notes-list" styele="width:100%;">
+                            <span class="label">Notes</span>
+                            <select
+                                class="detail client-address-states needsclick"
+                                name="note_id"
+                                t-on-change="_ChangeProductNotes"
+                            >
+                                <option value="">None</option>
+                                <t t-foreach="props.notes" t-as="note" t-key="note.id">
+                                    <option t-att-value="note.id">
+                                        <t t-esc="note.name" />
+                                    </option>
+                                </t>
+                            </select>
+                            <textarea
+                                style="width: 51%"
+                                t-model="state.inputValue"
+                                t-ref="input"
+                            />
+                        </div>
+                    </main>
+                    <footer class="footer">
+                        <div class="button confirm" t-on-click="confirm">
+                            <t t-esc="props.confirmText" />
+                        </div>
+                    </footer>
+                </div>
+            </Draggable>
+        </div>
+    </t>
+
+</templates>

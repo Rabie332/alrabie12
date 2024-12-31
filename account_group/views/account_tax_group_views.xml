@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="account_tax_group_action" model="ir.actions.act_window">
+        <field name="name">Tax Groups</field>
+        <field name="res_model">account.tax.group</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="account_tax_group_menu"
+        name="Tax Groups"
+        parent="account.account_account_menu"
+        action="account_tax_group_action"
+        sequence="15"
+    />
+</odoo>

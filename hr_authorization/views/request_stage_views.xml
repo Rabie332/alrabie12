@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+     <record id="hr_authorization_stage_action" model="ir.actions.act_window">
+        <field name="name">Stages</field>
+        <field name="res_model">request.stage</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="domain">[('res_model_id.model', '=', 'hr.authorization')]</field>
+        <field name="context">{'default_res_model':'hr.authorization'}</field>
+    </record>
+
+    <menuitem
+        id="hr_authorization_stage_menu"
+        action="hr_authorization_stage_action"
+        groups="request.group_stages_manager"
+        name="Authorization Stages"
+        parent="hr_authorization_configuration_menu"
+    />
+</odoo>

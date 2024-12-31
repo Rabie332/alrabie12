@@ -1,0 +1,37 @@
+<odoo>
+    <record model="ir.ui.view" id="view_hotel_branch_tree">
+        <field name="name">hotel.branch.tree</field>
+        <field name="model">hotel.branch</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_hotel_branch_form">
+        <field name="name">hotel.branch.form</field>
+        <field name="model">hotel.branch</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <record model="ir.actions.act_window" id="action_hotel_branch">
+        <field name="name">Hotel Branches</field>
+        <field name="res_model">hotel.branch</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_hotel_branch"
+          name="Hotel Branches"
+          parent="hotel_reservation.menu_action_hotel_reservation_tree_all"
+          action="action_hotel_branch"
+          sequence="10"/>
+</odoo>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- menu items -->
+        <menuitem id="menu_user_announcements" name="Announcements" action="action_user_notify" web_icon="announcements,static/src/img/icon.png"/>
+    </data>
+</odoo>

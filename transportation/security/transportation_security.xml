@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Category  & Groups-->
+    <record id="group_transportation_responsible" model="res.groups">
+        <field name="name">Transportation responsible</field>
+        <field name="category_id" ref="clearance.module_category_clearance" />
+        <field name="implied_ids" eval="[(4, ref('base.group_user')), (4, ref('uom.group_uom'))]" />
+    </record>
+    <record id="group_transportation_admin" model="res.groups">
+        <field name="name">Transportation Admin</field>
+        <field name="category_id" ref="clearance.module_category_clearance"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+    </record>
+    <record id="group_delivery_responsible" model="res.groups">
+        <field name="name">Delivery responsible</field>
+        <field name="category_id" ref="clearance.module_category_clearance" />
+        <field name="implied_ids" eval="[(4, ref('base.group_user')), (4, ref('uom.group_uom'))]" />
+    </record>
+    <record id="group_set_to_draft_responsible" model="res.groups">
+        <field name="name">Set To Draft Responsible For Shipping Orders</field>
+        <field name="category_id" ref="clearance.module_category_clearance" />
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]" />
+    </record>
+    <record id="group_closing_manager" model="res.groups">
+        <field name="name">Closing Manager</field>
+        <field name="category_id" ref="clearance.module_category_clearance" />
+        <field name="implied_ids" eval="[(4, ref('base.group_user')), (4, ref('uom.group_uom'))]" />
+    </record>
+    <record id="clearance_request_rule_transportation_responsible" model="ir.rule">
+        <field name="name">Clearance Request : Transportation responsible</field>
+        <field name="model_id" ref="clearance.model_clearance_request" />
+        <field name="groups" eval="[
+                (4, ref('transportation.group_transportation_responsible'))]" />
+        <field name="domain_force">[('state','not in',['draft', 'customs_clearance', 'customs_statement'])]</field>
+        <field name="perm_unlink" eval="False" />
+    </record>
+    <record id="clearance_request_rule_transportation_delivery_closing" model="ir.rule">
+        <field name="name">Clearance Request : Transportation Delivery and Closing</field>
+        <field name="model_id" ref="clearance.model_clearance_request" />
+        <field
+            name="groups"
+            eval="[(4, ref('transportation.group_delivery_responsible')),(4, ref('transportation.group_closing_manager'))]"
+        />
+        <field
+            name="domain_force"
+        >[('state','not in',['draft', 'customs_clearance', 'customs_statement', 'transport'])]</field>
+        <field name="perm_unlink" eval="False" />
+    </record>
+    <record id="transportation_financial_settings_company_rule" model="ir.rule">
+        <field name="name">Transportation Financial Settings: multi-company</field>
+        <field name="model_id" ref="model_transportation_financial_settings" />
+        <field name="domain_force">['|',('company_id', 'in', company_ids),('company_id','=',False)]</field>
+    </record>
+    <record id="shipping_order_company_rule" model="ir.rule">
+        <field name="name">Shipping Orders: multi-company</field>
+        <field name="model_id" ref="model_shipping_order" />
+        <field name="domain_force">['|',('company_id', 'in', company_ids),('company_id','=',False)]</field>
+    </record>
+    <record id="account_payment_reward_employee_rule" model="ir.rule">
+        <field name="name">My Reward(Moves)</field>
+        <field name="model_id" ref="account.model_account_move" />
+        <field name="domain_force">[('payment_id.shipping_order_id','!=',False)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]" />
+    </record>
+</odoo>

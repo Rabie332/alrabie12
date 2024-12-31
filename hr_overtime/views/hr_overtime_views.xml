@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="hr_overtime_view_search" model="ir.ui.view">
+        <field name="name">hr.overtime.view.search</field>
+        <field name="model">hr.overtime</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="request.request_view_search" />
+        <field name="arch" type="xml">
+            <field name="employee_id" position="after">
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]" />
+            </field>
+            <filter name="stage" position="after">
+                <filter name="employee_id" string="Employee" context="{'group_by': 'employee_id'}" />
+                <filter name="create_date" string="Application Date" context="{'group_by': 'create_date'}" />
+            </filter>
+        </field>
+    </record>
+
+    <record id="hr_overtime_tree" model="ir.ui.view">
+        <field name="name">hr.overtime.view.tree</field>
+        <field name="model">hr.overtime</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="date" />
+                <field name="employee_id" />
+                <field name="stage_id" />
+                <field name="state" invisible="1" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="hr_overtime_view_kanban" model="ir.ui.view">
+        <field name="name">hr.overtime.view.kanban</field>
+        <field name="model">hr.overtime</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="request.request_view_kanban" />
+        <field name="arch" type="xml">
+            <div name="card_body" position="inside">
+                <br />
+                <span name="name" t-if="record.name.raw_value">Request Number :
+                    <field name="name" />
+                    <br />
+                </span>
+                <span name="employee_id" t-if="record.employee_id.raw_value">Employee :
+                    <field name="employee_id" />
+                    <br />
+                </span>
+
+                <span name="date" t-if="record.date.raw_value">Date :
+                    <field name="date" />
+                    <br />
+                </span>
+
+            </div>
+
+        </field>
+    </record>
+
+
+    <record id="hr_overtime_form" model="ir.ui.view">
+        <field name="name">hr.overtime.form</field>
+        <field name="model">hr.overtime</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="request.request_view_form" />
+        <field name="arch" type="xml">
+            <header position="inside">
+
+             <button
+                    name="action_previous_stage"
+                    class="btn-success"
+                    string="Return to previous stage"
+                    type="object"
+                    attrs="{'invisible':[('display_button_previous', '=', False)]}"
+                />
+                <button
+                    string="Set to draft"
+                    name="set_to_draft"
+                    type='object'
+                    attrs="{'invisible':[('display_button_set_to_draft', '=', False)]}"
+                    class="oe_highlight"
+                />
+            </header>
+
+            <button name="action_refuse" position="attributes">
+                <attribute name="name">%(request_refuse.action_refuse_wizard)d
+                </attribute>
+                <attribute name="context">{'action_name': 'action_refuse','field_name': 'reason'}
+                </attribute>
+                <attribute name="type">action</attribute>
+                <attribute name="confirm">Are you sure you want to do this?</attribute>
+            </button>
+            <sheet>
+                <group name="principal" position="replace" />
+
+                <group>
+                    <group>
+                        <field name="display_button_previous" invisible="1" />
+                        <field name="display_button_set_to_draft" invisible="1" />
+                        <field name="name" attrs="{'invisible':[('id', '=', False)]}" />
+                        <field name="employee_id" required="1" />
+                    </group>
+                    <group>
+                        <field name="date" />
+                        <field
+                            name="reason"
+                            attrs="{'invisible': [('state', '!=','cancel')]}"
+                            readonly="1"
+                            force_save="1"
+                        />
+                        <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company" />
+                        <field name="active" invisible="1" />
+                    </group>
+                </group>
+                <group>
+                    <notebook>
+                        <page name="overtime_lines" string="Overtime lines">
+                            <group>
+                                <field name="line_ids" nolabel="1">
+                                    <tree>
+                                            <field name="date" />
+                                            <field name="type" force_save="1" />
+                                            <field name="mission" />
+                                            <field name="hour_from" widget="float_time" />
+                                            <field name="hour_to" widget="float_time" />
+                                            <field name="hour_number" sum="Total" widget="float_time" />
+                                        </tree>
+                                        <form>
+                                            <group>
+                                                <group>
+                                                    <field name="date" />
+                                                    <field name="type" force_save="1" />
+                                                    <field name="mission" />
+                                                </group>
+                                                <group>
+                                                    <field name="hour_from" required="1" widget="float_time" />
+                                                    <field name="hour_to" required="1" widget="float_time" />
+                                                    <field name="hour_number" force_save="1" widget="float_time" />
+                                                </group>
+                                            </group>
+                                        </form>
+
+                                </field>
+                            </group>
+                        </page>
+                    </notebook>
+                </group>
+            </sheet>
+
+        </field>
+    </record>
+
+
+
+   <!--  My requests -->
+
+    <record id="hr_overtime_action_my" model="ir.actions.act_window">
+        <field name="name">My requests</field>
+        <field name="res_model">hr.overtime</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="domain">[('create_uid', '=', uid)]</field>
+    </record>
+
+    <menuitem
+        id="hr_overtime_menu_my"
+        name="My requests"
+        sequence="2"
+        parent="hr_overtime_menu"
+        action="hr_overtime_action_my"
+    />
+
+    <!--  All Requests -->
+
+    <record id="hr_overtime_action_manager" model="ir.actions.act_window">
+        <field name="name">All requests</field>
+        <field name="res_model">hr.overtime</field>
+        <field name="view_mode">kanban,tree,form</field>
+    </record>
+
+    <!--menu all request for manager-->
+    <menuitem
+        id="hr_overtime_manager_menu"
+        name="All requests"
+        parent="hr_overtime.hr_overtime_menu"
+        action="hr_overtime_action_manager"
+        groups="hr_overtime.group_hr_overtime_user"
+        sequence="5"
+    />
+
+    <record model="ir.actions.act_window" id="action_hr_overtime_my">
+        <field name="name">My requests</field>
+        <field name="res_model">hr.overtime</field>
+        <field name="domain">[('employee_id.user_id','=', uid)]</field>
+        <field name="context">{'my_request' : True}</field>
+        <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <menuitem
+        id="menu_hr_overtime_my"
+        sequence="1"
+        parent="hr_overtime.overtime_self_service_root"
+        action="hr_overtime.action_hr_overtime_my"
+    />
+
+
+
+</odoo>

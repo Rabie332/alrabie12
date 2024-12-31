@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+
+    <record id="base.main_company" model="res.company">
+        <field
+            name="background_image"
+            type="base64"
+            file="web_apps_background/static/src/img/background.jpeg"
+        />
+    </record>
+
+</odoo>

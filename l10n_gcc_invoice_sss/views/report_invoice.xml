@@ -1,0 +1,14 @@
+<odoo>
+
+    <template id="report_invoice" inherit_id="account.report_invoice">
+        <xpath expr="//tbody" position="inside">
+            <tr>
+                <td class="text-end">
+                    <t t-set="tax_amount" t-value="line.l10n_gcc_invoice_tax_amount or 0.0"/>
+                    <span class="text-nowrap" t-esc="tax_amount"/>
+                </td>
+            </tr>
+        </xpath>
+    </template>
+    
+</odoo>

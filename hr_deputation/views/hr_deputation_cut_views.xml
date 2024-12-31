@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Tree View -->
+
+    <record id="hr_deputation_cut_view_tree" model="ir.ui.view">
+        <field name="name">hr.deputation.cut.view.tree</field>
+        <field name="model">hr.deputation.cut</field>
+        <field name="arch" type="xml">
+            <tree create="0">
+                <field name="name" />
+                <field name="deputation_id" />
+                <field name="employee_id" widget="many2one_avatar_employee" />
+                <field name="date_from" />
+                <field name="date_to" />
+                <field name="duration" />
+                <field name="remaining_duration" />
+                <field name="stage_id" />
+                <field name="state" invisible="1" />
+                <field name="company_id" groups="base.group_multi_company" />
+            </tree>
+        </field>
+    </record>
+    <record id="hr_deputation_cut_view_search" model="ir.ui.view">
+        <field name="name">hr.deputation.cut.view.search</field>
+        <field name="model">hr.deputation.cut</field>
+         <field name="inherit_id" ref="request.request_view_search" />
+        <field name="arch" type="xml">
+            <field name="employee_id" position="after">
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]" />
+            </field>
+        </field>
+    </record>
+
+    <!-- Form View -->
+
+    <record id="hr_deputation_cut_view_form" model="ir.ui.view">
+        <field name="name">hr.deputation.cut.view.form</field>
+        <field name="model">hr.deputation.cut</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="request.request_view_form" />
+        <field name="arch" type="xml">
+            <form position="attributes">
+                <attribute name="create">0</attribute>
+            </form>
+                 <button name="action_refuse" position="replace">
+                <button
+                    name="%(request_refuse.action_refuse_wizard)d"
+                    context="{'action_name': 'action_refuse','field_name': 'refuse_reason'}"
+                    string="Refuse"
+                    class="btn-danger"
+                    type="action"
+                    confirm="Are you sure you want to do this?"
+                    attrs="{'invisible':[('display_button_refuse', '=', False)]}"
+                />
+            </button>
+            <group name="principal" position="replace" />
+            <sheet position="inside">
+                <widget
+                    name="web_ribbon"
+                    title="Canceled"
+                    bg_color="bg-danger"
+                    attrs="{'invisible': [('state', '!=', 'cancel')]}"
+                />
+
+                <label for="name" class="oe_edit_only" invisible="1" />
+                <h1>
+                    <field
+                        name="name"
+                        readonly="1"
+                        invisible="1"
+                        attrs="{'invisible':[('state', '=', ['draft'])]}"
+                        force_save="1"
+                    />
+                </h1>
+                <group>
+                    <group string="Deputation Details">
+                        <field name="employee_id" force_save="1" readonly="1" />
+                        <field name="deputation_id" force_save="1" />
+                        <field name="company_id" groups="base.group_multi_company" />
+                        <field name="date_from" force_save="1" />
+                        <field name="date_to" force_save="1" />
+                        <field name="duration" force_save="1" />
+                        <field name="active" invisible="1" />
+                        <field
+                            name="refuse_reason"
+                            readonly="1"
+                            force_save="1"
+                            attrs="{'invisible' : [('state', '!=', 'cancel')]}"
+                        />
+                    </group>
+                    <group string="Depuation Cut">
+
+                        <field name="request_type_id" invisible="1" />
+                        <field name="cut_date" required="1" />
+                        <field name="remaining_duration" />
+                        <field name="reason_cut" />
+                    </group>
+                </group>
+            </sheet>
+        </field>
+    </record>
+
+    <record id="hr_deputation_cut_view_kanban" model="ir.ui.view">
+        <field name="name">hr.deputation.cut.kanban</field>
+        <field name="model">hr.deputation.cut</field>
+        <field name="inherit_id" ref="request.request_view_kanban" />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <kanban position="attributes">
+                <attribute name="create">0</attribute>
+                <attribute name="edit">0</attribute>
+            </kanban>
+            <div name="card_body" position="inside">
+                <br />
+                <span name="deputation_id" t-if="record.deputation_id.raw_value">Deputation :
+                    <field name="deputation_id" />
+                    <br />
+                </span>
+                <span name="date_from" t-if="record.date_from.raw_value">Date From :
+                    <field name="date_from" />
+                    <br />
+                </span>
+                <span name="date_to" t-if="record.date_to.raw_value">Date To :
+                    <field name="date_to" />
+                    <br />
+                </span>
+                <span name="cut_date" t-if="record.cut_date.raw_value">Cut Date:
+                    <field name="cut_date" />
+                    <br />
+                </span>
+                <span name="remaining_duration" t-if="record.remaining_duration.raw_value">Remaining Duration:
+                    <field name="remaining_duration" />
+                    <br />
+                </span>
+            </div>
+
+        </field>
+    </record>
+
+    <!-- Action Window -->
+
+    <record id="hr_deputation_cut_action" model="ir.actions.act_window">
+        <field name="name">Cutting requests</field>
+        <field name="res_model">hr.deputation.cut</field>
+        <field name="view_mode">kanban,tree,form</field>
+    </record>
+
+    <menuitem
+        id="menu_hr_deputation_cut"
+        name="Cutting requests"
+        parent="menu_hr_deputation_root"
+        action="hr_deputation_cut_action"
+        sequence="3"
+    />
+
+    <record id="hr_deputation_cut_action_my" model="ir.actions.act_window">
+        <field name="name">Cutting requests</field>
+        <field name="res_model">hr.deputation.cut</field>
+        <field name="domain">[('employee_id.user_id','=', uid)]</field>
+        <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <menuitem
+        id="hr_deputation_cut_menu_my"
+        sequence="3"
+        parent="deputation_self_service_root"
+        action="hr_deputation_cut_action_my"
+    />
+
+    <!--    Drive actions Menu -->
+
+    <record id="hr_deputation_cut_action_drive_actions" model="ir.actions.act_window">
+        <field name="name">Cutting requests</field>
+        <field name="res_model">hr.deputation.cut</field>
+        <field name="context">{'group_by':'stage_id'}</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem
+        id="menu_hr_deputation_cut_action_drives"
+        sequence="3"
+        parent="hr_deputation_menu_drive_actions"
+        action="hr_deputation_cut_action_drive_actions"
+    />
+</odoo>

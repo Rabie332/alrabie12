@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="hr_payment_request_view_form_inherit" model="ir.ui.view">
+            <field name="name">hr.payment.request.form.inherit</field>
+            <field name="model">hr.payment.request</field>
+            <field name="inherit_id" ref="hr_payment_request.hr_payment_request_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_send']" position="after">
+                    <button name="action_to_ceo" string="Set CEO" type="object" class="btn-danger" invisible='1'/>
+                    <button name="action_reset_to_draft" string="Set Draft" type="object" class="btn-danger" invisible='1'/>
+                </xpath>
+                <xpath expr="//field[@name='amount']" position="after">
+                    <field name="due_date"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="hr_payment_request_view_tree_inherit" model="ir.ui.view">
+            <field name="name">hr.payment.request.tree.inherit</field>
+            <field name="model">hr.payment.request</field>
+            <field name="inherit_id" ref="hr_payment_request.hr_payment_request_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date']" position="after">
+                    <field name="due_date"/>
+                </xpath>
+                <xpath expr="//field[@name='stage_id']" position="after">
+                    <field name="amount" sum="Total"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

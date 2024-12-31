@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+
+    <record id="hr_payment_request_seq" model="ir.sequence">
+        <field name="name">Payment Request</field>
+        <field name="code">hr.payment.request.seq</field>
+        <field eval="1" name="number_increment" />
+        <field name="padding">5</field>
+    </record>
+
+    <!-- Payment Request stages-->
+
+    <record id="hr_payment_request_stage_send" model="request.stage">
+        <field name="name">Draft</field>
+        <field name="res_model_id" ref="hr_payment_request.model_hr_payment_request" />
+        <field name="sequence">1</field>
+        <field name="res_model">hr.payment.request</field>
+        <field name="state">draft</field>
+    </record>
+    <record id="hr_payment_request_stage_review" model="request.stage">
+        <field name="name">Review</field>
+        <field name="res_model_id" ref="hr_payment_request.model_hr_payment_request" />
+        <field name="sequence">2</field>
+        <field name="res_model">hr.payment.request</field>
+        <field name="state">in_progress</field>
+    </record>
+
+    <record id="hr_payment_request_stage_reviewed" model="request.stage">
+        <field name="name">Reviewed</field>
+        <field name="res_model_id" ref="hr_payment_request.model_hr_payment_request" />
+        <field name="sequence">3</field>
+        <field name="res_model">hr.payment.request</field>
+        <field name="state">in_progress</field>
+    </record>
+
+    <record id="hr_payment_request_stage_confirm" model="request.stage">
+        <field name="name">Confirm</field>
+        <field name="res_model_id" ref="hr_payment_request.model_hr_payment_request" />
+        <field name="sequence">4</field>
+        <field name="res_model">hr.payment.request</field>
+        <field name="state">in_progress</field>
+    </record>
+
+    <record id="hr_payment_request_stage_done" model="request.stage">
+        <field name="name">Done</field>
+        <field name="res_model_id" ref="hr_payment_request.model_hr_payment_request" />
+        <field name="sequence">5</field>
+        <field name="res_model">hr.payment.request</field>
+        <field name="state">done</field>
+    </record>
+
+    <record id="hr_payment_request_stage_refused" model="request.stage">
+        <field name="name">Refused</field>
+        <field name="res_model_id" ref="hr_payment_request.model_hr_payment_request" />
+        <field name="sequence">6</field>
+        <field name="res_model">hr.payment.request</field>
+        <field name="state">cancel</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_partner_form_inherit_clearance" model="ir.ui.view">
+        <field name="name">res.partner.form.view.inherit.clearance</field>
+        <field name="model">res.partner</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <field name="vat" position="before">
+                <field name="code_partner" />
+            </field>
+            <field name="type" position="before">
+                <field name="supplier_rank" invisible="1" />
+                <field name="is_shipping_agents" attrs="{'invisible': [('supplier_rank', '&lt;=', 0)]}" />
+                <field
+                    name="zakat_tax_customs_authority"
+                    attrs="{'invisible': ['|', ('parent_id','!=', False), ('is_company','=', False)]}"
+                />
+            </field>
+            <field name="property_account_payable_id" position="after">
+                <field
+                    name="property_account_container_deposit_id"
+                    attrs="{'invisible': [('is_shipping_agents', '=', False)]}"
+                />
+            </field>
+        </field>
+    </record>
+    <record id="view_partner_form_inherit_clearance_route" model="ir.ui.view">
+        <field name="name">res.partner.form.view.inherit.clearance.route</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <page name='sales_purchases' position="after">
+                <page name="routes_list" string="Routes List">
+                    <field name="clearance_route_ids" nolabel="1">
+                        <tree editable="top">
+                            <field name="transport_type" />
+                            <field
+                                name="route_id"
+                                options="{'no_create':True}"
+                                domain="[('transport_type', '=', transport_type)]"
+                            />
+                            <field name="route_from" force_save="1" />
+                            <field name="route_to" force_save="1" />
+                            <field
+                                name="company_id"
+                                groups="base.group_multi_company"
+                                options="{'no_create':True}"
+                                readonly="1"
+                                force_save="1"
+                            />
+
+                        </tree>
+                    </field>
+                </page>
+                <page name="products_list" string="Products List">
+                    <group>
+                        <field name="product_ids" widget="many2many_tags" />
+                    </group>
+                </page>
+            </page>
+
+        </field>
+    </record>
+</odoo>

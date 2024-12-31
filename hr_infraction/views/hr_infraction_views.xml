@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Infraction Menu Roots -->
+
+    <menuitem
+        id="hr_infraction_menu_root_hr"
+        name="Infractions"
+        parent="hr.menu_hr_root"
+        groups="hr_infraction.hr_infraction_group_manager"
+    />
+
+    <!-- Infraction View Search -->
+
+    <record id="hr_infraction_view_search" model="ir.ui.view">
+        <field name="name">hr.infraction.view.search</field>
+        <field name="model">hr.infraction</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="employee_id" />
+                <field name="date" />
+                <field name="request_type_id" />
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]" />
+                <group string="Grouped by">
+                    <filter name="employee_id" string="Employee" context="{'group_by': 'employee_id'}" />
+                    <filter name="date" string="Date" context="{'group_by': 'date'}" />
+                    <filter name="request_type_id" string="Type" context="{'group_by': 'request_type_id'}" />
+                    <filter name="period_id" string="Period" context="{'group_by': 'period_id'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Infraction Tree View -->
+
+    <record id="hr_infraction_view_tree" model="ir.ui.view">
+        <field name="name">hr.infraction.view.tree</field>
+        <field name="model">hr.infraction</field>
+        <field name="arch" type="xml">
+            <tree decoration-info="state == 'draft'" decoration-success="state == 'done'">
+                <field name="employee_id" />
+                <field name="date" />
+                <field name="request_type_id" />
+                <field name="stage_id" />
+                <field name="state" invisible="1" />
+            </tree>
+        </field>
+    </record>
+
+    <!--  Infraction Form View -->
+
+    <record id="hr_infraction_view_form" model="ir.ui.view">
+        <field name="name">hr.infraction.view.form</field>
+        <field name="model">hr.infraction</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="request.request_view_form" />
+        <field name="arch" type="xml">
+            <header position="inside">
+                <button
+                    name="print_report"
+                    string="Print"
+                    type="object"
+                    class="oe_highlight"
+                    attrs="{'invisible': [('state', '!=', 'done')]}"
+                />
+            </header>
+
+            <group name="principal" position="before">
+                <widget
+                    name="web_ribbon"
+                    title="Archived"
+                    bg_color="bg-danger"
+                    attrs="{'invisible': [('active', '=', True)]}"
+                />
+            </group>
+            <sheet position="inside">
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="employee_id" options="{'no_create': True}" />
+                            <field name="date" attrs="{'readonly':[('state','!=','draft')]}" />
+                            <field name="active" invisible="1" />
+                        </group>
+                        <group>
+                            <field name="type_deduction" invisible="1" />
+                            <field name="period_id" options="{'no_create':True,'no_open':True}" />
+                            <field name="request_type_id" options="{'no_create': True}" />
+                            <field
+                            name="amount"
+                            attrs="{'invisible': [('type_deduction','!=','amount')],'required':[('type_deduction','=','amount')]}"
+                        />
+                            <label
+                            for="date_from"
+                            string="Period"
+                            attrs="{'invisible': ['|',('request_type_id', '=', False),('type_deduction','!=','nb_days')]}"
+                        />
+                            <div
+                            attrs="{'invisible': ['|',('request_type_id', '=', False),('type_deduction','!=','nb_days')]}"
+                        >
+                                <group>
+                                    <field
+                                    name="date_from"
+                                    nolabel="1"
+                                    attrs="{'invisible':[('type_deduction','!=','nb_days')],'required':[('type_deduction','=','nb_days')]}"
+                                    class="oe_inline"
+                                />
+                                    <field
+                                    name="date_to"
+                                    nolabel="1"
+                                    attrs="{'invisible': [('type_deduction','!=','nb_days')],'required':[('type_deduction','=','nb_days')]}"
+                                    class="oe_inline"
+                                />
+                                </group>
+                            </div>
+                            <label
+                            for="number_days"
+                            string="Number of days"
+                            attrs="{'invisible': ['|',('request_type_id', '=', False),('type_deduction','!=','nb_days')]}"
+                        />
+                            <div
+                            attrs="{'invisible': ['|',('request_type_id', '=', False),('type_deduction','!=','nb_days')]}"
+                        >
+                                <field name="number_days" force_save="1" class="oe_inline" />
+                            </div>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="description" />
+                    </group>
+                </sheet>
+        </field>
+    </record>
+
+        <!--  Infraction Kanban View -->
+
+    <record id="hr_infraction_view_kanban" model="ir.ui.view">
+        <field name="name">hr.infraction.view.kanban</field>
+        <field name="model">hr.infraction</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="request.request_view_kanban" />
+        <field name="arch" type="xml">
+            <div name="card_body" position="inside">
+                <br />
+                <span name="date" t-if="record.date.raw_value">Date:
+                    <field name="date" />
+                    <br />
+                </span>
+                <span name="request_type_id" t-if="record.request_type_id.raw_value">Type :
+                    <field name="request_type_id" />
+                    <br />
+                </span>
+                <span name="employee_id" t-if="record.employee_id.raw_value">Employee :
+                    <field name="employee_id" />
+                    <br />
+                </span>
+            </div>
+        </field>
+    </record>
+
+    <!-- Infraction Action Window -->
+
+    <record id="hr_infraction_action" model="ir.actions.act_window">
+        <field name="name">Infractions</field>
+        <field name="res_model">hr.infraction</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="hr_infraction_menu_hr"
+        name="Infractions"
+        parent="hr_infraction.hr_infraction_menu_root_hr"
+        action="hr_infraction_action"
+        groups="hr_infraction_group_manager,hr.group_hr_user"
+        sequence="1"
+    />
+
+    <!-- Infraction Type Search view -->
+
+    <record id="request_type_view_search" model="ir.ui.view">
+        <field name="name">request.type.view.search</field>
+        <field name="model">request.type</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]" />
+            </search>
+        </field>
+    </record>
+
+    <!-- Infraction Type Form View -->
+
+    <record id="request_type_view_form_inherit_infraction" model="ir.ui.view">
+        <field name="name">request.type.view.from.inherit.infraction</field>
+        <field name="model">request.type</field>
+        <field name="inherit_id" ref="request.request_type_view_form" />
+        <field name="arch" type="xml">
+            <group position="before">
+                <widget
+                    name="web_ribbon"
+                    title="Archived"
+                    bg_color="bg-danger"
+                    attrs="{'invisible': [('active', '=', True)]}"
+                />
+            </group>
+            <field name="name" position="after">
+                 <field
+                    name="infraction_type"
+                    attrs="{'invisible': [('res_model','!=','hr.infraction')], 'required': [('res_model','=','hr.infraction')]}"
+                />
+             </field>
+            <field name="code" position="attributes">
+                <attribute name="attrs">{'readonly': [('res_model', '=', 'hr.infraction')]}</attribute>
+            </field>
+        </field>
+    </record>
+
+    <!-- Infraction Type Action Window-->
+
+    <record id="hr_infraction_type_action" model="ir.actions.act_window">
+        <field name="name">Types</field>
+        <field name="res_model">request.type</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('res_model_id.model', '=', 'hr.infraction')]</field>
+        <field name="context">{'default_res_model':'hr.infraction'}</field>
+    </record>
+
+        <menuitem
+        id="hr_infraction_configuration_menu_hr"
+        name="Configuration"
+        parent="hr_infraction.hr_infraction_menu_root_hr"
+        groups="hr_infraction_group_manager,hr.group_hr_user"
+        sequence="2"
+    />
+
+        <menuitem
+        id="hr_infraction_type_menu_hr"
+        name="Types"
+        parent="hr_infraction.hr_infraction_configuration_menu_hr"
+        action="hr_infraction_type_action"
+        groups="hr_infraction_group_manager,hr.group_hr_user"
+        sequence="1"
+    />
+
+        <!--    Stages -->
+
+    <record id="hr_infraction_stage_action" model="ir.actions.act_window">
+        <field name="name">Stages</field>
+        <field name="res_model">request.stage</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="domain">[('res_model_id.model', '=', 'hr.infraction')]</field>
+        <field name="context">{'default_res_model':'hr.infraction'}</field>
+    </record>
+
+    <menuitem
+        id="hr_infraction_stage_menu_hr"
+        action="hr_infraction_stage_action"
+        name="Infraction Stages"
+        groups="request.group_stages_manager"
+        parent="hr_infraction.hr_infraction_configuration_menu_hr"
+    />
+
+  <!--    Drive Actions Infraction Menu & Action -->
+
+    <record id="hr_infraction_view_tree_drive_actions" model="ir.ui.view">
+        <field name="name">hr.infraction.view.tree.drive.actions</field>
+        <field name="model">hr.infraction</field>
+        <field name="arch" type="xml">
+            <tree create="0" edit="0" decoration-info="state == 'draft'" decoration-success="state == 'done'">
+                <field name="employee_id" />
+                <field name="date" />
+                <field name="request_type_id" />
+                <field name="stage_id" />
+                <field name="period_id" />
+                <field name="state" invisible="1" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="hr_infraction_action_drive_actions" model="ir.actions.act_window">
+        <field name="name">Infractions</field>
+        <field name="res_model">hr.infraction</field>
+        <field name="context">{'group_by':'stage_id'}</field>
+        <field
+            name="view_ids"
+            eval="[(5, 0, 0),
+                         (0, 0, {'view_mode': 'tree', 'view_id': ref('hr_infraction.hr_infraction_view_tree_drive_actions')})]"
+        />
+    </record>
+
+    <menuitem
+        id="hr_infraction_menu_drive_actions"
+        sequence="6"
+        parent="request.self_service_menu_drive_action"
+        action="hr_infraction_action_drive_actions"
+    />
+</odoo>

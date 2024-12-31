@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="statement_atm_line_view_form" model="ir.ui.view">
+        <field name="name">atm.statement.line.tree.view</field>
+        <field name="model">atm.statement.line</field>
+        <field name="arch" type="xml">
+            <form string="ATM statement lines">
+                <sheet>
+                    <group>
+                        <field name="payment_method_id" options="{'no_create': True}" />
+                        <field name="amount" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="statement_atm_line_view_tree" model="ir.ui.view">
+        <field name="name">atm.statement.line.tree.view</field>
+        <field name="model">atm.statement.line</field>
+        <field name="arch" type="xml">
+            <tree string="ATM statement lines">
+                <field name="payment_method_id" />
+                <field name="amount" />
+            </tree>
+        </field>
+    </record>
+</odoo>

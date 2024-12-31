@@ -1,0 +1,979 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hotel_reservation_reports
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-29 15:16+0000\n"
+"PO-Revision-Date: 2023-09-29 15:16+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hotel_reservation_reports
+#: model:ir.model.fields.selection,name:hotel_reservation_reports.selection__hotel_reservation_monthly_report__month__10
+msgid "10"
+msgstr ""
+
+#. module: hotel_reservation_reports
+#: model:ir.model.fields.selection,name:hotel_reservation_reports.selection__hotel_reservation_monthly_report__month__11
+msgid "11"
+msgstr ""
+
+#. module: hotel_reservation_reports
+#: model:ir.model.fields.selection,name:hotel_reservation_reports.selection__hotel_reservation_monthly_report__month__12
+msgid "12"
+msgstr ""
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_monthly
+msgid "<span>From Bank</span>"
+msgstr "<span> من البنك</span>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_monthly
+msgid "<span>Inbound</span>"
+msgstr "<span>القبض</span>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_tax
+msgid "<span>Invoice</span>"
+msgstr "<span>فاتورة</span>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_monthly
+msgid "<span>Outbound</span>"
+msgstr "<span>الصرف</span>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_monthly
+msgid "<span>Revenue</span>"
+msgstr "<span>الايراد</span>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_monthly
+msgid "<span>Service</span>"
+msgstr "<span>الخدمات</span>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_monthly
+msgid "<span>To Bank</span>"
+msgstr "<span> الى البنك </span>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_financial
+msgid ""
+"<strong style=\"font-size: 25px;\">\n"
+"                                             Fund movement report\n"
+"                                        </strong>"
+msgstr ""
+"<strong style=\"font-size: 25px;\">\n"
+"                                            تقرير حركة الصندوق \n"
+"                                        </strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_invoice
+msgid ""
+"<strong style=\"font-size: 25px;\">\n"
+"                                             Invoices Report\n"
+"                                        </strong>"
+msgstr ""
+"<strong style=\"font-size: 25px;\">\n"
+"                                             تقرير الفواتير\n"
+"                                        </strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_promissory
+msgid ""
+"<strong style=\"font-size: 25px;\">\n"
+"                                             Promissory Notes Report\n"
+"                                        </strong>"
+msgstr ""
+"<strong style=\"font-size: 25px;\">\n"
+"                                             تقرير الكمبيالات\n"
+"                                        </strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_tax
+msgid ""
+"<strong style=\"font-size: 25px;\">\n"
+"                                             Taxes and Fees Report\n"
+"                                        </strong>"
+msgstr ""
+"<strong style=\"font-size: 25px;\">\n"
+"                                             تقرير الضرائب والرسوم\n"
+"                                        </strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_invoice
+msgid "<strong>All Amount</strong>"
+msgstr "<strong>المبلغ الكلي</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_tax
+msgid "<strong>Amount Total</strong>"
+msgstr "<strong>المبلغ الاجمالي</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_tax
+msgid "<strong>Amount without Tax/Fees</strong>"
+msgstr "<strong>المبلغ بدون الضريبة/الرسوم</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_payment_invoice
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_financial
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_payment
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_promissory
+msgid "<strong>Amount</strong>"
+msgstr "<strong>المبلغ</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_payment_invoice
+msgid "<strong>Cashier</strong>"
+msgstr "<strong>أمين الصندوق</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_payment
+msgid "<strong>Check/Transaction number</strong>"
+msgstr "<strong>رقم الشيك\العملية</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_promissory
+msgid "<strong>Collection voucher numbers</strong>"
+msgstr "<strong>ارقام سندات التحصيل</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_monthly
+msgid "<strong>Company</strong>"
+msgstr "<strong>الشركة</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_payment_invoice
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_invoice
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_promissory
+msgid "<strong>Create Date</strong>"
+msgstr "<strong>تاريخ الانشاء</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_promissory
+msgid "<strong>Customer Name</strong>"
+msgstr "<strong>اسم العميل</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_invoice
+msgid "<strong>Customer</strong>"
+msgstr "<strong>العميل</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_payment_invoice
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_tax
+msgid "<strong>Date From</strong>"
+msgstr "<strong>من تاريخ</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_payment_invoice
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_tax
+msgid "<strong>Date To</strong>"
+msgstr "<strong>الى تاريخ</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_payment_invoice
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_financial
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_payment
+msgid "<strong>Date</strong>"
+msgstr "<strong> التاريخ </strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_tax
+msgid "<strong>Days Number</strong>"
+msgstr "<strong>عدد الايام</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_promissory
+msgid "<strong>Due date</strong>"
+msgstr "<strong>تاريخ الاستحقاق</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_payment
+msgid "<strong>Employee</strong>"
+msgstr "<strong>الموظف</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_payment_invoice
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_payment
+msgid "<strong>From</strong>"
+msgstr "<strong>من</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_payment
+msgid "<strong>Hours</strong>"
+msgstr "<strong>الوقت</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_tax
+msgid "<strong>Invoice Date</strong>"
+msgstr "<strong>تاريخ الفاتورة</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_payment_invoice
+msgid "<strong>Invoice Number</strong>"
+msgstr "<strong>رقم الفاتورة</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_monthly
+msgid "<strong>Month :</strong>"
+msgstr "<strong>الشهر :</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_tax
+msgid "<strong>Name</strong>"
+msgstr "<strong>الاسم</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_payment_invoice
+msgid "<strong>Note</strong>"
+msgstr "<strong>ملاحظات </strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_payment
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_promissory
+msgid "<strong>Notes</strong>"
+msgstr "<strong>الملاحظات</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_tax
+msgid "<strong>Number</strong>"
+msgstr "<strong>الرقم</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_monthly
+msgid "<strong>Operation</strong>"
+msgstr "<strong>العملية</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_payment_invoice
+msgid "<strong>Pay For</strong>"
+msgstr "<strong> دفع لــ</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_payment_invoice
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_financial
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_payment
+msgid "<strong>Payment Method</strong>"
+msgstr "<strong>طريقة الدفع </strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_payment_invoice
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_financial
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_payment
+msgid "<strong>Payment Number</strong>"
+msgstr "<strong>رقم السند </strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_payment_invoice
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_financial
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_invoice
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_payment
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_promissory
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_tax
+msgid "<strong>Period :</strong>"
+msgstr "<strong>الفترة :</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_invoice
+msgid "<strong>Period From</strong>"
+msgstr "<strong>من الفترة</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_invoice
+msgid "<strong>Period To</strong>"
+msgstr "<strong>الى الفترة</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_promissory
+msgid "<strong>Promissory Numer</strong>"
+msgstr "<strong>رقم الكمبيالة</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_payment
+msgid "<strong>Recipient</strong>"
+msgstr "<strong>المستلم</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_payment_invoice
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_financial
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_payment
+msgid "<strong>Ref</strong>"
+msgstr "<strong>من أجل </strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_promissory
+msgid "<strong>Reservation Number</strong>"
+msgstr "<strong>رقم الحجز</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_payment_invoice
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_invoice
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_payment
+msgid "<strong>Reservation number</strong>"
+msgstr "<strong>رقم الحجز</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_promissory
+msgid "<strong>Residual</strong>"
+msgstr "<strong>المتبقي</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_invoice
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_tax
+msgid "<strong>Room number</strong>"
+msgstr "<strong>رقم الغرفة</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_payment
+msgid "<strong>Supplier invoice number</strong>"
+msgstr "<strong>رقم فاتورة المورد</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_payment
+msgid "<strong>Supplier tax number</strong>"
+msgstr "<strong>الرقم الضريبي للمورد</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_tax
+msgid "<strong>Tax/Fees</strong>"
+msgstr "<strong>الضربية/الرسوم</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_invoice
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_payment
+msgid "<strong>Taxes</strong>"
+msgstr "<strong>الضرائب</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_promissory
+msgid "<strong>Time</strong>"
+msgstr "<strong>Time</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_tax
+msgid "<strong>Type</strong>"
+msgstr "<strong>الوقت</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_invoice
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_payment
+msgid "<strong>Untaxed Amount</strong>"
+msgstr "<strong>المبلغ بدون ضريبة</strong>"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_invoice
+msgid "<strong>invoice Number</strong>"
+msgstr "<strong>رقم الفاتورة</strong>"
+
+#. module: hotel_reservation_reports
+#: model:ir.model.fields.selection,name:hotel_reservation_reports.selection__hotel_reservation_promissory_report__state__all
+msgid "All"
+msgstr "الكل"
+
+#. module: hotel_reservation_reports
+#: code:addons/hotel_reservation_reports/report/hotel_reservation_tax_report_xlsx.py:0
+#, python-format
+msgid "Amount"
+msgstr "القيمة"
+
+#. module: hotel_reservation_reports
+#: code:addons/hotel_reservation_reports/report/hotel_reservation_tax_report_xlsx.py:0
+#, python-format
+msgid "April"
+msgstr "أبريل"
+
+#. module: hotel_reservation_reports
+#: code:addons/hotel_reservation_reports/report/hotel_reservation_tax_report_xlsx.py:0
+#, python-format
+msgid "August"
+msgstr "أغسطس"
+
+#. module: hotel_reservation_reports
+#: code:addons/hotel_reservation_reports/report/hotel_reservation_tax_report_xlsx.py:0
+#: model:ir.actions.act_window,name:hotel_reservation_reports.hotel_reservation_tax_report_xlsx_action
+#: model:ir.ui.menu,name:hotel_reservation_reports.hotel_reservation_tax_xlsx_menu
+#, python-format
+msgid "Baladi Report"
+msgstr "تقرير بلدي"
+
+#. module: hotel_reservation_reports
+#: model:ir.actions.report,name:hotel_reservation_reports.reservation_tax_report_xlsx
+msgid "Baladi Report Xlst"
+msgstr "تقرير بلدي"
+
+#. module: hotel_reservation_reports
+#: code:addons/hotel_reservation_reports/report/hotel_reservation_tax_report_xlsx.py:0
+#, python-format
+msgid "Checkin MM/dd/yyyy"
+msgstr "تاريخ الدخول MM/dd/yyyy"
+
+#. module: hotel_reservation_reports
+#: code:addons/hotel_reservation_reports/report/hotel_reservation_tax_report_xlsx.py:0
+#, python-format
+msgid "Checkout MM/dd/yyyy"
+msgstr "تاريخ الخروج MM/dd/yyyy"
+
+#. module: hotel_reservation_reports
+#: model:ir.model.fields.selection,name:hotel_reservation_reports.selection__hotel_reservation_promissory_report__state__collected
+msgid "Collected"
+msgstr "محصل"
+
+#. module: hotel_reservation_reports
+#: model:ir.model.fields.selection,name:hotel_reservation_reports.selection__hotel_reservation_monthly_report__report_type__collection
+msgid "Collection of reservations"
+msgstr "تجميعي للحجوزات"
+
+#. module: hotel_reservation_reports
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_invoice_report__create_date_from
+msgid "Create Date From"
+msgstr " من تاريخ انشاء"
+
+#. module: hotel_reservation_reports
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_invoice_report__create_date_to
+msgid "Create Date To"
+msgstr " الى تاريخ انشاء"
+
+#. module: hotel_reservation_reports
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_financial_report__create_uid
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_invoice_report__create_uid
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_monthly_report__create_uid
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_payment_invoice_report__create_uid
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_payment_report__create_uid
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_promissory_report__create_uid
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_tax_report__create_uid
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_tax_xlsx_report__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hotel_reservation_reports
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_financial_report__create_date
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_invoice_report__create_date
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_monthly_report__create_date
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_payment_invoice_report__create_date
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_payment_report__create_date
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_promissory_report__create_date
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_tax_report__create_date
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_tax_xlsx_report__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hotel_reservation_reports
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_invoice_report__partner_id
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_promissory_report__partner_id
+msgid "Customer"
+msgstr "العميل"
+
+#. module: hotel_reservation_reports
+#: code:addons/hotel_reservation_reports/report/hotel_reservation_tax_report_xlsx.py:0
+#, python-format
+msgid "Customer Name"
+msgstr "اسم العميل"
+
+#. module: hotel_reservation_reports
+#: code:addons/hotel_reservation_reports/report/hotel_reservation_tax_report_xlsx.py:0
+#, python-format
+msgid "December"
+msgstr "ديسمبر"
+
+#. module: hotel_reservation_reports
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_financial_report__display_name
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_invoice_report__display_name
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_monthly_report__display_name
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_payment_invoice_report__display_name
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_payment_report__display_name
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_promissory_report__display_name
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_tax_report__display_name
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_tax_xlsx_report__display_name
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_ir_actions_report__display_name
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_report_hotel_reservation_reports_report_payment_invoice__display_name
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_report_hotel_reservation_reports_report_reservation_financial__display_name
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_report_hotel_reservation_reports_report_reservation_invoice__display_name
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_report_hotel_reservation_reports_report_reservation_monthly__display_name
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_report_hotel_reservation_reports_report_reservation_payment__display_name
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_report_hotel_reservation_reports_report_reservation_promissory__display_name
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_report_hotel_reservation_reports_report_reservation_tax__display_name
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_report_hotel_reservation_reports_reservation_tax_template_xlsx__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hotel_reservation_reports
+#: code:addons/hotel_reservation_reports/report/hotel_reservation_tax_report_xlsx.py:0
+#, python-format
+msgid "February"
+msgstr "فبراير"
+
+#. module: hotel_reservation_reports
+#: model:ir.ui.menu,name:hotel_reservation_reports.financial_report_management_menu
+msgid "Finance Report Management"
+msgstr "التقارير المالية"
+
+#. module: hotel_reservation_reports
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_financial_report__date_from
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_invoice_report__date_from
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_payment_invoice_report__date_from
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_payment_report__date_from
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_promissory_report__date_from
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_tax_report__date_from
+msgid "From"
+msgstr "من"
+
+#. module: hotel_reservation_reports
+#: model:ir.actions.act_window,name:hotel_reservation_reports.hotel_reservation_financial_report_action
+#: model:ir.ui.menu,name:hotel_reservation_reports.hotel_reservation_financial_menu
+msgid "Fund Movement Report"
+msgstr "تقرير حركة الصندوق"
+
+#. module: hotel_reservation_reports
+#: model:ir.model,name:hotel_reservation_reports.model_hotel_reservation_financial_report
+msgid "Hotel Reservation Financial Report"
+msgstr "التقارير المالية للحجوزات"
+
+#. module: hotel_reservation_reports
+#: model:ir.model,name:hotel_reservation_reports.model_report_hotel_reservation_reports_report_reservation_financial
+msgid "Hotel Reservation Financial Resume"
+msgstr "تقرير حركة الصندوق"
+
+#. module: hotel_reservation_reports
+#: model:ir.model,name:hotel_reservation_reports.model_hotel_reservation_payment_invoice_report
+msgid "Hotel Reservation Payment Invoice Report"
+msgstr ""
+
+#. module: hotel_reservation_reports
+#: model:ir.model,name:hotel_reservation_reports.model_hotel_reservation_payment_report
+msgid "Hotel Reservation Payment Report"
+msgstr "تقارير السندات"
+
+#. module: hotel_reservation_reports
+#: model:ir.model,name:hotel_reservation_reports.model_report_hotel_reservation_reports_report_payment_invoice
+#: model:ir.model,name:hotel_reservation_reports.model_report_hotel_reservation_reports_report_reservation_payment
+msgid "Hotel Reservation Payment Resume"
+msgstr "تقارير السندات"
+
+#. module: hotel_reservation_reports
+#: model:ir.model,name:hotel_reservation_reports.model_hotel_reservation_invoice_report
+msgid "Hotel Reservation invoice Report"
+msgstr "تقارير الفواتير"
+
+#. module: hotel_reservation_reports
+#: model:ir.model,name:hotel_reservation_reports.model_report_hotel_reservation_reports_report_reservation_invoice
+msgid "Hotel Reservation invoice Resume"
+msgstr "تقرير الفواتير"
+
+#. module: hotel_reservation_reports
+#: model:ir.model,name:hotel_reservation_reports.model_hotel_reservation_monthly_report
+msgid "Hotel Reservation monthly Report"
+msgstr "تقرير شهري إجمالي"
+
+#. module: hotel_reservation_reports
+#: model:ir.model,name:hotel_reservation_reports.model_report_hotel_reservation_reports_report_reservation_monthly
+msgid "Hotel Reservation monthly Resume"
+msgstr "تقرير شهري إجمالي"
+
+#. module: hotel_reservation_reports
+#: model:ir.model,name:hotel_reservation_reports.model_hotel_reservation_promissory_report
+msgid "Hotel Reservation promissory Report"
+msgstr "تقرير الكمبيالات"
+
+#. module: hotel_reservation_reports
+#: model:ir.model,name:hotel_reservation_reports.model_report_hotel_reservation_reports_report_reservation_promissory
+msgid "Hotel Reservation promissory Resume"
+msgstr "تقرير الكمبيالات"
+
+#. module: hotel_reservation_reports
+#: model:ir.model,name:hotel_reservation_reports.model_hotel_reservation_tax_report
+#: model:ir.model,name:hotel_reservation_reports.model_hotel_reservation_tax_xlsx_report
+msgid "Hotel Reservation tax Report"
+msgstr "تقرير الضرائب و الرسوم "
+
+#. module: hotel_reservation_reports
+#: model:ir.model,name:hotel_reservation_reports.model_report_hotel_reservation_reports_report_reservation_tax
+msgid "Hotel Reservation tax Resume"
+msgstr "تقرير الضرائب والرسوم"
+
+#. module: hotel_reservation_reports
+#: model:ir.model,name:hotel_reservation_reports.model_report_hotel_reservation_reports_reservation_tax_template_xlsx
+msgid "Hotel Reservation tax Xlsx Template"
+msgstr "تقرير الضرائب و الرسوم  xlsx"
+
+#. module: hotel_reservation_reports
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_financial_report__id
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_invoice_report__id
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_monthly_report__id
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_payment_invoice_report__id
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_payment_report__id
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_promissory_report__id
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_tax_report__id
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_tax_xlsx_report__id
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_ir_actions_report__id
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_report_hotel_reservation_reports_report_payment_invoice__id
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_report_hotel_reservation_reports_report_reservation_financial__id
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_report_hotel_reservation_reports_report_reservation_invoice__id
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_report_hotel_reservation_reports_report_reservation_monthly__id
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_report_hotel_reservation_reports_report_reservation_payment__id
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_report_hotel_reservation_reports_report_reservation_promissory__id
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_report_hotel_reservation_reports_report_reservation_tax__id
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_report_hotel_reservation_reports_reservation_tax_template_xlsx__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_financial
+msgid "Inbound Payment"
+msgstr "سندات القبض"
+
+#. module: hotel_reservation_reports
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_payment_invoice_report__invoice_name
+msgid "Invoice Name"
+msgstr "رقم الفاتورة"
+
+#. module: hotel_reservation_reports
+#: model:ir.actions.act_window,name:hotel_reservation_reports.hotel_reservation_invoice_management_report_action
+#: model:ir.ui.menu,name:hotel_reservation_reports.hotel_reservation_invoice_management_menu
+msgid "Invoices Management Report"
+msgstr "أدارة الفواتير"
+
+#. module: hotel_reservation_reports
+#: model:ir.actions.act_window,name:hotel_reservation_reports.hotel_reservation_invoice_report_action
+#: model:ir.actions.report,name:hotel_reservation_reports.reservation_invoice_report_preview
+#: model:ir.ui.menu,name:hotel_reservation_reports.hotel_reservation_invoice_menu
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_payment_invoice
+msgid "Invoices Report"
+msgstr "تقرير الفواتير"
+
+#. module: hotel_reservation_reports
+#: code:addons/hotel_reservation_reports/report/hotel_reservation_tax_report_xlsx.py:0
+#, python-format
+msgid "January"
+msgstr "يناير"
+
+#. module: hotel_reservation_reports
+#: code:addons/hotel_reservation_reports/report/hotel_reservation_tax_report_xlsx.py:0
+#, python-format
+msgid "July"
+msgstr "يوليو"
+
+#. module: hotel_reservation_reports
+#: code:addons/hotel_reservation_reports/report/hotel_reservation_tax_report_xlsx.py:0
+#, python-format
+msgid "June"
+msgstr "يونيو"
+
+#. module: hotel_reservation_reports
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_financial_report____last_update
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_invoice_report____last_update
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_monthly_report____last_update
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_payment_invoice_report____last_update
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_payment_report____last_update
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_promissory_report____last_update
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_tax_report____last_update
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_tax_xlsx_report____last_update
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_ir_actions_report____last_update
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_report_hotel_reservation_reports_report_payment_invoice____last_update
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_report_hotel_reservation_reports_report_reservation_financial____last_update
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_report_hotel_reservation_reports_report_reservation_invoice____last_update
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_report_hotel_reservation_reports_report_reservation_monthly____last_update
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_report_hotel_reservation_reports_report_reservation_payment____last_update
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_report_hotel_reservation_reports_report_reservation_promissory____last_update
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_report_hotel_reservation_reports_report_reservation_tax____last_update
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_report_hotel_reservation_reports_reservation_tax_template_xlsx____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hotel_reservation_reports
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_financial_report__write_uid
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_invoice_report__write_uid
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_monthly_report__write_uid
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_payment_invoice_report__write_uid
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_payment_report__write_uid
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_promissory_report__write_uid
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_tax_report__write_uid
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_tax_xlsx_report__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hotel_reservation_reports
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_financial_report__write_date
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_invoice_report__write_date
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_monthly_report__write_date
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_payment_invoice_report__write_date
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_payment_report__write_date
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_promissory_report__write_date
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_tax_report__write_date
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_tax_xlsx_report__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hotel_reservation_reports
+#: code:addons/hotel_reservation_reports/report/hotel_reservation_tax_report_xlsx.py:0
+#, python-format
+msgid "March"
+msgstr "مارس"
+
+#. module: hotel_reservation_reports
+#: code:addons/hotel_reservation_reports/report/hotel_reservation_tax_report_xlsx.py:0
+#, python-format
+msgid "May"
+msgstr "مايو"
+
+#. module: hotel_reservation_reports
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_monthly_report__month
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_tax_xlsx_report__month
+msgid "Month"
+msgstr "الشهر"
+
+#. module: hotel_reservation_reports
+#: model:ir.actions.report,name:hotel_reservation_reports.reservation_monthly_collection_report_preview
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_monthly
+msgid "Monthly revenue and receipts report"
+msgstr "تقرير اليرادات والمقبوضات الشهرية"
+
+#. module: hotel_reservation_reports
+#: model:ir.model.fields.selection,name:hotel_reservation_reports.selection__hotel_reservation_promissory_report__state__no_collected
+msgid "No Collected"
+msgstr "غير محصل"
+
+#. module: hotel_reservation_reports
+#: code:addons/hotel_reservation_reports/report/hotel_reservation_tax_report_xlsx.py:0
+#, python-format
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: hotel_reservation_reports
+#: code:addons/hotel_reservation_reports/report/hotel_reservation_tax_report_xlsx.py:0
+#, python-format
+msgid "November"
+msgstr "نوفمبر"
+
+#. module: hotel_reservation_reports
+#: code:addons/hotel_reservation_reports/report/hotel_reservation_tax_report_xlsx.py:0
+#, python-format
+msgid "October"
+msgstr "أكتوبر"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_financial
+msgid "Outbound Payment"
+msgstr "سندات الصرف"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_payment
+msgid "Payment Inbound"
+msgstr " سندات القبض "
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_payment_invoice
+msgid "Payment Inbound Report"
+msgstr " سندات القبض "
+
+#. module: hotel_reservation_reports
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_payment_invoice_report__payment_method_id
+msgid "Payment Method"
+msgstr "طريقة الدفع"
+
+#. module: hotel_reservation_reports
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_payment_invoice_report__payment_name
+msgid "Payment Name"
+msgstr "رقم السند"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_payment
+msgid "Payment Outbound"
+msgstr "سندات الصرف "
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_payment_invoice
+msgid "Payment Outbound Report"
+msgstr " سندات الصرف "
+
+#. module: hotel_reservation_reports
+#: model:ir.actions.act_window,name:hotel_reservation_reports.hotel_reservation_payment_invoice_report_action
+#: model:ir.ui.menu,name:hotel_reservation_reports.hotel_reservation_payment_invoice_menu
+msgid "Payments Management Report"
+msgstr "تقارير السندات"
+
+#. module: hotel_reservation_reports
+#: model:ir.actions.act_window,name:hotel_reservation_reports.hotel_reservation_payment_report_action
+#: model:ir.actions.report,name:hotel_reservation_reports.reservation_payment_report_preview
+#: model:ir.ui.menu,name:hotel_reservation_reports.hotel_reservation_payment_menu
+msgid "Payments Report"
+msgstr "تقارير السندات"
+
+#. module: hotel_reservation_reports
+#: model:ir.actions.report,name:hotel_reservation_reports.reservation_payment_invoice_report_preview
+msgid "Payments/Invoice Report"
+msgstr "أدارة الفواتير/ السندات"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.hotel_reservation_financial_report_view_form
+msgid "Print Fund Movement Report Preview"
+msgstr "طباعة"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.hotel_reservation_payment_invoice_report_view_form_inherit
+msgid "Print Invoice Report"
+msgstr "طباعة تقرير المالية"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.hotel_reservation_payment_invoice_report_view_form
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.hotel_reservation_payment_report_view_form
+msgid "Print Payments Inbound Report"
+msgstr "طباعة تقرير سندات القبض"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.hotel_reservation_payment_invoice_report_view_form
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.hotel_reservation_payment_report_view_form
+msgid "Print Payments Outbound Report"
+msgstr "طباعة تقرير سندات الصرف"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.hotel_reservation_monthly_report_view_form
+msgid "Print Report"
+msgstr "طباعة التقرير"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.hotel_reservation_tax_xlsx_report_view_form
+msgid "Print Report Excel"
+msgstr "طباعة التقرير اكسل"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.hotel_reservation_invoice_report_view_form
+msgid "Print invoices Report"
+msgstr "طباعة تقرير الفواتير"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.hotel_reservation_promissory_report_view_form
+msgid "Print promissory Report"
+msgstr "طباعة تقرير الكمبيالات"
+
+#. module: hotel_reservation_reports
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.hotel_reservation_tax_report_view_form
+msgid "Print taxs Report"
+msgstr "طباعة تقرير الضرائب"
+
+#. module: hotel_reservation_reports
+#: model:ir.actions.act_window,name:hotel_reservation_reports.hotel_reservation_promissory_report_action
+#: model:ir.ui.menu,name:hotel_reservation_reports.hotel_reservation_promissory_menu
+msgid "Promissory Notes Report"
+msgstr "تقرير الكمبيالات"
+
+#. module: hotel_reservation_reports
+#: model:ir.model,name:hotel_reservation_reports.model_ir_actions_report
+msgid "Report Action"
+msgstr "إجراء التقرير"
+
+#. module: hotel_reservation_reports
+#: model:ir.actions.report,name:hotel_reservation_reports.reservation_promissory_report_preview
+msgid "Report Promissory Notes"
+msgstr "تقرير الكمبيالات"
+
+#. module: hotel_reservation_reports
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_monthly_report__report_type
+msgid "Report Type"
+msgstr ""
+
+#. module: hotel_reservation_reports
+#: model:ir.actions.report,name:hotel_reservation_reports.reservation_monthly_total_report_preview
+#: model_terms:ir.ui.view,arch_db:hotel_reservation_reports.report_reservation_monthly
+msgid "Report of total monthly revenues and receipts"
+msgstr "تقرير اليرادات والمقبوضات الشهرية الكلي"
+
+#. module: hotel_reservation_reports
+#: model:ir.ui.menu,name:hotel_reservation_reports.reservation_financial_report_management_menu
+msgid "Reservation Finance Report Management"
+msgstr "تقارير المالية للحجوزات"
+
+#. module: hotel_reservation_reports
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_invoice_report__reservation_no
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_payment_invoice_report__reservation_no
+msgid "Reservation No"
+msgstr "رقم الحجز"
+
+#. module: hotel_reservation_reports
+#: code:addons/hotel_reservation_reports/report/hotel_reservation_tax_report_xlsx.py:0
+#, python-format
+msgid "Reservation Number"
+msgstr "رقم الحجز"
+
+#. module: hotel_reservation_reports
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_invoice_report__room_no
+msgid "Room No"
+msgstr "رقم الغرفة"
+
+#. module: hotel_reservation_reports
+#: code:addons/hotel_reservation_reports/report/hotel_reservation_tax_report_xlsx.py:0
+#, python-format
+msgid "Room Number"
+msgstr "رقم الغرفة"
+
+#. module: hotel_reservation_reports
+#: code:addons/hotel_reservation_reports/report/hotel_reservation_tax_report_xlsx.py:0
+#, python-format
+msgid "Room Type"
+msgstr "نوع الغرفة"
+
+#. module: hotel_reservation_reports
+#: code:addons/hotel_reservation_reports/report/hotel_reservation_tax_report_xlsx.py:0
+#, python-format
+msgid "September"
+msgstr "سبتمبر"
+
+#. module: hotel_reservation_reports
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_promissory_report__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: hotel_reservation_reports
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_payment_invoice_report__support_type_id
+msgid "Support Type"
+msgstr "نوع السند"
+
+#. module: hotel_reservation_reports
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_tax_report__tax_group_id
+msgid "Taxes"
+msgstr "الضرائب/الرسوم"
+
+#. module: hotel_reservation_reports
+#: model:ir.actions.act_window,name:hotel_reservation_reports.hotel_reservation_tax_report_action
+#: model:ir.actions.report,name:hotel_reservation_reports.reservation_tax_report_preview
+#: model:ir.ui.menu,name:hotel_reservation_reports.hotel_reservation_tax_menu
+msgid "Taxes and Fees Report"
+msgstr "تقرير الضرائب والرسوم"
+
+#. module: hotel_reservation_reports
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_financial_report__date_to
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_invoice_report__date_to
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_payment_invoice_report__date_to
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_payment_report__date_to
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_promissory_report__date_to
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_tax_report__date_to
+msgid "To"
+msgstr "إلى"
+
+#. module: hotel_reservation_reports
+#: model:ir.model.fields.selection,name:hotel_reservation_reports.selection__hotel_reservation_monthly_report__report_type__total
+msgid "Total Collection"
+msgstr " تجميعي كلي"
+
+#. module: hotel_reservation_reports
+#: model:ir.actions.act_window,name:hotel_reservation_reports.hotel_reservation_monthly_report_action
+#: model:ir.ui.menu,name:hotel_reservation_reports.hotel_reservation_monthly_menu
+msgid "Total Monthly Report"
+msgstr "تقرير شهري إجمالي"
+
+#. module: hotel_reservation_reports
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_financial_report__user_id
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_payment_report__user_id
+#: model:ir.model.fields,field_description:hotel_reservation_reports.field_hotel_reservation_promissory_report__user_id
+msgid "User"
+msgstr "المستخدم"

@@ -1,0 +1,1182 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_overtime
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-16 14:45+0000\n"
+"PO-Revision-Date: 2022-12-16 14:45+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate_line__employee_id
+msgid " Employee"
+msgstr "الموظف"
+
+#. module: hr_overtime
+#: model:ir.actions.report,print_report_name:hr_overtime.action_report_hr_overtime_lines
+msgid "'Hr Overtime Resume'"
+msgstr "'حصر الساعات الإضافية'"
+
+#. module: hr_overtime
+#: model:ir.actions.report,print_report_name:hr_overtime.hr_overtime_report
+msgid "'Hr overtime mandate'"
+msgstr "'خارج الدوام'"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.report_overtime_mandate
+msgid "1: Assignment of those whose names are indicated in the statement /"
+msgstr "1:تكليف الموضح اسماؤهم بالبيان /"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.report_overtime_mandate
+msgid ""
+"2: Disbursing the entitlement whose names are shown in the attached "
+"statement after completing the task."
+msgstr "2:صرف استحقاق الموضح اسماؤهم بالبيان المرفق بعد انهاء المهمة"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.report_overtime_mandate
+msgid "3: This decision was communicated to those who needed to enforce it."
+msgstr "3:وبلغ هذا القرار لمن يلزم لإنفاذه"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.report_hr_overtime_lines_resume
+msgid ""
+"<strong>\n"
+"                                    Resume Overtime Hours\n"
+"                                </strong>\n"
+msgstr ""
+"<strong>\n"
+"                                    حصر الساعات الإضافية\n"
+"                                </strong>\n"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.report_overtime_mandate
+msgid ""
+"<strong>\n"
+"                                Administrative Decision No\n"
+"\n"
+"                            </strong>"
+msgstr ""
+"<strong>\n"
+"                                        قرار إداري رقم\n"
+"\n"
+"                            </strong>"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.report_hr_overtime_lines_resume
+msgid "<strong>Period:</strong>"
+msgstr "<strong>الفترة:</strong>"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.report_overtime_mandate
+msgid "<strong>The authorized person</strong>"
+msgstr "<strong>إن صاحب الصلاحية</strong>"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.report_hr_overtime_lines_resume
+msgid "<strong>Total</strong>"
+msgstr "<strong>إجمالي</strong>"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.report_overtime_mandate
+msgid "<strong>decides the following</strong>"
+msgstr "    <strong>يقرر ما يلي</strong>"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__message_needaction
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_line__message_needaction
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__active
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_line__active
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__active
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate_line__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__activity_ids
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__activity_ids
+msgid "Activities"
+msgstr "أنشطة"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "نشاط استثناء الديكور"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__activity_state
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__activity_type_icon
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: hr_overtime
+#: model:ir.actions.act_window,name:hr_overtime.hr_overtime_action_manager
+#: model:ir.actions.act_window,name:hr_overtime.hr_overtime_mandate_action_manager
+#: model:ir.ui.menu,name:hr_overtime.hr_overtime_manager_menu
+#: model:ir.ui.menu,name:hr_overtime.hr_overtime_mandate_manager_menu
+msgid "All requests"
+msgstr "كل الطلبات"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__amount
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.report_overtime_mandate
+msgid ""
+"And based on the requirement of the interest of the work and on what "
+"happened to us from.....assigned"
+msgstr "و بناءا على مقتضى مصلحة العمل و على ما وقع لنا من .....بتكليف"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.hr_overtime_mandate_view_search
+#: model_terms:ir.ui.view,arch_db:hr_overtime.hr_overtime_view_search
+msgid "Application Date"
+msgstr "تاريخ الطلب"
+
+#. module: hr_overtime
+#: model:mail.message.subtype,name:hr_overtime.mt_hr_overtime_approved
+#: model:mail.message.subtype,name:hr_overtime.mt_hr_overtime_mandate_approved
+msgid "Approved"
+msgstr "أعتمد"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.hr_overtime_mandate_view_search
+#: model_terms:ir.ui.view,arch_db:hr_overtime.hr_overtime_view_search
+msgid "Archived"
+msgstr "مؤرشف"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.hr_overtime_form
+#: model_terms:ir.ui.view,arch_db:hr_overtime.hr_overtime_mandate_form
+msgid "Are you sure you want to do this?"
+msgstr "هل أنت متأكد من القيام بهذا الإجراء ؟"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__message_attachment_count
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_line__message_attachment_count
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.report_overtime_mandate
+msgid "Based on the powers granted to him"
+msgstr "بناء على صلاحيات الممنوحة له"
+
+#. module: hr_overtime
+#: code:addons/hr_overtime/models/hr_overtime_mandate.py:0
+#, python-format
+msgid "Cannot be canceled because some missions have started."
+msgstr "لا يمكن الإلغاء نظرا لبدأ بعض المهام."
+
+#. module: hr_overtime
+#: code:addons/hr_overtime/models/hr_overtime_mandate.py:0
+#, python-format
+msgid "Cannot be send because no list."
+msgstr "لا يوجد مكلفين بخارج الدوام"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__company_id
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__company_id
+msgid "Company"
+msgstr "شركة"
+
+#. module: hr_overtime
+#: model_terms:ir.actions.act_window,help:hr_overtime.hr_overtime_mandate_stage_action
+msgid "Create a new stage in the task pipeline"
+msgstr "إنشاء مرحلة جديدة في خط المهمة"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__create_uid
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_line__create_uid
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__create_uid
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate_line__create_uid
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_setting__create_uid
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_wizard__create_uid
+msgid "Created by"
+msgstr "انشأ من قبل"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__create_date
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_line__create_date
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__create_date
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate_line__create_date
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_setting__create_date
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_wizard__create_date
+msgid "Created on"
+msgstr "تم إنشاؤها من قبل "
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_line__date
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate_line__date_direct_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.report_hr_overtime_lines_resume
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.hr_overtime_mandate_view_kanban
+#: model_terms:ir.ui.view,arch_db:hr_overtime.hr_overtime_view_kanban
+msgid "Date :"
+msgstr "تاريخ الطلب :"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate_line__date_from
+msgid "Date from"
+msgstr "التاريخ من"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate_line__date_to
+msgid "Date to"
+msgstr "الى"
+
+#. module: hr_overtime
+#: model_terms:ir.actions.act_window,help:hr_overtime.hr_overtime_mandate_stage_action
+msgid ""
+"Define the steps that will be used in the project from the\n"
+"                creation of the task, up to the closing of the task or issue.\n"
+"                You will use these stages in order to track the progress in\n"
+"                solving a task or an issue."
+msgstr ""
+"تحديد الخطوات التي سيتم استخدامها في المشروع بدءً من\n"
+"                إنشاء المهمة، حتى إغلاق المهمة أو المشكلة.\n"
+"                سوف تستخدم هذه المراحل في تتبع مستوى التقدم\n"
+"                في حل مهمة أو مشكلة."
+
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__department_id
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__department_id
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_wizard__department_id
+#: model_terms:ir.ui.view,arch_db:hr_overtime.report_hr_overtime_lines_resume
+msgid "Department"
+msgstr "الإدارة "
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__display_button_accept
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__display_button_accept
+msgid "Display Button Accept"
+msgstr "عرض زر قبول"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__display_button_previous
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__display_button_previous
+msgid "Display Button Previous"
+msgstr "عرض زر السابق"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__display_button_refuse
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__display_button_refuse
+msgid "Display Button Refuse"
+msgstr "عرض زر رفض"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__display_button_send
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__display_button_send
+msgid "Display Button Send"
+msgstr "عرض زر إرسال"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__display_name
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_line__display_name
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__display_name
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate_line__display_name
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_setting__display_name
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_wizard__display_name
+#: model:ir.model.fields,field_description:hr_overtime.field_report_hr_overtime_report_hr_overtime_lines_resume__display_name
+#: model:ir.model.fields,field_description:hr_overtime.field_report_hr_overtime_report_hr_overtime_lines_xlsx__display_name
+msgid "Display Name"
+msgstr "المسمى"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__display_button_set_to_draft
+msgid "Display set to draft button"
+msgstr "إظهار زر اعادة إلى مسودة"
+
+#. module: hr_overtime
+#: model:request.stage,name:hr_overtime.hr_overtime_mandate_stage_done
+#: model:request.stage,name:hr_overtime.hr_overtime_stage_done
+msgid "Done"
+msgstr "أعتمد"
+
+#. module: hr_overtime
+#: model:mail.activity.type,name:hr_overtime.mail_hr_overtime_set_to_draft
+msgid "Edit request"
+msgstr "تعديل الطلب"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__employee_id
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__employee_id
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate_line__employee_ids
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_wizard__employee_id
+#: model_terms:ir.ui.view,arch_db:hr_overtime.hr_overtime_mandate_view_search
+#: model_terms:ir.ui.view,arch_db:hr_overtime.hr_overtime_view_search
+#: model_terms:ir.ui.view,arch_db:hr_overtime.report_hr_overtime_lines_resume
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.hr_overtime_mandate_view_kanban
+#: model_terms:ir.ui.view,arch_db:hr_overtime.hr_overtime_view_kanban
+msgid "Employee :"
+msgstr "صاحب الطلب :"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__line_ids
+msgid "Extra hours"
+msgstr "الساعات الإضافية"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate_line__file_direct_overtime_name
+msgid "File name"
+msgstr "صورة التكليف"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate_line__file_direct_overtime
+msgid "File overtime mandate "
+msgstr "صورة التكليف "
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__message_follower_ids
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_line__message_follower_ids
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__message_follower_ids
+msgid "Followers"
+msgstr "متابعون"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__message_channel_ids
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_line__message_channel_ids
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__message_partner_ids
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_line__message_partner_ids
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: hr_overtime
+#: model:ir.model.fields,help:hr_overtime.field_hr_overtime__activity_type_icon
+#: model:ir.model.fields,help:hr_overtime.field_hr_overtime_mandate__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "رمز الخط الرائع ، على سبيل المثال FA المهام"
+
+#. module: hr_overtime
+#: model:ir.model.fields.selection,name:hr_overtime.selection__hr_overtime_line__type__friday_saturday
+#: model:ir.model.fields.selection,name:hr_overtime.selection__hr_overtime_mandate_line__type__friday_saturday
+msgid "Friday and saturday"
+msgstr "أيام الجمعة والسبت"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_wizard__date_from
+msgid "From Date"
+msgstr "من"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.report_hr_overtime_lines_resume
+msgid "From Hour"
+msgstr "من الساعة"
+
+#. module: hr_overtime
+#: code:addons/hr_overtime/wizard/hr_overtime_wizard.py:0
+#, python-format
+msgid "From date must be less than Date to"
+msgstr "يجب أن يكون التاريخ من أقل من التاريخ إلى"
+
+#. module: hr_overtime
+#: model:ir.model.fields.selection,name:hr_overtime.selection__hr_overtime_line__type__holidays
+#: model:ir.model.fields.selection,name:hr_overtime.selection__hr_overtime_mandate_line__type__holidays
+msgid "Holidays days"
+msgstr "أيام الأعياد"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_line__hour_from
+msgid "Hour From"
+msgstr "من الساعة"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_line__hour_to
+msgid "Hour To"
+msgstr "إلى الساعة"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_line__hour_number
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate_line__hour_number
+msgid "Hour number"
+msgstr "عدد الساعات"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.report_hr_overtime_lines_resume
+msgid "Hours Number"
+msgstr "عدد الساعات"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_setting__hour_number_mandate
+msgid "Hours number mandate"
+msgstr "عدد ساعات تكاليف خارج الدوام المسموح بها"
+
+#. module: hr_overtime
+#: model:ir.model,name:hr_overtime.model_hr_overtime_wizard
+msgid "Hr Overtime  Wizard"
+msgstr "معالج ساعات العمل الإضافي"
+
+#. module: hr_overtime
+#: model:ir.actions.act_window,name:hr_overtime.hr_overtime_line_wizard_action
+msgid "Hr Overtime Lines"
+msgstr "خطوط ساعات العمل الإضافي"
+
+#. module: hr_overtime
+#: model:ir.model,name:hr_overtime.model_report_hr_overtime_report_hr_overtime_lines_xlsx
+msgid "Hr Overtime Resume Lines Reports XLS"
+msgstr " EXCEL تقرير خطوط ساعات العمل إضافي"
+
+#. module: hr_overtime
+#: model:ir.actions.report,name:hr_overtime.action_report_hr_overtime_lines
+msgid "Hr overtime Lines Resume"
+msgstr "تقرير حصر ساعات العمل الإضافي"
+
+#. module: hr_overtime
+#: model:ir.actions.report,name:hr_overtime.hr_overtime_line_report_xlsx
+msgid "Hr overtime Lines Resume Excel"
+msgstr "تقرير حصر ساعات العمل الإضافي بصيغة اكسل"
+
+#. module: hr_overtime
+#: model:ir.actions.report,name:hr_overtime.overtime_report
+msgid "Hr overtime mandate"
+msgstr "قرار خارج الدوام"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.report_overtime_mandate
+msgid "Human resources / allowances and bonuses"
+msgstr "الموارد البشرية/ البدلات و المكافآت"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__id
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_line__id
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__id
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate_line__id
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_setting__id
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_wizard__id
+#: model:ir.model.fields,field_description:hr_overtime.field_report_hr_overtime_report_hr_overtime_lines_resume__id
+#: model:ir.model.fields,field_description:hr_overtime.field_report_hr_overtime_report_hr_overtime_lines_xlsx__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__activity_exception_icon
+msgid "Icon"
+msgstr "أيقونة"
+
+#. module: hr_overtime
+#: model:ir.model.fields,help:hr_overtime.field_hr_overtime__activity_exception_icon
+#: model:ir.model.fields,help:hr_overtime.field_hr_overtime_mandate__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr " أيقونة للإشارة إلى نشاط مستثنى ."
+
+#. module: hr_overtime
+#: model:ir.model.fields,help:hr_overtime.field_hr_overtime__message_needaction
+#: model:ir.model.fields,help:hr_overtime.field_hr_overtime__message_unread
+#: model:ir.model.fields,help:hr_overtime.field_hr_overtime_line__message_needaction
+#: model:ir.model.fields,help:hr_overtime.field_hr_overtime_line__message_unread
+#: model:ir.model.fields,help:hr_overtime.field_hr_overtime_mandate__message_needaction
+#: model:ir.model.fields,help:hr_overtime.field_hr_overtime_mandate__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم تحديد ذلك ، فإن الرسائل الجديدة تتطلب اهتمامك."
+
+#. module: hr_overtime
+#: model:ir.model.fields,help:hr_overtime.field_hr_overtime__message_has_error
+#: model:ir.model.fields,help:hr_overtime.field_hr_overtime__message_has_sms_error
+#: model:ir.model.fields,help:hr_overtime.field_hr_overtime_line__message_has_error
+#: model:ir.model.fields,help:hr_overtime.field_hr_overtime_line__message_has_sms_error
+#: model:ir.model.fields,help:hr_overtime.field_hr_overtime_mandate__message_has_error
+#: model:ir.model.fields,help:hr_overtime.field_hr_overtime_mandate__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده ، فبعض الرسائل بها خطأ في التسليم."
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__message_is_follower
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_line__message_is_follower
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__message_is_follower
+msgid "Is Follower"
+msgstr "هو متابع"
+
+#. module: hr_overtime
+#: code:addons/hr_overtime/models/hr_overtime_mandate.py:0
+#, python-format
+msgid "Is an overlap in the dates "
+msgstr "هناك تداخل في التواريخ مع خارج دوام"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate_line__is_grade
+msgid "Is grade"
+msgstr "يتطلب تكليف"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__job_id
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__job_id
+msgid "Job"
+msgstr "وظيفة"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.report_hr_overtime_lines_resume
+msgid "Job ID"
+msgstr "الرقم الوظيفي"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__kanban_color
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__kanban_color
+msgid "Kanban Color Index"
+msgstr "مؤشر لون كانبان"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime____last_update
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_line____last_update
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate____last_update
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate_line____last_update
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_setting____last_update
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_wizard____last_update
+#: model:ir.model.fields,field_description:hr_overtime.field_report_hr_overtime_report_hr_overtime_lines_resume____last_update
+#: model:ir.model.fields,field_description:hr_overtime.field_report_hr_overtime_report_hr_overtime_lines_xlsx____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__write_uid
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_line__write_uid
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__write_uid
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate_line__write_uid
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_setting__write_uid
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_wizard__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__write_date
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_line__write_date
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__write_date
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate_line__write_date
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_setting__write_date
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_wizard__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_line__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__manager_id
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__manager_id
+#: model:res.groups,name:hr_overtime.group_hr_overtime_manager
+#: model:res.groups,name:hr_overtime.group_hr_overtime_mandate_manager
+msgid "Manager"
+msgstr "المدير"
+
+#. module: hr_overtime
+#: model:ir.model.fields.selection,name:hr_overtime.selection__hr_overtime_setting__type__mandate
+msgid "Mandate"
+msgstr "خارج الدوام"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_setting__max_hour_day
+msgid "Maximum Hours Per Day"
+msgstr "الحد الأقصى للساعات في اليوم"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_setting__max_hour_month
+msgid "Maximum Hours Per Month"
+msgstr "عدد الساعات المسموح بها في الشهر"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_setting__max_hour_weekend
+msgid "Maximum Hours Per weekend"
+msgstr "الحد الأقصى للساعات في نهاية الأسبوع"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__message_has_error
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_line__message_has_error
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__message_ids
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_line__message_ids
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__message_ids
+msgid "Messages"
+msgstr "رسائل"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_setting__min_hour_day
+msgid "Minimum Hours Per Day"
+msgstr "الحد الأدنى للساعات في اليوم"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_setting__min_hour_mandate
+msgid "Minimum Hours Per Request"
+msgstr "الحد الأدنى لخارج  الدوام (ساعات)"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_setting__min_hour_weekend
+msgid "Minimum Hours Per weekend"
+msgstr "الحد الأدنى للساعات في نهاية الأسبوع"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_line__mission
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate_line__mission
+#: model_terms:ir.ui.view,arch_db:hr_overtime.report_hr_overtime_lines_resume
+msgid "Mission"
+msgstr "المهمة"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__my_activity_date_deadline
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: hr_overtime
+#: model:ir.actions.act_window,name:hr_overtime.action_hr_overtime_mandate_my
+#: model:ir.actions.act_window,name:hr_overtime.action_hr_overtime_my
+#: model:ir.actions.act_window,name:hr_overtime.hr_overtime_action_my
+#: model:ir.actions.act_window,name:hr_overtime.hr_overtime_mandate_action_my
+#: model:ir.ui.menu,name:hr_overtime.hr_overtime_mandate_menu_my
+#: model:ir.ui.menu,name:hr_overtime.hr_overtime_menu_my
+#: model:ir.ui.menu,name:hr_overtime.menu_hr_overtime_mandate_my
+#: model:ir.ui.menu,name:hr_overtime.menu_hr_overtime_my
+msgid "My requests"
+msgstr "طلباتي"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_setting__name
+msgid "Name"
+msgstr "المسمى"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "أخر موعد لنشاط التالي"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__activity_summary
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__activity_type_id
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: hr_overtime
+#: model:ir.model.fields.selection,name:hr_overtime.selection__hr_overtime_line__type__normal_days
+#: model:ir.model.fields.selection,name:hr_overtime.selection__hr_overtime_mandate_line__type__normal_days
+msgid "Normal days"
+msgstr "الايام العادية"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__note
+msgid "Note"
+msgstr "الملاحظات"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__name
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__name
+msgid "Number"
+msgstr "الرقم"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate_line__number_direct_overtime
+msgid "Number  "
+msgstr "رقم التكليف "
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_line__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_line__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: hr_overtime
+#: code:addons/hr_overtime/models/hr_overtime.py:0
+#: code:addons/hr_overtime/models/hr_overtime.py:0
+#, python-format
+msgid "Number of hours must be equal or greater than %s hours"
+msgstr "يجب أن يكون عدد الساعات مساويًا أو أكبر من %s ساعات"
+
+#. module: hr_overtime
+#: code:addons/hr_overtime/models/hr_overtime.py:0
+#: code:addons/hr_overtime/models/hr_overtime.py:0
+#, python-format
+msgid "Number of hours must be equal or less than %s hours"
+msgstr "يجب أن يكون عدد الساعات مساويًا أو أصغر من %s ساعات"
+
+#. module: hr_overtime
+#: code:addons/hr_overtime/models/hr_overtime_mandate.py:0
+#, python-format
+msgid "Number of hours must be greater than %s hours"
+msgstr "يجب أن يكون عدد الساعات مساويًا أو أكبر من %s ساعات"
+
+#. module: hr_overtime
+#: code:addons/hr_overtime/models/hr_overtime.py:0
+#: code:addons/hr_overtime/models/hr_overtime_mandate.py:0
+#, python-format
+msgid "Number of hours must be greater than 0 "
+msgstr "عدد الساعات يجب ان يكون أكبر من 0 "
+
+#. module: hr_overtime
+#: code:addons/hr_overtime/models/hr_overtime_mandate.py:0
+#, python-format
+msgid "Number of hours must be less than %s hours"
+msgstr "عدد الساعات يجب ان يكون أصغر من %s ساعات"
+
+#. module: hr_overtime
+#: model:ir.model.fields,help:hr_overtime.field_hr_overtime__message_needaction_counter
+#: model:ir.model.fields,help:hr_overtime.field_hr_overtime_line__message_needaction_counter
+#: model:ir.model.fields,help:hr_overtime.field_hr_overtime_mandate__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: hr_overtime
+#: model:ir.model.fields,help:hr_overtime.field_hr_overtime__message_has_error_counter
+#: model:ir.model.fields,help:hr_overtime.field_hr_overtime_line__message_has_error_counter
+#: model:ir.model.fields,help:hr_overtime.field_hr_overtime_mandate__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل مع خطأ التسليم"
+
+#. module: hr_overtime
+#: model:ir.model.fields,help:hr_overtime.field_hr_overtime__message_unread_counter
+#: model:ir.model.fields,help:hr_overtime.field_hr_overtime_line__message_unread_counter
+#: model:ir.model.fields,help:hr_overtime.field_hr_overtime_mandate__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل غير المقروءة"
+
+#. module: hr_overtime
+#: model:res.groups,name:hr_overtime.group_hr_overtime_mandate_user
+#: model:res.groups,name:hr_overtime.group_hr_overtime_user
+msgid "Officer"
+msgstr "موظف خارج دوام"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.hr_overtime_line_wizard_view_form
+msgid "Other Options"
+msgstr "خيارات أخرى"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.report_overtime_mandate
+msgid "Out of hours (normal days)"
+msgstr "خارج دوام(أيام عادية )"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_line__overtime_id
+#: model:ir.model.fields.selection,name:hr_overtime.selection__hr_overtime_setting__type__overtime
+msgid "Overtime"
+msgstr "خارج الدوام"
+
+#. module: hr_overtime
+#: model:ir.model,name:hr_overtime.model_hr_overtime_line
+msgid "Overtime Line"
+msgstr "ساعات العمل الإضافية"
+
+#. module: hr_overtime
+#: model:ir.actions.act_window,name:hr_overtime.hr_overtime_mandate_stage_action
+#: model:ir.ui.menu,name:hr_overtime.menu_hr_overtime_mandate_stage
+msgid "Overtime Mandate Stages"
+msgstr "مراحل  خارج الدوام "
+
+#. module: hr_overtime
+#: model:ir.model,name:hr_overtime.model_hr_overtime_setting
+msgid "Overtime Mandate setting"
+msgstr "إعدادات العمل الإضافي"
+
+#. module: hr_overtime
+#: model:ir.ui.menu,name:hr_overtime.hr_overtime_line_wizard_menu
+msgid "Overtime Resume Report"
+msgstr "تقرير حصر الساعات الاضافية"
+
+#. module: hr_overtime
+#: code:addons/hr_overtime/migrations/14.0.1.0.2/post-migrate.py:0
+#: model:hr.overtime.setting,name:hr_overtime.hr_overtime_setting_data
+#: model:ir.actions.server,name:hr_overtime.hr_overtime_setting_action
+#: model:ir.ui.menu,name:hr_overtime.hr_overtime_setting_sub_menu
+#, python-format
+msgid "Overtime Setting"
+msgstr "إعدادات العمل الإضافي"
+
+#. module: hr_overtime
+#: model:ir.actions.act_window,name:hr_overtime.hr_overtime_stage_action
+#: model:ir.ui.menu,name:hr_overtime.menu_hr_overtime_stage
+msgid "Overtime Stages"
+msgstr "مراحل ساعات العمل الإضافية"
+
+#. module: hr_overtime
+#: model:mail.message.subtype,description:hr_overtime.mt_hr_overtime_approved
+msgid "Overtime is approved"
+msgstr "تمت الموافقة على ساعات العمل الإضافية"
+
+#. module: hr_overtime
+#: model:mail.activity.type,name:hr_overtime.mail_hr_overtime_feedback
+msgid "Overtime is done"
+msgstr "تم أعتماد ساعات العمل الإضافية"
+
+#. module: hr_overtime
+#: model:mail.activity.type,name:hr_overtime.mail_hr_overtime_approval
+msgid "Overtime is ready to be approved"
+msgstr "طلب ساعات عمل إضافية جاهز لموافقة عليه"
+
+#. module: hr_overtime
+#: model:mail.message.subtype,description:hr_overtime.mt_hr_overtime_refused
+msgid "Overtime is refused"
+msgstr "تم رفض  ساعات العمل الإضافية"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.hr_overtime_form
+msgid "Overtime lines"
+msgstr "ساعات العمل الإضافية"
+
+#. module: hr_overtime
+#: model:ir.model,name:hr_overtime.model_hr_overtime_mandate
+#: model:ir.module.category,name:hr_overtime.module_category_hr_overtime_mandate
+#: model:ir.ui.menu,name:hr_overtime.hr_overtime_mandate_menu
+#: model:ir.ui.menu,name:hr_overtime.overtime_mandate_self_service_root
+msgid "Overtime mandate"
+msgstr "خارج الدوام"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate_line__overtime_mandate_id
+msgid "Overtime mandate  "
+msgstr "خارج الدوام"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__line_ids
+msgid "Overtime mandate Lines"
+msgstr "خارج دوام"
+
+#. module: hr_overtime
+#: model:mail.message.subtype,description:hr_overtime.mt_hr_overtime_mandate_approved
+msgid "Overtime mandate is approved"
+msgstr "تمت الموافقة على خارج دوام "
+
+#. module: hr_overtime
+#: model:mail.activity.type,name:hr_overtime.mail_hr_overtime_mandate_feedback
+msgid "Overtime mandate is done"
+msgstr "تم أعتماد خارج دوام"
+
+#. module: hr_overtime
+#: model:mail.activity.type,name:hr_overtime.mail_hr_overtime_mandate_approval
+msgid "Overtime mandate is ready to be approved"
+msgstr "طلب خارج دوام جاهز لموافقة عليه"
+
+#. module: hr_overtime
+#: model:mail.message.subtype,description:hr_overtime.mt_hr_overtime_mandate_refused
+msgid "Overtime mandate is refused"
+msgstr "تم رفض خارج دوام"
+
+#. module: hr_overtime
+#: model:ir.model,name:hr_overtime.model_hr_overtime_mandate_line
+msgid "Overtime mandate line"
+msgstr "المكلفين بخارج الدوام"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.hr_overtime_mandate_form
+msgid "Overtime mandate lines"
+msgstr "المكلفين بخارج الدوام"
+
+#. module: hr_overtime
+#: code:addons/hr_overtime/models/hr_overtime_setting.py:0
+#: model:hr.overtime.setting,name:hr_overtime.hr_overtime_mandate_setting_data
+#: model:ir.actions.server,name:hr_overtime.hr_overtime_mandate_setting_action
+#: model:ir.ui.menu,name:hr_overtime.hr_overtime_mandate_setting_sub_menu
+#, python-format
+msgid "Overtime mandate setting"
+msgstr "إعدادات خارج الدوام"
+
+#. module: hr_overtime
+#: code:addons/hr_overtime/models/hr_overtime_setting.py:0
+#, python-format
+msgid "Overtime setting"
+msgstr "إعدادات العمل الإضافي"
+
+#. module: hr_overtime
+#: model:ir.model,name:hr_overtime.model_hr_overtime
+#: model:ir.module.category,name:hr_overtime.module_category_hr_overtime
+#: model:ir.ui.menu,name:hr_overtime.hr_overtime_menu
+#: model:ir.ui.menu,name:hr_overtime.overtime_self_service_root
+msgid "Overtimes"
+msgstr "ساعات العمل الإضافية"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.hr_overtime_line_wizard_view_form
+msgid "Period"
+msgstr "الفترة"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.hr_overtime_line_wizard_view_form
+msgid "Print Excel Report"
+msgstr "طباعة التقرير بصيغة XLSX"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.hr_overtime_line_wizard_view_form
+msgid "Print PDF Report"
+msgstr "طباعة التقرير بصيغة PDF"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__reason
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__reason
+msgid "Reason"
+msgstr "السبب"
+
+#. module: hr_overtime
+#: model:mail.message.subtype,name:hr_overtime.mt_hr_overtime_mandate_refused
+#: model:mail.message.subtype,name:hr_overtime.mt_hr_overtime_refused
+#: model:request.stage,name:hr_overtime.hr_overtime_mandate_stage_refused
+#: model:request.stage,name:hr_overtime.hr_overtime_stage_refused
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: hr_overtime
+#: model:ir.model,name:hr_overtime.model_report_hr_overtime_report_hr_overtime_lines_resume
+msgid "Report Hr Overtime Lines Resume"
+msgstr "تقرير حصر الساعات الاضافية"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.hr_overtime_mandate_view_kanban
+#: model_terms:ir.ui.view,arch_db:hr_overtime.hr_overtime_view_kanban
+msgid "Request Number :"
+msgstr "رقم الطلب:"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.report_hr_overtime_lines_resume
+msgid "Request Order Number"
+msgstr "رقم الطلب"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__date
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__date
+msgid "Request date"
+msgstr "تاريخ الطلب"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__activity_user_id
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.hr_overtime_form
+msgid "Return to previous stage"
+msgstr "إعادة للمرحلة السابقة"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_line__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: hr_overtime
+#: model:request.stage,name:hr_overtime.hr_overtime_mandate_stage_send
+#: model:request.stage,name:hr_overtime.hr_overtime_stage_send
+msgid "Send"
+msgstr "موظف"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.hr_overtime_form
+msgid "Set to draft"
+msgstr "إعادة إلى مسودة"
+
+#. module: hr_overtime
+#: model:ir.ui.menu,name:hr_overtime.hr_overtime_mandate_setting_menu
+#: model:ir.ui.menu,name:hr_overtime.hr_overtime_setting_menu
+msgid "Setting"
+msgstr "الإعدادات "
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__stage_id
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__stage_id
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_wizard__stage_id
+#: model_terms:ir.ui.view,arch_db:hr_overtime.report_hr_overtime_lines_resume
+msgid "Stage"
+msgstr "المرحلة"
+
+#. module: hr_overtime
+#: code:addons/hr_overtime/models/hr_overtime_mandate.py:0
+#, python-format
+msgid "Start date and end date must be in the same month."
+msgstr "يجب أن يكون تاريخ البدء وتاريخ الانتهاء في نفس الشهر."
+
+#. module: hr_overtime
+#: code:addons/hr_overtime/models/hr_overtime_mandate.py:0
+#, python-format
+msgid "Start date must be less than the end date."
+msgstr "يجب أن يكون تاريخ البدء أقل من تاريخ الانتهاء."
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__state
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: hr_overtime
+#: model:ir.model.fields,help:hr_overtime.field_hr_overtime__activity_state
+#: model:ir.model.fields,help:hr_overtime.field_hr_overtime_mandate__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+
+#. module: hr_overtime
+#: code:addons/hr_overtime/models/hr_overtime.py:0
+#, python-format
+msgid "The hour from should be smaller than the hour to"
+msgstr "يجب أن تكون الساعة من أصغر من الساعة إلى"
+
+#. module: hr_overtime
+#: code:addons/hr_overtime/models/hr_overtime.py:0
+#: code:addons/hr_overtime/models/hr_overtime_mandate.py:0
+#, python-format
+msgid "The number of hours allowed per month has been exceeded"
+msgstr "تم تجاوز عدد الساعات المسموح بها في الشهر"
+
+#. module: hr_overtime
+#: code:addons/hr_overtime/models/hr_overtime.py:0
+#, python-format
+msgid "There is an overlap in overtime."
+msgstr "هناك تداخل في الساعات الإضافية"
+
+#. module: hr_overtime
+#: code:addons/hr_overtime/models/hr_overtime.py:0
+#, python-format
+msgid "There is an overlap of dates with overtime"
+msgstr "هناك تداخل في التواريخ مع ساعات إضافية"
+
+#. module: hr_overtime
+#: code:addons/hr_overtime/models/hr_overtime.py:0
+#, python-format
+msgid "There is an overlap with overtime mandate dates"
+msgstr "هناك تداخل في التواريخ مع خارج دوام"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_wizard__date_to
+msgid "To Date"
+msgstr "إلى"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.report_hr_overtime_lines_resume
+msgid "To Hour"
+msgstr "إلى الساعة"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.hr_overtime_form
+#: model_terms:ir.ui.view,arch_db:hr_overtime.hr_overtime_mandate_form
+msgid "Total"
+msgstr "إجمالي"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__request_type_id
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_line__type
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__request_type_id
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate_line__type
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_setting__type
+#: model_terms:ir.ui.view,arch_db:hr_overtime.report_hr_overtime_lines_resume
+msgid "Type"
+msgstr "النوع"
+
+#. module: hr_overtime
+#: model:ir.model.fields,help:hr_overtime.field_hr_overtime__activity_exception_decoration
+#: model:ir.model.fields,help:hr_overtime.field_hr_overtime_mandate__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع نشاط المستثنى في السجل."
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__message_unread
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_line__message_unread
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__message_unread
+msgid "Unread Messages"
+msgstr "رسائل غير مقروءة"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__message_unread_counter
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_line__message_unread_counter
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عداد الرسائل غير المقروءة"
+
+#. module: hr_overtime
+#: model:request.stage,name:hr_overtime.hr_overtime_mandate_stage_validate
+#: model:request.stage,name:hr_overtime.hr_overtime_stage_validate
+msgid "Validate"
+msgstr "التأكيد"
+
+#. module: hr_overtime
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime__website_message_ids
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_line__website_message_ids
+#: model:ir.model.fields,field_description:hr_overtime.field_hr_overtime_mandate__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: hr_overtime
+#: model:ir.model.fields,help:hr_overtime.field_hr_overtime__website_message_ids
+#: model:ir.model.fields,help:hr_overtime.field_hr_overtime_line__website_message_ids
+#: model:ir.model.fields,help:hr_overtime.field_hr_overtime_mandate__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.report_overtime_mandate
+msgid "Working outside official working hours during the period from"
+msgstr "بالعمل خارج وقت الدوام الرسمي خلال الفترة من"
+
+#. module: hr_overtime
+#: model_terms:ir.ui.view,arch_db:hr_overtime.report_overtime_mandate
+msgid "and even"
+msgstr " .و حتى."
+
+#. module: hr_overtime
+#: code:addons/hr_overtime/wizard/hr_overtime_wizard.py:0
+#, python-format
+msgid "Hr Overtime Resume Report"
+msgstr "تقرير حصر ساعات العمل الإضافي"

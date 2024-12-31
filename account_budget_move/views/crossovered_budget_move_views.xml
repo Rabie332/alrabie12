@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <menuitem
+        id="cossovered_budget_move_menu_root"
+        name="Crossovered Budget Move"
+        parent="account.menu_finance"
+        sequence="15"
+    />
+
+    <record id="crossovered_budget_move_view_search" model="ir.ui.view">
+        <field name="name">crossovered.budget.move.view.search</field>
+        <field name="model">crossovered.budget.move</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <group expand="0" string="Group By">
+                    <filter string="State" name="state" context="{'group_by':'state'}" />
+                    <filter
+                        string="From Budgetary Position"
+                        name="crossovered_budget_id"
+                        context="{'group_by':'crossovered_budget_id'}"
+                    />
+                    <filter
+                        string="From Budgetary Position"
+                        name="from_crossovered_budget_line_id"
+                        context="{'group_by':'from_crossovered_budget_line_id'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="crossovered_view_kanban" model="ir.ui.view">
+        <field name="name">crossovered.budget.move.view.kanban</field>
+        <field name="model">crossovered.budget.move</field>
+        <field name="arch" type="xml">
+            <kanban
+                default_group_by="state"
+                class="o_kanban_small_column"
+                edit="false"
+                quick_create="false"
+                group_create="false"
+                group_edit="false"
+                records_draggable="false"
+            >
+                <field name="name" />
+                <field name="state" />
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class=" o_kanban_record oe_kanban_global_click">
+
+
+                            <div class="oe_kanban_details" name="card_body">
+                                <span name="name" t-if="record.name.raw_value">Number :
+                                    <field name="name" />
+                                    <br />
+                                </span>
+                                <span name="date" t-if="record.date.raw_value">Date:
+                                    <field name="date" />
+                                    <br />
+                                </span>
+                                <span
+                                    name="crossovered_budget_id"
+                                    t-if="record.crossovered_budget_id.raw_value"
+                                >Budget :
+                                    <field name="crossovered_budget_id" />
+                                    <br />
+                                </span>
+                                <span
+                                    name="from_crossovered_budget_line_id"
+                                    t-if="record.from_crossovered_budget_line_id.raw_value"
+                                >From Budgetary Position :
+                                    <field name="from_crossovered_budget_line_id" />
+                                    <br />
+                                </span>
+                                <span name="amount_move" t-if="record.amount_move.raw_value">Amount Move :
+                                    <field name="amount_move" />
+                                    <br />
+                                </span>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+
+    <record id="crossovered_budget_view_form" model="ir.ui.view">
+        <field name="name">crossovered.budget.move.view.form</field>
+        <field name="model">crossovered.budget.move</field>
+        <field name="arch" type="xml">
+            <form>
+             <header>
+                 <button
+                        name="action_to_review"
+                        string="To Review"
+                        type="object"
+                        states="in_prepare"
+                        class="btn-success"
+                        groups="account.group_account_invoice"
+                        confirm="Are you sure you want to do this ?"
+                    />
+
+                 <button
+                        name="action_to_confirm"
+                        string="To Confirm"
+                        type="object"
+                        states="in_review"
+                        class="btn-success"
+                        groups="account_state.group_account_reviewer"
+                        confirm="Are you sure you want to do this ?"
+                    />
+
+                 <button
+                        name="action_confirm"
+                        string="Confirm"
+                        type="object"
+                        states="to_confirm"
+                        class="btn-success"
+                        groups="account_state.group_account_confirm_user"
+                        confirm="Are you sure you want to do this ?"
+                    />
+
+                 <button
+                        name="action_validate"
+                        string="Validate"
+                        type="object"
+                        states="confirmed"
+                        class="btn-success"
+                        groups="account.group_account_manager"
+                        confirm="Are you sure you want to do this ?"
+                    />
+
+                 <button
+                        name="action_refuse"
+                        string="Refuse"
+                        type="object"
+                        states="in_review"
+                        class="btn-danger"
+                        groups="account_state.group_account_reviewer"
+                        confirm="Are you sure you want to do this ?"
+                    />
+
+                 <button
+                        name="action_refuse"
+                        string="Refuse"
+                        type="object"
+                        states="to_confirm"
+                        class="btn-danger"
+                        groups="account_state.group_account_confirm_user"
+                        confirm="Are you sure you want to do this ?"
+                    />
+
+                 <button
+                        name="action_refuse"
+                        string="Refuse"
+                        type="object"
+                        states="confirmed"
+                        class="btn-danger"
+                        groups="account.group_account_manager"
+                        confirm="Are you sure you want to do this ?"
+                    />
+
+                 <field
+                        name="state"
+                        widget="statusbar"
+                        statusbar_visible="in_prepare,in_review,to_confirm,confirmed,validated"
+                    />
+             </header>
+            <sheet>
+                <group>
+                    <group>
+                        <field name="name" />
+                        <field name="date" />
+                    </group>
+                </group>
+                <group>
+                    <group>
+                        <field name="crossovered_budget_id" options="{'no_create':True,'no_open':True}" />
+                        <field
+                                name="from_crossovered_budget_line_id"
+                                options="{'no_create':True,'no_open':True}"
+                                domain="[('crossovered_budget_id','=',crossovered_budget_id)]"
+                            />
+                    </group>
+                    <group>
+                        <field name="amount_move" />
+                        <field name="percent_move" force_save="1" />
+                    </group>
+                </group>
+                <group>
+                    <group>
+                        <field name="reason_move" />
+                    </group>
+                </group>
+                <notebook>
+                    <page name="to_crossovered_budget_move" string="To Budgetary Positions">
+                        <field name="to_crossovered_budget_move_ids" nolabel="1">
+                            <tree>
+                                <field
+                                        name="to_crossovered_budget_line_id"
+                                        options="{'no_create':True,'no_open':True}"
+                                    />
+                                <field name="amount_move" sum="Total" />
+                                <field name="percent_move" />
+                            </tree>
+                            <form>
+                                <group>
+                                    <field name="crossovered_budget_move_id" invisible="1" />
+                                    <field
+                                            name="to_crossovered_budget_line_id"
+                                            domain="[('crossovered_budget_id','=',parent.crossovered_budget_id)]"
+                                            options="{'no_create':True,'no_open':True}"
+                                        />
+                                    <field name="amount_move" />
+                                    <field name="percent_move" force_save="1" />
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+                    <page name="attachments" string="Attachments">
+                        <field name="attachment_ids" widget="many2many_binary" />
+                    </page>
+                </notebook>
+            </sheet>
+            <div class="oe_chatter">
+                <field name="message_follower_ids" widget="mail_followers" />
+                <field name="activity_ids" widget="mail_activity" />
+                <field name="message_ids" widget="mail_thread" />
+            </div>
+        </form>
+
+        </field>
+    </record>
+
+    <record id="crossovered_budget_move_view_tree" model="ir.ui.view">
+        <field name="name">crossovered.budget.move.view.tree</field>
+        <field name="model">crossovered.budget.move</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="date" />
+                <field name="crossovered_budget_id" />
+                <field name="from_crossovered_budget_line_id" />
+                <field name="amount_move" />
+                <field name="state" invisible="1" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="crossovered_budget_move_action" model="ir.actions.act_window">
+        <field name="name">Budget Move Requests</field>
+        <field name="res_model">crossovered.budget.move</field>
+        <field name="view_mode">kanban,search,tree,form</field>
+    </record>
+
+
+    <menuitem
+        id="crossovered_budget_move_menu"
+        name="Budget Move Requests"
+        parent="account_budget_move.cossovered_budget_move_menu_root"
+        sequence="5"
+        action="crossovered_budget_move_action"
+    />
+
+</odoo>

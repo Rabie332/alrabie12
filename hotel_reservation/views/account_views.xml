@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="account_move_view_form_inherited_reservation" model="ir.ui.view">
+        <field name="name">account.move.view.form.inherited.reservation</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form" />
+        <field name="arch" type="xml">
+            <button name="action_reverse" position="before">
+                <field name="is_no_refund" invisible="1" />
+            </button>
+            <button name="action_reverse" position="attributes">
+                <attribute
+                    name="attrs"
+                >{'invisible': ['|','|', ('move_type', 'not in', ('out_invoice', 'in_invoice')), ('state', '!=', 'posted'), ('is_no_refund', '=', True)]}</attribute>
+            </button>
+        </field>
+    </record>
+    <record id="view_account_payment_form_inherit_hotel_reservation" model="ir.ui.view">
+        <field name="name">account.payment.view.form.inherit.reservation</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_form" />
+        <field name="arch" type="xml">
+            <header position="inside">
+                <button
+                    name="print_payment_receipt"
+                    type="object"
+                    string="Payment Receipt"
+                    states="posted"
+                    icon="fa-print"
+                    class="oe_highlight"
+                />
+            </header>
+            <field name="partner_bank_id" position="before">
+                <field
+                    name="support_type_id"
+                    options="{'no_create': True, 'no_open': True}"
+                    attrs="{
+                        'required': [('reservation_id', '=', True)],
+                        'invisible': [('reservation_id', '=', False)]
+                    }"
+                    domain="[('support_type', '=', payment_type)]"
+                />
+                <field
+                    name="promissory_number"
+                    attrs="{
+                        'invisible': [
+                            '|', '|', 
+                            ('reservation_id', '=', False), 
+                            ('support_type_id', '!=', %(hotel_reservation.payment_type_promissory)d), 
+                            ('support_type_id', '=', False)
+                        ]
+                    }"
+                />
+                <field
+                    name="promissory_due_date"
+                    attrs="{
+                        'invisible': [
+                            '|', '|', 
+                            ('reservation_id', '=', False), 
+                            ('support_type_id', '!=', %(hotel_reservation.payment_type_promissory)d), 
+                            ('support_type_id', '=', False)
+                        ]
+                    }"
+                />
+            </field>
+            <field name="move_id" position="before">
+                <field name="transaction_number" />
+                <field name="check_number" />
+                <field name="reservation_id"/>
+             </field>
+        </field>
+    </record>
+    <record id="account_payment_register_view_form_inherit_hotel_reservation" model="ir.ui.view">
+        <field name="name">account.payment.register.view.form.inherit.reservation</field>
+        <field name="model">account.payment.register</field>
+        <field name="inherit_id" ref="account.view_account_payment_register_form" />
+        <field name="arch" type="xml">
+            <field name="payment_method_id" position="after">
+                <field name="reservation_id" attrs="{
+                        'invisible': [('reservation_id', '=', False)]
+                    }"/>
+                <field
+                    name="support_type_id"
+                    domain="[('support_type', '=', payment_type)]"
+                    options="{'no_create': True, 'no_open': True}"
+                    attrs="{
+                        'required': [('reservation_id', '=', True)],
+                        'invisible': [('reservation_id', '=', False)]
+                    }"
+                />
+                <field
+                    name="promissory_number"
+                    attrs="{
+                        'required': [('reservation_id', '=', True)],
+                        'invisible': [('reservation_id', '=', False)]
+                    }"
+                />
+                <field
+                    name="promissory_due_date"
+                    attrs="{
+                        'required': [('reservation_id', '=', True)],
+                        'invisible': [('reservation_id', '=', False)]
+                    }"
+                />
+             </field>
+        </field>
+    </record>
+    <record id="account_payment_support_type" model="ir.ui.view">
+        <field name="name">account.payment.support.type.tree</field>
+        <field name="model">account.payment.support.type</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="support_type"/>
+            </tree>
+        </field>
+    </record>
+    <record id="action_account_payment_support_type" model="ir.actions.act_window">
+        <field name="name">Payment Support Types</field>
+        <field name="res_model">account.payment.support.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_account_payment_support_type"
+              name="Payment Support Types"
+              parent="account.menu_finance"
+              action="action_account_payment_support_type"
+              sequence="10"/>
+</odoo>

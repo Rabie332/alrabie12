@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <menuitem
+        name="Fleet"
+        id="fleet.menu_root"
+        groups="fleet.fleet_group_user"
+        web_icon="fleet_icon,static/description/icon.png"
+    />
+
+</odoo>

@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <menuitem
+        id="hr_bonus_menu_root"
+        name="Bonus"
+        parent="hr_payroll.menu_hr_payroll_root"
+        groups="hr_bonus.hr_bonus_group_manager"
+        sequence="7"
+    />
+
+
+    <record id="hr_bonus_view_search" model="ir.ui.view">
+        <field name="name">hr.bonus.view.search</field>
+        <field name="model">hr.bonus</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="employee_ids" string="Employees" filter_domain="[('employee_ids.name','ilike',self)]" />
+                <group string="Grouped by">
+                    <filter name="state" string="State" context="{'group_by': 'state'}" />
+                    <filter name="type_id" string="Type" context="{'group_by': 'type_id'}" />
+                    <filter name="hr_period_id" string="Period" context="{'group_by': 'hr_period_id'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="hr_bonus_view_tree" model="ir.ui.view">
+        <field name="name">hr.bonus.view.tree</field>
+        <field name="model">hr.bonus</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="type_id" />
+                <field name="date" />
+                <field name="amount" />
+                <field name="total_amount" />
+                <field name="company_id" groups="base.group_multi_company" />
+                <field
+                    name="state"
+                    decoration-info="state == 'draft'"
+                    decoration-warning="state == 'confirm'"
+                    decoration-success="state == 'payed'"
+                    widget="badge"
+                />
+            </tree>
+        </field>
+    </record>
+
+    <record id="hr_bonus_view_form" model="ir.ui.view">
+        <field name="name">hr.bonus.view.form</field>
+        <field name="model">hr.bonus</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+
+                    <button
+                        name="action_confirm"
+                        string="Confirm"
+                        type="object"
+                        states="draft"
+                        class="oe_highlight"
+                        groups="hr.group_hr_user"
+                    />
+
+                    <button
+                        name="action_payed"
+                        string="Validate"
+                        type="object"
+                        states="confirm"
+                        class="oe_highlight"
+                        groups="hr_bonus.hr_bonus_group_manager"
+                    />
+
+                    <button
+                        name="button_draft"
+                        string="Set to Draft"
+                        attrs="{'invisible': [('display_button_set_to_draft', '=', False)]}"
+                        type="object"
+                    />
+
+                    <field name="state" widget="statusbar" statusbar_visible="draft,confirm,payed" />
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="display_button_set_to_draft" invisible="1" />
+                            <field
+                                name="type_id"
+                                options="{'no_create':True,'no_open':True}"
+                                domain="[('is_bonus', '=', True)]"
+                            />
+                            <field name="date" />
+                            <field name="bonus_method" context="{'onchange_bonus_method': True}" />
+                            <field name="target" context="{'onchange_target': True}" />
+                            <field
+                                name="category_ids"
+                                placeholder="Filter employees by categories..."
+                                widget="many2many_tags"
+                                context="{'onchange_employee': True}"
+                                options="{'color_field': 'color','no_create':True, 'no_edit': True}"
+                                attrs="{'invisible': ['|', ('target', '!=', 'tags'), ('target', '=', False)]}"
+                            />
+                            <field
+                                name="department_ids"
+                                widget="many2many_tags"
+                                context="{'onchange_employee': True}"
+                                options="{'no_create':True}"
+                                attrs="{'invisible': ['|', ('target', '!=', 'department'), ('target', '=', False)]}"
+                            />
+                            <field
+                                name="employee_ids"
+                                widget="many2many_tags"
+                                options="{'no_create':True}"
+                                context="{'onchange_employee': True}"
+                                force_save="1"
+                                attrs="{'invisible': ['|', ('target', '!=', 'employee'), ('target', '=', False)], 'required': [('target', '=', 'employee')]}"
+                            />
+                        </group>
+                        <group>
+                            <field
+                                name="hr_period_id"
+                                options="{'no_create':True,'no_open':True}"
+                                domain="[('state', '=', 'open'),'|',('company_id', '=', company_id),('company_id', '=', False)]"
+                            />
+                            <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}" />
+                            <field name="is_variable_bonus" invisible="1" />
+                            <label for="amount" attrs="{'invisible': [('is_variable_bonus', '=', True)]}" />
+                            <div attrs="{'invisible': [('is_variable_bonus', '=', True)]}">
+                                <field name="amount" class="oe_inline" />
+                                <span attrs="{'invisible': [('bonus_method', '!=', 'percentage')]}" class="oe_inline">
+                                    %
+                                </span>
+                            </div>
+                            <field name="total_amount" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page
+                            string="Details per employee"
+                            attrs="{'invisible': [('bonus_method', '=', 'percentage')]}"
+                        >
+                            <button
+                                name="compute_gross_per_employee"
+                                type="object"
+                                string="Compute gross per employee"
+                                class="btn-link mb-1 px-0"
+                                icon="fa-refresh"
+                                confirm="This will compute gross of bonus per employee."
+                                attrs="{'invisible': ['|', ('state', '!=', 'draft'), ('bonus_method', '=', 'percentage')]}"
+                            />
+                            <field name="line_ids">
+                                <tree editable="bottom" create="0">
+                                    <field
+                                        name="employee_id"
+                                        widget="many2one_avatar_employee"
+                                        force_save="1"
+                                        readonly="1"
+                                        width="1.6"
+                                    />
+                                    <field name="base_amount" width="1" force_save="1" readonly="1" />
+                                    <field
+                                        name="percent"
+                                        width="1"
+                                        attrs="{'readonly': [('parent.is_variable_bonus', '=', False)]}"
+                                    />
+                                    <field
+                                        name="net_amount"
+                                        width="1"
+                                        force_save="1"
+                                        attrs="{'readonly': [('parent.is_variable_bonus', '=', True)]}"
+                                    />
+                                    <field name="amount" width="1" force_save="1" readonly="1" />
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" groups="base.group_user" />
+                    <field name="message_ids" widget="mail_thread" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_bonus_action" model="ir.actions.act_window">
+        <field name="name">Bonus</field>
+        <field name="res_model">hr.bonus</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="hr_bonus_menu" name="Bonus" parent="hr_bonus_menu_root" action="hr_bonus_action" sequence="1" />
+
+    <record id="hr_bonus_view_graph" model="ir.ui.view">
+        <field name="name">hr.bonus.view.graph</field>
+        <field name="model">hr.bonus</field>
+        <field name="arch" type="xml">
+            <graph stacked="False">
+                <field name="date" interval="month" />
+                <field name="type_id" />
+                <field name="total_amount" type="measure" />
+            </graph>
+        </field>
+    </record>
+
+    <record id="hr_bonus_view_pivot" model="ir.ui.view">
+        <field name="name">hr.bonus.view.pivot</field>
+        <field name="model">hr.bonus</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="date" interval="month" type="col" />
+                <field name="type_id" type="row" />
+                <field name="total_amount" type="measure" />
+            </pivot>
+        </field>
+    </record>
+
+    <record id="hr_bonus_action_report" model="ir.actions.act_window">
+        <field name="name">Analysis</field>
+        <field name="res_model">hr.bonus</field>
+        <field name="view_mode">form,graph,pivot</field>
+        <field
+            name="view_ids"
+            eval="[(5, 0, 0),
+                      (0, 0, {'view_mode': 'pivot', 'view_id': ref('hr_bonus_view_pivot')}),
+                      (0, 0, {'view_mode': 'graph', 'view_id': ref('hr_bonus_view_graph')})]"
+        />
+    </record>
+
+    <menuitem id="hr_bonus_report_menu" name="Reports" parent="hr_bonus_menu_root" sequence="2" />
+
+    <menuitem
+        id="hr_bonus_menu_report"
+        name="Analysis"
+        sequence="1"
+        parent="hr_bonus_report_menu"
+        action="hr_bonus_action_report"
+    />
+
+
+    <record id="hr_salary_rule_bonus_form" model="ir.ui.view">
+        <field name="name">hr.salary.rule.view.form</field>
+        <field name="model">hr.salary.rule</field>
+        <field name="arch" type="xml">
+            <form string="Salary Rules">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="code" />
+                            <field name="sequence" />
+                            <field name="category_id" invisible="1" />
+                        </group>
+                        <group>
+                            <field name="active" />
+                            <field name="appears_on_payslip" />
+                            <field name="is_variable_bonus" />
+                            <field name="is_specific_bonus" />
+                            <field name="is_bonus" invisible="1" />
+                            <field name="structure_ids" widget="many2many_tags" options="{'no_create':True}" />
+                            <field name="condition_select" invisible="1" />
+                            <field name="amount_select" invisible="1" />
+                            <field name="condition_python" invisible="1" />
+                            <field name="amount_python_compute" invisible="1" />
+                        </group>
+                        <group groups="base.group_multi_company">
+                            <field name="company_id" options="{'no_create': True}" />
+                            <span
+                                colspan="2"
+                            >If you add a company for this rule, it will be visible only for this company</span>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="hr_bonus_type_action" model="ir.actions.act_window">
+        <field name="name">Bonus Types</field>
+        <field name="res_model">hr.salary.rule</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('is_bonus', '=', True)]</field>
+        <field name="context">{'default_is_bonus': True}</field>
+    </record>
+
+    <record id="hr_bonus_type_tree_action" model="ir.actions.act_window.view">
+        <field eval="1" name="sequence" />
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="hr_payroll.hr_salary_rule_tree" />
+        <field name="act_window_id" ref="hr_bonus_type_action" />
+    </record>
+
+    <record id="hr_bonus_type_form_action" model="ir.actions.act_window.view">
+        <field eval="2" name="sequence" />
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="hr_salary_rule_bonus_form" />
+        <field name="act_window_id" ref="hr_bonus_type_action" />
+    </record>
+
+    <menuitem
+        id="hr_bonus_configuration_menu"
+        name="Configuration"
+        parent="hr_bonus_menu_root"
+        groups="hr_bonus.hr_bonus_group_manager"
+        sequence="3"
+    />
+
+    <menuitem
+        id="hr_bonus_type_menu"
+        name="Bonus Types"
+        parent="hr_bonus_configuration_menu"
+        action="hr_bonus_type_action"
+    />
+
+</odoo>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="view_purchase_request_form_inherit" model="ir.ui.view">
+            <field name="name">purchase.request.form.inherit</field>
+            <field name="model">purchase.request</field>
+            <field name="inherit_id" ref="purchase_request.purchase_request_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_accept']" position="attributes">
+                    <field name="show_in_inventory" invisible="1" />
+                    <field name="show_pm_director_ceo_stages" invisible="1"/>
+                    <attribute name="attrs">{'invisible': ['|', '|', ('show_in_inventory', '=', True),('display_button_accept', '=', False), ('show_pm_director_ceo_stages', '=', True)]}</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_refuse']" position="attributes">
+                    <field name="show_in_inventory" invisible="1" />
+                    <attribute name="attrs">{'invisible': ['|', ('show_in_inventory', '=', True), ('display_button_refuse', '=', False)]}</attribute>
+                </xpath>
+                <header>
+                    <button name="action_not_in_inventory" string="Not Available" type="object" 
+                            attrs="{'invisible': [('show_in_inventory', '=', False)]}" class="btn-danger"/>
+                    <field name="show_pm_director_ceo_stages" invisible="1"/>
+                    <button name="action_pm_director_ceo_stages" string="Accept" type="object"  class="btn-success" attrs="{'invisible': [('show_pm_director_ceo_stages', '=', False)]}"/>
+                    <button name="action_reset_to_complete" string="Available" type="object" 
+                            attrs="{'invisible': [('show_in_inventory', '=', False)]}" class="btn-success"/>
+                    <field name="show_to_draft_button" invisible="1"/>
+                    <button name="action_reset_to_draft" string="Reset to Draft" type="object" attrs="{'invisible': [('show_to_draft_button', '=', False)]}" class="btn-warning"/>
+                    action_reset_to_director
+                    <!-- <button name='action_reset_to_director' string="Set to Director" type="object"/> -->
+                    <!-- <button name='action_reset_to_pm' string="Set PM" type="object"/> -->
+                    <!-- <button name="move_pr_to_complete" string="Move to Complete" type="object" class="oe_highlight"/> -->
+                    <button name="create_purchase_order" string="Create PO" type="object" attrs="{'invisible': [('show_in_purchase_dep', '=', False)]}" class="btn-primary"/>
+                </header>
+                <xpath expr="//widget[@name='web_ribbon']" position="after">
+                    <div class="oe_button_box" name="button_box" position="inside">
+                        <button type="object"
+                                    name="action_view_purchase_orders"
+                                    class="oe_stat_button"
+                                    icon="fa-list-alt">
+                            <field string="Purchase Orders" name="po_count" widget="statinfo"/>
+                        </button>
+                    </div>
+                </xpath>
+                <sheet position="inside">
+                    <group>
+                        <group>
+                            <field name="delivery_location" options='{"no_open": True, "no_create": True}' attrs="{'required': [('show_in_inventory', '=', True)], 'readonly': [('show_in_inventory', '=', False)]}"/>
+                            <field name='assign_to_purchase_dept_employee' options='{"no_open": True, "no_create": True}'/>
+                        </group>
+                    </group>
+                </sheet>
+                <xpath expr="//field[@name='line_ids']/tree" position="inside">
+                    <field name="show_in_purchase_dep" invisible="1" />
+                    <field name="PO_checkbox_field"  attrs="{'readonly': [('show_in_purchase_dep', '=', False)]}"/>
+                </xpath>
+                <xpath expr="//field[@name='delivery_location']" position="after">
+                    <field name="po_ids" invisible="1"/>
+                    <field name="show_in_inventory" invisible="1"/>
+                    <field name="show_in_purchase_dep" invisible="1" />
+                    <field name="in_inventory" string="In Inventory" attrs="{'required': [('show_in_inventory', '=', True)], 'readonly': [('show_in_inventory', '=', False)]}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

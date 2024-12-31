@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+
+
+      <record id="hr_settlement_seq" model="ir.sequence">
+        <field name="name">Sequence of settlement</field>
+        <field name="code">hr.settlement.seq</field>
+        <field eval="1" name="number_increment" />
+         <field name="padding">5</field>
+        </record>
+
+      <record id="hr_settlement_stage_draft" model="request.stage">
+            <field name="name">Draft</field>
+            <field
+            name="res_model_id"
+            ref="hr_payroll_settlement.model_hr_settlement"
+        />
+            <field name="sequence">1</field>
+            <field name="res_model">hr.settlement</field>
+            <field name="state">draft</field>
+        </record>
+
+        <record id="hr_settlement_stage_approve" model="request.stage">
+            <field name="name">Validate</field>
+            <field
+            name="res_model_id"
+            ref="hr_payroll_settlement.model_hr_settlement"
+        />
+            <field name="sequence">2</field>
+            <field name="res_model">hr.settlement</field>
+            <field name="state">in_progress</field>
+        </record>
+
+        <record id="hr_settlement_stage_done" model="request.stage">
+            <field name="name">Done</field>
+            <field
+            name="res_model_id"
+            ref="hr_payroll_settlement.model_hr_settlement"
+        />
+            <field name="sequence">3</field>
+            <field name="res_model">hr.settlement</field>
+            <field name="state">done</field>
+        </record>
+
+        <record id="hr_settlement_stage_refuse" model="request.stage">
+            <field name="name">Refused</field>
+            <field
+            name="res_model_id"
+            ref="hr_payroll_settlement.model_hr_settlement"
+        />
+            <field name="sequence">6</field>
+            <field name="res_model">hr.settlement</field>
+            <field name="state">cancel</field>
+        </record>
+
+    <!-- Rule  Settlement -->
+       <record id="SETTLEMENT" model="hr.salary.rule.category">
+            <field name="name">Settlement</field>
+            <field name="code">SETL</field>
+        </record>
+   <!-- Settlement Rules -->
+     <record id="hr_rule_deduction_settlement" model="hr.salary.rule">
+        <field name="name">Dedection Settlement</field>
+        <field name="sequence" eval="100" />
+        <field name="code">SETLDED</field>
+        <field name="category_id" ref="SETTLEMENT" />
+         <field name="condition_select">python</field>
+       <field
+            name="condition_python"
+        >result = inputs.DED and inputs.DED.amount != 0</field>
+         <field name="amount_select">code</field>
+         <field name="amount_python_compute">result = inputs.DED.amount</field>
+      </record>
+
+    <record id="hr_rule_add_settlement" model="hr.salary.rule">
+        <field name="name">Add Settlement</field>
+        <field name="sequence" eval="100" />
+        <field name="code">SETLADD</field>
+        <field name="category_id" ref="SETTLEMENT" />
+         <field name="condition_select">python</field>
+       <field
+            name="condition_python"
+        >result = inputs.ADD and inputs.ADD.amount != 0.0 </field>
+         <field name="amount_select">code</field>
+         <field name="amount_python_compute">result = inputs.ADD.amount</field>
+      </record>
+
+
+
+</odoo>

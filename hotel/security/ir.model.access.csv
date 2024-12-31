@@ -1,0 +1,58 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hotel_floor_group,hotel.floor.user,model_hotel_floor,hotel.group_hotel_user,1,1,1,0
+access_product_category,product.category.user,product.model_product_category,hotel.group_hotel_user,1,1,1,0
+access_hotel_room_type,hotel.room_type.user,model_hotel_room_type,hotel.group_hotel_user,1,1,1,0
+access_product_product,product.product.user,product.model_product_product,hotel.group_hotel_user,1,1,1,0
+access_hotel_room_amenities_type,hotel.room_amenities_type.user,model_hotel_room_amenities_type,hotel.group_hotel_user,1,1,1,0
+access_hotel_room_amenities,hotel.room_aminities.user,model_hotel_room_amenities,hotel.group_hotel_user,1,1,1,0
+access_hotel_room,hotel.room.user,model_hotel_room,hotel.group_hotel_user,1,1,1,0
+access_hotel_folio,hotel.folio.user,model_hotel_folio,hotel.group_hotel_user,1,1,1,0
+access_hotel_folio_line,hotel_folio.line.user,model_hotel_folio_line,hotel.group_hotel_user,1,1,1,0
+access_hotel_service_line,hotel_service.line.user,model_hotel_service_line,hotel.group_hotel_user,1,1,1,0
+acess_hotel_service_type,hotel.service_type.user,model_hotel_service_type,hotel.group_hotel_user,1,1,1,0
+access_hotel_services,hotel.sevices.user,model_hotel_services,hotel.group_hotel_user,1,1,1,0
+access_hotel_order_user,hotel.order.user,sale.model_sale_order,hotel.group_hotel_user,1,1,1,0
+access_hotel_order_line_user,hotel.order.line.user,sale.model_sale_order_line,hotel.group_hotel_user,1,1,1,0
+access_folio_room_line_user,hotel.folio_room_line.user,model_folio_room_line,hotel.group_hotel_user,1,1,1,1
+access_hotel_floor_group_manager,hotel.floor.manager,model_hotel_floor,hotel.group_hotel_manager,1,1,1,1
+access_product_category_manager,product.category.manager,product.model_product_category,hotel.group_hotel_manager,1,1,1,1
+access_hotel_room_type_manager,hotel.room_type.manager,model_hotel_room_type,hotel.group_hotel_manager,1,1,1,1
+access_product_product_manager,product.product.manager,product.model_product_product,hotel.group_hotel_manager,1,1,1,1
+access_hotel_room_amenities_type_manager,hotel.room_amenities_type.manager,model_hotel_room_amenities_type,hotel.group_hotel_manager,1,1,1,1
+access_hotel_room_amenities_manager,hotel.room_aminities.manager,model_hotel_room_amenities,hotel.group_hotel_manager,1,1,1,1
+access_hotel_room_manager,hotel.room.manager,model_hotel_room,hotel.group_hotel_manager,1,1,1,1
+access_hotel_folio_manager,hotel.folio.manager,model_hotel_folio,hotel.group_hotel_manager,1,1,1,1
+access_hotel_folio_line_manager,hotel_folio.line.manager,model_hotel_folio_line,hotel.group_hotel_manager,1,1,1,1
+access_hotel_service_line_manager,hotel_service.line.manager,model_hotel_service_line,hotel.group_hotel_manager,1,1,1,1
+acess_hotel_service_type_manager,hotel.service_type.manager,model_hotel_service_type,hotel.group_hotel_manager,1,1,1,1
+access_hotel_services_manager,hotel.sevices.manager,model_hotel_services,hotel.group_hotel_manager,1,1,1,1
+access_hotel_order_manager_manager,hotel.order.manager,sale.model_sale_order,hotel.group_hotel_manager,1,1,1,1
+access_hotel_order_line_manager,hotel.order.line.manager,sale.model_sale_order_line,hotel.group_hotel_manager,1,1,1,0
+access_folio_room_line_manager,hotel.folio_room_line.manager,model_folio_room_line,hotel.group_hotel_manager,1,1,1,1
+access_folio_report_wizard,access_folio_report_wizard,model_folio_report_wizard,base.group_user,1,1,1,1
+access_price_setting_user,access_price_setting_user,model_price_setting,base.group_user,1,1,1,0
+access_hotel_lost_found_user,access_hotel_lost_found_user,model_hotel_lost_found,base.group_user,1,1,1,0
+access_hotel_verification_user,access_hotel_verification_user,model_hotel_verification,base.group_user,1,1,1,0
+access_hotel_lost_found_wizard_user,access_hotel_lost_found_wizard_user,model_hotel_lost_found_wizard,base.group_user,1,1,1,0
+access_hotel_verification_wizard_user,access_hotel_verification_wizard_user,model_hotel_verification_wizard,base.group_user,1,1,1,0
+access_account_cash_rounding_all,account.cash.rounding,account.model_account_cash_rounding,,1,0,0,0
+access_account_invoice_report_all,account.invoice.report_user,account.model_account_invoice_report,,1,0,0,0
+access_account_move_all,account.move,account.model_account_move,,1,1,1,1
+access_account_move_line_all,account.move.line all,account.model_account_move_line,,1,1,1,1
+access_account_analytic_line_all,account.analytic.line all,account.model_account_analytic_line,,1,0,0,0
+access_account_journal_all,account.journal all,account.model_account_journal,,1,0,0,0
+access_account_group_all,account.group,account.model_account_group,,1,0,0,0
+access_account_payment_term_all,account.payment.term,account.model_account_payment_term,,1,0,0,0
+access_sale_order_all,sale.order,sale.model_sale_order,,1,1,1,0
+access_sale_order_line_all,sale.order.line,sale.model_sale_order_line,,1,1,1,1
+access_account_payment_all,account_payment_all,account.model_account_payment,,1,1,1,0
+access_sale_order_template_all,sale_order_template_all,sale_management.model_sale_order_template,,1,0,0,0
+access_sale_order_template_line_all,sale_order_template_line_all,sale_management.model_sale_order_template_line,,1,0,0,0
+access_sale_order_template_option_all,sale_order_template_option_all,sale_management.model_sale_order_template_option,,1,0,0,0
+access_crm_tag_option_all,crm_tag_all,sales_team.model_crm_tag,,1,0,0,0
+access_sale_order_option_all,sale.order.option,sale_management.model_sale_order_option,,1,1,1,0
+access_sale_advance_payment_all,access.sale.advance.payment.inv,sale.model_sale_advance_payment_inv,,1,1,1,0
+access_product_product_sale_all,product.product all,product.model_product_product,,1,1,1,1
+access_product_template_sale_all,product.template all,product.model_product_template,,1,1,1,1
+access_account_partial_reconcile_all,account.partial.reconcile.all,account.model_account_partial_reconcile,,1,0,0,0
+access_account_account_type_all,account.account.type all,account.model_account_account_type,,1,0,0,0

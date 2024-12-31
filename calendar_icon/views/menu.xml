@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+        <menuitem
+        id="calendar.mail_menu_calendar"
+        name="Calendar"
+        action="calendar.action_calendar_event"
+        web_icon="calendar_icon,static/description/icon.png"
+        groups="base.group_user"
+    />
+</odoo>

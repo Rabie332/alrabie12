@@ -1,0 +1,1545 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* dms
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-07-21 00:02+0000\n"
+"PO-Revision-Date: 2022-07-21 00:02+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: dms
+#: model:mail.template,body_html:dms.attachment_mail_template
+msgid ""
+"\n"
+"            <p>Dear, </p>\n"
+"            <p> In the attachment the required documents.</p>\n"
+"            "
+msgstr ""
+"\n"
+"            <p>عزيزي ،</p>\n"
+"            <p>في المرفق توجد الوثائق المطلوبة.</p>\n"
+"            "
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.dms_folder_kanban
+msgid "<i class=\"fa fa-ellipsis-v\" role=\"img\" aria-label=\"Manage\" title=\"Manage\"/>"
+msgstr "<i class=\"fa fa-ellipsis-v\" role=\"img\" aria-label=\"إدارة\" title=\"إدارة\"/>"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_kanban
+msgid "<i class=\"fa fa-globe\"/> Url"
+msgstr "<i class=\"fa fa-globe\"/> رابط"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.dms_folder_kanban
+msgid "<span>Create</span>"
+msgstr "<span>إنشاء</span>"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.dms_folder_kanban
+msgid "<span>Documents</span>"
+msgstr "<span>مستندات</span>"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.dms_folder_kanban
+msgid "<span>Folders</span>"
+msgstr "<span>المجلدات</span>"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.dms_folder_kanban
+msgid "<span>Report</span>"
+msgstr "<span>تقرير</span>"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.dms_folder_kanban
+msgid "<span>Show</span>"
+msgstr "<span>عرض</span>"
+
+#. module: dms
+#: model:ir.model.fields,help:dms.field_dms_folder__alias_defaults
+msgid ""
+"A Python dictionary that will be evaluated to provide default values when "
+"creating new records for this alias."
+msgstr ""
+"قاموس بايثون سيتم تقديره لتوفير قيم افتراضية عند إنشاء سجلات جديدة لهذا "
+"اللقب."
+
+#. module: dms
+#: model:res.groups,name:dms.dms_group_secret_document
+msgid "Access to confidential documents"
+msgstr "الإطلاع عل الوثائق السرية"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__message_needaction
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__message_needaction
+msgid "Action Needed"
+msgstr "الإجراءات اللازمة"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__activity_ids
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__activity_ids
+msgid "Activities"
+msgstr "أنشطة"
+
+#. module: dms
+#: model:ir.model,name:dms.model_mail_activity
+msgid "Activity"
+msgstr "النشاط"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__activity_exception_decoration
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "زخرفة استثناء النشاط"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__activity_state
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__activity_type_icon
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_kanban
+msgid "Add a new version"
+msgstr "أضف نسخة جديدة"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__alias_contact
+msgid "Alias Contact Security"
+msgstr "لقب الاتصال الآمن"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__alias_name
+msgid "Alias Name"
+msgstr "اسم اللقب"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__alias_domain
+msgid "Alias domain"
+msgstr "نطاق اللقب"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__alias_model_id
+msgid "Aliased Model"
+msgstr "الكائن الملقب"
+
+#. module: dms
+#: code:addons/dms/controllers/dashboard.py:0
+#, python-format
+msgid "April"
+msgstr "أبريل"
+
+#. module: dms
+#: model:res.groups,name:dms.dms_group_archive_folders
+msgid "Archive folders"
+msgstr "أرشفة المجلدات"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.dms_folder_form
+#: model_terms:ir.ui.view,arch_db:dms.dms_folder_search
+msgid "Archived"
+msgstr "مؤرشف"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__message_attachment_count
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: dms
+#: model:ir.model,name:dms.model_ir_attachment_share
+msgid "Attachment Share"
+msgstr "مشاركة الملف"
+
+#. module: dms
+#: model:ir.model,name:dms.model_attachment_summary_report
+msgid "Attachment Summary Report"
+msgstr "تقرير ملخص المرفقات"
+
+#. module: dms
+#: model:ir.model,name:dms.model_report_dms_attachments_summary_report
+msgid "Attachment Summary Report Parser"
+msgstr "المحلل لتقرير المرفقات"
+
+#. module: dms
+#: model:ir.model,name:dms.model_ir_attachment_version_upload
+msgid "Attachment Wizard"
+msgstr "ويزارد المرفقات"
+
+#. module: dms
+#: model:ir.model,name:dms.model_ir_attachment
+msgid "Attachments"
+msgstr "المرفقات"
+
+#. module: dms
+#: code:addons/dms/controllers/dashboard.py:0
+#, python-format
+msgid "August"
+msgstr "أغسطس"
+
+#. module: dms
+#: model:ir.model.fields.selection,name:dms.selection__dms_folder__dashboard_graph_type__bar
+msgid "Bar"
+msgstr "خط"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__cabinet_id
+msgid "Cabinet"
+msgstr "خزانة"
+
+#. module: dms
+#: model:ir.actions.act_window,name:dms.action_dms_cabinet
+#: model:ir.model,name:dms.model_dms_cabinet
+#: model:ir.model.fields,field_description:dms.field_dms_drawer__cabinet_id
+#: model:ir.ui.menu,name:dms.menu_dms_cabinet
+msgid "Cabinets"
+msgstr "الخزائن"
+
+#. module: dms
+#: code:addons/dms/controllers/dashboard.py:0
+#, python-format
+msgid "Cabinets number"
+msgstr "عدد الخزائن"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.folder_share_view_form
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_share_view_form
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_version_list_view_form
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_version_upload_view_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: dms
+#. openerp-web
+#: code:addons/dms/static/src/xml/attachment_preview.xml:0
+#: code:addons/dms/static/src/xml/attachment_preview.xml:0
+#, python-format
+msgid "Clear"
+msgstr "إخلاء"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__code
+#: model:ir.model.fields,field_description:dms.field_dms_search__code
+#: model:ir.model.fields,field_description:dms.field_dms_secrecy__code
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__code
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_type__code
+msgid "Code"
+msgstr "الكود"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__color
+msgid "Color"
+msgstr "اللون"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_tag__color
+msgid "Color Index"
+msgstr "مؤشر اللون"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_cabinet__company_id
+#: model:ir.model.fields,field_description:dms.field_dms_drawer__company_id
+#: model:ir.model.fields,field_description:dms.field_dms_folder__company_id
+msgid "Company"
+msgstr "شركة"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__dashboard_graph_model
+#: model:ir.model.fields,field_description:dms.field_dms_search__content
+msgid "Content"
+msgstr "المحتوى"
+
+#. module: dms
+#: model:ir.actions.act_window,name:dms.folder_2_attachment_action_create
+msgid "Create a document"
+msgstr "إنشاء وثيقة"
+
+#. module: dms
+#: model:ir.actions.act_window,name:dms.dms_folder_action_create_folder
+msgid "Create a folder"
+msgstr "إنشاء مجلد"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_search__user_id
+msgid "Create by user"
+msgstr "أنشئ بواسطة"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.attachments_summary_report
+msgid "Create date"
+msgstr "تاريخ الإنشاء"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_attachment_summary_report__create_uid
+#: model:ir.model.fields,field_description:dms.field_dms_cabinet__create_uid
+#: model:ir.model.fields,field_description:dms.field_dms_drawer__create_uid
+#: model:ir.model.fields,field_description:dms.field_dms_folder__create_uid
+#: model:ir.model.fields,field_description:dms.field_dms_scan__create_uid
+#: model:ir.model.fields,field_description:dms.field_dms_search__create_uid
+#: model:ir.model.fields,field_description:dms.field_dms_secrecy__create_uid
+#: model:ir.model.fields,field_description:dms.field_dms_settings__create_uid
+#: model:ir.model.fields,field_description:dms.field_dms_tag__create_uid
+#: model:ir.model.fields,field_description:dms.field_folder_share__create_uid
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_share__create_uid
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_type__create_uid
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_version__create_uid
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_version_list__create_uid
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_version_upload__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_attachment_summary_report__create_date
+#: model:ir.model.fields,field_description:dms.field_dms_cabinet__create_date
+#: model:ir.model.fields,field_description:dms.field_dms_drawer__create_date
+#: model:ir.model.fields,field_description:dms.field_dms_folder__create_date
+#: model:ir.model.fields,field_description:dms.field_dms_scan__create_date
+#: model:ir.model.fields,field_description:dms.field_dms_search__create_date
+#: model:ir.model.fields,field_description:dms.field_dms_secrecy__create_date
+#: model:ir.model.fields,field_description:dms.field_dms_settings__create_date
+#: model:ir.model.fields,field_description:dms.field_dms_tag__create_date
+#: model:ir.model.fields,field_description:dms.field_folder_share__create_date
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_share__create_date
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_type__create_date
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_version__create_date
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_version_list__create_date
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_version_upload__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__alias_bounced_content
+msgid "Custom Bounced Message"
+msgstr "رسالة مرتجعة مخصصة"
+
+#. module: dms
+#: model:ir.module.category,name:dms.dms_category
+#: model:ir.ui.menu,name:dms.dms_root_menu
+msgid "DMS"
+msgstr "نظام الأرشفة"
+
+#. module: dms
+#: model:ir.actions.client,name:dms.dms_dashboard_action
+#: model:ir.ui.menu,name:dms.dms_dashboard_dashboard
+msgid "Dashboard"
+msgstr "لوحة المؤشرات"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__dashboard_graph_data
+msgid "Dashboard Graph Data"
+msgstr "بيانات لوحة المعلومات"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.dms_folder_form
+msgid "Dashboard settings"
+msgstr "إعدادات لوحة القيادة"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_search__date_from
+msgid "Date From"
+msgstr "من"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_search__date_to
+msgid "Date To"
+msgstr "إلى"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_attachment_summary_report__date_from
+msgid "Date from"
+msgstr "تاريخ البدء"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_attachment_summary_report__date_to
+msgid "Date to"
+msgstr "تاريخ الإنتهاء"
+
+#. module: dms
+#: model:ir.model.fields.selection,name:dms.selection__dms_folder__dashboard_graph_group__day
+msgid "Day"
+msgstr "اليوم"
+
+#. module: dms
+#: code:addons/dms/controllers/dashboard.py:0
+#, python-format
+msgid "December"
+msgstr "ديسمبر"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__alias_defaults
+msgid "Default Values"
+msgstr "القيم الافتراضية"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_kanban
+msgid "Delete"
+msgstr "حذف"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_attachment_summary_report__display_name
+#: model:ir.model.fields,field_description:dms.field_dms_cabinet__display_name
+#: model:ir.model.fields,field_description:dms.field_dms_drawer__display_name
+#: model:ir.model.fields,field_description:dms.field_dms_folder__display_name
+#: model:ir.model.fields,field_description:dms.field_dms_scan__display_name
+#: model:ir.model.fields,field_description:dms.field_dms_search__display_name
+#: model:ir.model.fields,field_description:dms.field_dms_secrecy__display_name
+#: model:ir.model.fields,field_description:dms.field_dms_settings__display_name
+#: model:ir.model.fields,field_description:dms.field_dms_tag__display_name
+#: model:ir.model.fields,field_description:dms.field_folder_share__display_name
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__display_name
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_share__display_name
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_type__display_name
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_version__display_name
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_version_list__display_name
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_version_upload__display_name
+#: model:ir.model.fields,field_description:dms.field_mail_activity__display_name
+#: model:ir.model.fields,field_description:dms.field_report_dms_attachments_summary_report__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: dms
+#: model:ir.model,name:dms.model_ir_attachment_version_list
+msgid "Display version of documents"
+msgstr "عرض نسخ الوثائق"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_version__document_id
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_kanban
+msgid "Document"
+msgstr "المستند"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.attachments_summary_report
+msgid "Document name"
+msgstr "اسم المستند"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__type_id
+msgid "Document type"
+msgstr "نوع المستند"
+
+#. module: dms
+#. openerp-web
+#: code:addons/dms/static/src/js/dms_dashboard.js:0
+#: model:ir.actions.act_window,name:dms.folder_2_attachment_action
+#: model:ir.actions.act_window,name:dms.ir_attachment_action
+#: model:ir.model.fields,field_description:dms.field_dms_folder__documents_ids
+#: model:ir.model.fields,field_description:dms.field_dms_search__document_ids
+#: model:ir.model.fields.selection,name:dms.selection__dms_folder__dashboard_graph_model__ir_attachment
+#: model:ir.ui.menu,name:dms.ir_attachment_menu
+#: model_terms:ir.ui.view,arch_db:dms.dms_folder_kanban
+#, python-format
+msgid "Documents"
+msgstr "‫الوثائق‬"
+
+#. module: dms
+#. openerp-web
+#: code:addons/dms/static/src/js/dms_dashboard.js:0
+#: code:addons/dms/static/src/xml/dashboard_templates.xml:0
+#, python-format
+msgid "Documents by folder"
+msgstr "الوثائق حسب المجلدات"
+
+#. module: dms
+#. openerp-web
+#: code:addons/dms/static/src/xml/dashboard_templates.xml:0
+#, python-format
+msgid "Documents by type"
+msgstr "الوثائق حسب النوع"
+
+#. module: dms
+#. openerp-web
+#: code:addons/dms/static/src/xml/dashboard_templates.xml:0
+#, python-format
+msgid "Documents flow"
+msgstr "تدفق الوثائق"
+
+#. module: dms
+#: code:addons/dms/controllers/dashboard.py:0
+#, python-format
+msgid "Documents number"
+msgstr "عدد الوثائق"
+
+#. module: dms
+#: model:ir.ui.menu,name:dms.ir_attachment_report_menu_graph
+msgid "Documents report‬"
+msgstr " تقرير ‫الوثائق‬"
+
+#. module: dms
+#: code:addons/dms/controllers/dashboard.py:0
+#, python-format
+msgid "Documents size"
+msgstr "حجم الملفات"
+
+#. module: dms
+#: model:ir.actions.act_window,name:dms.attachment_summary_report_action
+msgid "Documents summary report"
+msgstr " تقرير حصر الأرشيف"
+
+#. module: dms
+#: model:ir.actions.report,name:dms.attachment_summary_report
+#: model:ir.ui.menu,name:dms.attachment_summary_report_menu
+msgid "Documents summary report‬"
+msgstr "تقرير حصر الوثائق‬"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.attachments_summary_report
+msgid "Documents summary‬ :"
+msgstr "ملخص الوثائق:"
+
+#. module: dms
+#: model:ir.actions.act_window,name:dms.ir_attachment_type_action
+#: model:ir.ui.menu,name:dms.menu_dms_documents_type
+msgid "Documents type"
+msgstr "أنواع الوثائق"
+
+#. module: dms
+#: model:ir.model,name:dms.model_ir_attachment_type
+msgid "Documents types"
+msgstr "أنواع الوثائق"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_form
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_version_list_view_form
+msgid "Download"
+msgstr "تحميل"
+
+#. module: dms
+#: model:ir.model,name:dms.model_dms_drawer
+#: model:ir.model.fields,field_description:dms.field_dms_cabinet__drawer_ids
+#: model:ir.model.fields,field_description:dms.field_dms_folder__drawers_ids
+#: model_terms:ir.ui.view,arch_db:dms.dms_cabinet_form
+msgid "Drawers"
+msgstr "أدراج"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_kanban
+msgid "Dropdown menu"
+msgstr "القائمة المنسدلة"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.dms_folder_form
+msgid "Email Alias"
+msgstr "لقب البريد الإلكتروني"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__alias_id
+msgid "Email Aliases"
+msgstr "ألقاب البريد"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__shared_user_ids
+#: model:ir.model.fields,field_description:dms.field_folder_share__shared_user_ids
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__shared_user_ids
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_share__shared_user_ids
+msgid "Employees"
+msgstr "الموظفون"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__extension
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_version__extension
+msgid "Extension"
+msgstr "الإمتداد"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.dms_folder_search
+msgid "Favorites"
+msgstr "المفضلات"
+
+#. module: dms
+#: code:addons/dms/controllers/dashboard.py:0
+#, python-format
+msgid "February"
+msgstr "فبراير"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_version__datas
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_version_upload__datas
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_form
+msgid "File"
+msgstr "الملف"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_kanban
+msgid "File details"
+msgstr "تفاصيل ملف"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__datas_viewer
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_form
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_version_form
+msgid "File preview"
+msgstr "معاينة الملف"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_attachment_summary_report__folder_id
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__folder_id
+#: model_terms:ir.ui.view,arch_db:dms.attachments_summary_report
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_search
+msgid "Folder"
+msgstr "المجلد"
+
+#. module: dms
+#: model:ir.model,name:dms.model_folder_share
+msgid "Folder Share"
+msgstr "مشاركة الملف"
+
+#. module: dms
+#: model:ir.actions.act_window,name:dms.dms_folder_action_all_folders
+#: model:ir.model,name:dms.model_dms_folder
+#: model:ir.ui.menu,name:dms.dms_folder_menu
+#: model:ir.ui.menu,name:dms.dms_folder_menu_all_folders
+#: model_terms:ir.ui.view,arch_db:dms.dms_folder_kanban
+msgid "Folders"
+msgstr "المجلدات"
+
+#. module: dms
+#. openerp-web
+#: code:addons/dms/static/src/js/dms_dashboard.js:0
+#: code:addons/dms/static/src/xml/dashboard_templates.xml:0
+#, python-format
+msgid "Folders by tag"
+msgstr "الملفات حسب الوسوم"
+
+#. module: dms
+#: code:addons/dms/controllers/dashboard.py:0
+#, python-format
+msgid "Folders number"
+msgstr "عدد المجلدات"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.dms_folder_form
+msgid "Follow the folder"
+msgstr "اتبع المجلد"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__message_follower_ids
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__message_follower_ids
+msgid "Followers"
+msgstr "المتابعين"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__message_channel_ids
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات) "
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__message_partner_ids
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: dms
+#: model:ir.model.fields,help:dms.field_dms_folder__activity_type_icon
+#: model:ir.model.fields,help:dms.field_ir_attachment__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "رمز الخط الرائع ، على سبيل المثال FA المهام"
+
+#. module: dms
+#: code:addons/dms/controllers/dashboard.py:0
+#, python-format
+msgid "Friday"
+msgstr "الجمعة"
+
+#. module: dms
+#: model:ir.actions.server,name:dms.dms_settings_action
+#: model:ir.model,name:dms.model_dms_settings
+msgid "General settings"
+msgstr "إعدادات عامة"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.dms_folder_form
+msgid "Graph"
+msgstr "الرسم البياني"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__dashboard_graph_group
+msgid "Group by"
+msgstr "تجميع حسب"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.dms_folder_search
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_search
+msgid "Group by..."
+msgstr "تجميع حسب..."
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__group_ids
+#: model:ir.model.fields,field_description:dms.field_dms_secrecy__group_ids
+#: model_terms:ir.ui.view,arch_db:dms.dms_folder_form
+#: model_terms:ir.ui.view,arch_db:dms.dms_secrecy_view_form
+msgid "Groups"
+msgstr "المجموعات"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_attachment_summary_report__id
+#: model:ir.model.fields,field_description:dms.field_dms_cabinet__id
+#: model:ir.model.fields,field_description:dms.field_dms_drawer__id
+#: model:ir.model.fields,field_description:dms.field_dms_folder__id
+#: model:ir.model.fields,field_description:dms.field_dms_scan__id
+#: model:ir.model.fields,field_description:dms.field_dms_search__id
+#: model:ir.model.fields,field_description:dms.field_dms_secrecy__id
+#: model:ir.model.fields,field_description:dms.field_dms_settings__id
+#: model:ir.model.fields,field_description:dms.field_dms_tag__id
+#: model:ir.model.fields,field_description:dms.field_folder_share__id
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__id
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_share__id
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_type__id
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_version__id
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_version_list__id
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_version_upload__id
+#: model:ir.model.fields,field_description:dms.field_mail_activity__id
+#: model:ir.model.fields,field_description:dms.field_report_dms_attachments_summary_report__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: dms
+#: model:ir.model.fields,help:dms.field_dms_folder__alias_parent_thread_id
+msgid ""
+"ID of the parent record holding the alias (example: project holding the task"
+" creation alias)"
+msgstr ""
+"مُعرف السجل الأصلي الذي يحتوي اللقب (مثال: 'المشروع' يحمل لقب إنشاء المهمة)"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__activity_exception_icon
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__activity_exception_icon
+msgid "Icon"
+msgstr "أيقونة"
+
+#. module: dms
+#: model:ir.model.fields,help:dms.field_dms_folder__activity_exception_icon
+#: model:ir.model.fields,help:dms.field_ir_attachment__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "أيقونة للإشارة إلى نشاط استثناء"
+
+#. module: dms
+#: model:ir.model.fields,help:dms.field_dms_folder__message_needaction
+#: model:ir.model.fields,help:dms.field_dms_folder__message_unread
+#: model:ir.model.fields,help:dms.field_ir_attachment__message_needaction
+#: model:ir.model.fields,help:dms.field_ir_attachment__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "اذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل"
+
+#. module: dms
+#: model:ir.model.fields,help:dms.field_dms_folder__message_has_error
+#: model:ir.model.fields,help:dms.field_ir_attachment__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده ، فبعض الرسائل بها خطأ في التسليم."
+
+#. module: dms
+#: model:ir.model.fields,help:dms.field_dms_folder__alias_bounced_content
+msgid ""
+"If set, this content will automatically be sent out to unauthorized users "
+"instead of the default message."
+msgstr ""
+"في حالة الضبط ، سيتم إرسال هذا المحتوى تلقائيًا إلى المستخدمين غير المصرح "
+"لهم بدلاً من الرسالة الافتراضية."
+
+#. module: dms
+#. openerp-web
+#: code:addons/dms/static/src/js/attachment_preview.js:0
+#: model:ir.model.fields,field_description:dms.field_dms_folder__image
+#, python-format
+msgid "Image"
+msgstr "صورة"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_kanban
+msgid "Image is a link"
+msgstr "الصورة هي رابط"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__message_is_follower
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: dms
+#: code:addons/dms/controllers/dashboard.py:0
+#, python-format
+msgid "January"
+msgstr "يناير"
+
+#. module: dms
+#: code:addons/dms/controllers/dashboard.py:0
+#, python-format
+msgid "July"
+msgstr "يوليو"
+
+#. module: dms
+#: code:addons/dms/controllers/dashboard.py:0
+#, python-format
+msgid "June"
+msgstr "يونيو"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_attachment_summary_report____last_update
+#: model:ir.model.fields,field_description:dms.field_dms_cabinet____last_update
+#: model:ir.model.fields,field_description:dms.field_dms_drawer____last_update
+#: model:ir.model.fields,field_description:dms.field_dms_folder____last_update
+#: model:ir.model.fields,field_description:dms.field_dms_scan____last_update
+#: model:ir.model.fields,field_description:dms.field_dms_search____last_update
+#: model:ir.model.fields,field_description:dms.field_dms_secrecy____last_update
+#: model:ir.model.fields,field_description:dms.field_dms_settings____last_update
+#: model:ir.model.fields,field_description:dms.field_dms_tag____last_update
+#: model:ir.model.fields,field_description:dms.field_folder_share____last_update
+#: model:ir.model.fields,field_description:dms.field_ir_attachment____last_update
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_share____last_update
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_type____last_update
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_version____last_update
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_version_list____last_update
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_version_upload____last_update
+#: model:ir.model.fields,field_description:dms.field_mail_activity____last_update
+#: model:ir.model.fields,field_description:dms.field_report_dms_attachments_summary_report____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_attachment_summary_report__write_uid
+#: model:ir.model.fields,field_description:dms.field_dms_cabinet__write_uid
+#: model:ir.model.fields,field_description:dms.field_dms_drawer__write_uid
+#: model:ir.model.fields,field_description:dms.field_dms_folder__write_uid
+#: model:ir.model.fields,field_description:dms.field_dms_scan__write_uid
+#: model:ir.model.fields,field_description:dms.field_dms_search__write_uid
+#: model:ir.model.fields,field_description:dms.field_dms_secrecy__write_uid
+#: model:ir.model.fields,field_description:dms.field_dms_settings__write_uid
+#: model:ir.model.fields,field_description:dms.field_dms_tag__write_uid
+#: model:ir.model.fields,field_description:dms.field_folder_share__write_uid
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_share__write_uid
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_type__write_uid
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_version__write_uid
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_version_list__write_uid
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_version_upload__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_attachment_summary_report__write_date
+#: model:ir.model.fields,field_description:dms.field_dms_cabinet__write_date
+#: model:ir.model.fields,field_description:dms.field_dms_drawer__write_date
+#: model:ir.model.fields,field_description:dms.field_dms_folder__write_date
+#: model:ir.model.fields,field_description:dms.field_dms_scan__write_date
+#: model:ir.model.fields,field_description:dms.field_dms_search__write_date
+#: model:ir.model.fields,field_description:dms.field_dms_secrecy__write_date
+#: model:ir.model.fields,field_description:dms.field_dms_settings__write_date
+#: model:ir.model.fields,field_description:dms.field_dms_tag__write_date
+#: model:ir.model.fields,field_description:dms.field_folder_share__write_date
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_share__write_date
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_type__write_date
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_version__write_date
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_version_list__write_date
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_version_upload__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: dms
+#: model:ir.model.fields.selection,name:dms.selection__dms_folder__dashboard_graph_period__month
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_search
+msgid "Last month"
+msgstr "الشهر الماضي"
+
+#. module: dms
+#: model:ir.model.fields.selection,name:dms.selection__dms_folder__dashboard_graph_period__week
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_search
+msgid "Last week"
+msgstr "الاسبوع الماضي"
+
+#. module: dms
+#: model:ir.model.fields.selection,name:dms.selection__dms_folder__dashboard_graph_period__year
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_search
+msgid "Last year"
+msgstr "العام الماضي"
+
+#. module: dms
+#. openerp-web
+#: code:addons/dms/static/src/xml/dashboard_templates.xml:0
+#, python-format
+msgid "Latest 10 documents"
+msgstr "أحدث 10 وثائق"
+
+#. module: dms
+#: model:ir.model.fields.selection,name:dms.selection__dms_folder__dashboard_graph_type__line
+msgid "Line"
+msgstr "بند"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__locked
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__locked
+msgid "Locked"
+msgstr "مقفل"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__message_main_attachment_id
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__parent_folder_id
+#: model_terms:ir.ui.view,arch_db:dms.dms_folder_search
+msgid "Main folder"
+msgstr "المجلد الرئيسي"
+
+#. module: dms
+#: model:res.groups,name:dms.dms_group_manage_permissions
+msgid "Manage folder and file permissions"
+msgstr "إدارة صلاحيات المجلدات والملفات"
+
+#. module: dms
+#: code:addons/dms/controllers/dashboard.py:0
+#, python-format
+msgid "March"
+msgstr "مارس"
+
+#. module: dms
+#: code:addons/dms/controllers/dashboard.py:0
+#, python-format
+msgid "May"
+msgstr "مايو"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__message_has_error
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__message_ids
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__message_ids
+msgid "Messages"
+msgstr "رسائل"
+
+#. module: dms
+#: code:addons/dms/controllers/dashboard.py:0
+#, python-format
+msgid "Monday"
+msgstr "الإثنين"
+
+#. module: dms
+#: model:ir.model.fields.selection,name:dms.selection__dms_folder__dashboard_graph_group__month
+msgid "Month"
+msgstr "الشهر"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__my_activity_date_deadline
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي لنشاطي"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_search
+msgid "My Documents"
+msgstr "مستنداتي"
+
+#. module: dms
+#: model:ir.actions.act_window,name:dms.dms_folder_action_my_favorite
+#: model:ir.model.fields,field_description:dms.field_dms_folder__is_favorite
+#: model:ir.ui.menu,name:dms.dms_folder_menu_my_favorite
+msgid "My favorite"
+msgstr "تفضيلاتي"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_cabinet__name
+#: model:ir.model.fields,field_description:dms.field_dms_drawer__name
+#: model:ir.model.fields,field_description:dms.field_dms_folder__name
+#: model:ir.model.fields,field_description:dms.field_dms_search__name
+#: model:ir.model.fields,field_description:dms.field_dms_secrecy__name
+#: model:ir.model.fields,field_description:dms.field_dms_settings__name
+#: model:ir.model.fields,field_description:dms.field_dms_tag__name
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_type__name
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_version_upload__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: dms
+#: code:addons/dms/controllers/main.py:0
+#, python-format
+msgid "New Directory"
+msgstr "دليل جديد"
+
+#. module: dms
+#: model:ir.model,name:dms.model_ir_attachment_version
+msgid "New version"
+msgstr "نسخة جديدة"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__activity_date_deadline
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__activity_summary
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__activity_type_id
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: dms
+#: code:addons/dms/controllers/dashboard.py:0
+#, python-format
+msgid "November"
+msgstr "نوفمبر"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__message_needaction_counter
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__documents_count
+msgid "Number of Documents"
+msgstr "عدد الوثائق"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__folders_count
+msgid "Number of Sub Folders"
+msgstr "عدد المجلدات"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.dms_folder_form
+msgid "Number of documents"
+msgstr "عدد الوثائق"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__message_has_error_counter
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: dms
+#: model:ir.model.fields,help:dms.field_dms_folder__message_needaction_counter
+#: model:ir.model.fields,help:dms.field_ir_attachment__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: dms
+#: model:ir.model.fields,help:dms.field_dms_folder__message_has_error_counter
+#: model:ir.model.fields,help:dms.field_ir_attachment__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل مع خطأ التسليم"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.dms_folder_form
+msgid "Number of sub folders"
+msgstr "عدد المجلدات"
+
+#. module: dms
+#: model:ir.model.fields,help:dms.field_dms_folder__message_unread_counter
+#: model:ir.model.fields,help:dms.field_ir_attachment__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل غير المقروءة"
+
+#. module: dms
+#: code:addons/dms/controllers/dashboard.py:0
+#, python-format
+msgid "October"
+msgstr "أكتوبر"
+
+#. module: dms
+#: model:ir.model.fields,help:dms.field_dms_folder__alias_force_thread_id
+msgid ""
+"Optional ID of a thread (record) to which all incoming messages will be "
+"attached, even if they did not reply to it. If set, this will disable the "
+"creation of new records completely."
+msgstr ""
+"معرف اختياري لمناقشة (سجل) سيتم إرفاق كافة الرسائل الواردة به، حتى لو لم "
+"يردوا عليه. إذا تم تعيين قيمة له، سيعطل هذا إنشاء السجلات الجديدة بالكامل."
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.attachment_summary_report_form
+msgid "Other options"
+msgstr "خيارات أخرى"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__alias_user_id
+msgid "Owner"
+msgstr "المالك"
+
+#. module: dms
+#. openerp-web
+#: code:addons/dms/static/src/xml/attachment_preview.xml:0
+#, python-format
+msgid "PDF controls"
+msgstr "ضوابط PDF"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__alias_parent_model_id
+msgid "Parent Model"
+msgstr "الكائن الأصل"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__alias_parent_thread_id
+msgid "Parent Record Thread ID"
+msgstr "معرف مناقشة السجل الأصلي"
+
+#. module: dms
+#: model:ir.model.fields,help:dms.field_dms_folder__alias_parent_model_id
+msgid ""
+"Parent model holding the alias. The model holding the alias reference is not"
+" necessarily the model given by alias_model_id (example: project "
+"(parent_model) and task (model))"
+msgstr ""
+"الكائن الأب الذي يحتفظ بلقب البريد الإلكتروني. الكائن الذي يحتفظ بالإشارة "
+"إلى لقب البريد الإلكتروني لا يشترط بالضرورة أن يكون هو الكائن المحدد في "
+"الحقل alias_model_id (مثال: المشروع (الكائن الأب) والمهمة (الكائن))"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__dashboard_graph_period
+#: model_terms:ir.ui.view,arch_db:dms.attachment_summary_report_form
+msgid "Period"
+msgstr "الفترة"
+
+#. module: dms
+#: model:ir.model.fields,help:dms.field_dms_folder__alias_contact
+msgid ""
+"Policy to post a message on the document using the mailgateway.\n"
+"- everyone: everyone can post\n"
+"- partners: only authenticated partners\n"
+"- followers: only followers of the related document or members of following channels\n"
+msgstr ""
+"سياسة لنشر رسالة على المستند باستخدام بوابة البريد الإلكتروني.\n"
+"- الجميع: يمكن للجميع النشر\n"
+"- الشركاء: الشركاء المعتمدون فقط\n"
+"- المتابعون: فقط متابعو الوثيقة ذات الصلة أو أعضاء القنوات التالية.\n"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.attachment_summary_report_form
+msgid "Print the report as PDF"
+msgstr "اطبع التقرير بصيغة PDF"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__alias_force_thread_id
+msgid "Record Thread ID"
+msgstr "معرف مناقشة السجل"
+
+#. module: dms
+#: model:ir.actions.act_window,name:dms.folder_2_attachment_action_graph
+msgid "Report of the documents in the folder"
+msgstr "‫تقرير الوثائق‬ للمجلّد"
+
+#. module: dms
+#: model:ir.ui.menu,name:dms.dms_report_menu
+msgid "Reports"
+msgstr "التقارير"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__activity_user_id
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__activity_user_id
+msgid "Responsible User"
+msgstr "المسؤول"
+
+#. module: dms
+#: code:addons/dms/controllers/dashboard.py:0
+#, python-format
+msgid "Saturday"
+msgstr "السبت"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_scan__scan_documents
+msgid "Scan documents"
+msgstr "مسح المستندات"
+
+#. module: dms
+#: model:ir.actions.act_window,name:dms.dms_search_action
+#: model:ir.ui.menu,name:dms.dms_search_menu
+#: model_terms:ir.ui.view,arch_db:dms.dms_search_view_form
+msgid "Search"
+msgstr "بحث"
+
+#. module: dms
+#: model:ir.actions.act_window,name:dms.dms_secrecy_action
+#: model:ir.model,name:dms.model_dms_secrecy
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__secrecy_id
+#: model:ir.ui.menu,name:dms.dms_secrecy_menu
+msgid "Secrecy"
+msgstr "درجات السرية"
+
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__doc_expiry_date
+msgid "Attachment Expiration Date"
+msgstr "تاريخ انتهاء المرفق"
+
+
+#. module: dms
+#. openerp-web
+#: code:addons/dms/static/src/xml/attachment_preview.xml:0
+#: code:addons/dms/static/src/xml/attachment_preview.xml:0
+#: code:addons/dms/static/src/xml/attachment_preview.xml:0
+#, python-format
+msgid "Select"
+msgstr "اختيار"
+
+#. module: dms
+#: code:addons/dms/models/ir_attachment.py:0
+#, python-format
+msgid "Send Email"
+msgstr "إرسال بريد إلكتروني"
+
+#. module: dms
+#: model:res.groups,name:dms.group_dms_send_mail
+msgid "Send documents by email"
+msgstr "إرسال الوثائق عن طريق البريد الإلكتروني"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_form
+msgid "Send with email"
+msgstr "أرسل بالبريد الإلكتروني"
+
+#. module: dms
+#: code:addons/dms/controllers/dashboard.py:0
+#, python-format
+msgid "September"
+msgstr "سبتمبر"
+
+#. module: dms
+#: model:ir.ui.menu,name:dms.dms_settings_menu
+#: model:res.groups,name:dms.group_dms_manager
+#: model_terms:ir.ui.view,arch_db:dms.dms_folder_kanban
+msgid "Settings"
+msgstr "الإعدادات"
+
+#. module: dms
+#: model:mail.activity.type,name:dms.mail_ir_attachment_share
+msgid "Share document"
+msgstr "مشاركة المستندات"
+
+#. module: dms
+#: model:mail.activity.type,name:dms.mail_dms_folder_share
+msgid "Share folder"
+msgstr "مشاركة المجلدات"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.dms_folder_form
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_form
+msgid "Share with an employee"
+msgstr "شارك مع موظف"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_share_view_form
+msgid "Share with employees"
+msgstr "مشاركة مع الموظفين"
+
+#. module: dms
+#: model:ir.actions.act_window,name:dms.folder_share_action
+#: model:ir.actions.act_window,name:dms.ir_attachment_share_action
+#: model_terms:ir.ui.view,arch_db:dms.folder_share_view_form
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_share_view_form
+msgid "Share with other employees"
+msgstr "مشاركة مع الموظفين"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_kanban
+msgid "Show copies"
+msgstr "عرض النسخ"
+
+#. module: dms
+#: model:ir.actions.act_window,name:dms.ir_attachment_version_list_action
+msgid "Show versions"
+msgstr "عرض النسخ"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__size
+msgid "Size"
+msgstr "الحجم"
+
+#. module: dms
+#. openerp-web
+#: code:addons/dms/static/src/xml/attachment_preview.xml:0
+#, python-format
+msgid "Sorry ! This type of document cannot be displayed"
+msgstr "عذراً، لا يمكن عرض هذا النوع من المستندات!"
+
+#. module: dms
+#: model:ir.model.fields,help:dms.field_dms_folder__activity_state
+#: model:ir.model.fields,help:dms.field_ir_attachment__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "المخطط: الأنشطة المستقبلية."
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_version_upload__store_fname
+msgid "Stored Filename"
+msgstr "اسم الملف المخزن"
+
+#. module: dms
+#: model:ir.actions.act_window,name:dms.folder_2_subfolder_action
+#: model:ir.model.fields,field_description:dms.field_dms_folder__child_ids
+#: model_terms:ir.ui.view,arch_db:dms.dms_folder_form
+msgid "Sub Folders"
+msgstr "المجلدات الفرعيه"
+
+#. module: dms
+#: code:addons/dms/controllers/dashboard.py:0
+#, python-format
+msgid "Sunday"
+msgstr "الأحد"
+
+#. module: dms
+#: model:ir.actions.act_window,name:dms.dms_tag_action
+#: model:ir.model,name:dms.model_dms_tag
+#: model:ir.model.fields,field_description:dms.field_dms_folder__tag_ids
+#: model:ir.ui.menu,name:dms.menu_dms_tag
+msgid "Tags"
+msgstr "الوسوم"
+
+#. module: dms
+#: code:addons/dms/wizard/ir_attachment_share.py:0
+#, python-format
+msgid ""
+"The employee %s cannot read this document because it contains a secret "
+"degree that is not available to him."
+msgstr ""
+"لا يمكن للموظف %s قراءة هذا المستند لأنه يحتوي على درجة من سرية ليست متاح له"
+
+#. module: dms
+#: model:ir.model.fields,help:dms.field_dms_folder__alias_model_id
+msgid ""
+"The model (Odoo Document Kind) to which this alias corresponds. Any incoming"
+" email that does not reply to an existing record will cause the creation of "
+"a new record of this model (e.g. a Project Task)"
+msgstr ""
+"الكائن (مستندات أودو) الذي يقترن معه هذا اللقب. أي رسالة واردة لا ترد على "
+"سجل موجود ستقوم بإنشاء سجل جديد من نفس نوع هذا الكائن (مثلًا: مهمة مشروع)"
+
+#. module: dms
+#: model:ir.model.fields,help:dms.field_dms_folder__alias_name
+msgid ""
+"The name of the email alias, e.g. 'jobs' if you want to catch emails for "
+"<jobs@example.odoo.com>"
+msgstr ""
+"اسم لقب البريد الإلكتروني، مثلًا: 'وظائف' إذا كنت جمع الرسائل المرسلة "
+"لـ<jobs@example.odoo.com>"
+
+#. module: dms
+#: model:ir.model.fields,help:dms.field_dms_folder__alias_user_id
+msgid ""
+"The owner of records created upon receiving emails on this alias. If this "
+"field is not set the system will attempt to find the right owner based on "
+"the sender (From) address, or will use the Administrator account if no "
+"system user is found for that address."
+msgstr ""
+"مالك السجلات المنشأة عند استلام رسائل بريد إلكتروني على هذا اللقب. إذا لم "
+"يتم تعيين قيمة لهذا الحقل، سيحاول النظام معرفة المالك الصحيح حسب عنوان "
+"البريد الإلكتروني للمرسل، أو سيستخدم حساب المشرف إذا لم يجد حسابًا مرتبطًا "
+"بعنوان البريد الإلكتروني."
+
+#. module: dms
+#: code:addons/dms/controllers/dashboard.py:0
+#, python-format
+msgid "Thursday"
+msgstr "الخميس"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_search
+msgid "Today"
+msgstr "اليوم"
+
+#. module: dms
+#. openerp-web
+#: code:addons/dms/static/src/xml/dashboard_templates.xml:0
+#, python-format
+msgid "Top 5 extension by documents"
+msgstr "أكثر 5 إمتدادات"
+
+#. module: dms
+#: code:addons/dms/controllers/dashboard.py:0
+#, python-format
+msgid "Tuesday"
+msgstr "الثلاثاء"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_attachment_summary_report__type_id
+#: model:ir.model.fields,field_description:dms.field_dms_folder__dashboard_graph_type
+#: model:ir.model.fields,field_description:dms.field_dms_search__document_type_id
+#: model_terms:ir.ui.view,arch_db:dms.attachments_summary_report
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_search
+msgid "Type"
+msgstr "النوع"
+
+#. module: dms
+#: model:ir.model.fields,help:dms.field_dms_folder__activity_exception_decoration
+#: model:ir.model.fields,help:dms.field_ir_attachment__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع النشاط الاستثنائي المسجل."
+
+#. module: dms
+#: code:addons/dms/models/dms.py:0
+#, python-format
+msgid "Undefined graph model for folder: %s"
+msgstr "نموذج رسم بياني غير معرف للمجلد: %s"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.dms_folder_form
+msgid "Unfollow"
+msgstr "إلغاء المتابعة"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__message_unread
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__message_unread_counter
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عداد الرسائل غير المقروءة"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_form
+msgid "Upload a new version"
+msgstr " رفع نسخة جديدة"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_version_upload_view_form
+msgid "Upload a new version of the file"
+msgstr "رفع نسخة جديدة من الملف"
+
+#. module: dms
+#: model:ir.actions.act_window,name:dms.ir_attachment_version_upload_action
+msgid "Upload new version"
+msgstr "رفع نسخة جديدة"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_version_upload_view_form
+msgid "Upload version"
+msgstr "رفع نسخة"
+
+#. module: dms
+#. openerp-web
+#: code:addons/dms/static/src/xml/attachment_preview.xml:0
+#, python-format
+msgid "Upload your file"
+msgstr "رفع ملفك"
+
+#. module: dms
+#. openerp-web
+#: code:addons/dms/static/src/xml/attachment_preview.xml:0
+#, python-format
+msgid "Uploading..."
+msgstr "جاري الرفع..."
+
+#. module: dms
+#: model:res.groups,name:dms.group_dms_user
+#: model_terms:ir.ui.view,arch_db:dms.attachments_summary_report
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_search
+msgid "User"
+msgstr "المستخدم"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_dms_folder__favorite_user_ids
+msgid "Users"
+msgstr "المستخدمون"
+
+#. module: dms
+#: model:ir.model.fields,field_description:dms.field_ir_attachment__version_ids
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_version__version
+#: model:ir.model.fields,field_description:dms.field_ir_attachment_version_list__version_ids
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_form
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_version_form
+#: model_terms:ir.ui.view,arch_db:dms.ir_attachment_version_list_view_form
+msgid "Version"
+msgstr "نسخة"
+
+#. module: dms
+#: code:addons/dms/controllers/dashboard.py:0
+#, python-format
+msgid "Wednesday"
+msgstr "الأربعاء"
+
+#. module: dms
+#: model:ir.model.fields.selection,name:dms.selection__dms_folder__dashboard_graph_group__week
+msgid "Week"
+msgstr "الأسبوع"
+
+#. module: dms
+#: code:addons/dms/controllers/dashboard.py:0
+#, python-format
+msgid "Week 1"
+msgstr "أسبوع 1"
+
+#. module: dms
+#: code:addons/dms/controllers/dashboard.py:0
+#, python-format
+msgid "Week 2"
+msgstr "أسبوع 2"
+
+#. module: dms
+#: code:addons/dms/controllers/dashboard.py:0
+#, python-format
+msgid "Week 3"
+msgstr "أسبوع 3"
+
+#. module: dms
+#: code:addons/dms/controllers/dashboard.py:0
+#, python-format
+msgid "Week 4"
+msgstr "أسبوع 4"
+
+#. module: dms
+#: code:addons/dms/models/dms.py:0
+#, python-format
+msgid "You don't have the access right to archive folders"
+msgstr "لا تمتلك صلاحيات الوصول لأرشفة المجلدات"
+
+#. module: dms
+#: model:ir.model,name:dms.model_dms_scan
+msgid "scan"
+msgstr "المسح الضوئي"
+
+#. module: dms
+#: model:ir.model,name:dms.model_dms_search
+msgid "search"
+msgstr "بحث"
+
+#. module: dms
+#: model:ir.actions.act_window,name:dms.ir_attachment_action_graph_report
+msgid "‫Documents summary report‬"
+msgstr "‫تقرير الوثائق‬"
+
+#. module: dms
+#: model:ir.attachment.type,name:dms.ir_attachment_type1
+msgid "‫Written documents‬"
+msgstr "وثائق مكتوبة"
+
+#. module: dms
+#: model:ir.attachment.type,name:dms.ir_attachment_type2
+msgid "‫‫Visual documents‬"
+msgstr "وثائق بصرية"
+
+#. module: dms
+#: model_terms:ir.ui.view,arch_db:dms.dms_folder_search
+msgid "Cabinet"
+msgstr "الخزانة"

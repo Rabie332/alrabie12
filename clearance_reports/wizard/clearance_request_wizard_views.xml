@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="clearance_request_wizard_form" model="ir.ui.view">
+        <field name="name">clearance.request.wizard.form</field>
+        <field name="model">clearance.request.wizard</field>
+        <field name="arch" type="xml">
+            <form delete="0" create="0">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="date_from" />
+                        </group>
+                        <group>
+                            <field name="date_to" />
+                        </group>
+                    </group>
+                     <group>
+                        <group>
+                            <field name="state" />
+                        </group>
+                           <group>
+                            <field name="partner_id" />
+                        </group>
+                    </group>
+                    <br />
+                    <br />
+                    <br />
+                    <button
+                        name="print_report"
+                        string="Print Clearance Report PDF"
+                        type="object"
+                        icon="fa-print"
+                        class="oe_highlight"
+                        style="margin-left:1%;margin-right:1%;"
+                    />
+                    <button
+                        name="print_clearance_xls_report"
+                        string="Print Clearance Report XLS"
+                        type="object"
+                        icon="fa-print"
+                        class="oe_highlight"
+                        style="margin-left:1%;margin-right:1%;"
+                    />
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="clearance_request_wizard_action" model="ir.actions.act_window">
+        <field name="name">Clearance request wizard</field>
+        <field name="res_model">clearance.request.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="clearance_request_wizard_form" />
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="clearance_request_wizard_menu"
+        name="Clearance request report"
+        sequence="10"
+        groups="clearance_reports.group_clearance_reports"
+        parent="clearance_reports.clearance_request_report_menu"
+        action="clearance_request_wizard_action"
+    />
+
+
+
+
+</odoo>

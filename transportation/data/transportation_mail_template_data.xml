@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+
+    <!-- Mail sent to request a rating for a clearance -->
+
+    <record id="transportation_rating_email_template" model="mail.template">
+        <field name="name">Clearance is closed</field>
+        <field name="model_id" ref="clearance.model_clearance_request" />
+        <field name="subject">Clearance ${object.name} is Closed</field>
+        <field
+            name="email_from"
+        >Customer Support Service &lt;${(object.company_id.email or user.email) | safe}&gt;</field>
+        <field name="partner_to">${object.partner_id.id}</field>
+        <field name="lang">${object.partner_id.lang}</field>
+        <field name="body_html" type="html">
+            <div style="margin: 0px; padding: 0px; font-size: 15px;">
+                % set access_token = object.rating_get_access_token()
+                <p style="margin: 0px; padding: 0px; font-size: 15px;">
+                    Dear customer,
+                    <br />
+                    <br />
+                    Clearance ${object.name} is closed.
+                </p>
+                <p>
+                    We hope that our solutions will satisfy you.
+                    <br />
+                    Tell us how you rate our service
+                </p>
+                <table
+                    border="0"
+                    cellpadding="0"
+                    cellspacing="0"
+                    width="590"
+                    summary="o_mail_notification"
+                    style="width:100%; margin: 32px 0px 32px 0px;"
+                >
+                    <tr>
+                        <td style="font-size: 13px;">
+                            <table style="width:100%;text-align:center;">
+                                <tr>
+                                    <td>
+                                        <a href="/rating/clearance/${access_token}/5">
+                                            <img
+                                                alt="Satisfied"
+                                                src="/rating/static/src/img/rating_5.png"
+                                                title="Satisfied"
+                                            />
+                                        </a>
+                                    </td>
+
+                                    <td>
+                                        <a href="/rating/clearance/${access_token}/3">
+                                            <img
+                                                alt="Not Satisfied"
+                                                src="/rating/static/src/img/rating_3.png"
+                                                title="Not Satisfied"
+                                            />
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="/rating/clearance/${access_token}/1">
+                                            <img
+                                                alt="Highly Dissatisfied"
+                                                src="/rating/static/src/img/rating_1.png"
+                                                title="Highly Dissatisfied"
+                                            />
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </field>
+    </record>
+
+</odoo>

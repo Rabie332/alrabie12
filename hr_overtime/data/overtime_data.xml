@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+
+    <!-- Overtime mandate Sequence -->
+
+    <record id="hr_overtime_mandate_sep" forcecreate="1" model="ir.sequence">
+        <field name="name">Overtime mandate Sequence</field>
+        <field name="code">hr.overtime.mandate.seq</field>
+        <field name="padding">5</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+    </record>
+
+     <record id="hr_overtime_seq" forcecreate="1" model="ir.sequence">
+        <field name="name">Overtime Sequence</field>
+        <field name="code">hr.overtime.seq</field>
+        <field name="padding">5</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+    </record>
+
+
+
+    <!-- Overtime mandate setting -->
+
+    <record id="hr_overtime_mandate_setting_data" model="hr.overtime.setting">
+        <field name="name">Overtime mandate setting</field>
+        <field name="hour_number_mandate">7</field>
+        <field name="type">mandate</field>
+
+    </record>
+
+     <record id="hr_overtime_setting_data" model="hr.overtime.setting">
+        <field name="name">Overtime Setting</field>
+        <field name="min_hour_day">2</field>
+        <field name="max_hour_day">3</field>
+        <field name="min_hour_weekend">2</field>
+         <field name="type">overtime</field>
+        <field name="max_hour_weekend">8</field>
+        <field name="max_hour_month">50</field>
+    </record>
+
+    <!-- hr_overtime mandate stages-->
+    <record id="hr_overtime_mandate_stage_send" model="request.stage">
+        <field name="name">Send</field>
+        <field name="res_model_id" ref="hr_overtime.model_hr_overtime_mandate" />
+        <field name="sequence">1</field>
+        <field name="res_model">hr.overtime.mandate</field>
+        <field name="state">draft</field>
+    </record>
+
+    <record id="hr_overtime_mandate_stage_validate" model="request.stage">
+        <field name="name">Validate</field>
+        <field name="res_model_id" ref="hr_overtime.model_hr_overtime_mandate" />
+        <field name="sequence">2</field>
+        <field name="res_model">hr.overtime.mandate</field>
+        <field name="state">in_progress</field>
+    </record>
+
+    <record id="hr_overtime_mandate_stage_done" model="request.stage">
+        <field name="name">Done</field>
+        <field name="res_model_id" ref="hr_overtime.model_hr_overtime_mandate" />
+        <field name="sequence">3</field>
+        <field name="res_model">hr.overtime.mandate</field>
+        <field name="state">done</field>
+    </record>
+
+    <record id="hr_overtime_mandate_stage_refused" model="request.stage">
+        <field name="name">Refused</field>
+        <field name="res_model_id" ref="hr_overtime.model_hr_overtime_mandate" />
+        <field name="sequence">4</field>
+        <field name="res_model">hr.overtime.mandate</field>
+        <field name="state">cancel</field>
+    </record>
+
+
+    <!-- hr_overtime stages-->
+    <record id="hr_overtime_stage_send" model="request.stage">
+        <field name="name">Send</field>
+        <field name="res_model_id" ref="hr_overtime.model_hr_overtime" />
+        <field name="sequence">1</field>
+        <field name="res_model">hr.overtime</field>
+        <field name="state">draft</field>
+    </record>
+
+    <record id="hr_overtime_stage_validate" model="request.stage">
+        <field name="name">Validate</field>
+        <field name="res_model_id" ref="hr_overtime.model_hr_overtime" />
+        <field name="sequence">2</field>
+        <field name="res_model">hr.overtime</field>
+        <field name="state">in_progress</field>
+    </record>
+
+    <record id="hr_overtime_stage_done" model="request.stage">
+        <field name="name">Done</field>
+        <field name="res_model_id" ref="hr_overtime.model_hr_overtime" />
+        <field name="sequence">3</field>
+        <field name="res_model">hr.overtime</field>
+        <field name="state">done</field>
+    </record>
+
+    <record id="hr_overtime_stage_refused" model="request.stage">
+        <field name="name">Refused</field>
+        <field name="res_model_id" ref="hr_overtime.model_hr_overtime" />
+        <field name="sequence">4</field>
+        <field name="res_model">hr.overtime</field>
+        <field name="state">cancel</field>
+    </record>
+
+
+
+</odoo>

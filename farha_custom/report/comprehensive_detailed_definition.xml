@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template
+        id="comprehensive_detailed_definition_report_inherit_farha_custom"
+        inherit_id="hr_salary_request.comprehensive_detailed_definition_report"
+    >
+        <xpath expr="//table[hasclass('table-bordered')]" position="replace" />
+        <xpath expr="//div[hasclass('header')]" position="replace">
+            <div class="header">
+                <div class="row">
+                    <div class="col-4" style="text-align: right;direction:rtl;">
+                        <br />
+                        <br />
+                        <p>التاريخ
+                            <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y/%m/%d')" />
+                            م
+                        </p>
+                    </div>
+                    <div class="col-4" />
+                    <div class="col-4">
+                        <img
+                            t-if="o.company_id.logo"
+                            t-att-src="image_data_uri(o.company_id.logo)"
+                            style="padding: height: 300px; width: 300px;"
+                        />
+                    </div>
+                </div>
+            </div>
+        </xpath>
+        <xpath expr="//div[hasclass('mt48')]" position="after">
+            <div class="row mt48">
+                <div class="col-6" />
+                <div class="col-6" style="text-align: center">
+                    <p style="text-align: center; font-size: 24px; font-weight: bold;">مدير الموارد البشرية
+                        <br />
+                        <t t-set="approver" t-value="o.get_approvals_by_stage('مسؤول الموارد البشرية')" />
+                        <t t-if="not approver">
+                            <t t-set="approver" t-value="o.get_approvals_by_stage('HR Responsible')" />
+                        </t>
+                        <t t-if="approver">
+                            <span t-esc="approver" />
+                        </t>
+                    </p>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

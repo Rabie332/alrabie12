@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="clearance_warehouse_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <div class="header" />
+                <t t-call="web.internal_layout">
+                    <div class="page">
+                        <div class="row">
+                            <div class="col-3">
+                            </div>
+                            <div class="col-6 text-center">
+                                <center>
+                                    <h1 style="color:#507298;padding-top:20px;">
+                                        <strong style="font-size: 25px;">
+                                           Warehouse Report
+                                        </strong>
+                                    </h1>
+                                </center>
+                            </div>
+                            <div class="col-3">
+                                <img
+                                    style="max-height:120px !important;"
+                                    width="80%"
+                                    t-att-src="'data:image/png;base64,%s' % to_text(user.company_id.sudo().logo)"
+                                />
+                            </div>
+                        </div>
+                        <div class="oe_structure" />
+                        <div class="col-12 text-center">
+                            <strong>Period :</strong>
+                            <span t-field="o.date_from" t-options="{'format': 'yyyy/MM/dd'}" />
+                            -
+                            <span t-field="o.date_to" t-options="{'format': 'yyyy/MM/dd'}" />
+                            <br />
+                            <br />
+                        </div>
+                        <br />
+                <div class="col-12 text-center">
+                        <table
+                                class="table table-bordered table-sm"
+                                style="font-size:14px; width:100%;padding: 0px 8px 0px 8px"
+                            >
+
+                            <thead>
+                                <tr
+                                        style=" background:#192d5a;; background: linear-gradient(#49708f, #293f50);color: #fff;width:100%"
+                                    >
+                                    <th width="20%">Customer Name</th>
+                                    <th width="10%">Container</th>
+                                    <th width="10%">Entry date</th>
+                                    <th width="10%">Exit date</th>
+                                    <th width="10%">Duration</th>
+                                    <th width="10%">Cost</th>
+                                    <th width="10%">Issuing Invoice</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr />
+                                <t t-foreach="get_lines(o)" t-as="line">
+                                      <t
+                                            t-set="product_setting"
+                                            t-value="request.env['clearance.product.invoice.setting'].search([('company_id', '=', line.shipping_order_id.clearance_request_id.company_id.id)], limit=1)"
+                                        />
+                                             <t
+                                            t-set="product_setting"
+                                            t-value="request.env['clearance.product.invoice.setting'].search([('company_id', '=', line.shipping_order_id.clearance_request_id.company_id.id)], limit=1)"
+                                        />
+                                        <t
+                                            t-set="product_setting_partner"
+                                            t-value="product_setting.line_ids.filtered(lambda line_setting: line.shipping_order_id.clearance_request_id.partner_id.id in line_setting.partner_ids.ids)"
+                                        />
+
+
+                                    <t t-if="product_setting_partner">
+                                        <t
+                                                t-set="free_warehousing_days"
+                                                t-value=" sum(product_setting_partner.mapped('free_warehousing_days'))"
+                                            />
+
+
+
+                                        <t t-if="line.shipping_order_id.transport_type == 'warehouse'">
+                                            <t t-set="entry_date" t-value="line.delivery_date" />
+                                            <t
+                                                    t-set="shipping_customer"
+                                                    t-value='request.env["shipping.order"].search([("shipping_order_id", "=", line.shipping_order_id.id), ("transport_type", "=", "customer"), ("state", "!=", "canceled")]).mapped("line_ids").filtered(
+                                lambda line_customer: line_customer.goods_id
+                                == line.goods_id
+                            )'
+                                                />
+                                            <t
+                                                    t-set="exit_date"
+                                                    t-value="shipping_customer[0].delivery_date if shipping_customer else ''"
+                                                />
+                                        </t>
+                                        <t t-else="">
+                                             <t
+                                                    t-set="entry_date"
+                                                    t-value="line.shipping_order_id.shipping_order_id.line_ids.filtered(
+                                lambda line_warehouse: line_warehouse.goods_id
+                                == line.goods_id
+                            )[0].delivery_date"
+                                                />
+                                            <t t-set="exit_date" t-value="line.delivery_date" />
+                                        </t>
+                                        <t
+                                                t-set="duration"
+                                                t-value="(exit_date - entry_date).days -  free_warehousing_days if exit_date else (datetime.date.today() - entry_date).days  -  free_warehousing_days"
+                                            />
+                                        <tr>
+                                            <td><span
+                                                        t-esc="line.shipping_order_id.clearance_request_id.partner_id.name"
+                                                    /></td>
+                                            <td><span
+                                                        t-esc="line.container_number if line.container_number else line.goods_id.truck_type_id.name"
+                                                    /></td>
+                                            <td><span t-esc="entry_date" /></td>
+                                            <td><span t-esc="exit_date" /></td>
+                                            <td><span t-esc="duration" /></td>
+                                            <td><span
+                                                        t-esc="product_setting.warehousing_product_id.lst_price * duration"
+                                                    /></td>
+                                            <td><t
+                                                        t-if="exit_date and line.shipping_order_id.clearance_request_id.state in ['delivery_done', 'close']"
+                                                    >Yes</t><t t-else="">No</t> </td>
+                                        </tr>
+                                    </t>
+
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

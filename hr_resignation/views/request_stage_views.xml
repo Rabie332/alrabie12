@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+     <record id="hr_resignation_stage_action" model="ir.actions.act_window">
+        <field name="name">Resignation Stages</field>
+        <field name="res_model">request.stage</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="domain">[('res_model_id.model', '=', 'hr.resignation')]</field>
+        <field name="context">{'default_res_model':'hr.resignation'}</field>
+    </record>
+
+    <menuitem
+        id="hr_resignation_stage_menu"
+        action="hr_resignation_stage_action"
+        groups="request.group_stages_manager"
+        name="Resignation Stages"
+        sequence="15"
+        parent="hr_resignation.hr_resignation_request_menu_root"
+    />
+</odoo>

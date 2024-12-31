@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <odoo>
+        <data>
+            <!-- Definition of the module category -->
+            <record id="module_category_employee_housing" model="ir.module.category">
+                <field name="name">Employee Housing</field>
+                <field name="description">Manage all aspects related to employee housing.</field>
+            </record>
+            <!-- Creating Security Group for Employee Housing -->
+            <record id="group_emp_housing_admin" model="res.groups">
+                <field name="name">Employee Housing Administrator</field>
+                <field name="category_id" ref="employee_housing.module_category_employee_housing"/>
+                <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            </record>
+        </data>
+    </odoo>
+</odoo>

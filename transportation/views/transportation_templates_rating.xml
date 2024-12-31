@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- External page : thanks message -->
+    <template id="rating_external_transportation_page_view" name="Rating Page Done">
+        <t t-call="web.layout">
+            <t t-set="head">
+                <link rel='stylesheet' href='/web/static/lib/bootstrap/css/bootstrap.css' />
+                <link rel='stylesheet' href='/web/static/lib/fontawesome/css/font-awesome.css' />
+            </t>
+            <div class="container">
+                <div class="text-center" style="margin-top:128px">
+                    <i
+                        class="fa fa-check-circle fa-5x text-success"
+                        role="img"
+                        aria-label="Thank you!"
+                        title="Thank you!"
+                    />
+                </div>
+                <h2 class="text-center">We appreciate your feedback</h2>
+                <div class="text-center">
+                    <a role="button" t-att-href="web_base_url" class="btn btn-primary">Go to our website
+                    </a>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <!-- External page: rate and submit feedback -->
+    <template id="rating_page_transportation_submit" name="Rating Page Submit">
+        <t t-call="web.layout">
+            <t t-set="head">
+                <link rel='stylesheet' href='/web/static/lib/bootstrap/css/bootstrap.css' />
+            </t>
+            <div class="container">
+                <div clas="row">
+                    <br />
+                    <br />
+                    <t t-if="rating.rating_text == 'satisfied'">
+                        <h1 class="text-center">Thanks! We appreciate your feedback</h1>
+                    </t>
+                    <br />
+                    <br />
+                    <br />
+                    <t t-if="rating.rating_text != 'satisfied'">
+                        <h1 class="text-center">Please write your notes and return the clearance to the team until it is
+                            repaired in the right way
+                        </h1>
+                    </t>
+                    <div class="float-right">
+                        <img t-attf-src='/rating/static/src/img/rating_#{rate}.png' t-att-alt="rate_name" />
+                    </div>
+                    <div>
+                        you are
+                        <b>
+                            <t t-if="rating.rating_text == 'satisfied'">
+                                Satisfied
+                            </t>
+                            <t t-if="rating.rating_text == 'not_satisfied'">
+                                Not Satisfied
+                            </t>
+                            <t t-if="rating.rating_text == 'highly_dissatisfied'">
+                                Highly Dissatisfied
+                            </t>
+                        </b>
+                        on our services of Transportation "<b t-esc="rating.res_name" />"
+                        <t t-if="rating.rated_partner_id">by<b t-esc="rating.rated_partner_id.name" />.
+                        </t>
+                    </div>
+                    <div class="clearfix" />
+                    <t t-if="rating.rating_text == 'satisfied'">
+
+                        <p style="margin-top:32px;">
+                            Would be great if you can provide more information.
+                        </p>
+                    </t>
+                    <t t-if="rating.rating_text != 'satisfied'">
+                        <p style="margin-top:32px;">
+                            You can write your feedback here.
+                        </p>
+                    </t>
+                    <form t-attf-action="/rating/clearance/#{token}/#{rate}/submit_feedback" method="post">
+                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+                        <textarea class="form-control" name="feedback" rows="8" t-att-value="rating.feedback" />
+                        <div>
+                            <button type="submit" class="btn btn-primary" style="margin-top:8px;">Send Feedback
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </t>
+    </template>
+
+</odoo>

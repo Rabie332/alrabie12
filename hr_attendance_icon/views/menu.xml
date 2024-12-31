@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <menuitem
+        name="Hr Attendance"
+        id="hr_attendance.menu_hr_attendance_root"
+        groups="hr_attendance.group_hr_attendance,hr_attendance.group_hr_attendance_kiosk"
+        web_icon="hr_attendance_icon,static/description/icon.png"
+        sequence="90"
+    />
+
+</odoo>

@@ -1,0 +1,3945 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hotel_reservation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-18 16:51+0000\n"
+"PO-Revision-Date: 2022-08-18 16:51+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/wizards/hotel_reservation_finish_wizard.py:0
+#, python-format
+msgid " and to change rent type  from %s to %s"
+msgstr " و تغير في النوع من %s  إلى %s  "
+
+#. module: hotel_reservation
+#: model:mail.template,subject:hotel_reservation.rating_hotel_reservation_email_template
+msgid "${object.company_id.name}: Satisfaction Survey"
+msgstr "${object.company_id.name}: استبيان الرضا"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid ""
+"<br/>\n"
+"\n"
+"                                                   <strong style=\"margin:5%;\">\n"
+"                                                        Corresponding to:\n"
+"                                                    </strong>"
+msgstr ""
+"<br/>\n"
+"\n"
+"                                                   <strong style=\"margin:5%;\">\n"
+"                                                        الموافق:\n"
+"                                                    </strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid ""
+"<br/>\n"
+"\n"
+"                                                   <strong style=\"margin:5%;\">\n"
+"                                                        Tax Number:\n"
+"                                                    </strong>"
+msgstr ""
+"<br/>\n"
+"\n"
+"                                                   <strong style=\"margin:5%;\">\n"
+"                                                        الرقم الضريبي:\n"
+"                                                    </strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+msgid ""
+"<br/>\n"
+"                                                             <strong style=\"margin:2%;\">Apartment:</strong>\n"
+"                                                              <br/>\n"
+"                                                             <strong style=\"margin:2%;\">Duration:</strong>\n"
+"                                                              <br/>\n"
+"                                                             <strong style=\"margin:2%;\">Discount:</strong>\n"
+"                                                              <br/>\n"
+"                                                             <strong style=\"margin:2%;\">Cost after discount:</strong>\n"
+"                                                              <br/>\n"
+"                                                             <strong style=\"margin:2%;\">Final cost:</strong>\n"
+"                                                             <br/>\n"
+"                                                             <strong style=\"margin:2%;\">Insurance:</strong>\n"
+"                                                             <br/>"
+msgstr ""
+"<br/>\n"
+"                                                             <strong style=\"margin:2%;\">الشقة:</strong>\n"
+"                                                              <br/>\n"
+"                                                             <strong style=\"margin:2%;\">المدة:</strong>\n"
+"                                                              <br/>\n"
+"                                                             <strong style=\"margin:2%;\">الخصم:</strong>\n"
+"                                                              <br/>\n"
+"                                                             <strong style=\"margin:2%;\">الضرائب والرسوم:</strong>\n"
+"                                                              <br/>\n"
+"                                                             <strong style=\"margin:2%;\">التكلفة النهائية:</strong>\n"
+"                                                             <br/>\n"
+"                                                             <strong style=\"margin:2%;\">التأمين:</strong>\n"
+"                                                             <br/>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid ""
+"<br/>\n"
+"                                                            <strong style=\"margin:7%;\">Total:</strong>\n"
+"                                                           <br/>\n"
+"                                                         <strong style=\"margin:7%;\">Final cost:</strong>\n"
+"                                                         <br/>\n"
+"                                                         <strong style=\"margin:7%;\">Insurance:</strong>\n"
+"                                                            <br/>"
+msgstr ""
+"<br/>\n"
+"                                                            <strong style=\"margin:7%;\">الاجمالي</strong>\n"
+"                                                           <br/>\n"
+"                                                         <strong style=\"margin:7%;\"> التكلفة النهائية:</strong>\n"
+"                                                         <br/>\n"
+"                                                         <strong style=\"margin:7%;\">التأمين:</strong>\n"
+"                                                            <br/>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+msgid ""
+"<br/>\n"
+"                                                           <strong style=\"margin:7%;\">Services:</strong>\n"
+"                                                           <br/>\n"
+"                                                            <strong style=\"margin:7%;\">Total:</strong>\n"
+"                                                           <br/>\n"
+"                                                           <strong style=\"margin:7%;\">Taxes and Fees:</strong>\n"
+"                                                           <br/>\n"
+"                                                           <strong style=\"margin:7%;\">Payments:</strong>\n"
+"                                                           <br/>"
+msgstr ""
+"<br/>\n"
+"                                                           <strong style=\"margin:7%;\">الخدمات</strong>\n"
+"                                                           <br/>\n"
+"                                                            <strong style=\"margin:7%;\">الاجمالي</strong>\n"
+"                                                           <br/>\n"
+"                                                           <strong style=\"margin:7%;\"> الضرائب والرسوم </strong>\n"
+"                                                           <br/>\n"
+"                                                           <strong style=\"margin:7%;\">المقبوض</strong>\n"
+"                                                           <br/>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid ""
+"<br/>\n"
+"                            <strong>Company Registry:</strong>"
+msgstr ""
+"<br/>\n"
+"                            <strong> السجل التجاري:</strong>"
+
+#. module: hotel_reservation
+#: model:mail.template,body_html:hotel_reservation.mail_template_reservation_reminder_24hrs
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p>\n"
+"                        <left>Hello <strong>${object.partner_id.name}</strong>.\n"
+"                        </left>\n"
+"                    </p>\n"
+"                    <p>\n"
+"                        <left>Greetings from <strong>${object.company_id.name}\n"
+"                            Hotel</strong>.\n"
+"                        </left>\n"
+"                    </p>\n"
+"                    <p>This email is for reminding you that the Reservation at\n"
+"                        the <strong>${object.company_id.name} Hotel</strong>.\n"
+"                        % if object.company_id.partner_id.city:\n"
+"                        <strong>${object.company_id.partner_id.city}</strong>,\n"
+"                        % endif\n"
+"                        % if object.company_id.partner_id.country_id.name:\n"
+"                        <strong>\n"
+"                            ${object.company_id.partner_id.country_id.name}</strong>\n"
+"                        .\n"
+"                        % endif\n"
+"                        Your checkin has been confirmed on Date <strong>\n"
+"                            ${object.date_order}</strong>.\n"
+"                        Please find all the details regarding to the reservation\n"
+"                        as listed below:\n"
+"                    </p>\n"
+"                    <br/>\n"
+"                    <strong>Details :</strong>\n"
+"                    <br/>\n"
+"                    <p style=\"border-left: 1px solid #8e0000; margin-left: 30px;\">\n"
+"                        &amp;nbsp;&amp;nbsp;Name Of Guest :\n"
+"                        <strong>${object.partner_id.name}</strong>\n"
+"                        <br/>\n"
+"                        &amp;nbsp;&amp;nbsp;Date Of Arrival :\n"
+"                        <strong>${object.checkin}</strong>\n"
+"                        <br/>\n"
+"                        &amp;nbsp;&amp;nbsp;Date Of Departure :\n"
+"                        <strong>${object.checkout}</strong>\n"
+"                        <br/>\n"
+"                        &amp;nbsp;&amp;nbsp;Reservation Number :\n"
+"                        <strong>${object.reservation_no}</strong>\n"
+"                        <br/>\n"
+"                        &amp;nbsp;&amp;nbsp;Number Of Persons : <strong>\n"
+"                        ${object.adults}\n"
+"                    </strong> Adults and <strong>${object.children}</strong> Childrens\n"
+"                        <br/>\n"
+"                    </p>\n"
+"                    &amp;nbsp;&amp;nbsp;\n"
+"                    <strong>Room Rate Per Night:</strong>\n"
+"                    <br/>\n"
+"                    <br/>\n"
+"                    <table border=\"1\" cellpadding=\"4\" style=\"margin-left: 30px;\">\n"
+"                        <tr>\n"
+"                            <th>Room No</th>\n"
+"                            <th>Amount</th>\n"
+"                        </tr>\n"
+"                        %for line in object.reservation_line:\n"
+"                        <tr>\n"
+"                            <td>${line.room_id.product_id.name}</td>\n"
+"                            <td>${line.room_id.product_id.list_price}</td>\n"
+"                        </tr>\n"
+"                        %endfor\n"
+"                    </table>\n"
+"                    <br/>\n"
+"                    <p>We would appreciate it if you could let us know in case\n"
+"                        there are any changes in your schedule or program.\n"
+"                        Please inform us immediately, so that we can refund your\n"
+"                        money according to Hotel policies.\n"
+"                        We are sure that you will find our services\n"
+"                        satisfactory. We look forward to providing you quality\n"
+"                        services at our hotel.\n"
+"                    </p>\n"
+"                    <br/>\n"
+"                    <strong>Best Regards</strong>,\n"
+"                    <br/>\n"
+"                    <br/>\n"
+"                    <strong>Reservations Team</strong>\n"
+"                    <br/>\n"
+"                    [<strong>${object.company_id.name} Hotel</strong>]\n"
+"                    <br/>\n"
+"                    % if object.company_id.partner_id.street:\n"
+"                    <strong>${object.company_id.partner_id.street}</strong>\n"
+"                    <br/>\n"
+"                    % endif\n"
+"                    % if object.company_id.partner_id.city:\n"
+"                    <strong>${object.company_id.partner_id.city}</strong>,\n"
+"                    <br/>\n"
+"                    % endif\n"
+"                    % if object.company_id.partner_id.country_id.name:\n"
+"                    <strong>\n"
+"                        ${object.company_id.partner_id.country_id.name}</strong>\n"
+"                    ,\n"
+"                    <br/>\n"
+"                    % endif\n"
+"                    <br/>\n"
+"                    % if object.company_id.partner_id.website:\n"
+"                    <strong>${object.company_id.partner_id.website}</strong>\n"
+"                    <br/>\n"
+"                    % endif\n"
+"                </p>\n"
+"            </div>\n"
+"        "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p>\n"
+"                        <left>مرحبا <strong>${object.partner_id.name}</strong>.\n"
+"                        </left>\n"
+"                    </p>\n"
+"                    <p>\n"
+"                        <left>أطيب تحيات من فندق <strong>${object.company_id.name}\n"
+"                            </strong>.\n"
+"                        </left>\n"
+"                    </p>\n"
+"                    <p>هذا البريد الإلكتروني لتذكيرك بأن الحجز في فندق\n"
+"                         <strong>${object.company_id.name} </strong>.\n"
+"                        % if object.company_id.partner_id.city:\n"
+"                        <strong>${object.company_id.partner_id.city}</strong>,\n"
+"                        % endif\n"
+"                        % if object.company_id.partner_id.country_id.name:\n"
+"                        <strong>\n"
+"                            ${object.company_id.partner_id.country_id.name}</strong>\n"
+"                        .\n"
+"                        % endif\n"
+"                        تم تأكيد تسجيل الوصول الخاص بك في التاريخ <strong>\n"
+"                            ${object.date_order}</strong>.\n"
+"                        الرجاء الاطلاع على كافة التفاصيل المتعلقة بالحجز\n"
+"                        كما هو موضح أدناه:\n"
+"                    </p>\n"
+"                    <br/>\n"
+"                    <strong>تفاصيل:</strong>\n"
+"                    <br/>\n"
+"                    <p style=\"border-left: 1px solid #8e0000; margin-left: 30px;\">\n"
+"                        &amp;nbsp;&amp;nbsp;اسم الضيف:\n"
+"                        <strong>${object.partner_id.name}</strong>\n"
+"                        <br/>\n"
+"                        &amp;nbsp;&amp;nbsp;موعد الوصول :\n"
+"                        <strong>${object.checkin}</strong>\n"
+"                        <br/>\n"
+"                        &amp;nbsp;&amp;nbsp;موعد المغادرة :\n"
+"                        <strong>${object.checkout}</strong>\n"
+"                        <br/>\n"
+"                        &amp;nbsp;&amp;nbsp;رقم العقد:\n"
+"                        <strong>${object.reservation_no}</strong>\n"
+"                        <br/>\n"
+"                        &amp;nbsp;&amp;nbsp;عدد الأشخاص : <strong>\n"
+"                        ${object.adults}\n"
+"                    </strong> المرافقون و <strong>${object.children}</strong> الأطفال\n"
+"                        <br/>\n"
+"                    </p>\n"
+"                    &amp;nbsp;&amp;nbsp;\n"
+"                    <strong>سعر الغرفة في الليلة:</strong>\n"
+"                    <br/>\n"
+"                    <br/>\n"
+"                    <table border=\"1\" cellpadding=\"4\" style=\"margin-left: 30px;\">\n"
+"                        <tr>\n"
+"                            <th>رقم الغرفة</th>\n"
+"                            <th>المبلغ</th>\n"
+"                        </tr>\n"
+"                        %for line in object.reservation_line:\n"
+"                        %for line2 in line.reserve:\n"
+"                        <tr>\n"
+"                            <td>${line2.product_id.name}</td>\n"
+"                            <td>${line2.product_id.list_price}</td>\n"
+"                        </tr>\n"
+"                        %endfor\n"
+"                        %endfor\n"
+"                    </table>\n"
+"                    <br/>\n"
+"                    <p>سنكون ممتنين إذا أمكنك إعلامنا في هذه الحالة\n"
+"                         هناك أي تغييرات في جدولك أو برنامجك.\n"
+"                         يرجى إبلاغنا على الفور ، حتى نتمكن من استرداد أموالك وفقًا لسياسات الفندق.\n"
+"                         نحن على يقين من أنك ستجد خدماتنا مرضية. نتطلع إلى تقديم خدمات عالية الجودة لك في فندقنا.\n"
+"                    </p>\n"
+"                    <br/>\n"
+"                    <strong>مع أطيب التحيات</strong>,\n"
+"                    <br/>\n"
+"                    <br/>\n"
+"                    <strong>فريق الحجز في فندق</strong>\n"
+"                    <br/>\n"
+"                    <strong>${object.company_id.name} </strong>\n"
+"                    <br/>\n"
+"                    % if object.company_id.partner_id.street:\n"
+"                    <strong>${object.company_id.partner_id.street}</strong>\n"
+"                    <br/>\n"
+"                    % endif\n"
+"                    % if object.company_id.partner_id.city:\n"
+"                    <strong>${object.company_id.partner_id.city}</strong>,\n"
+"                    <br/>\n"
+"                    % endif\n"
+"                    % if object.company_id.partner_id.country_id.name:\n"
+"                    <strong>\n"
+"                        ${object.company_id.partner_id.country_id.name}</strong>\n"
+"                    ,\n"
+"                    <br/>\n"
+"                    % endif\n"
+"                    <br/>\n"
+"                    % if object.company_id.partner_id.website:\n"
+"                    <strong>${object.company_id.partner_id.website}</strong>\n"
+"                    <br/>\n"
+"                    % endif\n"
+"                </p>\n"
+"            </div>\n"
+"        "
+
+#. module: hotel_reservation
+#: model:mail.template,body_html:hotel_reservation.email_template_hotel_reservation
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p>Hello <strong>${object.partner_id.name}</strong>,\n"
+"                    </p>\n"
+"                    <p>This is to confirm your booking for a room at\n"
+"                        the <strong>${object.company_id.name} Hotel</strong>,\n"
+"                        % if object.company_id.partner_id.city:\n"
+"                        <strong>${object.company_id.partner_id.city}</strong>,\n"
+"                        % endif\n"
+"                        % if object.company_id.partner_id.country_id.name:\n"
+"                        <strong>\n"
+"                            ${object.company_id.partner_id.country_id.name}</strong>\n"
+"                        .\n"
+"                        % endif\n"
+"                        On behalf of the hotel, we would like to express our\n"
+"                        gratitude to you for choosing our services.\n"
+"                        Please find all the details regarding the confirmation\n"
+"                        of the reservation on Date <strong>\n"
+"                            ${format_datetime(object.date_order,tz=user.tz,dt_format='%Y-%m-%d %H:%M:%S')}\n"
+"                        </strong> are listed below:\n"
+"                    </p>\n"
+"                    <strong>Details :</strong>\n"
+"                    <br/>\n"
+"                    <p style=\"border-left: 1px solid #8e0000; margin-left: 30px;\">\n"
+"                        Name Of Guest :\n"
+"                        <strong>${object.partner_id.name}</strong>\n"
+"                        <br/>\n"
+"                        Date Of Arrival :\n"
+"                        <strong>\n"
+"                            ${format_datetime(object.checkin,tz=user.tz, dt_format='%Y-%m-%d %H:%M:%S')}\n"
+"                        </strong>\n"
+"                        <br/>\n"
+"                        Date Of Departure :\n"
+"                        <strong>\n"
+"                            ${format_datetime(object.checkout,tz=user.tz, dt_format='%Y-%m-%d %H:%M:%S')}\n"
+"                        </strong>\n"
+"                        <br/>\n"
+"                        Reservation Number :\n"
+"                        <strong>${object.reservation_no}</strong>\n"
+"                        <br/>\n"
+"                        Number Of Persons : <strong>${object.adults}</strong> Adults\n"
+"                        and <strong>${object.children}</strong> Childrens\n"
+"                        <br/>\n"
+"                    </p>\n"
+"                    <strong>Room Rate Per Night:</strong>\n"
+"                    <br/>\n"
+"                    <br/>\n"
+"                    <table border=\"1\" cellpadding=\"4\" style=\"margin-left: 30px;\">\n"
+"                        <tr>\n"
+"                            <th>Room No</th>\n"
+"                            <th>Amount</th>\n"
+"                        </tr>\n"
+"                        %for line in object.reservation_line:\n"
+"                        <tr>\n"
+"                            <td>${line.room_id.product_id.name}</td>\n"
+"                            <td>${line.room_id.product_id.list_price}</td>\n"
+"                        </tr>\n"
+"                        %endfor\n"
+"                    </table>\n"
+"                    <br/>\n"
+"                    <p>We would appreciate it if you could let us know in case\n"
+"                        there are any changes in your schedule or program.\n"
+"                        In case you require check-in facilities at an earlier\n"
+"                        time due to flight changes or any other reasons,\n"
+"                        kindly inform us. We are sure that you will find our\n"
+"                        services satisfactory. In case you need to cancel\n"
+"                        your reservation, please Reply or Call us within 24\n"
+"                        hours before the day of the check-in. We look forward\n"
+"                        to providing you quality services at our hotel.\n"
+"                    </p>\n"
+"                    <br/>\n"
+"                    <strong>Kind Regards</strong>,\n"
+"                    <br/>\n"
+"                    <br/>\n"
+"                    <strong>Reservations Team</strong>\n"
+"                    <br/>\n"
+"                    [<strong>${object.company_id.name} Hotel</strong>]\n"
+"                    <br/>\n"
+"                    % if object.company_id.partner_id.street:\n"
+"                    <strong>${object.company_id.partner_id.street}</strong>\n"
+"                    <br/>\n"
+"                    % endif\n"
+"                    % if object.company_id.partner_id.city:\n"
+"                    <strong>${object.company_id.partner_id.city}</strong>,\n"
+"                    <br/>\n"
+"                    % endif\n"
+"                    % if object.company_id.partner_id.country_id.name:\n"
+"                    <strong>\n"
+"                        ${object.company_id.partner_id.country_id.name}</strong>\n"
+"                    ,\n"
+"                    <br/>\n"
+"                    % endif\n"
+"                    <br/>\n"
+"                    % if object.company_id.partner_id.website:\n"
+"                    <strong>${object.company_id.partner_id.website}</strong>\n"
+"                    <br/>\n"
+"                    % endif\n"
+"                </p>\n"
+"            </div>\n"
+"        "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    <p>مرحبا <strong>${object.partner_id.name}</strong>,\n"
+"                    </p>\n"
+"                    <p>تم تأكيد حجزك لغرفة في فندق\n"
+"                        <strong>${object.company_id.name}</strong>,\n"
+"                        % if object.company_id.partner_id.city:\n"
+"                        <strong>${object.company_id.partner_id.city}</strong>,\n"
+"                        % endif\n"
+"                        % if object.company_id.partner_id.country_id.name:\n"
+"                        <strong>\n"
+"                            ${object.company_id.partner_id.country_id.name}</strong>\n"
+"                        .\n"
+"                        % endif\n"
+"نيابة عن الفندق ، نود أن نعبر عن\n"
+"                         امتنان لكم لاختياركم خدماتنا.\n"
+"                         يرجى التحقق من جميع التفاصيل المتعلقة بالتأكيد\n"
+"                         من الحجز في التاريخ <strong>\n"
+"                            ${format_datetime(object.date_order,tz=user.tz,dt_format='%Y-%m-%d %H:%M:%S')}\n"
+"                        </strong>\n"
+"                    </p>\n"
+"                    <strong>التفاصيل :</strong>\n"
+"                    <br/>\n"
+"                    <p style=\"border-left: 1px solid #8e0000; margin-left: 30px;\">\n"
+"                        اسم الضيف:\n"
+"                        <strong>${object.partner_id.name}</strong>\n"
+"                        <br/>\n"
+"                       موعد الوصول :\n"
+"                        <strong>\n"
+"                            ${format_datetime(object.checkin,tz=user.tz, dt_format='%Y-%m-%d %H:%M:%S')}\n"
+"                        </strong>\n"
+"                        <br/>\n"
+"                        موعد المغادرة :\n"
+"                        <strong>\n"
+"                            ${format_datetime(object.checkout,tz=user.tz, dt_format='%Y-%m-%d %H:%M:%S')}\n"
+"                        </strong>\n"
+"                        <br/>\n"
+"                        رقم العقد:\n"
+"                        <strong>${object.reservation_no}</strong>\n"
+"                        <br/>\n"
+"                        عدد الأشخاص : <strong>${object.adults}</strong> بالغين\n"
+"                        و <strong>${object.children}</strong> أطفال\n"
+"                        <br/>\n"
+"                    </p>\n"
+"                    <strong>سعر الغرفة في الليلة:</strong>\n"
+"                    <br/>\n"
+"                    <br/>\n"
+"                    <table border=\"1\" cellpadding=\"4\" style=\"margin-left: 30px;\">\n"
+"                        <tr>\n"
+"                            <th>رقم الغرفة</th>\n"
+"                            <th>الكمية</th>\n"
+"                        </tr>\n"
+"                       %for line in object.reservation_line:\n"
+"                        <tr>\n"
+"                            <td>${line.room_id.product_id.name}</td>\n"
+"                            <td>${line.room_id.product_id.list_price}</td>\n"
+"                        </tr>\n"
+"                        %endfor\n"
+"                    </table>\n"
+"                    <br/>\n"
+"                    <p>سنكون ممتنين إذا أمكنك إعلامنا في حالة\n"
+"                         هناك أي تغييرات في جدولك أو برنامجك.\n"
+"                         في حال كنت بحاجة إلى مرافق تسجيل الوصول في وقت سابق\n"
+"                         الوقت بسبب تغييرات الرحلة أو أي أسباب أخرى ،\n"
+"                         يرجى إعلامنا. نحن على يقين من أنك ستجد \n"
+"                         خادمتنا مرضية. في حال احتجت إلى الإلغاء\n"
+"                         الحجز الخاص بك ، يرجى الرد أو الاتصال بنا في غضون 24\n"
+"                          ساعات من يوم تسجيل الوصول. نتطلع\n"
+"                         لتزويدك بخدمات عالية الجودة في فندقنا.\n"
+"                    </p>\n"
+"                    <br/>\n"
+"                    <strong>أطيب التحيات</strong>,\n"
+"                    <br/>\n"
+"                    <br/>\n"
+"                    <strong>فريق الحجوزات</strong>\n"
+"                    <br/>\n"
+"                    [<strong>فندق ${object.company_id.name}</strong>]\n"
+"                    <br/>\n"
+"                    % if object.company_id.partner_id.street:\n"
+"                    <strong>${object.company_id.partner_id.street}</strong>\n"
+"                    <br/>\n"
+"                    % endif\n"
+"                    % if object.company_id.partner_id.city:\n"
+"                    <strong>${object.company_id.partner_id.city}</strong>,\n"
+"                    <br/>\n"
+"                    % endif\n"
+"                    % if object.company_id.partner_id.country_id.name:\n"
+"                    <strong>\n"
+"                        ${object.company_id.partner_id.country_id.name}</strong>\n"
+"                    ,\n"
+"                    <br/>\n"
+"                    % endif\n"
+"                    <br/>\n"
+"                    % if object.company_id.partner_id.website:\n"
+"                    <strong>${object.company_id.partner_id.website}</strong>\n"
+"                    <br/>\n"
+"                    % endif\n"
+"                </p>\n"
+"            </div>\n"
+"        "
+
+#. module: hotel_reservation
+#: model:mail.template,body_html:hotel_reservation.rating_hotel_reservation_email_template
+msgid ""
+"<div>\n"
+"    % set access_token = object.rating_get_access_token()\n"
+"    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"width:100%; margin:0px auto;\">\n"
+"    <tbody>\n"
+"         % set mail_info = ctx['mail_info']\n"
+"        <tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
+"            % if mail_info['partner_name']:\n"
+"                Hello  ${mail_info['partner_name']},<br/><br/>\n"
+"            % else:\n"
+"                Hello,<br/><br/>\n"
+"            % endif\n"
+"            Please take a moment to rate our services related to the Reservation <strong>${mail_info['reservation_no']}</strong>\n"
+"        </td></tr>\n"
+"        <tr><td style=\"text-align: center;\">\n"
+"            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" summary=\"o_mail_notification\" style=\"width:100%; margin: 32px 0px 32px 0px;\">\n"
+"                <tr><td style=\"font-size: 13px;\">\n"
+"                    <strong>Tell us how you feel about our service</strong><br/>\n"
+"                    <span style=\"text-color: #888888\">(click on one of these smileys)</span>\n"
+"                </td></tr>\n"
+"                <tr><td style=\"font-size: 13px;\">\n"
+"                    <table style=\"width:100%;text-align:center;\">\n"
+"                        <tr>\n"
+"                            <td>\n"
+"                                <a href=\"/rate/${access_token}/5\">\n"
+"                                    <img alt=\"Satisfied\" src=\"/rating/static/src/img/rating_5.png\" title=\"Satisfied\"/>\n"
+"                                </a>\n"
+"                            </td>\n"
+"                            <td>\n"
+"                                <a href=\"/rate/${access_token}/3\">\n"
+"                                    <img alt=\"Not satisfied\" src=\"/rating/static/src/img/rating_3.png\" title=\"Not satisfied\"/>\n"
+"                                </a>\n"
+"                            </td>\n"
+"                            <td>\n"
+"                                <a href=\"/rate/${access_token}/1\">\n"
+"                                    <img alt=\"Highly Dissatisfied\" src=\"/rating/static/src/img/rating_1.png\" title=\"Highly Dissatisfied\"/>\n"
+"                                </a>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                    </table>\n"
+"                </td></tr>\n"
+"            </table>\n"
+"        </td></tr>\n"
+"        <tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
+"            We appreciate your feedback. It helps us to improve continuously.\n"
+"        </td></tr>\n"
+"    </tbody>\n"
+"    </table>\n"
+"</div>\n"
+"            "
+msgstr ""
+"<div>\n"
+"    % set access_token = object.rating_get_access_token()\n"
+"    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"width:100%; margin:0px auto;\">\n"
+"    <tbody>\n"
+"         % set mail_info = ctx['mail_info']\n"
+"        <tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
+"            % if mail_info['partner_name']:\n"
+"                مرحبًا  ${mail_info['partner_name']},<br/><br/>\n"
+"            % else:\n"
+"                مرحبًا,<br/><br/>\n"
+"            % endif\n"
+"            يرجى قضاء بعض الوقت لتقييم خدماتنا المتعلقة بالحجز <strong>${mail_info['reservation_no']}</strong>\n"
+"        </td></tr>\n"
+"        <tr><td style=\"text-align: center;\">\n"
+"            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" summary=\"o_mail_notification\" style=\"width:100%; margin: 32px 0px 32px 0px;\">\n"
+"                <tr><td style=\"font-size: 13px;\">\n"
+"                    <strong>أخبرنا عن رأيك تجاه خدمتنا</strong><br/>\n"
+"                    <span style=\"text-color: #888888\">(انقر فوق أحد هذه الوجوه)</span>\n"
+"                </td></tr>\n"
+"                <tr><td style=\"font-size: 13px;\">\n"
+"                    <table style=\"width:100%;text-align:center;\">\n"
+"                        <tr>\n"
+"                            <td>\n"
+"                                <a href=\"/rate/${access_token}/5\">\n"
+"                                    <img alt=\"راضٍ\" src=\"/rating/static/src/img/rating_5.png\" title=\"راضٍ\"/>\n"
+"                                </a>\n"
+"                            </td>\n"
+"                            <td>\n"
+"                                <a href=\"/rate/${access_token}/3\">\n"
+"                                    <img alt=\"غير راضٍ\" src=\"/rating/static/src/img/rating_3.png\" title=\"غير راضٍ\"/>\n"
+"                                </a>\n"
+"                            </td>\n"
+"                            <td>\n"
+"                                <a href=\"/rate/${access_token}/1\">\n"
+"                                    <img alt=\"مستاء تمامًا\" src=\"/rating/static/src/img/rating_1.png\" title=\"مستاء تمامًا\"/>\n"
+"                                </a>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                    </table>\n"
+"                </td></tr>\n"
+"            </table>\n"
+"        </td></tr>\n"
+"        <tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
+"            نحن نقدر ملاحظاتك. فهي  تساعدنا على التحسين المستمر.\n"
+"        </td></tr>\n"
+"    </tbody>\n"
+"    </table>\n"
+"</div>\n"
+"            "
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.apartment_view_kanban
+msgid "<i class=\"fa fa-bed\" style=\"color: #FFF;padding: 4px;\" title=\"Occupied\"/>"
+msgstr "<i class=\"fa fa-bed\" style=\"color: #FFF;padding: 4px;\" title=\"محجوزة\"/>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.apartment_view_kanban
+msgid ""
+"<i class=\"fa fa-paint-brush\" style=\"color: #FFF;padding: 4px;\" "
+"title=\"Clean\"/>"
+msgstr ""
+"<i class=\"fa fa-paint-brush\" style=\"color: #FFF;padding: 4px;\" "
+"title=\"نظيفة\"/>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.apartment_view_kanban
+msgid ""
+"<i class=\"fa fa-paint-brush\" style=\"color: #FFF;padding: 4px;\" "
+"title=\"Not Clean\"/>"
+msgstr ""
+"<i class=\"fa fa-paint-brush\" style=\"color: #FFF;padding: 4px;\" "
+"title=\"غير نظيفة\"/>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.apartment_view_kanban
+msgid ""
+"<i class=\"fa fa-pencil-square-o\" style=\"color: #FFF;padding: 4px;\" "
+"title=\"Create/Edit\"/>"
+msgstr ""
+"<i class=\"fa fa-pencil-square-o\" style=\"color: #FFF;padding: 4px;\" "
+"title=\"إنشاء/تعديل\"/>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.apartment_view_kanban
+msgid ""
+"<i class=\"fa fa-user-times\" style=\"color: #FFF;padding: 4px;\" "
+"title=\"Available\"/>"
+msgstr ""
+"<i class=\"fa fa-user-times\" style=\"color: #FFF;padding: 4px;\" "
+"title=\"متوفرة\"/>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.apartment_view_kanban
+msgid ""
+"<i class=\"fa fa-wrench\" style=\"color: #FFF;padding: 4px;\" "
+"title=\"Maintenance\"/>"
+msgstr ""
+"<i class=\"fa fa-wrench\" style=\"color: #FFF;padding: 4px;\" title=\"في "
+"الصيانة\"/>"
+
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__return_insurance_amount
+msgid "Return Insurance Amount"
+msgstr "مبلغ التأمين المسترد"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__total_inbound_payments
+msgid "Total Inbound Payments"
+msgstr "إجمالي المدفوعات الواردة"
+
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__total_outbound_payments
+msgid "Total Outbound Payments"
+msgstr "إجمالي المدفوعات الصادرة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__related_invoice_ids
+msgid "Related Invoices"
+msgstr "الفواتير ذات الصلة"
+
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid ""
+"<span class=\"o_stat_text text-danger\" attrs=\"{'invisible': [('is_send_shomoos', '=', True)]}\">Shomoos Service\n"
+"                            </span>\n"
+"                            <span class=\"o_stat_text text-success\" attrs=\"{'invisible': [('is_send_shomoos', '=', False)]}\">Shomoos Service\n"
+"                            </span>"
+msgstr ""
+"<span class=\"o_stat_text text-danger\" attrs=\"{'invisible': [('is_send_shomoos', '=', True)]}\">خدمة شموس</span>\n"
+"                           <span class=\"o_stat_text text-success\" attrs=\"{'invisible': [('is_send_shomoos', '=', False)]}\">خدمة شموس</span>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid ""
+"<span class=\"o_stat_text text-danger\" attrs=\"{'invisible': [('is_send_tourism', '=', True)]}\">Tourism Platform Service\n"
+"                            </span>\n"
+"                            <span class=\"o_stat_text text-success\" attrs=\"{'invisible': [('is_send_tourism', '=', False)]}\">Tourism Platform Service\n"
+"                            </span>"
+msgstr ""
+"<span class=\"o_stat_text text-danger\" attrs=\"{'invisible': [('is_send_tourism', '=', True)]}\">خدمة منصة السياحة</span>\n"
+"                           <span class=\"o_stat_text text-success\" attrs=\"{'invisible': [('is_send_tourism', '=', False)]}\">خدمة منصة السياحة</span>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.res_partner_view_form
+msgid "<span class=\"o_stat_text\">Reservations</span>"
+msgstr "<span class=\"o_stat_text\">الحجوزات</span>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid ""
+"<span class=\"oe_inline\" attrs=\"{'invisible': [('rent', '!=', 'daily')]}\">Night\n"
+"                                    </span>\n"
+"                                    <span class=\"oe_inline\" attrs=\"{'invisible': [('rent', '!=', 'monthly')]}\">Month\n"
+"                                    </span>\n"
+"                                    <span class=\"oe_inline\" attrs=\"{'invisible': [('rent', '!=', 'hours')]}\">Hour\n"
+"                                    </span>"
+msgstr ""
+"<span class=\"oe_inline\" attrs=\"{'invisible': [('rent', '!=', 'daily')]}\">ليلة\n"
+"                                        </span>\n"
+"                                          <span class=\"oe_inline\" attrs=\"{'invisible': [('rent', '!=', 'monthly')]}\">شهر\n"
+"                                        </span>\n"
+"                                        <span class=\"oe_inline\" attrs=\"{'invisible': [('rent', '!=', 'hours')]}\">ساعة\n"
+"                                        </span>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_folio_form_inherited
+msgid ""
+"<span class=\"oe_inline\" attrs=\"{'invisible': [('rent', '!=', 'daily')]}\">Night\n"
+"                            </span>\n"
+"                            <span class=\"oe_inline\" attrs=\"{'invisible': [('rent', '!=', 'monthly')]}\">Month\n"
+"                            </span>\n"
+"                            <span class=\"oe_inline\" attrs=\"{'invisible': [('rent', '!=', 'hours')]}\">Hour\n"
+"                            </span>"
+msgstr ""
+"<span class=\"oe_inline\" attrs=\"{'invisible': [('rent', '!=', 'daily')]}\">ليلة\n"
+"                            </span>\n"
+"                              <span class=\"oe_inline\" attrs=\"{'invisible': [('rent', '!=', 'monthly')]}\">شهر\n"
+"                            </span>\n"
+"                            <span class=\"oe_inline\" attrs=\"{'invisible': [('rent', '!=', 'hours')]}\">ساعة\n"
+"                      </span>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.hotel_reservation_finish_wizard_form_view
+msgid ""
+"<span class=\"oe_inline\" attrs=\"{'invisible': [('rent', '!=', 'daily')]}\">Day\n"
+"                        </span>\n"
+"                          <span class=\"oe_inline\" attrs=\"{'invisible': [('rent', '!=', 'monthly')]}\">Month\n"
+"                        </span>\n"
+"                        <span class=\"oe_inline\" attrs=\"{'invisible': [('rent', '!=', 'hours')]}\">Hour\n"
+"                        </span>"
+msgstr ""
+"<span class=\"oe_inline\" attrs=\"{'invisible': [('rent', '!=', 'daily')]}\">يوم\n"
+"                        </span>\n"
+"                          <span class=\"oe_inline\" attrs=\"{'invisible': [('rent', '!=', 'monthly')]}\">شهر\n"
+"                        </span>\n"
+"                        <span class=\"oe_inline\" attrs=\"{'invisible': [('rent', '!=', 'hours')]}\">ساعة\n"
+"                        </span>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.res_partner_view_form
+msgid ""
+"<span style=\"color:red\" attrs=\"{'invisible': ['|', ('company_type', '!=', 'person'), ('is_guest', '=', False)]}\">\n"
+"                    Important warning: Please check the accuracy and decency in writing notes as the user who wrote\n"
+"                    these notes is responsible for his observation.\n"
+"                </span>"
+msgstr ""
+"<span style=\"color:red\" attrs=\"{'invisible': ['|', ('company_type', '!=', 'person'), ('is_guest', '=', False)]}\">\n"
+"                    تنبيه هام : يرجى تحري الدقة واللياقة في كتابة الملاحظات حيث أن مدون الملاحظة مسؤول عن ملاحظته .\n"
+"                </span>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid "<span>Identification ID</span>"
+msgstr "<span>بطاقة هوية مدنية</span>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid "<span>Passport ID</span>"
+msgstr "<span>جواز السفر</span>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid "<span>Residence Cart</span>"
+msgstr "<span>بطاقة إقامة</span>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid "<span>Vat</span>"
+msgstr "<span>معرف ضريبي</span>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+msgid ""
+"<strong style=\"font-size:12px;\">\n"
+"                                                      Booking Summary\n"
+"                                                    </strong>\n"
+"                                                     <br/>"
+msgstr ""
+"<strong style=\"font-size:15px;\">\n"
+"                                                      ملخص الحجز\n"
+"                                                    </strong>\n"
+"                                                     <br/>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid ""
+"<strong style=\"font-size:13px;\">\n"
+"                                                      Rent Contract\n"
+"                                                    </strong>"
+msgstr ""
+"<strong style=\"font-size:15px;\">\n"
+"                                                      عقد إيجار\n"
+"                                                    </strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid ""
+"<strong style=\"margin:2%;\">Contract: </strong>\n"
+"                                                           <br/>"
+msgstr ""
+"<strong style=\"margin:2%;\">العقد: </strong>\n"
+"                                                           <br/>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid ""
+"<strong style=\"margin:2%;\">Customer: </strong>\n"
+"                                                           <br/>"
+msgstr ""
+"<strong style=\"margin:2%;\">العميل: </strong>\n"
+"                                                           <br/>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+msgid ""
+"<strong style=\"margin:2%;\">Date End Contract:</strong>\n"
+"                                                             <br/>\n"
+"                                                           <strong style=\"margin:2%;\"> Corresponding to:</strong>"
+msgstr ""
+"<strong style=\"margin:2%;\">نهاية العقد:</strong>\n"
+"                                                             <br/>\n"
+"                                                           <strong style=\"margin:2%;\"> الموافق:</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid ""
+"<strong style=\"margin:2%;\">Date End Contract:</strong>\n"
+"                                                             <br/>\n"
+"                                                           <strong style=\"margin:2%;\"> Corresponding to:</strong>\n"
+"                                                             <br/>\n"
+"                                                             <strong style=\"margin:2%;\">Apartment:</strong>\n"
+"                                                              <br/>\n"
+"                                                             <strong style=\"margin:2%;\">Duration:</strong>\n"
+"                                                              <br/>\n"
+"                                                             <strong style=\"margin:2%;\">Discount:</strong>\n"
+"                                                              <br/>\n"
+"                                                             <strong style=\"margin:2%;\">Payments:</strong>"
+msgstr ""
+"<strong style=\"margin:2%;\"> نهاية العقد :</strong>\n"
+"                                                             <br/>\n"
+"                                                           <strong style=\"margin:2%;\"> الموافق:</strong>\n"
+"                                                             <br/>\n"
+"                                                             <strong style=\"margin:2%;\">الشقة:</strong>\n"
+"                                                              <br/>\n"
+"                                                             <strong style=\"margin:2%;\">المدة:</strong>\n"
+"                                                              <br/>\n"
+"                                                             <strong style=\"margin:2%;\">الخصم:</strong>\n"
+"                                                              <br/>\n"
+"                                                             <strong style=\"margin:2%;\">المدفوع:</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid ""
+"<strong style=\"margin:2%;\">Rooms History: </strong>\n"
+"                                                           <br/>"
+msgstr ""
+"<strong style=\"margin:2%;\">سجل تغيير الغرف: </strong>\n"
+"                                                           <br/>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid ""
+"<strong style=\"margin:2%;\">Rooms: </strong>\n"
+"                                                           <br/>"
+msgstr ""
+"<strong style=\"margin:2%;\">الغرف: </strong>\n"
+"                                                           <br/>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid ""
+"<strong style=\"margin:5%;\">\n"
+"                                                        Date:\n"
+"                                                    </strong>"
+msgstr ""
+"<strong style=\"margin:5%;\">\n"
+"                                                        التاريخ:\n"
+"                                                    </strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid "<strong style=\"margin:5%;\">Reservation No</strong>"
+msgstr "<strong style=\"margin:5%;\">رقم العقد</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid ""
+"<strong style=\"margin:7%;\">Customer name:</strong>\n"
+"                                                           <br/>\n"
+"                                                             <strong style=\"margin:7%;\">Proof type:</strong>\n"
+"                                                           <br/>\n"
+"                                                           <strong style=\"margin:7%;\">Mobile:</strong>\n"
+"                                                           <br/>"
+msgstr ""
+"<strong style=\"margin:7%;\"> اسم العميل :</strong>\n"
+"                                                           <br/>\n"
+"                                                             <strong style=\"margin:7%;\"> نوع اللإثبات :</strong>\n"
+"                                                           <br/>\n"
+"                                                           <strong style=\"margin:7%;\">جوال:</strong>\n"
+"                                                           <br/>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+msgid ""
+"<strong style=\"margin:7%;\">Date Start Contract:</strong>\n"
+"                                                           <br/>\n"
+"                                                           <strong style=\"margin:7%;\"> Corresponding to:</strong>\n"
+"                                                           <br/>"
+msgstr ""
+"<strong style=\"margin:7%;\">بداية العقد:</strong>\n"
+"                                                           <br/>\n"
+"                                                           <strong style=\"margin:7%;\"> الموافق:</strong>\n"
+"                                                           <br/>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid ""
+"<strong style=\"margin:7%;\">Date Start Contract:</strong>\n"
+"                                                           <br/>\n"
+"                                                           <strong style=\"margin:7%;\"> Corresponding to:</strong>\n"
+"                                                           <br/>\n"
+"                                                           <strong style=\"margin:7%;\">Rental type:</strong>"
+msgstr ""
+"<strong style=\"margin:7%;\"> بداية العقد:</strong>\n"
+"                                                           <br/>\n"
+"                                                           <strong style=\"margin:7%;\">الموافق:</strong>\n"
+"                                                           <br/>\n"
+"                                                           <strong style=\"margin:7%;\"> نوع الإيجار:</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid ""
+"<strong style=\"margin:7%;\">Nationality:</strong>\n"
+"                                                           <br/>\n"
+"                                                             <strong style=\"margin:7%;\">Proof number:</strong>\n"
+"                                                           <br/>\n"
+"                                                                <strong style=\"margin:7%;\">Guests Number:</strong>\n"
+"                                                           <br/>"
+msgstr ""
+"<strong style=\"margin:7%;\">الجنسية:</strong>\n"
+"                                                           <br/>\n"
+"                                                             <strong style=\"margin:7%;\"> رقم الإثبات:</strong>\n"
+"                                                           <br/>\n"
+"                                                                <strong style=\"margin:7%;\"> عدد المرافقين:</strong>\n"
+"                                                           <br/>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+msgid "<strong style=\"margin:7%;\">Rental type:</strong>"
+msgstr "<strong style=\"margin:7%;\">نوع الإيجار:</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_checkin_qweb
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_checkout_qweb
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_room_reservation_qweb
+msgid "<strong>#No</strong>"
+msgstr "<strong>#الرقم</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+msgid "<strong>Balance:</strong>"
+msgstr "<strong>رصيد العميل:</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid "<strong>Change Date</strong>"
+msgstr "<strong>تاريخ تغيير الغرفة</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid "<strong>Check In</strong>"
+msgstr "<strong>تاريخ الدخول</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid "<strong>Check out</strong>"
+msgstr "<strong>تاريخ الخروج</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_checkin_qweb
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_room_reservation_qweb
+msgid "<strong>Check-In Date</strong>"
+msgstr "<strong>تاريخ الوصول</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_checkout_qweb
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_room_reservation_qweb
+msgid "<strong>Check-Out Date</strong>"
+msgstr "<strong>تاريخ المغادرة</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid "<strong>Conditions</strong>"
+msgstr "<strong>الشروط</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+msgid "<strong>Credit</strong>"
+msgstr "<strong>المدين</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid "<strong>Date Extension</strong>"
+msgstr "<strong>تاريخ التمديد</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+msgid "<strong>Date</strong>"
+msgstr "<strong>التاريخ</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+msgid "<strong>Debit</strong>"
+msgstr "<strong>الدائن</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_checkin_qweb
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_checkout_qweb
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_maxroom_qweb
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_room_reservation_qweb
+msgid "<strong>From:</strong>"
+msgstr "<strong>من:</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_checkin_qweb
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_checkout_qweb
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_room_reservation_qweb
+msgid "<strong>Guest Name</strong>"
+msgstr "<strong>اسم الضيف</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid "<strong>Name</strong>"
+msgstr "<strong>الإسم</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+msgid "<strong>No Bond</strong>"
+msgstr "<strong>رقم السند</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_maxroom_qweb
+msgid "<strong>No of Times used</strong>"
+msgstr "<strong>عدد مرات الاستخدام</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid "<strong>Old Room</strong>"
+msgstr "<strong>الغرفة القديمة</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+msgid "<strong>Operation</strong>"
+msgstr "<strong>العملية</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid "<strong>Peak Days</strong>"
+msgstr "<strong>أيام الذروة</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid "<strong>Peak Price</strong>"
+msgstr "<strong>سعر الذروة</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_checkin_qweb
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_checkout_qweb
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_room_reservation_qweb
+msgid "<strong>Rent</strong>"
+msgstr "<strong>نوع الايجار</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid "<strong>Reservation Date</strong>"
+msgstr "<strong>تاريخ الحجز</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_checkin_qweb
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_checkout_qweb
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_room_reservation_qweb
+msgid "<strong>Reservation Type</strong>"
+msgstr "<strong>نوع الحجز</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid ""
+"<strong>Responsible Signature: --------------</strong>\n"
+"                                                             <br/>"
+msgstr ""
+"<strong> توقيع المسؤول: --------------</strong>\n"
+"                                                             <br/>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_room_reservation_qweb
+msgid "<strong>Room Details</strong>"
+msgstr "<strong>تفاصيل الغرفة</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_checkin_qweb
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_checkout_qweb
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_maxroom_qweb
+msgid "<strong>Room No</strong>"
+msgstr "<strong>رقم الغرفة</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid "<strong>Room Price</strong>"
+msgstr "<strong>سعر الغرفة</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_checkin_qweb
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_checkout_qweb
+msgid "<strong>Room Type</strong>"
+msgstr "<strong>نوع الغرفة</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid "<strong>Room</strong>"
+msgstr "<strong>الغرفة</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_checkin_qweb
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_checkout_qweb
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_room_reservation_qweb
+msgid "<strong>State</strong>"
+msgstr "<strong>الحالة</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid "<strong>Tenant Signature: --------------</strong>"
+msgstr "<strong> توقيع المستأجر: --------------</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_checkin_qweb
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_checkout_qweb
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_maxroom_qweb
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_room_reservation_qweb
+msgid "<strong>To:</strong>"
+msgstr "<strong>إلى:</strong>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_checkin_qweb
+msgid "<u>Check-In Guest List</u>"
+msgstr "<u>قائمة الضيوف اللذين وصلو</u>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_checkout_qweb
+msgid "<u>Check-Out Guest List</u>"
+msgstr "<u>قائمة الضيوف المغادرين</u>"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_room_reservation_qweb
+msgid "<u>Reservation List</u>"
+msgstr "<u>قائمة الحجز</u>"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__message_needaction
+msgid "Action Needed"
+msgstr "الإجراءات اللازمة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__res_partner__age_group__adult
+msgid "Adult"
+msgstr "بالغ"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__adults_ids
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__adults_ids
+#: model:ir.model.fields,field_description:hotel_reservation.field_quick_room_reservation__adults
+msgid "Adults"
+msgstr "المرافقون"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#, python-format
+msgid "Adults must be more than 0"
+msgstr "يجب أن يكون عدد المرافقون أكبر من 0"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_partner__age_group
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_users__age_group
+msgid "Age Group"
+msgstr "الفئة العمرية"
+
+#. module: hotel_reservation
+#: model:reservation.visit.reason,name:hotel_reservation.hotel_reservation_source_agoda
+msgid "Agoda site"
+msgstr "موقع أجودا"
+
+#. module: hotel_reservation
+#: model:hotel.reservation.source,name:hotel_reservation.hotel_reservation_source_air_bnb
+msgid "Airbnb"
+msgstr "Airbnb"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_check_wizard__is_all
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_finish_wizard__is_all
+msgid "All"
+msgstr "الكل"
+
+#. module: hotel_reservation
+#: model:ir.model,name:hotel_reservation.model_hotel_reservation_wizard
+msgid "Allow to generate a reservation"
+msgstr "السماح بانشاء الحجز"
+
+#. module: hotel_reservation
+#: model:ir.model,name:hotel_reservation.model_wizard_make_folio
+msgid "Allow to generate the folio"
+msgstr "السماح بإنشاء السجل"
+
+#. module: hotel_reservation
+#: model:hotel.reservation.source,name:hotel_reservation.hotel_reservation_source_almosafer
+msgid "Almosafer website"
+msgstr "موقع المسافر"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "Apartment / Client"
+msgstr "الشقة / العميل"
+
+#. module: hotel_reservation
+#: model:ir.ui.menu,name:hotel_reservation.apartments_menu_root
+msgid "Apartments"
+msgstr "الشقق والتسكين"
+
+#. module: hotel_reservation
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__hotel_room_reservation_line__state__assigned
+msgid "Assigned"
+msgstr "إسناد"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.hotel_reservation_wizard_form_view
+msgid "Association Reports"
+msgstr "تقرير حجز الفندق"
+
+#. module: hotel_reservation
+#: model:reservation.visit.reason,name:hotel_reservation.reservation_visit_reason_athlete
+msgid "Athlete"
+msgstr "رياضي"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: hotel_reservation
+#: model:ir.model,name:hotel_reservation.model_report_hotel_reservation_report_checkin_qweb
+msgid "Auxiliar to get the check in report"
+msgstr "مألوف للحصول على تقرير الدخول"
+
+#. module: hotel_reservation
+#: model:ir.model,name:hotel_reservation.model_report_hotel_reservation_report_checkout_qweb
+msgid "Auxiliar to get the check out report"
+msgstr "مألوف للحصول على تقرير المغادرة"
+
+#. module: hotel_reservation
+#: model:ir.model,name:hotel_reservation.model_report_hotel_reservation_report_maxroom_qweb
+#: model:ir.model,name:hotel_reservation.model_report_hotel_reservation_report_room_reservation_qweb
+msgid "Auxiliar to get the room report"
+msgstr "مألوف للحصول على تقرير الغرفة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_folio__balance
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__balance
+msgid "Balance"
+msgstr "رصيد العميل"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#, python-format
+msgid ""
+"Before choosing a room,\n"
+" You have to select a Check in date or a Check out  date in the reservation form."
+msgstr ""
+"قبل اختيار الغرفة ،\n"
+"  يجب عليك تحديد تاريخ الوصول أو تاريخ المغادرة في نموذج الحجز."
+
+#. module: hotel_reservation
+#: model:res.groups,name:hotel_reservation.group_billing_responsible
+msgid "Billing Responsible"
+msgstr "مدير الفواتير"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_partner__birthday
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_users__birthday
+msgid "Birthday"
+msgstr "تاريخ الميلاد"
+
+#. module: hotel_reservation
+#: model:reservation.visit.reason,name:hotel_reservation.reservation_visit_reason_booking_guest
+msgid "Booking Guest"
+msgstr "نزيل حجز"
+
+#. module: hotel_reservation
+#: model:ir.actions.report,name:hotel_reservation.hotel_booking_folio_summary
+#: model:ir.actions.report,name:hotel_reservation.hotel_booking_summary
+msgid "Booking Summary"
+msgstr "ملخص الحجز"
+
+#. module: hotel_reservation
+#: model:hotel.reservation.source,name:hotel_reservation.hotel_reservation_source_booking_site
+msgid "Booking site"
+msgstr "موقع بوكينج"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.hotel_reservation_cancel_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.hotel_reservation_check_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.hotel_reservation_finish_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.hotel_reservation_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.make_folio_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.quick_room_reservation_form_view
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.reservation_room_change_wizard_form_view
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: hotel_reservation
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__hotel_reservation__state__cancel
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_search
+msgid "Cancel"
+msgstr "ملغى"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__reason_cancel
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_cancel_wizard__reason_cancel
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.hotel_reservation_cancel_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+#, python-format
+msgid "Cancel Reason"
+msgstr "سبب الإلغاء"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "Cancel Reservation"
+msgstr "إلغاء الحجز"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.apartment_view_kanban
+msgid "Capacity:"
+msgstr "سعة:"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__change_date
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_history__change_date
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_wizard__change_date
+msgid "Change Date"
+msgstr "تاريخ تغيير الغرفة"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/wizards/reservation_change_room_wizard.py:0
+#, python-format
+msgid "Change Date should be greater or equal to  date start reservation"
+msgstr "يجب أن يكون تاريخ التغيير أكبر من تاريخ بدء الحجز أو مساويًا له"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/wizards/reservation_change_room_wizard.py:0
+#, python-format
+msgid "Change Date should be greater or equal to today"
+msgstr "يجب أن يكون تاريخ التغيير أكبر من اليوم أو مساويًا له"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/wizards/reservation_change_room_wizard.py:0
+#, python-format
+msgid "Change Date should be less than reservation end date"
+msgstr "يجب أن يكون تاريخ التغيير أقل من تاريخ انتهاء الحجز"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#: model:ir.actions.act_window,name:hotel_reservation.reservation_room_change_wizard_action
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.reservation_room_change_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+#, python-format
+msgid "Change Room"
+msgstr "تغيير الغرفة"
+
+#. module: hotel_reservation
+#: model:ir.actions.server,name:hotel_reservation.reservation_change_room_cron_ir_actions_server
+#: model:ir.cron,cron_name:hotel_reservation.reservation_change_room_cron
+#: model:ir.cron,name:hotel_reservation.reservation_change_room_cron
+msgid "Change Room and terminate reservation Daily Monthly"
+msgstr "تغيير الغرفة و إنهاء الحجز اليومي و الشهري"
+
+#. module: hotel_reservation
+#: model:ir.actions.server,name:hotel_reservation.reservation_change_room_cron_hourly_ir_actions_server
+#: model:ir.cron,cron_name:hotel_reservation.reservation_change_room_cron_hourly
+#: model:ir.cron,name:hotel_reservation.reservation_change_room_cron_hourly
+msgid "Change Room and terminate reservation Hourly"
+msgstr "تغيير الغرفة و إنهاء الحجز بالساعات"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/wizards/reservation_change_room_wizard.py:0
+#, python-format
+msgid "Change Room leads to change rent type  from {} to {}"
+msgstr "يؤدي تغيير الغرفة إلى تغيير نوع الإيجار من {} إلى {}"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_finish_wizard__is_change_rent
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_wizard__is_change_rent
+msgid "Change rent"
+msgstr "تغير نوع الإيجار"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.hotel_reservation_finish_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.reservation_room_change_wizard_form_view
+msgid "Changing the type of rent will affect the final cost."
+msgstr "تغير نوع الإيجار سينجر عنه تغير في التكلفة النهائية"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__duration_check
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__duration_check
+msgid "Check Duration"
+msgstr "المدة"
+
+#. module: hotel_reservation
+#: model:ir.actions.act_window,name:hotel_reservation.hotel_reservation_check_action
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.hotel_reservation_check_wizard_form_view
+msgid "Check IN/Out Reservation"
+msgstr "الدخول/الخروج"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_room.py:0
+#: model:ir.actions.server,name:hotel_reservation.apartment_check_in_action
+#: model:ir.model.fields,field_description:hotel_reservation.field_quick_room_reservation__check_in
+#: model:ir.ui.menu,name:hotel_reservation.apartment_check_in_menu
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.quick_room_reservation_form_view
+#, python-format
+msgid "Check In"
+msgstr "تسجيل الدخول"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_room_reservation_line__check_in
+msgid "Check In Date"
+msgstr "تاريخ الدخول"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#, python-format
+msgid "Check In/Out Reservation"
+msgstr "الدخول/الخروج"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+msgid "Check In:"
+msgstr "تاريخ الدخول:"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_room.py:0
+#: model:ir.actions.server,name:hotel_reservation.apartment_check_out_action
+#: model:ir.model.fields,field_description:hotel_reservation.field_quick_room_reservation__check_out
+#: model:ir.ui.menu,name:hotel_reservation.apartment_check_out_menu
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.quick_room_reservation_form_view
+#, python-format
+msgid "Check Out"
+msgstr "تسجيل الخروج"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__date_check_out
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__date_check_out
+msgid "Check Out"
+msgstr "تاريخ الخروج"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_room_reservation_line__check_out
+msgid "Check Out Date"
+msgstr "موعد انتهاء الحجز"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+msgid "Check Out:"
+msgstr "تاريخ الخروج:"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__date_check_in
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__date_check_in
+msgid "Check in"
+msgstr "تاريخ الدخول"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_check_wizard__check_type
+msgid "Check type"
+msgstr "نوع الدخول/الخروج"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#, python-format
+msgid "Check-in date should be greater than the current date."
+msgstr "يجب أن يكون تاريخ الحجز أكبر من تاريخ اليوم."
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#, python-format
+msgid "Check-out date should be greater than Check-in date."
+msgstr "يجب أن يكون تاريخ المغادرة أكبر من تاريخ الدخول."
+
+#. module: hotel_reservation
+#: model:ir.actions.report,name:hotel_reservation.hotel_checkin_details
+msgid "CheckIn Detail"
+msgstr "تفاصيل تسجيل الدخول"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.hotel_reservation_wizard_form_view
+msgid "CheckIn List"
+msgstr "قائمة تسجيل الدخول"
+
+#. module: hotel_reservation
+#: model:ir.actions.report,name:hotel_reservation.hotel_checkout_details
+msgid "CheckOut Detail"
+msgstr "تفاصيل تسجيل الخروج"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.hotel_reservation_wizard_form_view
+msgid "CheckOut List"
+msgstr "قائمة تسجيل الخروج"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_quick_reservation.py:0
+#: code:addons/hotel_reservation/models/hotel_room.py:0
+#, python-format
+msgid "Checkout date should be greater than Checkin date."
+msgstr "يجب أن يكون تاريخ المغادرة أكبر من تاريخ الوصول."
+
+#. module: hotel_reservation
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__res_partner__age_group__child
+msgid "Child"
+msgstr "طفل"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__children_ids
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__children_ids
+msgid "Children"
+msgstr "الأطفال"
+
+#. module: hotel_reservation
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__res_partner__guest_type__citizen
+msgid "Citizen"
+msgstr "مواطن"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "Cleanliness Service"
+msgstr "إنشاء خدمة نظافة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__hotel_reservation__reservation_type__collective
+msgid "Collective"
+msgstr "جماعي"
+
+#. module: hotel_reservation
+#: model:ir.actions.act_window,name:hotel_reservation.hotel_reservation_collective_action
+#: model:ir.ui.menu,name:hotel_reservation.hotel_reservation_collective_menu
+msgid "Collective Reservations"
+msgstr "حجوزات جماعية"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_hospitality__company_id
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_rating__company_id
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_condition__company_id
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__hotel_reservation_line__tenant__company
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_setting__company_id
+msgid "Company"
+msgstr "شركة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__partner_company_id
+msgid "Company Name"
+msgstr "إسم الشركة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_condition__conditions
+msgid "Condition"
+msgstr "الشروط"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.reservation_condition_view_form
+msgid "Conditions"
+msgstr "الشروط"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "Confirm"
+msgstr "تأكيد"
+
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "Guest Invoice"
+msgstr "فاتورة الضيف"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "Insurance Refund"
+msgstr "سند صرف التأمين"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "Insurance Receipt"
+msgstr "سند قبض التأمين"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "Rent Receipt"
+msgstr "سند قبض الايجار"
+
+#. module: hotel_reservation
+#: model:ir.model,name:hotel_reservation.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.ir_attachment_view_search
+msgid "Content"
+msgstr "المحتوى"
+
+#. module: hotel_reservation
+#: model:hotel.reservation.source,name:hotel_reservation.hotel_reservation_source_contracting_company
+msgid "Contracting Company"
+msgstr "شركة متعاقده"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+msgid "Corresponding to:"
+msgstr "الموافق:"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.make_folio_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "Create Folio"
+msgstr "انشاء سجل"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__create_uid
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_cancel_wizard__create_uid
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_check_wizard__create_uid
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_finish_wizard__create_uid
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__create_uid
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_rating__create_uid
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_source__create_uid
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_wizard__create_uid
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_room_reservation_line__create_uid
+#: model:ir.model.fields,field_description:hotel_reservation.field_quick_room_reservation__create_uid
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_condition__create_uid
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_history__create_uid
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_wizard__create_uid
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_visit_reason__create_uid
+#: model:ir.model.fields,field_description:hotel_reservation.field_room_reservation_summary__create_uid
+#: model:ir.model.fields,field_description:hotel_reservation.field_wizard_make_folio__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__create_date
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_cancel_wizard__create_date
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_check_wizard__create_date
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_finish_wizard__create_date
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__create_date
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_rating__create_date
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_source__create_date
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_wizard__create_date
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_room_reservation_line__create_date
+#: model:ir.model.fields,field_description:hotel_reservation.field_quick_room_reservation__create_date
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_condition__create_date
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_history__create_date
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_wizard__create_date
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_visit_reason__create_date
+#: model:ir.model.fields,field_description:hotel_reservation.field_room_reservation_summary__create_date
+#: model:ir.model.fields,field_description:hotel_reservation.field_wizard_make_folio__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.hotel_calendar_view
+msgid "Current Reservation"
+msgstr "الحجز الحالي"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_search
+msgid "Current Reservations"
+msgstr "الحجوزات الحالية"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_quick_room_reservation__partner_id
+msgid "Customer"
+msgstr "العميل"
+
+#. module: hotel_reservation
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__hotel_reservation__rent__daily
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__hotel_reservation_finish_wizard__origin_rent__daily
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__reservation_room_change_wizard__origin_rent__daily
+msgid "Daily"
+msgstr "يومي"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.apartment_view_kanban
+msgid "Daily:"
+msgstr "يومي:"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.quick_room_reservation_form_view
+msgid "Date End"
+msgstr "تاريخ الإنتهاء"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_room_reservation_summary__date_from
+msgid "Date From"
+msgstr "التاريخ من"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__date_order
+msgid "Date Ordered"
+msgstr "تاريخ طلب الحجز"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.quick_room_reservation_form_view
+msgid "Date Start"
+msgstr "تاريخ البدء"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_room_reservation_summary__date_to
+msgid "Date To"
+msgstr "التاريخ ل"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "Dates Check In/Check Out"
+msgstr "تواريخ  الدخول/الخروج"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid "Night"
+msgstr "ليلة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__partner_shipping_id
+#: model:ir.model.fields,field_description:hotel_reservation.field_quick_room_reservation__partner_shipping_id
+msgid "Delivery Address"
+msgstr "عنوان التسليم"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,help:hotel_reservation.field_hotel_reservation__partner_shipping_id
+msgid "Delivery addressfor current reservation. "
+msgstr "عنوان التسليم للحجز الحالي. "
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_reservation_rating.py:0
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.hotel_reservation_rating_view_form
+#, python-format
+msgid "Details"
+msgstr "التفاصيل"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.hotel_apartment_view_search
+msgid "Dirty And Available"
+msgstr "غير نظيف (شاغر)"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.hotel_apartment_view_search
+msgid "Dirty And Occupied"
+msgstr "غير نظيف (مؤجر)"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_folio__discount
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__discount
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_history__discount
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_wizard__discount
+#: model:product.product,name:hotel_reservation.product_product_discount
+#: model:product.template,name:hotel_reservation.product_product_discount_product_template
+#, python-format
+msgid "Discount"
+msgstr "مبلغ الخصم"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_hospitality__discount
+msgid "Discount"
+msgstr " الخصم"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__discount_change_room
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__discount_change_room
+msgid "Discount Change Room"
+msgstr "الخصم"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__discount_type
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_hospitality__discount_type
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_history__discount_type
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_wizard__discount_type
+msgid "Discount Type"
+msgstr " نوع الخصم "
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_account_move__display_name
+#: model:ir.model.fields,field_description:hotel_reservation.field_folio_room_line__display_name
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_folio__display_name
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_folio_line__display_name
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_housekeeping__display_name
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_housekeeping_activities__display_name
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_lost_found__display_name
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__display_name
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_cancel_wizard__display_name
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_check_wizard__display_name
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_finish_wizard__display_name
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__display_name
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_rating__display_name
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_source__display_name
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_wizard__display_name
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_room__display_name
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_room_reservation_line__display_name
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_service_line__display_name
+#: model:ir.model.fields,field_description:hotel_reservation.field_product_template__display_name
+#: model:ir.model.fields,field_description:hotel_reservation.field_quick_room_reservation__display_name
+#: model:ir.model.fields,field_description:hotel_reservation.field_report_hotel_reservation_report_checkin_qweb__display_name
+#: model:ir.model.fields,field_description:hotel_reservation.field_report_hotel_reservation_report_checkout_qweb__display_name
+#: model:ir.model.fields,field_description:hotel_reservation.field_report_hotel_reservation_report_maxroom_qweb__display_name
+#: model:ir.model.fields,field_description:hotel_reservation.field_report_hotel_reservation_report_room_reservation_qweb__display_name
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_partner__display_name
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_condition__display_name
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_history__display_name
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_wizard__display_name
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_visit_reason__display_name
+#: model:ir.model.fields,field_description:hotel_reservation.field_room_reservation_summary__display_name
+#: model:ir.model.fields,field_description:hotel_reservation.field_sale_order_line__display_name
+#: model:ir.model.fields,field_description:hotel_reservation.field_wizard_make_folio__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_rating__dissatisfaction_percentage
+msgid "Dissatisfaction"
+msgstr "غير راضٍ"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.make_folio_wizard_form_view
+msgid "Do you really want to create the Folio ?"
+msgstr "هل تريد حقًا إنشاء الفليو؟"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_partner__documents_count
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_users__documents_count
+msgid "Document Count"
+msgstr "عدد الوثائق"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_partner__document_ids
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_users__document_ids
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.res_partner_view_form
+msgid "Documents"
+msgstr "الوثائق"
+
+#. module: hotel_reservation
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__hotel_reservation__state__done
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_search
+msgid "Done"
+msgstr "اعتمد"
+
+#. module: hotel_reservation
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__hotel_reservation__state__draft
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_search
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_folio__duration
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__duration
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_finish_wizard__duration
+msgid "Duration"
+msgstr "المدة"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/wizards/hotel_reservation_finish_wizard.py:0
+#, python-format
+msgid "Duration should be greater than 0"
+msgstr "يجب أن تكون المدة أكبر من 0"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_wizard__date_end
+msgid "End Date"
+msgstr "تاريخ الانتهاء"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/wizards/hotel_reservation_finish_wizard.py:0
+#, python-format
+msgid ""
+"End of Reservation  will leads to change reservation dates for rooms %s"
+msgstr "سيؤدي انتهاء الحجز إلى تغيير تواريخ حجز الغرف %s"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/wizards/hotel_reservation_finish_wizard.py:0
+#, python-format
+msgid ""
+"End of Reservation  will leads to change reservation dates from %s-%s (%s "
+"%s) to %s-%s (%s %s)"
+msgstr ""
+"إنهاء الحجز إنجر عنه تغير أيام الحجز من %s-%s (%s %s) إلى %s-%s (%s %s)"
+
+#. module: hotel_reservation
+#: model:reservation.visit.reason,name:hotel_reservation.reservation_visit_reason_entertainment
+msgid "Entertainment"
+msgstr "ترفيه"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.hotel_apartment_view_search
+msgid "Exit Today"
+msgstr "خروج اليوم"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__checkin
+msgid "Expected-Date-Arrival"
+msgstr "التاريخ المتوقع للوصول"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__checkout
+msgid "Expected-Date-Departure"
+msgstr "التاريخ المتوقع للمغادرة"
+
+#. module: hotel_reservation
+#: model:hotel.reservation.source,name:hotel_reservation.hotel_reservation_source_expedia
+msgid "Expedia"
+msgstr "اكسبديا"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.hotel_reservation_finish_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+#, python-format
+msgid "Extend Reservation"
+msgstr "تمديد الحجز "
+
+#. module: hotel_reservation
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__hotel_reservation_finish_wizard__type__extension
+msgid "Extension"
+msgstr "تمديد"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__date_extension
+msgid "Extension Date"
+msgstr "تاريخ التمديد"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__duration_extension
+msgid "Extension Duration"
+msgstr "مدة التمديد"
+
+#. module: hotel_reservation
+#: model:reservation.visit.reason,name:hotel_reservation.reservation_visit_reason_family
+msgid "Family or Friends"
+msgstr "عائلة أو أصدقاء"
+
+#. module: hotel_reservation
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__res_partner__gender__female
+msgid "Female"
+msgstr "أنثى"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_folio__final_cost
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__final_cost
+msgid "Final cost"
+msgstr " التكلفة النهائية "
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "Finance"
+msgstr "المالية"
+
+#. module: hotel_reservation
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__hotel_reservation_finish_wizard__type__finish
+msgid "Finish"
+msgstr "إنهاء"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.hotel_reservation_finish_wizard_form_view
+msgid "Finish Reservation"
+msgstr "إنهاء الحجز"
+
+#. module: hotel_reservation
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__hotel_reservation__state__finish
+msgid "Finished"
+msgstr "منتهي"
+
+#. module: hotel_reservation
+#: model:reservation.visit.reason,name:hotel_reservation.hotel_reservation_source_flyin
+msgid "Flyin site"
+msgstr "موقع فلاي إن"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__folio_id
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "Folio"
+msgstr "سجل"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__message_follower_ids
+msgid "Followers"
+msgstr "متابعون"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: hotel_reservation
+#: model:hotel.reservation.source,name:hotel_reservation.hotel_reservation_source_gathern
+msgid "Gathern"
+msgstr "جاذر إن"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_partner__gender
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_users__gender
+msgid "Gender"
+msgstr "الجنس"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_search
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_wizard_make_folio__grouped
+msgid "Group the Folios"
+msgstr "قم بتجميع السجلات"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_lost_found__partner_id
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_partner__is_guest
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_users__is_guest
+msgid "Guest"
+msgstr "اسم الضيف"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__partner_id
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_search
+msgid "Guest Name"
+msgstr "اسم الضيف"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_partner__guest_type
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_users__guest_type
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_partner_hotel_reservation_search
+msgid "Guest Type"
+msgstr "نوع النزيل"
+
+#. module: hotel_reservation
+#: model:ir.actions.act_window,name:hotel_reservation.hotel_customer_management_action
+#: model:ir.ui.menu,name:hotel_reservation.hotel_customer_management_menu
+msgid "Guests"
+msgstr "النزلاء"
+
+#. module: hotel_reservation
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__res_partner__guest_type__gulf_citizen
+msgid "Gulf citizen"
+msgstr "مواطن خليجي"
+
+#. module: hotel_reservation
+#: model:hotel.reservation.source,name:hotel_reservation.hotel_reservation_source_haraj
+msgid "HARAJ"
+msgstr "حراج"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_rating__highly_dissatisfaction_percentage
+msgid "Highly dissatisfaction"
+msgstr "مستاء تمامًا"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "History"
+msgstr "تاريخ"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__history_room_ids
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "History Rooms"
+msgstr "سجل تغيير الغرف"
+
+#. module: hotel_reservation
+#: model:hotel.reservation.source,name:hotel_reservation.hotel_reservation_source_holdinn
+msgid "Holdinn"
+msgstr "هولدن"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__company_id
+#: model:ir.model.fields,field_description:hotel_reservation.field_quick_room_reservation__company_id
+msgid "Hotel"
+msgstr "الفندق"
+
+#. module: hotel_reservation
+#: model:ir.model,name:hotel_reservation.model_hotel_folio_line
+msgid "Hotel Folio Line"
+msgstr "بند سجل الفندق"
+
+#. module: hotel_reservation
+#: model:ir.model,name:hotel_reservation.model_hotel_housekeeping
+msgid "Hotel Housekeeping"
+msgstr "التدبير في الفندق"
+
+#. module: hotel_reservation
+#: model:ir.model,name:hotel_reservation.model_hotel_lost_found
+msgid "Hotel Lost and found"
+msgstr "المفقودات والأشياء التي تم العثور عليها"
+
+#. module: hotel_reservation
+#: model:ir.model,name:hotel_reservation.model_hotel_reservation_check_wizard
+msgid "Hotel Reservation Check"
+msgstr "الدخول/الخروج"
+
+#. module: hotel_reservation
+#: model:mail.template,subject:hotel_reservation.email_template_hotel_reservation
+msgid "Hotel Reservation Detail"
+msgstr "تفاصيل حجز الفندق"
+
+#. module: hotel_reservation
+#: model:ir.model,name:hotel_reservation.model_hotel_reservation_cancel_wizard
+#: model:ir.model,name:hotel_reservation.model_hotel_reservation_finish_wizard
+msgid "Hotel Reservation Finish"
+msgstr "إنهاء الحجز"
+
+#. module: hotel_reservation
+#: model:mail.template,subject:hotel_reservation.mail_template_reservation_reminder_24hrs
+msgid "Hotel Reservation Reminder"
+msgstr "تذكير حجز الفندق"
+
+#. module: hotel_reservation
+#: model:ir.actions.act_window,name:hotel_reservation.action_hotel_reservation_wizard
+#: model:ir.ui.menu,name:hotel_reservation.wizard_res_menu
+msgid "Hotel Reservation Report"
+msgstr "تقرير حجز الفندق"
+
+#. module: hotel_reservation
+#: model:ir.actions.server,name:hotel_reservation.Guest_reservation_reminder_24hrs_ir_actions_server
+#: model:ir.cron,cron_name:hotel_reservation.Guest_reservation_reminder_24hrs
+#: model:ir.cron,name:hotel_reservation.Guest_reservation_reminder_24hrs
+msgid ""
+"Hotel Reservation: Booking Reminder before 24 Hours\n"
+"        "
+msgstr ""
+"حجز الفندق: تذكير بالحجز قبل 24 ساعة\n"
+"        "
+
+#. module: hotel_reservation
+#: model:ir.model,name:hotel_reservation.model_hotel_room
+msgid "Hotel Room"
+msgstr "غرفة الفندق"
+
+#. module: hotel_reservation
+#: model:ir.model,name:hotel_reservation.model_folio_room_line
+#: model:ir.model,name:hotel_reservation.model_hotel_room_reservation_line
+msgid "Hotel Room Reservation"
+msgstr "حجز غرفة الفندق"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,help:hotel_reservation.field_hotel_reservation__reservation_line
+msgid "Hotel room reservation details."
+msgstr "تفاصيل حجز غرفة الفندق."
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid "Hour"
+msgstr "ساعة"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.apartment_view_kanban
+msgid "Hourly:"
+msgstr "بالساعة:"
+
+#. module: hotel_reservation
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__hotel_reservation__rent__hours
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__hotel_reservation_finish_wizard__origin_rent__hours
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__reservation_room_change_wizard__origin_rent__hours
+msgid "Hours"
+msgstr "ساعات"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_quick_room_reservation__housekeeping_id
+msgid "Housekeeping"
+msgstr "خدمة التدبير"
+
+#. module: hotel_reservation
+#: model:ir.model,name:hotel_reservation.model_hotel_housekeeping_activities
+msgid "Housekeeping Activities"
+msgstr "أنشطة التدبير"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#, python-format
+msgid "Housekeeping Cleanliness Service"
+msgstr "خدمة تدبير نظافة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_account_move__id
+#: model:ir.model.fields,field_description:hotel_reservation.field_folio_room_line__id
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_folio__id
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_folio_line__id
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_housekeeping__id
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_housekeeping_activities__id
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_lost_found__id
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__id
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_cancel_wizard__id
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_check_wizard__id
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_finish_wizard__id
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__id
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_rating__id
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_source__id
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_wizard__id
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_room__id
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_room_reservation_line__id
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_service_line__id
+#: model:ir.model.fields,field_description:hotel_reservation.field_product_template__id
+#: model:ir.model.fields,field_description:hotel_reservation.field_quick_room_reservation__id
+#: model:ir.model.fields,field_description:hotel_reservation.field_report_hotel_reservation_report_checkin_qweb__id
+#: model:ir.model.fields,field_description:hotel_reservation.field_report_hotel_reservation_report_checkout_qweb__id
+#: model:ir.model.fields,field_description:hotel_reservation.field_report_hotel_reservation_report_maxroom_qweb__id
+#: model:ir.model.fields,field_description:hotel_reservation.field_report_hotel_reservation_report_room_reservation_qweb__id
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_partner__id
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_condition__id
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_history__id
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_wizard__id
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_visit_reason__id
+#: model:ir.model.fields,field_description:hotel_reservation.field_room_reservation_summary__id
+#: model:ir.model.fields,field_description:hotel_reservation.field_sale_order_line__id
+#: model:ir.model.fields,field_description:hotel_reservation.field_wizard_make_folio__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hotel_reservation
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__hotel_reservation_check_wizard__check_type__in
+msgid "IN"
+msgstr "دخول"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__identification_id
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_partner__identification_id
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_users__identification_id
+msgid "Identification ID"
+msgstr "بطاقة هوية مدنية"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,help:hotel_reservation.field_hotel_reservation__message_needaction
+#: model:ir.model.fields,help:hotel_reservation.field_hotel_reservation__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم تحديده ، فإن الرسائل الجديدة تتطلب انتباهك."
+
+#. module: hotel_reservation
+#: model:ir.model.fields,help:hotel_reservation.field_hotel_reservation__message_has_error
+#: model:ir.model.fields,help:hotel_reservation.field_hotel_reservation__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده ، فإن بعض الرسائل بها خطأ في التسليم."
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.hotel_apartment_view_search
+msgid "In Maintenance"
+msgstr "صيانة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__hotel_reservation__reservation_type__individual
+msgid "Individual"
+msgstr "فردي"
+
+#. module: hotel_reservation
+#: model:ir.actions.act_window,name:hotel_reservation.hotel_reservation_individual_action
+#: model:ir.ui.menu,name:hotel_reservation.hotel_reservation_individual_menu
+msgid "Individual Reservations"
+msgstr "حجوزات فردية"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_quick_room_reservation__inspect_date_time
+msgid "Inspect Date Time"
+msgstr "تاريخ و وقت فحص"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_quick_room_reservation__inspector_id
+msgid "Inspector"
+msgstr "الفاحص"
+
+#. module: hotel_reservation
+#: model:hotel.reservation.source,name:hotel_reservation.hotel_reservation_source_instagram
+msgid "Instagram"
+msgstr "إنستغرام"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_folio__insurance
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__insurance
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_history__insurance
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_wizard__insurance
+#: model:product.product,name:hotel_reservation.product_product_insurance
+#: model:product.template,name:hotel_reservation.product_product_insurance_product_template
+#, python-format
+msgid "Insurance"
+msgstr "تأمين"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__insurance_change_room
+msgid "Insurance Change Room"
+msgstr "تأمين"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__partner_invoice_id
+#: model:ir.model.fields,field_description:hotel_reservation.field_quick_room_reservation__partner_invoice_id
+msgid "Invoice Address"
+msgstr "عنوان الفاتورة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,help:hotel_reservation.field_hotel_reservation__partner_invoice_id
+msgid "Invoice address for current reservation."
+msgstr "عنوان الفاتورة للحجز الحالي."
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_activity__discount
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_menucard__discount
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_room__discount
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_room_amenities__discount
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_services__discount
+#: model:ir.model.fields,field_description:hotel_reservation.field_product_product__discount
+#: model:ir.model.fields,field_description:hotel_reservation.field_product_template__discount
+msgid "Is Discount"
+msgstr "خصم"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_activity__insurance
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_menucard__insurance
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_room_amenities__insurance
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_services__insurance
+#: model:ir.model.fields,field_description:hotel_reservation.field_product_product__insurance
+#: model:ir.model.fields,field_description:hotel_reservation.field_product_template__insurance
+msgid "Is Insurance"
+msgstr "تأمين"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_activity__returnable
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_menucard__returnable
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_room__returnable
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_room_amenities__returnable
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_services__returnable
+#: model:ir.model.fields,field_description:hotel_reservation.field_product_product__returnable
+#: model:ir.model.fields,field_description:hotel_reservation.field_product_template__returnable
+msgid "Is Returnable"
+msgstr "قابل للإسترجاع"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/wizards/hotel_reservation_finish_wizard.py:0
+#, python-format
+msgid ""
+"It is not possible to extend reservation because the room %s is not "
+"available on this date"
+msgstr "لا يمكن التمديد لأن الغرفة %s محجوزة في هذا التاريخ"
+
+#. module: hotel_reservation
+#: model:reservation.visit.reason,name:hotel_reservation.reservation_visit_reason_job
+msgid "Job"
+msgstr "عمل"
+
+#. module: hotel_reservation
+#: model:ir.model,name:hotel_reservation.model_account_move
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_account_move____last_update
+#: model:ir.model.fields,field_description:hotel_reservation.field_folio_room_line____last_update
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_folio____last_update
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_folio_line____last_update
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_housekeeping____last_update
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_housekeeping_activities____last_update
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_lost_found____last_update
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation____last_update
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_cancel_wizard____last_update
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_check_wizard____last_update
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_finish_wizard____last_update
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line____last_update
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_rating____last_update
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_source____last_update
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_wizard____last_update
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_room____last_update
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_room_reservation_line____last_update
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_service_line____last_update
+#: model:ir.model.fields,field_description:hotel_reservation.field_product_template____last_update
+#: model:ir.model.fields,field_description:hotel_reservation.field_quick_room_reservation____last_update
+#: model:ir.model.fields,field_description:hotel_reservation.field_report_hotel_reservation_report_checkin_qweb____last_update
+#: model:ir.model.fields,field_description:hotel_reservation.field_report_hotel_reservation_report_checkout_qweb____last_update
+#: model:ir.model.fields,field_description:hotel_reservation.field_report_hotel_reservation_report_maxroom_qweb____last_update
+#: model:ir.model.fields,field_description:hotel_reservation.field_report_hotel_reservation_report_room_reservation_qweb____last_update
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_partner____last_update
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_condition____last_update
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_history____last_update
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_wizard____last_update
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_visit_reason____last_update
+#: model:ir.model.fields,field_description:hotel_reservation.field_room_reservation_summary____last_update
+#: model:ir.model.fields,field_description:hotel_reservation.field_sale_order_line____last_update
+#: model:ir.model.fields,field_description:hotel_reservation.field_wizard_make_folio____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_partner__last_room_id
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_users__last_room_id
+msgid "Last Room"
+msgstr "غرفة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__write_uid
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_cancel_wizard__write_uid
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_check_wizard__write_uid
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_finish_wizard__write_uid
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__write_uid
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_rating__write_uid
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_source__write_uid
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_wizard__write_uid
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_room_reservation_line__write_uid
+#: model:ir.model.fields,field_description:hotel_reservation.field_quick_room_reservation__write_uid
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_condition__write_uid
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_history__write_uid
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_wizard__write_uid
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_visit_reason__write_uid
+#: model:ir.model.fields,field_description:hotel_reservation.field_room_reservation_summary__write_uid
+#: model:ir.model.fields,field_description:hotel_reservation.field_wizard_make_folio__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__write_date
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_cancel_wizard__write_date
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_check_wizard__write_date
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_finish_wizard__write_date
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__write_date
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_rating__write_date
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_source__write_date
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_wizard__write_date
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_room_reservation_line__write_date
+#: model:ir.model.fields,field_description:hotel_reservation.field_quick_room_reservation__write_date
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_condition__write_date
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_history__write_date
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_wizard__write_date
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_visit_reason__write_date
+#: model:ir.model.fields,field_description:hotel_reservation.field_room_reservation_summary__write_date
+#: model:ir.model.fields,field_description:hotel_reservation.field_wizard_make_folio__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.hotel_apartment_view_search
+msgid "Leased"
+msgstr "مؤجر"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__line_id
+msgid "Line"
+msgstr "خط"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,help:hotel_reservation.field_hotel_reservation__adults
+msgid "List of adults there in guest list. "
+msgstr "قائمة المرافقون هناك في قائمة المدعوين. "
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_quick_room_reservation__maintenance_type_id
+msgid "Maintenance Type"
+msgstr "نوع الصيانة"
+
+#. module: hotel_reservation
+#: model:ir.actions.act_window,name:hotel_reservation.act_make_folio
+msgid "Make Folios"
+msgstr "اصنع السجلات"
+
+#. module: hotel_reservation
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__res_partner__gender__male
+msgid "Male"
+msgstr "ذكر"
+
+#. module: hotel_reservation
+#: model:ir.actions.act_window,name:hotel_reservation.apartment_status_management_action
+#: model:ir.ui.menu,name:hotel_reservation.apartment_status_management_menu
+msgid "Manage Apartments Status"
+msgstr "إدارة حالة الشقق"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_maxroom_qweb
+msgid "Max Room Used List"
+msgstr "قائمة استخدام الحد الأقصى للغرفة"
+
+#. module: hotel_reservation
+#: model:ir.actions.report,name:hotel_reservation.hotel_maxroom_details
+msgid "MaxRoom Detail"
+msgstr "الحد الأقصى من تفاصيل الغرفة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__message_ids
+msgid "Messages"
+msgstr "رسائل"
+
+#. module: hotel_reservation
+#: model:reservation.visit.reason,name:hotel_reservation.reservation_visit_reason_health
+msgid "Ministry of Health Employee"
+msgstr "موظف وزارة الصحة"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid "Month"
+msgstr "شهر"
+
+#. module: hotel_reservation
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__hotel_reservation__rent__monthly
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__hotel_reservation_finish_wizard__origin_rent__monthly
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__reservation_room_change_wizard__origin_rent__monthly
+msgid "Monthly"
+msgstr "شهري"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.apartment_view_kanban
+msgid "Monthly:"
+msgstr "شهري:"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__name
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_rating__name
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_source__name
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_visit_reason__name
+msgid "Name"
+msgstr "اسم"
+
+#. module: hotel_reservation
+#: model:hotel.reservation.source,name:hotel_reservation.hotel_reservation_source_nirvana
+msgid "Nirvana Company"
+msgstr "شركة نيرفانا"
+
+#. module: hotel_reservation
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__hotel_reservation__discount_type__no_discount
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__hotel_reservation_hospitality__discount_type__no_discount
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__reservation_room_change_history__discount_type__no_discount
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__reservation_room_change_wizard__discount_type__no_discount
+msgid "No Discount"
+msgstr "لا يوجد"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_account_bank_statement_line__is_no_refund
+#: model:ir.model.fields,field_description:hotel_reservation.field_account_move__is_no_refund
+#: model:ir.model.fields,field_description:hotel_reservation.field_account_payment__is_no_refund
+msgid "No Refund"
+msgstr "لا يمكن الإسترداد"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_rating__no_rating_percentage
+msgid "No rating"
+msgstr "لا يوجد تقييم"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__no_of_folio
+msgid "No. Folio"
+msgstr "رقم سجل"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_history__is_no_calculated
+msgid "Not calculated"
+msgstr "غير محسوب"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "Note"
+msgstr "ملاحظات"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__note
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__adults
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__adults
+msgid "Number Adults"
+msgstr " عدد المرافقون"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__children
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__children
+msgid "Number Children"
+msgstr "عدد الأطفال"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,help:hotel_reservation.field_hotel_reservation__children
+msgid "Number of children there in guest list."
+msgstr "عدد الأطفال هناك في قائمة المدعوين."
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,help:hotel_reservation.field_hotel_reservation__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب اتخاذ إجراء"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,help:hotel_reservation.field_hotel_reservation__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي بها خطأ في التسليم"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,help:hotel_reservation.field_hotel_reservation__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل غير المقروءة"
+
+#. module: hotel_reservation
+#: model:reservation.visit.reason,name:hotel_reservation.reservation_visit_reason_office
+msgid "Office Clerk"
+msgstr "موظف ديوان"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_history__old_room_id
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_wizard__old_room_id
+msgid "Old Room"
+msgstr "غرفة القديمة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_wizard__old_room_insurance
+msgid "Old room Insurance"
+msgstr "تأمين الغرفة القديمة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_wizard__old_room_price
+msgid "Old room Price"
+msgstr "سعر الغرفة القديمة"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_search
+msgid "Order By Month"
+msgstr "طلب حسب الشهر"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__partner_order_id
+#: model:ir.model.fields,field_description:hotel_reservation.field_quick_room_reservation__partner_order_id
+msgid "Ordering Contact"
+msgstr "طلب الاتصال"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_finish_wizard__origin_rent
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_wizard__origin_rent
+msgid "Origin Rent Type"
+msgstr "نوع الحجز الأصلي"
+
+#. module: hotel_reservation
+#: model:reservation.visit.reason,name:hotel_reservation.reservation_visit_reason_other
+msgid "Other"
+msgstr "أخرى"
+
+#. module: hotel_reservation
+#: model:hotel.reservation.source,name:hotel_reservation.hotel_reservation_source_oyo
+msgid "Oyo"
+msgstr "اويو"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__passport_id
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_partner__passport_id
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_users__passport_id
+msgid "Passport ID"
+msgstr "جواز السفر"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_folio__payments_count
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__payments_count
+msgid "Payments"
+msgstr "المقبوضات"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "Payments"
+msgstr "سندات القبض و صرف"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__peak_days
+msgid "Peak days"
+msgstr "أيام الذروة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__peak_price
+msgid "Peak price"
+msgstr "سعر الذروة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__discount_percentage
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__hotel_reservation__discount_type__percentage
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__hotel_reservation_hospitality__discount_type__percentage
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__reservation_room_change_history__discount_type__percentage
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__reservation_room_change_wizard__discount_type__percentage
+msgid "Percentage"
+msgstr "نسبة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__returnable_percentage
+#: model:ir.model.fields,field_description:hotel_reservation.field_quick_room_reservation__returnable_percentage
+msgid "Percentage "
+msgstr "النسبة"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "Period"
+msgstr "الفترة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__hotel_reservation_line__tenant__person
+msgid "Person"
+msgstr "شخص"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__partner_id
+msgid "Person Name"
+msgstr "إسم الشخص"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#, python-format
+msgid "Please Select Rooms For Reservation."
+msgstr "يرجى تحديد الغرف للحجز."
+
+#. module: hotel_reservation
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__hotel_reservation__state__confirm
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_search
+msgid "Pre-booking"
+msgstr "حجز مبدئي"
+
+#. module: hotel_reservation
+#: model:ir.model,name:hotel_reservation.model_product_template
+msgid "Product Template"
+msgstr "قالب المنتج"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.quick_room_reservation_form_view
+msgid "Quick Reservation"
+msgstr "حجز سريع"
+
+#. module: hotel_reservation
+#: model:ir.model,name:hotel_reservation.model_quick_room_reservation
+msgid "Quick Room Reservation"
+msgstr "الحجز السريع للغرفة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__rating_ids
+msgid "Rating"
+msgstr "التقييمات"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#, python-format
+msgid "Rating %s"
+msgstr "تقييم %s"
+
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__rating_last_feedback
+msgid "Rating Last Feedback"
+msgstr "التعليق"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__rating_count
+msgid "Rating count"
+msgstr "عدد التقييمات"
+
+#. module: hotel_reservation
+#: model:ir.actions.server,name:hotel_reservation.hotel_reservation_rating_action
+#: model:ir.ui.menu,name:hotel_reservation.hotel_reservation_rating_menu
+msgid "Ratings"
+msgstr "التقييمات"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_rating__rating_ids
+msgid "Ratings Details"
+msgstr "التفاصيل"
+
+#. module: hotel_reservation
+#: model:hotel.reservation.source,name:hotel_reservation.hotel_reservation_source_real_estate
+msgid "Real Estate"
+msgstr "عقار"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,help:hotel_reservation.field_hotel_reservation__rating_last_feedback
+msgid "Reason of the rating"
+msgstr "التعليق"
+
+#. module: hotel_reservation
+#: model:hotel.reservation.source,name:hotel_reservation.hotel_reservation_source_reception
+msgid "Reception"
+msgstr "الإستقبال"
+
+#. module: hotel_reservation
+#: model:res.groups,name:hotel_reservation.group_receptionist
+msgid "Receptionist"
+msgstr "مسؤول الإستقبال"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_room.py:0
+#, python-format
+msgid "Reconcile Write-Off"
+msgstr "تسوية الشطب"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+#, python-format
+msgid "Recovery"
+msgstr "إسترجاع"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.hotel_reservation_check_wizard_form_view
+msgid "Register Check IN"
+msgstr "تسجيل الدخول"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "Register Check In"
+msgstr "تسجيل الدخول"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.hotel_reservation_check_wizard_form_view
+msgid "Register Check OUt"
+msgstr "تسجيل الخروج"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "Register Check Out"
+msgstr "تسجيل الخروج"
+
+#. module: hotel_reservation
+#: model:reservation.visit.reason,name:hotel_reservation.reservation_visit_reason_religious
+msgid "Religious"
+msgstr "الإستقبال"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_folio_form_inherited
+msgid "Rent"
+msgstr "الايجار"
+
+#. module: hotel_reservation
+#: model:ir.actions.report,name:hotel_reservation.rent_contract_folio_summary
+#: model:ir.actions.report,name:hotel_reservation.rent_contract_summary
+msgid "Rent Contract"
+msgstr "عقد إيجار"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_folio__rent
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__rent
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_finish_wizard__rent
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_wizard__rent
+msgid "Rent Type"
+msgstr "نوع الايجار"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_room.py:0
+#: code:addons/hotel_reservation/models/res_partner.py:0
+#: model:ir.model,name:hotel_reservation.model_hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_account_payment__reservation_id
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_folio__reservation_id
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_housekeeping__reservation_id
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_cancel_wizard__reservation_id
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_check_wizard__reservation_id
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_finish_wizard__reservation_id
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_room_reservation_line__reservation_id
+#: model:ir.model.fields,field_description:hotel_reservation.field_quick_room_reservation__reservation_id
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_history__reservation_id
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_wizard__reservation_id
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_graph
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_search
+#, python-format
+msgid "Reservation"
+msgstr "الحجز"
+
+#. module: hotel_reservation
+#: model:ir.model,name:hotel_reservation.model_reservation_condition
+msgid "Reservation Condition"
+msgstr "شروط الحجز"
+
+#. module: hotel_reservation
+#: model:ir.actions.act_window,name:hotel_reservation.reservation_condition_action
+#: model:ir.ui.menu,name:hotel_reservation.reservation_condition_menu
+msgid "Reservation Conditions"
+msgstr "شروط الحجز"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_partner__reservation_count
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_users__reservation_count
+msgid "Reservation Count"
+msgstr "عدد الحجوزات"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_history__reservation_date
+msgid "Reservation Date"
+msgstr "تاريخ الحجز"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "Reservation Dates"
+msgstr "تواريخ الحجز"
+
+#. module: hotel_reservation
+#: model:ir.model,name:hotel_reservation.model_hotel_reservation_line
+#: model:ir.model.fields,field_description:hotel_reservation.field_folio_room_line__reservation_line_id
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_folio_line__reservation_line_id
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__reservation_line
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_wizard__reservation_line_id
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "Reservation Line"
+msgstr "بند الحجز"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.hotel_reservation_wizard_form_view
+msgid "Reservation List"
+msgstr "قائمة الحجز"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.hotel_reservation_rating_view_tree
+msgid "Reservation NO"
+msgstr "رقم العقد"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__reservation_no
+msgid "Reservation No"
+msgstr "رقم العقد"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_folio_form_inherited
+msgid "Reservation Number"
+msgstr "رقم الحجز"
+
+#. module: hotel_reservation
+#: model:res.groups,name:hotel_reservation.group_reservation_officer
+msgid "Reservation Officer"
+msgstr "مسؤول الحجز"
+
+#. module: hotel_reservation
+#: model:ir.model,name:hotel_reservation.model_hotel_reservation_rating
+msgid "Reservation Rating"
+msgstr "التقييمات"
+
+#. module: hotel_reservation
+#: model:ir.model,name:hotel_reservation.model_hotel_reservation_source
+msgid "Reservation Source"
+msgstr "مصدر الحجز"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.quick_room_reservation_form_view
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "Reservation Source Number"
+msgstr "رقم مصدر الحجز"
+
+#. module: hotel_reservation
+#: model:ir.actions.act_window,name:hotel_reservation.hotel_reservation_source_action
+#: model:ir.ui.menu,name:hotel_reservation.hotel_reservation_source_menu
+msgid "Reservation Sources"
+msgstr "مصادر الحجز "
+
+#. module: hotel_reservation
+#: model:ir.actions.act_window,name:hotel_reservation.action_hotel_reservation_summary
+#: model:ir.model.fields,field_description:hotel_reservation.field_room_reservation_summary__name
+#: model:ir.ui.menu,name:hotel_reservation.menu_action_hotel_reservation_summary
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.room_reservation_summary_form_view
+msgid "Reservation Summary"
+msgstr "ملخص الحجز"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_folio__reservation_type
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__reservation_type
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__reservation_type
+msgid "Reservation Type"
+msgstr "نوع الحجز"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "Reservation information"
+msgstr "معلومات الحجز"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_room_reservation_line__reservation_line_id
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_history__reservation_line_id
+msgid "Reservation line"
+msgstr "بند الحجز"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__source_number
+#: model:ir.model.fields,field_description:hotel_reservation.field_quick_room_reservation__source_number
+msgid "Reservation source number"
+msgstr "رقم مصدر الحجز"
+
+#. module: hotel_reservation
+#: model:ir.actions.act_window,name:hotel_reservation.action_hotel_reservation_tree_all
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_partner__reservation_ids
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_users__reservation_ids
+#: model:ir.ui.menu,name:hotel_reservation.menu_action_hotel_reservation_tree_all
+msgid "Reservations"
+msgstr "الحجوزات"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__residence_number
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_partner__residence_number
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_users__residence_number
+msgid "Residence number"
+msgstr "رقم الاقامة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__res_partner__guest_type__resident
+msgid "Resident"
+msgstr "اقامة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_folio__is_returnable
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__is_returnable
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_finish_wizard__is_returnable
+#: model:ir.model.fields,field_description:hotel_reservation.field_quick_room_reservation__is_returnable
+#: model:product.product,name:hotel_reservation.product_product_returnable
+#: model:product.template,name:hotel_reservation.product_product_returnable_product_template
+#, python-format
+msgid "Returnable"
+msgstr "قابل للاسترجاع"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__is_returnable_reservation
+msgid "Returnable Reservation"
+msgstr "حجز مسترجع"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_folio__returnable_amount
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__returnable_amount
+msgid "Returned Amount "
+msgstr "مبلغ الاسترجاع"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_booking_summary_template
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.report_rent_contract_template
+msgid "Returned Amount:"
+msgstr "مبلغ الاسترجاع:"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "Returned Reservation"
+msgstr "حجز مسترجع"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__room_id
+#: model:ir.model.fields,field_description:hotel_reservation.field_quick_room_reservation__room_id
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_history__room_id
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_wizard__room_id
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_partner_hotel_reservation_search
+msgid "Room"
+msgstr "الغرفة"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#, python-format
+msgid "Room %s cannot be reserved because it is occupy on these dates %s"
+msgstr "لا يمكن حجز الغرفة %s لأنها محجوزة في هذه التواريخ %s"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#, python-format
+msgid ""
+"Room Capacity Exceeded \n"
+" Please Select Rooms According to Members Accomodation."
+msgstr "تم تجاوز سعة الغرفة ، يرجى تحديد الغرف وفقًا لمساكن الأعضاء."
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/wizards/hotel_reservation_finish_wizard.py:0
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.hotel_reservation_finish_wizard_form_view
+#, python-format
+msgid "Room Change History"
+msgstr "سجل تغيير الغرف"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_room_form_inherited
+msgid "Room Reservation"
+msgstr "حجز الغرف"
+
+#. module: hotel_reservation
+#: model:ir.actions.report,name:hotel_reservation.hotel_roomres_details
+msgid "Room Reservation Detail"
+msgstr "تفاصيل حجز غرفة الفندق"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_room_form_inherited
+msgid "Room Reservation Line"
+msgstr "بند حجز الغرف"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.room_reservation_summary_form_view
+msgid "Room Reservation Summary"
+msgstr "ملخص حجز الغرفة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_room__room_reservation_line_ids
+msgid "Room Reserve Line"
+msgstr "بند حجز الغرفة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_room_reservation_line__state
+msgid "Room Status"
+msgstr "حالة الغرفة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_room_reservation_summary__room_summary
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.room_reservation_summary_form_view
+msgid "Room Summary"
+msgstr "ملخص الغرفة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__categ_id
+msgid "Room Type"
+msgstr "نوع الغرفة"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.hotel_reservation_wizard_form_view
+msgid "Room Used Maximum"
+msgstr "الحد الأقصى لاستخدام الغرفة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_room_reservation_line__room_id
+msgid "Room id"
+msgstr "معرف الغرفة"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_room_form_inherited
+msgid "Room line"
+msgstr "بند الغرفة"
+
+#. module: hotel_reservation
+#: model:ir.model,name:hotel_reservation.model_room_reservation_summary
+msgid "Room reservation summary"
+msgstr "ملخص حجز الغرفة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__rooms
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_check_wizard__reservation_line_ids
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_finish_wizard__reservation_line_ids
+msgid "Rooms"
+msgstr "الغرف"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__rooms_available_ids
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_wizard__rooms_available_ids
+msgid "Rooms Available"
+msgstr "غرف متوفره"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_folio__room_rate
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__room_rate
+msgid "Rooms Rate"
+msgstr "سعر الغرف"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: hotel_reservation
+#: model:ir.model,name:hotel_reservation.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "بند أمر المبيعات"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_rating__satisfaction_percentage
+msgid "Satisfaction"
+msgstr "راضٍ"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.hotel_reservation_cancel_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.quick_room_reservation_form_view
+msgid "Save"
+msgstr "حفظ"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "Select Room"
+msgstr "اختر الغرفة"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "Send Reservation Email"
+msgstr "إرسال بريد إلكتروني للحجز"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__is_send_shomoos
+msgid "Send to Shomoos Service"
+msgstr "رسال الى خدمة شموس "
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__is_send_tourism
+msgid "Send to Tourism Platform Service"
+msgstr "ارسال الى خدمة منصة السياحة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_folio__service_amount
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__service_amount
+msgid "Services"
+msgstr "الخدمات"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_folio__service_tax
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__service_tax
+msgid "Services Tax"
+msgstr "ضرائب الخدمات"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "Set to Draft"
+msgstr "تعيين إلى مسودة"
+
+#. module: hotel_reservation
+#: model:ir.ui.menu,name:hotel_reservation.hotel_reservation_setting
+msgid "Settings"
+msgstr "الاعدادات"
+
+#. module: hotel_reservation
+#: model:hotel.reservation.source,name:hotel_reservation.hotel_reservation_source_social_media
+msgid "Social Media"
+msgstr "مواقع التواصل الإجتماعي"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#, python-format
+msgid "Sorry, you can only delete the reservation when it's draft!"
+msgstr "عذرًا ، لا يمكنك حذف الحجز إلا عندما يكون مسودة!"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__source_id
+#: model:ir.model.fields,field_description:hotel_reservation.field_quick_room_reservation__source_id
+msgid "Source Reservation"
+msgstr "مصدر الحجز"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_wizard__date_start
+msgid "Start Date"
+msgstr "تاريخ البدء"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__state
+msgid "State"
+msgstr "حالة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_room_reservation_summary__summary_header
+msgid "Summary Header"
+msgstr "رأس الملخص"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.room_reservation_summary_form_view
+msgid "Summary Period"
+msgstr "فترة الملخص"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_folio__taxed_total_rate
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__taxed_total_rate
+msgid "Taxed Total Rate"
+msgstr "التكلفة بالضرائب"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_folio__taxes_amount
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__taxes_amount
+msgid "Taxes "
+msgstr "الضرائب"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__tenant
+msgid "Tenant"
+msgstr "المستأجر"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.hotel_reservation_finish_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "Terminate Reservation"
+msgstr "إنهاء الحجز"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__date_termination
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_finish_wizard__date_termination
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__date_termination
+msgid "Termination Date"
+msgstr "تاريخ الإنهاء"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/wizards/hotel_reservation_finish_wizard.py:0
+#, python-format
+msgid "Termination Date should be greater or equal to today"
+msgstr "تاريخ الإنهاء يجب أن يكون أكبر أو يساوي تاريخ اليوم"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/wizards/hotel_reservation_finish_wizard.py:0
+#, python-format
+msgid "Termination Date should be greater than check in date"
+msgstr "تاريخ الإنهاء يجب أن يكون أكبر من تاريخ الدخول"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/wizards/hotel_reservation_finish_wizard.py:0
+#, python-format
+msgid "Termination Date should be less than check out date"
+msgstr "تاريخ الإنهاء يجب أن يكون أصغر من تاريخ الخروج"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__duration_termination
+msgid "Termination Duration"
+msgstr "مدة الإنهاء"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#: model:ir.actions.act_window,name:hotel_reservation.hotel_reservation_finish_action
+#, python-format
+msgid "Termination Reservation"
+msgstr "إنهاء الحجز"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,help:hotel_reservation.field_hotel_reservation__partner_order_id
+msgid ""
+"The name and address of the contact that requested the order or quotation."
+msgstr "اسم وعنوان جهة الاتصال التي طلبت الأمر أو عرض الأسعار."
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.apartment_view_kanban
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.hotel_apartment_view_search
+msgid "To Check In"
+msgstr "تسجيل الدخول"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_room__to_checked_in
+msgid "To Checked In"
+msgstr "لتسجيل الدخول"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_room__to_exit_today
+msgid "To Exit Today"
+msgstr "خروج اليوم"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_quick_room_reservation__current_date
+msgid "Today's Date"
+msgstr "تاريخ اليوم"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_folio__total_cost
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__total_cost
+msgid "Total Cost"
+msgstr " التكلفة الكلية "
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__total_room_rate
+msgid "Total Room Rate"
+msgstr "سعر الغرف"
+
+#. module: hotel_reservation
+#: model:reservation.visit.reason,name:hotel_reservation.reservation_visit_reason
+msgid "Tourism"
+msgstr "سياحة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__hotel_room_reservation_line__state__unassigned
+msgid "Unassigned"
+msgstr "غير معين"
+
+#. module: hotel_reservation
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__res_partner__age_group__undefined
+msgid "Undefined"
+msgstr "غير محدد"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_quick_room_reservation__under_maintenance
+msgid "Under Maintenance"
+msgstr "تحت الصيانة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_folio_line__price_unit
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_service_line__price_unit
+#: model:ir.model.fields,field_description:hotel_reservation.field_sale_order_line__price_unit
+msgid "Unit Price"
+msgstr "سعر الوحدة"
+
+#. module: hotel_reservation
+#: model:product.product,uom_name:hotel_reservation.product_product_discount
+#: model:product.product,uom_name:hotel_reservation.product_product_insurance
+#: model:product.product,uom_name:hotel_reservation.product_product_returnable
+#: model:product.template,uom_name:hotel_reservation.product_product_discount_product_template
+#: model:product.template,uom_name:hotel_reservation.product_product_insurance_product_template
+#: model:product.template,uom_name:hotel_reservation.product_product_returnable_product_template
+msgid "Units"
+msgstr "الوحدات"
+
+#. module: hotel_reservation
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__res_partner__gender__unknown_
+msgid "Unknown"
+msgstr "غير معروف"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__message_unread
+msgid "Unread Messages"
+msgstr "رسائل غير مقروءة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عداد الرسائل غير المقروءة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_folio__total_room_rate
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__total_room_rate
+msgid "Untaxed Total Rate"
+msgstr "التكلفة بدون ضرائب"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_room.py:0
+#, python-format
+msgid ""
+"User is not able to delete the room after the room in %s state in "
+"reservation"
+msgstr "لا يمكن للمستخدم حذف الغرفة بعد حجز الغرفة في حالة %s"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__is_vip
+msgid "VIPS"
+msgstr "كبار الشخصيات"
+
+#. module: hotel_reservation
+#: model:ir.actions.act_window,name:hotel_reservation.hotel_reservation_vip_action
+#: model:ir.ui.menu,name:hotel_reservation.hotel_reservation_vip_menu
+msgid "Vips"
+msgstr "كبار الشخصيات"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__reason_id
+#: model:ir.model.fields,field_description:hotel_reservation.field_quick_room_reservation__reason_id
+msgid "Visit Reason"
+msgstr " سبب الزيارة"
+
+#. module: hotel_reservation
+#: model:ir.actions.act_window,name:hotel_reservation.reservation_visit_reason_action
+#: model:ir.model,name:hotel_reservation.model_reservation_visit_reason
+#: model:ir.ui.menu,name:hotel_reservation.reservation_visit_reason_menu
+msgid "Visit Reasons"
+msgstr "أسباب  الزيارة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__res_partner__guest_type__visitor
+msgid "Visitor"
+msgstr "زائر"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_room__waiting_check_in
+msgid "Waiting Check In"
+msgstr "إنتظار تسجيل الدخول"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.hotel_apartment_view_search
+msgid "Waiting To Check In"
+msgstr "إنتظار تسجيل الدخول"
+
+#. module: hotel_reservation
+#: model:hotel.reservation.source,name:hotel_reservation.hotel_reservation_source_webbeds
+msgid "Webbeds"
+msgstr "ويب بيدز"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,help:hotel_reservation.field_hotel_reservation__website_message_ids
+msgid "Website communication history"
+msgstr "سجل اتصال الموقع"
+
+#. module: hotel_reservation
+#: model:hotel.reservation.source,name:hotel_reservation.hotel_reservation_source_yamsafer
+msgid "Yamsafer"
+msgstr "يا مسافر"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#: code:addons/hotel_reservation/wizards/reservation_change_room_wizard.py:0
+#, python-format
+msgid "You should add discount amount"
+msgstr "يجب إضافة مبلغ الخصم"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#: code:addons/hotel_reservation/wizards/reservation_change_room_wizard.py:0
+#, python-format
+msgid "You should add discount percentage"
+msgstr "يجب إضافة نسبة الخصم"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#, python-format
+msgid "You should add percentage of returnable reservation "
+msgstr "يجب  إضافة نسبة مبلغ الحجز القابل للإرجاع"
+
+#. module: hotel_reservation
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__hotel_reservation__discount_type__amount
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__reservation_room_change_history__discount_type__amount
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__reservation_room_change_wizard__discount_type__amount
+msgid "amount"
+msgstr "مبلغ"
+
+#. module: hotel_reservation
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__hotel_reservation_hospitality__discount_type__amount
+msgid "Amount"
+msgstr "مبلغ"
+
+#. module: hotel_reservation
+#: model:ir.model,name:hotel_reservation.model_hotel_service_line
+msgid "hotel Service line"
+msgstr "بند  خدمة الفنادق"
+
+#. module: hotel_reservation
+#: model:ir.model,name:hotel_reservation.model_hotel_folio
+msgid "hotel folio"
+msgstr "سجل الفندق"
+
+#. module: hotel_reservation
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__hotel_reservation_check_wizard__check_type__out
+msgid "out"
+msgstr "خروج"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_room_reservation_line__status
+msgid "state"
+msgstr "حالة"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.room_reservation_summary_form_view
+msgid "to"
+msgstr "إلى"
+
+#. module: hotel_reservation
+#: model:hotel.reservation.source,name:hotel_reservation.hotel_reservation_source_trips
+msgid "trips"
+msgstr "رحلات"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_finish_wizard__type
+msgid "type"
+msgstr "النوع"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/wizards/hotel_reservation_check_wizard.py:0
+#: code:addons/hotel_reservation/wizards/hotel_reservation_check_wizard.py:0
+#: code:addons/hotel_reservation/wizards/hotel_reservation_finish_wizard.py:0
+#: code:addons/hotel_reservation/wizards/hotel_reservation_finish_wizard.py:0
+#, python-format
+msgid "you should choose rooms"
+msgstr "يجب إختيار غرف"
+
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__mobile
+msgid "Mobile"
+msgstr "الجوال"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__visa_number
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_partner__visa_number
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_users__visa_number
+msgid "Visa Number"
+msgstr " رقم التاشيرة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__is_hospitality
+msgid "Hospitality"
+msgstr "ضيافة"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/res_partner.py:0
+#, python-format
+msgid "You should add gender for guest"
+msgstr "يجب إضافة الجنس للضيف"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#, python-format
+msgid "You should add one reservation hospitality for each company"
+msgstr "يجب إضافة  اعدادات نوع ضيافة للحجوزات لكل شركة مرة فقط"
+
+#. module: hotel_reservation
+#: model:ir.actions.act_window,name:hotel_reservation.hotel_reservation_hospitality_action
+#: model:ir.ui.menu,name:hotel_reservation.hotel_reservation_hospitality_menu
+msgid "Reservation Hospitality Discount"
+msgstr "إعدادات الخصم لنوع ضيافة"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "Ref"
+msgstr "البيان"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#, python-format
+msgid "The number of adults must correspond to the number of selected adults."
+msgstr "عدد المرافقون يجب أن يكون موافق لعدد المرافقين المختارين."
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.apartment_view_kanban
+msgid "To Check out"
+msgstr "تسجيل الخروج"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#, python-format
+msgid "You cannot add more than one room for individual reservation ."
+msgstr "لا يمكن إضافة أكثر من غرفة للحجز الفردي ."
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#: code:addons/hotel_reservation/wizards/reservation_change_room_wizard.py:0
+#, python-format
+msgid "Minimum Price must be equal or greater than Room Minimum Price %s"
+msgstr "يجب أن يكون الحد الأدنى للسعر مساويًا أو أكبر من الحد الأدنى لسعر الغرفة %s"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#: code:addons/hotel_reservation/wizards/reservation_change_room_wizard.py:0
+#, python-format
+msgid "Minimum Price must be more than 0"
+msgstr "يجب أن يكون الحد الأدنى للسعر أكبر من 0"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__is_minimum_price
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_wizard__is_minimum_price
+msgid "Minimum Prices"
+msgstr "الحد الأدنى "
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__minimum_price
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_wizard__minimum_price
+msgid "Minimum price"
+msgstr "الحد الأدنى لسعر الغرفة "
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_history__minimum_price
+msgid "Minimum price "
+msgstr "أدنى سعر جديد "
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_history__old_minimum_price
+msgid "Old Minimum price"
+msgstr "أدنى سعر قديم"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__is_other_price
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_history__other_price
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_wizard__is_other_price
+msgid "Other Price"
+msgstr "سعر أخر"
+
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#: code:addons/hotel_reservation/wizards/reservation_change_room_wizard.py:0
+#, python-format
+msgid "Other price must be greater than Room Price %s"
+msgstr "يجب ان يكون السعر أكبر من السعر الأصلي للغرفة %s"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/models/hotel_reservation.py:0
+#: code:addons/hotel_reservation/wizards/reservation_change_room_wizard.py:0
+#, python-format
+msgid "The Price must be more than 0"
+msgstr "السعر يجب أن يكون أكبر من 0"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_line__other_price
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_wizard__other_price
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.reservation_room_change_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "Price"
+msgstr "السعر"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_reservation_room_change_history__old_other_price
+msgid "Old Other price"
+msgstr "السعر الأخر القديم"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_partner__nationality_id
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_users__nationality_id
+msgid "Nationality"
+msgstr "الجنسية"
+
+#. module: hotel_reservation
+#: model:account.payment.support.type,name:hotel_reservation.payment_type_assurance
+msgid "Advance Assurance"
+msgstr "تامين مقدم"
+
+#. module: hotel_reservation
+#: model:account.payment.support.type,name:hotel_reservation.payment_type_inbound
+#: model:ir.model.fields.selection,name:hotel_reservation.selection__account_payment_support_type__support_type__inbound
+msgid "Inbound"
+msgstr "قبض"
+
+#. module: hotel_reservation
+#: model:account.payment.support.type,name:hotel_reservation.payment_type_promissory
+msgid "Promissory"
+msgstr "كمبيالة"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_account_payment__support_type_id
+#: model:ir.model.fields,field_description:hotel_reservation.field_account_payment_register__support_type_id
+#: model:ir.model.fields,field_description:hotel_reservation.field_account_payment_support_type__support_type
+msgid "Support Type"
+msgstr "نوع السند"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__card_number
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_partner__card_number
+#: model:ir.model.fields,field_description:hotel_reservation.field_res_users__card_number
+msgid "Card number"
+msgstr " رقم البطاقة"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/wizards/hotel_reservation_finish_wizard.py:0
+#, python-format
+msgid "you should change rent to daily"
+msgstr "يجب تغيير نوع الحجز إلي يومي"
+
+#. module: hotel_reservation
+#: code:addons/hotel_reservation/wizards/hotel_reservation_finish_wizard.py:0
+#, python-format
+msgid "Refund Customer"
+msgstr "إسترجاع عميل"
+
+#. module: hotel_reservation
+#: model:account.payment.support.type,name:hotel_reservation.payment_type_rent
+msgid "Refundable rent"
+msgstr "إيجار مسترجع"
+
+#. module: hotel_reservation
+#: model:account.payment.support.type,name:hotel_reservation.payment_type_insurance
+msgid "Insurance allowance"
+msgstr " بدل تأمين"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__hotel_invoice_id
+msgid "Invoice"
+msgstr "الفاتورة"
+
+#. module: hotel_reservation
+#: model:account.payment.support.type,name:hotel_reservation.payment_type_rental
+msgid "Rental allowance"
+msgstr "بدل إيجار"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.reservation_room_change_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "Minimum Price"
+msgstr "السعر الأدنى"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_account_payment_form_inherit_hotel_reservation
+msgid "Payment Receipt"
+msgstr "إيصال السداد"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "Create Invoice"
+msgstr "إنشاء فاتورة"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "Print Invoice"
+msgstr "طباعة  فاتورة"
+
+#. module: hotel_reservation
+#: model_terms:ir.ui.view,arch_db:hotel_reservation.view_hotel_reservation_form
+msgid "Insurance Receipt"
+msgstr "سند صرف الايجار"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__taxes_info
+msgid "Taxes details"
+msgstr "تفاصيل الضرائب"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation_setting__hours_day
+msgid "Hour that is exceeded is counted as another day"
+msgstr "الساعة التي إذا تم تجاوزها تحتسب كيوم آخر"
+
+#. module: hotel_reservation
+#: model:ir.model,name:hotel_reservation.model_hotel_reservation_setting
+msgid "Reservation Setting"
+msgstr "إعدادات الحجوزات"
+
+#. module: hotel_reservation
+#: model:ir.actions.act_window,name:hotel_reservation.hotel_reservation_setting_action
+#: model:ir.ui.menu,name:hotel_reservation.hotel_reservation_setting_menu
+msgid "Reservation Settings"
+msgstr "إعدادات الحجوزات"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_hotel_reservation__payment_totals
+msgid "Payment Totals"
+msgstr "المقبوضات"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_account_payment__promissory_due_date
+#: model:ir.model.fields,field_description:hotel_reservation.field_account_payment_register__promissory_due_date
+msgid "Promissory Due Date"
+msgstr "تاريخ الاستحقاق"
+
+#. module: hotel_reservation
+#: model:ir.model.fields,field_description:hotel_reservation.field_account_payment__promissory_number
+#: model:ir.model.fields,field_description:hotel_reservation.field_account_payment_register__promissory_number
+msgid "Promissory Number"
+msgstr "رقم الكمبيالة"

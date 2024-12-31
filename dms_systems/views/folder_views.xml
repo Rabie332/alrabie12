@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Folders-->
+
+    <record id="dms_folder_form_inherit_dms_systems" model="ir.ui.view">
+        <field name="name">dms.folder.form.inherit.dms.system</field>
+        <field name="model">dms.folder</field>
+        <field name="inherit_id" ref="dms.dms_folder_form" />
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page string="Models" name="models">
+                    <span
+                        style="color:red;"
+                    >Please verify before choosing any model, each attachment will be linked to the folder based on those models.</span>
+                    <br />
+                    <field
+                        name="model_ids"
+                        widget="many2many_tags"
+                        nolabel="1"
+                        options="{'no_create': True, 'no_open': True}"
+                    />
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+
+</odoo>

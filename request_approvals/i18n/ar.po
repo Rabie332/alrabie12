@@ -1,0 +1,139 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* request_approvals
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-08 11:09+0000\n"
+"PO-Revision-Date: 2022-06-08 11:09+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: request_approvals
+#: model:ir.model.fields,field_description:request_approvals.field_ir_model__can_approve
+msgid "Can Approve"
+msgstr "يمكن الموافقة"
+
+#. module: request_approvals
+#: model:ir.model.fields,field_description:request_approvals.field_request_approval__create_uid
+msgid "Created by"
+msgstr "انشأ من قبل"
+
+#. module: request_approvals
+#: model:ir.model.fields,field_description:request_approvals.field_request_approval__create_date
+msgid "Created on"
+msgstr "أنشأت في"
+
+#. module: request_approvals
+#: code:addons/request_approvals/models/res_users.py:0
+#, python-format
+msgid "Dashboard"
+msgstr "لوحة المعلومات"
+
+#. module: request_approvals
+#: model_terms:ir.ui.view,arch_db:request_approvals.request_approval_view_kanban
+msgid ""
+"Details\n"
+"                                                <i class=\"fa fa-angle-double-right icon_rotates\"/>"
+msgstr ""
+"التفاصيل\n"
+"                                                <i class=\"fa fa-angle-double-right icon_rotates\"/>"
+
+#. module: request_approvals
+#: model:ir.model.fields,field_description:request_approvals.field_ir_model__display_name
+#: model:ir.model.fields,field_description:request_approvals.field_request_approval__display_name
+#: model:ir.model.fields,field_description:request_approvals.field_res_users__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: request_approvals
+#: model:ir.model.fields,field_description:request_approvals.field_ir_model__id
+#: model:ir.model.fields,field_description:request_approvals.field_request_approval__id
+#: model:ir.model.fields,field_description:request_approvals.field_res_users__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: request_approvals
+#: model:ir.model.fields,field_description:request_approvals.field_request_approval__image_128
+msgid "Image 128"
+msgstr "صورة 128"
+
+#. module: request_approvals
+#: model:ir.model.fields,field_description:request_approvals.field_request_approval__image_1920
+msgid "Image 1920"
+msgstr "صورة 1920"
+
+#. module: request_approvals
+#: model:ir.model.fields,field_description:request_approvals.field_request_approval__kanban_color
+msgid "Kanban Color Index"
+msgstr "لون كانبان"
+
+#. module: request_approvals
+#: model:ir.model.fields,field_description:request_approvals.field_ir_model____last_update
+#: model:ir.model.fields,field_description:request_approvals.field_request_approval____last_update
+#: model:ir.model.fields,field_description:request_approvals.field_res_users____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: request_approvals
+#: model:ir.model.fields,field_description:request_approvals.field_request_approval__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: request_approvals
+#: model:ir.model.fields,field_description:request_approvals.field_request_approval__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: request_approvals
+#: model:ir.model.fields,field_description:request_approvals.field_ir_model__image_128
+msgid "Logo"
+msgstr "شعار"
+
+#. module: request_approvals
+#: model:ir.model.fields,field_description:request_approvals.field_request_approval__res_model_id
+msgid "Model"
+msgstr "النموذج"
+
+#. module: request_approvals
+#: model:ir.model,name:request_approvals.model_ir_model
+msgid "Models"
+msgstr "كائنات"
+
+#. module: request_approvals
+#: code:addons/request_approvals/models/request_approval.py:0
+#: model:ir.actions.server,name:request_approvals.ir_actions_button_request_approval
+#, python-format
+msgid "My Approvals"
+msgstr "موافقاتي"
+
+#. module: request_approvals
+#: model:ir.model.fields,field_description:request_approvals.field_request_approval__name
+msgid "Name"
+msgstr "المسمى"
+
+#. module: request_approvals
+#: model:ir.model,name:request_approvals.model_request_approval
+msgid "Request Approval"
+msgstr "طلب الموافقة"
+
+#. module: request_approvals
+#: model:ir.model.fields,field_description:request_approvals.field_request_approval__to_approve
+msgid "To approve"
+msgstr "للموافقة"
+
+#. module: request_approvals
+#: model_terms:ir.ui.view,arch_db:request_approvals.request_approval_view_kanban
+msgid "To approve:"
+msgstr "للموافقة:"
+
+#. module: request_approvals
+#: model:ir.model,name:request_approvals.model_res_users
+msgid "Users"
+msgstr "المستخدمون"

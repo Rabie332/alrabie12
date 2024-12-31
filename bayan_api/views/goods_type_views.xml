@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+        <record id="goods_type_form_view" model="ir.ui.view">
+          <field name="name">goods.type.form</field>
+          <field name="model">goods.type</field>
+          <field name="arch" type="xml">
+            <form>
+              <sheet>
+                <group>
+                  <group>
+                    <field name='goods_id_bayan'/>
+                    <field name="name_arabic" />
+                    <field name="name_english"/>
+                  </group>
+                </group>
+              </sheet>
+            </form>
+          </field>
+        </record>
+
+        <record id="goods_type_tree_view" model="ir.ui.view">
+          <field name="name">goods.type.tree</field>
+          <field name="model">goods.type</field>
+          <field name="arch" type="xml">
+            <tree>
+              <field name='goods_id_bayan'/>
+              <field name="name_arabic" />
+              <field name="name_english"/>
+            </tree>
+          </field>
+        </record>
+
+        <record id="goods_type_action" model="ir.actions.act_window">
+          <field name="name">Goods Type</field>
+          <field name="res_model">goods.type</field>
+          <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem
+          id="goods_type_menu"
+          name="Goods Type"
+          parent="transportation.transportation_menu_root"
+          action="goods_type_action"
+          sequence="0"
+        />
+</odoo>

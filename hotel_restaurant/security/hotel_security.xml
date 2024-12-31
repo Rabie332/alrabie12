@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+
+
+    <record id="group_restaurant_manager" model="res.groups">
+        <field name="name">Restaurant Manager</field>
+        <field name="implied_ids" eval="[(4, ref('hotel.group_hotel_user'))]" />
+         <field name="category_id" ref="hotel.hms_category" />
+    </record>
+
+     <record id="hotel_restaurant_order_comp_rule" model="ir.rule">
+        <field name="name">Hotel Restaurant Order multi company rule</field>
+        <field name="model_id" ref="model_hotel_restaurant_order" />
+        <field eval="True" name="global" />
+        <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record>
+
+    <record id="hotel_restaurant_reservation_comp_rule" model="ir.rule">
+        <field name="name">Hotel Restaurant Reservation multi company rule</field>
+        <field name="model_id" ref="model_hotel_restaurant_reservation" />
+        <field eval="True" name="global" />
+        <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record>
+
+     <record id="hotel_reservation_order_comp_rule" model="ir.rule">
+        <field name="name">Hotel Reservation Order multi company rule</field>
+        <field name="model_id" ref="model_hotel_reservation_order" />
+        <field eval="True" name="global" />
+        <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record>
+
+</odoo>

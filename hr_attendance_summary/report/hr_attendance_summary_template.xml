@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="hr_attendance_summary_template">
+        <t t-call="web.html_container">
+            <t t-call="web.internal_layout">
+                <t t-foreach="docs" t-as="o">
+                    <div class="page">
+                        <div class="oe_structure" />
+                        <br />
+                        <br />
+                        <center>
+                            <div class="page" style="padding-top:10px;">
+                                <div class="col-xs-12 text-center">
+                                    <center>
+                                        <table style="lightsteelblue;padding-left:300px;padding-right:200px;">
+                                            <t>
+                                                <td>
+                                                    <h1 style="color:#395870;">
+
+                                                        <strong>
+                                                            Attendance Summary Report
+                                                        </strong>
+
+                                                        <br />
+                                                    </h1>
+                                                </td>
+                                            </t>
+                                        </table>
+                                    </center>
+
+                                </div>
+
+                                <div class="col-xs-12 text-center">
+                                    <h2>
+                                        <strong>Period</strong>
+                                    </h2>
+                                    <span t-esc="o.date_from" />
+                                    -
+                                    <span t-esc="o.date_to" />
+                                    <br />
+                                    <br />
+                                </div>
+
+                                <table style="width:95%;height:50%" class="table table-bordered">
+                                    <!-- head table -->
+                                    <thead>
+                                        <tr style='background-color:#275EA2'>
+                                            <th
+                                                style="color:#FFFFFF;padding-top:15px;padding-bottom:15px"
+                                                class="text-center"
+                                            >Employee
+                                            </th>
+                                            <th
+                                                style="color:#FFFFFF;padding-top:15px;padding-bottom:15px"
+                                                class="text-center"
+                                            >Department
+                                            </th>
+                                            <th
+                                                style="color:#FFFFFF;padding-top:15px;padding-bottom:15px"
+                                                class="text-center"
+                                            >Date
+                                            </th>
+                                            <th
+                                                style="color:#FFFFFF;padding-top:15px;padding-bottom:15px"
+                                                class="text-center"
+                                            >Check In
+                                            </th>
+                                            <th
+                                                style="color:#FFFFFF;padding-top:15px;padding-bottom:15px"
+                                                class="text-center"
+                                            >Check Out
+                                            </th>
+                                            <th
+                                                style="color:#FFFFFF;padding-top:15px;padding-bottom:15px"
+                                                class="text-center"
+                                            >Delay
+                                            </th>
+                                            <th
+                                                style="color:#FFFFFF;padding-top:15px;padding-bottom:15px"
+                                                class="text-center"
+                                            >Overtime
+                                            </th>
+                                            <th
+                                                style="color:#FFFFFF;padding-top:15px;padding-bottom:15px"
+                                                class="text-center"
+                                            >Absence Hours
+                                            </th>
+                                            <th
+                                                style="color:#FFFFFF;padding-top:15px;padding-bottom:15px"
+                                                class="text-center hours_worked"
+                                            >Hours worked
+                                            </th>
+                                            <th
+                                                style="color:#FFFFFF;padding-top:15px;padding-bottom:15px"
+                                                class="text-center"
+                                            >Presence State
+                                            </th>
+                                            <th
+                                                style="color:#FFFFFF;padding-top:15px;padding-bottom:15px"
+                                                class="text-center"
+                                            >Worked hours state
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <t t-set="total_delay" t-value="0" />
+                                    <t t-set="total_overtime" t-value="0" />
+                                    <t t-set="total_absence" t-value="0" />
+                                    <t t-set="total_worked_hours" t-value="0" />
+                                    <tbody>
+                                        <t t-foreach="get_lines(o)" t-as="line">
+                                            <t t-set="total_delay" t-value="total_delay+line.delay_hours" />
+                                            <t t-set="total_overtime" t-value="total_overtime+line.overtime_hours" />
+                                            <t t-set="total_absence" t-value="total_absence+line.absence_hours" />
+                                            <t
+                                                t-set="total_worked_hours"
+                                                t-value="total_worked_hours+line.worked_hours"
+                                            />
+                                            <tr class="text-center">
+                                                <td style="padding-top:15px;padding-bottom:15px">
+                                                    <span t-field="line.employee_id.name" />
+                                                </td>
+                                                <td style="padding-top:15px;padding-bottom:15px">
+                                                    <span t-field="line.employee_id.department_id.name" />
+                                                </td>
+                                                <td style="padding-top:15px;padding-bottom:15px">
+                                                    <span t-field="line.date" />
+                                                </td>
+                                                <td style="padding-top:15px;padding-bottom:15px">
+                                                    <t t-if="line.check_in_date">
+                                                        <span
+                                                            t-esc="context_timestamp(line.check_in_date).strftime('%H:%M:%S')"
+                                                        />
+                                                    </t>
+
+                                                </td>
+                                                <td style="padding-top:15px;padding-bottom:15px">
+                                                    <t t-if="line.check_out_date">
+                                                        <span
+                                                            t-esc="context_timestamp(line.check_out_date).strftime('%H:%M:%S')"
+                                                        />
+                                                    </t>
+                                                </td>
+                                                <td style="padding-top:15px;padding-bottom:15px">
+                                                    <span
+                                                        t-options='{"widget": "float_time"}'
+                                                        t-field="line.delay_hours"
+                                                    />
+                                                </td>
+                                                <td style="padding-top:15px;padding-bottom:15px">
+                                                    <span
+                                                        t-options='{"widget": "float_time"}'
+                                                        t-field="line.overtime_hours"
+                                                    />
+                                                </td>
+                                                <td style="padding-top:15px;padding-bottom:15px">
+                                                    <t t-if="line.absence_hours">
+                                                        <span
+                                                            t-options='{"widget": "float_time"}'
+                                                            t-field="line.absence_hours"
+                                                            style="color:#E41B0B"
+                                                        />
+                                                    </t>
+                                                    <t t-else="">
+                                                        <span>00:00</span>
+                                                    </t>
+                                                </td>
+                                                <td
+                                                    style="padding-top:15px;padding-bottom:15px"
+                                                    class="td_hours_worked"
+                                                >
+                                                    <span
+                                                        t-options='{"widget": "float_time"}'
+                                                        t-field="line.worked_hours"
+                                                    />
+                                                </td>
+                                                <td style="padding-top:15px;padding-bottom:15px">
+                                                    <span t-field="line.presence_state" />
+                                                </td>
+                                                <td style="padding-top:15px;padding-bottom:15px">
+                                                    <t t-if="line.presence_state !='service'">
+                                                        -
+                                                    </t>
+                                                    <t
+                                                        t-elif="line.presence_state =='service' and line.absence_hours > 0.0"
+                                                    >
+                                                        Not completed
+                                                    </t>
+                                                    <t t-else="">
+                                                        Completed
+                                                    </t>
+                                                </td>
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                    <tr style="border: 2px solid black;">
+                                        <td colspan="5">Total</td>
+                                        <td class="text-center">
+                                            <span t-esc="total_delay" t-options='{"widget": "float_time"}' />
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-esc="total_overtime" t-options='{"widget": "float_time"}' />
+                                        </td>
+                                        <td class="text-center">
+                                            <span
+                                                t-esc="total_absence"
+                                                t-options='{"widget": "float_time"}'
+                                                style="color:#E41B0B"
+                                            />
+                                        </td>
+                                        <td class="text-center td_total_worked_hours">
+                                            <span t-esc="total_worked_hours" t-options='{"widget": "float_time"}' />
+                                        </td>
+                                        <td />
+                                        <td />
+                                    </tr>
+                                </table>
+                            </div>
+                        </center>
+                    </div>
+                </t>
+
+            </t>
+        </t>
+    </template>
+</odoo>

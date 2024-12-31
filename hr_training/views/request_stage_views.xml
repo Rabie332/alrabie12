@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="request_stage_from_view_inherit_hr_training" model="ir.ui.view">
+        <field name="name">request.stage.form.inherit</field>
+        <field name="model">request.stage</field>
+        <field name="inherit_id" ref="request.request_stage_from_view" />
+        <field name="arch" type="xml">
+                <field name="fold" position="after">
+                    <field
+                    name="appears_in_training_report"
+                    attrs="{'invisible': [('res_model', '!=', 'hr.training')]}"
+                />
+                </field>
+        </field>
+    </record>
+    <record id="hr_training_stage_action" model="ir.actions.act_window">
+        <field name="name">Training Stages</field>
+        <field name="res_model">request.stage</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="domain">[('res_model_id.model', '=', 'hr.training')]</field>
+        <field name="context">{'default_res_model':'hr.training'}</field>
+    </record>
+
+    <menuitem
+        id="menu_hr_training_stage"
+        action="hr_training_stage_action"
+        name="Training Stages"
+        groups="request.group_stages_manager"
+        parent="menu_hr_training_setting"
+        sequence="4"
+    />
+</odoo>

@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+,,,,,,,
+access_hr_deputation_user,name_hr_deputation_all,model_hr_deputation,base.group_user,1,1,1,0
+access_hr_deputation_setting_user,name_hr_deputation_setting_all,model_hr_deputation_setting,base.group_user,1,1,1,0
+access_hr_deputation_allowance_user,name_hr_deputation_allowance,model_hr_deputation_allowance,base.group_user,1,1,1,0
+access_hr_deputation_location_user,hr_deputation_location_user,model_hr_deputation_location,base.group_user,1,1,1,1
+access_travel_days_user,travel_days_user,model_travel_days,base.group_user,1,1,1,0
+access_hr_employee_deputation_stock_user,hr_employee_deputation_stock_user,model_hr_employee_deputation_stock,base.group_user,1,1,1,0
+access_hr_job_user,hr_job_user,hr.model_hr_job,base.group_user,1,1,1,0
+access_hr_deputation_cut_user,hr_deputation_cut_user,model_hr_deputation_cut,base.group_user,1,1,1,0
+access_hr_deputation_extension_user,hr_deputation_extension_user,model_hr_deputation_extension,base.group_user,1,1,1,0
+access_hr_deputation_cancellation_user,hr_deputation_cancellation_user,model_hr_deputation_cancellation,base.group_user,1,1,1,0
+access_hr_deputation_kilometer_user,hr_deputation_kilometer_user,model_hr_deputation_kilometer,base.group_user,1,1,1,1

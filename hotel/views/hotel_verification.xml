@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+<record id="hotel_verification_view_search" model="ir.ui.view">
+    <field name="name">hotel.verification.view.search</field>
+    <field name="model">hotel.verification</field>
+    <field name="arch" type="xml">
+        <search>
+            <field name="verifier_id" />
+             <filter
+                    name="day"
+                    string="Today"
+                    domain="[('date', '&gt;=', context_today().strftime('%Y-%m-%d 00:00:00'))]"
+                />
+                <filter
+                    name="week"
+                    string="Last week"
+                    domain="[
+                            '&amp;',
+                            ('date', '&gt;=', (context_today()-relativedelta(days=7)).strftime('%Y-%m-%d')),
+                            ('date', '&lt;=', context_today().strftime('%Y-%m-%d')),
+                        ]"
+                />
+                <filter
+                    name="month"
+                    string="Last month"
+                    domain="[
+                            '&amp;',
+                            ('date', '&gt;=', (context_today()-relativedelta(months=1)).strftime('%Y-%m-%d')),
+                            ('date', '&lt;=', context_today().strftime('%Y-%m-%d')),
+                        ]"
+                />
+                <filter
+                    name="year"
+                    string="Last year"
+                    domain="[
+                            '&amp;',
+                            ('date', '&gt;=', (context_today()-relativedelta(years=1)).strftime('%Y-%m-%d')),
+                            ('date', '&lt;=', context_today().strftime('%Y-%m-%d')),
+                         ]"
+                />
+            <group string="Grouped by">
+                    <filter name="type" string="Type" context="{'group_by': 'type'}" />
+                <filter name="verifier_id" string="Verifier" context="{'group_by': 'verifier_id'}" />
+            </group>
+        </search>
+    </field>
+</record>
+
+    <record id="hotel_verification_view_tree" model="ir.ui.view">
+        <field name="name">hotel.verification.view.tree</field>
+        <field name="model">hotel.verification</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="verifier_id" />
+                <field name="date" />
+                <field name="type" />
+                <field name="notes" />
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="hotel_verification_view_form" model="ir.ui.view">
+        <field name="name">hotel.verification.view.form</field>
+        <field name="model">hotel.verification</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="verifier_id" options="{'no_create':True}" />
+                            <field name="type" />
+                        </group>
+                        <group>
+                            <field name="date" />
+                            <field name="notes" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="hotel_verification_action" model="ir.actions.act_window">
+        <field name="name">Verification</field>
+        <field name="res_model">hotel.verification</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="hotel_verification_menu"
+        name="Verification"
+        parent="hotel_management_menu"
+        action="hotel_verification_action"
+        sequence="4"
+    />
+</odoo>

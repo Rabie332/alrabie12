@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<template>
+    <t t-name="TimelineView">
+        <div class="oe_timeline_view">
+            <div class="oe_timeline_buttons">
+                <button class="btn btn-default btn-sm oe_timeline_button_today">Today</button>
+                <div class="btn-group btn-sm" style="width:95%;">
+                    <button class="btn btn-default oe_timeline_button_scale_day">Day</button>
+                    <button class="btn btn-default oe_timeline_button_scale_week">Week</button>
+                    <button class="btn btn-default oe_timeline_button_scale_month">Month</button>
+                    <button style="margin-left:20%;" class="btn btn-default oe_timeline_button_scale_year">Year</button>
+
+                    <div class="q-reservation-filter">
+                        <select class="form-select" id="floor_filter" />
+                        <select class="form-select" id="room_type_filter" />
+                        <button type="button" class="btn btn-secondary o_button_floor_filter_search">
+                            Search
+                        </button>
+                    </div>
+
+                    <div class="q-reservation-details" style="padding-right:5%;">
+                        <span>Occupied (Without Check In)</span>
+                        <span class="q-reservation-status" style="background-color:#53BF9D;" />
+                        <span>Occupied (With Check In)</span>
+                        <span class="q-reservation-status" style="background-color:#34B3F1;" />
+                        <span>Collective Reservation</span>
+                        <span class="q-reservation-status" style="background-color:#FFB562;" />
+                        <span>Closed</span>
+                        <span class="q-reservation-status" style="background-color:#F2EBE9;" />
+                        <span>Under Maintenance</span>
+                        <span class="q-reservation-status" style="background-color:#EB1D36;" />
+                    </div>
+                </div>
+            </div>
+            <div class="oe_timeline_widget" />
+        </div>
+    </t>
+    <svg t-name="TimelineView.Canvas" class="oe_timeline_view_canvas">
+        <defs>
+            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                <polygon points="10 0, 10 7, 0 3.5" />
+            </marker>
+        </defs>
+    </svg>
+</template>

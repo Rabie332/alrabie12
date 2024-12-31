@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="report_reservation_payment">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <div class="header" />
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="row">
+                            <div class="col-3">
+                            </div>
+                            <div class="col-6 text-center">
+                                <center>
+                                    <h1 style="color:#507298;padding-top:20px;">
+                                        <strong
+                                            t-if="docs._context['partner_type'] == 'outbound'"
+                                            style="font-size: 25px;"
+                                        >
+                                             Payment Outbound
+                                        </strong>
+                                          <strong t-else="" style="font-size: 25px;">
+                                             Payment Inbound
+                                        </strong>
+                                    </h1>
+                                </center>
+                            </div>
+                            <div class="col-3">
+                                <img
+                                    style="max-height:120px !important;"
+                                    width="80%"
+                                    t-att-src="'data:image/png;base64,%s' % to_text(user.company_id.sudo().logo)"
+                                />
+
+                            </div>
+                        </div>
+                        <div class="oe_structure" />
+                         <div class="col-12 text-center">
+                              <strong>Period :</strong>
+                            <span t-field="o.date_from" />
+                            -
+                            <span t-field="o.date_to" />
+                            <br />
+                            <br />
+
+                        </div>
+                        <br />
+                        <table class="table nowrap table-bordered" t-if="docs._context['partner_type'] == 'inbound'">
+                            <tr style="background-color: #00b7ff;
+  color: #fff;">
+                                <td><strong>Payment Number</strong></td>
+                                <td><strong>From</strong></td>
+                                <td><strong>Date</strong></td>
+                                <td><strong>Hours</strong></td>
+                                <td><strong>Amount</strong></td>
+                                <td><strong>Ref</strong></td>
+                                <td><strong>Payment Method</strong></td>
+                                <td><strong>Check/Transaction number</strong></td>
+                                <td><strong>Reservation number</strong></td>
+                                <td><strong>Recipient</strong></td>
+                            </tr>
+                            <t t-set="payments" t-value="get_lines(o)" />
+                               <t
+                                t-set="payments_inbound"
+                                t-value="get_lines(o).filtered(
+            lambda payment_inbound: payment_inbound.payment_type == 'inbound'
+        )"
+                            />
+                                <t
+                                t-set="payments_outbound"
+                                t-value="get_lines(o).filtered(
+            lambda payment_outbound: payment_outbound.payment_type == 'outbound'
+        )"
+                            />
+                            <t t-foreach="payments_inbound" t-as="payment">
+
+                                <tr>
+
+                                    <td><span t-esc="payment.name" /></td>
+                                    <td><span t-esc="payment.partner_id.name" /></td>
+                                    <td>  <span
+                                            t-field="payment.create_date"
+                                            t-options="{'format': 'dd/MM/yyyy'}"
+                                        /></td>
+                                    <td><span t-field="payment.create_date" t-options="{'format': 'HH:mm:ss'}" /></td>
+                                    <td><span t-esc="payment.amount" /></td>
+
+                                    <td><span t-esc="payment.ref" /></td>
+                                    <td><span t-esc="payment.payment_method_id.name" /></td>
+                                    <td><span t-esc="payment.transaction_number" />
+                                        <span t-esc="payment.check_number" /> </td>
+                                    <td><span t-esc="payment.reservation_id.reservation_no" /></td>
+                                    <td><span t-esc="payment.create_uid.name" /></td>
+
+
+                                </tr>
+
+                            </t>
+
+                        </table>
+
+                        <table class="table nowrap table-bordered" t-if="docs._context['partner_type'] == 'outbound'">
+                            <tr style="background-color: #00b7ff;
+  color: #fff;">
+                                  <td><strong>Payment Number</strong></td>
+                                <td><strong>Date</strong></td>
+                                <td><strong>Hours</strong></td>
+                                <td><strong>Amount</strong></td>
+                                <td><strong>Untaxed Amount</strong></td>
+                                <td><strong>Taxes</strong></td>
+                                <td><strong>Ref</strong></td>
+                                <td><strong>Payment Method</strong></td>
+                                <td><strong>Check/Transaction number</strong></td>
+                                <td><strong>Reservation number</strong></td>
+                                <td><strong>Employee</strong></td>
+                                <td><strong>Supplier tax number</strong></td>
+                                <td><strong>Supplier invoice number</strong></td>
+                                <td><strong>Notes</strong></td>
+                            </tr>
+
+                            <t t-set="payments" t-value="get_lines(o)" />
+                                <t
+                                t-set="payments_outbound"
+                                t-value="get_lines(o).filtered(
+            lambda payment_outbound: payment_outbound.payment_type == 'outbound'
+        )"
+                            />
+                            <t t-foreach="payments_outbound" t-as="payment">
+
+                               <tr>
+
+                                    <td><span t-esc="payment.name" /></td>
+                                    <td>  <span
+                                            t-field="payment.create_date"
+                                            t-options="{'format': 'dd/MM/yyyy'}"
+                                        /></td>
+                                    <td><span t-field="payment.create_date" t-options="{'format': 'HH:mm:ss'}" /></td>
+                                    <td><span t-esc="payment.amount" /></td>
+                                    <td><span t-esc="payment.amount_untaxed" /></td>
+                                    <td><span t-esc="payment.amount_tax" /></td>
+
+                                    <td><span t-esc="payment.ref" /></td>
+                                    <td><span t-esc="payment.payment_method_id.name" /></td>
+                                    <td><span t-esc="payment.transaction_number" />
+                                        <span t-esc="payment.check_number" /> </td>
+                                    <td><span t-esc="payment.reservation_id.reservation_no" /></td>
+                                    <td><span t-esc="payment.create_uid.name" /></td>
+                                   <td><span
+                                            t-esc="', '.join(bill.name for bill in payment.reconciled_bill_ids)"
+                                        /></td>
+                                    <td><span t-esc="payment.partner_id.vat" /></td>
+                                    <td />
+
+
+                                </tr>
+
+                            </t>
+
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

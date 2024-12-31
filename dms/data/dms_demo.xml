@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <odoo noupdate="1">
+
+        <!--Documents type-->
+
+        <record id="ir_attachment_type1" model="ir.attachment.type">
+            <field name="code">1</field>
+            <field name="name">‫Written documents‬</field>
+        </record>
+
+        <record id="ir_attachment_type2" model="ir.attachment.type">
+            <field name="code">2</field>
+            <field name="name">‫‫Visual documents‬</field>
+        </record>
+
+        <!-- Document-->
+
+        <record id="ir_attachment_img" model="ir.attachment">
+            <field name="public" eval="True" />
+            <field name="code">00002</field>
+            <field name="name">text arabic - Demo Image</field>
+            <field name="create_uid" ref="base.user_demo" />
+            <field
+                name="datas"
+                type="base64"
+                file="dms/static/src/img/text_arabic.png"
+            />
+            <field name="store_fname">text_arabic.jpg</field>
+            <field name="type_id" ref="ir_attachment_type2" />
+            <field name="index_content">'[[waiting for OCR]]'</field>
+        </record>
+
+        <record id="ir_attachment_pdf" model="ir.attachment">
+            <field name="public" eval="True" />
+            <field name="code">00003</field>
+            <field name="name">text arabic - Demo PDF</field>
+            <field name="create_uid" ref="base.user_demo" />
+            <field
+                name="datas"
+                type="base64"
+                file="dms/static/src/pdf/text_arabic.pdf"
+            />
+            <field name="store_fname">text_arabic.pdf</field>
+            <field name="type_id" ref="ir_attachment_type1" />
+            <field name="index_content">'[[waiting for OCR]]'</field>
+        </record>
+
+    </odoo>
+
+</odoo>

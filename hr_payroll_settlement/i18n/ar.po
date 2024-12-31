@@ -1,0 +1,597 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_payroll_settlement
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-11 08:14+0000\n"
+"PO-Revision-Date: 2020-11-11 08:14+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "زخرفة استثناء النشاط"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: hr_payroll_settlement
+#: code:addons/hr_payroll_settlement/models/hr_payslip.py:0
+#: model:ir.model.fields.selection,name:hr_payroll_settlement.selection__hr_settlement__type__addition
+msgid "Addition Settlement"
+msgstr "تسوية بالإضافة"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__amount
+#: model:ir.model.fields.selection,name:hr_payroll_settlement.selection__hr_settlement__compute_method__amount
+#: model_terms:ir.ui.view,arch_db:hr_payroll_settlement.hr_settlement_report_template
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__amount_addition
+msgid "Amount Addition"
+msgstr "مبلغ الإضافة"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__amount_deduction
+msgid "Amount Deduction"
+msgstr "مبلغ الحسم"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__employee_id
+msgid "Applicant"
+msgstr "صاحب الطلب"
+
+#. module: hr_payroll_settlement
+#: model:mail.message.subtype,name:hr_payroll_settlement.mt_hr_settlement_approved
+msgid "Approved"
+msgstr "موافق عليه "
+
+#. module: hr_payroll_settlement
+#: model_terms:ir.ui.view,arch_db:hr_payroll_settlement.hr_settlement_view_form
+#: model_terms:ir.ui.view,arch_db:hr_payroll_settlement.hr_settlement_view_search
+msgid "Archived"
+msgstr "مؤرشف"
+
+#. module: hr_payroll_settlement
+#: model_terms:ir.ui.view,arch_db:hr_payroll_settlement.hr_settlement_view_form
+msgid "Are you sure you want to do this?"
+msgstr "هل أنت متأكد من القيام بهذا الإجراء ؟"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields.selection,name:hr_payroll_settlement.selection__hr_settlement__compute_method__basic_salary
+msgid "Basic salary"
+msgstr "الراتب الأساسي"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__compute_method
+msgid "Compute Method"
+msgstr "طريقة الإحتساب"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hr_payroll_settlement
+#: model_terms:ir.ui.view,arch_db:hr_payroll_settlement.hr_settlement_view_search
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: hr_payroll_settlement
+#: model_terms:ir.ui.view,arch_db:hr_payroll_settlement.hr_settlement_view_kanban
+msgid "Date:"
+msgstr "التاريخ :"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__days
+#: model_terms:ir.ui.view,arch_db:hr_payroll_settlement.hr_settlement_report_template
+msgid "Days Number"
+msgstr "عدد الأيام"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields.selection,name:hr_payroll_settlement.selection__hr_settlement__compute_method__days_absence
+msgid "Days absence"
+msgstr "أيام الغياب"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields.selection,name:hr_payroll_settlement.selection__hr_settlement__compute_method__days_delay
+msgid "Days delay"
+msgstr "أيام التأخير"
+
+#. module: hr_payroll_settlement
+#: code:addons/hr_payroll_settlement/models/hr_payslip.py:0
+#: model:ir.model.fields.selection,name:hr_payroll_settlement.selection__hr_settlement__type__deduction
+msgid "Deduction Settlement"
+msgstr "تسوية بالحسم"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__department_id
+msgid "Department"
+msgstr "الإدارة"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__display_button_accept
+msgid "Display Button Accept"
+msgstr "عرض  زر القبول"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__display_button_refuse
+msgid "Display Button Refuse"
+msgstr "عرض  زر الرفض"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__display_button_send
+msgid "Display Button Send"
+msgstr "عرض  زر الإرسال"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__display_name
+msgid "Display Name"
+msgstr "المسمى"
+
+#. module: hr_payroll_settlement
+#: model:request.stage,name:hr_payroll_settlement.hr_settlement_stage_done
+msgid "Done"
+msgstr "معتمد"
+
+#. module: hr_payroll_settlement
+#: model:request.stage,name:hr_payroll_settlement.hr_settlement_stage_draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: hr_payroll_settlement
+#: model_terms:ir.ui.view,arch_db:hr_payroll_settlement.hr_settlement_view_form
+#: model_terms:ir.ui.view,arch_db:hr_payroll_settlement.hr_settlement_view_search
+#: model_terms:ir.ui.view,arch_db:hr_payroll_settlement.hr_settlement_view_tree
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_payroll_settlement
+#: model_terms:ir.ui.view,arch_db:hr_payroll_settlement.hr_settlement_view_kanban
+msgid "Employee :"
+msgstr "الموظف:"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: hr_payroll_settlement
+#: model_terms:ir.ui.view,arch_db:hr_payroll_settlement.hr_settlement_view_search
+msgid "Grouped by"
+msgstr "تم تجميعها بواسطة"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,help:hr_payroll_settlement.field_hr_settlement__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "الأيقونة للإشارة إلى استثناء النشاط"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,help:hr_payroll_settlement.field_hr_settlement__message_needaction
+#: model:ir.model.fields,help:hr_payroll_settlement.field_hr_settlement__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,help:hr_payroll_settlement.field_hr_settlement__message_has_error
+#: model:ir.model.fields,help:hr_payroll_settlement.field_hr_settlement__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__job_id
+msgid "Job"
+msgstr "وظيفة"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__kanban_color
+msgid "Kanban Color Index"
+msgstr "لون كانبان"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__manager_id
+msgid "Manager"
+msgstr "مدير"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields.selection,name:hr_payroll_settlement.selection__hr_settlement__compute_method__net_salary
+msgid "Net salary"
+msgstr "راتب الإجمالي"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__notes
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: hr_payroll_settlement
+#: model_terms:ir.ui.view,arch_db:hr_payroll_settlement.hr_settlement_view_form
+msgid "Notes ..."
+msgstr "ملاحظات ..."
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__name
+msgid "Number"
+msgstr ""
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,help:hr_payroll_settlement.field_hr_settlement__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,help:hr_payroll_settlement.field_hr_settlement__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,help:hr_payroll_settlement.field_hr_settlement__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__contract_id
+#: model_terms:ir.ui.view,arch_db:hr_payroll_settlement.hr_settlement_view_search
+msgid "Contract"
+msgstr "العقد"
+
+#. module: hr_payroll_settlement
+#: model:ir.model,name:hr_payroll_settlement.model_hr_payslip
+msgid "Pay Slip"
+msgstr "قسيمة الراتب"
+
+#. module: hr_payroll_settlement
+#: model_terms:ir.ui.view,arch_db:hr_payroll_settlement.hr_settlement_view_search
+msgid "Period"
+msgstr "الفترة"
+
+#. module: hr_payroll_settlement
+#: model_terms:ir.ui.view,arch_db:hr_payroll_settlement.hr_settlement_view_kanban
+msgid "Period:"
+msgstr "الفترة:"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__refuse_reason
+msgid "Refuse Reason"
+msgstr "سبب الرفض"
+
+#. module: hr_payroll_settlement
+#: model:mail.message.subtype,name:hr_payroll_settlement.mt_hr_loan_refused
+#: model:request.stage,name:hr_payroll_settlement.hr_settlement_stage_refuse
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: hr_payroll_settlement
+#: model:mail.activity.type,name:hr_payroll_settlement.mail_hr_settlement_approval
+msgid "Request Approval"
+msgstr "طلب لموافقة"
+
+#. module: hr_payroll_settlement
+#: model:mail.message.subtype,description:hr_payroll_settlement.mt_hr_settlement_approved
+msgid "Request approved"
+msgstr "طلب معتمد"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__date
+msgid "Request date"
+msgstr "تاريخ الطلب"
+
+#. module: hr_payroll_settlement
+#: model:mail.message.subtype,description:hr_payroll_settlement.mt_hr_loan_refused
+msgid "Request refused"
+msgstr "طلب مرفوض"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: hr_payroll_settlement
+#: model:hr.salary.rule,name:hr_payroll_settlement.hr_rule_settlement
+#: model:hr.salary.rule.category,name:hr_payroll_settlement.SETTLEMENT
+#: model:ir.model,name:hr_payroll_settlement.model_hr_settlement
+msgid "Settlement"
+msgstr "تسوية"
+
+#. module: hr_payroll_settlement
+#: model_terms:ir.ui.view,arch_db:hr_payroll_settlement.hr_settlement_report_template
+#: model_terms:ir.ui.view,arch_db:hr_payroll_settlement.hr_settlement_view_form
+#: model_terms:ir.ui.view,arch_db:hr_payroll_settlement.hr_settlement_view_tree
+msgid "Settlement Date"
+msgstr "تاريخ التسوية"
+
+#. module: hr_payroll_settlement
+#: model:res.groups,name:hr_payroll_settlement.group_hr_payroll_settlement_manager
+msgid "Settlement Manager"
+msgstr "مدير التسويات"
+
+#. module: hr_payroll_settlement
+#: model_terms:ir.ui.view,arch_db:hr_payroll_settlement.hr_settlement_view_form
+#: model_terms:ir.ui.view,arch_db:hr_payroll_settlement.hr_settlement_view_tree
+msgid "Settlement Number"
+msgstr "رقم التسوية"
+
+#. module: hr_payroll_settlement
+#: model:ir.ui.menu,name:hr_payroll_settlement.hr_settlement_stage_menu
+msgid "Settlement Stages"
+msgstr "مراحل التسوية"
+
+#. module: hr_payroll_settlement
+#: model_terms:ir.ui.view,arch_db:hr_payroll_settlement.hr_settlement_report_template
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__type
+msgid "Settlement Type"
+msgstr " نوع التسوية"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_payslip__settlement_amount
+msgid "Settlement amount"
+msgstr "مبلغ التسوية"
+
+#. module: hr_payroll_settlement
+#: model:ir.actions.act_window,name:hr_payroll_settlement.hr_settlement_action
+#: model:ir.ui.menu,name:hr_payroll_settlement.hr_payroll_settlement_menu
+#: model:ir.ui.menu,name:hr_payroll_settlement.hr_settlement_menu_root
+msgid "Settlements"
+msgstr "التسويات"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__period_id
+msgid "Specific period"
+msgstr "مخصص لفترة"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__stage_id
+msgid "Stage"
+msgstr "المرحلة"
+
+#. module: hr_payroll_settlement
+#: model:ir.actions.act_window,name:hr_payroll_settlement.hr_settlement_stage_action
+msgid "Stages"
+msgstr "المراحل"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,help:hr_payroll_settlement.field_hr_settlement__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__request_type_id
+#: model_terms:ir.ui.view,arch_db:hr_payroll_settlement.hr_settlement_view_search
+msgid "Type"
+msgstr "النوع"
+
+#. module: hr_payroll_settlement
+#: model_terms:ir.ui.view,arch_db:hr_payroll_settlement.hr_settlement_view_kanban
+msgid "Type :"
+msgstr "النوع:"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,help:hr_payroll_settlement.field_hr_settlement__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع النشاط الاستثنائي المسجل."
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: hr_payroll_settlement
+#: model:request.stage,name:hr_payroll_settlement.hr_settlement_stage_approve
+msgid "Validate"
+msgstr "اعتماد"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,help:hr_payroll_settlement.field_hr_settlement__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: hr_payroll_loan
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_hr_settlement__company_id
+#: model_terms:ir.ui.view,arch_db:hr_payroll_settlement.hr_settlement_report_template
+msgid "Company"
+msgstr "الشركة"
+
+#. module: hr_payroll_settlement
+#: model:hr.salary.rule,name:hr_payroll_settlement.hr_rule_deduction_settlement
+msgid "Dedection Settlement"
+msgstr "تسوية بالحسم"
+
+#. module: hr_payroll_settlement
+#: model:hr.salary.rule,name:hr_payroll_settlement.hr_rule_add_settlement
+msgid "Add Settlement"
+msgstr "تسوية بالإضافة"
+
+#. module: hr_payroll_settlement
+#: model:ir.model.fields,field_description:hr_payroll_settlement.field_request_stage__appears_in_settlement_report
+msgid "Appears in settlement report"
+msgstr "يظهر في تقرير التسوية"
+
+#. module: hr_payroll_settlement
+#: model:ir.actions.report,name:hr_payroll_settlement.hr_payroll_settlement_report_action
+msgid "Print Hr Settlement Report"
+msgstr "طباعة تقرير التسوية"
+
+#. module: hr_payroll_settlement
+#: model_terms:ir.ui.view,arch_db:hr_payroll_settlement.hr_settlement_view_form
+msgid "Print Settlement Report"
+msgstr "طباعة تقرير التسوية"
+
+#. module: hr_payroll_settlement
+#: model_terms:ir.ui.view,arch_db:hr_payroll_settlement.hr_settlement_report_template
+msgid "Requester"
+msgstr "صاحب الطلب"
+
+#. module: hr_payroll_settlement
+#: model_terms:ir.ui.view,arch_db:hr_payroll_settlement.hr_settlement_report_template
+msgid "Settlement Method"
+msgstr "طريقة الإحتساب"
+
+#. module: hr_payroll_settlement
+#: model_terms:ir.ui.view,arch_db:hr_payroll_settlement.hr_settlement_report_template
+msgid "Settlement Request -"
+msgstr "طلب التسوية -"
+
+#. module: hr_payroll_settlement
+#: model_terms:ir.ui.view,arch_db:hr_payroll_settlement.hr_settlement_report_template
+msgid "Stages Of Request Approval"
+msgstr "مراحل الموافقة على الطلب"
+
+#. module: hr_payroll_settlement
+#: model_terms:ir.ui.view,arch_db:hr_payroll_settlement.hr_settlement_report_template
+msgid "Allocated Period"
+msgstr "مخصص لفترة"
+
+#. module: hr_payroll_settlement
+#: model:ir.actions.report,print_report_name:hr_payroll_settlement.hr_payroll_settlement_report_action
+msgid "'Print Settlement Report for - %s' % (object.name).replace('/', '')"
+msgstr "'طباعة تقرير التسوية لـ - %s' % (object.name).replace('/', '')"
+
+#. module: hr_payroll_settlement
+#: model_terms:ir.ui.view,arch_db:hr_payroll_settlement.hr_settlement_report_template
+msgid "<span>Amount Addition</span>"
+msgstr "<span>مبلغ الإضافة</span>"
+
+#. module: hr_payroll_settlement
+#: model_terms:ir.ui.view,arch_db:hr_payroll_settlement.hr_settlement_report_template
+msgid "<span>Amount Deduction</span>"
+msgstr "<span>مبلغ الحسم</span>"

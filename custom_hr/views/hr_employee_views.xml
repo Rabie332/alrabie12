@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_employee_form_inherit" model="ir.ui.view">
+        <field name="name">custom.hr.employee.form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='job_title']" position="after">
+                <h2>
+                    <field name="emp_job_title_en" type="object" placeholder="Job Position in english"/>
+                </h2>
+            </xpath>
+            <xpath expr="//field[@name='country_id']" position="after">
+                <field name="national_address" type="object"/>
+            </xpath>
+            <xpath expr="//field[@name='identification_id']" position="after">
+                <field name="ID_num_issue" type="object"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="view_employee_form_job" model="ir.ui.view">
+        <field name="name">hr.employee.form.job</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='305']" position="after">
+                <button name="start_background_job_expired_stay" type="object" string="Start" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

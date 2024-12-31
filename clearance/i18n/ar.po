@@ -1,0 +1,2052 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* clearance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-11 15:16+0000\n"
+"PO-Revision-Date: 2022-01-11 15:16+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: clearance
+#: model:ir.actions.report,print_report_name:clearance.action_translation_report
+msgid "'Translation Report - %s' % object.name"
+msgstr "'تقرير الترجمة - %s' % object.name"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.translation_report_template
+msgid "(Customs broker)"
+msgstr "(خاص بالمخلص الجمركي)"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.receipt_notebook_template
+msgid ""
+"<br/>\n"
+"                               <span>سند إستلام مستندات التخليص</span>\n"
+"                                <br/>\n"
+"                               <span style=\"text-decoration: underline;\">RECEIPT OF CUSTOM CLEARANCE DOCUMENTS</span>"
+msgstr ""
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_form
+msgid ""
+"<span attrs=\"{'invisible': ['|', ('is_equals_weight','=', False), ('request_type','in', ['storage','transport'])]}\" class=\"fa fa-building pull-right\" style=\"color:blue;\" role=\"img\" aria-label=\"Warning: The total weight of shipment type lines must be equals to total weight\" title=\"Warning: The total weight of shipment type lines must be equals to total weight\"/>\n"
+"                    <span attrs=\"{'invisible': ['|', ('is_not_customs_data','=', False), ('request_type','in', ['storage','transport'])]}\" class=\"fa fa-money pull-right\" style=\"color:red;\" role=\"img\" aria-label=\"Warning: All Customs data must be filled\" title=\"Warning: All Customs data must be filled\"/>\n"
+"\n"
+"                    <span attrs=\"{'invisible': ['|', ('is_not_goods_data','=', False), ('request_type','in', ['storage','transport'])]}\" class=\"fa fa-cubes pull-right\" style=\"color:red;\" role=\"img\" aria-label=\"Warning: All Goods data must be filled\" title=\"Warning: All Goods data must be filled\"/>\n"
+"                    <span attrs=\"{'invisible': ['|', ('is_not_customs_declaration_data','=', False), ('request_type','in', ['storage','transport'])]}\" class=\"fa fa-file pull-right\" style=\"color:red;\" role=\"img\" aria-label=\"Warning: All Customs Declaration data must be filled\" title=\"Warning: All Customs Declaration data must be filled\"/>\n"
+"\n"
+"                    <span attrs=\"{'invisible': ['|', ('is_not_shipping_agent_data','=',False), ('request_type','in', ['storage','transport'])]}\" class=\"fa fa-ship pull-right\" style=\"color:red;\" role=\"img\" aria-label=\"Warning: All shipping agent data must be filled\" title=\"Warning: All shipping agent data must be filled\"/>"
+msgstr ""
+"<span attrs=\"{'invisible': ['|', ('is_equals_weight','=', False), ('request_type','in',['storage','transport'])]}\" class=\"fa fa-building pull-right\" style=\"color:blue;\" role=\"img\" aria-label=\"تنبيه: يجب أن يكون الوزن الإجمالي للشحنات مساويًا لإجمالي الأوزان\" title=\"تنبيه:يجب أن يكون الوزن الإجمالي للشحنات مساويًا لإجمالي الأوزان\"/>\n"
+"                    <span attrs=\"{'invisible': ['|', ('is_not_customs_data','=', False), ('request_type','in',['storage','transport'])]}\" class=\"fa fa-money pull-right\" style=\"color:red;\" role=\"img\" aria-label=\"تنبيه: يجب إدخال جميع  بيانات الجمارك\" title=\"تنبيه: يجب إدخال جميع  بيانات الجمارك\"/>\n"
+"\n"
+"                    <span attrs=\"{'invisible': ['|', ('is_not_goods_data','=', False), ('request_type','in',['storage','transport'])]}\" class=\"fa fa-cubes pull-right\" style=\"color:red;\" role=\"img\" aria-label=\"تنبيه: يجب إدخال جميع  بيانات البضاعة\" title=\"تنبيه: يجب إدخال جميع  بيانات البضاعة\"/>\n"
+"                    <span attrs=\"{'invisible': ['|', ('is_not_customs_declaration_data','=', False), ('request_type','in',['storage','transport'])]}\" class=\"fa fa-file pull-right\" style=\"color:red;\" role=\"img\" aria-label=\"تنبيه: يجب إدخال جميع  بيانات البيان الجمركي\" title=\"تنبيه: يجب إدخال جميع  بيانات البيان الجمركي\"/>\n"
+"\n"
+"                    <span attrs=\"{'invisible': ['|', ('is_not_shipping_agent_data','=',False), ('request_type','in',['storage','transport'])]}\" class=\"fa fa-ship pull-right\" style=\"color:red;\" role=\"img\" aria-label=\"تنبيه: يجب إدخال جميع  بيانات الوكيل الملاحي\" title=\"تنبيه: يجب إدخال جميع  بيانات الوكيل الملاحي\"/>"
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.receipt_notebook_template
+msgid ""
+"<span style=\"padding-top:2%;\">Supervisor </span>\n"
+"                                    <br/>\n"
+"                                    <span>Clearing Department</span>"
+msgstr ""
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.receipt_notebook_template
+msgid "<span style=\"padding-top:7%;\">Manager</span>"
+msgstr ""
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.receipt_notebook_template
+msgid "<span>1 - Bill of Lading</span>"
+msgstr ""
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.receipt_notebook_template
+msgid "<span>2 - Invoices </span>"
+msgstr ""
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.receipt_notebook_template
+msgid "<span>3 -  Certificate of Origin</span>"
+msgstr ""
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.receipt_notebook_template
+msgid "<span>4 - Packing List </span>"
+msgstr ""
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.receipt_notebook_template
+msgid "<span>B/L No.: </span>"
+msgstr ""
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.receipt_notebook_template
+msgid "<span>Date </span>"
+msgstr ""
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.translation_report_template
+msgid "<span>Date:</span>"
+msgstr "<span>التاريخ:</span>"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.translation_report_template
+msgid "<span>Description:</span>"
+msgstr "<span>ملاحظات:</span>"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.receipt_notebook_template
+msgid "<span>From the Vessel</span>"
+msgstr ""
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.translation_report_template
+msgid "<span>Importer Name:</span>"
+msgstr "<span>إسم المستورد:</span>"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.receipt_notebook_template
+msgid "<span>Our Job No. </span>"
+msgstr ""
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.receipt_notebook_template
+msgid ""
+"<span>Received the following documents with thanks for custom clearance services from</span>\n"
+"                                <br/>\n"
+"                                <span>M/S.</span>"
+msgstr ""
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.translation_report_template
+msgid "<span>Request Number:</span>"
+msgstr "<span>رقم المعاملة:</span>"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.translation_report_template
+msgid "<span>Vessel:</span>"
+msgstr "<span>إسم الباخرة:</span>"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.receipt_notebook_template
+msgid ""
+"<strong>NOTE:</strong>\n"
+"                                <br/>\n"
+"                                <strong>\n"
+"                                    FOR ANY INQUIRY REGARDING THIS SHIPMENT, KINDLY REFER US WITH\n"
+"JOB NO. <br/>IF WE RECEIVE DOCUMENTS ON THURSDAY THE DATE WILL\n"
+"COUNT FROM SUNDAY.\n"
+"                                </strong>"
+msgstr ""
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__message_needaction
+msgid "Action Needed"
+msgstr "الإجراءات اللازمة"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_product_invoice_setting__active
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_other__active
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_route__active
+#: model:ir.model.fields,field_description:clearance.field_clearance_shipment_type_size__active
+#: model:ir.model.fields,field_description:clearance.field_container_category__active
+#: model:ir.model.fields,field_description:clearance.field_fees_type__active
+#: model:ir.model.fields,field_description:clearance.field_goods_definition__active
+#: model:ir.model.fields,field_description:clearance.field_mail_activity__activity_category
+msgid "Active"
+msgstr "نشط"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__activity_ids
+msgid "Activities"
+msgstr "النشاط"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "نشاط استثناء الديكور"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_form
+msgid "Add description"
+msgstr "إضافة الملاحظات"
+
+#. module: clearance
+#: code:addons/clearance/models/clearance_request.py:0
+#, python-format
+msgid "All payments must be posted"
+msgstr "يجب ترحيل جميع المدفوعات"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__amount_insurance
+msgid "Amount "
+msgstr "المبلغ"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_goods_definition__arabic_description
+#: model_terms:ir.ui.view,arch_db:clearance.goods_definition_view_form
+msgid "Arabic Description"
+msgstr "الوصف بالعربية"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_product_invoice_setting_view_search
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_shipment_route_view_search
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_type_size_view_search
+#: model_terms:ir.ui.view,arch_db:clearance.container_category_view_search
+#: model_terms:ir.ui.view,arch_db:clearance.fees_type_view_search
+msgid "Archived"
+msgstr "مؤرشف"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.account_payment_view_form_inherit_clearance
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_form
+msgid "Attachments"
+msgstr "المرفقات"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_account_bank_statement_line__attachment_count
+#: model:ir.model.fields,field_description:clearance.field_account_move__attachment_count
+#: model:ir.model.fields,field_description:clearance.field_account_payment__attachment_count
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__attachment_count
+msgid "Attachments number"
+msgstr "عدد المرفقات"
+
+#. module: clearance
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request_shipment_type__type_lcl__bale
+msgid "Bale"
+msgstr "بالة"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_goods_definition__clearance_request_id
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request__request_type__clearance
+#: model:ir.module.category,name:clearance.module_category_clearance
+#: model:ir.ui.menu,name:clearance.clearance_menu_root
+msgid "Clearance"
+msgstr "التخليص"
+
+#. module: clearance
+#: code:addons/clearance/models/payment.py:0
+#: code:addons/sa/custom/farha_logistic/clearance/models/payment.py:0
+#, python-format
+msgid "Operation Number"
+msgstr "رقم المعاملة"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__clearance_goods_definition_ids
+msgid "Clearance Goods Definition"
+msgstr "تعريفات البضاعة"
+
+#. module: clearance
+#: model:ir.model,name:clearance.model_clearance_goods_definition
+msgid "Clearance Goods definition"
+msgstr "تعريفات البضاعة"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__clearance_invoice_ids
+msgid "Clearance Invoices"
+msgstr "الفواتير التجارية"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_product_invoice_setting__clearance_product_id
+msgid "Clearance Product"
+msgstr "منتج خدمات التخليص"
+
+#. module: clearance
+#: model:ir.model,name:clearance.model_clearance_product_invoice_setting
+msgid "Clearance Product Invoice Customer"
+msgstr "بنود خدمات فاتورة العميل"
+
+#. module: clearance
+#: model:ir.model,name:clearance.model_clearance_request
+#: model:ir.model.fields,field_description:clearance.field_account_bank_statement_line__clearance_request_id
+#: model:ir.model.fields,field_description:clearance.field_account_move__clearance_request_id
+#: model:ir.model.fields,field_description:clearance.field_account_payment__clearance_request_id
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_customs_payment__clearance_request_id
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_invoice__clearance_request_id
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_type__clearance_request_id
+#: model:ir.model.fields,field_description:clearance.field_sale_order__clearance_request_id
+msgid "Clearance Request"
+msgstr "طلب تخليص"
+
+#. module: clearance
+#: model:ir.model,name:clearance.model_clearance_request_customs_payment
+msgid "Clearance Request Customs Payment"
+msgstr ""
+
+#. module: clearance
+#: model:ir.model,name:clearance.model_clearance_request_invoice
+msgid "Clearance Request Invoices"
+msgstr ""
+
+#. module: clearance
+#: model:ir.model,name:clearance.model_clearance_request_other
+msgid "Clearance Request Other"
+msgstr ""
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_res_company__clearance_sequence_id
+msgid "Clearance Request Sequence"
+msgstr "تسلسل طلب تخليص"
+
+#. module: clearance
+#: model:ir.model,name:clearance.model_clearance_request_shipment_route
+msgid "Clearance Request Shipment Route"
+msgstr "المسارات"
+
+#. module: clearance
+#: model:ir.model,name:clearance.model_clearance_request_shipment_type
+msgid "Clearance Request Shipment Type"
+msgstr ""
+
+#. module: clearance
+#: model:mail.activity.type,name:clearance.mail_shipping_agent_responsible_approval
+msgid "Clearance Request Shipping Agent Approval"
+msgstr "إستلام طلب تخليص جديد"
+
+#. module: clearance
+#: model:mail.activity.type,name:clearance.mail_translation_officer_approval
+msgid "Clearance Request Translation Officer Approval"
+msgstr "إستلام طلب تخليص جديد للموافقة عليه"
+
+#. module: clearance
+#: model:ir.actions.act_window,name:clearance.clearance_request_action
+#: model:ir.ui.menu,name:clearance.clearance_request_menu
+msgid "Clearance Requests"
+msgstr "طلبات التخليص"
+
+#. module: clearance
+#: code:addons/clearance/models/clearance_request.py:0
+#, python-format
+msgid ""
+"Clearance and transportation services products must be selected in Settings"
+msgstr "يجب اختيار منتجات خدمات التخليص و النقل في الإعدادات"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__clearance_document_date
+msgid "Clearance document date"
+msgstr "تاريخ وثيقة الفسح"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__clearance_document_number
+msgid "Clearance document number"
+msgstr "رقم وثيقة الفسح"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__is_cleared
+msgid "Cleared"
+msgstr "تم الفسح"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__attachment_clearing_ids
+msgid "Clearing Attachment"
+msgstr "وثيقة الفسح"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_res_partner__code_partner
+#: model:ir.model.fields,field_description:clearance.field_res_users__code_partner
+msgid "Code"
+msgstr "الرمز"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_account_payment__code_supplier
+msgid "Code "
+msgstr "الرمز"
+
+#. module: clearance
+#: model:ir.model,name:clearance.model_res_company
+msgid "Companies"
+msgstr "الشركات"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_product_invoice_setting__company_id
+#: model:ir.model.fields,field_description:clearance.field_res_partner_clearance_route__company_id
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__company_id
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_route__company_id
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_type__company_id
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request__repayment__company
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request__repayment_statement__company
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request_customs_payment__repayment__company
+msgid "Company"
+msgstr "الشركة"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.translation_report_template
+msgid "Computerized Transaction Data Entry Form"
+msgstr "نموذج إدخال بيانات معاملة بالحاسب الألي"
+
+#. module: clearance
+#: model:ir.ui.menu,name:clearance.clearance_configuration_menu
+msgid "Configuration"
+msgstr "الإعدادات"
+
+#. module: clearance
+#: model:ir.model,name:clearance.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_type__container_category_id
+msgid "Container Category"
+msgstr "فئة الحاوية"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_type__container_number
+msgid "Container Number"
+msgstr "رقم الحاوية"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_route__container_transport
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_route_line__container_transport
+msgid "Container transport"
+msgstr "نقل الحاوية"
+
+#. module: clearance
+#: model:ir.actions.act_window,name:clearance.container_category_action
+#: model:ir.model,name:clearance.model_container_category
+#: model:ir.ui.menu,name:clearance.container_category_menu
+msgid "Containers categories"
+msgstr "فئات الحاويات"
+
+#. module: clearance
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request__shipping_type__copy
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request_invoice__invoice_type__copy
+#: model_terms:ir.ui.view,arch_db:clearance.receipt_notebook_template
+msgid "Copy"
+msgstr "نسخة"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_invoice__country_code
+#: model_terms:ir.ui.view,arch_db:clearance.translation_report_template
+msgid "Country of Origin"
+msgstr "بلد المنشأ"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_form
+msgid "Create Payments Fees"
+msgstr "طلب دفع لسداد الرسوم"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_goods_definition__create_uid
+#: model:ir.model.fields,field_description:clearance.field_clearance_product_invoice_setting__create_uid
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__create_uid
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_customs_payment__create_uid
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_invoice__create_uid
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_other__create_uid
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_route__create_uid
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_type__create_uid
+#: model:ir.model.fields,field_description:clearance.field_clearance_shipment_type_size__create_uid
+#: model:ir.model.fields,field_description:clearance.field_container_category__create_uid
+#: model:ir.model.fields,field_description:clearance.field_fees_type__create_uid
+#: model:ir.model.fields,field_description:clearance.field_goods_definition__create_uid
+msgid "Created by"
+msgstr "انشأ من قبل"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_goods_definition__create_date
+#: model:ir.model.fields,field_description:clearance.field_clearance_product_invoice_setting__create_date
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__create_date
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_customs_payment__create_date
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_invoice__create_date
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_other__create_date
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_route__create_date
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_type__create_date
+#: model:ir.model.fields,field_description:clearance.field_clearance_shipment_type_size__create_date
+#: model:ir.model.fields,field_description:clearance.field_container_category__create_date
+#: model:ir.model.fields,field_description:clearance.field_fees_type__create_date
+#: model:ir.model.fields,field_description:clearance.field_goods_definition__create_date
+msgid "Created on"
+msgstr "أنشأت في"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__currency_id
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_invoice__currency_id
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_route__currency_id
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_route_line__currency_id
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_route_price__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: clearance
+#: model:ir.model,name:clearance.model_clearance_request_shipment_route_price
+msgid "Clearance Request Shipment Route Price"
+msgstr "أسعار المسارات"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_shipment_route_view_form
+msgid "Prices by Dates"
+msgstr "سعر المسار حسب التواريخ"
+
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_invoice__currency_code
+#: model_terms:ir.ui.view,arch_db:clearance.translation_report_template
+msgid "Currency Code"
+msgstr "رمز العملة"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.translation_report_template
+msgid "Currency Type"
+msgstr "نوع العملة"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_product_invoice_setting_line__partner_ids
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request__repayment__customer
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request__repayment_statement__customer
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request_customs_payment__repayment__customer
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_search
+msgid "Customer"
+msgstr "العميل"
+
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__partner_email
+msgid "Customer Email"
+msgstr "البريد الإلكتروني"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__partner_id
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_type__partner_id
+msgid "Customer Name"
+msgstr "اسم العميل"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__partner_phone
+msgid "Customer Phone"
+msgstr "رقم الجوال"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_type__customer_location
+msgid "Customer location"
+msgstr "موقع العميل"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_kanban
+msgid "Customer:"
+msgstr "العميل: "
+
+#. module: clearance
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request__state__customs_clearance
+msgid "Customs Clearance"
+msgstr "التخليص الجمركي"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__is_not_customs_data
+msgid "Customs Data"
+msgstr "بيانات الجمارك"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_form
+msgid "Customs Declaration"
+msgstr "البيان الجمركي"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__is_not_customs_declaration_data
+msgid "Customs Declaration Data"
+msgstr " بيانات البيان الجمركي"
+
+#. module: clearance
+#: model:res.groups,name:clearance.group_customs_declaration_responsible
+msgid "Customs Declaration responsible"
+msgstr "مسؤول البيان الجمركي"
+
+#. module: clearance
+#: model:res.groups,name:clearance.group_customs_responsible
+msgid "Customs Responsible"
+msgstr "مسؤول الجمارك"
+
+#. module: clearance
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request__state__customs_statement
+msgid "Customs Statement"
+msgstr "البيان الجمركي"
+
+#. module: clearance
+#: model:res.groups,name:clearance.group_data_entry
+msgid "Data entry"
+msgstr "مدخل بيانات"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_account_bank_statement_line__date
+#: model:ir.model.fields,field_description:clearance.field_account_move__date
+#: model:ir.model.fields,field_description:clearance.field_account_payment__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_kanban
+msgid "Date:"
+msgstr "تاريخ المعاملة: "
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__deadline_shipment_receive
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_type__deadline_shipment_receive
+msgid "Deadline shipment receive"
+msgstr "أخر تاريخ لإخراج الشحنة"
+
+#. module: clearance
+#: code:addons/clearance/models/clearance_request.py:0
+#, python-format
+msgid "Deduction of insurance amount"
+msgstr "خصم مبلغ التامين"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__attachment_delivery_authorization_ids
+msgid "Delivery Authorization Attachment"
+msgstr "وثيقة إذن التسليم"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__delivery_authorization_number
+msgid "Delivery Authorization Number"
+msgstr "رقم إذن التسليم"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_type__delivery_date
+msgid "Delivery date"
+msgstr "تاريخ التسليم"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_invoice__delivery_method
+#: model_terms:ir.ui.view,arch_db:clearance.translation_report_template
+msgid "Delivery method"
+msgstr "طريقة التوصيل"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__description
+msgid "Description"
+msgstr "ملاحظات"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_account_move__display_name
+#: model:ir.model.fields,field_description:clearance.field_account_payment__display_name
+#: model:ir.model.fields,field_description:clearance.field_clearance_goods_definition__display_name
+#: model:ir.model.fields,field_description:clearance.field_clearance_product_invoice_setting__display_name
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__display_name
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_customs_payment__display_name
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_invoice__display_name
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_other__display_name
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_route__display_name
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_type__display_name
+#: model:ir.model.fields,field_description:clearance.field_clearance_shipment_type_size__display_name
+#: model:ir.model.fields,field_description:clearance.field_container_category__display_name
+#: model:ir.model.fields,field_description:clearance.field_fees_type__display_name
+#: model:ir.model.fields,field_description:clearance.field_goods_definition__display_name
+#: model:ir.model.fields,field_description:clearance.field_res_company__display_name
+#: model:ir.model.fields,field_description:clearance.field_res_partner__display_name
+#: model:ir.model.fields,field_description:clearance.field_sale_order__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.view_move_form_inherit_clearance
+msgid "Documents"
+msgstr "المرفقات"
+
+#. module: clearance
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: clearance
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request__receipt_method__electronic
+msgid "Electronic"
+msgstr "الكتروني"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_goods_definition__english_description
+#: model_terms:ir.ui.view,arch_db:clearance.goods_definition_view_form
+msgid "English Description"
+msgstr "الوصف بالإنجليزية"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_goods_definition__exemption_number
+#: model_terms:ir.ui.view,arch_db:clearance.translation_report_template
+msgid "Exemption Number"
+msgstr "رقم الإعفاء"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__expected_date_shipment
+msgid "Expected date of arrival shipment"
+msgstr "التاريخ المتوقع لوصول الشحنة"
+
+#. module: clearance
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request__shipment_type__fcl
+msgid "FCL"
+msgstr "حاوية"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_goods_definition__fee_category
+#: model:ir.model.fields,field_description:clearance.field_goods_definition__fee_category
+msgid "Fee category"
+msgstr "فئة الرسوم"
+
+#. module: clearance
+#: code:addons/clearance/models/payment.py:0
+#, python-format
+msgid "Fees Payment"
+msgstr "سداد الرسوم"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_customs_payment__fees_type_id
+msgid "Fees Type"
+msgstr "نوع الرسوم"
+
+#. module: clearance
+#: model:ir.actions.act_window,name:clearance.fees_type_action
+#: model:ir.model,name:clearance.model_fees_type
+#: model:ir.ui.menu,name:clearance.fees_type_menu
+msgid "Fees Types"
+msgstr "أنواع الرسوم"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: clearance
+#: model:ir.model.fields,help:clearance.field_clearance_request__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.receipt_notebook_template
+msgid "For:"
+msgstr ""
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_route__shipment_from
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_type__shipment_from
+#: model:ir.model.fields,field_description:clearance.field_res_partner_clearance_route__route_from
+msgid "From"
+msgstr "من"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__statement_line_ids
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_form
+msgid "Goods"
+msgstr "البضاعة"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__is_not_goods_data
+msgid "Goods Data"
+msgstr "بيانات البضائع"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_goods_definition__goods_description
+#: model_terms:ir.ui.view,arch_db:clearance.translation_report_template
+msgid "Goods Description"
+msgstr "وصف البضاعة"
+
+#. module: clearance
+#: model:ir.actions.act_window,name:clearance.goods_definition_action
+#: model:ir.model,name:clearance.model_goods_definition
+#: model:ir.ui.menu,name:clearance.goods_definition_menu
+msgid "Goods definition"
+msgstr "تعريفات البضاعة"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_search
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_account_move__id
+#: model:ir.model.fields,field_description:clearance.field_account_payment__id
+#: model:ir.model.fields,field_description:clearance.field_clearance_goods_definition__id
+#: model:ir.model.fields,field_description:clearance.field_clearance_product_invoice_setting__id
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__id
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_customs_payment__id
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_invoice__id
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_other__id
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_route__id
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_type__id
+#: model:ir.model.fields,field_description:clearance.field_clearance_shipment_type_size__id
+#: model:ir.model.fields,field_description:clearance.field_container_category__id
+#: model:ir.model.fields,field_description:clearance.field_fees_type__id
+#: model:ir.model.fields,field_description:clearance.field_goods_definition__id
+#: model:ir.model.fields,field_description:clearance.field_res_company__id
+#: model:ir.model.fields,field_description:clearance.field_res_partner__id
+#: model:ir.model.fields,field_description:clearance.field_sale_order__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__activity_exception_icon
+msgid "Icon"
+msgstr "أيقونة"
+
+#. module: clearance
+#: model:ir.model.fields,help:clearance.field_clearance_request__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "أيقونة للإشارة إلى نشاط استثنائي."
+
+#. module: clearance
+#: model:ir.model.fields,help:clearance.field_clearance_request__message_needaction
+#: model:ir.model.fields,help:clearance.field_clearance_request__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم تحديده  ، فإن الرسائل الجديدة تتطلب اهتمامك."
+
+#. module: clearance
+#: model:ir.model.fields,help:clearance.field_clearance_request__message_has_error
+#: model:ir.model.fields,help:clearance.field_clearance_request__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده ، فبعض الرسائل بها خطأ في التسليم"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__insurance
+msgid "Insurance"
+msgstr "هل يوجد تأمين"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.translation_report_template
+msgid "Invoice Number"
+msgstr "رقم الفاتورة"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.translation_report_template
+msgid "Invoice Type"
+msgstr "نوع الفاتورة"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_invoice__invoice_number
+msgid "Invoice number"
+msgstr "رقم الفاتورة"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_invoice__invoice_type
+msgid "Invoice type "
+msgstr "نوع الفاتورة"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__account_move_ids
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_form
+msgid "Invoices"
+msgstr "الفواتير"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__invoices_amount
+msgid "Invoices Amount"
+msgstr "قيمة الفواتير"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: clearance
+#: model:ir.model,name:clearance.model_account_move
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: clearance
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request__shipment_type__lcl
+msgid "LCL"
+msgstr "بالة – طرد"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_account_move____last_update
+#: model:ir.model.fields,field_description:clearance.field_account_payment____last_update
+#: model:ir.model.fields,field_description:clearance.field_clearance_goods_definition____last_update
+#: model:ir.model.fields,field_description:clearance.field_clearance_product_invoice_setting____last_update
+#: model:ir.model.fields,field_description:clearance.field_clearance_request____last_update
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_customs_payment____last_update
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_invoice____last_update
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_other____last_update
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_route____last_update
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_type____last_update
+#: model:ir.model.fields,field_description:clearance.field_clearance_shipment_type_size____last_update
+#: model:ir.model.fields,field_description:clearance.field_container_category____last_update
+#: model:ir.model.fields,field_description:clearance.field_fees_type____last_update
+#: model:ir.model.fields,field_description:clearance.field_goods_definition____last_update
+#: model:ir.model.fields,field_description:clearance.field_res_company____last_update
+#: model:ir.model.fields,field_description:clearance.field_res_partner____last_update
+#: model:ir.model.fields,field_description:clearance.field_sale_order____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_goods_definition__write_uid
+#: model:ir.model.fields,field_description:clearance.field_clearance_product_invoice_setting__write_uid
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__write_uid
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_customs_payment__write_uid
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_invoice__write_uid
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_other__write_uid
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_route__write_uid
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_type__write_uid
+#: model:ir.model.fields,field_description:clearance.field_clearance_shipment_type_size__write_uid
+#: model:ir.model.fields,field_description:clearance.field_container_category__write_uid
+#: model:ir.model.fields,field_description:clearance.field_fees_type__write_uid
+#: model:ir.model.fields,field_description:clearance.field_goods_definition__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسط"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_goods_definition__write_date
+#: model:ir.model.fields,field_description:clearance.field_clearance_product_invoice_setting__write_date
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__write_date
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_customs_payment__write_date
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_invoice__write_date
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_other__write_date
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_route__write_date
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_type__write_date
+#: model:ir.model.fields,field_description:clearance.field_clearance_shipment_type_size__write_date
+#: model:ir.model.fields,field_description:clearance.field_container_category__write_date
+#: model:ir.model.fields,field_description:clearance.field_fees_type__write_date
+#: model:ir.model.fields,field_description:clearance.field_goods_definition__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__last_date_empty_container
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_type__last_date_empty_container
+msgid "Last date for delivery of empty containers"
+msgstr "أخر تاريخ لتسليم الحاويات الفارغة"
+
+#. module: clearance
+#: code:addons/clearance/models/clearance_request.py:0
+#, python-format
+msgid "Last date to receive the shipment"
+msgstr "أخر تاريخ لإخراج الشحنة"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__shipment_type_line_ids
+msgid "Lines"
+msgstr ""
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: clearance
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request__receipt_method__manual
+msgid "Manual"
+msgstr "يدوي"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_form
+msgid "Master data"
+msgstr "بيانات المعاملة العامة"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي لنشاطي"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_other__name
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_route__name
+#: model:ir.model.fields,field_description:clearance.field_clearance_shipment_type_lcl__name
+#: model:ir.model.fields,field_description:clearance.field_clearance_shipment_type_size__name
+msgid "Name"
+msgstr "الإسم"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_product_invoice_setting__name
+#: model:ir.model.fields,field_description:clearance.field_container_category__name
+#: model:ir.model.fields,field_description:clearance.field_fees_type__name
+msgid "Name "
+msgstr "الإسم"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.translation_report_template
+msgid "Name of the exporting company"
+msgstr "إسم الشركة المصدرة"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_goods_definition__net_weight
+#: model_terms:ir.ui.view,arch_db:clearance.translation_report_template
+msgid "Net Weight"
+msgstr "الوزن الصافي"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "أخر موعد للنشاط المقبل"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: clearance
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request__insurance__no
+msgid "No"
+msgstr "لا"
+
+#. module: clearance
+#: model:ir.actions.server,name:clearance.ir_cron_send_mail_deadline_shipment_receive_ir_actions_server
+#: model:ir.cron,cron_name:clearance.ir_cron_send_mail_deadline_shipment_receive
+#: model:ir.cron,name:clearance.ir_cron_send_mail_deadline_shipment_receive
+msgid "Notification about Deadline shipment receive"
+msgstr "تذكير بآخر تاريخ لاستلام الشحنة"
+
+#. module: clearance
+#: model:ir.actions.server,name:clearance.ir_cron_send_mail_account_payment_date_expiration_ir_actions_server
+#: model:ir.cron,cron_name:clearance.ir_cron_send_mail_account_payment_date_expiration
+#: model:ir.cron,name:clearance.ir_cron_send_mail_account_payment_date_expiration
+msgid "Notification about payments fees"
+msgstr "تذكير بسداد الرسوم "
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__number_shipment
+#: model:ir.model.fields,field_description:clearance.field_clearance_shipment_type_lcl__difference_number
+msgid "Number"
+msgstr "العدد"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_goods_definition__name
+msgid "Number "
+msgstr "الرقم"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: clearance
+#: model:ir.model.fields,help:clearance.field_clearance_request__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: clearance
+#: model:ir.model.fields,help:clearance.field_clearance_request__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل مع خطأ في التسليم"
+
+#. module: clearance
+#: model:ir.model.fields,help:clearance.field_clearance_request__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل غير المقروءة"
+
+#. module: clearance
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request__shipping_type__original
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request_invoice__invoice_type__original
+msgid "Original"
+msgstr "أصلية"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.receipt_notebook_template
+msgid "Original<span/>"
+msgstr ""
+
+#. module: clearance
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request__shipment_type__other
+msgid "Other"
+msgstr "أخرى"
+
+#. module: clearance
+#: model:ir.actions.act_window,name:clearance.clearance_request_other_action
+#: model:ir.ui.menu,name:clearance.clearance_request_other_menu
+msgid "Other Attachments"
+msgstr "مرفقات أخرى"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_form
+msgid "Other fees"
+msgstr "رسوم أخرى"
+
+#. module: clearance
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request__request_type__other_service
+msgid "Other services"
+msgstr "خدمات أخرى"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__other_ids
+msgid "Others"
+msgstr "أخرى"
+
+#. module: clearance
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request_shipment_type__type_lcl__package
+msgid "Package"
+msgstr "طرد"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_goods_definition__paragraph
+#: model_terms:ir.ui.view,arch_db:clearance.translation_report_template
+msgid "Paragraph"
+msgstr "الفقرة"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_route__parcel_transport
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_route_line__parcel_transport
+msgid "Parcel transport "
+msgstr "نقل الطرد"
+
+#. module: clearance
+#: model:account.payment.method,name:clearance.account_payment_method_pay_in
+#: model:account.payment.method,name:clearance.account_payment_method_pay_out
+msgid "Pay"
+msgstr "سداد"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_account_payment__pay_number
+msgid "Pay Number"
+msgstr "رقم السداد"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__payment_fees_customs_ids
+msgid "Payment Customs Fees"
+msgstr "طلب دفع لسداد الرسوم"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__payment_fees_id
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_customs_payment__payment_customs_id
+msgid "Payment Fees"
+msgstr "طلب دفع لسداد الرسوم"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__payment_method
+msgid "Payment Method"
+msgstr "طريقة السداد"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__payment_fees_statement_id
+msgid "Payment Statement Fees"
+msgstr "طلب دفع لسداد الرسوم"
+
+#. module: clearance
+#: code:addons/clearance/models/clearance_request.py:0
+#: code:addons/clearance/models/clearance_request.py:0
+#: code:addons/clearance/models/clearance_setting.py:0
+#: model:ir.model,name:clearance.model_account_payment
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__payment_ids
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_form
+#, python-format
+msgid "Payments"
+msgstr "المدفوعات"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__payments_amount
+msgid "Payments Amount"
+msgstr "قيمة الدفعات"
+
+#. module: clearance
+#: code:addons/clearance/models/clearance_request.py:0
+#: code:addons/clearance/models/clearance_request.py:0
+#: code:addons/clearance/models/clearance_setting.py:0
+#, python-format
+msgid ""
+"Please define an accounting bank or cash journal for the company %s (%s) "
+"with payment type \"pay\"."
+msgstr "يرجى تحديد دفاتر يومية بنك أو نقدي للشركة %s (%s) ذات نوع سداد . "
+
+#. module: clearance
+#: code:addons/clearance/models/clearance_request.py:0
+#, python-format
+msgid ""
+"Please make sure to attach the following files: \n"
+" - A picture of the policy \n"
+" - A picture of the commercial invoice"
+msgstr ""
+"يرجى التاكد من  ارفاق الملفات التالية: \n"
+" - صورة البوليصة \n"
+" - صورة الفاتورة التجارية"
+
+#. module: clearance
+#: model:ir.actions.act_window,name:clearance.clearance_product_invoice_setting_action
+#: model:ir.ui.menu,name:clearance.clearance_product_invoice_setting_menu
+msgid "Products Invoices Customer Setting"
+msgstr "بنود خدمات فاتورة العميل"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_goods_definition__quantity
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_type__quantity
+#: model_terms:ir.ui.view,arch_db:clearance.translation_report_template
+msgid "Quantity"
+msgstr "الكمية"
+
+#. module: clearance
+#: model:ir.actions.report,name:clearance.report_receipt_notebook
+msgid "Receipt Notebook"
+msgstr "دفتر إستلام"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__receipt_method
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_search
+msgid "Receipt method"
+msgstr "طريقة الاستلام"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_kanban
+msgid "Receipt method:"
+msgstr "طريقة الاستلام: "
+
+#. module: clearance
+#: model:res.groups,name:clearance.group_reception_responsible
+msgid "Reception responsible"
+msgstr "مسؤول الاستلام"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__reference
+msgid "Reference"
+msgstr "المرجع"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__release_date
+msgid "Release date"
+msgstr "تاريخ الفسح"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__release_statement_date
+msgid "Release statement date"
+msgstr "تاريخ اصدار البيان"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__repayment
+msgid "Repayment"
+msgstr "بواسطة"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__repayment_statement
+msgid "Repayment "
+msgstr "بواسطة"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__name
+msgid "Request Number"
+msgstr "رقم المعاملة"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__date
+msgid "Request date"
+msgstr "تاريخ المعاملة"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__request_type
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_search
+msgid "Request type"
+msgstr "نوع المعاملة"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_kanban
+msgid "Request type:"
+msgstr "نوع المعاملة: "
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_route_line__route_id
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_route_price__route_id
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_type__route_id
+#: model:ir.model.fields,field_description:clearance.field_res_partner_clearance_route__route_id
+msgid "Route"
+msgstr "المسار"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_route_price__amount
+msgid "Amount"
+msgstr "السعر"
+
+#. module: clearance
+#: model:ir.actions.act_window,name:clearance.clearance_request_shipment_route_action
+#: model:ir.ui.menu,name:clearance.clearance_request_shipment_route_menu
+msgid "Routes"
+msgstr "المسارات"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__sale_ids
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_form
+msgid "Sales"
+msgstr "المبيعات"
+
+#. module: clearance
+#: model:ir.model,name:clearance.model_sale_order
+msgid "Sales Order"
+msgstr "أمر البيع"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__sales_number
+msgid "Sales number"
+msgstr "عدد المبيعات"
+
+#. module: clearance
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request__shipping_type__waybill
+msgid "Sea waybill"
+msgstr "كشف"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_form
+msgid "Send"
+msgstr "إرسال"
+
+#. module: clearance
+#: model:res.groups,name:clearance.group_admin_setting
+msgid "Settings Administrator"
+msgstr "مسؤول الاعدادات"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_form
+msgid "Shipment details"
+msgstr "تفاصيل الشحنة"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__shipment_type
+msgid "Shipment type"
+msgstr "نوع الشحنة"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__is_not_shipping_agent_data
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_form
+msgid "Shipping Agent Data"
+msgstr "بيانات الوكيل الملاحي"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__shipping_agent_id
+msgid "Shipping Agent Name"
+msgstr " اسم الوكيل الملاحي"
+
+#. module: clearance
+#: model:res.groups,name:clearance.group_shipping_agent_responsible
+msgid "Shipping Agent Responsible"
+msgstr "مسؤول الوكيل الملاحي"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_form
+msgid "Shipping Policy"
+msgstr "بوليصة الشحن"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_res_partner__is_shipping_agents
+#: model:ir.model.fields,field_description:clearance.field_res_users__is_shipping_agents
+msgid "Shipping agent"
+msgstr "وكيل ملاحي"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__shipping_number
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_type__shipping_number
+msgid "BL Number"
+msgstr "رقم بوليصة الشحن"
+
+#. module: clearance
+#: code:addons/clearance/models/clearance_request.py:0
+#, python-format
+msgid "BL Number must be unique"
+msgstr "يجب أن يكون رقم بوليصة الشحن فريدًا"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__shipping_type
+msgid "Shipping type"
+msgstr "نوع البوليصة"
+
+#. module: clearance
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request__receipt_method__site
+msgid "Site"
+msgstr "من الموقع"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_type__shipment_type_size_id
+#: model:ir.model.fields,field_description:clearance.field_clearance_shipment_type_lcl__shipment_type_size_id
+msgid "Size"
+msgstr "الحجم"
+
+#. module: clearance
+#: model:ir.actions.act_window,name:clearance.clearance_type_size_action
+#: model:ir.model,name:clearance.model_clearance_shipment_type_size
+#: model:ir.ui.menu,name:clearance.clearance_type_size_menu
+msgid "Sizes"
+msgstr "الاحجام"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_goods_definition__standing_weight
+#: model_terms:ir.ui.view,arch_db:clearance.translation_report_template
+msgid "Standing Weight"
+msgstr "الوزن القائم"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__state
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_search
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_type__state
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_shipment_type_package_view_search
+msgid "State"
+msgstr "الحالة"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__statement_number
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_type__statement_number
+msgid "Statement number"
+msgstr "رقم البيان"
+
+#. module: clearance
+#: model:ir.model.fields,help:clearance.field_clearance_request__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__supplier_statement_id
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_customs_payment__supplier_id
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_invoice__supplier_name
+#: model:ir.model.fields,field_description:clearance.field_fees_type__supplier_id
+msgid "Supplier Name"
+msgstr "إسم المورد"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_form
+msgid "Supplier invoices"
+msgstr "الفواتير التجارية"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_goods_definition__goods_definition_id
+#: model_terms:ir.ui.view,arch_db:clearance.translation_report_template
+msgid "Tariff Item"
+msgstr "بند التعرفة"
+
+#. module: clearance
+#: code:addons/clearance/models/clearance_request.py:0
+#, python-format
+msgid ""
+"The last date for receiving the shipment is %s for the clearance request %s"
+msgstr "أخر تاريخ لإخراج الشحنة هو  %s لطلب التخليص %s"
+
+#. module: clearance
+#: code:addons/clearance/models/payment.py:0
+#, python-format
+msgid "There is a payment %s with amount %s, please pay it"
+msgstr "يوجد دفعة %s بقيمة %s .يرجى دفعها"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_route__shipment_to
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_type__shipment_to
+#: model:ir.model.fields,field_description:clearance.field_res_partner_clearance_route__route_to
+msgid "To"
+msgstr "الى"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_invoice__total
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_form
+msgid "Total"
+msgstr "المبلغ الإجمالي"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__total_weight
+msgid "Total Weight"
+msgstr "إجمالي الأوزان"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_form
+msgid "Traduction Data"
+msgstr "بيانات الترجمة"
+
+#. module: clearance
+#: model:account.payment.method,name:clearance.account_payment_method_transfer_in
+#: model:account.payment.method,name:clearance.account_payment_method_transfer_out
+msgid "Transfer"
+msgstr "تحويل"
+
+#. module: clearance
+#: model:res.groups,name:clearance.group_translation_officer
+msgid "Translation Officer"
+msgstr "مسؤول الترجمة"
+
+#. module: clearance
+#: model:ir.actions.report,name:clearance.action_translation_report
+msgid "Translation Report"
+msgstr "تقرير الترجمة"
+
+#. module: clearance
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request__request_type__transport
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request__state__transport
+msgid "Transport"
+msgstr "نقل"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_product_invoice_setting__transport_product_id
+msgid "Transport Product"
+msgstr "منتج خدمات النقل"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_type__type_lcl
+msgid "Type"
+msgstr "النوع"
+
+#. module: clearance
+#: model:ir.model.fields,help:clearance.field_clearance_request__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع نشاط الاستثناء في السجل."
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_type__uom_id
+msgid "Unit of Measure"
+msgstr "الوحدة"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_goods_definition__unity_code
+#: model_terms:ir.ui.view,arch_db:clearance.translation_report_template
+msgid "Unity Code"
+msgstr "رمز الوحدة"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_goods_definition__user
+#: model_terms:ir.ui.view,arch_db:clearance.translation_report_template
+msgid "Unity Create User"
+msgstr "منشأ الوحدة"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__message_unread
+msgid "Unread Messages"
+msgstr "عدد الرسائل غير المقروءة"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عداد الرسائل غير المقروءة"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_form
+msgid "Validate"
+msgstr "تأكيد"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_goods_definition__value_foreign_currency
+#: model_terms:ir.ui.view,arch_db:clearance.translation_report_template
+msgid "Value In Foreign Currency"
+msgstr "القيمة بالعملة الأجنبية"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__vessel
+msgid "Vessel"
+msgstr "الناقل"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: clearance
+#: model:ir.model.fields,help:clearance.field_clearance_request__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_type__weight
+msgid "Weight"
+msgstr "الوزن"
+
+#. module: clearance
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request__insurance__yes
+msgid "Yes"
+msgstr "نعم"
+
+#. module: clearance
+#: code:addons/clearance/models/clearance_request.py:0
+#: code:addons/clearance/models/clearance_request.py:0
+#, python-format
+msgid "You must filled Shipping Agent"
+msgstr "يجب إدخال الوكيل الملاحي"
+
+#. module: clearance
+#: code:addons/clearance/models/clearance_request.py:0
+#, python-format
+msgid "You must filled Shipping Policy Data"
+msgstr "يجب إدخال بيانات بوليصة الشحن"
+
+#. module: clearance
+#: code:addons/clearance/models/clearance_request.py:0
+#, python-format
+msgid "You must filled Supplier"
+msgstr "يجب إدخال إسم المورد"
+
+#. module: clearance
+#: code:addons/clearance/models/clearance_request.py:0
+#, python-format
+msgid "You must filled Translation Data"
+msgstr "يجب إدخال بيانات الترجمة"
+
+#. module: clearance
+#: code:addons/clearance/models/clearance_request.py:0
+#, python-format
+msgid "You must filled all Clearance Request Data"
+msgstr "يجب إدخال جميع بيانات طلب التخليص"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__attachment_goods_ids
+msgid "customs declaration Attachment"
+msgstr "وثيقة البيان الجمركي"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.receipt_notebook_template
+msgid "logo"
+msgstr "شعار"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__port_lading
+msgid "Port lading"
+msgstr "ميناء الشحن"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_res_company__landscape_logo
+msgid "Landscape Logo"
+msgstr "شعار بالعرض"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_invoice__shipping
+#: model_terms:ir.ui.view,arch_db:clearance.translation_report_template
+msgid "Shipping"
+msgstr "الشحن"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_form
+msgid "Create Shipment Details"
+msgstr "إنشاء تفاصيل الشحنة"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.translation_report_template
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.translation_report_template
+msgid "Number"
+msgstr "الرقم"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_tree
+msgid "Number"
+msgstr "العدد"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_form
+msgid "Set To Draft"
+msgstr "إعادة التعيين لحالة مسودة"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_type__service_id
+msgid "Service"
+msgstr "خدمة"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_shipment_type_package_view_search
+msgid "Shipment Type"
+msgstr "نوع الشحنة"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_type__truck_type_id
+msgid "Truck Type"
+msgstr "نوع الشاحنة"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_route__product_id
+msgid "Product"
+msgstr "المنتج"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_assign_view_form
+msgid "Assign To"
+msgstr "أسند إلى"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_assign_view_form
+msgid "Assign To Me"
+msgstr "أسند لي"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_assign_view_form
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: clearance
+#: model:ir.actions.act_window,name:clearance.clearance_request_action_my
+#: model:ir.ui.menu,name:clearance.clearance_request_menu_my
+msgid "My Orders"
+msgstr "معاملاتي"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__user_id
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_assign__user_id
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_search
+msgid "Responsible"
+msgstr "المسؤول"
+
+#. module: clearance
+#: code:addons/clearance/wizard/clearance_request_assign.py:0
+#, python-format
+msgid "User must be fill"
+msgstr "يجب إختيار المستخدم"
+
+#. module: clearance
+#: model:ir.actions.act_window,name:clearance.clearance_request_assign_action
+msgid "Assign To Responsible"
+msgstr "تعيين المسؤول"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_route__minimum_amount
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_route_line__minimum_amount
+msgid "Minimum Amount"
+msgstr "المبلغ الأدنى"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_res_partner__zakat_tax_customs_authority
+#: model:ir.model.fields,field_description:clearance.field_res_users__zakat_tax_customs_authority
+msgid "Zakat Tax and Customs Authority"
+msgstr "هئية الزكاة و الضريبة و الجمارك"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_customs_payment__repayment
+msgid "Method Payment"
+msgstr "طريقة السداد"
+
+#. module: clearance
+#: code:addons/clearance/models/clearance_request.py:0
+#: model:ir.model.fields,field_description:clearance.field_clearance_goods_definition__insurance
+#: model_terms:ir.ui.view,arch_db:clearance.translation_report_template
+#, python-format
+msgid "Insurance"
+msgstr "تأمين"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.translation_report_template
+msgid "Invoice Amount"
+msgstr "قيمة الفاتورة"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.translation_report_template
+msgid "Delivery Method"
+msgstr "طريقة التوصيل"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_res_partner__property_account_container_deposit_id
+#: model:ir.model.fields,field_description:clearance.field_res_users__property_account_container_deposit_id
+msgid "Account container deposit"
+msgstr "حساب إيداع حاويات"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_form
+msgid "Create Payments Insurance"
+msgstr "طلب دفع التأمين"
+
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__payment_insurance_id
+msgid "Payment Insurance"
+msgstr "طلب دفع التأمين"
+
+#. module: clearance
+#: code:addons/clearance/models/clearance_request.py:0
+#, python-format
+msgid "You must filled Container Deposit Account of Shipping Agent"
+msgstr "يجب إدخال حساب إيداع الحاويات للوكيل الملاحي"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.translation_report_template
+msgid "<b>Total</b>"
+msgstr "<b>الإجمالي</b>"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_account_payment__request_number
+msgid "Request Number"
+msgstr "رقم المعاملة"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_invoice__number
+msgid "Number"
+msgstr "الرقم"
+
+#. module: clearance
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request__state__canceled
+msgid "canceled"
+msgstr "ملغى"
+
+#. module: clearance
+#: code:addons/clearance/models/clearance_request.py:0
+#, python-format
+msgid "Customs duties"
+msgstr "رسوم جمركية "
+
+#. module: clearance
+#: code:addons/clearance/models/clearance_request.py:0
+#, python-format
+msgid "Shipping agent fees"
+msgstr "رسوم وكيل ملاحي"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_fees_type__is_default
+msgid "Default"
+msgstr "الإفتراضي"
+
+#. module: clearance
+#: model:res.groups,name:clearance.group_responsible_cancel
+msgid "Responsible Cancel"
+msgstr "مسؤول الإلغاء"
+
+#. module: clearance
+#: model:clearance.shipment.type.lcl,name:clearance.clearance_shipment_type_lcl_normal
+msgid "Normal"
+msgstr "عادي"
+
+#. module: clearance
+#: model:clearance.shipment.type.lcl,name:clearance.clearance_shipment_type_lcl_wire_coils
+msgid "Wire Coils"
+msgstr "لفات اسلاك"
+
+#. module: clearance
+#: model:clearance.shipment.type.lcl,name:clearance.clearance_shipment_type_lcl_coils
+msgid "Coils"
+msgstr "لفات"
+
+#. module: clearance
+#: model:clearance.shipment.type.lcl,name:clearance.clearance_shipment_type_lcl_jumbo
+msgid "Jumbo Back"
+msgstr "جامبو"
+
+#. module: clearance
+#: model:ir.actions.act_window,name:clearance.clearance_type_lcl_action
+#: model:ir.model,name:clearance.model_clearance_shipment_type_lcl
+#: model:ir.ui.menu,name:clearance.clearance_type_lcl_menu
+msgid "Shipment Types LCL"
+msgstr "أنواع  شحنات باله - طرود"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__shipment_type_lcl_id
+msgid "Shipment Type LCL"
+msgstr "النوع"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_container_category__is_default_value
+msgid "Default Value"
+msgstr "قيمة افتراضية"
+
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_view_tree
+msgid "B/L No"
+msgstr "رقم البوليصة"
+
+#. module: clearance
+#: model:ir.model,name:clearance.model_clearance_product_invoice_setting_line
+msgid "Clearance Invoice Customer Free Warehousing Days"
+msgstr "أيام التخزين المجانية للعميل"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_product_invoice_setting_line__free_warehousing_days
+msgid "Free Warehousing Days"
+msgstr "أيام التخزين المجانية"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_product_invoice_setting__line_ids
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_product_invoice_setting_view_form
+msgid "Customer Free Warehousing Days"
+msgstr "أيام التخزين المجانية للعميل"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_product_invoice_setting__warehousing_product_id
+msgid "Warehousing Product"
+msgstr "منتج خدمات التخزين"
+
+#. module: clearance
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request_shipment_route__transport_type__customer
+#: model:ir.model.fields.selection,name:clearance.selection__res_partner_clearance_route__transport_type__customer
+msgid "Customer site"
+msgstr "موقع العميل"
+
+#. module: clearance
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request_shipment_route__transport_type__other
+#: model:ir.model.fields.selection,name:clearance.selection__res_partner_clearance_route__transport_type__other
+msgid "Other site"
+msgstr "موقع أخر"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_route__transport_type
+#: model:ir.model.fields,field_description:clearance.field_res_partner_clearance_route__transport_type
+msgid "Transport type"
+msgstr "نوع النقل"
+
+#. module: clearance
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request_shipment_route__transport_type__warehouse
+#: model:ir.model.fields.selection,name:clearance.selection__res_partner_clearance_route__transport_type__warehouse
+msgid "Yard"
+msgstr "الساحة"
+
+#. module: clearance
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request_shipment_route__transport_type__empty
+#: model:ir.model.fields.selection,name:clearance.selection__res_partner_clearance_route__transport_type__empty
+msgid "Return empty"
+msgstr "ارجاع الفارغ"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_account_bank_statement_line__is_warehouse_invoice
+#: model:ir.model.fields,field_description:clearance.field_account_move__is_warehouse_invoice
+#: model:ir.model.fields,field_description:clearance.field_account_payment__is_warehouse_invoice
+msgid "Is warehouse invoice"
+msgstr "فاتورة تخزين"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_product_invoice_setting__appointment_product_id
+msgid "Appointment Reservation Fee Product"
+msgstr "منتج رسوم حجز المواعيد"
+
+#. module: clearance
+#: model:ir.model,name:clearance.model_res_partner_clearance_route
+#: model:ir.model.fields,field_description:clearance.field_res_partner__clearance_route_ids
+#: model:ir.model.fields,field_description:clearance.field_res_users__clearance_route_ids
+msgid "Routes"
+msgstr "المسارات"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.view_partner_form_inherit_clearance_route
+msgid "Routes List"
+msgstr "قائمة المسارات"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_route_line__date_from
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_route_price__date_from
+msgid "Date from"
+msgstr "تاريخ من"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_route_line__date_to
+#: model:ir.model.fields,field_description:clearance.field_clearance_request_shipment_route_price__date_to
+msgid "Date to"
+msgstr "تاريخ إلى"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_request_shipment_route_view_form
+msgid "Amounts by Dates"
+msgstr "المبالغ حسب التواريخ"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_shipment_type_lcl__is_unlimited
+msgid "Unlimited"
+msgstr "غير محدود"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.clearance_type_lcl_view_form
+msgid "Shipments"
+msgstr "الشحنات"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_shipment_type_lcl__shipments_number
+#: model:ir.model.fields,field_description:clearance.field_clearance_shipment_type_lcl_line__shipments_number
+msgid "Shipments Number"
+msgstr "عدد الشحنات"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_shipment_type_lcl__line_ids
+msgid "Shipments number"
+msgstr "عدد الشحنات"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_shipment_type_lcl__is_difference_number
+msgid "Calculate shipments based on numbers difference"
+msgstr "احتساب الشحنة حسب فارق الأعداد"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_shipment_type_lcl_line__number_from
+msgid "Number From"
+msgstr "عدد من"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_shipment_type_lcl_line__number_to
+msgid "Number To"
+msgstr "عدد الى"
+
+#. module: clearance
+#: model:res.groups,name:clearance.group_set_to_draft_clearance
+msgid "Set To Draft Responsible for Clearance"
+msgstr "مسؤول الإعادة إلى مسودة في التخليص"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_request__service_type
+msgid "Service Type"
+msgstr "نوع الخدمة"
+
+#. module: clearance
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request__service_type__internal
+msgid "Internal"
+msgstr "داخلي"
+
+#. module: clearance
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request__service_type__external
+msgid "External"
+msgstr "خارجي"
+
+#. module: clearance
+#: model:ir.model.fields.selection,name:clearance.selection__clearance_request__request_type__storage
+msgid "Storage"
+msgstr "التخزين"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_clearance_product_invoice_setting__services_ids
+msgid "Other Services"
+msgstr "خدمات أخرى"
+
+#. module: clearance
+#: model_terms:ir.ui.view,arch_db:clearance.view_partner_form_inherit_clearance_route
+msgid "Products List"
+msgstr "قائمة المنتجات"
+
+#. module: clearance
+#: model:ir.model.fields,field_description:clearance.field_res_partner__product_ids
+#: model:ir.model.fields,field_description:clearance.field_res_users__product_ids
+msgid "Products"
+msgstr "المنتجات"

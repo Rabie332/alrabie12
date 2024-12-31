@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <menuitem
+        action="hr_period.date_range_type_hr_action"
+        id="menu_date_range_type_action"
+        parent="hr.menu_human_resources_configuration"
+        sequence="23"
+    />
+
+    <menuitem
+        id="menu_action_hr_fiscalyear"
+        action="hr_period.action_hr_fiscalyear"
+        parent="hr.menu_human_resources_configuration"
+        sequence="25"
+    />
+
+</odoo>

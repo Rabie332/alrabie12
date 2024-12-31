@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+        <record id="res_partner_view_form_inherit_partner_auto_ref" model="ir.ui.view">
+        <field name="name">res.partner.view.form.inherit.partner.auto.ref</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+         <field name="arch" type="xml">
+         <field name="name" position="after">
+              <field name="ref" position="move" />
+          </field>
+          <field name="ref" position="attributes">
+             <attribute name="readonly">1</attribute>
+              <attribute name="force_save">1</attribute>
+              <attribute name="style">display:block;</attribute>
+          </field>
+        </field>
+
+    </record>
+</odoo>

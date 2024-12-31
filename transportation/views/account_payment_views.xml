@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_account_payment_search_inherit_transportation" model="ir.ui.view">
+        <field name="name">account.payment.search</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_search" />
+        <field name="arch" type="xml">
+            <field name="journal_id" position="after">
+                <field name="shipping_order_number" />
+                <field name="request_number" />
+                <field name="partner_id" string="Driver Name" />
+            </field>
+            <filter name="inbound_filter" position="after">
+                <filter string="Driver Name" name="driver_name" domain="[]" context="{'group_by': 'partner_id'}" />
+            </filter>
+        </field>
+    </record>
+    <record id="view_account_payment_tree_reward_transportation" model="ir.ui.view">
+        <field name="name">account.payment.tree</field>
+        <field name="model">account.payment</field>
+        <field name="arch" type="xml">
+            <tree edit="false" sample="1">
+                <field name="partner_id" string="Driver Name" />
+                <field name="company_id" groups="base.group_multi_company" />
+                <field name="reward" sum="Reward" />
+                <field name="amount" sum="Amount" string="Paid" />
+                <field name="residual_reward" sum="Residual Reward"/>
+                <field name="shipping_order_number" />
+                <field name="request_number" />
+                <field name="shipping_line_ids" widget="many2many_tags" invisible="1" />
+                <field
+                    name="state"
+                    widget="badge"
+                    decoration-info="state == 'draft'"
+                    decoration-success="state == 'posted'"
+                />
+                <field name="currency_id" groups="base.group_multi_currency" />
+            </tree>
+        </field>
+    </record>
+    <record id="account_payment_action_rewards" model="ir.actions.act_window">
+        <field name="name">Drivers Rewards</field>
+        <field name="res_model">account.payment</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('is_reward_drivers', '=', True)]</field>
+        <field name="context">{'default_is_reward_drivers':True}</field>
+        <field name="view_id" ref="view_account_payment_tree_reward_transportation" />
+    </record>
+    <menuitem
+        id="rewards_drivers_menu"
+        name="Drivers Rewards"
+        parent="transportation.transportation_menu_root"
+        action="account_payment_action_rewards"
+        sequence="11"
+    />
+    <record id="ir_actions_button_my_rewards" model="ir.actions.server">
+        <field name="sequence" eval="5" />
+        <field name="state">code</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_account_payment" />
+        <field name="code">
+            action = model.get_drivers_rewards()
+        </field>
+        <field name="name">My Rewards</field>
+    </record>
+    <menuitem
+        id="my_rewards_menu"
+        name="My Rewards"
+        parent="request.self_services_menu"
+        action="ir_actions_button_my_rewards"
+        sequence="13"
+    />
+    <record id="account_covenant_action" model="ir.actions.server">
+        <field name="sequence" eval="5" />
+        <field name="state">code</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_account_payment" />
+        <field name="code">
+            action = model.get_payment_covenant()
+        </field>
+        <field name="name">Payments Covenant</field>
+    </record>
+    <menuitem
+        id="payment_covenant_menu"
+        name="Payments Covenant"
+        parent="transportation.transportation_menu_root"
+        action="account_covenant_action"
+        sequence="14"
+    />
+</odoo>

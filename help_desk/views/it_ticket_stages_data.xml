@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data noupdate="1">
+    <!-- noupdate="1" means records will not be updated when the module is upgraded, which is useful for setting initial data that can be edited by users later. -->
+    <!-- Define the stage 'Draft' with a sequence of '1' -->
+    <record id="stage_draft" model="it.ticket.stage">
+      <field name="name">Draft</field>
+      <field name="sequence">1</field>
+    </record>
+    <!-- Define the stage 'On Hold' with a sequence of '2' -->
+    <record id="stage_on_hold" model="it.ticket.stage">
+      <field name="name">On Hold</field>
+      <field name="sequence">2</field>
+    </record>
+    <!-- Define the stage 'In Progress' with a sequence of '3' -->
+    <record id="stage_in_progress" model="it.ticket.stage">
+      <field name="name">In Progress</field>
+      <field name="sequence">3</field>
+    </record>
+    <!-- Define the stage 'Resolved' with a sequence of '4' -->
+    <record id="stage_resolved" model="it.ticket.stage">
+      <field name="name">Resolved</field>
+      <field name="sequence">4</field>
+    </record>
+    <!-- Define the stage 'Denied' with a sequence of '5' -->
+    <record id="stage_denied" model="it.ticket.stage">
+      <field name="name">Denied</field>
+      <field name="sequence">5</field>
+    </record>
+    <!-- Add any other stages you need here with their respective sequence numbers -->
+  </data>
+</odoo>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+     <record id="hr_bonus_view_form_inherit_farha_custom" model="ir.ui.view">
+        <field name="name">hr.bonus.view.form</field>
+        <field name="model">hr.bonus</field>
+        <field name="inherit_id" ref="hr_bonus.hr_bonus_view_form" />
+        <field name="arch" type="xml">
+             <field name="hr_period_id" position="attributes">
+                 <attribute name="string">Period From</attribute>
+             </field>
+            <field name="hr_period_id" position="after">
+                <field
+                    name="hr_period_to_id"
+                    options="{'no_create':True,'no_open':True}"
+                    domain="[('state', '=', 'open'),'|',('company_id', '=', company_id),('company_id', '=', False)]"
+                />
+            </field>
+        </field>
+     </record>
+</odoo>

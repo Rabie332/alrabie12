@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record id="action_yard_zone" model="ir.actions.act_window">
+      <field name="name">Yard Zones</field>
+      <field name="res_model">yard.zone</field>
+      <field name="view_mode">kanban,tree,form</field>
+    </record>
+    <record id="action_yard_container" model="ir.actions.act_window">
+      <field name="name">Yard Containers</field>
+      <field name="res_model">yard.container</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <record id="action_yard_blocks" model="ir.actions.act_window">
+      <field name="name">Yard Blocks</field>
+      <field name="res_model">yard.blocks</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_yard" name="Yard" sequence="10" web_icon="yard,static/description/icon.png"/>
+    <menuitem id="menu_yard_zone" name="Zones" parent="menu_yard" action="action_yard_zone" sequence="0"/>
+    <menuitem id="menu_yard_container" name="Containers" parent="menu_yard" action="action_yard_container" sequence="1"/>
+    <menuitem id="menu_yard_blocks" name="Blocks" parent="menu_yard" action="action_yard_blocks" sequence="2"/>
+  </data>
+</odoo>

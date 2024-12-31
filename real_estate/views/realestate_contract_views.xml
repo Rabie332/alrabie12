@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="realestate_contract_view_search" model="ir.ui.view">
+      <field name="name">realestate.contract.search</field>
+      <field name="model">realestate.contract</field>
+      <field name="arch" type="xml">
+         <search>
+                <field name="name" />
+                <field name="partner_id" />
+                <field name="user_id" />
+                <field name="building_id" />
+                <field name="building_code" />
+                <field name="building_unit_id" />
+                <field name="unit_code" />
+            <group>
+                <filter
+                        name="user_id"
+                        string="Responsible"
+                        context="{'group_by':'user_id'}"
+                    />
+                <filter
+                        name="partner_id"
+                        string="Partner"
+                        context="{'group_by':'partner_id'}"
+                    />
+                <filter
+                        name="building_id"
+                        string="Building"
+                        context="{'group_by':'building_id'}"
+                    />
+                <filter name="state" string="State" context="{'group_by':'state'}" />
+            </group>
+        </search>
+      </field>
+    </record>
+
+    <record id="realestate_contract_view_tree" model="ir.ui.view">
+            <field name="name">realestate.contract.tree</field>
+            <field name="model">realestate.contract</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="date" />
+                    <field name="partner_id" />
+                    <field name="user_id" />
+                    <field name="pricing" />
+                    <field name="building_id" />
+                    <field name="building_code" />
+                    <field name="building_unit_id" />
+                    <field name="unit_code" />
+                    <field name="floor" />
+                    <field name="state" />
+                </tree>
+            </field>
+        </record>
+
+
+    <record id="realestate_contract_view_form" model="ir.ui.view">
+            <field name="name">realestate.contract.form</field>
+            <field name="model">realestate.contract</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button
+                        name="action_confirm"
+                        type="object"
+                        attrs="{'invisible':[('state', 'in',['cancel','confirmed'])]}"
+                        string="Confirm"
+                        class="oe_highlight"
+                    />
+                        <button
+                        name="create_invoice"
+                        type="object"
+                        attrs="{'invisible':['|',('state', 'not in',['cancel','confirmed']),('invoice_id','!=',False)]}"
+                        string="Create invoice"
+                        class="oe_highlight"
+                    />
+                        <button
+                        name="action_cancel"
+                        type="object"
+                        attrs="{'invisible':['|',('state','=','cancel'),('state','=','draft')]}"
+                        string="Cancel"
+                        class="oe_highlight"
+                    />
+                        <button
+                        name="set_to_draft"
+                        type="object"
+                        attrs="{'invisible':[('state','!=','confirmed')]}"
+                        groups="real_estate.group_real_estate_manager"
+                        string="Set To Draft"
+                        class="oe_highlight"
+                    />
+                        <field
+                        name="state"
+                        widget="statusbar"
+                        statusbar_visible="draft,confirmed,cancel"
+                    />
+                    </header>
+                    <sheet>
+                        <div
+                        class="oe_button_box"
+                        name="button_box"
+                        attrs="{'invisible': [('state', '=', 'draft')]}"
+                    >
+                         <button
+                            icon="fa-pencil-square-o"
+                            class="oe_stat_button"
+                            name="action_view_invoice"
+                            string="Invoice"
+                            type="object"
+                        >
+
+                    </button>
+                        </div>
+                        <group>
+                            <group string="Contract Data">
+                                <field name="invoice_id" invisible="1" />
+                                <field name="name" />
+                                <field name="type" />
+                                <field name="user_id" />
+                                <field name="reservation_id" />
+                                <field
+                                name="partner_id"
+                                domain="[('customer_rank','>', 0)]"
+                                attrs="{'readonly': [('state','!=','draft')]}"
+                            />
+                                <field
+                                name="date"
+                                attrs="{'readonly': [('state','!=','draft')]}"
+                            />
+                                <field
+                                name="date_payment"
+                                attrs="{'readonly': [('state','!=','draft')]}"
+                                required="1"
+                            />
+                            </group>
+                            <group string="Building">
+                                <field
+                                name="building_id"
+                                attrs="{'readonly': [('state','!=','draft')]}"
+                            />
+                                <field
+                                name="building_code"
+                                attrs="{'readonly': [('state','!=','draft')]}"
+                            />
+                                <field
+                                name="country_id"
+                                attrs="{'readonly': [('state','!=','draft')]}"
+                            />
+                                <field
+                                name="city_id"
+                                domain="[('country_id','=', country_id)]"
+                                attrs="{'readonly': [('state','!=','draft')]}"
+                            />
+                            </group>
+                        </group>
+                        <separator string="Building Unit" colspan="4" />
+                        <group>
+                            <group>
+                                <field
+                                name="building_unit_id"
+                                attrs="{'readonly': [('state','!=','draft')]}"
+                            />
+                                <field
+                                name="unit_code"
+                                attrs="{'readonly': [('state','!=','draft')]}"
+                            />
+                                <field
+                                name="floor"
+                                attrs="{'readonly': [('state','!=','draft')]}"
+                            />
+                                <field
+                                name="pricing"
+                                attrs="{'readonly': [('state','!=','draft')]}"
+                            />
+                                <field
+                                name="company_id"
+                                groups="base.group_multi_company"
+                                readonly="1"
+                                force_save="1"
+                            />
+
+                            </group>
+                            <group>
+                                <field
+                                name="building_type_id"
+                                attrs="{'readonly': [('state','!=','draft')]}"
+                            />
+                                <field
+                                name="building_area"
+                                attrs="{'readonly': [('state','!=','draft')]}"
+                            />
+                                <field
+                                name="template_id"
+                                attrs="{'readonly': [('state','!=','draft')]}"
+                                required="1"
+                            />
+                            <field
+                                name="duration"
+                                attrs="{'readonly': [('state','!=','draft')]}"
+                            />
+                        </group>
+                    </group>
+                    <separator string="Address" />
+                    <group colspan="2">
+                        <div class="o_address_format">
+                            <group>
+                                <field
+                                    name="street"
+                                    placeholder="Street...."
+                                    class="o_address_street"
+                                    attrs="{'readonly': [('state','!=','draft')]}"
+                                />
+                                    <field
+                                    name="street2"
+                                    placeholder="Street2 "
+                                    class="o_address_street"
+                                    attrs="{'readonly': [('state','!=','draft')]}"
+                                />
+                                    <field
+                                    name="zip"
+                                    placeholder="Postal Code"
+                                    class="o_address_zip"
+                                    attrs="{'readonly': [('state','!=','draft')]}"
+                                />
+                                    </group>
+                                </div>
+                                </group>
+                        <notebook colspan="2">
+                            <page string="Installments">
+                                <field name="contract_line_ids">
+                                    <tree
+                                    string="Installments"
+                                    editable="bottom"
+                                    create="0"
+                                    delete="0"
+                                >
+                                        <field
+                                        name="date"
+                                        required="1"
+                                        attrs="{'readonly': [('paid','=',True)]}"
+                                    />
+                                        <field
+                                        name="name"
+                                        required="1"
+                                        attrs="{'readonly': [('paid','=',True)]}"
+                                    />
+                                        <field
+                                        name="amount"
+                                        required="1"
+                                        attrs="{'readonly': [('paid','=',True)]}"
+                                    />
+                                        <field name="paid" />
+                                    </tree>
+                                </field>
+                                <group>
+                                    <field name="total_amount" />
+                                    <field name="paid" />
+                                    <field name="balance" />
+                                </group>
+                            </page>
+                            <page string="Late Installments">
+                                <field name="late_installments_ids">
+                                    <tree
+                                    string="Installments"
+                                    editable="bottom"
+                                    create="0"
+                                    delete="0"
+                                >
+                                        <field
+                                        name="date"
+                                        required="1"
+                                        attrs="{'readonly': [('paid','=',True)]}"
+                                    />
+                                        <field
+                                        name="name"
+                                        required="1"
+                                        attrs="{'readonly': [('paid','=',True)]}"
+                                    />
+                                        <field
+                                        name="amount"
+                                        required="1"
+                                        attrs="{'readonly': [('paid','=',True)]}"
+                                    />
+                                        <field name="paid" />
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="realestate_contract_action" model="ir.actions.act_window">
+            <field name="name">Contracts</field>
+            <field name="res_model">realestate.contract</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem
+        action="realestate_contract_action"
+        id="realestate_contract_menu"
+        parent="contract_menu_root"
+        sequence="1"
+    />
+</odoo>

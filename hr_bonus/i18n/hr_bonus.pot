@@ -1,0 +1,470 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_bonus
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-29 11:13+0000\n"
+"PO-Revision-Date: 2022-11-29 11:13+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_bonus
+#: code:addons/hr_bonus/models/hr_bonus.py:0
+#, python-format
+msgid "%s hasn't a contract"
+msgstr ""
+
+#. module: hr_bonus
+#: model_terms:ir.ui.view,arch_db:hr_bonus.hr_salary_rule_bonus_form
+msgid ""
+"<span colspan=\"2\">If you add a company for this rule, it will be visible "
+"only for this company</span>"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields.selection,name:hr_bonus.selection__hr_bonus__bonus_method__amount
+msgid "Amount"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__amount
+msgid "Amount NET"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.actions.act_window,name:hr_bonus.hr_bonus_action_report
+#: model:ir.ui.menu,name:hr_bonus.hr_bonus_menu_report
+msgid "Analysis"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus_line__base_amount
+msgid "Base"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.actions.act_window,name:hr_bonus.hr_bonus_action
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__type_id
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus_line__bonus_id
+#: model:ir.ui.menu,name:hr_bonus.hr_bonus_menu
+#: model:ir.ui.menu,name:hr_bonus.hr_bonus_menu_root
+msgid "Bonus"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__type_id
+msgid "Bonus "
+msgstr ""
+
+#. module: hr_bonus
+#: model:res.groups,name:hr_bonus.hr_bonus_group_manager
+msgid "Bonus Manager"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model,name:hr_bonus.model_hr_bonus
+msgid "Bonus Request"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.actions.act_window,name:hr_bonus.hr_bonus_type_action
+#: model:ir.ui.menu,name:hr_bonus.hr_bonus_type_menu
+msgid "Bonus Types"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__bonus_method
+msgid "Bonus by"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__company_id
+msgid "Company"
+msgstr ""
+
+#. module: hr_bonus
+#: model_terms:ir.ui.view,arch_db:hr_bonus.hr_bonus_view_form
+msgid "Compute gross per employee"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.ui.menu,name:hr_bonus.hr_bonus_configuration_menu
+msgid "Configuration"
+msgstr ""
+
+#. module: hr_bonus
+#: model_terms:ir.ui.view,arch_db:hr_bonus.hr_bonus_view_form
+msgid "Confirm"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields.selection,name:hr_bonus.selection__hr_bonus__state__confirm
+msgid "Confirmed"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__create_uid
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__create_date
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__date
+msgid "Date"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields.selection,name:hr_bonus.selection__hr_bonus__target__department
+msgid "Department"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__department_ids
+msgid "Departments"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__line_ids
+#: model_terms:ir.ui.view,arch_db:hr_bonus.hr_bonus_view_form
+msgid "Details per employee"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__display_name
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus_line__display_name
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_payslip__display_name
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_salary_rule__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields.selection,name:hr_bonus.selection__hr_bonus__state__draft
+msgid "Draft"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus_line__employee_id
+msgid "Employee"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__employee_ids
+#: model:ir.model.fields.selection,name:hr_bonus.selection__hr_bonus__target__employee
+#: model_terms:ir.ui.view,arch_db:hr_bonus.hr_bonus_view_search
+msgid "Employees"
+msgstr ""
+
+#. module: hr_bonus
+#: model_terms:ir.ui.view,arch_db:hr_bonus.hr_bonus_view_form
+msgid "Filter employees by categories..."
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus_line__amount
+msgid "Gross"
+msgstr ""
+
+#. module: hr_bonus
+#: model_terms:ir.ui.view,arch_db:hr_bonus.hr_bonus_view_search
+msgid "Grouped by"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model,name:hr_bonus.model_hr_bonus_line
+msgid "Hr Bonus Line"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__id
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus_line__id
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_payslip__id
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_salary_rule__id
+msgid "ID"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,help:hr_bonus.field_hr_bonus__message_needaction
+#: model:ir.model.fields,help:hr_bonus.field_hr_bonus__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,help:hr_bonus.field_hr_bonus__message_has_error
+#: model:ir.model.fields,help:hr_bonus.field_hr_bonus__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_payslip_line__is_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_salary_rule__is_bonus
+msgid "Is bonus"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__is_variable_bonus
+msgid "Is variable bonus"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus____last_update
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus_line____last_update
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_payslip____last_update
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_salary_rule____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__write_uid
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__write_date
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus_line__net_amount
+msgid "NET"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,help:hr_bonus.field_hr_bonus__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,help:hr_bonus.field_hr_bonus__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,help:hr_bonus.field_hr_bonus__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: hr_bonus
+#: code:addons/hr_bonus/models/hr_bonus.py:0
+#, python-format
+msgid "Only a  HR Officer or  Bonus Manager can approve Bonus requests."
+msgstr ""
+
+#. module: hr_bonus
+#: code:addons/hr_bonus/models/hr_bonus.py:0
+#, python-format
+msgid "Only an bonus manager can validate bonus requests."
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model,name:hr_bonus.model_hr_payslip
+msgid "Pay Slip"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields.selection,name:hr_bonus.selection__hr_bonus__state__payed
+msgid "Payed"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus_line__percent
+msgid "Percent (%)"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields.selection,name:hr_bonus.selection__hr_bonus__bonus_method__percentage
+msgid "Percentage"
+msgstr ""
+
+#. module: hr_bonus
+#: model_terms:ir.ui.view,arch_db:hr_bonus.hr_bonus_view_search
+msgid "Period"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__hr_period_id
+msgid "Period applied"
+msgstr ""
+
+#. module: hr_bonus
+#: code:addons/hr_bonus/models/hr_bonus.py:0
+#, python-format
+msgid "Please add a regular pay structure for salary structure type."
+msgstr ""
+
+#. module: hr_bonus
+#: code:addons/hr_bonus/models/hr_bonus.py:0
+#, python-format
+msgid "Please add number work days to the current period."
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.ui.menu,name:hr_bonus.hr_bonus_report_menu
+msgid "Reports"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model,name:hr_bonus.model_hr_salary_rule
+msgid "Salary Rule"
+msgstr ""
+
+#. module: hr_bonus
+#: model_terms:ir.ui.view,arch_db:hr_bonus.hr_salary_rule_bonus_form
+msgid "Salary Rules"
+msgstr ""
+
+#. module: hr_bonus
+#: model_terms:ir.ui.view,arch_db:hr_bonus.hr_bonus_view_form
+msgid "Set to Draft"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__state
+#: model_terms:ir.ui.view,arch_db:hr_bonus.hr_bonus_view_search
+msgid "State"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_payslip_line__structure_ids
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_salary_rule__structure_ids
+msgid "Structures"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__category_ids
+#: model:ir.model.fields.selection,name:hr_bonus.selection__hr_bonus__target__tags
+msgid "Tags"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__target
+msgid "Target Group"
+msgstr ""
+
+#. module: hr_bonus
+#: code:addons/hr_bonus/models/hr_bonus.py:0
+#, python-format
+msgid "The Code should not contain \".\""
+msgstr ""
+
+#. module: hr_bonus
+#: code:addons/hr_bonus/models/hr_bonus.py:0
+#, python-format
+msgid "The Net of employee %s must be greater then 0"
+msgstr ""
+
+#. module: hr_bonus
+#: code:addons/hr_bonus/models/hr_bonus.py:0
+#, python-format
+msgid "This employee %s already exist!"
+msgstr ""
+
+#. module: hr_bonus
+#: model_terms:ir.ui.view,arch_db:hr_bonus.hr_bonus_view_form
+msgid "This will compute gross of bonus per employee."
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__total_amount
+msgid "Total Amount GROSS"
+msgstr ""
+
+#. module: hr_bonus
+#: model_terms:ir.ui.view,arch_db:hr_bonus.hr_bonus_view_search
+msgid "Type"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: hr_bonus
+#: model_terms:ir.ui.view,arch_db:hr_bonus.hr_bonus_view_form
+msgid "Validate"
+msgstr ""
+
+#. module: hr_bonus
+#: code:addons/hr_bonus/models/hr_bonus.py:0
+#, python-format
+msgid "You must select an employee."
+msgstr ""

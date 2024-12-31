@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+,,,,,,,
+access_hr_bonus_user,name_hr_bonus_user,model_hr_bonus,hr.group_hr_user,1,1,1,0
+access_hr_bonus_manager,name_hr_bonus_manager,model_hr_bonus,hr_bonus_group_manager,1,1,1,0
+access_hr_bonus_line_user,name_hr_bonus_line_user,model_hr_bonus_line,hr.group_hr_user,1,1,1,1
+access_hr_salary_rule_user,name_hr_salary_user_user,model_hr_salary_rule,hr_bonus_group_manager,1,1,1,0

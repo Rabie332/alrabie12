@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="transport_dashboard.graphs">
+        <div class="row">
+            <div class="col-12 row o_box">
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div class="box box-success pull-right">
+                        <div class="box-header with-border">
+                            <h5>Clearances by type</h5>
+                        </div>
+                        <div class="box-body">
+                            <div class="chart">
+                                <canvas id="pieChartClearancesTypes" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div class="box box-warning pull-right">
+                        <div class="box-header with-border">
+                            <h5>Clearance By States</h5>
+                        </div>
+                        <div class="box-body">
+                            <div class="chart">
+                                <canvas id="pieChartClearanceStates" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div class="box box-success pull-right">
+                        <div class="box-header with-border">
+                            <h5>Shipping Orders by Type</h5>
+                        </div>
+                        <div class="box-body">
+                            <div class="chart">
+                                <canvas id="barShippingStates" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 row o_box">
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div class="box box-success pull-left">
+                        <div class="box-header with-border">
+                            <h5>Vehicles by States</h5>
+                        </div>
+                        <div class="box-body">
+                            <div class="chart">
+                                <canvas id="barChartVehiclesStates" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div class="box box-warning pull-right">
+                        <div class="box-header with-border">
+                            <h5>Flow of Drivers Rewards</h5>
+                        </div>
+                        <div class="box-body">
+                            <div class="chart">
+                                <canvas id="lineDriverReward" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div class="box box-success pull-right">
+                        <div class="box-header with-border">
+                            <h5>Receipt dates</h5>
+                        </div>
+                        <div class="box-body">
+                            <div class="chart">
+                                <canvas id="lineClearanceCalendar" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>

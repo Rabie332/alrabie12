@@ -1,0 +1,4 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+request_stage_access_right_user,request_stage_access_right_user,model_request_stage,base.group_user,1,1,1,0
+request_type_access_right_user,request_type_access_right_user,model_request_type,base.group_user,1,1,1,0
+confirm_action_wizard_user,confirm_action_wizard_user,model_confirm_action_wizard,base.group_user,1,1,1,0

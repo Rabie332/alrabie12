@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="translation_report_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <div class="header" />
+                <t t-call="web.external_layout">
+
+                    <t t-set="o" t-value="o.with_context(lang=o.env.lang)" />
+                     <div class="page" style="color:black;">
+                           <div style="font-size:20px;font-weight:bold;" class="text-center">
+                               Computerized Transaction Data Entry Form
+                           </div>
+                         <br />
+                         <div class="row">
+
+                        <table width="100%" style="font-size:16px;background-color:white;border-style: none;">
+                            <tr style="font-size:16px;color:black;border-style: none;">
+                              <td style="border-style: none;"> <span>Request Number:</span></td>
+                                <td style="border-style: none;">  <span t-field="o.name" /> </td>
+                                 <td style="border-style: none;"><span>Date:</span>  </td>
+                                <td style="border-style: none;"><span t-field="o.date" /></td>
+                            </tr>
+                            <tr style="font-size:16px;color:black;border-style: none;">
+                                <td style="border-style: none;"> <span>Vessel:</span></td> <td
+                                        style="border-style: none;"
+                                    > <span t-field="o.vessel" /> (Customs broker)</td>
+
+                                <td style="border-style: none;">
+                                    <span>Importer Name:</span></td>
+                                <td style="border-style: none;">
+                                    <span t-esc="o.partner_id.name" /></td>
+                            </tr>
+
+                        </table>
+                    </div>
+     <br />
+
+               <div class="row">
+                 <table width="100%" style="font-size:14px;border: 2px solid black;color:black;">
+
+                     <tr style="border: 2px solid black;color:black;" class="text-center">
+                         <td width="2%">
+                         </td>
+                           <td style="border: 2px solid black;" width="10%">Invoice Number</td>
+                          <td style="border: 2px solid black;" width="10%">Invoice Type</td>
+                          <td style="border: 2px solid black;" width="10%">Delivery Method</td>
+                          <td style="border: 2px solid black;" width="5%">Shipping</td>
+                          <td style="border: 2px solid black;" width="10%">Currency Code</td>
+                          <td style="border: 2px solid black;" width="10%">Invoice Amount</td>
+                         <td style="border: 2px solid black;" width="10%">Currency Type</td>
+                          <td
+                                        style="border: 2px solid black;"
+                                        colspan="4"
+                                        width="40%"
+                                    >Name of the exporting company</td>
+                       </tr>
+                     <t t-set="sequence" t-value="0" />
+                     <t t-foreach="o.clearance_invoice_ids" t-as="invoice">
+                            <tr style="border: 2px solid black;color:black;" class="text-center">
+                                 <td style="border: 2px solid black;" width="2%">
+                                     <t t-set="sequence" t-value="sequence+1" />
+                                    <t t-esc="sequence" />
+                                </td>
+
+                                <td style="border: 2px solid black;" width="10%">
+                                    <span t-field="invoice.invoice_number" />
+                                </td>
+                                 <td style="border: 2px solid black;" width="10%">
+                                    <span t-field="invoice.invoice_type" />
+                                </td>
+                                <td style="border: 2px solid black;" width="10%">
+                                    <span t-field="invoice.delivery_method" />
+                                </td>
+                                 <td style="border: 2px solid black;" width="5%">
+                                    <span t-field="invoice.shipping" />
+                                </td>
+                                <td style="border: 2px solid black;" width="10%">
+                                    <span t-field="invoice.currency_code" />
+                                </td>
+                                 <td style="border: 2px solid black;" width="10%">
+                                    <span t-field="invoice.total" />
+                                </td>
+                                 <td style="border: 2px solid black;" width="10%">
+                                    <span t-field="invoice.currency_id.currency_unit_label" />
+                                </td>
+                                <td style="border: 2px solid black;" width="35%" colspan="4">
+                                    <span t-field="invoice.supplier_name" />
+                                </td>
+                            </tr>
+                     </t>
+                     <tr>
+                         <td colspan="6" style="border: 2px solid black;text-align:center;">
+                             <b>Total</b>
+                         </td>
+                         <td style="border: 2px solid black;text-align:center;"><b><t
+                                                t-esc="sum(o.clearance_invoice_ids.mapped('total'))"
+                                                t-options="{'widget': 'float', 'precision': 3}"
+                                            /></b></td>
+                         <td colspan="2" style="border: 2px solid black;text-align:center;" />
+                     </tr>
+                 </table>
+                   </div>
+              <br />
+                         <div class="row">
+                        <table width="100%" style="font-size:14px;border: 2px solid black;color:black;">
+                            <tr style="border: 2px solid black;color:black;" class="text-center">
+                                  <td style="border: 2px solid black;" width="4%">Number
+                                </td>
+                                <td style="border: 2px solid black;" width="23%">Goods Description
+                                </td>
+                                <td style="border: 2px solid black;" width="9%">
+                                    Standing Weight
+                                </td>
+                                <td style="border: 2px solid black;" width="9%">
+                                    Net Weight
+                                </td>
+                                <td style="border: 2px solid black;" width="5%">Quantity
+                                </td>
+                                <td style="border: 2px solid black;" width="5%">
+                                    Unity Code
+                                </td>
+
+                              <td style="border: 2px solid black;" width="8%">Unity Create User
+                                </td>
+                                <td style="border: 2px solid black;" width="11%">
+                                    Value In Foreign Currency
+                                </td>
+                                <td style="border: 2px solid black;" width="10%">Tariff Item
+                                </td>
+                                <td style="border: 2px solid black;" width="5%">
+                                    Exemption Number
+                                </td>
+<td style="border: 2px solid black;" width="6%">
+                                    Paragraph
+                                </td>
+                                 <td style="border: 2px solid black;" width="7%">
+                                    Insurance
+                                </td>
+                            </tr>
+                       <t t-set="number" t-value="0" />
+                       <t t-set="total_standing_weight" t-value="0" />
+                       <t t-set="total_net_weight" t-value="0" />
+                      <t t-set="total_quantity" t-value="0" />
+                      <t t-set="total_value_foreign_currency" t-value="0" />
+                    <t t-foreach="o.clearance_goods_definition_ids" t-as="good">
+                          <t t-set="number" t-value="number + 1" />
+                                           <tr style="border: 2px solid black;color:black;" class="text-center">
+                                                <td style="border: 2px solid black;" width="4%"><span
+                                                t-esc="number"
+                                            /></td>
+                                               <td style="border: 2px solid black;" width="23%"> <span
+                                                t-field="good.goods_description"
+                                            /></td>
+                                                 <td style="border: 2px solid black;" width="9%"> <span
+                                                t-field="good.standing_weight"
+                                            />
+                                                 <t
+                                                t-set="total_standing_weight"
+                                                t-value="total_standing_weight + good.standing_weight"
+                                            />
+                                                 </td>
+                                                 <td style="border: 2px solid black;" width="9%"> <span
+                                                t-field="good.net_weight"
+                                            />
+                                                 <t
+                                                t-set="total_net_weight"
+                                                t-value="total_net_weight + good.net_weight"
+                                            /></td>
+                                               <td style="border: 2px solid black;" width="5%"> <span
+                                                t-field="good.quantity"
+                                            />
+                                               <t
+                                                t-set="total_quantity"
+                                                t-value="total_quantity + good.quantity"
+                                            /></td>
+                                                  <td style="border: 2px solid black;" width="5%"> <span
+                                                t-field="good.unity_code"
+                                            /></td>
+                                                <td style="border: 2px solid black;" width="8%"> <span
+                                                t-field="good.user"
+                                            /></td>
+                                               <td style="border: 2px solid black;" width="11%"> <span
+                                                t-field="good.value_foreign_currency"
+                                            /><t
+                                                t-set="total_value_foreign_currency"
+                                                t-value="total_value_foreign_currency + good.value_foreign_currency"
+                                            />
+                                               </td>
+
+                                               <td style="border: 2px solid black;" width="5%"> <span
+                                                t-field="good.goods_definition_id.name"
+                                            /></td>
+                                                <td style="border: 2px solid black;" width="5%"> <span
+                                                t-field="good.exemption_number"
+                                            /></td>
+                                               <td style="border: 2px solid black;" width="6%"> <span
+                                                t-field="good.paragraph"
+                                            /></td>
+                                                 <td style="border: 2px solid black;" width="7%"> <span
+                                                t-field="good.insurance"
+                                            /></td>
+                                           </tr>
+                    </t>
+                                            <tr style="border: 2px solid black;color:black;" class="text-center">
+                                                <td style="border: 2px solid black;" width="29%" colspan="2">Total</td>
+                                                 <td style="border: 2px solid black;" width="9%"> <span
+                                            t-esc="total_standing_weight"
+                                            t-options="{'widget': 'float', 'precision': 3}"
+                                        />
+                                                 </td>
+                                                 <td style="border: 2px solid black;" width="9%"> <span
+                                            t-esc="total_net_weight"
+                                            t-options="{'widget': 'float', 'precision': 3}"
+                                        />
+                                                 </td>
+                                               <td style="border: 2px solid black;" width="5%"> <span
+                                            t-esc="total_quantity"
+                                            t-options="{'widget': 'float', 'precision': 3}"
+                                        />
+                                              </td>
+                                                  <td style="border: 2px solid black;" width="13%" colspan="2" />
+
+                                               <td style="border: 2px solid black;" width="11%"> <span
+                                            t-esc="total_value_foreign_currency"
+                                            t-options="{'widget': 'float', 'precision': 3}"
+                                        />
+                                               </td>
+
+                                               <td style="border: 2px solid black;" width="35%" colspan="4"> </td>
+
+                                           </tr>
+
+                   </table>
+                    </div>
+                         <br />
+                   <div class="row">
+                             <span>Description:</span><span t-field="o.description" />
+                       </div>
+                    </div>
+
+                     <div class="footer" />
+                </t>
+            </t>
+        </t>    </template>
+
+    <template id="translation_report_pdf_i18n">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-set="o" t-value="o.with_context(lang=o.env.lang)" />
+                <t t-call="clearance.translation_report_template" t-lang="o.env.lang" />
+            </t>
+        </t>
+    </template>
+        <record id="paperformat_translation_report" model="report.paperformat">
+            <field name="name">Translation Report</field>
+            <field name="default" eval="True" />
+            <field name="format">custom</field>
+            <field name="page_height">297</field>
+            <field name="page_width">210</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">7</field>
+            <field name="margin_bottom">3</field>
+            <field name="margin_left">3</field>
+            <field name="margin_right">3</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">3</field>
+            <field name="dpi">90</field>
+        </record>
+      <record id="action_translation_report" model="ir.actions.report">
+            <field name="name">Translation Report</field>
+            <field name="model">clearance.request</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">clearance.translation_report_pdf_i18n</field>
+            <field name="report_file">clearance.translation_report_pdf_i18n</field>
+           <field name="print_report_name">'Translation Report - %s' % object.name</field>
+            <field name="binding_model_id" ref="model_clearance_request" />
+            <field name="binding_type">report</field>
+          <field name="paperformat_id" ref="paperformat_translation_report" />
+        </record>
+</odoo>

@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_invoice_import_wizard,access.invoice.import.wizard,model_invoice_import_wizard,,1,1,1,1
+access_payment_import_wizard,access_payment_import_wizard,model_payment_import_wizard,,1,1,1,1
+access_credit_note_import_wizard,access_credit_note_import_wizard,model_credit_note_import_wizard,,1,1,1,1
+access_expense_import_wizard,access_expense_import_wizard,model_expense_import_wizard,,1,1,1,1
+access_delete_journal_entries_wizard,access_delete_journal_entries_wizard,model_delete_journal_entries_wizard,,1,1,1,1
+access_journal_entry_import_wizard,access_journal_entry_import_wizard,model_journal_entry_import_wizard,,1,1,1,1

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Beginning Of First Row -->
+    <menuitem
+        id="request.self_services_menu"
+        web_icon="farha_custom_icon,static/img/request.png"
+        name="Self services"
+        sequence="0"
+    />
+    <menuitem id="hr.menu_hr_root" 
+        web_icon="farha_custom_icon,static/img/hr.png" 
+        name="Employees" 
+        sequence="1" 
+    />
+    <record model="ir.ui.menu" id="hr_payroll.menu_hr_payroll_root">
+        <field name="sequence" eval="2" />
+    </record>
+    <record model="ir.ui.menu" id="hr_attendance.menu_hr_attendance_root">
+        <field name="sequence" eval="3" />
+    </record>
+    <record model="ir.ui.menu" id="announcements.menu_user_announcements">
+        <field name="sequence" eval="4" />
+    </record>
+    <record model="ir.ui.menu" id="help_desk.menu_help_desk">
+        <field name="sequence" eval="5" />
+    </record>
+    <menuitem
+        name="Recruitment"
+        id="hr_recruitment.menu_hr_recruitment_root"
+        web_icon="hr_recruitment,static/description/icon.png"
+        groups="hr_recruitment.group_hr_recruitment_user"
+        sequence="6"/>
+    <record model="ir.ui.menu" id="employee_housing.menu_housing_root">
+        <field name="sequence" eval="7" />
+    </record>
+    <menuitem
+        id="contacts.menu_contacts"
+        web_icon="farha_custom_icon,static/img/contact.png"
+        name="Contacts"
+        sequence="8"
+    />
+    <record model="ir.ui.menu" id="dms.dms_root_menu">
+        <field name="sequence" eval="9" />
+    </record>
+    <menuitem name="Project"
+            id="project.menu_main_pm"
+            groups="project.group_project_manager,project.group_project_user"
+            web_icon="project,static/description/icon.png"
+            sequence="10"/>
+    <menuitem
+        id="purchase.menu_purchase_root"
+        name="Purchase"
+        web_icon="farha_custom_icon,static/img/purchase.png"
+        sequence="11"
+    />
+    <!-- END OF FIRST ROW -->
+    <!-- Beginning OF SECOND ROW -->
+    <record model="ir.ui.menu" id="clearance.clearance_menu_root">
+        <field name="sequence" eval="12" />
+    </record>
+    <record model="ir.ui.menu" id="transportation.transportation_menu_root">
+        <field name="sequence" eval="13" />
+    </record>
+    <record model="ir.ui.menu" id="yard.menu_yard">
+        <field name="sequence" eval="14" />
+    </record>
+    <record model="ir.ui.menu" id="fleet.menu_root">
+        <field name="sequence" eval="15" />
+    </record>
+    <record model="ir.ui.menu" id="real_estate.real_estate_menu_root">
+        <field name="sequence" eval="16" />
+    </record>
+    <menuitem
+        id="point_of_sale.menu_point_root"
+        name="Point of Sale"
+        sequence="17"
+        web_icon="farha_custom_icon,static/img/point_of_sale.png"
+    />
+    <menuitem id="sale.sale_menu_root"
+            name="Sales"
+            web_icon="sale_management,static/description/icon.png"
+            sequence="18"/>
+    <menuitem
+        id="crm.crm_menu_root"
+        name="CRM"
+        web_icon="crm_icon,static/description/icon.png"
+        groups="sales_team.group_sale_salesman,sales_team.group_sale_manager"
+        sequence="19"
+    />
+    <menuitem
+        id="account.menu_finance"
+        web_icon="farha_custom_icon,static/img/account.png"
+        name="Invoicing"
+        sequence="20"
+    />
+    <menuitem id="loans_management.loan_management_menu" name="Loans Management" sequence="21" web_icon="loans_management,static/description/icon.png"/>
+    <menuitem
+        id="hr_expense.menu_hr_expense_root"
+        name="Expenses"
+        web_icon="farha_custom_icon,static/img/expense.png"
+        sequence="22"
+    />
+    <menuitem name="Inventory" id="stock.menu_stock_root" sequence="23"
+        groups="stock.group_stock_manager,stock.group_stock_user"
+        web_icon="stock,static/description/icon.png"/>
+    <!-- END OF SECOND ROW -->
+    <!-- Beginning OF THIRD ROW -->
+    <menuitem
+        name="Reservations"
+        id="hotel_reservation.menu_action_hotel_reservation_tree_all"
+        sequence="24"
+        action="hotel_reservation.action_hotel_reservation_tree_all"
+        web_icon="hotel_reservation,static/description/icon.png"
+        groups="hotel_reservation.group_reservation_officer,hotel.group_hotel_manager"
+    />
+    <menuitem
+        id="hotel_reservation.apartments_menu_root"
+        name="Apartments"
+        sequence="25"
+        groups="hotel_reservation.group_receptionist,hotel.group_hotel_manager"
+        web_icon="hotel_reservation,static/description/icon_apartment.png"
+    />
+    <menuitem
+        id="hotel_room.hotel_room_management_menu_root"
+        name="Rooms Management"
+        sequence="26"
+        groups="hotel.group_room_management,hotel.group_hotel_manager"
+        web_icon="hotel_room,static/description/icon.png"
+    />
+    <menuitem
+        id="hotel_housekeeping.menu_housekeeping"
+        name="Housekeeping Services"
+        sequence="27"
+        groups="hotel_housekeeping.group_service_officer,hotel_housekeeping.group_clean_worker,hotel_housekeeping.group_maintenance_worker,hotel.group_hotel_manager"
+        web_icon="hotel_housekeeping,static/description/icon.png"
+    />
+    <menuitem
+        id="hotel_restaurant.hotel_restaurant_menu"
+        name="Restaurant"
+        web_icon="hotel_restaurant,static/description/icon.png"
+        sequence="28"
+        groups="hotel_restaurant.group_restaurant_manager,hotel.group_hotel_manager"
+    />
+    <menuitem
+        id="hotel.hotel_report_menu"
+        name="Reports"
+        sequence="29"
+        web_icon="hotel,static/description/report_icon.png"
+        groups="hotel.group_reporting_officer,hotel.group_hotel_manager"
+    />
+    <menuitem
+        id="website.menu_website_configuration"
+        web_icon="farha_custom_icon,static/img/website.png"
+        name="Website"
+        sequence="30"
+    />
+    <menuitem
+        id="calendar.mail_menu_calendar"
+        web_icon="farha_custom_icon,static/img/calendar.png"
+        name="Calendar"
+        sequence="31"
+    />
+    <record model="ir.ui.menu" id="im_livechat.menu_livechat_root">
+        <field name="sequence" eval="32" />
+    </record>
+    <menuitem
+        id="mail.menu_root_discuss"
+        web_icon="farha_custom_icon,static/img/discuss.png"
+        name="Discuss"
+        sequence="33"
+    />
+    <menuitem name="Surveys"
+      id="survey.menu_surveys"
+      sequence="34"
+      groups="survey.group_survey_user"
+      web_icon="survey,static/description/icon.png"/>
+    <menuitem
+        id="request.drive_actions_menu"
+        web_icon="request,static/description/icon_drive_action.png"
+        name="Drive Actions"
+        groups="request.group_stages_manager"
+        sequence="35"
+    />
+    <record model="ir.ui.menu" id="ks_dashboard_ninja.board_menu_root">
+        <field name="sequence" eval="36" />
+    </record>
+    <menuitem id="base.menu_management" 
+        web_icon="farha_custom_icon,static/img/modules.png" 
+        name="Apps" 
+        sequence="37"/>
+    <menuitem id="base.menu_administration" 
+        web_icon="farha_custom_icon,static/img/settings.png" 
+        name="Settings" 
+        sequence="38"/>
+    <!-- END OF THIRD ROW -->
+</odoo>

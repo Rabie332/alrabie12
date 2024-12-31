@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- hr.overtime.mandate -->
+
+    <record id="hr_overtime_mandate_1" model="hr.overtime.mandate" />
+
+    <!-- hr.overtime.mandate.line -->
+
+    <record id="hr_overtime_mandate_line_1" model="hr.overtime.mandate.line">
+        <field name="overtime_mandate_id" ref="hr_overtime.hr_overtime_mandate_1" />
+        <field name="employee_id" ref="hr.employee_qdp" />
+        <field name="mission">Task 01</field>
+        <field name="date_from">2018-07-20</field>
+        <field name="date_to">2018-07-21</field>
+        <field name="type">friday_saturday</field>
+        <field name="hour_number">5</field>
+    </record>
+
+    <record id="hr_overtime_mandate_line_2" model="hr.overtime.mandate.line">
+        <field name="overtime_mandate_id" ref="hr_overtime.hr_overtime_mandate_1" />
+        <field name="employee_id" ref="hr.employee_fme" />
+        <field name="mission">Task 01</field>
+        <field name="date_from">2018-07-20</field>
+        <field name="date_to">2018-07-21</field>
+        <field name="type">friday_saturday</field>
+        <field name="hour_number">5</field>
+    </record>
+
+
+
+</odoo>

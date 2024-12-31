@@ -1,0 +1,744 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_direct_action
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-31 15:01+0000\n"
+"PO-Revision-Date: 2022-08-31 15:01+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_direct_action
+#: model:ir.actions.report,print_report_name:hr_direct_action.action_report_direct_action
+msgid "(object.name + '_direct_action.pdf')"
+msgstr "(object.name + '_طلب_مباشرة.pdf')"
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.direct_action_report
+msgid ""
+".\n"
+"                                    <br/>\n"
+"                                    إلى: مدير إدارة الموارد البشرية."
+msgstr ""
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.direct_action_report
+msgid ""
+"<br/>\n"
+"                                ص. في ملف الموظف.\n"
+"                                <br/>\n"
+"                                ص. للرئيس المباشر للموظف.\n"
+"                                <br/>\n"
+"                                للإدارة المالية يرفق معها صورة من موافقة الموظف على عرض العمل."
+msgstr ""
+
+#. module: hr_direct_action
+#: model:mail.template,body_html:hr_direct_action.mail_template_direct_action
+msgid ""
+"<tbody>\n"
+"                    <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                <tr>\n"
+"                                    <td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                                        <div>\n"
+"                                            Dear <strong>${object.company_id.name}</strong>,\n"
+"                                            <br/>\n"
+"                                            <br/>\n"
+"                                            I join you the Direct Action Report of the employee\n"
+"                                            <strong>${object.employee_id.name}</strong>\n"
+"                                            <br/>Please find attached details\n"
+"                                            <br/>\n"
+"                                            <br/>\n"
+"                                            % if user.signature:\n"
+"                                            <br/>\n"
+"                                            ${user.signature | safe}\n"
+"                                            % endif\n"
+"                                        </div>\n"
+"                                    </td>\n"
+"                                </tr>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                 </tbody>\n"
+"             "
+msgstr ""
+"<tbody style=\"font-family:&quot;JF Flat&quot;, serif;\">\n"
+"                    <tr style=\"font-family:&quot;JF Flat&quot;, serif;\">\n"
+"                        <td style=\"font-family:&quot;JF Flat&quot;, serif;min-width:590px;\" align=\"center\">\n"
+"                            <table style=\"font-family:&quot;JF Flat&quot;, serif;border-collapse:collapse;min-width:590px;background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\" width=\"590\" cellspacing=\"0\" cellpadding=\"0\" border=\"0\">\n"
+"                                <tbody style=\"font-family:&quot;JF Flat&quot;, serif;\"><tr style=\"font-family:&quot;JF Flat&quot;, serif;\">\n"
+"                                    <td style=\"font-family:&quot;JF Flat&quot;, serif;font-size:13px;\" valign=\"top\">\n"
+"                                        <div style=\"font-size:13px;font-family:&quot;Lucida Grande&quot;, Helvetica, Verdana, Arial, sans-serif;\">\n"
+"                                            عزيزي <strong style=\"font-family:&quot;JF Flat&quot;, serif;font-weight:bolder;\">${object.company_id.name}</strong>,\n"
+"                                            <br style=\"font-family:&quot;JF Flat&quot;, serif;\">\n"
+"                                            <br style=\"font-family:&quot;JF Flat&quot;, serif;\">\n"
+"                                            لقد تم إرفاق تقرير مباشرة العمل للموظف\n"
+"                                            <strong style=\"font-family:&quot;JF Flat&quot;, serif;font-weight:bolder;\">${object.employee_id.name}</strong>\n"
+"                                            <br style=\"font-family:&quot;JF Flat&quot;, serif;\">يرجى الاطلاع على التفاصيل المرفقة بالملف\n"
+"                                            <br style=\"font-family:&quot;JF Flat&quot;, serif;\">\n"
+"                                            <br style=\"font-family:&quot;JF Flat&quot;, serif;\">\n"
+"                                            % if user.signature:\n"
+"                                            <br style=\"font-family:&quot;JF Flat&quot;, serif;\">\n"
+"                                            ${user.signature | safe}\n"
+"                                            % endif\n"
+"                                        </div>\n"
+"                                    </td>\n"
+"                                </tr>\n"
+"                            </tbody></table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                 </tbody>\n"
+"             "
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__message_needaction
+msgid "Action Needed"
+msgstr "الإجراءات اللازمة"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__activity_ids
+msgid "Activities"
+msgstr "أنشطة"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "زخرفة استثناء النشاط"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__employee_id
+msgid "Applicant"
+msgstr "صاحب الطلب"
+
+#. module: hr_direct_action
+#: model:mail.message.subtype,name:hr_direct_action.mt_direct_action_approved
+msgid "Approved"
+msgstr "أعتمد"
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.hr_direct_action_view_form
+msgid "Are you sure you want to do this?"
+msgstr "هل أنت متأكد من القيام بهذا الإجراء ؟"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.hr_direct_action_wizard_view_from
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action_wizard__partner_ids
+msgid "Companies"
+msgstr "الشركات"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__company_id
+msgid "Company"
+msgstr "المؤسسة"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__create_uid
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action_wizard__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__create_date
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action_wizard__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__date_direct_action
+msgid "Date of commencement"
+msgstr "تاريخ المباشرة"
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.hr_direct_action_view_kanban
+msgid "Date of commencement :"
+msgstr "تاريخ المباشرة :"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__department_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.hr_direct_action_view_kanban
+msgid "Department :"
+msgstr "القسم :"
+
+#. module: hr_direct_action
+#: model:ir.actions.act_window,name:hr_direct_action.action_hr_direct_action
+#: model:ir.actions.act_window,name:hr_direct_action.hr_direct_action_wizard_action
+#: model:ir.actions.report,name:hr_direct_action.action_report_direct_action
+#: model:ir.model,name:hr_direct_action.model_hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.hr_direct_action_wizard_view_from
+msgid "Direct Action"
+msgstr "طلب مباشرة العمل"
+
+#. module: hr_direct_action
+#: model:mail.template,report_name:hr_direct_action.mail_template_direct_action
+msgid "Direct Action ${(object.name or '')}"
+msgstr " ${(object.name or '')}فعل مباشر"
+
+#. module: hr_direct_action
+#: model:mail.template,subject:hr_direct_action.mail_template_direct_action
+msgid "Direct Action of employee ${object.employee_id.name}"
+msgstr "الإجراء المباشر للموظف $ {object.employee_id.name}"
+
+#. module: hr_direct_action
+#: model:ir.ui.menu,name:hr_direct_action.hr_direct_action_menu
+#: model:ir.ui.menu,name:hr_direct_action.hr_direct_action_menu_root
+msgid "Direct Actions"
+msgstr "طلبات مباشرة العمل"
+
+#. module: hr_direct_action
+#: model:ir.actions.act_window,name:hr_direct_action.hr_direct_action_stage_action
+#: model:ir.ui.menu,name:hr_direct_action.hr_direct_action_stage_menu
+msgid "Direct Actions Stages"
+msgstr "مراحل طلبات مباشرة العمل"
+
+#. module: hr_direct_action
+#: model:request.stage,name:hr_direct_action.hr_direct_action_stage_manager
+msgid "Direct Manager"
+msgstr "المدير المباشر"
+
+#. module: hr_direct_action
+#: model:mail.message.subtype,description:hr_direct_action.mt_direct_action_approved
+msgid "Direct action is approved"
+msgstr "تمت الموافقة على طلب مباشرة العمل"
+
+#. module: hr_direct_action
+#: model:mail.activity.type,name:hr_direct_action.mail_hr_direct_action_feedback
+msgid "Direct action is done"
+msgstr "تم إعتماد طلب مباشرة العمل"
+
+#. module: hr_direct_action
+#: model:mail.message.subtype,description:hr_direct_action.mt_direct_action_refused
+msgid "Direct action is refused"
+msgstr "تم رفض طاب مباشرة العمل"
+
+#. module: hr_direct_action
+#: model:mail.activity.type,name:hr_direct_action.mail_hr_direct_action_approval
+msgid "Direct action request is ready to be approved"
+msgstr "طلب مباشرة العمل جاهز للموافقة"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__display_button_accept
+msgid "Display Button Accept"
+msgstr ""
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__display_button_previous
+msgid "Display Button Previous"
+msgstr ""
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__display_button_refuse
+msgid "Display Button Refuse"
+msgstr ""
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__display_button_send
+msgid "Display Button Send"
+msgstr ""
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__display_name
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action_wizard__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_direct_action
+#: model:request.stage,name:hr_direct_action.hr_direct_action_stage_done
+msgid "Done"
+msgstr "معتمد"
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.hr_direct_action_view_form
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.hr_direct_action_view_kanban
+msgid "Employee :"
+msgstr "الموظف :"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__message_follower_ids
+msgid "Followers"
+msgstr "متابعون"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,help:hr_direct_action.field_hr_direct_action__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: hr_direct_action
+#: model:request.stage,name:hr_direct_action.hr_direct_action_stage_validate
+msgid "General Director"
+msgstr "الموارد البشرية"
+
+#. module: hr_direct_action
+#: model:ir.model,name:hr_direct_action.model_hr_direct_action_wizard
+msgid "Hr Direct Action Wizard"
+msgstr ""
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__id
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action_wizard__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: hr_direct_action
+#: model:ir.model.fields,help:hr_direct_action.field_hr_direct_action__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "رمز للإشارة إلى نشاط استثناء"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,help:hr_direct_action.field_hr_direct_action__message_needaction
+#: model:ir.model.fields,help:hr_direct_action.field_hr_direct_action__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم تحديدها ، فإن الرسائل الجديدة تتطلب انتباهك"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,help:hr_direct_action.field_hr_direct_action__message_has_error
+#: model:ir.model.fields,help:hr_direct_action.field_hr_direct_action__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده ، فإن بعض الرسائل بها خطأ في التسليم"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__message_is_follower
+msgid "Is Follower"
+msgstr "تابع"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__job_id
+msgid "Job"
+msgstr "المنصب الوظيفي"
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.hr_direct_action_view_kanban
+msgid "Job :"
+msgstr "المنصب الوظيفي :"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__number
+msgid "Job number"
+msgstr "الرقم الوظيفي "
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__kanban_color
+msgid "Kanban Color Index"
+msgstr ""
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action____last_update
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action_wizard____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__write_uid
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action_wizard__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__write_date
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action_wizard__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__manager_id
+msgid "Manager"
+msgstr "المدير"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__message_ids
+msgid "Messages"
+msgstr "رسائل"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي لنشاطي"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__name
+msgid "Number"
+msgstr "الرقم"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,help:hr_direct_action.field_hr_direct_action__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي بها خطأ في التسليم"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,help:hr_direct_action.field_hr_direct_action__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي بها خطأ في التسليم"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,help:hr_direct_action.field_hr_direct_action__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل غير المقروءة"
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.hr_direct_action_view_form
+msgid "Print Direct Action report"
+msgstr "تقرير طلب مباشرة العمل"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__refuse_reason
+msgid "Refusal reason"
+msgstr "سبب الرفض"
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.hr_direct_action_view_form
+msgid "Refuse"
+msgstr "مرفوض"
+
+#. module: hr_direct_action
+#: model:mail.message.subtype,name:hr_direct_action.mt_direct_action_refused
+#: model:request.stage,name:hr_direct_action.hr_direct_action_stage_refused
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: hr_direct_action
+#: model:request.stage,name:hr_direct_action.hr_direct_action_stage_send
+msgid "Request"
+msgstr "طلب"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__date
+msgid "Request date"
+msgstr "تاريخ الطلب"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.hr_direct_action_wizard_view_from
+msgid "Send"
+msgstr "إرسال"
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.hr_direct_action_view_form
+msgid "Send Direct Action Report"
+msgstr "إرسال تقرير مباشرة العمل "
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__stage_id
+msgid "Stage"
+msgstr "المرحلة"
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.hr_direct_action_view_kanban
+msgid "Stage :"
+msgstr "المرحلة :"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,help:hr_direct_action.field_hr_direct_action__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "مخطط له: الأنشطة المستقبلية"
+
+#. module: hr_direct_action
+#: code:addons/hr_direct_action/models/hr_direct_action.py:0
+#: model:ir.model.constraint,message:hr_direct_action.constraint_hr_direct_action_name_uniq
+#, python-format
+msgid "The name should be unique!"
+msgstr "يجب أن يكون اﻹسم فريدًا"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__request_type_id
+msgid "Type"
+msgstr "النوع"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,help:hr_direct_action.field_hr_direct_action__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع نشاط الاستثناء المسجل"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__message_unread
+msgid "Unread Messages"
+msgstr "رسائل غير مقروءة"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عداد الرسائل غير المقروءة"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: hr_direct_action
+#: model:ir.model.fields,help:hr_direct_action.field_hr_direct_action__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.direct_action_report
+msgid "logo"
+msgstr "شعار"
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.hr_direct_action_view_form
+msgid "refused"
+msgstr "مرفوض"
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.direct_action_report
+msgid "آمل استكمال جميع الإجراءات اللازمة للموظف وتيسير مهمته."
+msgstr ""
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.direct_action_report
+msgid ""
+"إسم\n"
+"                                    الموظف:"
+msgstr ""
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.direct_action_report
+msgid "إسم البنك"
+msgstr ""
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.direct_action_report
+msgid "اسم البريد المقترح"
+msgstr ""
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.direct_action_report
+msgid "اعتماد الرئيس التنفيذي"
+msgstr ""
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.direct_action_report
+msgid ""
+"التاريخ:......................\n"
+"                                    <br/>\n"
+"                                    التوقيع:................................"
+msgstr ""
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.direct_action_report
+msgid ""
+"الرئيس المباشر\n"
+"                                    :"
+msgstr ""
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.direct_action_report
+msgid "السلام عليكم ورحمة الله وبركاته"
+msgstr ""
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.direct_action_report
+msgid "السيد /"
+msgstr ""
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.direct_action_report
+msgid ""
+"المسمى الوظيفي\n"
+"                                    :"
+msgstr ""
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.direct_action_report
+msgid "الموافق تاريخ :"
+msgstr ""
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.direct_action_report
+msgid ""
+"تأسيس بريد\n"
+"                                    داخلي للموظف"
+msgstr ""
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.direct_action_report
+msgid "حفظكم الله"
+msgstr ""
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.direct_action_report
+msgid "ختم الشركة"
+msgstr ""
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.direct_action_report
+msgid "رقم الآيبان"
+msgstr ""
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.direct_action_report
+msgid ""
+"عليه تحيطكم إدارة الشركة علما بأنكم قد باشرتم العمل معنا\n"
+"                                    <br/>\n"
+"                                    بداية من يوم"
+msgstr ""
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.direct_action_report
+msgid ""
+"فإشارة إلى موافقتكم الكتابية والضمنية للعرض المقدم لكم سابقاً\n"
+"                                    <br/>\n"
+"                                    من الإدارة العامة لشركة"
+msgstr ""
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.direct_action_report
+msgid ""
+"كما نأمل منكم تعبئة\n"
+"                                    البيانات التالية:"
+msgstr ""
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.direct_action_report
+msgid ""
+"معلومات\n"
+"                                    بنكية"
+msgstr ""
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.direct_action_report
+msgid ""
+"من:\n"
+"                                    الرئيس التنفيذي لشركة"
+msgstr ""
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.direct_action_report
+msgid ""
+"نموذج\n"
+"                                    مباشرة عمل موظفي"
+msgstr ""
+
+#. module: hr_direct_action
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.direct_action_report
+msgid ""
+"وعليه يتم احتساب جميع\n"
+"                                    مستحقاتكم المتفق عليها حسب عقدكم\n"
+"                                    <br/>\n"
+"                                    المبرم مع الشركة، والذي ينظم عملكم معنا، وكذلك حسب نظام\n"
+"                                    <br/>\n"
+"                                    مكتب العمل والعمال السعودي، وذلك بعد توقيعكم أدناه."
+msgstr ""
+
+#. module: hr_direct_action
+#: model:request.type,name:hr_direct_action.request_type_hr_direct_action_new_employee
+msgid "New Employee"
+msgstr "مباشرة عمل موظف جديد "
+
+#. module: hr_direct_action
+#: model:request.type,name:hr_direct_action.request_type_hr_direct_action_after_leave
+msgid "After Leave"
+msgstr "مباشره بعد الإجازة"
+
+#. module: hr_direct_action
+#: model:ir.actions.act_window,name:hr_direct_action.hr_direct_action_type_action
+#: model:ir.ui.menu,name:hr_direct_action.hr_direct_action_type_menu
+msgid "Direct Action types"
+msgstr "أنواع مباشرة العمل"
+
+#. module: hr_direct_action
+#: model:ir.model.fields,field_description:hr_direct_action.field_hr_direct_action__attachment_ids
+#: model_terms:ir.ui.view,arch_db:hr_direct_action.hr_direct_action_view_form
+msgid "Attachments"
+msgstr "المرفقات"

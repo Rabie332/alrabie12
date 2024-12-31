@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="balance_hr_deputation_mitchell" model="hr.employee.deputation.stock">
+        <field name="employee_id" ref="hr.employee_qdp" />
+        <field name="deputation_available_stock">30</field>
+    </record>
+
+    <record id="request_type_hr_deputation_mission" model="request.type">
+        <field name="res_model_id" ref="hr_deputation.model_hr_deputation" />
+        <field name="res_model">hr.deputation</field>
+        <field name="name">Mission</field>
+        <field name="need_fees">True</field>
+        <field name="before_mission_days_internal">1</field>
+        <field name="after_mission_days_internal">1</field>
+        <field name="before_mission_days_external">1</field>
+        <field name="after_mission_days_external">1</field>
+    </record>
+
+    <record id="res_city_hr_deputation_riadh" model="res.city">
+        <field name="name">Riadh</field>
+        <field name="country_id" ref="base.sa" />
+    </record>
+
+    <record id="hr_deputation_mission" model="hr.deputation">
+        <field name="employee_id" ref="hr.employee_qdp" />
+        <field name="request_type_id" ref="hr_deputation.request_type_hr_deputation_mission" />
+        <field name="date_from" eval="time.strftime('2020-5-1')" />
+        <field name="date_to" eval="time.strftime('2020-5-2')" />
+        <field name="task_name">Work mission</field>
+        <field name="city_id" ref="hr_deputation.res_city_hr_deputation_riadh" />
+    </record>
+
+</odoo>

@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<odoo noupdate="1">
+    <record forcecreate="True" id="cron_attendance_biotime" model="ir.cron">
+        <field name="name">Download Attendance Biotime</field>
+        <field eval="True" name="active" />
+        <field name="user_id" ref="base.user_root" />
+        <field name="interval_number">1</field>
+        <field name="interval_type">hours</field>
+        <field name="numbercall">-1</field>
+        <field name="model_id" ref="hr_attendance_biotime.model_hr_attendance_biotime" />
+        <field name="state">code</field>
+        <field name="code">model.cron_download()</field>
+    </record>
+
+    <record id="biotime_endpoint" model="hr.attendance.biotime">
+        <field name="name">Biotime Url</field>
+        <field name="port_no">8084</field>
+        <field name="biotime_tz">Asia/Riyadh</field>
+    </record>
+
+<!--    System parameters of Biotime -->
+    <record id="biotime_username" model="ir.config_parameter">
+        <field name="key">biotime_username</field>
+        <field name="value">admin</field>
+    </record>
+    <record id="biotime_password" model="ir.config_parameter">
+        <field name="key">biotime_password</field>
+        <field name="value">adminadmin1</field>
+    </record>
+
+</odoo>

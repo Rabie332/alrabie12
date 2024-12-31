@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+<template id="hr_payroll_loan_report_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <div class="header">
+                    <div class="row">
+                        <div class="col-9" />
+                        <div class="col-3">
+                            <img
+                                t-if="o.company_id.logo"
+                                t-att-src="image_data_uri(o.company_id.logo)"
+                                style="padding: height: 140px; width: 140px;"
+                                alt="logo"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <t t-call="web.internal_layout">
+                    <div class="page" style="font-size: 17px;">
+                        <div class="row">
+                            <div class="col-10 text-left">
+                                <span
+                                    style="font-size:34px; font-weight:bold;"
+                                >Loan Request -
+                                    <t t-if="o.name" t-esc="o.name" />
+                                </span>
+                            </div>
+                            <div class="col-2" />
+                        </div>
+                        <br />
+                        <br />
+                        <table
+                            class="table-sm"
+                            width="100%"
+                            style="font-size:16px; padding:15px"
+                        >
+                            <tr>
+                                <td
+                                    width="20%"
+                                    style="background-color:#F0EFEF; color:#A79559; border:none; padding:15px"
+                                >Employee
+                                </td>
+                                <td
+                                    width="30%"
+                                    style="background-color:#F0EFEF; padding:15px;"
+                                >
+                                    <t
+                                        t-if="o.employee_id"
+                                        t-esc="o.employee_id.name"
+                                    />
+                                </td>
+                                <td
+                                    width="20%"
+                                    style="background-color:#F0EFEF; color:#A79559; padding:15px;"
+                                >Type
+                                </td>
+                                <td
+                                    width="30%"
+                                    style="background-color:#F0EFEF; border:none; padding:15px;"
+                                >
+                                    <span
+                                        t-if="o.request_type_id"
+                                        t-field="o.request_type_id.name"
+                                    />
+                                </td>
+                            </tr>
+                            <tr style="padding:15px;">
+                                <td
+                                    style="background-color:#F0EFEF; color:#A79559; border:none; padding:15px;"
+                                >Loan Date
+                                </td>
+                                <td style="background-color:#F0EFEF; padding:15px;">
+                                    <t t-if="o.date" t-esc="o.date" />
+                                </td>
+                                <td
+                                    style="background-color:#F0EFEF; color:#A79559; padding:15px;"
+                                >Loan Amount
+                                </td>
+                                <td
+                                    style="background-color:#F0EFEF; border:none; padding:15px;"
+                                >
+                                    <t t-if="o.amount" t-esc="o.amount" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    style="background-color:#F0EFEF; color:#A79559; border:none; padding:15px;"
+                                >Installment Value
+                                </td>
+                                <td style="background-color:#F0EFEF; padding:15px;">
+                                    <t
+                                        t-if="o.monthly_amount"
+                                        t-esc="o.monthly_amount"
+                                    />
+                                </td>
+                                <td
+                                    style="background-color:#F0EFEF; color:#A79559; padding:15px;"
+                                >Installments Number
+                                </td>
+                                <td
+                                    style="background-color:#F0EFEF; border:none; padding:15px;"
+                                >
+                                    <t
+                                        t-if="o.installment_number"
+                                        t-esc="o.installment_number"
+                                    />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    style="background-color:#F0EFEF; color:#A79559; border:none; padding:15px;"
+                                >Residual Amount
+                                </td>
+                                <td style="background-color:#F0EFEF; padding:15px;">
+                                    <t
+                                        t-if="o.residual_amount"
+                                        t-esc="o.residual_amount"
+                                    />
+                                </td>
+                                <td
+                                    style="background-color:#F0EFEF; color:#A79559; padding:15px;"
+                                >Company
+                                </td>
+                                <td
+                                    style="background-color:#F0EFEF; border:none; padding:15px;"
+                                >
+                                    <t t-if="o.company_id" t-esc="o.company_id.name" />
+                                </td>
+                            </tr>
+                             <tr>
+                                <td
+                                    style="background-color:#F0EFEF; color:#A79559; border:none; padding:15px;"
+                                >Loan Reason
+                                </td>
+                                <td style="background-color:#F0EFEF; padding:15px;">
+                                    <t t-if="o.loan_reason" t-esc="o.loan_reason" />
+                                </td>
+                                <td
+                                    style="background-color:#F0EFEF; color:#A79559; padding:15px;"
+                                >
+                                    acknowledgment of acceptance of the monthly installment exceeding 25% of the total salary
+                                </td>
+                                <td
+                                    style="background-color:#F0EFEF; border:none; padding:15px;"
+                                >
+                                    <t t-if="o.any_amount">
+                                        <input
+                                            type="checkbox"
+                                            id="any_amount"
+                                            name="any_amount"
+                                            checked="checked"
+                                        />
+                                    </t>
+                                    <t t-else="">
+                                        <input
+                                            type="checkbox"
+                                            id="any_amount"
+                                            name="any_amount"
+                                        />
+                                    </t>
+
+                                </td>
+                            </tr>
+                        </table>
+                        <br />
+                        <table
+                            t-if="o.loan_line_ids"
+                            class="table table-sm table-bordered"
+                            width="100%"
+                            style="font-size:16px; border:none;"
+                        >
+                            <tr>
+                                <td
+                                    colspan="4"
+                                    width="40%"
+                                    style="background-color:#282D61; color:#FFFFFF; font-weight:bold; border:none;"
+                                >Installments Details
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                >Installments Number</td>
+                                <td
+                                    style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                >Period</td>
+                                <td
+                                    style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                >Settlement date</td>
+                                <td
+                                    style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                >State</td>
+                            </tr>
+                             <t t-foreach="o.loan_line_ids" t-as="line">
+                                 <tr>
+                                      <td
+                                        style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                    >
+                                        <t t-esc="line.amount" />
+                                    </td>
+                                      <td
+                                        style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                    >
+                                        <t t-esc="line.name" />
+                                    </td>
+                                      <td
+                                        style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                    >
+                                        <t t-esc="line.date" />
+                                    </td>
+                                     <td
+                                        style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                    >
+                                        <span t-field="line.state" />
+                                    </td>
+                                 </tr>
+                             </t>
+                        </table>
+                        <br />
+                        <table
+                            t-if="o.history_early_payment_ids"
+                            class="table table-sm table-bordered"
+                            width="100%"
+                            style="font-size:16px; border:none;"
+                        >
+                            <tr>
+                                <td
+                                    colspan="6"
+                                    width="40%"
+                                    style="background-color:#282D61; color:#FFFFFF; font-weight:bold; border:none;"
+                                >History Changes For Early Payment
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                >Action</td>
+                                <td
+                                    style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                >Change Date</td>
+                                <td
+                                    style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                >User</td>
+                                <td
+                                    style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                >Installments Paid Number</td>
+                                <td
+                                    style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                >Date From</td>
+                                <td
+                                    style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                >Reason</td>
+                            </tr>
+                             <t t-foreach="o.history_early_payment_ids" t-as="line">
+                                 <tr>
+                                      <td
+                                        style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                    >
+                                        <span t-field="line.action" />
+                                    </td>
+                                      <td
+                                        style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                    >
+                                        <t t-esc="line.date" />
+                                    </td>
+                                      <td
+                                        style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                    >
+                                        <t t-esc="line.create_uid.name" />
+                                    </td>
+                                     <td
+                                        style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                    >
+                                        <t t-esc="line.installment_number_paid" />
+                                    </td>
+                                      <td
+                                        style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                    >
+                                        <t t-esc="line.date_from" />
+                                    </td>
+                                      <td
+                                        style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                    >
+                                        <t t-esc="line.reason" />
+                                    </td>
+                                 </tr>
+                             </t>
+                        </table>
+                        <br />
+                        <table
+                            t-if="o.history_postpone_payment_ids"
+                            class="table table-sm table-bordered"
+                            width="100%"
+                            style="font-size:16px; border:none;"
+                        >
+                            <tr>
+                                <td
+                                    colspan="6"
+                                    width="40%"
+                                    style="background-color:#282D61; color:#FFFFFF; font-weight:bold; border:none;"
+                                >History Changes For Postpone Payment
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                >Action</td>
+                                <td
+                                    style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                >Change Date</td>
+                                <td
+                                    style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                >User</td>
+                                <td
+                                    style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                >Postpone Months Number</td>
+                                <td
+                                    style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                >Postpone Period</td>
+                                <td
+                                    style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                >Reason</td>
+                            </tr>
+                             <t t-foreach="o.history_postpone_payment_ids" t-as="line">
+                                 <tr>
+                                      <td
+                                        style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                    >
+                                        <span t-field="line.action" />
+                                    </td>
+                                      <td
+                                        style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                    >
+                                        <t t-esc="line.date" />
+                                    </td>
+                                      <td
+                                        style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                    >
+                                        <t t-esc="line.create_uid.name" />
+                                    </td>
+                                     <td
+                                        style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                    >
+                                        <t t-esc="line.number_months_to_postpone" />
+                                    </td>
+                                      <td
+                                        style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                    >
+                                        <t t-esc="line.period_id.name" />
+                                    </td>
+                                      <td
+                                        style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                    >
+                                        <t t-esc="line.reason" />
+                                    </td>
+                                 </tr>
+                             </t>
+                        </table>
+                        <br />
+                        <t t-set="approvals" t-value="o.sudo().get_approvals()" />
+                        <table
+                            class="table table-sm table-bordered"
+                            width="100%"
+                            style="font-size:16px; border:none;"
+                        >
+                            <tr>
+                                <td
+                                    colspan="4"
+                                    width="40%"
+                                    style="background-color:#282D61; color:#FFFFFF; font-weight:bold; border:none;"
+                                >Stages Of Request Approval
+                                </td>
+                            </tr>
+                            <t t-foreach="approvals" t-as="approval">
+                                <tr>
+                                    <td
+                                        style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                    >
+                                        <t t-esc="approval.get('stage', false)" />
+                                    </td>
+                                    <td style="background-color:#F0EFEF;">
+                                        <t t-esc="approval.get('date', False)" />
+                                    </td>
+                                    <td
+                                        style="background-color:#F0EFEF; border-right:none;"
+                                    >
+                                        <t
+                                            t-esc="approval.get('approver_name', false)"
+                                        />
+                                    </td>
+                                    <td style="background-color:#F0EFEF;">
+                                        <img
+                                            t-if="approval.get('signature', false)"
+                                            t-att-src="image_data_uri(approval.get('signature', false))"
+                                            width="150px"
+                                            height="50px"
+                                        />
+                                    </td>
+                                </tr>
+                            </t>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

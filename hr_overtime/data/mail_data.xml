@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+
+    <!-- Mail Activity Type-->
+
+    <record id="mail_hr_overtime_mandate_approval" model="mail.activity.type">
+        <field name="name">Overtime mandate is ready to be approved</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="res_model_id" ref="hr_overtime.model_hr_overtime_mandate" />
+        <field name="category">validation</field>
+    </record>
+
+    <record id="mail_hr_overtime_approval" model="mail.activity.type">
+        <field name="name">Overtime is ready to be approved</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="res_model_id" ref="hr_overtime.model_hr_overtime" />
+        <field name="category">validation</field>
+    </record>
+
+
+        <!-- Mail Activities Type feedback -->
+
+    <record id="mail_hr_overtime_mandate_feedback" model="mail.activity.type">
+        <field name="name">Overtime mandate is done</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="res_model_id" ref="hr_overtime.model_hr_overtime_mandate" />
+        <field name="category">feedback</field>
+    </record>
+
+      <record id="mail_hr_overtime_feedback" model="mail.activity.type">
+        <field name="name">Overtime is done</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="res_model_id" ref="hr_overtime.model_hr_overtime" />
+        <field name="category">feedback</field>
+    </record>
+
+     <!-- Mail Message Subtype-->
+
+    <record id="mt_hr_overtime_mandate_approved" model="mail.message.subtype">
+        <field name="name">Approved</field>
+        <field name="res_model">hr.overtime.mandate</field>
+        <field name="description">Overtime mandate is approved</field>
+    </record>
+
+    <record id="mt_hr_overtime_mandate_refused" model="mail.message.subtype">
+        <field name="name">Refused</field>
+        <field name="res_model">hr.overtime.mandate</field>
+        <field name="description">Overtime mandate is refused</field>
+    </record>
+
+     <record id="mt_hr_overtime_approved" model="mail.message.subtype">
+        <field name="name">Approved</field>
+        <field name="res_model">hr.overtime</field>
+        <field name="description">Overtime is approved</field>
+    </record>
+
+    <record id="mt_hr_overtime_refused" model="mail.message.subtype">
+        <field name="name">Refused</field>
+        <field name="res_model">hr.overtime</field>
+        <field name="description">Overtime is refused</field>
+    </record>
+
+    <!-- Set to draft activities -->
+
+    <record id="mail_hr_overtime_set_to_draft" model="mail.activity.type">
+        <field name="name">Edit request</field>
+        <field name="icon">fa-sun-o</field>
+         <field name="category">validation</field>
+        <field name="res_model_id" ref="hr_overtime.model_hr_overtime" />
+    </record>
+
+
+</odoo>

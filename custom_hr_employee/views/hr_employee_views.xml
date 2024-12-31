@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_employee_form_inherit" model="ir.ui.view">
+        <field name="name">hr.employee.form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr_base.view_employee_form_inherit" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='labour_office_no']" position="after">
+                <field name="employee_grade" required="1"/>
+                <field name="saudi_job_category" attrs="{'invisible':[('is_saudian','=',False)]}" />
+                <field name="non_saudi_job_category" attrs="{'invisible':[('is_saudian','=',True)]}" />
+                <field name="employee_level" />
+                <field name="employee_contract_type" />
+                <field name="employee_vacation_type" />
+            </xpath>
+            <xpath expr="//field[@name='identification_id']" position="after">
+                <field name="sponser_num" attrs="{'invisible':[('is_saudian','=',True)], required':[('is_saudian','=',False)]}"/>
+                <field name="unified_identification_number"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

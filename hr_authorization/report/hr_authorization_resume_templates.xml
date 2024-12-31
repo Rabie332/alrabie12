@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+<template id="report_hr_authorization_resume">
+         <t t-call="web.html_container">
+             <t t-call="web.external_layout">
+            <t t-foreach="docs" t-as="o">
+                    <div class="page">
+                        <div class="oe_structure" />
+
+
+                        <br />
+                        <br />
+
+                        <div class="col-xs-12 text-center">
+                            <h3 style="color:#395870;">
+                                <strong>
+                                    Resume Authorizations
+                                </strong>
+                                <br />
+                                <br />
+                            </h3>
+                        </div>
+
+                        <div class="col-xs-12 text-center">
+                            <strong>Period:</strong>
+                            <span t-esc="o.date_from" />
+                            -
+                            <span t-esc="o.date_to" />
+                            <br />
+                            <br />
+                        </div>
+
+                        <t t-set="hour_numbers" t-value="0.0" />
+                        <table class="table table-bordered">
+                            <!-- head table -->
+                            <thead>
+                                <tr>
+                                    <th width="5%">Authorization Order Number</th>
+                                    <th width="5%">Job ID</th>
+                                    <th width="12%">Employee</th>
+                                    <th width="10%">Department</th>
+                                    <th width="10%">Date</th>
+                                    <th width="10%">From Hour</th>
+                                    <th width="10%">To Hour</th>
+                                    <th width="10%">Type</th>
+                                    <th width="5%">Hours Number</th>
+                                    <th width="7%">Description</th>
+                                    <th width="5%">Stage</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                 <t t-foreach="hr_authorizations" t-as="authorization">
+                                    <tr>
+                                        <td>
+                                            <span t-esc="authorization.name" />
+                                        </td>
+                                        <td>
+                                            <t t-if="authorization.employee_id.number">
+                                            <span t-field="authorization.employee_id.number" /></t>
+                                            <t t-else="">
+                                                <span style="margin-left:8px">-</span>
+                                            </t>
+                                        </td>
+                                        <td>
+                                            <span t-field="authorization.employee_id.name" />
+                                        </td>
+                                        <td>
+                                            <span t-field="authorization.employee_id.department_id.name" />
+                                        </td>
+                                        <td>
+                                            <span t-field="authorization.date" t-options="{'format': 'yyyy-MM-dd'}" />
+                                        </td>
+                                        <td>
+                                            <span
+                                                t-esc="authorization.hour_start"
+                                                t-options="{'widget': 'float_time'}"
+                                            />
+                                        </td>
+                                        <td>
+                                            <span
+                                                t-esc="authorization.hour_stop"
+                                                t-options="{'widget': 'float_time'}"
+                                            />
+                                        </td>
+                                        <td>
+                                            <span t-field="authorization.request_type_id.name" />
+                                        </td>
+                                        <td>
+                                            <span t-esc="authorization.duration" t-options="{'widget': 'float_time'}" />
+                                            <t t-set="hour_numbers" t-value="hour_numbers + authorization.duration" />
+                                        </td>
+                                        <td>
+                                            <span t-field="authorization.description" />
+                                        </td>
+                                        <td>
+                                            <span t-field="authorization.stage_id.name" />
+                                        </td>
+                                    </tr>
+                                </t>
+                                <tr>
+                                    <td colspan="8">
+                                        <strong>Total</strong>
+                                    </td>
+                                    <td class="text-left">
+                                        <span t-esc="hour_numbers" t-options="{'widget': 'float_time'}" />
+                                    </td>
+
+
+                                    <td />
+                                    <td />
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            </t>
+        </t>
+         </t>
+</template>
+</odoo>

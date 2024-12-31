@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+,,,,,,,
+access_hr_training_employe,hr_training_employee,model_hr_training,base.group_user,1,1,1,0
+access_hr_training_allowance_employe,hr_training_allowance_employee,model_hr_training_allowance,base.group_user,1,1,1,0
+access_hr_training_setting_employe,hr_training_setting_employee,model_hr_training_setting,base.group_user,1,1,1,0
+access_travel_days_employe,travel_days_employee,model_training_travel_days,base.group_user,1,1,1,0
+access_hr_employee_training_stock_employe,hr_employee_training_stock_employee,model_hr_employee_training_stock,base.group_user,1,1,1,0
+access_hr_training_center,hr_training_center,model_hr_training_center,base.group_user,1,1,1,0

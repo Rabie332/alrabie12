@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Overtime  Settings -->
+
+    <record id="hr_overtime_setting_view_form" model="ir.ui.view">
+        <field name="name">hr.overtime.setting.view.form</field>
+        <field name="model">hr.overtime.setting</field>
+        <field name="arch" type="xml">
+            <form create='0' delete='0' duplicate='0'>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="type" invisible="1" />
+                            <field name="hour_number_mandate" attrs="{'invisible': [('type', '!=', 'mandate')]}" />
+                            <field name="min_hour_day" attrs="{'invisible': [('type', '!=', 'overtime')]}" />
+                            <field name="max_hour_day" attrs="{'invisible': [('type', '!=', 'overtime')]}" />
+                            <field name="max_hour_month" attrs="{'invisible': [('type', '!=', 'overtime')]}" />
+                        </group>
+                        <group>
+                            <field name="min_hour_mandate" attrs="{'invisible': [('type', '!=', 'mandate')]}" />
+                            <field name="max_hour_month" attrs="{'invisible': [('type', '!=', 'mandate')]}" />
+                            <field name="min_hour_weekend" attrs="{'invisible': [('type', '!=', 'overtime')]}" />
+                            <field name="max_hour_weekend" attrs="{'invisible': [('type', '!=', 'overtime')]}" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action Server -->
+    <record id="hr_overtime_mandate_setting_action" model="ir.actions.server">
+        <field name="sequence" eval="30" />
+        <field name="state">code</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_hr_overtime_setting" />
+        <field name="code">action=model.action_overtime_mandate_setting()</field>
+        <field name="name">Overtime mandate setting</field>
+    </record>
+
+
+    <menuitem
+        id="hr_overtime_mandate_setting_sub_menu"
+        name="Overtime mandate setting"
+        sequence="30"
+        parent="hr_overtime_mandate_setting_menu"
+        action="hr_overtime_mandate_setting_action"
+        groups="hr_overtime.group_hr_overtime_mandate_user"
+    />
+
+
+
+    <!-- Action Server -->
+
+
+    <record id="hr_overtime_setting_action" model="ir.actions.server">
+        <field name="sequence" eval="30" />
+        <field name="state">code</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_hr_overtime_setting" />
+        <field name="code">action=model.action_overtime_setting()</field>
+        <field name="name">Overtime Setting</field>
+    </record>
+
+    <menuitem
+        id="hr_overtime_setting_sub_menu"
+        name="Overtime Setting"
+        sequence="30"
+        parent="hr_overtime_setting_menu"
+        action="hr_overtime_setting_action"
+        groups="hr_overtime.group_hr_overtime_user"
+    />
+
+
+</odoo>

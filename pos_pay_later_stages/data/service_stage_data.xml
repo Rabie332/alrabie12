@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <record model="service.stage" id="stage_new">
+        <field name="name">New</field>
+        <field name="sequence">1</field>
+    </record>
+    <record model="service.stage" id="stage_progress">
+        <field name="name">progress</field>
+        <field name="sequence">2</field>
+    </record>
+    <record model="service.stage" id="stage_done">
+        <field name="name">Done</field>
+        <field name="sequence">3</field>
+        <field name="fold">True</field>
+    </record>
+</odoo>

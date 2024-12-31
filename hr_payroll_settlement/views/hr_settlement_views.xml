@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Settlement View Search -->
+
+    <record id="hr_settlement_view_search" model="ir.ui.view">
+        <field name="name">hr.settlement.view.search</field>
+        <field name="model">hr.settlement</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="employee_id" />
+                <field name="date" />
+                <field name="type" />
+                <filter
+                    string="Archived"
+                    name="inactive"
+                    domain="[('active', '=', False)]"
+                />
+                <group string="Grouped by">
+                    <filter
+                        name="employee_id"
+                        string="Employee"
+                        context="{'group_by': 'employee_id'}"
+                    />
+                    <filter name="date" string="Date" context="{'group_by': 'date'}" />
+                    <filter name="type" string="Type" context="{'group_by': 'type'}" />
+                    <filter
+                        name="company"
+                        string="Company"
+                        context="{'group_by': 'company_id'}"
+                    />
+                    <filter
+                        name="period"
+                        string="Period"
+                        context="{'group_by': 'period_id'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Settlement Tree View -->
+
+    <record id="hr_settlement_view_tree" model="ir.ui.view">
+        <field name="name">hr.settlement.view.tree</field>
+        <field name="model">hr.settlement</field>
+        <field name="arch" type="xml">
+            <tree
+                decoration-info="state == 'draft'"
+                decoration-success="state == 'done'"
+                decoration-danger="state == 'cancel'"
+            >
+                <field name="name" string="Settlement Number" />
+                <field name="employee_id" string="Employee" />
+                <field name="type" />
+                <field name="period_id" />
+                <field name="date" string="Settlement Date" />
+                <field name="amount" />
+                <field name="stage_id" />
+                <field name="state" invisible="1" />
+                <field name="company_id" groups="base.group_multi_company" />
+            </tree>
+        </field>
+    </record>
+
+    <!--  Settlement Form View -->
+
+    <record id="hr_settlement_view_form" model="ir.ui.view">
+        <field name="name">hr.settlement.view.form</field>
+        <field name="model">hr.settlement</field>
+        <field name="mode">primary</field>
+        <field name="priority">100</field>
+        <field name="inherit_id" ref="request.request_view_form" />
+        <field name="arch" type="xml">
+            <button name="action_refuse" position="attributes">
+                <attribute name="name">%(request_refuse.action_refuse_wizard)d
+                </attribute>
+                <attribute
+                    name="context"
+                >{'action_name': 'action_refuse','field_name': 'refuse_reason'}
+                </attribute>
+                <attribute name="type">action</attribute>
+                <attribute name="confirm">Are you sure you want to do this?</attribute>
+            </button>
+            <button name="action_accept" position="after">
+                <button
+                    name="%(hr_payroll_settlement.hr_payroll_settlement_report_action)d"
+                    string="Print Settlement Report"
+                    type="action"
+                    class="btn-primary"
+                    states="done"
+                />
+            </button>
+            <group name="principal" position="before">
+                <widget
+                    name="web_ribbon"
+                    title="Archived"
+                    bg_color="bg-danger"
+                    attrs="{'invisible': [('active', '=', True)]}"
+                />
+
+            </group>
+            <sheet position="inside">
+                <group>
+                    <group>
+                        <field name="name" string="Settlement Number" />
+                        <field
+                            name="employee_id"
+                            string="Employee"
+                            options="{'no_create': True, 'no_open':True}"
+                            required="1"
+                        />
+
+                       <field
+                            name="company_id"
+                            readonly="1"
+                            force_save="1"
+                            options="{'no_create': True}"
+                            groups="base.group_multi_company"
+                        />
+                        <field
+                            name="date"
+                            string="Settlement Date"
+                            attrs="{'readonly':[('state','!=','draft')]}"
+                        />
+                        <field name="active" invisible="1" />
+                        <field
+                            name="period_id"
+                            options="{'no_create': True, 'no_open':True}"
+                        />
+
+                    </group>
+                    <group>
+                        <field name="request_type_id" invisible="1" />
+                        <field name="type" />
+                        <field name="compute_method" />
+                        <field
+                            name="days"
+                            attrs="{'invisible':[('compute_method','=','amount')], 'required': [('compute_method','!=','amount')]}"
+                        />
+                        <field
+                            name="amount_addition"
+                            attrs="{'invisible':['|', ('compute_method','!=', 'amount'), ('type', '!=', 'addition')], 'required': [('compute_method','=', 'amount'), ('type', '=', 'addition')]}"
+                        />
+                        <field
+                            name="amount_deduction"
+                            attrs="{'invisible':['|', ('compute_method','!=', 'amount'),('type', '!=', 'deduction')], 'required': [('compute_method','=', 'amount'), ('type', '=', 'deduction')]}"
+                        />
+                        <field name="amount" force_save="1" />
+                    </group>
+                </group>
+                <group>
+                    <field name="notes" placeholder="Notes ..." />
+                    <field
+                        name="refuse_reason"
+                        force_save="1"
+                        attrs="{'invisible':[('state','!=', 'cancel')]}"
+                    />
+                </group>
+                <group position="replace" />
+
+
+            </sheet>
+        </field>
+    </record>
+
+    <!--  Settlement Kanban View -->
+
+    <record id="hr_settlement_view_kanban" model="ir.ui.view">
+        <field name="name">hr.settlement.view.kanban</field>
+        <field name="model">hr.settlement</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="request.request_view_kanban" />
+        <field name="arch" type="xml">
+            <div name="card_body" position="inside">
+                <br />
+                <span name="date" t-if="record.date.raw_value">Date:
+                    <field name="date" />
+                    <br />
+                </span>
+                <span name="period" t-if="record.period_id.raw_value">Period:
+                    <field name="period_id" />
+                    <br />
+                </span>
+                <span name="request_type_id" t-if="record.type.raw_value">Type :
+                    <field name="type" />
+                    <br />
+                </span>
+                <span name="employee_id" t-if="record.employee_id.raw_value">Employee :
+                    <field name="employee_id" />
+                    <br />
+                </span>
+            </div>
+        </field>
+    </record>
+
+
+    <record id="hr_settlement_action" model="ir.actions.act_window">
+        <field name="name">Settlements</field>
+        <field name="res_model">hr.settlement</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="hr_payroll_settlement_menu"
+        name="Settlements"
+        action="hr_settlement_action"
+        parent="hr_settlement_menu_root"
+    />
+
+    <!-- Stages -->
+
+    <record id="hr_settlement_stage_action" model="ir.actions.act_window">
+        <field name="name">Stages</field>
+        <field name="res_model">request.stage</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="domain">[('res_model_id.model', '=', 'hr.settlement')]</field>
+        <field name="context">{'default_res_model':'hr.settlement'}</field>
+    </record>
+
+    <menuitem
+        id="hr_settlement_stage_menu"
+        action="hr_settlement_stage_action"
+        name="Settlement Stages"
+        groups="request.group_stages_manager"
+        parent="hr_settlement_menu_root"
+    />
+</odoo>

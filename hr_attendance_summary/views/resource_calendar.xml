@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Form View Inherit -->
+
+    <record id="resource_calendar_form_inherit_hr_attendance_summary" model="ir.ui.view">
+        <field name="name">resource.calendar.view.form.inherit</field>
+        <field name="model">resource.calendar</field>
+        <field name="inherit_id" ref="resource.resource_calendar_form" />
+        <field name="arch" type="xml">
+             <field name="tz" position="after">
+                 <field name="late" widget="float_time" />
+                 <field name="early_exit" widget="float_time" />
+             </field>
+        </field>
+     </record>
+
+
+    <menuitem
+        id="resource_calendar_menu_attendance"
+        action="resource.action_resource_calendar_form"
+        parent="hr_attendance.menu_hr_attendance_settings"
+        sequence="1"
+    />
+</odoo>

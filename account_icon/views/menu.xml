@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <menuitem
+        name="Invoicing"
+        id="account.menu_finance"
+        groups="account.group_account_user,account.group_account_manager,account.group_account_invoice"
+        web_icon="account_icon,static/description/icon.png"
+        sequence="40"
+    />
+
+</odoo>

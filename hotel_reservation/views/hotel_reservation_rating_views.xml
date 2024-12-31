@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="hotel_reservation_rating_view_form" model="ir.ui.view">
+        <field name="name">hotel.reservation.rating.view.form</field>
+        <field name="model">hotel.reservation.rating</field>
+        <field name="arch" type="xml">
+            <form create="0" edit="0">
+                <sheet>
+                    <group>
+                       <div class="o_row">
+                        <field name="satisfaction_percentage" widget="percentpie" nolabel="1" />
+                        <button
+                                name="button_rating_details"
+                                string="Details"
+                                type="object"
+                                class="oe_highlight oe_inline"
+                                icon="fa-info-circle"
+                                style="margin:30px;margin-right: 80px;margin-left: 85px;"
+                                context="{'default_rating': 'satisfaction'}"
+                            />
+                        </div>
+                         <div class="o_row">
+                        <field name="dissatisfaction_percentage" widget="percentpie" nolabel="1" />
+                         <button
+                                name="button_rating_details"
+                                string="Details"
+                                type="object"
+                                class="oe_highlight oe_inline"
+                                icon="fa-info-circle"
+                                style="margin:30px;margin-right: 65px;margin-left: 1px;"
+                                context="{'default_rating': 'not_satisfied'}"
+                            />
+                        </div>
+                         <div class="o_row">
+                        <field name="highly_dissatisfaction_percentage" widget="percentpie" nolabel="1" />
+                         <button
+                                name="button_rating_details"
+                                string="Details"
+                                type="object"
+                                class="oe_highlight oe_inline"
+                                icon="fa-info-circle"
+                                style="margin:30px;"
+                                context="{'default_rating': 'dissatisfied'}"
+                            />
+                        </div>
+                        <div class="o_row">
+                            <field name="no_rating_percentage" widget="percentpie" nolabel="1" />
+                             <button
+                                name="button_rating_details"
+                                string="Details"
+                                type="object"
+                                class="oe_highlight oe_inline"
+                                icon="fa-info-circle"
+                                style="margin:30px;"
+                                context="{'default_rating': 'no_rating'}"
+                            />
+                        </div>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="hotel_reservation_rating_action" model="ir.actions.server">
+        <field name="sequence" eval="5" />
+        <field name="state">code</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_hotel_reservation_rating" />
+        <field name="code">action=env['hotel.reservation'].button_reservation_rating()</field>
+        <field name="name">Ratings</field>
+    </record>
+
+    <menuitem
+        id="hotel_reservation_rating_menu"
+        name="Ratings"
+        parent="menu_action_hotel_reservation_tree_all"
+        sequence="18"
+        action="hotel_reservation_rating_action"
+    />
+
+    <!-- Rating Rating Tree View -->
+
+    <record id="hotel_reservation_rating_view_tree" model="ir.ui.view">
+        <field name="name">rating.rating.view.tree</field>
+        <field name="model">rating.rating</field>
+        <field name="arch" type="xml">
+            <tree create="0" edit="0">
+                <field name="create_date" />
+                <field name="res_name" string="Reservation NO" />
+                <field name="partner_id" />
+                <field
+                    name="rating_text"
+                    decoration-danger="rating_text == 'highly_dissatisfied'"
+                    decoration-warning="rating_text == 'not_satisfied'"
+                    decoration-success="rating_text == 'satisfied'"
+                />
+                <field name="feedback" />
+            </tree>
+        </field>
+    </record>
+
+</odoo>

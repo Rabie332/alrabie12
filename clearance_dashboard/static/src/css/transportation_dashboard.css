@@ -1,0 +1,4 @@
+.dashboard_content>div {
+  display: flex;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+     <record id="room_status_sla_view_tree" model="ir.ui.view">
+        <field name="name">room.status.sla.view.tree</field>
+        <field name="model">room.status.sla</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="active" invisible="1" />
+                <field name="status" />
+                <field name="unity_number" />
+                <field name="unity" />
+                <field name="message" />
+                <field name="user_ids" options="{'no_create': True, 'no_open': True}" widget="many2many_tags" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="room_status_sla_action" model="ir.actions.act_window">
+        <field name="name">SLA Rooms Status</field>
+        <field name="res_model">room.status.sla</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+     <menuitem
+        name="SLA Rooms Status"
+        id="room_status_sla_menu"
+        action="room_status_sla_action"
+        parent="hotel_room_management_menu_root"
+        sequence="20"
+    />
+
+</odoo>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="report_reservation_tax">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <div class="header" />
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="row">
+                            <div class="col-3">
+                            </div>
+                            <div class="col-6 text-center">
+                                <center>
+                                    <h1 style="color:#507298;padding-top:20px;">
+                                        <strong style="font-size: 25px;">
+                                             Taxes and Fees Report
+                                        </strong>
+                                    </h1>
+                                </center>
+                            </div>
+                            <div class="col-3">
+                                <img
+                                    style="max-height:120px !important;"
+                                    width="80%"
+                                    t-att-src="'data:image/png;base64,%s' % to_text(user.company_id.sudo().logo)"
+                                />
+
+                            </div>
+                        </div>
+                        <div class="oe_structure" />
+                         <div class="col-12 text-center">
+                              <strong>Period :</strong>
+                            <span t-field="o.date_from" />
+                            -
+                            <span t-field="o.date_to" />
+                            <br />
+                            <br />
+
+                        </div>
+                        <br />
+                        <table class="table nowrap table-bordered">
+                            <tr style="background-color: #00b7ff;
+  color: #fff;">
+                                <td><strong>Number</strong></td>
+                                <td><strong>Name</strong></td>
+                                <td><strong>Room number</strong></td>
+                                <td><strong>Invoice Date</strong></td>
+                                <td><strong>Date From</strong></td>
+                                <td><strong>Date To</strong></td>
+                                <td><strong>Days Number</strong></td>
+                                <td><strong>Type</strong></td>
+                                 <td><strong>Amount Total</strong></td>
+                                 <td><strong>Amount without Tax/Fees</strong></td>
+                                 <td><strong>Tax/Fees</strong></td>
+                            </tr>
+                            <t t-foreach="get_lines(o)" t-as="line">
+
+                                <tr>
+
+                                    <td><span t-esc="line.move_id.name" /></td>
+                                    <td><span t-esc="line.move_id.partner_id.name" /></td>
+                                    <td><span
+                                            t-esc="', '.join(room.name for room in line.move_id.reservation_id.reservation_line.mapped('room_id'))"
+                                        /></td>
+                                    <td><span t-esc="line.move_id.invoice_date" /></td>
+                                    <td><span
+                                            t-field="line.move_id.reservation_id.checkin"
+                                            t-options="{'format': 'yyyy-MM-dd'}"
+                                        /></td>
+                                    <td><span
+                                            t-field="line.move_id.reservation_id.checkout"
+                                            t-options="{'format': 'yyyy-MM-dd'}"
+                                        /></td>
+                                    <td><span
+                                            t-if="line.move_id.reservation_id.rent == 'daily'"
+                                            t-field="line.move_id.reservation_id.duration"
+                                        />
+                                        <span
+                                            t-if="line.move_id.reservation_id.rent == 'monthly'"
+                                            t-field="line.move_id.reservation_id.duration*30"
+                                        />
+                                        <span t-if="line.move_id.reservation_id.rent == 'hourly'">1</span></td>
+                                    <td><span>Invoice</span></td>
+                                    <t t-foreach="line.move_id.amount_by_group" t-as="tax_line">
+                                        <t t-if="tax_line[6] == o.tax_group_id.id">
+                                        <td><span t-esc="'%.2f' % float(tax_line[1]+tax_line[2])" /></td>
+                                        <td><span t-esc="'%.2f' % float(tax_line[2])" /></td>
+                                        <td><span t-esc="'%.2f' % float(tax_line[1])" /></td>
+                                        </t>
+                                    </t>
+
+
+                                </tr>
+
+                            </t>
+
+                        </table>
+
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

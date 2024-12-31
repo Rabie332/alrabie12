@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Documents-->
+    <record id="ir_attachment_search" model="ir.ui.view">
+        <field name="name">ir.attachment.search</field>
+        <field name="model">ir.attachment</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <filter
+                    name="my_documents"
+                    string="My Documents"
+                    domain="[('create_uid','=',uid)]"
+                />
+                <field name="type_id" />
+                <filter
+                    name="day"
+                    string="Today"
+                    domain="[('create_date', '&gt;=', context_today().strftime('%Y-%m-%d 00:00:00'))]"
+                />
+                <filter
+                    name="week"
+                    string="Last week"
+                    domain="[
+                            '&amp;',
+                            ('create_date', '&gt;=', (context_today()-relativedelta(days=7)).strftime('%Y-%m-%d')),
+                            ('create_date', '&lt;=', context_today().strftime('%Y-%m-%d')),
+                        ]"
+                />
+                <filter
+                    name="month"
+                    string="Last month"
+                    domain="[
+                            '&amp;',
+                            ('create_date', '&gt;=', (context_today()-relativedelta(months=1)).strftime('%Y-%m-%d')),
+                            ('create_date', '&lt;=', context_today().strftime('%Y-%m-%d')),
+                        ]"
+                />
+                <filter
+                    name="year"
+                    string="Last year"
+                    domain="[
+                            '&amp;',
+                            ('create_date', '&gt;=', (context_today()-relativedelta(years=1)).strftime('%Y-%m-%d')),
+                            ('create_date', '&lt;=', context_today().strftime('%Y-%m-%d')),
+                         ]"
+                />
+                <group expand="0" string="Group by...">
+                    <filter
+                        name="folder_id"
+                        string="Folder"
+                        context="{'group_by':'folder_id'}"
+                    />
+                    <filter
+                        name="user"
+                        string="User"
+                        context="{'group_by':'create_uid'}"
+                    />
+                    <filter
+                        name="type_id"
+                        string="Type"
+                        context="{'group_by':'type_id'}"
+                    />
+                </group>
+                <searchpanel>
+                    <field name="folder_id" icon="fa-folder" />
+                </searchpanel>
+            </search>
+        </field>
+    </record>
+    <record id="ir_attachment_graph" model="ir.ui.view">
+        <field name="name">ir.attachment.graph</field>
+        <field name="model">ir.attachment</field>
+        <field name="arch" type="xml">
+            <graph>
+                <field name="type_id" type="row" />
+            </graph>
+        </field>
+    </record>
+    <record id="ir_attachment_pivot" model="ir.ui.view">
+        <field name="name">ir.attachment.pivot</field>
+        <field name="model">ir.attachment</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="type_id" type="row" />
+            </pivot>
+        </field>
+    </record>
+    <record id="ir_attachment_tree" model="ir.ui.view">
+        <field name="name">ir.attachment.tree</field>
+        <field name="model">ir.attachment</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="type_id" />
+                <field name="folder_id" />
+                <field name="secrecy_id" />
+                <field name="create_date" />
+                <field name="create_uid" />
+                <field name="company_id" groups="base.group_multi_company" />
+            </tree>
+        </field>
+    </record>
+    <record id="ir_attachment_form" model="ir.ui.view">
+        <field name="name">ir.attachment.form</field>
+        <field name="model">ir.attachment</field>
+        <field name="priority" eval="-1" />
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button
+                        name="action_send"
+                        string="Send with email"
+                        type="object"
+                        class="btn-primary"
+                        groups="dms.group_dms_send_mail"
+                    />
+                    <button
+                        name="%(dms.ir_attachment_share_action)d"
+                        string="Share with an employee"
+                        type="action"
+                        class="btn-primary"
+                    />
+                    <button
+                        name="%(dms.ir_attachment_version_upload_action)d"
+                        string="Upload a new version"
+                        type="action"
+                        class="btn-primary"
+                    />
+                </header>
+                <field name="type" invisible="1" />
+                <sheet>
+                    <div class="row">
+                        <div class="col-8">
+                            <group>
+                                <group>
+                                    <field
+                                        name="datas"
+                                        string="File"
+                                        filename="name"
+                                        attrs="{'required': [('type', '=', 'binary')], 'readonly':[('id', '!=', False)]}"
+                                    />
+                                </group>
+                            </group>
+                            <group>
+                                <group>
+                                    <field
+                                        name="code"
+                                        attrs="{'invisible':[('id', '==', False)], 'readonly':[('id', '!=', False)]}"
+                                    />
+                                    <field name="name" />
+                                    <field name="res_name" invisible="1" />
+                                    <field name="type_id" />
+                                    <field
+                                        name="folder_id"
+                                        options="{'no_create':True}"
+                                    />
+                                </group>
+                                <group>
+                                    <field
+                                        name="create_date"
+                                        attrs="{'readonly':[('id', '!=', False)]}"
+                                    />
+                                    <field
+                                        name="create_uid"
+                                        attrs="{'readonly':[('id', '!=', False)]}"
+                                    />
+                                    <field
+                                        name="write_date"
+                                        attrs="{'readonly':[('id', '!=', False)]}"
+                                    />
+                                    <field name="secrecy_id" />
+                                    <field name="doc_expiry_date" help="اذا لم يتوفر تاريخ انتهاء يرجى ادخال تاريخ ادخال المرفق If you do not have an expiry date, please enter the date of origin" string='Attachment Expiration Date'/>
+                                    <field
+                                        name="company_id"
+                                        groups="base.group_multi_company"
+                                        options="{'no_create': True}"
+                                    />
+                                </group>
+                            </group>
+                            <group string="Version">
+                                <field name="version_ids" readonly="1" nolabel="1">
+                                    <tree>
+                                        <field name="version" />
+                                        <field name="create_date" />
+                                        <field name="create_uid" />
+                                        <button
+                                            name="download_attachment"
+                                            string="Download"
+                                            type="object"
+                                            icon="fa-cloud-download"
+                                            class="oe_inline"
+                                            style="color:#008000;"
+                                        />
+                                    </tree>
+                                </field>
+                            </group>
+                            <group>
+                                <field name="description" />
+                            </group>
+                        </div>
+                        <div class="col-4">
+                            <field name="extension" invisible="1" />
+                            <field
+                                name="datas_viewer"
+                                string="File preview"
+                                filename="name"
+                                widget="data_preview"
+                            />
+                        </div>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="ir_attachment_kanban" model="ir.ui.view">
+        <field name="name">ir.attachment.kanban</field>
+        <field name="model">ir.attachment</field>
+        <field name="priority" eval="-1" />
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile">
+                <field name="id" />
+                <field name="mimetype" />
+                <field name="type" />
+                <field name="store_fname" />
+                <field name="name" />
+                <field name="write_uid" />
+                <field name="create_uid" />
+                <field name="url" />
+                <field name="create_date" />
+                <templates>
+                    <t t-name="kanban-box">
+                        <div
+                            class="oe_kanban_global_area oe_kanban_global_click o_kanban_attachment"
+                        >
+                            <div class="row">
+                                <div class="offset-10">
+                                    <div
+                                        class="o_dropdown_kanban dropdown"
+                                        groups="base.group_user"
+                                    >
+                                        <a
+                                            role="button"
+                                            class="dropdown-toggle o-no-caret btn"
+                                            data-toggle="dropdown"
+                                            href="#"
+                                            aria-label="Dropdown menu"
+                                            title="Dropdown menu"
+                                        >
+                                            <span class="fa fa-ellipsis-v" />
+                                        </a>
+                                        <div class="dropdown-menu" role="menu">
+                                            <a
+                                                t-if="widget.deletable"
+                                                role="menuitem"
+                                                type="delete"
+                                                class="dropdown-item"
+                                            >Delete
+                                            </a>
+                                            <a
+                                                type="open"
+                                                role="menuitem"
+                                                class="dropdown-item"
+                                            >File details</a>
+                                            <a
+                                                name="%(dms.ir_attachment_version_upload_action)d"
+                                                type="action"
+                                                role="menuitem"
+                                                class="dropdown-item"
+                                            >Add a new version
+                                            </a>
+                                            <a
+                                                name="%(dms.ir_attachment_version_list_action)d"
+                                                type="action"
+                                                role="menuitem"
+                                                class="dropdown-item"
+                                            >Show copies
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o_kanban_image">
+                                <div class="o_kanban_image_wrapper">
+                                    <t
+                                        t-set="webimage"
+                                        t-value="new RegExp('image.*(gif|jpeg|jpg|png)').test(record.mimetype.value)"
+                                    />
+                                    <div
+                                        t-if="record.type.raw_value == 'url'"
+                                        class="o_url_image fa fa-link fa-3x text-muted"
+                                        aria-label="Image is a link"
+                                    />
+                                    <img
+                                        t-elif="webimage"
+                                        t-attf-src="/web/image/#{record.id.raw_value}"
+                                        width="100"
+                                        height="100"
+                                        alt="Document"
+                                        class="o_attachment_image"
+                                    />
+                                    <div
+                                        t-else="!webimage"
+                                        class="o_image o_image_thumbnail"
+                                        t-att-data-mimetype="record.mimetype.value"
+                                    />
+                                </div>
+                            </div>
+                            <div class="o_kanban_details">
+                                <div class="o_kanban_details_wrapper">
+                                    <div
+                                        t-att-title="record.name.raw_value"
+                                        class="o_kanban_record_title"
+                                    >
+                                        <field name="name" class="o_text_overflow" />
+                                    </div>
+                                    <div class="o_kanban_record_body">
+                                        <t t-if="record.type.raw_value == 'url'">
+                                            <span class="o_document_url">
+                                                <i class="fa fa-globe" /> Url
+                                                <field name="url" widget="url" />
+                                            </span>
+                                        </t>
+                                        <samp t-else="" class="text-muted" />
+                                    </div>
+                                    <div class="o_kanban_record_bottom">
+                                        <time class="oe_kanban_bottom_left">
+                                            <field name="create_date" widget="date" />
+                                        </time>
+                                        <div class="oe_kanban_bottom_right">
+                                            <img
+                                                t-att-src="kanban_image('res.users', 'image_128', record.create_uid.raw_value)"
+                                                t-att-data-member_id="record.create_uid.raw_value"
+                                                t-att-alt="record.create_uid.raw_value"
+                                                class="oe_kanban_avatar"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+    <record id="ir_attachment_action" model="ir.actions.act_window">
+        <field name="name">Documents</field>
+        <field name="res_model">ir.attachment</field>
+        <!-- Don't show attachment that have been created by OdooBot and Public user -->
+        <field
+            name="domain"
+        >[('res_model', 'not in', ['ir.ui.view', 'Country', 'ir.ui.menu', 'ir.module.module']),
+                              ('res_field', '=',False),('res_id', '=',False),
+                              ('create_uid', 'not in', [1, 4]), ('extension', 'not in', [".scss", ".ics", ".a"])]
+        </field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="search_view_id" ref="ir_attachment_search" />
+        <field
+            name="view_ids"
+            eval="[(5, 0, 0),
+                              (0, 0, {'view_mode': 'kanban', 'view_id': ref('ir_attachment_kanban')}),
+                              (0, 0, {'view_mode': 'form', 'view_id': ref('ir_attachment_form')}),
+                              (0, 0, {'view_mode': 'tree', 'view_id': ref('ir_attachment_tree')})]"
+        />
+    </record>
+    <menuitem
+        id="ir_attachment_menu"
+        name="Documents"
+        sequence="4"
+        parent="dms_root_menu"
+        action="ir_attachment_action"
+    />
+    <record id="ir_attachment_version_form" model="ir.ui.view">
+        <field name="name">ir.attachment.version.form</field>
+        <field name="model">ir.attachment.version</field>
+        <field name="priority" eval="-1" />
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="row">
+                        <div class="col-8">
+                            <group>
+                                <group>
+                                    <field name="version" string="Version" />
+                                    <field name="document_id" />
+                                </group>
+                            </group>
+                        </div>
+                        <div class="col-4">
+                            <field name="extension" invisible="1" />
+                            <field
+                                name="datas"
+                                string="File preview"
+                                filename="name"
+                                widget="data_preview"
+                            />
+                        </div>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

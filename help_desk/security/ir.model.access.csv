@@ -1,0 +1,3 @@
+id,name,model_id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+tickets_user,Base User,it.tickets,base.group_user,1,1,1,1
+tickets_stages_user,Base User,it.ticket.stage,base.group_user,1,1,1,1

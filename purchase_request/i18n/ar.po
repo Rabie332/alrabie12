@@ -1,0 +1,885 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* purchase_request
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-06 16:41+0000\n"
+"PO-Revision-Date: 2022-06-06 16:41+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: purchase_request
+#: model:ir.model,name:purchase_request.model_request_type
+msgid " Request Type"
+msgstr "النوع"
+
+#. module: purchase_request
+#: model:ir.actions.report,print_report_name:purchase_request.purchase_request_report
+msgid "'Purchase Request - %s' % (object.name)"
+msgstr "'طلب شراء - %s' % (object.name)"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_view_kanban
+msgid "<b>Estimated budget:</b>"
+msgstr "<b>الميزانية المطلوبة : </b>"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_view_kanban
+msgid "<b>Number:</b>"
+msgstr "<b>رقم الطلب : </b>"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_view_kanban
+msgid ""
+"<br/>\n"
+"                <b>Date:</b>"
+msgstr ""
+"<br/> \n"
+" <b> تاريخ الطلب: </b>"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_view_kanban
+msgid ""
+"<br/>\n"
+"                <b>Tender type:</b>"
+msgstr ""
+"<br/>\n"
+"                <b>الية الطرح : </b>"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_view_kanban
+msgid "<i class=\"fa fa-comments\" role=\"img\" aria-label=\"Unread Messages\"/>"
+msgstr "<i class=\"fa fa-comments\" role=\"img\" aria-label=\"رسائل غير مقروءة\"/>"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_template
+msgid ""
+"<span>طلب شراء</span>\n"
+"                                    -"
+msgstr ""
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_template
+msgid "<strong>التاريخ</strong>"
+msgstr ""
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_template
+msgid "<strong>التوقيع</strong>"
+msgstr ""
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_template
+msgid "<strong>الكمية</strong>"
+msgstr ""
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_template
+msgid "<strong>المنتج</strong>"
+msgstr ""
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_template
+msgid "<strong>الميزانية المطلوبة (بالريال)</strong>"
+msgstr ""
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_template
+msgid "<strong>الوصف</strong>"
+msgstr ""
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_template
+msgid "<strong>الوظيفة</strong>"
+msgstr ""
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_template
+msgid "<strong>تاريخ الطلب</strong>"
+msgstr ""
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_template
+msgid "<strong>رقم الطلب</strong>"
+msgstr ""
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_template
+msgid "<strong>صاحب الطلب</strong>"
+msgstr ""
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_template
+msgid "<strong>طريقة الشراء</strong>"
+msgstr ""
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_template
+msgid "<strong>مبررات ألية الطرح</strong>"
+msgstr ""
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_template
+msgid "<strong>مراحل الموافقة على طلب</strong>"
+msgstr ""
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_template
+msgid "<strong>معلومات الطلب</strong>"
+msgstr ""
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_template
+msgid "<strong>ملاحظات</strong>"
+msgstr ""
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__account_id
+msgid "Account"
+msgstr "البند"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__account_description
+msgid "Account description"
+msgstr "بند"
+
+#. module: purchase_request
+#: model:ir.model,name:purchase_request.model_purchase_request_account
+msgid "Accounts"
+msgstr "البنود"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "نشاط استثناء الديكور"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: purchase_request
+#: model:res.groups,name:purchase_request.group_adjust_purchase_budget
+msgid "Adjust purchase budgets"
+msgstr "تعديل ميزانية الشراء"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__employee_id
+msgid "Applicant"
+msgstr "الموظف"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_view_form
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_view_search
+msgid "Archived"
+msgstr "مؤرشف"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__attachment_ids
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_view_form
+msgid "Attachments"
+msgstr "المرفقات"
+
+#. module: purchase_request
+#: model:request.type,name:purchase_request.purchase_request_type_bidding
+msgid "Bidding"
+msgstr "نظام المنافسة المحدودة من 10 آلاف إلى 100 ألف"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_view_form
+msgid "Budget"
+msgstr "الميزانية"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_request_type__budget_max
+msgid "Budget Maximum"
+msgstr "الحد الأعلى للميزانية"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_request_type__budget_min
+msgid "Budget Minimum"
+msgstr "الحد الأدنى للميزانية"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_view_calendar
+msgid "Calendar View"
+msgstr "عرض التقويم"
+
+#. module: purchase_request
+#: model:ir.model,name:purchase_request.model_purchase_request_category
+msgid "Categories"
+msgstr "الأبواب"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__category_id
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_account__category_id
+msgid "Category"
+msgstr "الباب"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_request_type__is_committee_required
+msgid "Committee Required"
+msgstr "اللجنة اجبارية"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__company_id
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__company_id
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_view_search
+msgid "Company"
+msgstr "الشركة"
+
+#. module: purchase_request
+#: model:request.type,name:purchase_request.purchase_request_type_competition
+msgid "Competition"
+msgstr "نظام المنافسة العامة أعلى من 100 ألف"
+
+#. module: purchase_request
+#: model:request.stage,name:purchase_request.purchase_request_stage_confirm
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_request_line__product_uom_category_id
+msgid ""
+"Conversion between Units of Measure can only occur if they belong to the "
+"same category. The conversion will be made based on the ratios."
+msgstr ""
+"لا يمكن التحويل بين وحدات القياس إلا إذا كانت تنتمي لنفس الفئة. سيتم إجراء "
+"التحويل بناءً على النسب."
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__create_uid
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_account__create_uid
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_category__create_uid
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__create_date
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_account__create_date
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_category__create_date
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__department_id
+msgid "Department"
+msgstr "الإدارة"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__description
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__description
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_view_form
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_requests_template
+msgid "Description"
+msgstr "موضوع الطلب"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_view_form
+msgid "Description ..."
+msgstr "موضوع الطلب ..."
+
+#. module: purchase_request
+#: model:request.stage,name:purchase_request.purchase_request_stage_dm
+msgid "Direct manager"
+msgstr "المدير المباشر"
+
+#. module: purchase_request
+#: model:request.type,name:purchase_request.purchase_request_type_direct_purchase
+msgid "Direct purchase"
+msgstr "شراء نثري أقل من 5 آلاف"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__display_button_accept
+msgid "Display Button Accept"
+msgstr "عرض زر قبول"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__display_button_refuse
+msgid "Display Button Refuse"
+msgstr "عرض زر رفض"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__display_button_send
+msgid "Display Button Send"
+msgstr "عرض زر إرسال"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_report_wizard__display_name
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__display_name
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_account__display_name
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_category__display_name
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__display_name
+#: model:ir.model.fields,field_description:purchase_request.field_report_purchase_request_purchase_requests_template__display_name
+#: model:ir.model.fields,field_description:purchase_request.field_request_type__display_name
+msgid "Display Name"
+msgstr "الإسم"
+
+#. module: purchase_request
+#: model:request.stage,name:purchase_request.account_payment_request_stage_done
+msgid "Done"
+msgstr "أعتمد"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_view_form
+msgid "Employee Information"
+msgstr "بيانات الموظف"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__estimated_budget
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_requests_template
+msgid "Estimated budget"
+msgstr " الميزانية المطلوبة (بالريال)"
+
+#. module: purchase_request
+#: code:addons/purchase_request/models/purchase_request.py:0
+#, python-format
+msgid "Estimated budget should be between %s and %s"
+msgstr "يجب أن تكون الميزانية المطلوبة بين %s و %s  "
+
+#. module: purchase_request
+#: code:addons/purchase_request/models/purchase_request.py:0
+#, python-format
+msgid "Estimated budget should be greater than 0"
+msgstr "الميزانية المطلوبة يجب أن تكون أكبر من 0"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__duration_expected
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_requests_template
+msgid "Expected duration (days)"
+msgstr "المدة المتوقعة للتنفيذ (يوم)"
+
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_view_search
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_report_wizard__id
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__id
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_account__id
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_category__id
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__id
+#: model:ir.model.fields,field_description:purchase_request.field_report_purchase_request_purchase_requests_template__id
+#: model:ir.model.fields,field_description:purchase_request.field_request_type__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_request__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "أيقونة للإشارة إلى نشاط استثنائي"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_request__message_needaction
+#: model:ir.model.fields,help:purchase_request.field_purchase_request__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_request__message_has_error
+#: model:ir.model.fields,help:purchase_request.field_purchase_request__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "ذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_view_form
+msgid ""
+"If the purchase by obligation,  the name of the company and all "
+"justifications must be mentioned"
+msgstr ""
+"في حال الشراء بالتلزيم فإنّهُ يجب ذكر اسم الشركة وكافة المبررات لاختيارها."
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__job_id
+msgid "Job"
+msgstr "الوظيفة"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__kanban_color
+msgid "Kanban Color Index"
+msgstr "لون كانبان"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_report_wizard____last_update
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request____last_update
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_account____last_update
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_category____last_update
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line____last_update
+#: model:ir.model.fields,field_description:purchase_request.field_report_purchase_request_purchase_requests_template____last_update
+#: model:ir.model.fields,field_description:purchase_request.field_request_type____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_report_wizard__write_uid
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__write_uid
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_account__write_uid
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_category__write_uid
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_report_wizard__write_date
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__write_date
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_account__write_date
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_category__write_date
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__manager_id
+msgid "Manager"
+msgstr "المدير"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_view_search
+msgid "My Purchase Requests"
+msgstr "طلباتي"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_account__name
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_category__name
+msgid "Name"
+msgstr "الإسم"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__notes
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_view_form
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__name
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_requests_template
+msgid "Number"
+msgstr "الرقم"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_request__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_request__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل مع خطأ في التسليم"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_request__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل غير المقروءة"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__product_id
+msgid "Product"
+msgstr "المنتج"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__product_uom_category_id
+msgid "Product Category"
+msgstr "الفئة"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__product_uom_id
+msgid "Product Unit of Measure"
+msgstr "وحدة القياس"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__line_ids
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_view_form
+msgid "Products"
+msgstr "المنتجات"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__purchase_request_id
+#: model:ir.ui.menu,name:purchase_request.purchase_request_menu_drive_actions
+msgid "Purchase"
+msgstr "المشتريات"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_view_form
+msgid "Purchase Order Line"
+msgstr "بند أمر الشراء"
+
+#. module: purchase_request
+#: model:ir.actions.act_window,name:purchase_request.purchase_request_action
+#: model:ir.model,name:purchase_request.model_purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_view_graph
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_view_pivot
+#: model:request.stage,name:purchase_request.purchase_request_stage_draft
+msgid "Purchase Request"
+msgstr "طلب الشراء"
+
+#. module: purchase_request
+#: model:ir.actions.act_window,name:purchase_request.purchase_request_account_action
+#: model:ir.ui.menu,name:purchase_request.purchase_request_account_menu
+msgid "Purchase Request Accounts"
+msgstr "البنود"
+
+#. module: purchase_request
+#: model:mail.activity.type,name:purchase_request.mail_purchase_request_approval
+msgid "Purchase Request Approval"
+msgstr "طلب موافقة على طلب الشراء"
+
+#. module: purchase_request
+#: model:mail.message.subtype,name:purchase_request.mt_purchase_request_approved
+msgid "Purchase Request Approved"
+msgstr "طلب شراء موافق عليه"
+
+#. module: purchase_request
+#: model:ir.actions.act_window,name:purchase_request.purchase_request_category_action
+#: model:ir.ui.menu,name:purchase_request.purchase_request_category_menu
+msgid "Purchase Request Categories"
+msgstr "الأبواب"
+
+#. module: purchase_request
+#: model:ir.model,name:purchase_request.model_purchase_request_line
+msgid "Purchase Request Line"
+msgstr ""
+
+#. module: purchase_request
+#: model:mail.message.subtype,description:purchase_request.mt_purchase_request_refused
+
+#: model:mail.message.subtype,name:purchase_request.mt_purchase_request_refused
+msgid "Purchase Request Refused"
+msgstr "طلب شراء مرفوض"
+
+#. module: purchase_request
+#: model:ir.actions.act_window,name:purchase_request.purchase_request_stage_action
+#: model:ir.ui.menu,name:purchase_request.purchase_request_stage_menu
+msgid "Purchase Request Stages"
+msgstr "مراحل طلبات الشراء"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_view_search
+msgid "Purchase Request Type"
+msgstr "نوع طلب الشراء"
+
+#. module: purchase_request
+#: model:ir.ui.menu,name:purchase_request.purchase_request_type_menu
+msgid "Purchase Request Types"
+msgstr "أنواع طلبات الشراء"
+
+#. module: purchase_request
+#: model:mail.message.subtype,description:purchase_request.mt_purchase_request_approved
+msgid "Purchase Request approved"
+msgstr "طلب شراء موافق عليه"
+
+#. module: purchase_request
+#: model:mail.activity.type,name:purchase_request.mail_purchase_request_feedback
+msgid "Purchase Request is Done"
+msgstr "طلب شراء معتمد"
+
+#. module: purchase_request
+#: model:mail.message.subtype,description:purchase_request.mt_purchase_request_refused
+msgid "Purchase Request refused"
+msgstr "طلب شراء مرفوض"
+
+#. module: purchase_request
+#: model:ir.actions.act_window,name:purchase_request.purchase_request_action_drive_actions
+#: model:ir.actions.act_window,name:purchase_request.purchase_request_action_my
+#: model:ir.actions.report,name:purchase_request.purchase_requests_report
+#: model:ir.ui.menu,name:purchase_request.purchase_request_menu
+#: model:ir.ui.menu,name:purchase_request.purchase_request_menu_drive_action
+#: model:ir.ui.menu,name:purchase_request.purchase_request_menu_my
+#: model:ir.ui.menu,name:purchase_request.purchase_request_menu_root
+msgid "Purchase Requests"
+msgstr "طلبات الشراء"
+
+#. module: purchase_request
+#: model:request.type,name:purchase_request.purchase_request_type_purchase_obligation
+msgid "Purchase by obligation"
+msgstr "شراء مباشر أعلى من 10 آلاف"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request_line__product_qty
+msgid "Quantity"
+msgstr "الكمية"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__reason
+msgid "Reason"
+msgstr "مبررات الية الطرح"
+
+#. module: purchase_request
+#: model:request.stage,name:purchase_request.account_payment_request_stage_refused
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__date
+msgid "Request date"
+msgstr "تاريخ الطلب"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__activity_user_id
+msgid "Responsible User"
+msgstr "المسؤول"
+
+#. module: purchase_request
+#: model:request.stage,name:purchase_request.purchase_request_stage_review
+msgid "Review"
+msgstr "مراجعة"
+
+#. module: purchase_request
+#: model:request.stage,name:purchase_request.purchase_request_stage_reviewed
+msgid "Reviewed"
+msgstr "تمت المراجعة"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__stage_id
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_view_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_requests_template
+msgid "Stage"
+msgstr "المرحلة"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_request__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "المخطط: الأنشطة المستقبلية."
+
+#. module: purchase_request
+#: code:addons/purchase_request/models/purchase_request.py:0
+#, python-format
+msgid "The quantity of the product"
+msgstr "  كمية المنتج  "
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_view_form
+msgid "Total Qty"
+msgstr "المجموع"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__request_type_id
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_requests_template
+msgid "Type"
+msgstr "النوع"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_request__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع نشاط الاستثناء في السجل."
+
+#. module: purchase_request
+#: model:ir.actions.act_window,name:purchase_request.purchase_request_type_action
+msgid "Types"
+msgstr "الأنواع"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__message_unread
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_view_kanban
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_request__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_request__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: purchase_request
+#: code:addons/purchase_request/models/purchase_request.py:0
+#, python-format
+msgid "You should choose products"
+msgstr "يجب إختيار منتجات"
+
+#. module: purchase_request
+#: code:addons/purchase_request/models/purchase_request.py:0
+#, python-format
+msgid "must be greater than zero"
+msgstr "  يجب أن تكون أكبر من صفر  "
+
+#. module: purchase_request
+#: model:ir.actions.report,name:purchase_request.purchase_request_report
+msgid "طلب شراء"
+msgstr ""
+
+#. module: purchase_request
+#: model:ir.actions.report,print_report_name:purchase_request.purchase_requests_report
+msgid "\"'Purchase Requests'\""
+msgstr "\"'طلبات الشراء'\""
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_requests_template
+msgid ""
+"<strong>\n"
+"                                                            Purchase Requests Report\n"
+"                                                        </strong>\n"
+"\n"
+"                                                        <br/>"
+msgstr ""
+"<strong>\n"
+"                                                            تقرير طلبات الشراء\n"
+"                                                        </strong>\n"
+"\n"
+"                                                        <br/>"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_requests_template
+msgid "<strong>Period</strong>"
+msgstr "<strong>الفترة</strong>"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_requests_template
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: purchase_request
+#: model:ir.model,name:purchase_request.model_report_purchase_request_purchase_requests_template
+msgid "Purchase Requests Report"
+msgstr "تقرير طلبات الشراء"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_report_wizard__date_from
+msgid "Date from"
+msgstr "تاريخ من"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_report_wizard__date_to
+msgid "Date to"
+msgstr "تاريخ إلى"
+
+#. module: purchase_request
+#: model:ir.actions.act_window,name:purchase_request.purchase_report_wizard_action
+#: model:ir.ui.menu,name:purchase_request.purchase_report_wizard_menu
+#: model:ir.model,name:purchase_request.model_purchase_report_wizard
+msgid "Purchase Report"
+msgstr "تقرير طلبات الشراء"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_report_wizard_form
+msgid "Print Purchase report"
+msgstr "طباعة تقرير طلبات الشراء"
+
+#. module: purchase_request
+#: model:ir.ui.menu,name:purchase_request.purchase_report_menu
+msgid "Reports"
+msgstr "التقارير"
+
+#. module: purchase_request
+#: code:addons/purchase_request/wizard/purchase_report_wizard.py:0
+#, python-format
+msgid "Date To must be greater than date from."
+msgstr "يجب أن يكون التاريخ من قبل التاريخ إلى."
+

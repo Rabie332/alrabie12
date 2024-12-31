@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="hr_resignation_type_action" model="ir.actions.act_window">
+        <field name="name">Resignation Types</field>
+        <field name="res_model">request.type</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="domain">[('res_model_id.model', '=', 'hr.resignation')]</field>
+        <field name="context">{'default_res_model':'hr.resignation'}</field>
+    </record>
+
+    <menuitem
+        id="hr_resignation_type_menu"
+        action="hr_resignation_type_action"
+        name="Resignation Types"
+        sequence="10"
+        parent="hr_resignation.hr_resignation_request_menu_root"
+    />
+
+</odoo>

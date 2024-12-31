@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Tree View -->
+
+    <record id="hr_attendance_summary_view_tree" model="ir.ui.view">
+        <field name="name">hr.attendance.summary.view.tree</field>
+        <field name="model">hr.attendance.summary</field>
+        <field name="arch" type="xml">
+            <tree create="0">
+                <field name="date" />
+            </tree>
+        </field>
+    </record>
+    <record id="hr_attendance_summary_view_tree_inherit_hr_attendance_summary" model="ir.ui.view">
+        <field name="name">hr.attendance.summary.view.tree.inherit</field>
+        <field name="model">hr.attendance.summary</field>
+        <field name="groups_id" eval="[(6, 0, [ref('hr_attendance_summary.group_manual_pointing') ])]" />
+        <field name="inherit_id" ref="hr_attendance_summary.hr_attendance_summary_view_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="attributes">
+                <attribute name="create">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Form View -->
+
+    <record id="hr_attendance_summary_view_form" model="ir.ui.view">
+        <field name="name">hr.attendance.summary.view.form</field>
+        <field name="model">hr.attendance.summary</field>
+        <field name="arch" type="xml">
+            <form create="0" edit="0">
+                <sheet>
+                    <group>
+                        <field name="date" />
+                    </group>
+                    <notebook>
+                        <page string="Summary of employee attendance">
+                            <field name="line_ids" context="{'default_date': date}">
+                                <tree create="0">
+                                    <field name="employee_id" options="{'no_create_edit': True}" />
+                                    <field name="check_in_date" />
+                                    <field name="check_out_date" />
+                                    <field
+                                        name="delay_hours_manuel"
+                                        widget="float_time"
+                                        groups="hr_attendance_summary.group_manual_pointing"
+                                    />
+                                    <field name="delay_hours" widget="float_time" />
+                                    <field
+                                        name="overtime_hours_manuel"
+                                        widget="float_time"
+                                        groups="hr_attendance_summary.group_manual_pointing"
+                                    />
+                                    <field name="overtime_hours" widget="float_time" />
+                                    <field name="early_exit_hours" widget="float_time" />
+                                    <field name="absence_hours" widget="float_time" />
+                                    <field
+                                        name="worked_hours_manuel"
+                                        widget="float_time"
+                                        groups="hr_attendance_summary.group_manual_pointing"
+                                    />
+                                    <field name="worked_hours" widget="float_time" />
+                                    <field name="presence_state" />
+                                    <field
+                                        name="company_id"
+                                        groups="base.group_multi_company"
+                                        options="{'no_create': True}"
+                                    />
+
+                                </tree>
+                                <form>
+                                    <group>
+                                    <group>
+                                        <field name="employee_id" />
+                                        <field name="presence_state" />
+                                    </group>
+                                    <group>
+                                        <field name="delay_hours" widget="float_time" />
+                                    <field name="overtime_hours" widget="float_time" />
+                                    <field name="early_exit_hours" widget="float_time" />
+                                    <field name="absence_hours" widget="float_time" />
+                                    <field name="worked_hours" widget="float_time" />
+                                     <field
+                                                name="company_id"
+                                                groups="base.group_multi_company"
+                                                options="{'no_create': True}"
+                                            />
+
+                                    </group>
+                                    </group>
+                                    <group>
+                                        <field name="attendance_ids" nolabel="1" />
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_attendance_summary_view_form_inherit_hr_attendance_summary" model="ir.ui.view">
+        <field name="name">hr.attendance.summary.view.form.inherit</field>
+        <field name="model">hr.attendance.summary</field>
+        <field name="groups_id" eval="[(6, 0, [ref('hr_attendance_summary.group_manual_pointing') ])]" />
+        <field name="inherit_id" ref="hr_attendance_summary.hr_attendance_summary_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="attributes">
+                <attribute name="create">1</attribute>
+                <attribute name="edit">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='line_ids']/tree" position="attributes">
+                <attribute name="create">1</attribute>
+                <attribute name="editable">bottom</attribute>
+            </xpath>
+            <field name="delay_hours" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <field name="overtime_hours" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <field name="worked_hours" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+        </field>
+    </record>
+
+
+    <record id="hr_attendance_summary_action" model="ir.actions.act_window">
+        <field name="name">Summary of attendances</field>
+        <field name="res_model">hr.attendance.summary</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="hr_attendance_summary_menu"
+        name="Summary of attendances"
+        parent="hr_attendance.menu_hr_attendance_manage_attendances"
+        action="hr_attendance_summary_action"
+        sequence="40"
+    />
+    <menuitem id="hr_attendance.menu_hr_attendance_my_attendances" active="False" />
+    <menuitem id="hr_attendance.menu_hr_attendance_kiosk_no_user_mode" active="False" />
+
+    <record id="hr_attendance.menu_hr_attendance_manage_attendances" model="ir.ui.menu">
+        <field name="name">Manage Attendances</field>
+    </record>
+    <record id="hr_attendance.menu_hr_attendance_root" model="ir.ui.menu">
+        <field name="name">Attendances And Departures</field>
+    </record>
+</odoo>

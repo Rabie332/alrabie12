@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- ====== Company Configuration ====== -->
+    <record id="hotel_reservation_inherit" model="ir.ui.view">
+        <field name="name">hotel.reservation.inherit</field>
+        <field name="model">hotel.reservation</field>
+        <field name="inherit_id" ref="hotel_reservation.view_hotel_reservation_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='company_id']" position="after">
+                <field name="reservation_branch_id" string="Reservation Branch" options="{'no_create': True, 'no_create_edit': True}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

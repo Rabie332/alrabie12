@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+
+    <record id="crossovered_budget_move_seq" forcecreate="1" model="ir.sequence">
+        <field name="name">Sequence of crossovered budget move</field>
+        <field name="code">crossovered.budget.move.seq</field>
+        <field eval="1" name="number_increment" />
+        <field name="padding">5</field>
+    </record>
+
+    <!-- Crossovered Budget Move activity -->
+
+    <record id="mail_crossovered_budget_move_to_review" model="mail.activity.type">
+        <field name="name">Crossovered Budget Move To Review</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="res_model_id" ref="account_budget_move.model_crossovered_budget_move" />
+    </record>
+    <record id="mail_crossovered_budget_move_to_confirm" model="mail.activity.type">
+        <field name="name">Crossovered Budget Move To Confirm</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="res_model_id" ref="account_budget_move.model_crossovered_budget_move" />
+    </record>
+
+    <record id="mail_crossovered_budget_move_confirm" model="mail.activity.type">
+        <field name="name">Crossovered Budget Move Confirm</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="res_model_id" ref="account_budget_move.model_crossovered_budget_move" />
+    </record>
+</odoo>

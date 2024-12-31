@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="attendance_summary_automation_hr_leave" model="base.automation">
+        <field name="name">Base Automation: update attendance summary when the status of leave is updated</field>
+        <field name="model_id" ref="hr_holidays.model_hr_leave" />
+        <field name="state">code</field>
+        <field name="code">
+            env['hr.attendance.summary.line'].update_summary_attendance(record)
+        </field>
+        <field name="trigger">on_write</field>
+        <field name="active" eval="True" />
+        <field name="filter_domain">[('state', 'in', ['done', 'cancel'])]</field>
+    </record>
+
+</odoo>

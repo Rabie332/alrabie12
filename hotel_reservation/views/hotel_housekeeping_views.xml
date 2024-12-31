@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+     <record id="hotel_housekeeping_view_form_inherited_reservation" model="ir.ui.view">
+            <field name="name">hotel.housekeeping.view.form.inherited.reservation</field>
+            <field name="model">hotel.housekeeping</field>
+            <field name="inherit_id" ref="hotel_housekeeping.view_hotel_housekeeping_form" />
+            <field name="arch" type="xml">
+                <field name="quality" position="before">
+                    <field name="reservation_id" attrs="{'invisible':[('reservation_id','=',False)]}" />
+                </field>
+            </field>
+        </record>
+</odoo>

@@ -1,0 +1,57 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* partner_credit_limit_clearance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-03 12:51+0000\n"
+"PO-Revision-Date: 2022-06-03 12:51+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: partner_credit_limit_clearance
+#: model:ir.model,name:partner_credit_limit_clearance.model_clearance_request
+msgid "Clearance Request"
+msgstr "طلب تخليص"
+
+#. module: partner_credit_limit_clearance
+#: model:ir.model.fields,field_description:partner_credit_limit_clearance.field_clearance_request__credit_insurance_amount
+msgid "Credit insurance amount"
+msgstr "الحد الائتماني"
+
+#. module: partner_credit_limit_clearance
+#: model:ir.model.fields,field_description:partner_credit_limit_clearance.field_clearance_request__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: partner_credit_limit_clearance
+#: model:ir.model.fields,field_description:partner_credit_limit_clearance.field_clearance_request__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: partner_credit_limit_clearance
+#: model:ir.model.fields,field_description:partner_credit_limit_clearance.field_clearance_request____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: partner_credit_limit_clearance
+#: model:ir.model.fields,field_description:partner_credit_limit_clearance.field_clearance_request__show_credit_limit
+msgid "Show Credit Limit"
+msgstr "إظهار الحد الائتماني"
+
+#. module: partner_credit_limit_clearance
+#: code:addons/partner_credit_limit_clearance/models/clearance_request.py:0
+#, python-format
+msgid "Total open invoices exceeds Credit limit"
+msgstr "إجمالي الفواتير المفتوحة تجاوز حد الائتمان"
+
+#. module: partner_credit_limit_clearance
+#: model:ir.model.fields,field_description:partner_credit_limit_clearance.field_clearance_request__total_open_invoices
+msgid "Total open invoices"
+msgstr "مجموع الفواتير المفتوحة"

@@ -1,0 +1,795 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* clearance_reports
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-24 09:03+0000\n"
+"PO-Revision-Date: 2022-06-24 09:03+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: clearance_reports
+#: model:ir.actions.report,print_report_name:clearance_reports.action_clearance_request_transport
+msgid "\"Today's Transaction Report - %s\" % object.name"
+msgstr ""
+
+#. module: clearance_reports
+#: model:mail.template,report_name:clearance_reports.mail_template_send_clearance_reports
+msgid "${(object.name or '').replace('/','_')}"
+msgstr ""
+
+#. module: clearance_reports
+#: model:mail.template,subject:clearance_reports.mail_template_send_clearance_reports
+msgid "${object.name}"
+msgstr ""
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_request_report
+#: model_terms:ir.ui.view,arch_db:clearance_reports.report_resume_clearance
+msgid ""
+"<strong style=\"font-size: 25px;\">\n"
+"                                            Clearance States Report\n"
+"                                        </strong>"
+msgstr ""
+"<strong style=\"font-size: 25px;\">\n"
+"                                            تقرير حالة المعاملات\n"
+"                                        </strong>"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_payments_invoices_template
+msgid ""
+"<strong style=\"font-size: 25px;\">\n"
+"                                            Costs and Incomes Report\n"
+"                                        </strong>"
+msgstr ""
+"<strong style=\"font-size: 25px;\">\n"
+"                                            تقرير التكاليف والمداخيل\n"
+"                                        </strong>"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.shipping_order_template
+msgid ""
+"<strong style=\"font-size: 25px;\">\n"
+"                                            Shipping Orders Report\n"
+"                                        </strong>"
+msgstr ""
+"<strong style=\"font-size: 25px;\">\n"
+"                                            تقرير أوامر النقل\n"
+"                                        </strong>"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_transport_order_template
+msgid ""
+"<strong style=\"font-size: 25px;\">\n"
+"                                            Transfer Order Transaction Report\n"
+"                                        </strong>"
+msgstr ""
+"<strong style=\"font-size: 25px;\">\n"
+"                                           تقرير معاملات أمر النقل\n"
+"                                        </strong>"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_payments_invoices_template
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_request_report
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_transport_order_template
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_warehouse_template
+#: model_terms:ir.ui.view,arch_db:clearance_reports.report_resume_clearance
+#: model_terms:ir.ui.view,arch_db:clearance_reports.shipping_order_template
+msgid "<strong>Period :</strong>"
+msgstr "<strong>الفترة :</strong>"
+
+#. module: clearance_reports
+#: model:mail.template,body_html:clearance_reports.user_template_today_transaction
+msgid ""
+"<tbody>\n"
+"                    <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                <tr>\n"
+"                                    <td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                                        <div>\n"
+"                                            Gentlemen of the Department of Transportation / Respected,\n"
+"                                            <br/>\n"
+"                                            <br/>\n"
+"                                            Attached to you the daily report of the new transactions in the transfer phase.\n"
+"                                            <br/>\n"
+"                                            You can find more details by entering the transportation system.\n"
+"                                            <br/>\n"
+"                                            Gratefully\n"
+"                                        </div>\n"
+"                                    </td>\n"
+"                                </tr>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                 </tbody>\n"
+"             "
+msgstr ""
+"<tbody>\n"
+"                    <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                <tr>\n"
+"                                    <td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                                        <div>\n"
+"السادة ادارة النقل  /المحترمين                                            <br/>\n"
+"                                            <br/>\n"
+"مرفقا لكم التقرير اليومي للمعاملات الجديدة في مرحلة النقل.                                            <br/>\n"
+"يمكنكم الاطلاع على تفاصيل أكثر عبر الدخول على نظام النقل.                                            <br/>\n"
+"مع الشكر                                        </div>\n"
+"                                    </td>\n"
+"                                </tr>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                 </tbody>\n"
+"             "
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_request_report
+msgid "Actual Delivery Date"
+msgstr "تاريخ توصيل البضاعة "
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_request_report
+msgid "B/L"
+msgstr "رقم بوليصة الشحن"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_request_report
+msgid "Bayan"
+msgstr "رقم البيان"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_transport_order_template
+msgid "Clearance"
+msgstr "التخليص"
+
+#. module: clearance_reports
+#: model:ir.model,name:clearance_reports.model_report_clearance_reports_clearance_payments_invoices_template
+msgid "Clearance Costs and Incomes Report Resume"
+msgstr "تقرير التكاليف والمداخيل"
+
+#. module: clearance_reports
+#: model:ir.actions.report,name:clearance_reports.action_clearance_request_report
+#: model:ir.model,name:clearance_reports.model_clearance_report
+msgid "Clearance Report"
+msgstr "تقارير التخليص"
+
+#. module: clearance_reports
+#: model:ir.model,name:clearance_reports.model_report_clearance_reports_report_resume_clearance
+msgid "Clearance Report Resume"
+msgstr "تقارير التخليص"
+
+#. module: clearance_reports
+#: model:ir.actions.act_window,name:clearance_reports.clearance_report_action
+#: model:ir.ui.menu,name:clearance_reports.clearance_report_menu
+msgid "Clearance Reports"
+msgstr "تقارير التخليص"
+
+#. module: clearance_reports
+#: model:ir.model,name:clearance_reports.model_report_clearance_clearance_request_xlsx
+msgid "Clearance Reports XLS"
+msgstr " EXCEL تقرير طلبات التخليص"
+
+#. module: clearance_reports
+#: model:ir.model,name:clearance_reports.model_clearance_request
+#: model_terms:ir.ui.view,arch_db:clearance_reports.shipping_order_template
+msgid "Clearance Request"
+msgstr "طلب تخليص"
+
+#. module: clearance_reports
+#: model:ir.model,name:clearance_reports.model_clearance_request_wizard
+msgid "Clearance Request Wizard"
+msgstr " تقرير طلبات التخليص"
+
+#. module: clearance_reports
+#: model:ir.actions.report,name:clearance_reports.clearance_states_report
+msgid "Clearance States Report"
+msgstr "تقرير حالة المعاملات"
+
+#. module: clearance_reports
+#: model:ir.actions.report,name:clearance_reports.clearance_request_report_xlsx
+msgid "Clearance request Excel"
+msgstr " EXCEL تقرير طلبات التخليص"
+
+#. module: clearance_reports
+#: model:ir.model,name:clearance_reports.model_report_clearance_reports_clearance_request_report
+msgid "Clearance request Report"
+msgstr " تقرير طلبات التخليص"
+
+#. module: clearance_reports
+#: model:ir.actions.server,name:clearance_reports.cron_clearance_request_ir_actions_server
+#: model:ir.cron,cron_name:clearance_reports.cron_clearance_request
+#: model:ir.cron,name:clearance_reports.cron_clearance_request
+#: model:ir.ui.menu,name:clearance_reports.clearance_request_wizard_menu
+msgid "Clearance request report"
+msgstr " تقرير طلبات التخليص"
+
+#. module: clearance_reports
+#: model:ir.actions.act_window,name:clearance_reports.clearance_request_wizard_action
+msgid "Clearance request wizard"
+msgstr " تقرير طلبات التخليص"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_request_transport_report
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_transport_order_template
+msgid "Container Number"
+msgstr "رقم الحاوية"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_payments_invoices_template
+msgid "Costs"
+msgstr "التكاليف"
+
+#. module: clearance_reports
+#: model:ir.actions.report,name:clearance_reports.clearance_payments_invoices_report
+msgid "Costs and Incomes Report"
+msgstr "تقرير التكاليف والمداخيل"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.shipping_order_template
+msgid "Create User"
+msgstr "منشئ الأمر"
+
+#. module: clearance_reports
+#: model:ir.model.fields,field_description:clearance_reports.field_clearance_report__create_uid
+#: model:ir.model.fields,field_description:clearance_reports.field_clearance_request_wizard__create_uid
+msgid "Created by"
+msgstr "انشأ من قبل"
+
+#. module: clearance_reports
+#: model:ir.model.fields,field_description:clearance_reports.field_clearance_report__create_date
+#: model:ir.model.fields,field_description:clearance_reports.field_clearance_request_wizard__create_date
+msgid "Created on"
+msgstr "أنشأت في"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.report_resume_clearance
+msgid "Customer Email"
+msgstr "البريد الإلكتروني"
+
+#. module: clearance_reports
+#: model:ir.model.fields,field_description:clearance_reports.field_clearance_request_wizard__partner_id
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_payments_invoices_template
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_warehouse_template
+#: model_terms:ir.ui.view,arch_db:clearance_reports.report_resume_clearance
+#: model_terms:ir.ui.view,arch_db:clearance_reports.shipping_order_template
+msgid "Customer Name"
+msgstr "اسم العميل"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.report_resume_clearance
+msgid "Customer Phone"
+msgstr "رقم الجوال"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_request_transport_report
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_transport_order_template
+msgid "Customer site"
+msgstr "موقع العميل"
+
+#. module: clearance_reports
+#: model:ir.model.fields.selection,name:clearance_reports.selection__clearance_request_wizard__state__customs_clearance
+#: model_terms:ir.ui.view,arch_db:clearance_reports.report_resume_clearance
+msgid "Customs Clearance"
+msgstr "التخليص الجمركي"
+
+#. module: clearance_reports
+#: model:ir.model.fields.selection,name:clearance_reports.selection__clearance_request_wizard__state__customs_statement
+#: model_terms:ir.ui.view,arch_db:clearance_reports.report_resume_clearance
+msgid "Customs Statement"
+msgstr "البيان الجمركي"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.shipping_order_template
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: clearance_reports
+#: model:ir.model.fields,field_description:clearance_reports.field_clearance_report__date_from
+#: model:ir.model.fields,field_description:clearance_reports.field_clearance_request_wizard__date_from
+msgid "Date from"
+msgstr "تاريخ من"
+
+#. module: clearance_reports
+#: model:ir.model.fields,field_description:clearance_reports.field_clearance_report__date_to
+#: model:ir.model.fields,field_description:clearance_reports.field_clearance_request_wizard__date_to
+msgid "Date to"
+msgstr "تاريخ إلى"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_request_transport_report
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_transport_order_template
+msgid "Deadline shipment receive"
+msgstr "أخر تاريخ لإخراج الشحنة"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_request_transport_report
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_transport_order_template
+msgid "Delivery date"
+msgstr "تاريخ التسليم"
+
+#. module: clearance_reports
+#: model:ir.model.fields,field_description:clearance_reports.field_clearance_report__display_name
+#: model:ir.model.fields,field_description:clearance_reports.field_clearance_request__display_name
+#: model:ir.model.fields,field_description:clearance_reports.field_clearance_request_wizard__display_name
+#: model:ir.model.fields,field_description:clearance_reports.field_report_clearance_clearance_request_xlsx__display_name
+#: model:ir.model.fields,field_description:clearance_reports.field_report_clearance_reports_clearance_payments_invoices_template__display_name
+#: model:ir.model.fields,field_description:clearance_reports.field_report_clearance_reports_clearance_request_report__display_name
+#: model:ir.model.fields,field_description:clearance_reports.field_report_clearance_reports_clearance_transport_order_template__display_name
+#: model:ir.model.fields,field_description:clearance_reports.field_report_clearance_reports_report_resume_clearance__display_name
+#: model:ir.model.fields,field_description:clearance_reports.field_report_clearance_reports_shipping_order_template__display_name
+#: model:ir.model.fields,field_description:clearance_reports.field_res_users__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: clearance_reports
+#: model:ir.model.fields.selection,name:clearance_reports.selection__clearance_request_wizard__state__draft
+#: model_terms:ir.ui.view,arch_db:clearance_reports.report_resume_clearance
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.shipping_order_template
+msgid "Goods"
+msgstr "البضاعة"
+
+#. module: clearance_reports
+#: model:ir.model.fields,field_description:clearance_reports.field_clearance_report__id
+#: model:ir.model.fields,field_description:clearance_reports.field_clearance_request__id
+#: model:ir.model.fields,field_description:clearance_reports.field_clearance_request_wizard__id
+#: model:ir.model.fields,field_description:clearance_reports.field_report_clearance_clearance_request_xlsx__id
+#: model:ir.model.fields,field_description:clearance_reports.field_report_clearance_reports_clearance_payments_invoices_template__id
+#: model:ir.model.fields,field_description:clearance_reports.field_report_clearance_reports_clearance_request_report__id
+#: model:ir.model.fields,field_description:clearance_reports.field_report_clearance_reports_clearance_transport_order_template__id
+#: model:ir.model.fields,field_description:clearance_reports.field_report_clearance_reports_report_resume_clearance__id
+#: model:ir.model.fields,field_description:clearance_reports.field_report_clearance_reports_shipping_order_template__id
+#: model:ir.model.fields,field_description:clearance_reports.field_res_users__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_payments_invoices_template
+msgid "Incomes"
+msgstr "المداخيل"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_request_report
+msgid "Job No"
+msgstr "رقم المعاملة"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_request_report
+msgid "Last Date for Return the Containers"
+msgstr "تاريخ ارسال الفاتورة للعميل "
+
+#. module: clearance_reports
+#: model:ir.model.fields,field_description:clearance_reports.field_clearance_report____last_update
+#: model:ir.model.fields,field_description:clearance_reports.field_clearance_request____last_update
+#: model:ir.model.fields,field_description:clearance_reports.field_clearance_request_wizard____last_update
+#: model:ir.model.fields,field_description:clearance_reports.field_report_clearance_clearance_request_xlsx____last_update
+#: model:ir.model.fields,field_description:clearance_reports.field_report_clearance_reports_clearance_payments_invoices_template____last_update
+#: model:ir.model.fields,field_description:clearance_reports.field_report_clearance_reports_clearance_request_report____last_update
+#: model:ir.model.fields,field_description:clearance_reports.field_report_clearance_reports_clearance_transport_order_template____last_update
+#: model:ir.model.fields,field_description:clearance_reports.field_report_clearance_reports_report_resume_clearance____last_update
+#: model:ir.model.fields,field_description:clearance_reports.field_report_clearance_reports_shipping_order_template____last_update
+#: model:ir.model.fields,field_description:clearance_reports.field_res_users____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: clearance_reports
+#: model:ir.model.fields,field_description:clearance_reports.field_clearance_report__write_uid
+#: model:ir.model.fields,field_description:clearance_reports.field_clearance_request_wizard__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسط"
+
+#. module: clearance_reports
+#: model:ir.model.fields,field_description:clearance_reports.field_clearance_report__write_date
+#: model:ir.model.fields,field_description:clearance_reports.field_clearance_request_wizard__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_request_transport_report
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_transport_order_template
+msgid "Last date for delivery of empty containers"
+msgstr "أخر تاريخ لتسليم الحاويات الفارغة"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.shipping_order_template
+msgid "Order Number"
+msgstr "رقم الأمر"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_transport_order_template
+msgid "Other Services"
+msgstr "خدمات أخرى"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_request_report
+msgid "PO"
+msgstr "المرجع"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_request_transport_report
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_transport_order_template
+msgid "Partner Name"
+msgstr "اسم العميل"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_request_wizard_form
+msgid "Print Clearance Report PDF"
+msgstr "PDF طباعة تقرير طلبات التخليص"
+
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_request_wizard_form
+msgid "Print Clearance Report XLS"
+msgstr " EXCEL طباعة تقرير طلبات التخليص"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_report_form
+msgid "Print Costs and Incomes Report"
+msgstr "تقرير التكاليف والمداخيل"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_report_form
+msgid "Print Shipping Orders Report"
+msgstr "تقرير اوامر النقل"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_report_form
+msgid "Print States Report"
+msgstr "تقرير حالة المعاملات"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_report_form
+msgid "Print Transport Order Report"
+msgstr "طباعة تقرير معاملات أمر النقل"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_request_report
+msgid "Pull Out Date"
+msgstr "تاريخ سحب البضاعة من الميناء"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_request_report
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_transport_order_template
+msgid "Quantity"
+msgstr "الكمية"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.report_resume_clearance
+msgid "Receipt and Delivery"
+msgstr "استلام و توصيل"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.report_resume_clearance
+msgid "Receipt method"
+msgstr "طريقة الاستلام"
+
+#. module: clearance_reports
+#: model:ir.ui.menu,name:clearance_reports.clearance_request_report_menu
+msgid "Reports"
+msgstr "التقارير"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_payments_invoices_template
+#: model_terms:ir.ui.view,arch_db:clearance_reports.report_resume_clearance
+msgid "Request Number"
+msgstr "رقم المعاملة"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_payments_invoices_template
+#: model_terms:ir.ui.view,arch_db:clearance_reports.report_resume_clearance
+msgid "Request date"
+msgstr "تاريخ المعاملة"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_payments_invoices_template
+#: model_terms:ir.ui.view,arch_db:clearance_reports.report_resume_clearance
+msgid "Request type"
+msgstr "نوع المعاملة"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_request_report
+msgid "Return the empty Continer"
+msgstr "تاريخ ارجاع الفارغ للوكيل الملاحي"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_transport_order_template
+msgid "Route"
+msgstr "المسار"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.shipping_order_template
+msgid "Routes"
+msgstr "المسارات"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_request_report
+msgid "S.N"
+msgstr "الرقم"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_request_report
+msgid "Schedule Delivery Date"
+msgstr "تاريخ التسليم"
+
+#. module: clearance_reports
+#: model:res.groups,name:clearance_reports.group_clearance_reports
+msgid "See Clearance Reports"
+msgstr "الإطلاع على تقارير التخليص"
+
+#. module: clearance_reports
+#: model:ir.actions.server,name:clearance_reports.cron_send_email_clearances_transport_ir_actions_server
+#: model:ir.cron,cron_name:clearance_reports.cron_send_email_clearances_transport
+#: model:ir.cron,name:clearance_reports.cron_send_email_clearances_transport
+msgid "Send Email To user About today transaction transport"
+msgstr "إرسال بريد إلكتروني إلى المستخدم حول نقل المعاملات اليوم"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_request_transport_report
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_transport_order_template
+msgid "Service"
+msgstr "خدمة"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_request_transport_report
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_transport_order_template
+msgid "Shipment Number"
+msgstr "عدد الشحنات"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_request_transport_report
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_transport_order_template
+msgid "Shipment Type"
+msgstr "نوع الشحنة"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_payments_invoices_template
+msgid "Shipping Orders Number"
+msgstr "عدد أوامر النقل"
+
+#. module: clearance_reports
+#: model:ir.actions.report,name:clearance_reports.shipping_order_report
+msgid "Shipping Orders Report"
+msgstr "تقرير أوامر النقل"
+
+#. module: clearance_reports
+#: model:ir.model,name:clearance_reports.model_report_clearance_reports_shipping_order_template
+msgid "Shipping Orders Report Resume"
+msgstr "تقرير اوامر النقل"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_payments_invoices_template
+#: model_terms:ir.ui.view,arch_db:clearance_reports.report_resume_clearance
+msgid "Shipping number"
+msgstr "رقم بوليصة الشحن"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.report_resume_clearance
+msgid "Shipping type"
+msgstr "نوع البوليصة"
+
+#. module: clearance_reports
+#: model:ir.model.fields,field_description:clearance_reports.field_clearance_request_wizard__state
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_payments_invoices_template
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_request_report
+msgid "State"
+msgstr "الحالة"
+
+#. module: clearance_reports
+#: model:ir.actions.report,name:clearance_reports.action_clearance_request_transport
+#: model:mail.template,subject:clearance_reports.user_template_today_transaction
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_request_transport_report
+msgid "Today's Transaction Report"
+msgstr "التقرير اليومي للمعاملات"
+
+#. module: clearance_reports
+#: model:mail.template,report_name:clearance_reports.user_template_today_transaction
+msgid "Today's Transaction Report ${(object.name or '')}"
+msgstr "التقرير اليومي للمعاملات ${(object.name or '')}"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_request_transport_report
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_transport_order_template
+msgid "Transaction Number"
+msgstr "رقم المعاملة"
+
+#. module: clearance_reports
+#: model:ir.actions.report,name:clearance_reports.clearance_transport_order_report
+msgid "Transfer Order Transaction Report"
+msgstr "تقرير معاملات أمر النقل"
+
+#. module: clearance_reports
+#: model:ir.model.fields.selection,name:clearance_reports.selection__clearance_request_wizard__state__transport
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_transport_order_template
+#: model_terms:ir.ui.view,arch_db:clearance_reports.report_resume_clearance
+msgid "Transport"
+msgstr "نقل"
+
+#. module: clearance_reports
+#: model:ir.model,name:clearance_reports.model_report_clearance_reports_clearance_transport_order_template
+msgid "Transport Order Report Resume"
+msgstr "ملخص تقرير معاملات أمر النقل"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.shipping_order_template
+msgid "Transport type"
+msgstr "نوع النقل"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_transport_order_template
+msgid "Truck type"
+msgstr "نوع الشاحنة"
+
+#. module: clearance_reports
+#: model:ir.model,name:clearance_reports.model_res_users
+msgid "Users"
+msgstr "المستخدمون"
+
+#. module: clearance_reports
+#: model:ir.model.fields.selection,name:clearance_reports.selection__clearance_request_wizard__state__canceled
+msgid "canceled"
+msgstr "ملغي"
+
+#. module: clearance_reports
+#: model:mail.template,body_html:clearance_reports.mail_template_send_clearance_reports
+msgid ""
+"<tbody>\n"
+"                    <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                <tr>\n"
+"                                    <td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                                        <div>\n"
+"                                            <br/>\n"
+"                                        Send Clearance request report\n"
+"                                            <br/>\n"
+"                                        </div>\n"
+"                                    </td>\n"
+"                                </tr>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                </tbody>\n"
+"            "
+msgstr ""
+"<tbody>\n"
+"                    <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                                <tr>\n"
+"                                    <td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                                        <div>\n"
+"                                            <br/>\n"
+"    تم إرسال تقرير طلبات التخليص\n"
+"                                            <br/>\n"
+"                                        </div>\n"
+"                                    </td>\n"
+"                                </tr>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                </tbody>\n"
+"            "
+
+#. module: clearance_reports
+#: model:ir.model.fields.selection,name:clearance_reports.selection__clearance_request_wizard__state__delivery
+msgid " Receipt and Delivery"
+msgstr "استلام و توصيل"
+
+#. module: clearance_reports
+#: model:ir.model.fields.selection,name:clearance_reports.selection__clearance_request_wizard__state__delivery_done
+#: model_terms:ir.ui.view,arch_db:clearance_reports.report_resume_clearance
+msgid "Delivery Done"
+msgstr "تم التسليم"
+
+#. module: clearance_reports
+#: model:ir.model.fields.selection,name:clearance_reports.selection__clearance_request_wizard__state__close
+#: model_terms:ir.ui.view,arch_db:clearance_reports.report_resume_clearance
+msgid "Close deal"
+msgstr "مقفل"
+
+#. module: clearance_reports
+#: model:ir.actions.report,name:clearance_reports.clearance_payments_invoices_report_preview
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_report_form
+msgid "Costs and Incomes Report Preview"
+msgstr "معاينة تقرير التكاليف والمداخيل"
+
+#. module: clearance_reports
+#: model:ir.actions.report,name:clearance_reports.shipping_order_report_preview
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_report_form
+msgid "Shipping Orders Report Preview"
+msgstr "معاينة تقرير اوامر النقل"
+
+#. module: clearance_reports
+#: model:ir.actions.report,name:clearance_reports.clearance_transport_order_report_preview
+msgid "Transfer Order Transaction Report Preview"
+msgstr "معاينة تقرير معاملات أمر النقل"
+
+#. module: clearance_reports
+#: model:ir.actions.report,name:clearance_reports.clearance_states_report_preview
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_report_form
+msgid "States Report Preview"
+msgstr "معاينة حالة المعاملات"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_report_form
+msgid "Transport Order Report Preview"
+msgstr "معاينة  تقرير معاملات أمر النقل"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_warehouse_template
+msgid ""
+"<strong style=\"font-size: 25px;\">\n"
+"                                           Warehouse Report\n"
+"                                        </strong>"
+msgstr ""
+"<strong style=\"font-size: 25px;\">\n"
+"                                            تقرير التخزين\n"
+"                                        </strong>"
+
+#. module: clearance_reports
+#: model:ir.model,name:clearance_reports.model_report_clearance_reports_clearance_warehouse_template
+msgid "Clearance Warehouse Report Resume"
+msgstr "تقرير التخزين"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_report_form
+msgid "Print Warehouse Report"
+msgstr "طباعة تقرير التخزين"
+
+#. module: clearance_reports
+#: model:ir.actions.report,name:clearance_reports.clearance_warehouse_report
+msgid "Warehouse Report"
+msgstr "تقرير التخزين"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_warehouse_template
+msgid "Container"
+msgstr "الحاوية"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_warehouse_template
+msgid "Duration"
+msgstr "المدة"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_warehouse_template
+msgid "Entry date"
+msgstr "تاريخ الدخول"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_warehouse_template
+msgid "Exit date"
+msgstr "تاريخ الخروج"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_warehouse_template
+msgid "Cost"
+msgstr "التكلفة"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_warehouse_template
+msgid "Issuing Invoice"
+msgstr "اصدار فاتورة "
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_warehouse_template
+msgid "Yes"
+msgstr "نعم"
+
+#. module: clearance_reports
+#: model_terms:ir.ui.view,arch_db:clearance_reports.clearance_warehouse_template
+msgid "No"
+msgstr "لا"

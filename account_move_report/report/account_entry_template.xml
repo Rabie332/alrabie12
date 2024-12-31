@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="account_entry_report_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+               <t t-call="web.internal_layout">
+                    <div class="page">
+                        <div class="oe_structure" />
+                        <br />
+                        <center>
+                            <div class="page" style="font-size: 14px;">
+                                <div class="col-xs-12 text-center">
+                                    <center>
+                                        <table style="lightsteelblue;padding-left:300px;padding-right:200px;">
+                                            <t>
+                                                <td>
+                                                    <h1 style="color:#395870;font-size: 24px;">
+
+                                                        <strong>
+                                                            Entries Report
+                                                        </strong>
+
+                                                        <br />
+                                                    </h1>
+                                                </td>
+                                            </t>
+                                        </table>
+                                    </center>
+
+                                </div>
+
+                                <div class="col-xs-12 text-center">
+                                    <h2 style="font-size: 24px;">
+                                        <strong>Period</strong>
+                                    </h2>
+                                    <span t-esc="o.date_from" />
+                                    -
+                                    <span t-esc="o.date_to" />
+                                    <br />
+                                    <br />
+                                </div>
+                                <br />
+                                <table class="table table-bordered">
+                                    <!-- head table -->
+                                    <thead>
+                                        <tr style='background-color:#275EA2'>
+                                            <th
+                                                style="color:#FFFFFF;padding-top:15px;padding-bottom:15px"
+                                                class="text-center"
+                                            >Entry number
+                                            </th>
+                                            <th
+                                                style="color:#FFFFFF;padding-top:15px;padding-bottom:15px"
+                                                class="text-center"
+                                            >Journal
+                                            </th>
+                                            <th
+                                                style="color:#FFFFFF;padding-top:15px;padding-bottom:15px"
+                                                class="text-center"
+                                            >Account Number
+                                            </th>
+                                              <th
+                                                style="color:#FFFFFF;padding-top:15px;padding-bottom:15px"
+                                                class="text-center"
+                                                width="5%"
+                                            >Debit
+                                            </th>
+                                            <th
+                                                style="color:#FFFFFF;padding-top:15px;padding-bottom:15px"
+                                                class="text-center"
+                                                width="5%"
+                                            >Credit
+                                            </th>
+                                             <th
+                                                style="color:#FFFFFF;padding-top:15px;padding-bottom:15px"
+                                                class="text-center"
+                                            >Entry Explanation
+                                            </th>
+                                            <th
+                                                style="color:#FFFFFF;padding-top:15px;padding-bottom:15px"
+                                                class="text-center"
+                                            >Entry creator
+                                            </th>
+                                            <th
+                                                style="color:#FFFFFF;padding-top:15px;padding-bottom:15px"
+                                                class="text-center"
+                                                width="10%"
+                                            >Date
+                                            </th>
+                                            <th
+                                                style="color:#FFFFFF;padding-top:15px;padding-bottom:15px"
+                                                class="text-center"
+                                            >Reviewer
+                                            </th>
+                                            <th
+                                                style="color:#FFFFFF;padding-top:15px;padding-bottom:15px"
+                                                class="text-center"
+                                                width="10%"
+                                            >Date
+                                            </th>
+                                            <th
+                                                style="color:#FFFFFF;padding-top:15px;padding-bottom:15px"
+                                                class="text-center"
+                                            >Confirm User
+                                            </th>
+                                            <th
+                                                style="color:#FFFFFF;padding-top:15px;padding-bottom:15px"
+                                                class="text-center"
+                                                width="10%"
+                                            >Date
+                                            </th>
+                                            <th
+                                                style="color:#FFFFFF;padding-top:15px;padding-bottom:15px"
+                                                class="text-center hours_worked"
+                                            >Approver
+                                            </th>
+                                            <th
+                                                style="color:#FFFFFF;padding-top:15px;padding-bottom:15px"
+                                                class="text-center"
+                                                width="10%"
+                                            >Date
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="get_lines(o)" t-as="line">
+
+                                            <t
+                                                t-set="reviewer_values"
+                                                t-value="line.get_approvals_details('state',('To Review', 'تحت المراجعة'))"
+                                            />
+
+                                 <t
+                                                t-set="confirm_values"
+                                                t-value="line.get_approvals_details('state',('Under Review', 'تمت المراجعة'))"
+                                            />
+
+                                 <t
+                                                t-set="approver_values"
+                                                t-value="line.get_approvals_details('state',('Confirm', 'مؤكد', 'تأكيد'))"
+                                            />
+                                            <tr class="text-center">
+                                                <td style="padding-top:15px;padding-bottom:15px">
+                                                    <span t-field="line.name" />
+                                                </td>
+                                                <td style="padding-top:15px;padding-bottom:15px">
+                                                    <span t-field="line.journal_id.name" />
+                                                </td>
+                                                <td style="padding-top:15px;padding-bottom:15px">
+                                                    <t t-foreach="line.line_ids.mapped('account_id')" t-as="account">
+                                                       <t t-esc="account.code" />
+                                                        <br />
+                                                    </t>
+                                                </td>
+                                                   <td style="padding-top:15px;padding-bottom:15px">
+                                    <t
+                                                        t-esc="sum(line.line_ids.mapped('debit'))"
+                                                        t-options="{'widget': 'monetary', 'display_currency': line.currency_id}"
+                                                    />
+                                                </td>
+                                                <td style="padding-top:15px;padding-bottom:15px">
+                                     <t
+                                                        t-esc="sum(line.line_ids.mapped('credit'))"
+                                                        t-options="{'widget': 'monetary', 'display_currency': line.currency_id}"
+                                                    />
+                                                </td>
+                                                  <td style="padding-top:15px;padding-bottom:15px">
+                                                    <span t-field="line.ref" />
+                                                </td>
+                                                <td style="padding-top:15px;padding-bottom:15px">
+                                                     <span t-field="line.create_uid" />
+                                                </td>
+                                                <td style="padding-top:15px;padding-bottom:15px">
+                                                   <span
+                                                        t-field="line.create_date"
+                                                        t-options="{'format': 'yyyy-MM-dd'}"
+                                                    />
+                                                </td>
+                                                <td style="padding-top:15px;padding-bottom:15px">
+                                                   <t t-if="reviewer_values">
+                                    <t t-esc="reviewer_values['approver']" />
+                                </t>
+                                                </td>
+                                                <td style="padding-top:15px;padding-bottom:15px">
+                                                      <t t-if="reviewer_values">
+                                    <t t-esc="reviewer_values['date']" />
+                                </t>
+                                                </td>
+                                                <td style="padding-top:15px;padding-bottom:15px">
+                                                   <t t-if="confirm_values">
+                                    <t t-esc="confirm_values['approver']" />
+                                </t>
+                                                </td>
+                                                <td style="padding-top:15px;padding-bottom:15px">
+                                                      <t t-if="confirm_values">
+                                    <t t-esc="confirm_values['date']" />
+                                </t>
+                                                </td>
+                                                <td style="padding-top:15px;padding-bottom:15px">
+                                                   <t t-if="approver_values">
+                                    <t t-esc="approver_values['approver']" />
+                                </t>
+                                                </td>
+                                                <td style="padding-top:15px;padding-bottom:15px">
+                                                      <t t-if="approver_values">
+                                    <t t-esc="approver_values['date']" />
+                                </t>
+                                                </td>
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </center>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

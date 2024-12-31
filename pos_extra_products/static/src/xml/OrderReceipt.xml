@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+    <t
+        t-name="OrderReceipt"
+        t-inherit="point_of_sale.OrderReceipt"
+        t-inherit-mode="extension"
+        owl="1"
+    >
+          <!--  simple line -->
+        <xpath
+            expr="//t[@t-if='isSimple(line)']/div[hasclass('responsive-price')]/t[@t-esc='line.product_name_wrapped[0]']"
+            position="replace"
+        >
+            <t t-if="env.pos.user.lang.indexOf('ar') > -1">
+              <span
+                    dir="rtl"
+                    t-att-style="line.is_extra ? 'padding-right: 11% !important;' : ''"
+                >
+                  <t t-esc="line.product_name_wrapped[0]" />
+                </span>
+            </t>
+            <t t-else="">
+              <span
+                    dir="ltr"
+                    t-att-style="line.is_extra ? 'padding-left: 11% !important;' : ''"
+                >
+                  <t t-esc="line.product_name_wrapped[0]" />
+                </span>
+            </t>
+        </xpath>
+        <!--  Complex line -->
+        <xpath
+            expr="//t[@t-else='']/div[@t-esc='line.product_name_wrapped[0]']"
+            position="replace"
+        >
+              <t t-if="env.pos.user.lang.indexOf('ar') > -1">
+              <div
+                    dir="rtl"
+                    t-att-style="line.is_extra ? 'padding-right: 11% !important;' : ''"
+                    t-esc="line.product_name_wrapped[0]"
+                />
+            </t>
+            <t t-else="">
+              <div
+                    dir="ltr"
+                    t-att-style="line.is_extra ? 'padding-left: 11% !important;' : ''"
+                    t-esc="line.product_name_wrapped[0]"
+                />
+            </t>
+        </xpath>
+
+        <xpath expr="//t[@t-foreach='receipt.orderlines']" position="before">
+            <t t-set="last_line" t-value="" />
+        </xpath>
+        <xpath expr="//t[@t-if='isSimple(line)']" position="before">
+            <t t-if="last_line and last_line.is_extra and !line.is_extra">
+                <hr />
+            </t>
+            <t t-if="last_line and !last_line.is_extra and !line.is_extra">
+                <hr />
+            </t>
+            <t t-set="last_line" t-value="line" />
+        </xpath>
+    </t>
+</templates>

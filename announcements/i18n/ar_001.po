@@ -1,0 +1,400 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* announcements
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 18:54+0000\n"
+"PO-Revision-Date: 2024-04-07 18:54+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: announcements
+#: model:ir.model,name:announcements.model_res_groups
+msgid "Access Groups"
+msgstr "مجموعات الوصول"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__message_needaction
+msgid "Action Needed"
+msgstr "مطلوب اتخاذ إجراء"
+
+#. module: announcements
+#: model:ir.model.fields.selection,name:announcements.selection__user_notify__state__active
+#: model_terms:ir.ui.view,arch_db:announcements.view_user_notify_form
+msgid "Active"
+msgstr "نشط"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "زخرفة استثناء النشاط"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: announcements
+#: model:ir.ui.menu,name:announcements.menu_user_announcements
+msgid "Announcements"
+msgstr "التعاميم"
+
+#. module: announcements
+#: model_terms:ir.ui.view,arch_db:announcements.view_user_notify_form
+msgid "Are you sure to cancel this ?"
+msgstr "هل أنت متأكد من إلغاء هذا؟"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: announcements
+#: model:ir.model.fields.selection,name:announcements.selection__user_notify__state__cancel
+#: model_terms:ir.ui.view,arch_db:announcements.view_user_notify_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__create_uid
+#: model:ir.model.fields,field_description:announcements.field_user_notify_line__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__create_date
+#: model:ir.model.fields,field_description:announcements.field_user_notify_line__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__datetime
+#: model:ir.model.fields,field_description:announcements.field_user_notify_line__datetime
+msgid "Datetime"
+msgstr "التاريخ والوقت"
+
+#. module: announcements
+#: model:ir.model,name:announcements.model_hr_department
+msgid "Department"
+msgstr "القسم"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__departments
+#: model:ir.model.fields.selection,name:announcements.selection__user_notify__recipient_type__department
+msgid "Departments"
+msgstr "الأقسام"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_hr_department__display_name
+#: model:ir.model.fields,field_description:announcements.field_res_groups__display_name
+#: model:ir.model.fields,field_description:announcements.field_res_users__display_name
+#: model:ir.model.fields,field_description:announcements.field_user_notify__display_name
+#: model:ir.model.fields,field_description:announcements.field_user_notify_line__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: announcements
+#: model:ir.model.fields.selection,name:announcements.selection__user_notify__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__dynamic
+msgid "Dynamic Post Message"
+msgstr "رسالة نشر ديناميكية"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: announcements
+#: model:ir.model.fields,help:announcements.field_user_notify__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__groups
+#: model:ir.model.fields.selection,name:announcements.selection__user_notify__recipient_type__group
+msgid "Groups"
+msgstr "المجموعات"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_hr_department__id
+#: model:ir.model.fields,field_description:announcements.field_res_groups__id
+#: model:ir.model.fields,field_description:announcements.field_res_users__id
+#: model:ir.model.fields,field_description:announcements.field_user_notify__id
+#: model:ir.model.fields,field_description:announcements.field_user_notify_line__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: announcements
+#: model:ir.model.fields,help:announcements.field_user_notify__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "أيقونة لتشير إلى نشاط استثنائي."
+
+#. module: announcements
+#: model:ir.model.fields,help:announcements.field_user_notify__message_needaction
+#: model:ir.model.fields,help:announcements.field_user_notify__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم التحديد، فإن الرسائل الجديدة تتطلب انتباهك."
+
+#. module: announcements
+#: model:ir.model.fields,help:announcements.field_user_notify__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم التحديد، فإن بعض الرسائل لديها خطأ في التسليم."
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__message_is_follower
+msgid "Is Follower"
+msgstr "هو متابع"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_hr_department____last_update
+#: model:ir.model.fields,field_description:announcements.field_res_groups____last_update
+#: model:ir.model.fields,field_description:announcements.field_res_users____last_update
+#: model:ir.model.fields,field_description:announcements.field_user_notify____last_update
+#: model:ir.model.fields,field_description:announcements.field_user_notify_line____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__write_uid
+#: model:ir.model.fields,field_description:announcements.field_user_notify_line__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__write_date
+#: model:ir.model.fields,field_description:announcements.field_user_notify_line__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__message
+msgid "Message"
+msgstr "الرسالة"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "موعد نهائي لنشاطي"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify_line__notification_id
+msgid "Notification"
+msgstr "الإشعار"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__notification_line
+msgid "Notification Line"
+msgstr "سطر الإشعار"
+
+#. module: announcements
+#: code:addons/announcements/models/models.py:0
+#, python-format
+msgid "Notification Users"
+msgstr "قائمة المستخدمين"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_hr_department__notify_id
+#: model:ir.model.fields,field_description:announcements.field_res_groups__notify_id
+#: model:ir.model.fields,field_description:announcements.field_res_users__notify_id
+msgid "Notify"
+msgstr "إشعار"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: announcements
+#: model:ir.model.fields,help:announcements.field_user_notify__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: announcements
+#: model:ir.model.fields,help:announcements.field_user_notify__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي بها خطأ في التسليم"
+
+#. module: announcements
+#: model:ir.model.fields,help:announcements.field_user_notify__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل غير المقروءة"
+
+#. module: announcements
+#: model:ir.model.fields.selection,name:announcements.selection__user_notify_line__state__read
+msgid "Read"
+msgstr "مقروءة"
+
+#. module: announcements
+#: model_terms:ir.ui.view,arch_db:announcements.view_user_notify_form
+msgid "Received users"
+msgstr "المستلمون"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: announcements
+#: model_terms:ir.ui.view,arch_db:announcements.view_user_notify_form
+msgid "Send Now"
+msgstr "إرسال الآن"
+
+#. module: announcements
+#: model_terms:ir.ui.view,arch_db:announcements.view_user_notify_form
+msgid "Start Dynamic Send"
+msgstr "بدء الإرسال الديناميكي"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__state
+#: model:ir.model.fields,field_description:announcements.field_user_notify_line__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: announcements
+#: model:ir.model.fields,help:announcements.field_user_notify__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: announcements
+#: model_terms:ir.ui.view,arch_db:announcements.view_user_notify_form
+msgid "Stop Dynamic Send"
+msgstr "إيقاف الإرسال الديناميكي"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__name
+msgid "Title"
+msgstr "العنوان"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__recipient_type
+msgid "Type of Recipients"
+msgstr "نوع المستلمون"
+
+#. module: announcements
+#: model:ir.model.fields,help:announcements.field_user_notify__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع نشاط الاستثناء المسجل."
+
+#. module: announcements
+#: model:ir.model.fields.selection,name:announcements.selection__user_notify_line__state__unread
+msgid "Unread"
+msgstr "غير مقروءة"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل غير المقروءة"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عداد الرسائل غير المقروءة"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify_line__user
+msgid "User"
+msgstr "المستخدم"
+
+#. module: announcements
+#: model:ir.model,name:announcements.model_user_notify_line
+msgid "User Notification Lines"
+msgstr "قائمة المستخدمون"
+
+#. module: announcements
+#: model:ir.actions.act_window,name:announcements.action_user_notify
+#: model:ir.model,name:announcements.model_user_notify
+msgid "User Notifications"
+msgstr "إشعارات المستخدم"
+
+#. module: announcements
+#: model:ir.model,name:announcements.model_res_users
+#: model:ir.model.fields,field_description:announcements.field_user_notify__users
+#: model:ir.model.fields.selection,name:announcements.selection__user_notify__recipient_type__user
+msgid "Users"
+msgstr "المستخدمون"
+
+#. module: announcements
+#: model:ir.model.fields,field_description:announcements.field_user_notify__notification_line_count
+msgid "Users Count"
+msgstr "عدد المستخدمين"
+
+#. module: announcements
+#: code:addons/announcements/models/models.py:0
+#, python-format
+msgid "You must set datetime to schedule the procedure"
+msgstr "يجب عليك تعيين التاريخ والوقت لجدولة الإجراء"

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="report_overtime_mandate">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                    <div class="page">
+                        <div class="oe_structure" />
+                        <p>Human resources / allowances and bonuses</p>
+                        <p />
+                        <p />
+                        <p style="text-align: center;">Out of hours (normal days)</p>
+                        <p />
+                        <p />
+                        <p style="text-align: center;">
+                            <strong>
+                                Administrative Decision No
+
+                            </strong>
+                        </p>
+
+                        <p />
+
+                        <p>
+                            <strong>The authorized person</strong>
+                        </p>
+                        <p>Based on the powers granted to him</p>
+
+                        <p style="text-align: center;">
+                            <strong>decides the following</strong>
+                        </p>
+                        <p>
+                        And based on the requirement of the interest of the work and on what happened to us from.....assigned
+                        </p>
+
+                        <p>1: Assignment of those whose names are indicated in the statement /
+                        </p>
+                        <p>
+                            -
+                            <t t-foreach="o.line_ids" t-as="line">
+                                <span t-field="line.employee_id.name" />
+                              Working outside official working hours during the period from
+                                <span t-field="line.date_from" />
+                              and even
+
+                                <span t-field="line.date_to" />
+
+                                <br />
+                            </t>
+                        </p>
+
+                        <p
+                    >2: Disbursing the entitlement whose names are shown in the attached statement after completing the task.</p>
+                        <p>3: This decision was communicated to those who needed to enforce it.</p>
+                    </div>
+
+                </t>
+            </t>
+    </template>
+
+
+
+
+    <template id="report_hr_overtime_lines_resume">
+     <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <div class="header" />
+                 <div class="footer" />
+                <t t-call="web.external_layout">
+                    <div class="page">
+
+                        <div class="col-xs-12 text-center">
+                            <h3 style="color:#395870;">
+                                <strong>
+                                    Resume Overtime Hours
+                                </strong>
+
+                            </h3>
+                        </div>
+
+                        <div class="col-xs-12 text-center">
+                            <strong>Period:</strong>
+                            <span t-esc="o.date_from" />
+                            -
+                            <span t-esc="o.date_to" />
+
+                        </div>
+
+
+                        <table width="100%" style="font-size:13px;border: 2px solid black;">
+                            <!-- head table -->
+                            <thead>
+                                <tr style="border: 2px solid black;background:#4682B4;" class="text-center">
+                                    <th style="border: 2px solid black;width:5%;">Request Order Number</th>
+                                    <th style="border: 2px solid black;width:5%;">Job ID</th>
+                                    <th style="border: 2px solid black;width:7%;">Employee</th>
+                                    <th style="border: 2px solid black;width:7%;">Department</th>
+                                    <th style="border: 2px solid black;width:7%;">Date</th>
+                                    <th style="border: 2px solid black;width:5%;">From Hour</th>
+                                    <th style="border: 2px solid black;width:5%;">To Hour</th>
+                                    <th style="border: 2px solid black;width:10%;">Type</th>
+                                    <th style="border: 2px solid black;width:5%;">Hours Number</th>
+                                    <th style="border: 2px solid black;width:34%;">Mission</th>
+                                    <th style="border: 2px solid black;width:10%;">Stage</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-set="hour_numbers" t-value="0.0" />
+                                <t t-foreach="get_lines(o)" t-as="line">
+                                    <tr>
+                                        <td style="border: 2px solid black;width:5%;" class="text-center">
+                                            <span t-esc="line.overtime_id.name" />
+                                        </td>
+                                        <td style="border: 2px solid black;width:5%;" class="text-center">
+                                            <t t-if="line.overtime_id.employee_id.number">
+                                            <span t-field="line.overtime_id.employee_id.number" /></t>
+                                            <t t-else="">
+                                                <span style="margin-left:8px">-</span>
+                                            </t>
+                                        </td>
+                                        <td style="border: 2px solid black;width:7%;" class="text-center">
+                                            <span t-field="line.overtime_id.employee_id.name" />
+                                        </td>
+                                        <td style="border: 2px solid black;width:7%;" class="text-center">
+                                            <span t-field="line.overtime_id.employee_id.department_id.name" />
+                                        </td>
+                                        <td style="border: 2px solid black;width:7%;" class="text-center">
+                                            <span t-field="line.date" t-options="{'format': 'yyyy-MM-dd'}" />
+                                        </td>
+                                        <td style="border: 2px solid black;width:5%;" class="text-center">
+                                            <span t-esc="line.hour_from" />
+                                        </td>
+                                        <td style="border: 2px solid black;width:5%;" class="text-center">
+                                            <span t-esc="line.hour_to" />
+                                        </td>
+                                        <td style="border: 2px solid black;width:10%;" class="text-center">
+                                            <span t-field="line.type" />
+                                        </td>
+                                        <td style="border: 2px solid black;width:5%;" class="text-center">
+                                            <span t-esc="line.hour_number" />
+                                            <t t-set="hour_numbers" t-value="hour_numbers + line.hour_number" />
+                                        </td>
+                                        <td style="border: 2px solid black;width:34%;">
+                                            <span t-field="line.mission" />
+                                        </td>
+                                        <td style="border: 2px solid black;width:10%;" class="text-center">
+                                            <span t-field="line.overtime_id.stage_id.name" />
+                                        </td>
+                                    </tr>
+                                </t>
+                                <tr style="background:#4682B4;">
+                                    <td colspan="8">
+                                        <strong>Total</strong>
+                                    </td>
+                                    <td class="text-center" style="border-letf: 2px solid black;">
+                                        <strong><span t-esc="hour_numbers" /></strong>
+                                    </td>
+                                   <td />
+                                <td />
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            </t>
+        </t>
+         </t>
+    </template>
+
+</odoo>

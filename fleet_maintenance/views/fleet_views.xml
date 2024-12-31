@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id='fleet_maintenance_view_search' model='ir.ui.view'>
+        <field name="name">fleet.maintenance.view.search</field>
+        <field name="model">fleet.maintenance</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+               <group string="Group By">
+                    <filter
+                        name="maintenance_type"
+                        string="Maintenance Type"
+                        context="{'group_by': 'maintenance_type'}"
+                    />
+                    <filter name="warehouse_id" string="Warehouse" context="{'group_by': 'warehouse_id'}" />
+                    <filter string="Location" name='location_id' domain="[]" context="{'group_by': 'location_id'}" />
+                    <filter name="product_id" string="Product" context="{'group_by':'product_id'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+     <record id='fleet_maintenance_view_tree' model='ir.ui.view'>
+        <field name="name">fleet.maintenance.view.tree</field>
+        <field name="model">fleet.maintenance</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="odometer" />
+                <field name="maintenance_type" />
+                <field name="warehouse_id" />
+                <field name="location_id" />
+                <field name="product_id" />
+                <field name="product_qty" />
+                <field name="employee_id" />
+                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}" />
+                <field
+                    name="state"
+                    widget="badge"
+                    decoration-success="state == 'done'"
+                    decoration-warning="state == 'progress'"
+                    decoration-info="state == 'draft'"
+                    decoration-danger="state == 'cancel'"
+                />
+            </tree>
+        </field>
+     </record>
+
+    <record id='fleet_maintenance_view_form' model='ir.ui.view'>
+        <field name="name">fleet.maintenance.view.form</field>
+        <field name="model">fleet.maintenance</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                     <button name="action_audit" type="object" string="Send" class="btn-success" states="draft" />
+                    <button name="action_progress" type="object" string="Confirm" class="btn-success" states="audit" />
+                    <button name="action_done" type="object" string="Confirm" class="btn-success" states="progress" />
+                    <button
+                        name="action_cancel"
+                        class="btn-danger"
+                        string="Cancel"
+                        type="object"
+                        states="progress,audit"
+                    />
+
+                    <field name="state" widget="statusbar" statusbar_visible="draft,audit,progress,done" />
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                             <field name="location_ids" invisible="1" />
+                            <field name="product_ids" invisible="1" />
+                            <field name="vehicle_id" invisible="1" />
+                            <field name="vehicle_type" invisible="1" />
+                            <field name="name" />
+                            <field name="maintenance_type" widget="radio" options="{'horizontal': true}" />
+                             <label for="odometer" attrs="{'invisible': [('vehicle_type', '!=', 'car')]}" />
+                            <div class="o_row" attrs="{'invisible': [('vehicle_type', '!=', 'car')]}">
+                                <field name="odometer" />
+                                <field name="odometer_unit" />
+                            </div>
+                            <field name="employee_id" />
+                            <field
+                                name="company_id"
+                                groups="base.group_multi_company"
+                                options='{"no_open": True, "no_create": True}'
+                            />
+                            <label for="next_maintenance_date" />
+                            <div class="o_row">
+                                <field name="next_maintenance_date" />
+                                <field name="unit" /> <strong>Km</strong>
+                            </div>
+                        </group>
+                        <group>
+                            <field
+                                name="warehouse_id"
+                                options='{"no_create": True}'
+                                domain="['|', ('company_id', '=', False ), ('company_id', '=', company_id)]"
+                            />
+                            <field name="location_id" options='{"no_create": True}' />
+                            <field name="product_id" options='{"no_create": True}' />
+                             <label for="product_qty" />
+                            <div class="o_row">
+                                <field name="product_qty" />
+                                <field name="product_uom" />
+                            </div>
+                             <field
+                                name="picking_id"
+                                readonly="1"
+                                force_save="1"
+                                attrs="{'invisible': [('picking_id', '=', False)]}"
+                            />
+                        </group>
+                    </group>
+                     <notebook>
+                        <page name="description" string="Notes">
+                            <group>
+                                <field name="description" nolabel="1" />
+                            </group>
+                        </page>
+                         <page name="engineer_report" string="Engineer Report">
+                            <group>
+                                <field name="engineer_report" nolabel="1" />
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+
+    <record id='fleet_maintenance_action' model='ir.actions.act_window'>
+        <field name="name">Maintenance</field>
+        <field name="res_model">fleet.maintenance</field>
+        <field name="view_mode">tree,form</field>
+         <field name="domain">[('vehicle_id', '=', active_id)]</field>
+        <field name="context">{'default_vehicle_id': active_id}</field>
+    </record>
+
+
+    <record id="fleet_vehicle_view_form_inherit_fleet_maintenance" model="ir.ui.view">
+        <field name="name">fleet.vehicle.view.form.inherit.maintenance</field>
+        <field name="model">fleet.vehicle</field>
+        <field name="inherit_id" ref="fleet.fleet_vehicle_view_form" />
+        <field name="arch" type="xml">
+            <button name="return_action_to_open" position="after">
+                <button
+                    name="%(fleet_maintenance.fleet_maintenance_action)d"
+                    type="action"
+                    class="oe_stat_button"
+                    icon="fa-cogs"
+                >
+                    <field name="maintenance_count" widget="statinfo" string="Maintenance" />
+                </button>
+             </button>
+        </field>
+     </record>
+
+</odoo>

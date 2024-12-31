@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="hr_payment_request_tree" model="ir.ui.view">
+        <field name="name">hr.payment.request.tree</field>
+        <field name="model">hr.payment.request</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" string="Name" />
+                <field name="date" />
+                <field name="employee_id" />
+                <field name="stage_id" />
+                <field name="state" invisible="1" />
+            </tree>
+        </field>
+    </record>
+    <record id="hr_payment_request_view_form" model="ir.ui.view">
+        <field name="name">hr.payment.request.form</field>
+        <field name="model">hr.payment.request</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="request.request_view_form" />
+        <field name="arch" type="xml">
+            <button name="action_send" position="before">
+                <button
+                    name="button_payment_order"
+                    string="Create Payment Order"
+                    type="object"
+                    class="btn-success"
+                    attrs="{'invisible': ['|',('payment_id', '!=', False),('state', '!=', 'done')]}"
+                    groups="hr.group_hr_manager,account.group_account_invoice"
+                />
+             </button>
+            <sheet position="inside">
+                <widget name="web_ribbon" title="Is Paid" attrs="{'invisible': [('is_paid', '=', False)]}" />
+                <group>
+                    <group>
+                        <field name="id" invisible="1" />
+                        <field name="is_paid" invisible="1" />
+                        <field
+                            name="name"
+                            readonly="1"
+                            orce-save="1"
+                            string="Name"
+                            attrs="{'invisible':[('id', '=', False)]}"
+                        />
+                        <field name="date" readonly="1" force_save="1" attrs="{'invisible':[('id', '=', False)]}" />
+                        <field name="employee_id" invisible="context.get('my_request', False)" required="1" />
+                        <field name="job_id" force_save="1" options='{"no_open": True, "no_create": True}' />
+                        <field name="department_id" force_save="1" />
+                        <field name="company_id"  force_save="1" groups="base.group_multi_company" />
+                    </group>
+                    <group>
+                        <field name="active" invisible="1" />
+                        <field name="amount" required="1" />
+                        <field name="statement" required="1" />
+                        <field name="payment_id" attrs="{'invisible':[('payment_id', '=', False)]}" />
+                    </group>
+                </group>
+            </sheet>
+        </field>
+    </record>
+    <record id="hr_payment_request_view_kanban" model="ir.ui.view">
+        <field name="name">hr.payment.request.kanban</field>
+        <field name="model">hr.payment.request</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="request.request_view_kanban" />
+        <field name="arch" type="xml">
+            <div name="card_body" position="inside">
+                <br />
+                <span name="name" t-if="record.name.raw_value">Name :
+                    <field name="name" />
+                    <br />
+                </span>
+                <span name="amount" t-if="record.amount">Amount:
+                    <field name="amount" />
+                    <br />
+                </span>
+            </div>
+        </field>
+    </record>
+    <record id="hr_payment_request_action_all" model="ir.actions.act_window">
+        <field name="name">Payment Requests</field>
+        <field name="res_model">hr.payment.request</field>
+        <field name="view_mode">kanban,tree,form</field>
+    </record>
+    <menuitem
+        id="menu_hr_payment_request_all"
+        name="Payment Requests"
+        sequence="1"
+        parent="menu_hr_payment_request_root"
+        action="hr_payment_request_action_all"
+    />
+    <record id="hr_payment_request_action_my" model="ir.actions.act_window">
+        <field name="name">Payment Requests</field>
+        <field name="res_model">hr.payment.request</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="domain">[('employee_id.user_id', '=', uid)]</field>
+        <field name="context">{'my_request' : True}</field>
+    </record>
+    <menuitem
+        id="hr_payment_request_menu_my"
+        name="Payment Requests"
+        sequence="2"
+        parent="request.self_services_menu"
+        action="hr_payment_request_action_my"
+    />
+    <!-- Menu and action payment request under Accounting-->
+    <record id="hr_payment_request_action_accounting" model="ir.actions.act_window">
+        <field name="name">Payment Requests</field>
+        <field name="res_model">hr.payment.request</field>
+        <field name="domain">[('state', '=', 'done')]</field>
+        <field name="view_mode">kanban,tree,form</field>
+    </record>
+    <menuitem
+        id="menu_hr_payment_request_accounting"
+        name="Payment Requests"
+        sequence="7"
+        parent="account.menu_finance"
+        action="hr_payment_request_action_all"
+    />
+</odoo>

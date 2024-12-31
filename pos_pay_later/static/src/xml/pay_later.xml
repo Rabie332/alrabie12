@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+
+    <t
+        t-name="PayPOSOrdersScreen"
+        t-inherit="point_of_sale.PaymentScreen"
+        t-inherit-mode="extension"
+        owl="1"
+    >
+         <xpath expr="//div[hasclass('next')]" position="before">
+            <t t-if="env.pos.config.allow_later_payment">
+               <div
+                    class="button pay-partial"
+                    t-on-click="clickPayLater"
+                    t-att-class="{ highlight: !currentOrder.is_paid() }"
+                >
+                  <span class="next_text">Later Payment</span>
+                  <i class="fa fa-angle-double-right fa-fw" />
+               </div>
+            </t>
+         </xpath>
+      </t>
+        <t
+        t-name="OrderReceipt"
+        t-inherit="point_of_sale.OrderReceipt"
+        t-inherit-mode="extension"
+        owl="1"
+    >
+            <xpath expr="//div[hasclass('pos-receipt-contact')]" position="after">
+                <t t-if="props.order.is_service">
+                    <div
+                    style="font-size: 20px;padding-top: 10px;text-align: center;font-weight: 700;"
+                >
+                        <i>Draft</i>
+                    </div>
+                </t>
+            </xpath>
+        </t>
+
+</templates>

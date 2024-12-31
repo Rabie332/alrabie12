@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Client Action For Menu Dashboard -->
+
+    <menuitem
+        id="self_services_menu"
+        web_icon="request,static/description/icon.png"
+        name="Self services"
+        sequence="100"
+    />
+
+    <menuitem
+        id="external_services_menu"
+        web_icon="request,static/description/icon.png"
+        name="External services"
+        sequence="103"
+    />
+
+     <menuitem
+        id="drive_actions_menu"
+        web_icon="request,static/description/icon_drive_action.png"
+        name="Drive Actions"
+        groups="request.group_stages_manager"
+        sequence="101"
+    />
+
+     <menuitem
+        id="self_service_menu_drive_action"
+        name="Drive actions for self services"
+        sequence="1"
+        parent="drive_actions_menu"
+    />
+
+</odoo>

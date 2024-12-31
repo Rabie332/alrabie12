@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+     <record id="res_users_view_form_profile_inherit_hr_employee_number" model="ir.ui.view">
+            <field name="name">res.users.preferences.form.inherit</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="hr.res_users_view_form_profile" />
+            <field name="arch" type="xml">
+                  <xpath expr="//h1" position="after">
+                <h2>
+                <field name="number" placeholder="Job number" />
+                </h2>
+            </xpath>
+            </field>
+      </record>
+</odoo>

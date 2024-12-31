@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="hotel_reservation_payment_invoice_report_view_form" model="ir.ui.view">
+        <field name="name">hotel.reservation.payment.invoice.report.view.form</field>
+        <field name="model">hotel.reservation.payment.invoice.report</field>
+        <field name="arch" type="xml">
+              <form delete="0" create="0">
+                <sheet>
+                <group col="4">
+                    <field name="date_from" />
+                    <field name="date_to" />
+                    <field name="reservation_no" />
+                    <field name="payment_name" />
+                    <field name="support_type_id" />
+                    <field name="payment_method_id" />
+                </group>
+<!--                    <button-->
+<!--                        name='print_reservation_payment_invoice_report'-->
+<!--                        string="Print Payments Report PDF"-->
+<!--                        type="object"-->
+<!--                        icon="fa-print"-->
+<!--                        class="btn btn-primary"-->
+<!--                    />-->
+
+                        <button
+                        name='print_payment_outbound_report'
+                        string="Print Payments Outbound Report"
+                        type="object"
+                        icon="fa-print"
+                        class="btn btn-primary"
+                        context="{'partner_type':'outbound'}"
+                    />
+
+                      <button
+                        name='print_payment_inbound_report'
+                        string="Print Payments Inbound Report"
+                        type="object"
+                        icon="fa-print"
+                        class="btn btn-primary"
+                        context="{'partner_type':'inbound'}"
+                    />
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="hotel_reservation_payment_invoice_report_action" model="ir.actions.act_window">
+        <field name="name">Payments Management Report</field>
+        <field name="res_model">hotel.reservation.payment.invoice.report</field>
+        <field name="view_mode">form</field>
+        <field name="target">current</field>
+    </record>
+    <menuitem
+        id="hotel_reservation_payment_invoice_menu"
+        action="hotel_reservation_payment_invoice_report_action"
+        parent="reservation_financial_report_management_menu"
+        sequence="5"
+    />
+
+     <record id="hotel_reservation_payment_invoice_report_view_form_inherit" model="ir.ui.view">
+        <field name="name">hotel.reservation.payment.invoice.report.view.form</field>
+        <field name="model">hotel.reservation.payment.invoice.report</field>
+          <field name="mode">primary</field>
+         <field name="inherit_id" ref="hotel_reservation_reports.hotel_reservation_payment_invoice_report_view_form" />
+        <field name="arch" type="xml">
+
+            <button name='print_payment_inbound_report' position="after">
+                 <button
+                    name='print_payment_invoice_report'
+                    string="Print Invoice Report"
+                    type="object"
+                    icon="fa-print"
+                    class="btn btn-primary"
+                    context="{'partner_type':'invoice'}"
+                />
+
+            </button>
+              <button name='print_payment_outbound_report' position="attributes">
+                  <attribute name="invisible">1</attribute>
+            </button>
+               <button name='print_payment_inbound_report' position="attributes">
+                  <attribute name="invisible">1</attribute>
+            </button>
+            <field name="payment_name" position="attributes">
+                  <attribute name="invisible">1</attribute>
+            </field>
+                    <field name="support_type_id" position="attributes">
+                  <attribute name="invisible">1</attribute>
+            </field>
+            <field name="payment_method_id" position="attributes">
+                  <attribute name="invisible">1</attribute>
+            </field>
+            <field name="payment_method_id" position="after">
+                  <field name="invoice_name" />
+            </field>
+
+            </field>
+    </record>
+
+    <record id="hotel_reservation_invoice_management_report_action" model="ir.actions.act_window">
+        <field name="name">Invoices Management Report</field>
+        <field name="res_model">hotel.reservation.payment.invoice.report</field>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+         <field
+            name="view_ids"
+            eval="[(5, 0, 0),
+                          (0, 0, {'view_mode': 'form', 'view_id': ref('hotel_reservation_payment_invoice_report_view_form_inherit')}),
+                          ]"
+        />
+    </record>
+    <menuitem
+        id="hotel_reservation_invoice_management_menu"
+        action="hotel_reservation_invoice_management_report_action"
+        parent="reservation_financial_report_management_menu"
+        sequence="5"
+    />
+</odoo>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+
+    <record id="mail_hr_financial_covenant_approval" model="mail.activity.type">
+        <field name="name">Financial Covenant is ready to be approved</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="res_model_id" ref="hr_financial_covenant.model_hr_financial_covenant" />
+        <field name="category">validation</field>
+    </record>
+
+    <record id="mt_direct_action_approved" model="mail.message.subtype">
+        <field name="name">Approved</field>
+        <field name="res_model">hr.financial.covenant</field>
+        <field name="description">Financial Covenant is approved</field>
+    </record>
+
+    <record id="mt_direct_action_refused" model="mail.message.subtype">
+        <field name="name">Refused</field>
+        <field name="res_model">hr.financial.covenant</field>
+        <field name="description">Financial Covenant is refused</field>
+    </record>
+</odoo>

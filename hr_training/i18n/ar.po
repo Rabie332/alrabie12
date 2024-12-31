@@ -1,0 +1,1091 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_training
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-03 10:05+0000\n"
+"PO-Revision-Date: 2022-11-03 10:05+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__duration
+msgid " Duration"
+msgstr "المدة"
+
+#. module: hr_training
+#: model:ir.actions.report,print_report_name:hr_training.hr_training_report_action
+msgid ""
+"'Print training Report for - %s' % (object.name).replace('/', '')\n"
+"        "
+msgstr ""
+"'طباعة تقرير تدريب لـ - %s' % (object.name).replace('/', '')\n"
+"        "
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_setting__accumulative_balance
+msgid "Accumulative Balance"
+msgstr "رصيد تراكمي"
+
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_employee_training_stock__message_needaction
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__active
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_center__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__activity_ids
+msgid "Activities"
+msgstr "أنشطة"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "استثناء النشاط"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "رمز نوع النشاط"
+
+#. module: hr_training
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training__transportation_type__air_travel
+msgid "Air travel"
+msgstr "جوا"
+
+#. module: hr_training
+#: model:ir.actions.act_window,name:hr_training.hr_training_action_manager
+#: model:ir.ui.menu,name:hr_training.hr_training_manager_menu
+msgid "All Requests"
+msgstr "كل الطلبات"
+
+#. module: hr_training
+#: model:ir.model,name:hr_training.model_hr_training_allowance
+#: model:ir.model.fields,field_description:hr_training.field_training_travel_days__training_allowance_id
+msgid "Allowance"
+msgstr "بدل"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.view_hr_training_setting
+msgid "Allowance training and Transport"
+msgstr "بدل التدريب و النقل"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_setting__annual_balance
+msgid "Annual Balance"
+msgstr "الرصيد السنوي"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_request_stage__appears_in_training_report
+msgid "Appears in training report"
+msgstr "يظهر في تقرير التدريب"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__employee_id
+msgid "Applicant"
+msgstr "صاحب الطلب"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_view_search
+msgid "Application Date"
+msgstr "تاريخ الطلب"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_report_template
+msgid "Approval"
+msgstr "الموافقات"
+
+#. module: hr_training
+#: model:mail.message.subtype,name:hr_training.mt_hr_training_approved
+msgid "Approved"
+msgstr "موافق عليه"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_view_search
+msgid "Archived"
+msgstr "مؤرشف"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_view_form
+msgid "Are you sure you want to do this?"
+msgstr "هل أنت متأكد ؟"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_employee_training_stock__message_attachment_count
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__attachment_ids
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_view_form
+msgid "Attachments"
+msgstr "المرفقات"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_setting__balance_training_no_specified
+msgid "Balance Training Not Specified"
+msgstr "رصيد التدريب غير محدد"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_view_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__canceled
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_view_form
+msgid "Canceled"
+msgstr "ملغى"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__city
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_report_template
+msgid "City"
+msgstr "المدينة"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__city_id
+msgid "City "
+msgstr "المدينة"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_employee_training_stock__company_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__company_id
+msgid "Company"
+msgstr "المؤسسة"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__country_id
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_report_template
+msgid "Country"
+msgstr "الدولة"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_training_travel_days__country_group_id
+msgid "Country categories"
+msgstr "فئات الدول"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__name
+msgid "Course Name"
+msgstr "مسمى الدورة"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_view_kanban
+msgid "Course Name:"
+msgstr "مسمى الدورة:"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__course_outcomes
+msgid "Course Outcomes"
+msgstr "مخرجات الدورة"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_report_template
+msgid "Course outcomes"
+msgstr "مخرجات الدورة"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_employee_training_stock__create_uid
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__create_uid
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_allowance__create_uid
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_center__create_uid
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_setting__create_uid
+#: model:ir.model.fields,field_description:hr_training.field_training_travel_days__create_uid
+msgid "Created by"
+msgstr "انشأ من قبل"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_employee_training_stock__create_date
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__create_date
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_allowance__create_date
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_center__create_date
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_setting__create_date
+#: model:ir.model.fields,field_description:hr_training.field_training_travel_days__create_date
+msgid "Created on"
+msgstr "تم إنشاؤها من قبل"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_employee_training_stock__current_stock
+msgid "Current Stock"
+msgstr "الرصيد الحالي"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__date_from
+msgid "Date From"
+msgstr "تاريخ البداية"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_view_kanban
+msgid "Date From :"
+msgstr "تاريخ البداية:"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__date_to
+msgid "Date To"
+msgstr "تاريخ النهاية"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_view_kanban
+msgid "Date To :"
+msgstr "تاريخ النهاية:"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_report_template
+msgid "Date:"
+msgstr "تاريخ:"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__department_id
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_report_template
+msgid "Department"
+msgstr "الإدارة"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__description
+msgid "Description"
+msgstr "وصف"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_setting__line_ids
+msgid "Details"
+msgstr "تفاصيل"
+
+#. module: hr_training
+#: model:request.stage,name:hr_training.hr_training_stage_manager
+msgid "Direct Manager"
+msgstr "المدير المباشر"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__display_button_accept
+msgid "Display Button Accept"
+msgstr "عرض زر قبول"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__display_button_previous
+msgid "Display Button Previous"
+msgstr "عرض زر سابق"
+
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__display_button_refuse
+msgid "Display Button Refuse"
+msgstr "رفض زر العرض"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__display_button_send
+msgid "Display Button Send"
+msgstr "عرض زر إرسال"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:hr_training.field_hr_employee_training_stock__display_name
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__display_name
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_allowance__display_name
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_center__display_name
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_setting__display_name
+#: model:ir.model.fields,field_description:hr_training.field_request_stage__display_name
+#: model:ir.model.fields,field_description:hr_training.field_res_users__display_name
+#: model:ir.model.fields,field_description:hr_training.field_training_travel_days__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__display_button_set_to_draft
+msgid "Display set to draft button"
+msgstr "عرض زر إعادة إلى مسودة"
+
+#. module: hr_training
+#: model:request.stage,name:hr_training.hr_training_stage_done
+msgid "Done"
+msgstr "أعتمد"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_view_kanban
+msgid "Duration:"
+msgstr "المدة:"
+
+#. module: hr_training
+#: model:mail.activity.type,name:hr_training.mail_hr_training_set_to_draft
+msgid "Edit request"
+msgstr "طلب تعديل"
+
+#. module: hr_training
+#: model:ir.model,name:hr_training.model_hr_employee
+#: model:ir.model.fields,field_description:hr_training.field_hr_employee_training_stock__employee_id
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_employee_training_stock_filter
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_tree
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_view_form
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_view_search
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_training
+#: model:ir.model,name:hr_training.model_hr_employee_training_stock
+msgid "Employee training Stock"
+msgstr "رصيد التدريب لموظف"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_view_kanban
+msgid "Employee:"
+msgstr "الموظف:"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_report_template
+msgid "End Date"
+msgstr "تاريخ الانتهاء"
+
+#. module: hr_training
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training__type__external
+msgid "External"
+msgstr "خارجى"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_allowance__external_training_amount
+msgid "External Training Amount"
+msgstr "بدل تدريب خارجي"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_allowance__external_transport_amount
+msgid "External Transport Amount"
+msgstr "بدل نقل خارجي"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_view_search
+msgid "External training"
+msgstr "تدريب خارجي"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__fees_amount
+msgid "Fees Amount"
+msgstr "مبلغ الرسوم"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_report_template
+msgid "Financial details"
+msgstr "تفاصيل المالية"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_employee_training_stock__message_follower_ids
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__message_follower_ids
+msgid "Followers"
+msgstr "متابعون"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_employee_training_stock__message_channel_ids
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_employee_training_stock__message_partner_ids
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: hr_training
+#: model:ir.model.fields,help:hr_training.field_hr_training__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "رمز الخط الرائع ، على سبيل المثال FA المهام"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__food
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_report_template
+msgid "Food"
+msgstr "الاعاشة"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_allowance__food
+msgid "Food %"
+msgstr "%الاعاشة"
+
+#. module: hr_training
+#: model:request.stage,name:hr_training.hr_training_stage_validate
+msgid "General Director"
+msgstr "المدير العام"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_employee_training_stock_filter
+msgid "Group by"
+msgstr "مجموعة من"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__hosing
+msgid "Hosing"
+msgstr "السكن"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_allowance__hosing
+msgid "Hosing %"
+msgstr "%السكن"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_report_template
+msgid "Hosting"
+msgstr "السكن"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__read_reviewed_policies_regulations
+msgid "I have read and reviewed the policies and regulations"
+msgstr "لقد قرات و أطلعت على السياسات و اللوائح"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_employee__id
+#: model:ir.model.fields,field_description:hr_training.field_hr_employee_training_stock__id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_allowance__id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_center__id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_setting__id
+#: model:ir.model.fields,field_description:hr_training.field_request_stage__id
+#: model:ir.model.fields,field_description:hr_training.field_res_users__id
+#: model:ir.model.fields,field_description:hr_training.field_training_travel_days__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__activity_exception_icon
+msgid "Icon"
+msgstr "أيقونة"
+
+#. module: hr_training
+#: model:ir.model.fields,help:hr_training.field_hr_training__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "أيقونة للإشارة إلى نشاط مستثنى ."
+
+#. module: hr_training
+#: model:ir.model.fields,help:hr_training.field_hr_employee_training_stock__message_needaction
+#: model:ir.model.fields,help:hr_training.field_hr_employee_training_stock__message_unread
+#: model:ir.model.fields,help:hr_training.field_hr_training__message_needaction
+#: model:ir.model.fields,help:hr_training.field_hr_training__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم تحديد ذلك ، فإن الرسائل الجديدة تتطلب اهتمامك."
+
+#. module: hr_training
+#: model:ir.model.fields,help:hr_training.field_hr_employee_training_stock__message_has_error
+#: model:ir.model.fields,help:hr_training.field_hr_training__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده ، فبعض الرسائل بها خطأ في التسليم."
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__include_ticket_total_amount
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_report_template
+msgid "Include ticket price in total amount"
+msgstr "إحتساب مبلغ التذكرة في الإجمالي"
+
+#. module: hr_training
+#: model:ir.actions.server,name:hr_training.cron_initialize_training_balance_ir_actions_server
+#: model:ir.cron,cron_name:hr_training.cron_initialize_training_balance
+#: model:ir.cron,name:hr_training.cron_initialize_training_balance
+msgid "Initialize Training Balance"
+msgstr "تهيئة رصيد التدريب"
+
+
+#. module: hr_training
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training__type__internal
+msgid "Internal"
+msgstr "داخلى"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_allowance__internal_training_amount
+msgid "Internal Training Amount"
+msgstr "بدل تدريب داخلي"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_allowance__internal_transport_amount
+msgid "Internal Transport Amount"
+msgstr "بدل نقل داخلي"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_view_search
+msgid "Internal training"
+msgstr "التدريبات الداخلية"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_employee_training_stock__message_is_follower
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__message_is_follower
+msgid "Is Follower"
+msgstr "هو متابع"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__is_paid
+msgid "Is paid"
+msgstr "مدفوع"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__job_id
+msgid "Job"
+msgstr "الوظيفة"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_report_template
+msgid "Job Number"
+msgstr "الرقم الوظيفي"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__number
+msgid "Job number"
+msgstr "الرقم الوظيفي"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_report_template
+msgid "Job title"
+msgstr "المسمى الوظيفي"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__kanban_color
+msgid "Kanban Color Index"
+msgstr "مؤشر لون كانبان"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:hr_training.field_hr_employee_training_stock____last_update
+#: model:ir.model.fields,field_description:hr_training.field_hr_training____last_update
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_allowance____last_update
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_center____last_update
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_setting____last_update
+#: model:ir.model.fields,field_description:hr_training.field_request_stage____last_update
+#: model:ir.model.fields,field_description:hr_training.field_res_users____last_update
+#: model:ir.model.fields,field_description:hr_training.field_training_travel_days____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_employee_training_stock__write_uid
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__write_uid
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_allowance__write_uid
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_center____write_uid
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_setting__write_uid
+#: model:ir.model.fields,field_description:hr_training.field_training_travel_days__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_employee_training_stock__write_date
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__write_date
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_allowance__write_date
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_center____write_date
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_setting__write_date
+#: model:ir.model.fields,field_description:hr_training.field_training_travel_days__write_date
+msgid "Last Updated on"
+msgstr "آخر تعديل في"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_employee_training_stock__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__manager_id
+msgid "Manager"
+msgstr "المدير"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_employee_training_stock__message_has_error
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_employee_training_stock__message_ids
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__message_ids
+msgid "Messages"
+msgstr "رسائل"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "نهاية الوقت المعين للنشاط"
+
+#. module: hr_training
+#: model:ir.ui.menu,name:hr_training.training_my_request_menu
+msgid "My Requests"
+msgstr "طلباتي"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_allowance__name
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_center__name
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_setting__name
+msgid "Name"
+msgstr "المسمى"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_report_template
+msgid "Name:"
+msgstr "الإسم:"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "أخر موعد لنشاط التالي"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_report_template
+msgid "Number Of Days"
+msgstr "عدد الأيام"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_employee_training_stock__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_employee_training_stock__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: hr_training
+#: model:ir.model.fields,help:hr_training.field_hr_employee_training_stock__message_needaction_counter
+#: model:ir.model.fields,help:hr_training.field_hr_training__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: hr_training
+#: model:ir.model.fields,help:hr_training.field_hr_employee_training_stock__message_has_error_counter
+#: model:ir.model.fields,help:hr_training.field_hr_training__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل مع خطأ التسليم"
+
+#. module: hr_training
+#: model:ir.model.fields,help:hr_training.field_hr_employee_training_stock__message_unread_counter
+#: model:ir.model.fields,help:hr_training.field_hr_training__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل غير المقروءة"
+
+#. module: hr_training
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training__transportation_type__overland
+msgid "Overland"
+msgstr "برا"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_report_template
+msgid "Payroll management"
+msgstr "إدارة الرواتب"
+
+#. module: hr_training
+#: model:ir.actions.server,name:hr_training.cron_allow_stock_training_ir_actions_server
+#: model:ir.cron,cron_name:hr_training.cron_allow_stock_training
+#: model:ir.cron,name:hr_training.cron_allow_stock_training
+msgid "Prepare Training balance"
+msgstr "تحضير رصيد التدريب"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_view_form
+msgid "Print Training"
+msgstr "طباعة التدريب"
+
+#. module: hr_training
+#: model:ir.actions.report,name:hr_training.hr_training_report_action
+msgid "Print training Report"
+msgstr "طباعة تقرير التدريب"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__refuse_reason
+msgid "Refusal reason"
+msgstr "سبب الرفض"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_view_form
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: hr_training
+#: model:mail.message.subtype,name:hr_training.mt_hr_training_refused
+#: model:request.stage,name:hr_training.hr_training_stage_refused
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: hr_training
+#: model:request.stage,name:hr_training.hr_training_stage_send
+msgid "Request"
+msgstr "طلب"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_report_template
+msgid "Request Number"
+msgstr "رقم الطلب"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__date
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_report_template
+msgid "Request date"
+msgstr "تاريخ الطلب"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_report_template
+msgid "Requester"
+msgstr "صاحب الطلب"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_view_form
+msgid "Set to draft"
+msgstr "إعادة إلى مسودة"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_employee_training_stock__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_allowance__training_setting_id
+#: model:ir.ui.menu,name:hr_training.menu_hr_training_setting
+msgid "Setting"
+msgstr "الإعدادات"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_report_template
+msgid "Signature:"
+msgstr "التوقيع:"
+
+#. module: hr_training
+#: model:ir.model,name:hr_training.model_request_stage
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__stage_id
+msgid "Stage"
+msgstr "المرحلة"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_view_kanban
+msgid "Stage:"
+msgstr "المرحلة:"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_report_template
+msgid "Start Date"
+msgstr "تاريخ البداية"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: hr_training
+#: model:ir.model.fields,help:hr_training.field_hr_training__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: hr_training
+#: code:addons/hr_training/models/hr_training.py:0
+#, python-format
+msgid "The annual training balance has been exceeded!"
+msgstr "لقد تم تجاوز الرصيد السنوي التدريب!"
+
+#. module: hr_training
+#: code:addons/hr_training/models/hr_training.py:0
+#, python-format
+msgid ""
+"The start date of the course should be less than the date of the end of the "
+"course"
+msgstr "يجب أن يكون تاريخ بداية التدريب أقل من تاريخ إنتهاء التدريب"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__ticket_price
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_report_template
+msgid "Ticket Price"
+msgstr "مبلغ التذكرة"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_employee_training_stock__token_training_sum
+msgid "Token Days"
+msgstr "الأيام المأخوذة"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__total
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_report_template
+msgid "Total amount"
+msgstr "المبلغ الإجمالي"
+
+#. module: hr_training
+#: model:ir.model,name:hr_training.model_hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_employee__training_ids
+#: model:ir.module.category,name:hr_training.category_training
+msgid "Training"
+msgstr "التدريب"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_report_template
+msgid "Training Allowance"
+msgstr "بدل التدريب"
+
+#. module: hr_training
+#: model:ir.actions.act_window,name:hr_training.hr_employee_training_stock_action
+#: model:ir.model.fields,field_description:hr_training.field_hr_employee__training_balance
+#: model:ir.model.fields,field_description:hr_training.field_res_users__training_balance
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_employee_training_stock_filter
+msgid "Training Balance"
+msgstr "رصيد التدريب"
+
+#. module: hr_training
+#: model:ir.model,name:hr_training.model_hr_training_center
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_view_search
+msgid "Training Center"
+msgstr "معهد التدريب"
+
+#. module: hr_training
+#: model:ir.actions.act_window,name:hr_training.hr_training_center_action
+#: model:ir.ui.menu,name:hr_training.hr_training_center_menu
+msgid "Training Centers"
+msgstr "معاهد التدريب"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__training_center_id
+msgid "Training Center Name"
+msgstr "إسم معهد التدريب"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_view_kanban
+msgid "Training Center Name:"
+msgstr "إسم معهد التدريب:"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_report_template
+msgid "Training Cost"
+msgstr "تكلفة التدريب"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_view_form
+msgid "Training Details"
+msgstr "تفاصيل التدريب "
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_view_form
+msgid "Training Information"
+msgstr "معلومات التدريب"
+
+#. module: hr_training
+#: model:res.groups,name:hr_training.group_training_managment
+msgid "Training Manager"
+msgstr "مدير التدريب"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_tree
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_view_form
+msgid "Training Name"
+msgstr "مسمى الدورة"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__program_training
+msgid "Training Program"
+msgstr "برنامج الدورة"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_report_template
+msgid "Training Request -"
+msgstr "طلب تدريب -"
+
+#. module: hr_training
+#: code:addons/hr_training/models/hr_training_setting.py:0
+#: model:hr.training.setting,name:hr_training.data_hr_training_setting
+#: model:ir.actions.server,name:hr_training.ir_actions_button_hr_training_setting
+#: model:ir.model,name:hr_training.model_hr_training_setting
+#: model:ir.ui.menu,name:hr_training.hr_training_setting_menu
+#, python-format
+msgid "Training Setting"
+msgstr "إعدادات التدريب"
+
+#. module: hr_training
+#: model:ir.actions.act_window,name:hr_training.hr_training_stage_action
+#: model:ir.ui.menu,name:hr_training.menu_hr_training_stage
+msgid "Training Stages"
+msgstr "مراحل التدريب"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__type
+msgid "Training Type"
+msgstr "نوع التدريب"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_view_kanban
+msgid "Training Type:"
+msgstr "نوع التدريب:"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__training_allowance
+msgid "Training allowance"
+msgstr "بدل التدريب"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_employee_training_stock__training_available_stock
+msgid "Training available stock"
+msgstr "رصيد التدريب"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_report_template
+msgid "Training center"
+msgstr "مركز التدريب"
+
+#. module: hr_training
+#: model:mail.activity.type,name:hr_training.mail_hr_training_feedback
+msgid "Training is done"
+msgstr "تم التدريب"
+
+#. module: hr_training
+#: model:mail.activity.type,name:hr_training.mail_hr_training_approval
+msgid "Training is ready to be approved"
+msgstr "طلب التدريب  جاهز لموافقة عليه"
+
+#. module: hr_training
+#: model:mail.message.subtype,description:hr_training.mt_hr_training_refused
+msgid "Training is refused"
+msgstr "تدريب مرفوض"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_report_template
+msgid "Training name"
+msgstr "مسمى الدورة"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_report_template
+msgid "Training program"
+msgstr "برنامج الدورة"
+
+#. module: hr_training
+#: model:mail.message.subtype,description:hr_training.mt_hr_training_approved
+msgid "Training request is approved"
+msgstr "تدريب موافق عليه"
+
+#. module: hr_training
+#: model:ir.actions.act_window,name:hr_training.action_hr_training_my
+#: model:ir.actions.act_window,name:hr_training.hr_employee_training_action
+#: model:ir.actions.act_window,name:hr_training.hr_training_action_my
+#: model:ir.ui.menu,name:hr_training.menu_hr_training_root
+#: model:ir.ui.menu,name:hr_training.training_self_service_root
+msgid "Trainings"
+msgstr "التدريبات"
+
+#. module: hr_training
+#: model:ir.ui.menu,name:hr_training.hr_employee_training_stock_menu
+msgid "Trainings Balance"
+msgstr "رصيد التدريبات"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__transport
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_report_template
+msgid "Transport"
+msgstr "النقل"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_allowance__transport
+msgid "Transport %"
+msgstr "%النقل"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__transportation_type
+msgid "Transportation means"
+msgstr "وسيلة النقل"
+
+#. module: hr_training
+#: model:ir.model,name:hr_training.model_training_travel_days
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_allowance__travel_days_ids
+#: model:ir.model.fields,field_description:hr_training.field_training_travel_days__travel_days
+#: model_terms:ir.ui.view,arch_db:hr_training.view_hr_training_setting
+msgid "Travel Days"
+msgstr "أيام السفر"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__travel_days
+msgid "Travel days"
+msgstr "أيام السفر"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__request_type_id
+msgid "Type"
+msgstr "النوع"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_report_template
+msgid "Type of Request"
+msgstr "نوع الطلب"
+
+#. module: hr_training
+#: model:ir.model.fields,help:hr_training.field_hr_training__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع نشاط المستثنى في السجل."
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_employee_training_stock__message_unread
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__message_unread
+msgid "Unread Messages"
+msgstr "رسائل غير مقروءة"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_employee_training_stock__message_unread_counter
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عداد الرسائل غير المقروءة"
+
+#. module: hr_training
+#: model:ir.model,name:hr_training.model_res_users
+msgid "Users"
+msgstr "المستخدمون"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_employee_training_stock__website_message_ids
+#: model:ir.model.fields,field_description:hr_training.field_hr_training__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع الإلكتروني"
+
+#. module: hr_training
+#: model:ir.model.fields,help:hr_training.field_hr_employee_training_stock__website_message_ids
+#: model:ir.model.fields,help:hr_training.field_hr_training__website_message_ids
+msgid "Website communication history"
+msgstr "سجل اتصالات  الموقع الإلكتروني"
+
+#. module: hr_training
+#: code:addons/hr_training/models/hr_training.py:0
+#, python-format
+msgid "You must read and reviewed the policies regulations"
+msgstr "يجب عليك قراءة ومراجعة السياسات و الوائح"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_report_template
+msgid "logo"
+msgstr "أيقونة"
+
+#. module: hr_training
+#: code:addons/hr_training/models/hr_training.py:0
+#: code:addons/models/hr_training.py:0
+#, python-format
+msgid "There is an overlap of dates with a training"
+msgstr "هناك تداخل في التواريخ مع التدريب"

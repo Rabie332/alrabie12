@@ -1,0 +1,167 @@
+<odoo>
+    <template id="portal_my_clearance_requests" name="Clearance">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True" />
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Clearance</t>
+            </t>
+            <t t-if="not clearance_requests">
+                <p>There are no records.</p>
+            </t>
+            <t t-if="clearance_requests" t-call="portal.portal_table">
+                <thead>
+                    <tr class="active">
+                        <th>Job Number</th>
+                        <th>Request Date</th>
+                        <th>Request Type</th>
+                        <th>BL Number</th>
+                        <th>Shipment Type</th>
+                        <th>Number of Shipment</th>
+                        <th>Deadline Shipment</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <t t-foreach="clearance_requests" t-as="request">
+                        <tr>
+                            <td>
+                                <a
+                                    t-att-href="'/my/clearance_requests/%s' % str(request.id)"
+                                    t-att-title="request.name"
+                                >
+                                    <span t-field="request.name" />
+                                </a>
+                            </td>
+                            <td>
+                                <span t-field="request.date" />
+                            </td>
+                            <td>
+                                <span t-field="request.request_type" />
+                            </td>
+                            <td>
+                                <span t-field="request.shipping_number" />
+                            </td>
+                            <td>
+                                <span t-field="request.shipment_type" />
+                            </td>
+                            <td>
+                                <span t-field="request.number_shipment" />
+                            </td>
+                            <td>
+                                <span t-field="request.expected_date_shipment" />
+                            </td>
+                            <td>
+                                <span t-field="request.state" />
+                            </td>
+                        </tr>
+                    </t>
+                </tbody>
+            </t>
+        </t>
+    </template>
+    <template
+        id="portal_my_home_inherit_website_farha_clearance"
+        name="Portal My Home:Requests"
+        inherit_id="portal.portal_my_home"
+    >
+        <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+            <t t-call="portal.portal_docs_entry">
+                <t t-set="title">Clearance</t>
+                <t t-set="url" t-value="'/my/clearance_requests'" />
+                <t t-set="placeholder_count" t-value="'clearance_request_count'" />
+            </t>
+        </xpath>
+    </template>
+    <template
+        id="portal_my_home_menu_clearance_request"
+        name="Portal layout : requests menu"
+        inherit_id="portal.portal_breadcrumbs"
+        priority="30"
+    >
+        <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
+            <li
+                t-if="page_name == 'clearance_request'"
+                t-attf-class="breadcrumb-item #{'active ' if not request else ''}"
+            >
+                <a t-if="clearance_request" t-attf-href="/my/clearance_requests?{{ keep_query() }}">My Clearance</a>
+                <t t-else="">My Clearance</t>
+            </li>
+        </xpath>
+    </template>
+    <template
+        id="portal_clearance_request_page"
+        name="Clearance Request Portal Template"
+        inherit_id="portal.portal_sidebar"
+        primary="True"
+    >
+        <t t-call="portal.portal_layout">
+            <div id="optional_placeholder" />
+            <div class="container">
+                <div class="row mt16 o_portal_clearance_request_sidebar">
+                    <!-- Sidebar -->
+                    <t t-call="portal.portal_record_sidebar">
+                        <t t-set="classes" t-value="'col-lg-auto d-print-none'" />
+                        <t t-set="title">
+                            <h2 class="mb-0">
+                                <b t-field="clearance_request.name" />
+                            </h2>
+                        </t>
+                    </t>
+                    <!-- Page Content -->
+                    <div class=" col-lg col-12 justify-content-end w-100">
+                        <div class="card pb-5">
+                            <div class="card-header bg-white pb-1">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <h2 class="font-weight-normal">
+                                Clearance
+                                            <span class="font-italic" t-esc="clearance_request.name" />
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row mb-4">
+                                    <div class="col-6">
+                                        <strong>Job Number:</strong>
+                                        <p style="display: inline-block;" t-field="clearance_request.name" />
+                                        <br />
+                                        <strong>Request Date:</strong>
+                                        <p style="display: inline-block;" t-field="clearance_request.date" />
+                                        <br />
+                                        <strong>Request Type:</strong>
+                                        <p style="display: inline-block;" t-field="clearance_request.request_type" />
+                                        <br />
+                                        <strong>Status:</strong>
+                                        <p style="display: inline-block;" t-field="clearance_request.state" />
+                                    </div>
+                                    <div class="col-6">
+                                        <strong style="display: inline-block;">BL Number:</strong>
+                                        <p style="display: inline-block;" t-field="clearance_request.shipping_number" />
+                                        <br />
+                                        <strong style="display: inline-block;">Shipment Type:</strong>
+                                        <p style="display: inline-block;" t-field="clearance_request.shipment_type" />
+                                        <br />
+                                        <strong style="display: inline-block;">Number of Shipment:</strong>
+                                        <p style="display: inline-block;" t-field="clearance_request.number_shipment" />
+                                        <br />
+                                        <strong style="display: inline-block;">Deadline Shipment:</strong>
+                                        <p style="display: inline-block;" t-field="clearance_request.expected_date_shipment" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- chatter -->
+                        <div id="clearance_request_communication" class="mt-4">
+                            <h2>History</h2>
+                            <t t-call="portal.message_thread">
+                                <t t-set="object" t-value="clearance_request" />
+                        </t>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="oe_structure mb32" />
+        </t>
+    </template>
+</odoo>

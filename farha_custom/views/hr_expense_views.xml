@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="hr_expense_form_inherit_farha_custom" model="ir.ui.view">
+        <field name="name">hr.expense.view.form.inherit</field>
+        <field name="model">hr.expense</field>
+        <field name="inherit_id" ref="hr_expense.hr_expense_view_form" />
+        <field name="arch" type="xml">
+            <field name="state" position="attributes">
+                <attribute name="statusbar_visible">draft,reported,to_review,post,refused
+                </attribute>
+            </field>
+        </field>
+    </record>
+
+    <record id="hr_expense_form_inherit_hr_expense_states" model="ir.ui.view">
+        <field name="name">hr.expense.view.form.inherit</field>
+        <field name="model">hr.expense.sheet</field>
+        <field name="inherit_id" ref="hr_expense.view_hr_expense_sheet_form" />
+        <field name="arch" type="xml">
+            <field name="state" position="attributes">
+                <attribute name="statusbar_visible">draft,submit,to_review,post,cancel
+                </attribute>
+            </field>
+            <button name="%(hr_expense.hr_expense_refuse_wizard_action)d" position="after">
+                <button
+                    name="%(hr_expense.hr_expense_refuse_wizard_action)d"
+                    states="approve,to_review"
+                    context="{'hr_expense_refuse_model':'hr.expense.sheet'}"
+                    string="Refuse"
+                    groups="account.group_account_manager,account_state.group_account_reviewer,account.group_account_invoice,account_state.group_account_confirm_user"
+                    type="action"
+                />
+            </button>
+            <button name="action_submit_sheet" position="attributes">
+                <attribute name="string">Send</attribute>
+            </button>
+            <button name="approve_expense_sheets" position="attributes">
+                <attribute name="string">Accept</attribute>
+            </button>
+            <button name="action_reviewed" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </button>
+            <button name="action_confirm" position="replace">
+                <button
+                    name="action_post"
+                    string="Accept"
+                    type="object"
+                    states="to_review"
+                    class="oe_highlight o_expense_sheet_post"
+                    groups="account.group_account_manager,account_state.group_account_reviewer,account.group_account_invoice,account_state.group_account_confirm_user"
+                />
+            </button>
+        </field>
+
+    </record>
+
+</odoo>

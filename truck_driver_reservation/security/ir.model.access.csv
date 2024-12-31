@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_truck_driver_reservation_user,truck.driver.reservation.user,model_truck_driver_reservation,group_truck_driver_reservation_user,1,0,0,0
+access_truck_driver_reservation_manager,truck.driver.reservation.manager,model_truck_driver_reservation,group_truck_driver_reservation_manager,1,1,1,1

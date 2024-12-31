@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="assets_pdf_css_farha" name="Custom Report CSS" inherit_id="web.report_assets_common">
+        <xpath expr="." position="inside">
+            <link href="/web_ar/static/src/css/rtl.css" rel="stylesheet" />
+        </xpath>
+    </template>
+    <template id="external_layout_farha">
+        <t t-if="not o" t-set="o" t-value="doc" />
+        <t t-if="not company">
+            <!-- Multicompany -->
+            <t t-if="company_id">
+                <t t-set="company" t-value="company_id" />
+            </t>
+            <t t-elif="o and 'company_id' in o and o.company_id.sudo()">
+                <t t-set="company" t-value="o.company_id.sudo()" />
+            </t>
+            <t t-else="else">
+                <t t-set="company" t-value="res_company" />
+            </t>
+        </t>
+        <div t-attf-class="o_company_#{company.id}_layout article o_report_layout_background"
+            t-att-data-oe-model="o and o._name"
+            t-att-data-oe-id="o and o.id"
+            t-att-data-oe-lang="o and o.env.context.get('lang')"
+        >
+            <t t-call="web.address_layout" />
+            <t t-raw="0" />
+        </div>
+    </template>
+    <template id="hotel_reservation_invoice_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs.with_context(lang='ar_001')" t-as="o">
+                <t t-call="hotel_reservation.external_layout_farha">
+                    <header style="display: flex; justify-content: center; align-items: center;">
+                        <img t-if="o.company_id.logo" t-att-src="image_data_uri(o.company_id.logo)" alt="Logo" style="margin-right: 20px;" />
+                        <div style="display: flex; gap: 1rem; padding-top:20px; padding-bottom: 20px;">
+                            <strong t-field="o.company_id.partner_id.name" />
+                            <strong t-field="o.company_id.partner_id.country_id" />
+                            <strong t-field="o.company_id.partner_id.city" />
+                            <strong t-field="o.company_id.partner_id.street" />
+                        </div>
+                    </header>
+                    <div class="row">
+                        <div class="col-4" style="width:100%;">
+                            <img
+                                t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('QR', o.folio_id.hotel_invoice_id.qr_code, 600, 600)"
+                                style="width:100px;height:100px;padding-bottom: 1em;"
+                            />
+                        </div>
+                        <div class="col-4">
+                            <div
+                                style="text-align:center;background-color:#E6E6E6;font-weight:bold;font-size:15px;width:100%;"
+                            >
+                                <p>فاتورة ضريبية</p>
+                                <p>VAT INVOICE</p>
+                                <span style="color:red;" t-field="o.folio_id.hotel_invoice_id.name" />
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <table style="width:100%;">
+                                <tr style="background-color:#E6E6E6">
+                                    <td style="background-color:#E6E6E6">الرقم الضريبي
+                                    </td>
+                                    <td style="background-color:#E6E6E6;text-align:left;">Vat No
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="text-align:center;">
+                                        <span t-field="o.company_id.vat" />
+                                        <br />
+                                    </td>
+                                </tr>
+                                <tr style="background-color:#E6E6E6">
+                                    <td style="background-color:#E6E6E6">تاريخ الفاتورة
+                                    </td>
+                                    <td style="background-color:#E6E6E6;text-align:left;">Invoice Date
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span t-esc="o.folio_id.hotel_invoice_id.get_hijri_date(o.folio_id.hotel_invoice_id.invoice_date, '/')" />
+                                    </td>
+                                    <td style="text-align:left;">
+                                        <span t-field="o.folio_id.hotel_invoice_id.invoice_date" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row" style="border: 2px solid black;margin-top: 20px;">
+                        <div class="col-6" style="text-align:right">
+                            <u>السيد/ة:</u>
+                            <span t-esc="o.with_context({'lang': 'ar_001'}).partner_id.name" />
+                            <br />
+                            <br />
+                            <u>العنوان/</u>
+                            <span t-esc="o.with_context({'lang': 'ar_001'}).partner_id.street" />
+                            <br />
+                            <br />
+                            <u>رقم الهاتف/</u>
+                            <span t-esc="o.with_context({'lang': 'ar_001'}).partner_id.mobile" />
+                        </div>
+                        <div class="col-6" style="text-align:left">
+                            <u>Mrs\</u>
+                            <span t-esc="o.with_context({'lang': 'en_US'}).partner_id.name" />
+                            <br />
+                            <br />
+                            <u>VAT No.\</u>
+                            <span t-esc="o.partner_id.vat" />
+                        </div>
+                    </div>
+                    <div class="row" style="border: 2px solid black;margin-top: 20px;">
+                        <table class="table table-bordered" style="width: 100%;">
+                            <thead>
+                                <tr>
+                                    <th>تسجيل الدخول</th>
+                                    <th>تسجيل الخروج</th>
+                                    <th>الغرفة</th>
+                                    <th>سعر الغرفة</th>
+                                    <!-- <th>الخدمات</th> -->
+                                    <th>الاجمالي</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <span t-field="o.checkin"/>
+                                    </td>
+                                    <td>
+                                        <span t-field="o.checkout"/>
+                                    </td>
+                                    <td>
+                                        <t t-foreach="o.reservation_line" t-as="line">
+                                            <span t-esc="line.room_id.name"/>,
+                                        </t>
+                                    </td>
+                                    <td>
+                                        <span t-esc="'%.2f' % o.total_cost"/>
+                                    </td>
+                                    <!-- <td>
+                                        <span t-field="o.service_amount"/>
+                                    </td> -->
+                                    <td>
+                                        <span t-field="o.total_cost"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row" style="border: 2px solid black;margin-top: 20px;">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>الوصف</th>
+                                    <th>العدد</th>
+                                    <th>السعر</th>
+                                    <th>الضرائب</th>
+                                    <th>الإجمالي الفرعي</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="o.related_invoice_ids" t-as="invoice">
+                                    <t t-if="invoice.state == 'posted'">
+                                        <t t-foreach="invoice.invoice_line_ids" t-as="invoice_line">
+                                            <tr>
+                                                <td>
+                                                    <span t-field="invoice_line.name"/>
+                                                </td>
+                                                <td class="text-right">
+                                                    <span t-field="invoice_line.quantity"/>
+                                                </td>
+                                                <td class="text-right">
+                                                    <span t-field="invoice_line.price_unit" t-options='{"widget": "monetary", "display_currency": invoice_line.currency_id}'/>
+                                                </td>
+                                                <td class="text-right">
+                                                    <span t-field="invoice_line.tax_ids"/>
+                                                </td>
+                                                <td class="text-right">
+                                                    <span t-field="invoice_line.price_subtotal" t-options='{"widget": "monetary", "display_currency": invoice_line.currency_id}'/>
+                                                </td>
+                                                <!-- <td class="text-right">
+                                                    <t t-if="invoice.move_type == 'out_refund'">
+                                                        <span t-field="invoice.amount_total_signed" t-options='{"widget": "monetary", "display_currency": invoice_line.currency_id}'/>
+                                                    </t>
+                                                    <t t-else="else">
+                                                        <span t-field="invoice_line.price_unit" t-options='{"widget": "monetary", "display_currency": invoice_line.currency_id}'/>
+                                                    </t>
+                                                </td> -->
+                                            </tr>
+                                        </t>
+                                    </t>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row" style="border: 2px solid black;margin-top: 20px;">
+                        <div class="col-2">
+                            <span>المبلغ غير خاضع للضريبة</span>
+                        </div>
+                        <div class="col-2">
+                            <span t-field="o.folio_id.hotel_invoice_id.amount_untaxed" t-options='{"widget": "monetary", "display_currency": o.related_invoice_ids.invoice_line_ids.currency_id}'></span>
+                        </div>
+                        <!-- <div class="col-2">
+                            <span>الضرائب</span>
+                        </div>
+                        <div class="col-2">
+                            <span t-field="o.taxes_info"></span>
+                        </div> -->
+                        <div class="col-2">
+                            <span>السعر النهائي</span>
+                        </div>
+                        <div class="col-2">
+                            <span t-field="o.folio_id.hotel_invoice_id.amount_total" t-options='{"widget": "monetary", "display_currency": o.related_invoice_ids.invoice_line_ids.currency_id}'></span>
+                        </div>
+                    </div>
+                    <footer style="text-align:center; border-top: 1px solid #000; padding-top: 10px;">
+                        <div class="text-center">
+                            <ul class="list-inline">
+                                <li t-if="o.company_id.phone" class="list-inline-item">
+                                    <i class="fa fa-phone" role="img" aria-label="Phone" title="Phone" />
+                                    <span class="o_force_ltr" t-field="o.company_id.phone" />
+                                </li>
+                                <li t-if="o.company_id.email" class="list-inline-item">
+                                    <i class="fa fa-at" role="img" aria-label="Email" title="Email" />
+                                    <span t-field="o.company_id.email" />
+                                </li>
+                                <li t-if="o.company_id.website" class="list-inline-item">
+                                    <i class="fa fa-globe" role="img" aria-label="Website" title="Website" />
+                                    <span t-field="o.company_id.website" />
+                                </li>
+                                <li t-if="o.company_id.vat" class="list-inline-item">
+                                    <i class="fa fa-building-o" role="img" aria-label="Fiscal number" />
+                                    <t t-esc="o.company_id.country_id.vat_label or 'Tax ID'" />:
+                                    <span t-field="o.company_id.vat" />
+                                </li>
+                            </ul>
+                            <div t-field="o.company_id.report_footer" />
+                            <div t-if="report_type == 'pdf'" class="text-muted">
+                                Page:
+                                <span class="page" />
+                                of
+                                <span class="topage" />
+                            </div>
+                        </div>
+                    </footer>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

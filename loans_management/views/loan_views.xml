@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+  <record id="view_loan_form" model="ir.ui.view">
+    <field name="name">loan.form</field>
+    <field name="model">loan.loan</field>
+    <field name="arch" type="xml">
+      <form string="Loan">
+        <sheet>
+          <group>
+            <group>
+              <field name="name"/>
+              <field name="bank"/>
+              <field name="amount"/>
+              <field name="management_fees"/>
+              <field name="management_fees_amount"/>
+              <field name="interest_rate"/>
+              <field name="repayment_period"/>
+            </group>
+            <group>
+              <field name='first_payment_date'/>
+              <field name="debit_account_id"/>
+              <field name="credit_account_id"/>
+              <field name="journal_id" readonly="0"/>
+              <field name="total_paid" readonly="1"/>
+              <field name="balance" readonly="1"/>
+              <field name="company_id" readonly="0"/>
+            </group>
+          </group>
+          <notebook>
+            <page string="Inbound Payments">
+              <field name="inbound_payment_ids" readonly='1'>
+                <tree>
+                  <field name="date"/>
+                  <field name="amount"/>
+                  <field name="debit_account_id"/>
+                  <field name="credit_account_id"/>
+                </tree>
+                <form>
+                  <sheet>
+                    <group>
+                      <field name="date"/>
+                      <field name="amount"/>
+                      <field name="debit_account_id"/>
+                      <field name="credit_account_id"/>
+                    </group>
+                  </sheet>
+                </form>
+              </field>
+            </page>
+            <page string="Outbound Payments">
+              <field name="outbound_payment_ids">
+                <tree>
+                  <field name="date"/>
+                  <field name="amount"/>
+                  <field name="debit_account_id"/>
+                  <field name="credit_account_id"/>
+                </tree>
+                <form>
+                  <sheet>
+                    <group>
+                      <field name="date"/>
+                      <field name="amount"/>
+                      <field name="debit_account_id"/>
+                      <field name="credit_account_id"/>
+                    </group>
+                  </sheet>
+                </form>
+              </field>
+            </page>
+          </notebook>
+        </sheet>
+      </form>
+    </field>
+  </record>
+  <record id="view_loan_tree" model="ir.ui.view">
+    <field name="name">loan.tree</field>
+    <field name="model">loan.loan</field>
+    <field name="arch" type="xml">
+      <tree string="Loans">
+        <field name="name"/>
+        <field name="bank"/>
+        <field name="amount"/>
+        <field name="interest_rate"/>
+        <field name="repayment_period"/>
+        <field name="total_paid"/>
+        <field name="balance"/>
+      </tree>
+    </field>
+  </record>
+  <record id="loan_action" model="ir.actions.act_window">
+    <field name="name">Loans</field>
+    <field name="res_model">loan.loan</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+  <menuitem id="loan_management_menu" name="Loans Management" sequence="10" web_icon="loans_management,static/description/icon.png"/>
+  <menuitem id="loan_menu" name="Loans" parent="loan_management_menu" action="loan_action"/>
+</odoo>

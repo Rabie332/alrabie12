@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+
+    <menuitem
+        id="menu_hr_deputation_root"
+        parent="hr.menu_hr_root"
+        name="Deputations"
+        groups="hr_deputation.group_hr_deputation_user"
+        sequence="3"
+    />
+
+    <menuitem
+        id="menu_hr_deputation_setting"
+        parent="menu_hr_deputation_root"
+        name="Setting"
+        sequence="6"
+        groups="hr_deputation.group_hr_deputation_manager"
+    />
+
+    <menuitem id="deputation_self_service_root" parent="request.self_services_menu" name="Deputations" />
+
+
+</odoo>

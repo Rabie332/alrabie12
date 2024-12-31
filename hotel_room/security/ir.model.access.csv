@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_partner_reclamation_user,partner.reclamation.user,model_partner_reclamation,hotel.group_hotel_user,1,1,1,0
+access_room_status_sla_user,room.status.sla.user,model_room_status_sla,hotel.group_hotel_user,1,1,1,0
+access_partner_reclamation_wizard_user,partner_reclamation_wizard_user,model_partner_reclamation_wizard,hotel.group_hotel_user,1,1,1,0
+access_empty_room_wizard_user,empty_room_wizard_user,model_empty_room_wizard,hotel.group_hotel_user,1,1,1,0

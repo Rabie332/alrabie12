@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="view_purchase_request_form_target" model="ir.ui.view">
+            <field name="name">purchase.request.form.target</field>
+            <field name="model">purchase.request</field>
+            <field name="inherit_id" ref="purchase_request.purchase_request_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_not_in_inventory']" position="after">
+                    <button name="find_and_send_request" string='Purchase Dept' type="object"  invisible="1" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

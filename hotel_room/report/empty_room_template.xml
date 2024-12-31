@@ -1,0 +1,93 @@
+<odoo>
+    <template id="report_empty_room_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="oe_structure" />
+                        <div class="col-12">
+                            <center>
+                                <strong>Empty Rooms</strong>
+                                <br />
+                                <strong>Duration : </strong><span t-field="o.days" /><span>Day</span>
+                            </center>
+                            <br />
+                            <br />
+                        </div>
+                        <br />
+                        <br />
+
+                        <table class="table table-condensed">
+                            <tr>
+                                <td>
+                                    <strong>Room</strong>
+                                </td>
+                                <td>
+                                    <strong>Floor</strong>
+                                </td>
+                                <td>
+                                    <strong>Category</strong>
+                                </td>
+                                <td>
+                                    <strong>Capacity</strong>
+                                </td>
+                                <td>
+                                    <strong>Reservation Number</strong>
+                                </td>
+                                <td>
+                                    <strong>Daily price</strong>
+                                </td>
+                                <td>
+                                    <strong>Monthly price</strong>
+                                </td>
+                                 <td>
+                                    <strong>Hourly price</strong>
+                                </td>
+
+                            </tr>
+                            <t t-foreach="get_lines(o)" t-as="line">
+                                <tr>
+
+                                    <td>
+                                        <span t-field="line.name" />
+                                    </td>
+                                    <td>
+                                        <span t-field="line.floor_id.name" />
+                                    </td>
+                                    <td>
+                                        <span t-field="line.room_categ_id.name" />
+                                    </td>
+                                    <td>
+                                        <span t-field="line.capacity" />
+                                    </td>
+                                    <td>
+                                        <span t-esc="len(line.room_reservation_line_ids)" />
+                                    </td>
+                                      <td>
+                                        <span t-field="line.list_price" />
+                                    </td>
+                                    <td>
+                                        <span t-field="line.monthly_price" />
+                                    </td>
+                                    <td>
+                                        <span t-esc="'{:,.2f}'.format(line.hourly_price)" />
+                                    </td>
+                                </tr>
+                            </t>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+
+    <record id="report_empty_room" model="ir.actions.report">
+        <field name="name">Empty Rooms Report</field>
+        <field name="model">empty.room.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_file">hotel_room.report_empty_room_template</field>
+        <field name="report_name">hotel_room.report_empty_room_template</field>
+    </record>
+
+</odoo>

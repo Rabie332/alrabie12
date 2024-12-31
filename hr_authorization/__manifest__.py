@@ -1,0 +1,20 @@
+{
+    "name": "HR Authorization",
+    "version": "14.0.1.0.2",
+    "author": "Hadooc",
+    "depends": ["request", "hr_employee_number", "report_xlsx"],
+    "data": [
+        "security/hr_authorization_security.xml",
+        "security/ir.model.access.csv",
+        "data/hr_authorization_data.xml",
+        "views/hr_authorization_views.xml",
+        "views/hr_authorization_templates.xml",
+        "views/request_stage_views.xml",
+        "report/hr_authorization_resume_templates.xml",
+        "report/hr_authorization_resume_reports.xml",
+        "wizard/hr_authorization_resume_wizard_views.xml",
+    ],
+    "demo": ["data/hr_authorization_demo.xml"],
+    "installable": True,
+    "license": "AGPL-3",
+}

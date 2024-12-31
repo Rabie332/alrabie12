@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_pos_session_form" model="ir.ui.view">
+        <field name="name">pos.session.form.view</field>
+        <field name="model">pos.session</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_session_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='cash_control']" position="attributes">
+                <attribute name="string">ATM / Cash Control</attribute>
+            </xpath>
+            <xpath expr="//page[@name='cash_control']" position="inside">
+                <group
+                    attrs="{'invisible' : [('state', '=', 'opening_control')]}"
+                    string="ATM control"
+                >
+                    <group>
+                        <field
+                            style="text-align:right;margin:0;padding:0;"
+                            name="bank_register_balance_end"
+                            widget="monetary"
+                            options="{'currency_field': 'currency_id'}"
+                            string="Bank Closing Balance"
+                        />
+                    </group>
+                </group>
+                <group attrs="{'invisible' : [('state', '!=', 'closing_control')]}">
+                    <field
+                        name="statement_atm_line_ids"
+                        widget="one2many"
+                        context="{'default_session_id': id}"
+                    />
+                </group>
+                <group
+                    attrs="{'invisible' : [('state', 'not in', ['closing_control', 'closed'])]}"
+                >
+                    <group>
+                        <field
+                            name="bank_register_difference"
+                            widget="monetary"
+                            options="{'currency_field': 'currency_id'}"
+                            decoration-danger="bank_register_difference != 0"
+                        />
+                    </group>
+                </group>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+
+    <!-- Covenant type -->
+
+    <record id="hr_covenant_type_1" model="hr.covenant.type">
+        <field name="name">Camera</field>
+    </record>
+    <record id="hr_covenant_type_2" model="hr.covenant.type">
+        <field name="name">cellphone</field>
+    </record>
+    <record id="hr_covenant_type_3" model="hr.covenant.type">
+        <field name="name">Device</field>
+    </record>
+    <record id="hr_covenant_type_4" model="hr.covenant.type">
+        <field name="name">Chair</field>
+    </record>
+
+
+</odoo>

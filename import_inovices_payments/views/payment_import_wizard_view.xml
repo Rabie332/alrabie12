@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="view_payment_import_wizard_form" model="ir.ui.view">
+    <field name="name">payment.import.wizard.form</field>
+    <field name="model">payment.import.wizard</field>
+    <field name="arch" type="xml">
+      <form string="Payment Import Wizard">
+        <h1>
+          <field name='wizard_desc'/>
+        </h1>
+        <group>
+          <field name="file" filename="file_name"/>
+          <field name="company"/>
+          <field name="journal" />
+        </group>
+        <footer>
+          <button string="Import" type="object" name="import_file" class="btn-primary" />
+          <button string="Cancel" class="btn-secondary" special="cancel" />
+        </footer>
+      </form>
+    </field>
+  </record>
+</odoo>

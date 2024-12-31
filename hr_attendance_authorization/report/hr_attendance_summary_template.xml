@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template
+        id="hr_attendance_summary_template_inherit"
+        inherit_id="hr_attendance_summary.hr_attendance_summary_template"
+    >
+        <xpath expr="//th[hasclass('hours_worked')]" position="before">
+            <th
+                style="color:#FFFFFF;padding-top:15px;padding-bottom:15px"
+                class="text-center hours_worked"
+            >Authorization
+            </th>
+
+        </xpath>
+         <xpath expr="//td[hasclass('td_hours_worked')]" position="before">
+              <td style="padding-top:15px;padding-bottom:15px">
+             <span t-options='{"widget": "float_time"}' t-field="line.authorization_hours" />
+              </td>
+             <t t-set="total_authorization_hours" t-value="total_authorization_hours+line.authorization_hours" />
+
+        </xpath>
+          <xpath expr="//tbody" position="before">
+              <t t-set="total_authorization_hours" t-value="0" />
+          </xpath>
+
+        <xpath expr="//td[hasclass('td_total_worked_hours')]" position="before">
+              <td style="padding-top:15px;padding-bottom:15px" class="text-center">
+             <span t-esc="total_authorization_hours" t-options='{"widget": "float_time"}' />
+              </td>
+
+        </xpath>
+    </template>
+</odoo>

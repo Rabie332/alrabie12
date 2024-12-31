@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+
+    <record id="confirm_action_wizard_view_form" model="ir.ui.view">
+        <field name="name">confirm.action.wizard.view.form</field>
+        <field name="model">confirm.action.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <p invisible="context.get('accept')">Are you sure you want to refuse all
+                    requests ?
+                </p>
+                <p invisible="context.get('refuse')">Are you sure you want to accept all
+                    requests ?
+                </p>
+                <footer>
+                    <button
+                        name="action_multi_refuse"
+                        string="Refuse all requests"
+                        type="object"
+                        class="oe_inline btn-danger"
+                        invisible="context.get('accept')"
+                    />
+                    <button
+                        name="action_multi_accept"
+                        string="Accept all requests"
+                        type="object"
+                        class="oe_inline btn-success"
+                        invisible="context.get('refuse')"
+                    />
+                    or
+                    <button
+                        string="Cancel"
+                        class="btn-primary oe_link"
+                        special="cancel"
+                    />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+
+</odoo>

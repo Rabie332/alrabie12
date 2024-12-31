@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record model="ir.module.category" id="module_category_hr_deputation">
+        <field name="name">Deputation</field>
+    </record>
+
+ <!-- Groups -->
+
+    <record id="group_hr_deputation_user" model="res.groups">
+        <field name="name">Officer</field>
+        <field name="category_id" ref="module_category_hr_deputation" />
+        <field name="implied_ids" eval="[(4, ref('hr.group_hr_user'))]" />
+    </record>
+
+    <record id="group_hr_deputation_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="category_id" ref="module_category_hr_deputation" />
+         <field name="implied_ids" eval="[(4, ref('hr_deputation.group_hr_deputation_user'))]" />
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]" />
+    </record>
+
+    <record id="hr_deputation_rule_manager" model="ir.rule">
+        <field name="name">Deputation: manager: no limit</field>
+        <field name="model_id" ref="model_hr_deputation" />
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('hr_deputation.group_hr_deputation_manager'))]" />
+    </record>
+
+    <record id="hr_deputation_cut_rule_manager" model="ir.rule">
+        <field name="name">Deputation Cut: manager: no limit</field>
+        <field name="model_id" ref="model_hr_deputation_cut" />
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('hr_deputation.group_hr_deputation_manager'))]" />
+    </record>
+
+    <record id="hr_deputation_extension_rule_manager" model="ir.rule">
+        <field name="name">Deputation Extension: manager: no limit</field>
+        <field name="model_id" ref="model_hr_deputation_extension" />
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('hr_deputation.group_hr_deputation_manager'))]" />
+    </record>
+
+    <record id="hr_deputation_cancellation_rule_manager" model="ir.rule">
+        <field name="name">Deputation Cancellation: manager: no limit</field>
+        <field name="model_id" ref="model_hr_deputation_extension" />
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('hr_deputation.group_hr_deputation_manager'))]" />
+    </record>
+
+    <record id="hr_deputation_company_rule" model="ir.rule">
+        <field name="name">Deputations: multi-company</field>
+        <field name="model_id" ref="model_hr_deputation" />
+        <field name="domain_force">['|',('company_id', 'in', company_ids),('company_id','=',False)]</field>
+    </record>
+
+    <record id="hr_employee_deputation_stock_company_rule" model="ir.rule">
+        <field name="name">Deputation Stock: multi-company</field>
+        <field name="model_id" ref="model_hr_employee_deputation_stock" />
+        <field name="domain_force">['|',('company_id', 'in', company_ids),('company_id','=',False)]</field>
+    </record>
+
+    <record id="hr_deputation_cancellation_company_rule" model="ir.rule">
+        <field name="name">Deputation Cancellation: multi-company</field>
+        <field name="model_id" ref="model_hr_deputation_cancellation" />
+        <field name="domain_force">['|',('company_id', 'in', company_ids),('company_id','=',False)]</field>
+    </record>
+
+    <record id="hr_deputation_cut_company_rule" model="ir.rule">
+        <field name="name">Deputation Cut: multi-company</field>
+        <field name="model_id" ref="model_hr_deputation_cut" />
+        <field name="domain_force">['|',('company_id', 'in', company_ids),('company_id','=',False)]</field>
+    </record>
+
+     <record id="hr_deputation_extension_company_rule" model="ir.rule">
+        <field name="name">Deputation Extension: multi-company</field>
+        <field name="model_id" ref="model_hr_deputation_extension" />
+        <field name="domain_force">['|',('company_id', 'in', company_ids),('company_id','=',False)]</field>
+    </record>
+</odoo>

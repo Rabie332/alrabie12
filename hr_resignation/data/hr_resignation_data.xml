@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+
+    <!-- resignation request sequence for reservation_number -->
+
+    <record id="hr_resignation_seq" forcecreate="1" model="ir.sequence">
+        <field name="name">Sequence in request resignation</field>
+        <field name="code">hr.resignation.seq</field>
+        <field eval="1" name="number_increment" />
+        <field name="padding">5</field>
+    </record>
+
+    <!-- request.type data  -->
+
+    <record id="hr_resignation_type_resignation" model="request.type">
+        <field name="name">Resignation</field>
+        <field name="res_model_id" ref="hr_resignation.model_hr_resignation" />
+        <field name="code">01</field>
+        <field name="res_model">hr.resignation</field>
+    </record>
+
+    <record id="hr_resignation_type_dismissal" model="request.type">
+        <field name="name">Dismissal</field>
+        <field name="res_model_id" ref="hr_resignation.model_hr_resignation" />
+        <field name="code">02</field>
+        <field name="res_model">hr.resignation</field>
+    </record>
+
+    <record id="hr_resignation_type_not_renew" model="request.type">
+        <field name="name">Not Renew</field>
+        <field name="res_model_id" ref="hr_resignation.model_hr_resignation" />
+        <field name="code">03</field>
+        <field name="res_model">hr.resignation</field>
+    </record>
+
+    <record id="hr_resignation_type_end_contract" model="request.type">
+        <field name="name">End Contract</field>
+        <field name="res_model_id" ref="hr_resignation.model_hr_resignation" />
+        <field name="code">04</field>
+        <field name="res_model">hr.resignation</field>
+    </record>
+
+
+    <!-- request.stage data  -->
+
+    <record id="hr_resignation_stage_draft" model="request.stage">
+        <field name="name">Draft</field>
+        <field name="res_model_id" ref="hr_resignation.model_hr_resignation" />
+        <field name="sequence">1</field>
+        <field name="res_model">hr.resignation</field>
+        <field name="state">draft</field>
+    </record>
+
+    <record id="hr_resignation_stage_direct_manager" model="request.stage">
+        <field name="name">Direct Manager</field>
+        <field name="res_model_id" ref="hr_resignation.model_hr_resignation" />
+        <field name="sequence">2</field>
+        <field name="res_model">hr.resignation</field>
+        <field name="state">in_progress</field>
+        <field name="assign_type">python</field>
+        <field name="code">
+            if object.employee_id.parent_id:
+                if object.employee_id.parent_id.user_id:
+                    result = env['res.users'].search([('id', '=', object.employee_id.parent_id.user_id.id)])
+        </field>
+    </record>
+
+    <record id="hr_resignation_stage_executive_manager" model="request.stage">
+        <field name="name">Executive Manager</field>
+        <field name="res_model_id" ref="hr_resignation.model_hr_resignation" />
+        <field name="sequence">3</field>
+        <field name="res_model">hr.resignation</field>
+        <field name="state">in_progress</field>
+    </record>
+
+    <record id="hr_resignation_stage_hr_manager" model="request.stage">
+        <field name="name">HR Manager</field>
+        <field name="res_model_id" ref="hr_resignation.model_hr_resignation" />
+        <field name="sequence">4</field>
+        <field name="res_model">hr.resignation</field>
+        <field name="state">in_progress</field>
+    </record>
+
+    <record id="hr_resignation_stage_done" model="request.stage">
+        <field name="name">Done</field>
+        <field name="res_model_id" ref="hr_resignation.model_hr_resignation" />
+        <field name="sequence">5</field>
+        <field name="res_model">hr.resignation</field>
+        <field name="state">done</field>
+    </record>
+
+    <record id="hr_resignation_stage_refused" model="request.stage">
+        <field name="name">Refused</field>
+        <field name="res_model_id" ref="hr_resignation.model_hr_resignation" />
+        <field name="sequence">6</field>
+        <field name="res_model">hr.resignation</field>
+        <field name="state">cancel</field>
+    </record>
+
+
+     <!-- scheduler resignation -->
+
+    <record id="ir_resignation_inactive_employee_cron" model="ir.cron">
+        <field name="name">Make employee inactive after last day of work</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="doall">0</field>
+        <field name="state">code</field>
+        <field name="model_id" ref="model_hr_resignation" />
+        <field name="code">model.make_employee_archived()</field>
+    </record>
+
+</odoo>

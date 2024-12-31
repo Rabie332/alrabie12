@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+        <template id="clearance_request_transport_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <div class="header" />
+                    <t t-call="web.external_layout">
+                        <div class="row">
+                            <table width="100%" style="font-size:13px;border: 2px solid black;">
+                                <tr style="border: 2px solid black;background:#ffffff;" class="text-center">
+                                    <td style="border: 2px solid black;" colspan="6">Today's Transaction Report
+                                        <t
+                                            t-esc="datetime.date.today()"
+                                        />
+                                    </td>
+                                </tr>
+                                <t t-if="o._get_clearances_transport(['clearance'])">
+                                    <tr style="border: 2px solid black;background:#4682B4;font-size:17px:" class="text-center">
+                                        <td colspan="5">Clearance</td>
+                                    </tr>
+                                    <t t-foreach="o._get_clearances_transport(['clearance'])" t-as="clearance">
+                                        <tr style="border: 2px solid black;background:#4682B4;" class="text-center">
+                                            <td style="border: 2px solid black;width:20%;">Transaction Number</td>
+                                            <td style="border: 2px solid black;width:20%;" colspan="2">Partner Name</td>
+                                            <td style="border: 2px solid black;width:20%;">Shipment Number</td>
+                                            <td style="border: 2px solid black;width:20%;">Shipment Type</td>
+                                        </tr>
+                                        <tr style="border: 2px solid black;" class="text-center">
+                                            <td style="border: 2px solid black;width:20%;">
+                                                <span t-field="clearance.name" />
+                                            </td>
+                                            <td style="border: 2px solid black;width:20%;" colspan="2">
+                                                <span
+                                                    t-field="clearance.partner_id.name"
+                                                />
+                                            </td>
+                                            <td style="border: 2px solid black;width:20%;">
+                                                <span
+                                                    t-field="clearance.number_shipment"
+                                                />
+                                            </td>
+                                            <td style="border: 2px solid black;width:20%;">
+                                                <span t-field="clearance.shipment_type" />
+                                            </td>
+                                        </tr>
+                                        <tr style="border: 2px solid black;background:#B0C4DE;" class="text-center">
+                                            <td style="border: 2px solid black;width:10%;">Container Number</td>
+                                            <td style="border: 2px solid black;width:20%;">Deadline shipment receive</td>
+                                            <td
+                                                style="border: 2px solid black;width:20%;"
+                                            >Last date for delivery of empty containers</td>
+                                            <td style="border: 2px solid black;width:20%;">Delivery date</td>
+                                            <td style="border: 2px solid black;width:20%;">Customer site</td>
+                                        </tr>
+                                        <t t-foreach="clearance.statement_line_ids" t-as="line">
+                                            <tr style="border: 2px solid black;" class="text-center">
+                                                <td style="border: 2px solid black;width:10%;">
+                                                    <span t-field="line.container_number" />
+                                                </td>
+                                                <td style="border: 2px solid black;width:20%;">
+                                                    <span
+                                                        t-field="line.deadline_shipment_receive"
+                                                    />
+                                                </td>
+                                                <td style="border: 2px solid black;width:20%;">
+                                                    <span
+                                                        t-field="line.last_date_empty_container"
+                                                    />
+                                                </td>
+                                                <td style="border: 2px solid black;width:20%;">
+                                                    <span t-field="line.delivery_date" />
+                                                </td>
+                                                <td style="border: 2px solid black;width:20%;">
+                                                    <span t-field="line.customer_location" />
+                                                </td>
+                                            </tr>
+                                        </t>
+                                    </t>
+                                </t>
+                                <t t-if="o._get_clearances_transport(['transport'])">
+                                    <tr style="border: 2px solid black;background:#4682B4;font-size:17px:" class="text-center">
+                                        <td style="border: 2px solid black;" colspan="5">Transport</td>
+                                    </tr>
+                                    <t t-foreach="o._get_clearances_transport(['transport'])" t-as="clearance">
+                                        <tr style="border: 2px solid black;background:#4682B4;font-size:13px;" class="text-center">
+                                            <td style="border: 2px solid black;width:25%;">Transaction Number</td>
+                                            <td style="border: 2px solid black;width:25%;">Partner Name</td>
+                                            <td style="border: 2px solid black;width:25%;">Shipment Number</td>
+                                            <td style="border: 2px solid black;width:25%;" colspan="2">Shipment Type</td>
+                                        </tr>
+                                        <tr style="border: 2px solid black;" class="text-center">
+                                            <td style="border: 2px solid black;width:25%;">
+                                                <span t-field="clearance.name" />
+                                            </td>
+                                            <td style="border: 2px solid black;width:25%;">
+                                                <span
+                                                    t-field="clearance.partner_id.name"
+                                                />
+                                            </td>
+                                            <td style="border: 2px solid black;width:25%;">
+                                                <span
+                                                    t-field="clearance.number_shipment"
+                                                />
+                                            </td>
+                                            <td style="border: 2px solid black;width:25%;" colspan="2">
+                                                <span
+                                                    t-field="clearance.shipment_type"
+                                                />
+                                            </td>
+                                        </tr>
+                                        <tr style="border: 2px solid black;background:#B0C4DE;font-size:13px;" class="text-center">
+                                            <td style="border: 2px solid black;width:25%;">Truck type</td>
+                                            <td style="border: 2px solid black;width:25%;">Route</td>
+                                            <td style="border: 2px solid black;width:20%;">Delivery date</td>
+                                            <td style="border: 2px solid black;width:30%;" colspan="2">Customer site</td>
+                                        </tr>
+                                        <t t-foreach="clearance.statement_line_ids" t-as="line">
+                                            <tr style="border: 2px solid black;font-size:13px;" class="text-center">
+                                                <td style="border: 2px solid black;width:25%;">
+                                                    <span t-field="line.truck_type_id" />
+                                                </td>
+                                                <td style="border: 2px solid black;width:25%;">
+                                                    <span t-field="line.route_id" />
+                                                </td>
+                                                <td style="border: 2px solid black;width:20%;">
+                                                    <span t-field="line.delivery_date" />
+                                                </td>
+                                                <td style="border: 2px solid black;width:30%;" colspan="2">
+                                                    <span
+                                                        t-field="line.customer_location"
+                                                    />
+                                                </td>
+                                            </tr>
+                                        </t>
+                                    </t>
+                                </t>
+                                <t t-if="o._get_clearances_transport(['other_service'])">
+                                    <tr style="border: 2px solid black;background:#4682B4;font-size:17px:" class="text-center">
+                                        <td style="border: 2px solid black;" colspan="5">Other Services</td>
+                                    </tr>
+                                    <t t-foreach="o._get_clearances_transport(['other_service'])" t-as="clearance">
+                                        <tr style="border: 2px solid black;background:#4682B4;font-size:13px;" class="text-center">
+                                            <td style="border: 2px solid black;width:25%;">Transaction Number</td>
+                                            <td style="border: 2px solid black;width:25%;">Partner Name</td>
+                                            <td style="border: 2px solid black;width:25%;">Shipment Number</td>
+                                            <td style="border: 2px solid black;width:25%;" colspan="2">Shipment Type</td>
+                                        </tr>
+                                        <tr style="border: 2px solid black;font-size:13px;" class="text-center">
+                                            <td style="border: 2px solid black;width:25%;">
+                                                <span t-field="clearance.name" />
+                                            </td>
+                                            <td style="border: 2px solid black;width:25%;">
+                                                <span
+                                                    t-field="clearance.partner_id.name"
+                                                />
+                                            </td>
+                                            <td style="border: 2px solid black;width:25%;">
+                                                <span
+                                                    t-field="clearance.number_shipment"
+                                                />
+                                            </td>
+                                            <td style="border: 2px solid black;width:25%;" colspan="2">
+                                                <span
+                                                    t-field="clearance.shipment_type"
+                                                />
+                                            </td>
+                                        </tr>
+                                        <tr style="border: 2px solid black;background:#B0C4DE;font-size:13px;" class="text-center">
+                                            <td style="border: 2px solid black;" colspan="2">Service</td>
+                                            <td style="border: 2px solid black;" colspan="3">Quantity</td>
+                                        </tr>
+                                        <t t-foreach="clearance.statement_line_ids" t-as="line">
+                                            <tr style="border: 2px solid black;font-size:13px;" class="text-center">
+                                                <td style="border: 2px solid black;" colspan="2">
+                                                    <span t-field="line.service_id" />
+                                                </td>
+                                                <td style="border: 2px solid black;" colspan="3">
+                                                    <span t-field="line.quantity" />
+                                                </td>
+                                            </tr>
+                                        </t>
+                                    </t>
+                                </t>
+                            </table>
+                        </div>
+                        <div class="footer" />
+                    </t>
+                </t>
+            </t>
+        </template>
+        <record id="paperformat_report_clearance_request_transport" model="report.paperformat">
+            <field name="name">Today's Transaction Report</field>
+            <field name="default" eval="True" />
+            <field name="format">custom</field>
+            <field name="page_height">297</field>
+            <field name="page_width">210</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">3</field>
+            <field name="margin_bottom">3</field>
+            <field name="margin_left">3</field>
+            <field name="margin_right">3</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">3</field>
+            <field name="dpi">90</field>
+        </record>
+        <record id="action_clearance_request_transport" model="ir.actions.report">
+            <field name="name">Today's Transaction Report</field>
+            <field name="model">res.users</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">clearance_reports.clearance_request_transport_report</field>
+            <field name="report_file">clearance_reports.clearance_request_transport_report</field>
+            <field name="print_report_name">"Today's Transaction Report - %s" % object.name</field>
+            <field name="binding_type">report</field>
+            <field name="paperformat_id" ref="paperformat_report_clearance_request_transport" />
+        </record>
+    </data>
+</odoo>

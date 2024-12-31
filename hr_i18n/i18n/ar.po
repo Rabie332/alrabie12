@@ -1,0 +1,232 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-27 13:59+0000\n"
+"PO-Revision-Date: 2021-05-27 13:59+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr
+#: model_terms:ir.ui.view,arch_db:hr.hr_employee_public_view_form
+#: model_terms:ir.ui.view,arch_db:hr.res_users_view_form_profile
+#: model_terms:ir.ui.view,arch_db:hr.view_employee_form
+msgid "Approvers"
+msgstr "الموافقات"
+
+#. module: hr
+#: model_terms:ir.ui.view,arch_db:hr.res_config_settings_view_form
+msgid "<span class=\"ml8 mr-2\">IP Addresses (comma-separated)</span>"
+msgstr "<span class=\"ml8 mr-2\">عناوين IP (مفصولة بفواصل)</span>"
+
+#. module: hr
+#: model:ir.model.fields,field_description:hr.field_res_config_settings__hr_employee_self_edit
+msgid "Employee Editing"
+msgstr "تحرير الموظف"
+
+#. module: hr
+#: model_terms:ir.ui.view,arch_db:hr.view_employee_form
+msgid "<span>Km</span>"
+msgstr "<span>کیلۆمەتر</span>"
+
+#. module: hr
+#: model:ir.model.fields,field_description:hr.field_hr_employee__km_home_work
+#: model:ir.model.fields,field_description:hr.field_res_users__km_home_work
+msgid "Home-Work Distance"
+msgstr "المسافة بين مكان العمل و المنزل"
+
+#. module: hr
+#: model_terms:ir.ui.view,arch_db:hr.view_employee_form
+msgid "PIN Code"
+msgstr "رمز PIN"
+
+#. module: hr
+#: model_terms:hr.job,website_description:hr.job_ceo
+#: model_terms:hr.job,website_description:hr.job_consultant
+#: model_terms:hr.job,website_description:hr.job_cto
+#: model_terms:hr.job,website_description:hr.job_developer
+#: model_terms:hr.job,website_description:hr.job_hrm
+#: model_terms:hr.job,website_description:hr.job_marketing
+#: model_terms:hr.job,website_description:hr.job_trainee
+msgid "Strong analytical skills"
+msgstr "مهارات تحليلية قوية "
+
+#. module: hr
+#: model_terms:hr.job,website_description:hr.job_ceo
+#: model_terms:hr.job,website_description:hr.job_consultant
+#: model_terms:hr.job,website_description:hr.job_cto
+#: model_terms:hr.job,website_description:hr.job_developer
+#: model_terms:hr.job,website_description:hr.job_hrm
+#: model_terms:hr.job,website_description:hr.job_marketing
+#: model_terms:hr.job,website_description:hr.job_trainee
+msgid "Technical Expertise"
+msgstr "الخبرات التقنية "
+
+#. module: hr
+#: model:ir.model.fields.selection,name:hr.selection__hr_employee__hr_icon_display__presence_to_define
+#: model:ir.model.fields.selection,name:hr.selection__hr_employee_base__hr_icon_display__presence_to_define
+#: model:ir.model.fields.selection,name:hr.selection__hr_employee_public__hr_icon_display__presence_to_define
+msgid "To define"
+msgstr "للتعريف"
+
+#. module: hr
+#: model_terms:hr.job,website_description:hr.job_ceo
+#: model_terms:hr.job,website_description:hr.job_consultant
+#: model_terms:hr.job,website_description:hr.job_cto
+#: model_terms:hr.job,website_description:hr.job_developer
+#: model_terms:hr.job,website_description:hr.job_hrm
+#: model_terms:hr.job,website_description:hr.job_marketing
+#: model_terms:hr.job,website_description:hr.job_trainee
+msgid "Trainings"
+msgstr "التدريبات "
+
+#. module: hr
+#: model:ir.model.fields.selection,name:hr.selection__hr_employee__hr_icon_display__presence_undetermined
+#: model:ir.model.fields.selection,name:hr.selection__hr_employee_base__hr_icon_display__presence_undetermined
+#: model:ir.model.fields.selection,name:hr.selection__hr_employee_public__hr_icon_display__presence_undetermined
+msgid "Undetermined"
+msgstr "غير محدد "
+
+#. module: hr
+#: code:addons/hr/models/hr_plan.py:0
+#, python-format
+msgid "User linked to employee %s is required."
+msgstr "المرتبط بالموظف  %s مطلوب "
+
+#. module: hr
+#: code:addons/hr/models/hr_plan.py:0
+#, python-format
+msgid "User of coach of employee %s is not set."
+msgstr "لم يتم تعيين مستخدم مدرب الموظف %s"
+
+#. module: hr
+#: model_terms:hr.job,website_description:hr.job_ceo
+#: model_terms:hr.job,website_description:hr.job_consultant
+#: model_terms:hr.job,website_description:hr.job_cto
+#: model_terms:hr.job,website_description:hr.job_developer
+#: model_terms:hr.job,website_description:hr.job_hrm
+#: model_terms:hr.job,website_description:hr.job_marketing
+#: model_terms:hr.job,website_description:hr.job_trainee
+msgid "Valid work permit for Belgium"
+msgstr "تصريح عمل ساري المفعول لبلجيكا"
+
+#. module: hr
+#: model_terms:hr.job,website_description:hr.job_ceo
+#: model_terms:hr.job,website_description:hr.job_consultant
+#: model_terms:hr.job,website_description:hr.job_cto
+#: model_terms:hr.job,website_description:hr.job_developer
+#: model_terms:hr.job,website_description:hr.job_hrm
+#: model_terms:hr.job,website_description:hr.job_marketing
+#: model_terms:hr.job,website_description:hr.job_trainee
+msgid "What We Offer"
+msgstr "ماذا نقدم "
+
+#. module: hr
+#: code:addons/hr/models/res_users.py:0
+#, python-format
+msgid ""
+"You are only allowed to update your preferences. Please contact a HR officer"
+" to update other information."
+msgstr ""
+"يُسمح لك فقط بتحديث تفضيلاتك. يرجى الاتصال بمسؤول الموارد البشرية"
+"لتحديث المعلومات الأخرى. "
+
+#. module: hr
+#: code:addons/hr/models/models.py:0
+#, python-format
+msgid "restricted to employees"
+msgstr "يقتصر على الموظفين "
+
+#. module: hr
+#: model_terms:ir.ui.view,arch_db:hr.res_config_settings_view_form
+msgid "<span class=\"ml8 mr-2\">Minimum number of emails to sent </span>"
+msgstr "<span class=\"ml8 mr-2\">الحد الأدنى لعدد رسائل البريد الإلكتروني المرسلة </span>"
+
+#. module: hr
+#: model_terms:ir.ui.view,arch_db:hr.hr_department_view_kanban
+msgid "<strong><span>Reporting</span></strong>"
+msgstr "<strong><span>تقرير</span></strong>"
+
+#. module: hr
+#: model_terms:hr.job,website_description:hr.job_ceo
+#: model_terms:hr.job,website_description:hr.job_consultant
+#: model_terms:hr.job,website_description:hr.job_cto
+#: model_terms:hr.job,website_description:hr.job_developer
+#: model_terms:hr.job,website_description:hr.job_hrm
+#: model_terms:hr.job,website_description:hr.job_marketing
+#: model_terms:hr.job,website_description:hr.job_trainee
+msgid "Achieve monthly sales objectives"
+msgstr "تحقيق أهداف المبيعات الشهرية"
+
+#. module: hr
+#: model_terms:hr.job,website_description:hr.job_ceo
+#: model_terms:hr.job,website_description:hr.job_consultant
+#: model_terms:hr.job,website_description:hr.job_cto
+#: model_terms:hr.job,website_description:hr.job_developer
+#: model_terms:hr.job,website_description:hr.job_hrm
+#: model_terms:hr.job,website_description:hr.job_marketing
+#: model_terms:hr.job,website_description:hr.job_trainee
+msgid "Additional languages"
+msgstr "لغات إضافية"
+
+#. module: hr
+#: model_terms:hr.job,website_description:hr.job_ceo
+#: model_terms:hr.job,website_description:hr.job_consultant
+#: model_terms:hr.job,website_description:hr.job_cto
+#: model_terms:hr.job,website_description:hr.job_developer
+#: model_terms:hr.job,website_description:hr.job_hrm
+#: model_terms:hr.job,website_description:hr.job_marketing
+#: model_terms:hr.job,website_description:hr.job_trainee
+msgid "Administrative Work"
+msgstr "العمل الإداري"
+
+#. module: hr
+#: model_terms:hr.job,website_description:hr.job_ceo
+#: model_terms:hr.job,website_description:hr.job_consultant
+#: model_terms:hr.job,website_description:hr.job_cto
+#: model_terms:hr.job,website_description:hr.job_developer
+#: model_terms:hr.job,website_description:hr.job_hrm
+#: model_terms:hr.job,website_description:hr.job_marketing
+#: model_terms:hr.job,website_description:hr.job_trainee
+msgid "Bachelor Degree or Higher"
+msgstr "درجة البكالوريوس أو أعلى"
+
+#. module: hr
+#: model_terms:hr.job,website_description:hr.job_ceo
+#: model_terms:hr.job,website_description:hr.job_consultant
+#: model_terms:hr.job,website_description:hr.job_cto
+#: model_terms:hr.job,website_description:hr.job_developer
+#: model_terms:hr.job,website_description:hr.job_hrm
+#: model_terms:hr.job,website_description:hr.job_marketing
+#: model_terms:hr.job,website_description:hr.job_trainee
+msgid "Create content that will help our users on a daily basis"
+msgstr "أنشئ محتوى يساعد المستخدمين على أساس يومي"
+
+#. module: hr
+#: model:ir.model.fields,field_description:hr.field_hr_departure_wizard__departure_date
+#: model:ir.model.fields,field_description:hr.field_hr_employee__departure_date
+#: model_terms:ir.ui.view,arch_db:hr.hr_departure_wizard_view_form
+msgid "Departure Date"
+msgstr "تاريخ المغادرة"
+
+#. module: hr
+#: model_terms:ir.ui.view,arch_db:hr.hr_departure_wizard_view_form
+msgid "Departure Info"
+msgstr "معلومات المغادرة"
+
+#. module: hr
+#: model_terms:ir.ui.view,arch_db:hr.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">Presence Control</span>"
+msgstr "<span class=\"o_form_label\">التحكم في الحضور</span>"
+
+#. module: hr
+#: model:ir.ui.menu,name:hr.menu_hr_root
+msgid "Employees"
+msgstr "الموارد البشرية"

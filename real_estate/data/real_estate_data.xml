@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+
+     <!-- Reservation sequence -->
+
+    <record id="Reservation_seq" model="ir.sequence">
+        <field name="name">Reservation</field>
+        <field name="code">reservation.seq</field>
+        <field eval="1" name="number_increment" />
+        <field name="padding">4</field>
+    </record>
+
+    <!-- unit reservation sequence -->
+
+    <record id="unit_reservation_seq" model="ir.sequence">
+        <field name="name">Unit reservation</field>
+        <field name="code">unit.reservation.seq</field>
+        <field eval="1" name="number_increment" />
+        <field name="padding">4</field>
+    </record>
+
+      <!-- Contract sequence -->
+
+    <record id="realestate_contract_seq" model="ir.sequence">
+        <field name="name">Real Estate Contract</field>
+        <field name="code">realestate.contract.seq</field>
+        <field eval="1" name="number_increment" />
+        <field name="padding">4</field>
+    </record>
+
+</odoo>

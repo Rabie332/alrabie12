@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="res_partner_view_form_inherit_partner_credit_limit" model="ir.ui.view">
+        <field name="name">res.partner.view.form.inherit.credit.limit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <field name="vat" position="after">
+                <field name="customer_rank" invisible="1" />
+                <field name="show_credit_limit_customer" attrs="{'invisible': [('customer_rank', '&lt;=', 0)]}" />
+                <field
+                    name="credit_insurance_limit_customer"
+                    attrs="{'invisible': [('show_credit_limit_customer', '=', False)]}"
+                />
+                <field
+                    name="total_open_invoices_customer"
+                    decoration-danger="total_open_invoices_customer > credit_insurance_limit_customer"
+                    attrs="{'invisible': [('show_credit_limit_customer', '=', False)]}"
+                />
+                   <field name="supplier_rank" invisible="1" />
+                <field name="show_credit_limit_supplier" attrs="{'invisible': [('supplier_rank', '&lt;=', 0)]}" />
+                <field
+                    name="credit_insurance_limit_supplier"
+                    attrs="{'invisible': [('show_credit_limit_supplier', '=', False)]}"
+                />
+                <field
+                    name="total_open_invoices_supplier"
+                    decoration-danger="total_open_invoices_supplier > credit_insurance_limit_supplier"
+                    attrs="{'invisible': [('show_credit_limit_supplier', '=', False)]}"
+                />
+
+            </field>
+        </field>
+    </record>
+</odoo>

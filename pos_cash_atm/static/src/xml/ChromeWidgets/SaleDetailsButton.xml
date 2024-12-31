@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+
+     <t t-inherit="point_of_sale.SaleDetailsButton" t-inherit-mode="extension">
+         <xpath expr="//div[@class='oe_status']" position="attributes">
+             <attribute name="style">display:none</attribute>
+         </xpath>
+     </t>
+</templates>

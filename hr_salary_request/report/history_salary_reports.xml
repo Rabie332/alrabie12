@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="salary_history_xlsx" model="ir.actions.report">
+        <field name="name">Salary history template xlsx</field>
+        <field name="model">hr.salary.request</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">hr_salary_request.salary_history_template_xlsx</field>
+        <field name="report_file">hr_salary_request.salary_history_template_xlsx</field>
+    </record>
+</odoo>

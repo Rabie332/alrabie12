@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+     <menuitem
+        id="hotel_reservation_setting"
+        name="Settings"
+        parent="menu_action_hotel_reservation_tree_all"
+        sequence="20"
+    />
+
+     <record id="hotel_reservation_source_view_tree" model="ir.ui.view">
+        <field name="name">hotel.reservation.source.view.tree</field>
+        <field name="model">hotel.reservation.source</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name" />
+                <field name="active" invisible="1" />
+            </tree>
+        </field>
+    </record>
+
+     <record id="hotel_reservation_source_action" model="ir.actions.act_window">
+        <field name="name">Reservation Sources</field>
+        <field name="res_model">hotel.reservation.source</field>
+        <field name="view_mode">tree</field>
+     </record>
+
+    <menuitem
+        id="hotel_reservation_source_menu"
+        action="hotel_reservation_source_action"
+        name="Reservation Sources"
+        sequence="15"
+        parent="hotel_reservation_setting"
+    />
+
+      <record id="reservation_visit_reason_view_tree" model="ir.ui.view">
+        <field name="name">reservation.visit.reason.view.tree</field>
+        <field name="model">reservation.visit.reason</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name" />
+                <field name="active" invisible="1" />
+            </tree>
+        </field>
+    </record>
+
+     <record id="reservation_visit_reason_action" model="ir.actions.act_window">
+        <field name="name">Visit Reasons</field>
+        <field name="res_model">reservation.visit.reason</field>
+        <field name="view_mode">tree</field>
+     </record>
+
+    <menuitem
+        id="reservation_visit_reason_menu"
+        action="reservation_visit_reason_action"
+        name="Visit Reasons"
+        sequence="20"
+        parent="hotel_reservation_setting"
+    />
+
+    <record id="reservation_condition_view_tree" model="ir.ui.view">
+        <field name="name">reservation.condition.view.tree</field>
+        <field name="model">reservation.condition</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="conditions" />
+                <field name="company_id" groups="base.group_multi_company" />
+                <field name="active" invisible="1" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="reservation_condition_view_form" model="ir.ui.view">
+        <field name="name">reservation.condition.view.form</field>
+        <field name="model">reservation.condition</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                    <group>
+                      <field
+                                name="company_id"
+                                groups="base.group_multi_company"
+                                options="{'no_create':True,'no_open':True}"
+                            />
+                    </group>
+                    </group>
+                    <group colspan="4" string="Conditions">
+                      <field name="conditions" nolabel="1" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+     <record id="reservation_condition_action" model="ir.actions.act_window">
+        <field name="name">Reservation Conditions</field>
+        <field name="res_model">reservation.condition</field>
+        <field name="view_mode">tree,form</field>
+     </record>
+
+    <menuitem
+        id="reservation_condition_menu"
+        action="reservation_condition_action"
+        name="Reservation Conditions"
+        sequence="25"
+        parent="hotel_reservation_setting"
+    />
+
+      <menuitem id="hotel.menu_hotel_service" name="Services" parent="hotel_reservation_setting" sequence="35" />
+
+     <menuitem
+        id="hotel.price_setting_menu"
+        name="Price Settings"
+        parent="hotel_reservation_setting"
+        action="hotel.price_setting_action"
+        sequence="30"
+    />
+
+    <record id="hotel_reservation_hospitality_view_tree" model="ir.ui.view">
+        <field name="name">hotel.reservation.hospitality.view.tree</field>
+        <field name="model">hotel.reservation.hospitality</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="discount_type" required="1" />
+                <field name="discount" required="1" attrs="{'invisible': [('discount_type', '=', 'no_discount')]}" />
+                <field name="active" invisible="1" />
+                <field name="company_id" groups="base.group_multi_company" required="1" />
+            </tree>
+        </field>
+    </record>
+
+     <record id="hotel_reservation_hospitality_action" model="ir.actions.act_window">
+        <field name="name">Reservation Hospitality Discount</field>
+        <field name="res_model">hotel.reservation.hospitality</field>
+        <field name="view_mode">tree</field>
+     </record>
+
+    <menuitem
+        id="hotel_reservation_hospitality_menu"
+        action="hotel_reservation_hospitality_action"
+        name="Reservation Hospitality Discount"
+        sequence="30"
+        parent="hotel_reservation_setting"
+    />
+
+    <record id="hotel_reservation_setting_view_tree" model="ir.ui.view">
+        <field name="name">hotel.reservation.setting.view.tree</field>
+        <field name="model">hotel.reservation.setting</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="hours_day" required="1" widget="float_time" />
+                <field name="active" invisible="1" />
+                <field name="company_id" groups="base.group_multi_company" required="1" />
+            </tree>
+        </field>
+    </record>
+
+     <record id="hotel_reservation_setting_action" model="ir.actions.act_window">
+        <field name="name">Reservation Settings</field>
+        <field name="res_model">hotel.reservation.setting</field>
+        <field name="view_mode">tree</field>
+     </record>
+
+    <menuitem
+        id="hotel_reservation_setting_menu"
+        action="hotel_reservation_setting_action"
+        name="Reservation Settings"
+        sequence="0"
+        parent="hotel_reservation_setting"
+    />
+
+</odoo>

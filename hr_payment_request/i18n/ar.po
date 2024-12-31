@@ -1,0 +1,425 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_payment_request
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-28 16:05+0000\n"
+"PO-Revision-Date: 2022-01-28 16:05+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "تلوين استثناء النشاط"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: hr_payment_request
+#: model:mail.message.subtype,name:hr_payment_request.mt_payment_request_approved
+msgid "Approved"
+msgstr "موافق عليه"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: hr_payment_request
+#: model:request.stage,name:hr_payment_request.hr_payment_request_stage_confirm
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__create_uid
+msgid "Created by"
+msgstr "انشأ من قبل"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__create_date
+msgid "Created on"
+msgstr "تم إنشاؤها من قبل"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__department_id
+msgid "Department"
+msgstr "الإدارة"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__display_button_accept
+msgid "Display Button Accept"
+msgstr "عرض زر قبول"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__display_button_refuse
+msgid "Display Button Refuse"
+msgstr "عرض زر رفض"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__display_button_send
+msgid "Display Button Send"
+msgstr "عرض زر إرسال"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__display_name
+msgid "Display Name"
+msgstr "المسمى"
+
+#. module: hr_payment_request
+#: model:request.stage,name:hr_payment_request.hr_payment_request_stage_done
+msgid "Done"
+msgstr "أعتمد"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__message_follower_ids
+msgid "Followers"
+msgstr "متابعون"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: hr_payment_request
+#: model_terms:ir.ui.view,arch_db:hr_payment_request.hr_payment_request_view_form
+msgid "Create Payment Order"
+msgstr "إنشاء أمر الصرف"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__id
+msgid "ID"
+msgstr ""
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__activity_exception_icon
+msgid "Icon"
+msgstr "أيقونة"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,help:hr_payment_request.field_hr_payment_request__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr " أيقونة للإشارة إلى نشاط مستثنى ."
+
+#. module: hr_payment_request
+#: model:ir.model.fields,help:hr_payment_request.field_hr_payment_request__message_needaction
+#: model:ir.model.fields,help:hr_payment_request.field_hr_payment_request__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم تحديد ذلك ، فإن الرسائل الجديدة تتطلب اهتمامك."
+
+#. module: hr_payment_request
+#: model:ir.model.fields,help:hr_payment_request.field_hr_payment_request__message_has_error
+#: model:ir.model.fields,help:hr_payment_request.field_hr_payment_request__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده ، فبعض الرسائل بها خطأ في التسليم."
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__message_is_follower
+msgid "Is Follower"
+msgstr "هو متابع"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__job_id
+msgid "Job"
+msgstr "وظيفة"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__payment_id
+msgid "Payment"
+msgstr "سند الصرف"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__kanban_color
+msgid "Kanban Color Index"
+msgstr "مؤشر لون كانبان"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request____last_update
+msgid "Last Modified on"
+msgstr "تاريخ آخر تعديل"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__manager_id
+msgid "Manager"
+msgstr "المدير"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__message_ids
+msgid "Messages"
+msgstr "رسائل"
+
+#. module: hr_payment_request
+#: model_terms:ir.ui.view,arch_db:hr_payment_request.hr_payment_request_view_kanban
+msgid "Name :"
+msgstr "مسمى:"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "أخر موعد لنشاط التالي"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,help:hr_payment_request.field_hr_payment_request__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,help:hr_payment_request.field_hr_payment_request__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل مع خطأ التسليم"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,help:hr_payment_request.field_hr_payment_request__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل غير المقروءة"
+
+#. module: hr_payment_request
+#: model:ir.model,name:hr_payment_request.model_hr_payment_request
+msgid "Payment Request"
+msgstr "طلب الصرف"
+
+#. module: hr_payment_request
+#: model:mail.message.subtype,description:hr_payment_request.mt_payment_request_approved
+msgid "Payment Request is approved"
+msgstr "تمت الموافقة على طلب الصرف"
+
+#. module: hr_payment_request
+#: model:mail.activity.type,name:hr_payment_request.mail_hr_payment_request_feedback
+msgid "Payment Request is done"
+msgstr "طلب الصرف موافق عليه"
+
+#. module: hr_payment_request
+#: model:mail.activity.type,name:hr_payment_request.mail_hr_payment_request_approval
+msgid "Payment Request is ready to be approved"
+msgstr "طلب الصرف جاهز لموافقة عليه"
+
+#. module: hr_payment_request
+#: model:mail.message.subtype,description:hr_payment_request.mt_hr_payment_request_refused
+msgid "Payment Request is refused"
+msgstr "طلب صرف مرفوض"
+
+#. module: hr_payment_request
+#: model:ir.ui.menu,name:hr_payment_request.menu_hr_payment_request_all
+#: model:ir.ui.menu,name:hr_payment_request.menu_hr_payment_request_accounting
+#: model:ir.ui.menu,name:hr_payment_request.menu_hr_payment_request_root
+#: model:ir.ui.menu,name:hr_payment_request.hr_payment_request_menu_my
+msgid "Payment Requests"
+msgstr "طلبات الصرف"
+
+#. module: hr_payment_request
+#: model:mail.message.subtype,name:hr_payment_request.mt_hr_payment_request_refused
+#: model:request.stage,name:hr_payment_request.hr_payment_request_stage_refused
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__date
+msgid "Request date"
+msgstr "تاريخ الطلب"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: hr_payment_request
+#: model:request.stage,name:hr_payment_request.hr_payment_request_stage_review
+msgid "Review"
+msgstr "مراجعة"
+
+#. module: hr_payment_request
+#: model:request.stage,name:hr_payment_request.hr_payment_request_stage_reviewed
+msgid "Reviewed"
+msgstr "تمت المراجعة"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_payment_request__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: hr_payment_request
+#: model:request.stage,name:hr_payment_request.hr_payment_request_stage_send
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__stage_id
+msgid "Stage"
+msgstr "المرحلة"
+
+#. module: hr_payment_request
+#: model:ir.actions.act_window,name:hr_payment_request.payment_request_stage_action
+#: model:ir.ui.menu,name:hr_payment_request.payment_request_stage_menu
+msgid "Stages"
+msgstr "المراحل"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,help:hr_payment_request.field_payment_request__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: hr_payment_request
+#: model:ir.model.fields,help:hr_payment_request.field_hr_payment_request__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع نشاط المستثنى في السجل."
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__message_unread
+msgid "Unread Messages"
+msgstr "رسائل غير مقروءة"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عداد الرسائل غير المقروءة"
+
+#. module: hr_payment_request
+#: model:request.stage,name:hr_payment_request.hr_payment_request_stage_validate
+msgid "Validate"
+msgstr "تأكيد"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,help:hr_payment_request.field_hr_payment_request__website_message_ids
+msgid "Website communication history"
+msgstr "سجل اتصال الموقع"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__statement
+msgid "Statement"
+msgstr "البيان"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__amount
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: hr_payment_request
+#: model_terms:ir.ui.view,arch_db:hr_payment_request.hr_payment_request_view_kanban
+msgid "Amount:"
+msgstr "المبلغ:"
+
+#. module: hr_payment_request
+#: model:ir.ui.menu,name:hr_payment_request.menu_payment_request_setting
+msgid "Setting"
+msgstr "الإعدادات"
+
+#. module: hr_payment_request
+#: model:ir.ui.menu,name:hr_payment_request.hr_payment_request_stage_menu
+msgid "Stages"
+msgstr "المراحل"
+
+#. module: hr_payment_request
+#: model:ir.actions.act_window,name:hr_payment_request.hr_payment_request_action_all
+#: model:ir.actions.act_window,name:hr_payment_request.hr_payment_request_action_my
+#: model:ir.actions.act_window,name:hr_payment_request.hr_payment_request_action_accounting
+msgid "Payment Requests"
+msgstr "طلبات الصرف"
+
+#. module: hr_payment_request
+#: model_terms:ir.ui.view,arch_db:hr_payment_request.hr_payment_request_view_form
+msgid "Is Paid"
+msgstr "مدفوع"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_payment_request
+#: model:ir.model.fields,field_description:hr_payment_request.field_hr_payment_request__name
+msgid "Number"
+msgstr "المسمى"
+
+#. module: hr_payment_request
+#: model_terms:ir.ui.view,arch_db:hr_payment_request.hr_payment_request_tree
+#: model_terms:ir.ui.view,arch_db:hr_payment_request.hr_payment_request_view_form
+msgid "Name"
+msgstr "المسمى"

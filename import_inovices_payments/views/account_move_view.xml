@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_old_payment_tree_inherit" model="ir.ui.view">
+        <field name="name">account.payment.tree.old.payments.inherit</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_invoice_import_wizard" string="Import Invoices" type="object" class="btn-primary"/>
+                <button name="action_payment_import_wizard" string="Import Payments" type="object" class="btn-success"/>
+                <button name="action_credit_note_import_wizard" string="Import Credit notes" type="object" class="btn-warning"/>
+                <button name="action_expense_import_wizard" string="Import Old Expenses" type="object" class="btn-success" invisible='1'/>
+                <button name="action_delete_journal_entries_wizard" string="Delete Entry" type="object" class="btn-success" invisible='1'/>
+                <button name="action_journal_entry_import_wizard" string="Import Entries" type="object" class="btn-dark"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

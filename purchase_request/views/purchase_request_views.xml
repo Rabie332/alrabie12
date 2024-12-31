@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- pylint: disable=dangerous-view-replace-wo-priority-->
+    <menuitem
+        id="purchase_request_menu_root"
+        name="Purchase Requests"
+        parent="purchase.menu_purchase_root"
+        sequence="0"
+    />
+    <!-- Purchase request -->
+    <record id="purchase_request_view_search" model="ir.ui.view">
+        <field name="name">purchase.request.view.search</field>
+        <field name="model">purchase.request</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="request_type_id" />
+                <field name="company_id" />
+                <filter
+                    string="My Purchase Requests"
+                    domain="[('employee_id.user_id','=',uid)]"
+                    name="my_purchase_request"
+                />
+                <filter
+                    string="Archived"
+                    name="inactive"
+                    domain="[('active','=',False)]"
+                />
+                <group expand="0" string="Group By">
+                    <filter
+                        string="Purchase Request Type"
+                        name="request_type_id"
+                        context="{'group_by':'request_type_id'}"
+                    />
+                    <filter
+                        name="company"
+                        string="Company"
+                        context="{'group_by': 'company_id'}"
+                    />
+                    <filter
+                        string="Stage"
+                        name="stage"
+                        context="{'group_by':'stage_id'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+    <record id="purchase_request_view_kanban" model="ir.ui.view">
+        <field name="name">purchase.request.view.kanban</field>
+        <field name="model">purchase.request</field>
+        <field name="inherit_id" ref="request.request_view_kanban" />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='employee_id']" position="after">
+                <field name="name" />
+                <field name="date" />
+                <field name="request_type_id" />
+                <field name="estimated_budget" />
+                <field name="activity_ids" />
+                <field name="activity_state" />
+                <field name="message_needaction_counter" />
+            </xpath>
+            <div name="card_header" position="inside">
+                <b>Number:</b>
+                <field name="name" />
+                <br />
+                <b>Date:</b>
+                <field name="date" />
+                <br />
+                <b>Tender type:</b>
+                <span
+                    invisible="context.get('default_request_type_id', False) or context.get('fsm_mode', False)"
+                >
+                    <field name="request_type_id" />
+                </span>
+                <br />
+                <span>
+                    <b>Estimated budget:</b>
+                    <field name="estimated_budget" />
+                </span>
+            </div>
+            <div name="div_bottom_left" position="inside">
+                <field name="activity_ids" widget="kanban_activity" />
+                <t t-if="record.message_needaction_counter.raw_value">
+                    <span
+                        role="alert"
+                        class='oe_kanban_mail_new'
+                        title='Unread Messages'
+                    >
+                        <i
+                            class='fa fa-comments'
+                            role="img"
+                            aria-label="Unread Messages"
+                        />
+                        <t t-raw="record.message_needaction_counter.raw_value" />
+                    </span>
+                </t>
+                <span name="date" t-attf-class="#{deadline_class || ''}">
+                    <t t-esc="date" />
+                </span>
+            </div>
+        </field>
+    </record>
+    <record id="purchase_request_view_tree" model="ir.ui.view">
+        <field name="name">purchase.request.view.tree</field>
+        <field name="model">purchase.request</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="date" />
+                <field name="employee_id" />
+                <field name="description" />
+                <field
+                    name="request_type_id"
+                    invisible="context.get('user_invisible', False)"
+                    optional="show"
+                />
+                <field name="estimated_budget" />
+                <field name="duration_expected" />
+                <field name="stage_id" />
+                <field name="state" invisible="1" />
+            </tree>
+        </field>
+    </record>
+    <record id="purchase_request_view_form" model="ir.ui.view">
+        <field name="name">purchase.request.view.form</field>
+        <field name="model">purchase.request</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="request.request_view_form" />
+        <field name="arch" type="xml">
+            <group position="before">
+                <widget
+                name="web_ribbon"
+                title="Archived"
+                bg_color="bg-danger"
+                attrs="{'invisible': [('active', '=', True)]}"
+            />
+            </group>
+            <field name="stage_id" position="attributes">
+                <attribute name="attrs">{'invisible': [('request_type_id', '=', False)]}
+            </attribute>
+            </field>
+            <group name="principal" position="replace" />
+            <sheet position="inside">
+                <group>
+                    <group>
+                        <field name="active" invisible="1" />
+                        <field
+                        name="name"
+                        attrs="{'invisible': [('id', '=', False)]}"
+                    />
+                        <field name="date" />
+                        <field name="estimated_budget" />
+                        <field name="duration_expected" />
+                        <field name="description" placeholder="Description ..." />
+                    </group>
+                    <group>
+                        <field
+                        name="request_type_id"
+                        required="1"
+                        options="{'no_create':True,'no_open':True}"
+                    />
+                        <label for="reason" string="" />
+                        <field
+                        name="reason"
+                        placeholder="If the purchase by obligation,  the name of the company and all justifications must be mentioned"
+                        nolabel="1"
+                        attrs="{'required': [('request_type_id', '=', %(purchase_request_type_purchase_obligation)d)]}"
+                    />
+                        <field
+                        name="company_id"
+                        force_save="1"
+                    />
+                    </group>
+                </group>
+                <notebook>
+                    <page string="Products">
+                        <field name="line_ids" widget="section_and_note_one2many">
+                            <tree editable="bottom" delete="true">
+                                <field name="is_editable" invisible="1"/>
+                                <field name="product_id" attrs="{'readonly': [('is_editable', '=', False)]}"/>
+                                <field name="description" required="1" attrs="{'readonly': [('is_editable', '=', False)]}"/>
+                                <field name="product_qty" sum="Total Qty" attrs="{'readonly': [('is_editable', '=', False)]}"/>
+                                <field
+                                name="product_uom_id"
+                                force_save="1"
+                                options="{'no_create':True,'no_open':True}"
+                            />
+                                <field name="notes" attrs="{'readonly': [('is_editable', '=', False)]}"/>
+                            </tree>
+                            <form string="Purchase Order Line">
+                                <group>
+                                    <group>
+                                        <field
+                                        name="product_id"
+                                        domain="[('purchase_ok', '=', True)]"
+                                    />
+                                        <field name="product_qty" />
+                                    </group>
+                                    <group colspan="12">
+                                        <notebook>
+                                            <page string="Description">
+                                                <field name="description" />
+                                            </page>
+                                            <page string="Notes">
+                                                <field name="notes" />
+                                            </page>
+                                        </notebook>
+                                    </group>
+                                </group>
+                            </form>
+                        </field>
+                    </page>
+                    <page string="Employee Information">
+                        <group>
+                            <field
+                            name="employee_id"
+                            options="{'no_create':True, 'no_open':True}"
+                            readonly="1"
+                            force_save="1"
+                        />
+                            <field name="department_id" force_save="1" />
+                            <field name="job_id" force_save="1" />
+                        </group>
+                    </page>
+                    <page string="Budget">
+                        <group>
+                            <field
+                            name="category_id"
+                            options='{"no_open": True, "no_create": True}'
+                        />
+                            <field
+                            name="account_id"
+                            domain="[('category_id', '=', category_id)]"
+                            options='{"no_open": True, "no_create": True}'
+                            invisible="1"
+                        />
+                            <field name="account_description" />
+                        </group>
+                    </page>
+                    <page string="Attachments">
+                        <field name="attachment_ids" widget="many2many_binary" />
+                    </page>
+                </notebook>
+            </sheet>
+            <field name="message_ids" position="attributes">
+                <attribute
+                name="options"
+            >{'post_refresh': 'recipients', 'open_attachments': True}
+            </attribute>
+            </field>
+        </field>
+    </record>
+    <record
+        id="purchase_request_view_form_group_adjust_purchase_budget"
+        model="ir.ui.view"
+    >
+        <field name="name">purchase.request.view.form.adjust.purchase.budget</field>
+        <field name="model">purchase.request</field>
+        <field name="inherit_id" ref="purchase_request_view_form" />
+        <field
+            name="groups_id"
+            eval="[(6, 0, [ref('purchase_request.group_adjust_purchase_budget')])]"
+        />
+        <field name="arch" type="xml">
+            <field name="category_id" position="attributes">
+                <attribute name="readonly">0</attribute>
+                <attribute
+                    name="attrs"
+                >{'readonly': [('state', 'in', ['done', 'cancel'])]}</attribute>
+            </field>
+            <field name="account_id" position="attributes">
+                <attribute name="readonly">0</attribute>
+                <attribute
+                    name="attrs"
+                >{'readonly': [('state', 'in', ['done', 'cancel'])]}</attribute>
+            </field>
+            <field name="account_description" position="attributes">
+                <attribute name="readonly">0</attribute>
+                <attribute
+                    name="attrs"
+                >{'readonly': [('state', 'in', ['done', 'cancel'])]}</attribute>
+            </field>
+        </field>
+    </record>
+    <record id="purchase_request_view_pivot" model="ir.ui.view">
+        <field name="name">purchase.request.view.pivot</field>
+        <field name="model">purchase.request</field>
+        <field name="arch" type="xml">
+            <pivot string="Purchase Request" display_quantity="True">
+                <field name="request_type_id" type="row" />
+                <field name="estimated_budget" type="measure" />
+            </pivot>
+        </field>
+    </record>
+    <record id="purchase_request_view_graph" model="ir.ui.view">
+        <field name="name">purchase.request.view.graph</field>
+        <field name="model">purchase.request</field>
+        <field name="arch" type="xml">
+            <graph string="Purchase Request">
+                <field name="request_type_id" />
+                <field name="estimated_budget" type="measure" />
+            </graph>
+        </field>
+    </record>
+    <record id="purchase_request_view_calendar" model="ir.ui.view">
+        <field name="name">purchase.request.view.calendar</field>
+        <field name="model">purchase.request</field>
+        <field name="priority" eval="2" />
+        <field name="arch" type="xml">
+            <calendar
+                string="Calendar View"
+                date_start="date"
+                color="request_type_id"
+                hide_time="true"
+                event_limit="5"
+            >
+                <field name="name" />
+                <field name="estimated_budget" widget="monetary" />
+                <field name="request_type_id" />
+            </calendar>
+        </field>
+    </record>
+    <record id="purchase_request_action" model="ir.actions.act_window">
+        <field name="name">Purchase Request</field>
+        <field name="res_model">purchase.request</field>
+        <field name="view_mode">kanban,tree,form,pivot,graph,calendar</field>
+        <field name="context">{'search_default_my_requests': 1}</field>
+        <field name="search_view_id" ref="purchase_request_view_search" />
+    </record>
+    <menuitem
+        id="purchase_request_menu"
+        name="Purchase Requests"
+        action="purchase_request_action"
+        parent="purchase_request_menu_root"
+        sequence="1"
+    />
+    <record id="purchase_request_action_my" model="ir.actions.act_window">
+        <field name="name">Purchase Requests</field>
+        <field name="res_model">purchase.request</field>
+        <field name="domain">[('employee_id.user_id','=', uid)]</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem
+        id="purchase_request_menu_my"
+        sequence="1"
+        parent="request.self_services_menu"
+        action="purchase_request_action_my"
+    />
+    <!-- Action of Purchase Request Type-->
+    <record
+        id="purchase_request_type_view_form_inherit_purchase_request"
+        model="ir.ui.view"
+    >
+        <field name="name">purchase.request.type.budget.view.form.inherit</field>
+        <field name="model">request.type</field>
+        <field name="inherit_id" ref="request.request_type_view_form" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field
+                    name="budget_max"
+                    attrs="{'invisible': [('res_model', '!=', 'purchase.request')]}"
+                />
+                <field
+                    name="budget_min"
+                    attrs="{'invisible': [('res_model', '!=', 'purchase.request')]}"
+                />
+            </field>
+            <field name="code" position="after">
+                <field
+                    name="is_committee_required"
+                    attrs="{'invisible': [('res_model', '!=', 'purchase.request')]}"
+                />
+            </field>
+        </field>
+    </record>
+    <record id="purchase_request_type_action" model="ir.actions.act_window">
+        <field name="name">Types</field>
+        <field name="res_model">request.type</field>
+        <field name="domain">[('res_model','=', 'purchase.request')]</field>
+        <field name="context">{'default_res_model': 'purchase.request'}</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem
+        id="purchase_request_type_menu"
+        name="Purchase Request Types"
+        action="purchase_request_type_action"
+        sequence="1"
+        parent="purchase.menu_purchase_config"
+        groups="purchase.group_purchase_manager"
+    />
+    <!-- Purchase request Stages -->
+    <record id="purchase_request_stage_action" model="ir.actions.act_window">
+        <field name="name">Purchase Request Stages</field>
+        <field name="res_model">request.stage</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('res_model','=', 'purchase.request')]</field>
+        <field name="context">{'default_res_model': 'purchase.request'}</field>
+    </record>
+    <menuitem
+        id="purchase_request_stage_menu"
+        name="Purchase Request Stages"
+        action="purchase_request_stage_action"
+        parent="purchase.menu_purchase_config"
+        groups="request.group_stages_manager"
+        sequence="4"
+    />
+    <!-- Purchase request category -->
+    <record id="purchase_request_category_view_tree" model="ir.ui.view">
+        <field name="name">purchase.request.category.view.tree</field>
+        <field name="model">purchase.request.category</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+    <record id="purchase_request_category_action" model="ir.actions.act_window">
+        <field name="name">Purchase Request Categories</field>
+        <field name="res_model">purchase.request.category</field>
+        <field name="view_mode">tree</field>
+    </record>
+    <menuitem
+        id="purchase_request_category_menu"
+        name="Purchase Request Categories"
+        action="purchase_request_category_action"
+        parent="purchase.menu_purchase_config"
+        sequence="5"
+        groups="purchase.group_purchase_manager"
+    />
+    <!-- Purchase request account -->
+    <record id="purchase_request_account_view_tree" model="ir.ui.view">
+        <field name="name">purchase.request.account.view.tree</field>
+        <field name="model">purchase.request.account</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="name" />
+                <field
+                    name="category_id"
+                    options='{"no_open": True, "no_create": True}'
+                />
+            </tree>
+        </field>
+    </record>
+    <record id="purchase_request_account_action" model="ir.actions.act_window">
+        <field name="name">Purchase Request Accounts</field>
+        <field name="res_model">purchase.request.account</field>
+        <field name="view_mode">tree</field>
+    </record>
+    <menuitem
+        id="purchase_request_account_menu"
+        name="Purchase Request Accounts"
+        action="purchase_request_account_action"
+        parent="purchase.menu_purchase_config"
+        sequence="6"
+        groups="purchase.group_purchase_manager"
+    />
+    <!--    Drive actions Menu -->
+    <record id="purchase_request_view_tree_drive_action" model="ir.ui.view">
+        <field name="name">purchase.request.view.tree</field>
+        <field name="model">purchase.request</field>
+        <field name="arch" type="xml">
+            <tree import="0" create="0">
+                <field name="date" />
+                <field name="employee_id" />
+                <field
+                    name="request_type_id"
+                    invisible="context.get('user_invisible', False)"
+                    optional="show"
+                />
+                <field name="stage_id" />
+                <field name="state" invisible="1" />
+            </tree>
+        </field>
+    </record>
+    <menuitem
+        id="purchase_request_menu_drive_actions"
+        sequence="2"
+        name="Purchase"
+        parent="request.drive_actions_menu"
+    />
+    <record id="purchase_request_action_drive_actions" model="ir.actions.act_window">
+        <field name="name">Purchase Requests</field>
+        <field name="res_model">purchase.request</field>
+        <field name="context">{'group_by':'stage_id'}</field>
+        <field
+            name="view_ids"
+            eval="[(5, 0, 0),
+                                      (0, 0, {'view_mode': 'tree','view_id': ref('purchase_request.purchase_request_view_tree_drive_action')})]"
+        />
+    </record>
+    <menuitem
+        id="purchase_request_menu_drive_action"
+        sequence="1"
+        parent="purchase_request_menu_drive_actions"
+        action="purchase_request_action_drive_actions"
+    />
+</odoo>

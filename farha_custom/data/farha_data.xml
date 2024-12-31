@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+
+    <record id="cron_create_invoice_installment" model="ir.cron">
+        <field name="name">Create invoice for contract installment </field>
+        <field eval="True" name="active" />
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="state">code</field>
+        <field name="code">model.create_invoice_installment()</field>
+        <field name="model_id" ref="model_realestate_contract" />
+    </record>
+</odoo>

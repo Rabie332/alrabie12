@@ -1,0 +1,150 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_bank_profit_loss
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-02 04:13+0000\n"
+"PO-Revision-Date: 2023-03-02 07:28+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_bank_profit_loss
+#: model_terms:ir.ui.view,arch_db:pos_bank_profit_loss.view_pos_session_form
+msgid "ATM / Cash Control"
+msgstr "التحكم في أجهزة الصراف الآلي /  النقدي"
+
+#. module: pos_bank_profit_loss
+#: model:ir.model.fields,field_description:pos_bank_profit_loss.field_pos_session__bank_register_balance_end
+msgid "ATM Theoretical Closing Balance"
+msgstr "الميزان الختامي النظري لأجهزة الصراف الآلي"
+
+#. module: pos_bank_profit_loss
+#: model:ir.model.fields,field_description:pos_bank_profit_loss.field_pos_session__bank_register_difference
+msgid "ATM before Closing Difference"
+msgstr "أجهزة الصراف الآلي قبل إقفال الفرق"
+
+#. module: pos_bank_profit_loss
+#: model_terms:ir.ui.view,arch_db:pos_bank_profit_loss.view_pos_session_form
+msgid "ATM control"
+msgstr "التحكم في أجهزة الصراف الآلي"
+
+#. module: pos_bank_profit_loss
+#: code:addons/pos_bank_profit_loss/models/account_bank_statement.py:0
+#, python-format
+msgid "ATM difference observed during the counting (Loss)"
+msgstr "فرق أجهزة الصراف الآلي التي لوحظت أثناء العد (الخسارة)"
+
+#. module: pos_bank_profit_loss
+#: code:addons/pos_bank_profit_loss/models/account_bank_statement.py:0
+#, python-format
+msgid "ATM difference observed during the counting (Profit)"
+msgstr "فرق أجهزة الصراف الآلي التي لوحظت أثناء العد (الربح)"
+
+#. module: pos_bank_profit_loss
+#: model:ir.model,name:pos_bank_profit_loss.model_atm_statement_line
+msgid "ATM statement line"
+msgstr "سطر كشف حساب الصراف الآلي"
+
+#. module: pos_bank_profit_loss
+#: model:ir.model.fields,field_description:pos_bank_profit_loss.field_pos_session__statement_atm_line_ids
+#: model_terms:ir.ui.view,arch_db:pos_bank_profit_loss.statement_atm_line_view_form
+#: model_terms:ir.ui.view,arch_db:pos_bank_profit_loss.statement_atm_line_view_tree
+msgid "ATM statement lines"
+msgstr "خطوط كشف حساب أجهزة الصراف الآلي"
+
+#. module: pos_bank_profit_loss
+#: model:ir.model.fields,field_description:pos_bank_profit_loss.field_atm_statement_line__amount
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: pos_bank_profit_loss
+#: model_terms:ir.ui.view,arch_db:pos_bank_profit_loss.view_pos_session_form
+msgid "Bank Closing Balance"
+msgstr "رصيد إقفال البنك"
+
+#. module: pos_bank_profit_loss
+#: model:ir.model,name:pos_bank_profit_loss.model_account_bank_statement
+msgid "Bank Statement"
+msgstr "كشف حساب البنك"
+
+#. module: pos_bank_profit_loss
+#: model:ir.model.fields,field_description:pos_bank_profit_loss.field_atm_statement_line__create_uid
+msgid "Created by"
+msgstr "انشأ من قبل"
+
+#. module: pos_bank_profit_loss
+#: model:ir.model.fields,field_description:pos_bank_profit_loss.field_atm_statement_line__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: pos_bank_profit_loss
+#: model:ir.model.fields,field_description:pos_bank_profit_loss.field_account_bank_statement__display_name
+#: model:ir.model.fields,field_description:pos_bank_profit_loss.field_atm_statement_line__display_name
+#: model:ir.model.fields,field_description:pos_bank_profit_loss.field_pos_session__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: pos_bank_profit_loss
+#: model:ir.model.fields,field_description:pos_bank_profit_loss.field_account_bank_statement__id
+#: model:ir.model.fields,field_description:pos_bank_profit_loss.field_atm_statement_line__id
+#: model:ir.model.fields,field_description:pos_bank_profit_loss.field_pos_session__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: pos_bank_profit_loss
+#: model:ir.model.fields,field_description:pos_bank_profit_loss.field_account_bank_statement____last_update
+#: model:ir.model.fields,field_description:pos_bank_profit_loss.field_atm_statement_line____last_update
+#: model:ir.model.fields,field_description:pos_bank_profit_loss.field_pos_session____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: pos_bank_profit_loss
+#: model:ir.model.fields,field_description:pos_bank_profit_loss.field_atm_statement_line__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: pos_bank_profit_loss
+#: model:ir.model.fields,field_description:pos_bank_profit_loss.field_atm_statement_line__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: pos_bank_profit_loss
+#: model:ir.model.fields,field_description:pos_bank_profit_loss.field_atm_statement_line__payment_method_id
+msgid "Payment Method"
+msgstr "طريقة السداد"
+
+#. module: pos_bank_profit_loss
+#: code:addons/pos_bank_profit_loss/models/account_bank_statement.py:0
+#, python-format
+msgid ""
+"Please go on the %s journal and define a Loss Account. This account will be "
+"used to record ATM difference."
+msgstr ""
+"الرجاء الانتقال إلى دفتر اليومية %s وتحديد حساب الخسارة. سيتم استخدام هذا "
+"الحساب لتسجيل فرق أجهزة الصراف الآلي."
+
+#. module: pos_bank_profit_loss
+#: code:addons/pos_bank_profit_loss/models/account_bank_statement.py:0
+#, python-format
+msgid ""
+"Please go on the %s journal and define a Profit Account. This account will "
+"be used to record ATM difference."
+"الرجاء الانتقال إلى دفتر اليومية %s وتحديد حساب الربح. سيتم استخدام هذا "
+"الحساب لتسجيل فرق أجهزة الصراف الآلي."
+
+#. module: pos_bank_profit_loss
+#: model:ir.model,name:pos_bank_profit_loss.model_pos_session
+msgid "Point of Sale Session"
+msgstr "جلسة نقطة البيع"
+
+#. module: pos_bank_profit_loss
+#: model:ir.model.fields,field_description:pos_bank_profit_loss.field_atm_statement_line__session_id
+msgid "Related session"
+msgstr "الجلسة المرتبطة"

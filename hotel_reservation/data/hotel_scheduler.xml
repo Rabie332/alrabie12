@@ -1,0 +1,37 @@
+<odoo>
+    <!-- Scheduler For To Inform Guest About Reservation Before 24 Hours -->
+    <record model="ir.cron" id="Guest_reservation_reminder_24hrs">
+        <field name="name">Hotel Reservation: Booking Reminder before 24 Hours
+        </field>
+        <field name="model_id" ref="model_hotel_reservation" />
+        <field name="code">model.reservation_reminder_24hrs()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+    </record>
+
+    <!-- change room -->
+
+    <record id="reservation_change_room_cron" model="ir.cron">
+        <field name="name">Change Room and terminate reservation Daily Monthly</field>
+        <field name="model_id" ref="model_hotel_reservation" />
+        <field name="state">code</field>
+        <field name="code">model.cron_change_room_reservation_daily()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+    </record>
+
+    <record id="reservation_change_room_cron_hourly" model="ir.cron">
+        <field name="name">Change Room and terminate reservation Hourly</field>
+        <field name="model_id" ref="model_hotel_reservation" />
+        <field name="state">code</field>
+        <field name="code">model.cron_change_room_reservation_hours()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">hours</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False" />
+    </record>
+</odoo>

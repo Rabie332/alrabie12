@@ -1,0 +1,156 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_fleet_information
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-26 14:22+0000\n"
+"PO-Revision-Date: 2022-08-26 14:22+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_fleet_information
+#: model:ir.model,name:hr_fleet_information.model_hr_employee_base
+msgid "Basic Employee"
+msgstr "الموظف الأساسي"
+
+#. module: hr_fleet_information
+#: model:ir.model.fields,field_description:hr_fleet_information.field_fleet_vehicle__display_name
+#: model:ir.model.fields,field_description:hr_fleet_information.field_hr_employee_base__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_fleet_information
+#: model:ir.model.fields,field_description:hr_fleet_information.field_fleet_vehicle__driver_expiry_date
+msgid "Driver Expiry Date"
+msgstr "تاريخ انتهاء زاول للسائق"
+
+#. module: hr_fleet_information
+#: model:ir.model.fields,field_description:hr_fleet_information.field_fleet_vehicle__driver_license_expiry_date
+msgid "Driver License Expiry Date"
+msgstr "تاريخ انتهاء رخصة السائق"
+
+#. module: hr_fleet_information
+#: model_terms:ir.ui.view,arch_db:hr_fleet_information.fleet_vehicle_view_form_inherit_hr_fleet_information
+msgid "Driver informations"
+msgstr "معلومات المركبة"
+
+#. module: hr_fleet_information
+#: model:ir.model.fields,field_description:hr_fleet_information.field_fleet_vehicle__driving_license_end_date
+msgid "Driving License Expiration Date"
+msgstr "تاريخ انتهاء رخصة السير "
+
+#. module: hr_fleet_information
+#: model:ir.model.fields,field_description:hr_fleet_information.field_fleet_vehicle__driving_license_number
+msgid "Driving License Number"
+msgstr "رقم رخصة السير / الرقم التسلسلي"
+
+#. module: hr_fleet_information
+#: model:ir.model.fields,field_description:hr_fleet_information.field_hr_employee__driving_permit_number
+#: model:ir.model.fields,field_description:hr_fleet_information.field_hr_employee_base__driving_permit_number
+#: model:ir.model.fields,field_description:hr_fleet_information.field_hr_employee_public__driving_permit_number
+msgid "Driving Permit Number"
+msgstr "رقم رخصة السياقة"
+
+#. module: hr_fleet_information
+#: model:ir.model.fields,field_description:hr_fleet_information.field_fleet_vehicle__expiry_card_end_date
+msgid "Expiry Card Expiration Date"
+msgstr "تاريخ انتهاء بطاقة زاول"
+
+#. module: hr_fleet_information
+#: model:ir.model.fields,field_description:hr_fleet_information.field_fleet_vehicle__expiry_card_number
+msgid "Expiry Card Number"
+msgstr "رقم تصريح المينا / زاول"
+
+#. module: hr_fleet_information
+#: model:ir.model.fields,field_description:hr_fleet_information.field_fleet_vehicle__id
+#: model:ir.model.fields,field_description:hr_fleet_information.field_hr_employee_base__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_fleet_information
+#: model:ir.model.fields,field_description:hr_fleet_information.field_fleet_vehicle__insurance_number
+msgid "Insurance  Number"
+msgstr "رقم التامين / المركبة"
+
+#. module: hr_fleet_information
+#: model:ir.model.fields,field_description:hr_fleet_information.field_fleet_vehicle__insurance_end_date
+msgid "Insurance Expiration Date"
+msgstr "تاريخ انتهاء التامين"
+
+#. module: hr_fleet_information
+#: model:ir.model.fields,field_description:hr_fleet_information.field_fleet_vehicle__insurance_no_cargo
+msgid "Insurance No/Cargo"
+msgstr "رقم التأمين / الحمولة"
+
+#. module: hr_fleet_information
+#: model:ir.model.fields,field_description:hr_fleet_information.field_fleet_vehicle__insurance_no_cargo_end_date
+msgid "Insurance No/Cargo End Date"
+msgstr "تاريخ إنتهاء رقم التأمين / الحمولة"
+
+#. module: hr_fleet_information
+#: model:ir.model.fields,field_description:hr_fleet_information.field_fleet_vehicle____last_update
+#: model:ir.model.fields,field_description:hr_fleet_information.field_hr_employee_base____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_fleet_information
+#: model:ir.model.fields,field_description:hr_fleet_information.field_fleet_vehicle__periodic_inspection_end_date
+msgid "Periodic inspection Expiration Date"
+msgstr "تاريخ انتهاء الفحص الدوري"
+
+#. module: hr_fleet_information
+#: model:ir.model.fields,field_description:hr_fleet_information.field_fleet_vehicle__periodic_inspection_number
+msgid "Periodic inspection Number"
+msgstr "رقم الفحص الدوري"
+
+#. module: hr_fleet_information
+#: model:ir.model.fields,field_description:hr_fleet_information.field_fleet_vehicle__play_card_end_date
+#: model:ir.model.fields,field_description:hr_fleet_information.field_hr_employee__play_card_end_date
+#: model:ir.model.fields,field_description:hr_fleet_information.field_hr_employee_base__play_card_end_date
+#: model:ir.model.fields,field_description:hr_fleet_information.field_hr_employee_public__play_card_end_date
+msgid "Play Card Expiration Date"
+msgstr "تاريخ انتهاء كرت التشغيل"
+
+#. module: hr_fleet_information
+#: model:ir.model.fields,field_description:hr_fleet_information.field_fleet_vehicle__play_card_number
+#: model:ir.model.fields,field_description:hr_fleet_information.field_hr_employee__play_card_number
+#: model:ir.model.fields,field_description:hr_fleet_information.field_hr_employee_base__play_card_number
+#: model:ir.model.fields,field_description:hr_fleet_information.field_hr_employee_public__play_card_number
+msgid "Play Card Number"
+msgstr "رقم كرت التشغيل / وزارة النقل"
+
+#. module: hr_fleet_information
+#: model:ir.model.fields,field_description:hr_fleet_information.field_hr_employee__port_licence_end_date
+#: model:ir.model.fields,field_description:hr_fleet_information.field_hr_employee_base__port_licence_end_date
+#: model:ir.model.fields,field_description:hr_fleet_information.field_hr_employee_public__port_licence_end_date
+msgid "Port Licence Expiration Date"
+msgstr "تاريخ انتهاء ترخيص المينا"
+
+#. module: hr_fleet_information
+#: model:ir.model.fields,field_description:hr_fleet_information.field_hr_employee__port_licence_number
+#: model:ir.model.fields,field_description:hr_fleet_information.field_hr_employee_base__port_licence_number
+#: model:ir.model.fields,field_description:hr_fleet_information.field_hr_employee_public__port_licence_number
+msgid "Port Licence Number"
+msgstr "رقم ترخيص المينا"
+
+#. module: hr_fleet_information
+#: model:ir.model.fields,field_description:hr_fleet_information.field_fleet_vehicle__port_permit_end_date
+msgid "Port Permit Expiration Date"
+msgstr "تاريخ انتهاء تصريح المينا"
+
+#. module: hr_fleet_information
+#: model:ir.model.fields,field_description:hr_fleet_information.field_fleet_vehicle__port_permit_number
+msgid "Port Permit Number"
+msgstr "رقم نجم للمركبة"
+
+#. module: hr_fleet_information
+#: model:ir.model,name:hr_fleet_information.model_fleet_vehicle
+msgid "Vehicle"
+msgstr "المركبة"

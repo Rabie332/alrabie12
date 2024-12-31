@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="dms_folder_comp_rule" model="ir.rule">
+        <field name="name">Dms Folder multi company rule</field>
+        <field name="model_id" ref="dms.model_dms_folder" />
+        <field eval="True" name="global" />
+        <field
+            name="domain_force"
+        >['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record>
+
+    <record id="ir_attachment_comp_rule" model="ir.rule">
+        <field name="name">Ir Attachement multi company rule</field>
+        <field name="model_id" ref="dms.model_ir_attachment" />
+        <field eval="True" name="global" />
+        <!--  Always show attachments in the chatter -->
+        <field
+            name="domain_force"
+        >['|', '|', ('company_id','=',False),('company_id', 'in', company_ids), ('res_model', '!=', False)]</field>
+    </record>
+
+    <record id="dms_cabinet_comp_rule" model="ir.rule">
+        <field name="name">Dms cabinet multi company rule</field>
+        <field name="model_id" ref="dms.model_dms_cabinet" />
+        <field eval="True" name="global" />
+        <field
+            name="domain_force"
+        >['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record>
+
+    <record id="dms_drawer_comp_rule" model="ir.rule">
+        <field name="name">Dms drawer multi company rule</field>
+        <field name="model_id" ref="dms.model_dms_drawer" />
+        <field eval="True" name="global" />
+        <field
+            name="domain_force"
+        >['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+
+
+      <!-- Payment methods -->
+        <record id="account_payment_method_cash_in" model="account.payment.method">
+            <field name="name">Cash</field>
+            <field name="code">cash</field>
+            <field name="payment_type">inbound</field>
+        </record>
+        <record id="account_payment_method_cash_out" model="account.payment.method">
+            <field name="name">Cash</field>
+            <field name="code">cash</field>
+            <field name="payment_type">outbound</field>
+        </record>
+
+        <record id="account_payment_method_visa_in" model="account.payment.method">
+            <field name="name">Visa</field>
+            <field name="code">visa</field>
+            <field name="payment_type">inbound</field>
+        </record>
+        <record id="account_payment_method_visa_out" model="account.payment.method">
+            <field name="name">Visa</field>
+            <field name="code">visa</field>
+            <field name="payment_type">outbound</field>
+        </record>
+
+       <record id="account_payment_method_check_in" model="account.payment.method">
+            <field name="name">Checks</field>
+            <field name="code">check_printing</field>
+            <field name="payment_type">inbound</field>
+            <field name="sequence">20</field>
+        </record>
+
+</odoo>

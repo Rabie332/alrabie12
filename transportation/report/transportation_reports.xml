@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- comment code will be used after-->
+<!--     <record id="report_way_bill" model="ir.actions.report">-->
+<!--        <field name="name">WAY BILL</field>-->
+<!--        <field name="model">shipping.order</field>-->
+<!--        <field name="report_type">qweb-pdf</field>-->
+<!--        <field name="report_name">transportation.way_bill_template</field>-->
+<!--        <field name="report_file">transportation.way_bill_template</field>-->
+<!--        <field name="binding_model_id" ref="transportation.model_shipping_order" />-->
+<!--    </record>-->
+
+      <record id="report_way_bill_line" model="ir.actions.report">
+        <field name="name">WAY BILL</field>
+        <field name="model">shipping.order.line</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">transportation.way_bill_line_template</field>
+        <field name="report_file">transportation.way_bill_line_template</field>
+        <field name="binding_model_id" ref="transportation.model_shipping_order_line" />
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

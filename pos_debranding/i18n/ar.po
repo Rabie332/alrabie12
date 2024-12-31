@@ -1,0 +1,61 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_debranding
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-11 13:44+0000\n"
+"PO-Revision-Date: 2022-09-11 13:44+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_debranding
+#: model:ir.model.fields,field_description:pos_debranding.field_pos_config__display_logo
+msgid "Change POS logo"
+msgstr "تغيير شعار نقطة البيع"
+
+#. module: pos_debranding
+#: model:ir.model.fields,field_description:pos_debranding.field_pos_config__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: pos_debranding
+#: model:ir.model.fields,field_description:pos_debranding.field_pos_config__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: pos_debranding
+#: model:ir.model.fields,field_description:pos_debranding.field_pos_config____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: pos_debranding
+#. openerp-web
+#: code:addons/pos_debranding/static/src/xml/Chrome.xml:0
+#: code:addons/pos_debranding/static/src/xml/Chrome.xml:0
+#: code:addons/pos_debranding/static/src/xml/OrderReceipt.xml:0
+#: code:addons/pos_debranding/static/src/xml/OrderReceipt.xml:0
+#, python-format
+msgid "Logo"
+msgstr "شعار"
+
+#. module: pos_debranding
+#: model:ir.model.fields,field_description:pos_debranding.field_pos_config__pos_logo
+msgid "POS LOGO"
+msgstr "شعار نقطة البيع"
+
+#. module: pos_debranding
+#: model:ir.model,name:pos_debranding.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "إعدادات نقطة البيع"
+
+#. module: pos_debranding
+#: model_terms:ir.ui.view,arch_db:pos_debranding.view_pos_config_form
+msgid "Set logo on pos screen and receipt"
+msgstr "ضع الشعار على شاشة نقاط البيع والإيصال"

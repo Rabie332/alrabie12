@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+
+    <!-- hr employee sequence -->
+
+    <record id="hr_employee_seq" model="ir.sequence">
+        <field name="name">Hr Employee</field>
+        <field name="code">hr.employee.seq</field>
+        <field eval="1" name="number_increment" />
+        <field name="padding">5</field>
+    </record>
+
+</odoo>

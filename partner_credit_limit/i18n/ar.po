@@ -1,0 +1,117 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* partner_credit_limit
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-02 09:40+0000\n"
+"PO-Revision-Date: 2022-06-02 09:40+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: partner_credit_limit
+#: model:ir.model,name:partner_credit_limit.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: partner_credit_limit
+#: model:ir.model.fields,field_description:partner_credit_limit.field_res_partner__credit_insurance_limit_customer
+#: model:ir.model.fields,field_description:partner_credit_limit.field_res_users__credit_insurance_limit_customer
+msgid "Credit insurance Limit Customer"
+msgstr "الحد الائتماني للعميل"
+
+#. module: partner_credit_limit
+#: model:ir.model.fields,field_description:partner_credit_limit.field_sale_order__credit_insurance_amount
+msgid "Credit insurance amount"
+msgstr "الحد الائتماني"
+
+#. module: partner_credit_limit
+#: model:ir.model.fields,field_description:partner_credit_limit.field_purchase_order__credit_insurance_amount
+msgid "Credit insurance limit"
+msgstr "الحد الائتماني"
+
+#. module: partner_credit_limit
+#: model:ir.model.fields,field_description:partner_credit_limit.field_res_partner__credit_insurance_limit_supplier
+#: model:ir.model.fields,field_description:partner_credit_limit.field_res_users__credit_insurance_limit_supplier
+msgid "Credit insurance limit Supplier"
+msgstr "الحد الائتماني للمورد"
+
+#. module: partner_credit_limit
+#: model:ir.model.fields,field_description:partner_credit_limit.field_purchase_order__display_name
+#: model:ir.model.fields,field_description:partner_credit_limit.field_res_partner__display_name
+#: model:ir.model.fields,field_description:partner_credit_limit.field_sale_order__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: partner_credit_limit
+#: model:ir.model.fields,field_description:partner_credit_limit.field_purchase_order__id
+#: model:ir.model.fields,field_description:partner_credit_limit.field_res_partner__id
+#: model:ir.model.fields,field_description:partner_credit_limit.field_sale_order__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: partner_credit_limit
+#: model:ir.model.fields,field_description:partner_credit_limit.field_purchase_order____last_update
+#: model:ir.model.fields,field_description:partner_credit_limit.field_res_partner____last_update
+#: model:ir.model.fields,field_description:partner_credit_limit.field_sale_order____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: partner_credit_limit
+#: model:ir.model,name:partner_credit_limit.model_purchase_order
+msgid "Purchase Order"
+msgstr "أمر شراء"
+
+#. module: partner_credit_limit
+#: model:ir.model,name:partner_credit_limit.model_sale_order
+msgid "Sales Order"
+msgstr "أمر البيع"
+
+#. module: partner_credit_limit
+#: model:ir.model.fields,field_description:partner_credit_limit.field_sale_order__show_credit_limit
+msgid "Show Credit Limit"
+msgstr "إظهار الحد الائتماني"
+
+#. module: partner_credit_limit
+#: model:ir.model.fields,field_description:partner_credit_limit.field_res_partner__show_credit_limit_customer
+#: model:ir.model.fields,field_description:partner_credit_limit.field_res_users__show_credit_limit_customer
+msgid "Show Credit Limit Customer"
+msgstr " إظهار الحد الائتماني للعميل"
+
+#. module: partner_credit_limit
+#: model:ir.model.fields,field_description:partner_credit_limit.field_purchase_order__show_credit_limit
+#: model:ir.model.fields,field_description:partner_credit_limit.field_res_partner__show_credit_limit_supplier
+#: model:ir.model.fields,field_description:partner_credit_limit.field_res_users__show_credit_limit_supplier
+msgid "Show Credit Limit Supplier"
+msgstr "إظهار الحد الائتماني للمورد"
+
+#. module: partner_credit_limit
+#: code:addons/partner_credit_limit/models/purchase.py:0
+#: code:addons/partner_credit_limit/models/sale.py:0
+#, python-format
+msgid "Total exceeds Credit limit"
+msgstr "الإجمالي تجاوز حد الائتمان"
+
+#. module: partner_credit_limit
+#: model:ir.model.fields,field_description:partner_credit_limit.field_purchase_order__total_open_invoices
+#: model:ir.model.fields,field_description:partner_credit_limit.field_sale_order__total_open_invoices
+msgid "Total open invoices"
+msgstr "مجموع الفواتير المفتوحة"
+
+#. module: partner_credit_limit
+#: model:ir.model.fields,field_description:partner_credit_limit.field_res_partner__total_open_invoices_customer
+#: model:ir.model.fields,field_description:partner_credit_limit.field_res_users__total_open_invoices_customer
+msgid "Total open invoices Customer"
+msgstr "مجموع فواتير العميل المفتوحة"
+
+#. module: partner_credit_limit
+#: model:ir.model.fields,field_description:partner_credit_limit.field_res_partner__total_open_invoices_supplier
+#: model:ir.model.fields,field_description:partner_credit_limit.field_res_users__total_open_invoices_supplier
+msgid "Total open invoices Supplier"
+msgstr "مجموع فواتير المورد المفتوحة"

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+
+    <!-- Mail Activity Type-->
+
+    <record id="mail_hr_training_approval" model="mail.activity.type">
+        <field name="name">Training is ready to be approved</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="res_model_id" ref="hr_training.model_hr_training" />
+        <field name="category">validation</field>
+    </record>
+
+    <record id="mail_hr_training_feedback" model="mail.activity.type">
+        <field name="name">Training is done</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="res_model_id" ref="hr_training.model_hr_training" />
+        <field name="category">feedback</field>
+    </record>
+
+    <record id="mt_hr_training_approved" model="mail.message.subtype">
+        <field name="name">Approved</field>
+        <field name="res_model">hr.training</field>
+        <field name="description">Training request is approved</field>
+    </record>
+
+    <record id="mt_hr_training_refused" model="mail.message.subtype">
+        <field name="name">Refused</field>
+        <field name="res_model">hr.training</field>
+        <field name="description">Training is refused</field>
+    </record>
+
+    <!-- Set to draft activities -->
+
+    <record id="mail_hr_training_set_to_draft" model="mail.activity.type">
+        <field name="name">Edit request</field>
+        <field name="icon">fa-sun-o</field>
+         <field name="category">validation</field>
+        <field name="res_model_id" ref="hr_training.model_hr_training" />
+    </record>
+</odoo>

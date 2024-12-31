@@ -1,0 +1,41 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* payroll_contract_net
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-21 09:59+0000\n"
+"PO-Revision-Date: 2022-12-21 09:59+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: payroll_contract_net
+#: model:ir.model.fields,field_description:payroll_contract_net.field_hr_contract__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: payroll_contract_net
+#: model:ir.model,name:payroll_contract_net.model_hr_contract
+msgid "Employee Contract"
+msgstr "عقد الموظف"
+
+#. module: payroll_contract_net
+#: model:ir.model.fields,field_description:payroll_contract_net.field_hr_contract__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: payroll_contract_net
+#: model:ir.model.fields,field_description:payroll_contract_net.field_hr_contract____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: payroll_contract_net
+#: model:ir.model.fields,field_description:payroll_contract_net.field_hr_contract__wage_net
+msgid "Net Wage"
+msgstr "الأجر الصافي"

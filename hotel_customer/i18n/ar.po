@@ -1,0 +1,145 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hotel_customer
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-09 12:08+0000\n"
+"PO-Revision-Date: 2022-06-09 12:08+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+
+#. module: hotel_customer
+#: model:ir.model.fields,field_description:hotel_customer.field_res_partner__birthday
+msgid "Birthday"
+msgstr "تاريخ الميلاد"
+
+#. module: hotel_customer
+#: model:ir.model.fields.selection,name:hotel_customer.selection__res_partner__guest_type__citizen
+msgid "Citizen"
+msgstr "مواطن"
+
+#. module: hotel_customer
+#: model:ir.model,name:hotel_customer.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: hotel_customer
+#: model_terms:ir.ui.view,arch_db:hotel_customer.ir_attachment_view_search
+msgid "Content"
+msgstr ""
+
+#. module: hotel_customer
+#: model:ir.model.fields,field_description:hotel_customer.field_res_partner__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hotel_customer
+#: model:ir.model.fields,field_description:hotel_customer.field_res_partner__documents_count
+#: model:ir.model.fields,field_description:hotel_customer.field_res_users__documents_count
+msgid "Document Count"
+msgstr "عدد الوثائق"
+
+#. module: hotel_customer
+#: model:ir.model.fields,field_description:hotel_customer.field_res_partner__document_ids
+#: model:ir.model.fields,field_description:hotel_customer.field_res_users__document_ids
+#: model_terms:ir.ui.view,arch_db:hotel_customer.res_partner_view_form
+msgid "Documents"
+msgstr "الوثائق"
+
+#. module: hotel_customer
+#: model:ir.model.fields.selection,name:hotel_customer.selection__res_partner__gender__female
+msgid "Female"
+msgstr "أنثى"
+
+#. module: hotel_customer
+#: model:ir.model.fields,field_description:hotel_customer.field_res_partner__gender
+msgid "Gender"
+msgstr "الجنس"
+
+#. module: hotel_customer
+#: model:ir.model.fields,field_description:hotel_customer.field_res_partner__is_guest
+#: model:ir.model.fields,field_description:hotel_customer.field_res_users__is_guest
+msgid "Guest"
+msgstr "نزيل"
+
+#. module: hotel_customer
+#: model:ir.ui.menu,name:hotel_customer.hotel_customer_management_menu_root
+msgid "Guest Management"
+msgstr "إدارة النزلاء"
+
+#. module: hotel_customer
+#: model:ir.model.fields,field_description:hotel_customer.field_res_partner__guest_type
+#: model:ir.model.fields,field_description:hotel_customer.field_res_users__guest_type
+msgid "Guest Type"
+msgstr "نوع النزيل"
+
+#. module: hotel_customer
+#: model:ir.model.fields.selection,name:hotel_customer.selection__res_partner__guest_type__gulf_citizen
+msgid "Gulf citizen"
+msgstr "مواطن خليجي"
+
+#. module: hotel_customer
+#: model:ir.model.fields,field_description:hotel_customer.field_res_partner__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hotel_customer
+#: model:ir.model.fields,field_description:hotel_customer.field_res_partner__identification_id
+msgid "Identification ID"
+msgstr "بطاقة هوية مدنية"
+
+#. module: hotel_customer
+#: model:ir.model.fields,field_description:hotel_customer.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hotel_customer
+#: model:ir.model.fields,field_description:hotel_customer.field_res_partner__last_room_id
+#: model:ir.model.fields,field_description:hotel_customer.field_res_users__last_room_id
+msgid "Last Room"
+msgstr "غرفة"
+
+#. module: hotel_customer
+#: model:ir.model.fields.selection,name:hotel_customer.selection__res_partner__gender__male
+msgid "Male"
+msgstr "ذكر"
+
+#. module: hotel_customer
+#: model:ir.model.fields,field_description:hotel_customer.field_res_partner__passport_id
+msgid "Passport ID"
+msgstr "جواز السفر"
+
+#. module: hotel_customer
+#: model:ir.model.fields,field_description:hotel_customer.field_res_partner__residence_number
+#: model:ir.model.fields,field_description:hotel_customer.field_res_users__residence_number
+msgid "Residence number"
+msgstr "رقم بطاقة الاقامة"
+
+#. module: hotel_customer
+#: model:ir.model.fields.selection,name:hotel_customer.selection__res_partner__guest_type__resident
+msgid "Resident"
+msgstr "مقيم"
+
+#. module: hotel_customer
+#: model:ir.model.fields.selection,name:hotel_customer.selection__res_partner__gender__unknown_
+msgid "Unknown"
+msgstr "غير معروف"
+
+#. module: hotel_customer
+#: model:ir.model.fields.selection,name:hotel_customer.selection__res_partner__guest_type__visitor
+msgid "Visitor"
+msgstr "زائر"
+
+#. module: hotel_customer
+#: model:ir.actions.act_window,name:hotel_customer.hotel_customer_management_action
+#: model:ir.ui.menu,name:hotel_customer.hotel_customer_management_menu
+msgid "Guests"
+msgstr "النزلاء"

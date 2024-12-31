@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- ======= Housekeeping ======= -->
+    <!-- Form view of hotel housekeeping -->
+    <record id="view_hotel_housekeeping_form" model="ir.ui.view">
+        <field name="name">hotel.housekeeping.form</field>
+        <field name="model">hotel.housekeeping</field>
+        <field name="arch" type="xml">
+            <form string="Housekeeping">
+                <header>
+                    <button
+                        name="%(report_hotel_maintenance)d"
+                        string="Print Maintenance Report"
+                        type="action"
+                        class="oe_highlight"
+                        attrs="{'invisible': [('type', '!=', 'maintenance')]}"
+                        icon="fa-print"
+                    />
+                    <button
+                        string="Clean"
+                        name="room_clean"
+                        aria-label="Clean"
+                        title="Clean"
+                        attrs="{'invisible': ['|', ('type', '=', 'maintenance'), ('state', 'not in', ['dirty', 'inspect'])]}"
+                        type="object"
+                        class="btn btn-primary"
+                    >
+                        <i class="fa fa-paint-brush" />
+                    </button>
+                    <button
+                        string="Dirty"
+                        name="action_set_to_dirty"
+                        aria-label="Dirty"
+                        title="Dirty"
+                        attrs="{'invisible': ['|', ('type', '!=', 'cleanliness'), ('state', 'not in', ['clean', 'inspect'])]}"
+                        type="object"
+                        class="btn btn-primary"
+                    >
+                        <i class="fa-pencil-square-o" />
+                    </button>
+
+                    <button
+                        string="Maintenance"
+                        name="action_set_maintenance"
+                        aria-label="Maintenance"
+                        title="Maintenance"
+                        attrs="{'invisible': ['|', ('type', '!=', 'maintenance'), ('state', '!=', 'inspect')]}"
+                        type="object"
+                        class="btn btn-primary"
+                    >
+                        <i class="fa-pencil-square-o" />
+                    </button>
+                    <button
+                        string="Done"
+                        name="room_done"
+                        aria-label="Done"
+                        title="Done"
+                        states="clean,maintenance"
+                        type="object"
+                        class="btn btn-primary"
+                    >
+                        <i class="fa-check" />
+                    </button>
+                    <button
+                        string="Cancel"
+                        name="room_cancel"
+                        aria-label="Cancel"
+                        title="Cancel"
+                        states="clean,dirty,inspect,maintenance"
+                        type="object"
+                        class="btn btn-primary"
+                    >
+                        <i class="fa-times-circle" />
+                    </button>
+                    <field name="state" widget="statusbar" statusbar_visible="inspect,done" />
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="type" invisible="1" />
+                            <field name="current_date" />
+                            <field
+                                name="clean_type"
+                                attrs="{'required': [('type', '=', 'cleanliness')], 'invisible': [('type', '=', 'maintenance')]}"
+                            />
+                            <field
+                                name="maintenance_type_id"
+                                attrs="{'required': [('type', '=', 'maintenance')], 'invisible': [('type', '=', 'cleanliness')]}"
+                            />
+                            <field
+                                name="company_id"
+                                options="{'no_create':True, 'no_open':True}"
+                                groups="base.group_multi_company"
+                                required="1"
+                            />
+                            <field name="categ_id" options="{'no_create':True, 'no_open':True}" required="1" />
+                            <field
+                                name="room_id"
+                                domain="[('is_withheld', '=', False), ('company_id', '=', company_id), ('room_categ_id', '=', categ_id)]"
+                            />
+                        </group>
+                        <group>
+                            <field name="inspector_id" required="1" />
+                            <field name="inspect_date_time" />
+                            <field
+                                name="quality"
+                                attrs="{'invisible':[('state','not in',['clean','done', 'maintenance'])]}"
+                            />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Activities">
+                            <field
+                                name="activity_line_ids"
+                                context="{'room_id':room_id, 'today_date':current_date}"
+                                colspan="4"
+                                nolabel="1"
+                            >
+                                <form string="Activity Lines">
+                                    <group colspan="4" col="4">
+                                        <field name="today_date" />
+                                        <field name="activity_id" />
+                                        <field name="housekeeper_id" required="1" />
+                                        <field name="clean_start_time" />
+                                        <field name="clean_end_time" />
+
+                                        <field name="type" invisible="1" />
+                                    </group>
+                                    <div class="oe_title">
+                                        <div class="oe_edit_only">
+                                            <field
+                                                name="is_dirty"
+                                                attrs="{'invisible': [('type', '=', 'maintenance')]}"
+                                            />
+                                            <label
+                                                for="is_dirty"
+                                                string="Is Dirty?"
+                                                attrs="{'invisible': [('type', '=', 'maintenance')]}"
+                                            />
+                                            <field
+                                                name="is_clean"
+                                                attrs="{'invisible': [('type', '=', 'maintenance')]}"
+                                            />
+                                            <label
+                                                for="is_clean"
+                                                string="Is Clean?"
+                                                attrs="{'invisible': [('type', '=', 'maintenance')]}"
+                                            />
+                                            <field
+                                                name="is_maintenance"
+                                                attrs="{'invisible': [('type', '=', 'cleanliness')]}"
+                                            />
+                                            <label
+                                                for="is_maintenance"
+                                                string="Is Maintenance?"
+                                                attrs="{'invisible': [('type', '=', 'cleanliness')]}"
+                                            />
+                                        </div>
+                                    </div>
+                                </form>
+                                <tree editable="buttom">
+                                    <field
+                                        name="activity_id"
+                                        domain="['|', ('categ_id.type', '=', type), ('categ_id', '=', False)]"
+                                        required="1"
+                                    />
+                                    <field name="type" invisible="1" />
+                                    <field name="housekeeper_ids" invisible="1" />
+                                    <field
+                                        name="housekeeper_id"
+                                        domain="[('id', 'in', housekeeper_ids)]"
+                                        options="{'no_create':True, 'no_open':True}"
+                                        required="1"
+                                    />
+                                    <field name="today_date" />
+                                    <field name="clean_start_time" />
+                                    <field name="clean_end_time" />
+                                    <field
+                                        name="is_dirty"
+                                        readonly="1"
+                                        attrs="{'column_invisible': [('parent.type', '=', 'maintenance')]}"
+                                    />
+                                    <field
+                                        name="is_clean"
+                                        readonly="1"
+                                        attrs="{'column_invisible': [('parent.type', '=', 'maintenance')]}"
+                                    />
+                                    <field
+                                        name="is_maintenance"
+                                        readonly="1"
+                                        force_save="1"
+                                        attrs="{'column_invisible': [('parent.type', '=', 'cleanliness')]}"
+                                    />
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Note">
+                            <field name="note" nolabel="1" />
+                        </page>
+                    </notebook>
+
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree view of hotel housekeeping -->
+    <record id="view_hotel_housekeeping_tree" model="ir.ui.view">
+        <field name="name">hotel.housekeeping.tree</field>
+        <field name="model">hotel.housekeeping</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="current_date" />
+                <field name="clean_type" invisible="context.get('default_type') == 'maintenance'" />
+                <field name="maintenance_type_id" invisible="context.get('default_type') == 'cleanliness'" />
+                <field name="room_id" domain="[('is_withheld', '=', False)]" />
+                <field name="inspector_id" />
+                <field name="inspect_date_time" />
+                <field name="company_id" groups="base.group_multi_company" />
+                <field name="state" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Search view of hotel housekeeping -->
+    <record id="view_hotel_housekeeping_search" model="ir.ui.view">
+        <field name="name">hotel.housekeeping.search</field>
+        <field name="model">hotel.housekeeping</field>
+        <field name="arch" type="xml">
+            <search string="Housekeeping">
+                <group string='Filters'>
+                    <filter domain="[('state','=','dirty')]" string="Dirty" name="dirty" />
+                    <filter domain="[('state','=','clean')]" string="Clean" name="clean" />
+                    <filter domain="[('state','=','inspect')]" string="Inspect" name="inspect" />
+                    <filter domain="[('state','=','cancel')]" string="Cancel" name="cancel" />
+                    <filter domain="[('state','=','done')]" string="Done" name="done" />
+                </group>
+                <field name="inspector_id" />
+                <field name="quality" />
+                <field name="state" />
+                <newline />
+                <group expand="0" string="Group By">
+                    <filter
+                        name="inspector_id"
+                        string="Inspector Name"
+                        icon="terp-personal"
+                        domain="[]"
+                        context="{'group_by':'inspector_id'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action for hotel housekeeping -->
+    <record id="hotel_housekeeping_cleanliness_action" model="ir.actions.act_window">
+        <field name="name">Housekeeping Services Cleanliness</field>
+        <field name="res_model">hotel.housekeeping</field>
+        <field name="binding_view_types">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_hotel_housekeeping_tree" />
+        <field name="domain">[('type','=','cleanliness')]</field>
+        <field name="context">{'default_type': 'cleanliness'}</field>
+    </record>
+
+    <record id="hotel_housekeeping_maintenance_action" model="ir.actions.act_window">
+        <field name="name">Housekeeping Services Maintenance</field>
+        <field name="res_model">hotel.housekeeping</field>
+        <field name="binding_view_types">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_hotel_housekeeping_tree" />
+        <field name="domain">[('type','=','maintenance')]</field>
+        <field name="context">{'default_type': 'maintenance'}</field>
+    </record>
+    <menuitem
+        id="menu_housekeeping"
+        name="Housekeeping Services"
+        sequence="2"
+        groups="hotel_housekeeping.group_service_officer,hotel_housekeeping.group_clean_worker,hotel_housekeeping.group_maintenance_worker,hotel.group_hotel_manager"
+        web_icon="hotel_housekeeping,static/description/icon.png"
+    />
+
+    <menuitem
+        name="Housekeeping Services Cleanliness"
+        id="menu_open_hotel_housekeeping_form_tree"
+        action="hotel_housekeeping_cleanliness_action"
+        parent="menu_housekeeping"
+        sequence="4"
+        groups="hotel_housekeeping.group_service_officer,hotel_housekeeping.group_clean_worker,hotel.group_hotel_manager"
+    />
+
+    <menuitem
+        name="Housekeeping Services Maintenance"
+        id="hotel_housekeeping_maintenance_menu"
+        action="hotel_housekeeping_maintenance_action"
+        parent="menu_housekeeping"
+        sequence="10"
+        groups="hotel_housekeeping.group_service_officer,hotel_housekeeping.group_maintenance_worker,hotel.group_hotel_manager"
+    />
+
+    <menuitem
+        id="hotel_housekeeping_setting_menu"
+        name="Settings"
+        parent="menu_housekeeping"
+        sequence="15"
+        groups="hotel.group_hotel_manager,hotel_housekeeping.group_service_officer"
+    />
+
+
+    <!-- ================ Activity Category================= -->
+    <!-- Form view of hotel housekeeping activity type -->
+    <record id="view_hotel_housekeeping_activity_type_form" model="ir.ui.view">
+        <field name="name">hotel_housekeeping_activity_type_form</field>
+        <field name="model">hotel.housekeeping.activity.type</field>
+        <field name="arch" type="xml">
+            <form string="Housekeeping Activity Types">
+                <sheet>
+                    <group>
+                        <field name="name" string="Activity Name" />
+                        <field name="activity_id" />
+                        <field name="type" required="1" widget="radio" options="{'horizontal': true}" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree view of hotel housekeeping activity type -->
+    <record id="view_hotel_housekeeping_activity_type_list" model="ir.ui.view">
+        <field name="name">hotel_housekeeping_activity_type_list</field>
+        <field name="model">hotel.housekeeping.activity.type</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="type" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action of hotel housekeeping activity type -->
+    <record id="action_hotel_housekeeping_activity_type_view_form" model="ir.actions.act_window">
+        <field name="name">Activity Types</field>
+        <field name="res_model">hotel.housekeeping.activity.type</field>
+        <field name="binding_view_types">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem
+        id="menu_action_hotel_housekeeping_activity_type_view_form"
+        name="Activity Types"
+        action="action_hotel_housekeeping_activity_type_view_form"
+        parent="hotel_housekeeping_setting_menu"
+        sequence="12"
+    />
+
+    <!-- Activity -->
+    <!-- Form view of hotel activity -->
+    <record id="view_h_activity_form" model="ir.ui.view">
+        <field name="name">hotel.activity.form</field>
+        <field name="model">hotel.activity</field>
+        <field name="arch" type="xml">
+            <form string="Housekeeping Activity">
+                <sheet>
+                    <group>
+                        <field name="name" string="Activity Name" />
+                        <field name="categ_id" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search view of hotel activity -->
+    <record id="view_h_activity_search" model="ir.ui.view">
+        <field name="name">hotel.activity.search</field>
+        <field name="model">hotel.activity</field>
+        <field name="arch" type="xml">
+            <search string="Housekeeping Activity">
+                <field name="name" />
+                <field name="categ_id" />
+                <newline />
+                <group expand="0" string="Group By...">
+                    <filter
+                        name="categ_id"
+                        string="Catagory"
+                        icon="terp-stock_symbol-selection"
+                        domain="[]"
+                        context="{'group_by':'categ_id'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Tree view of hotel activity -->
+    <record id="view_h_activity_tree" model="ir.ui.view">
+        <field name="name">hotel.activity.tree</field>
+        <field name="model">hotel.activity</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="categ_id" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action of hotel activity -->
+    <record id="action_h_activity_form" model="ir.actions.act_window">
+        <field name="name">Activities</field>
+        <field name="res_model">hotel.activity</field>
+        <field name="binding_view_types">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'default_isactivitytype':1}</field>
+    </record>
+
+    <menuitem
+        id="menu_open_h_activity_form"
+        name="Activities"
+        action="action_h_activity_form"
+        parent="hotel_housekeeping_setting_menu"
+    />
+
+    <!-- Maintenance Types-->
+
+    <record id="hotel_maintenance_type_view_tree" model="ir.ui.view">
+        <field name="name">hotel.maintenance.type.view.tree</field>
+        <field name="model">hotel.maintenance.type</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name" />
+                <field name="active" invisible="1" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="hotel_maintenance_type_action" model="ir.actions.act_window">
+        <field name="name">Maintenance Types</field>
+        <field name="res_model">hotel.maintenance.type</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem
+        id="hotel_maintenance_type_menu"
+        action="hotel_maintenance_type_action"
+        name="Maintenance Types"
+        sequence="15"
+        parent="hotel_housekeeping_setting_menu"
+    />
+
+
+</odoo>

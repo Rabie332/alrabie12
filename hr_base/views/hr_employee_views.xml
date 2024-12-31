@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_employee_filter_inherit_hr_base" model="ir.ui.view">
+        <field name="name">hr.employee.search</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_filter" />
+        <field name="arch" type="xml">
+            <field name="name" position="attributes">
+                <attribute name="filter_domain">['|', '|', ('work_email', 'ilike', self), ('name', 'ilike', self),
+                    ('display_name_en', 'ilike', self)]
+                </attribute>
+            </field>
+            <field name="name" position="after">
+                <field name="residence_id" />
+            </field>
+        </field>
+    </record>
+    <!-- kanban view-->
+     <record id="hr_kanban_view_employees_inherit_hr_base" model="ir.ui.view">
+           <field name="name">hr.employee.kanban</field>
+           <field name="model">hr.employee</field>
+           <field name="priority">10</field>
+           <field name="inherit_id" ref="hr.hr_kanban_view_employees" />
+           <field name="arch" type="xml">
+             <field name="hr_icon_display" position="after">
+                 <field name="expired_stay" />
+             </field>
+             <xpath
+                expr="//kanban/templates//div/div[hasclass('oe_kanban_details')]/div[hasclass('o_kanban_record_top')]/div[hasclass('o_kanban_record_headings')]/strong"
+                position="before"
+            >
+               <div name="card_body" position="o_kanban_record_headings">
+                    <div class="float-right" t-if="record.expired_stay.raw_value">
+                        <span class="fa fa-ban" role="img" aria-label="Expired Stay" title="Expired Stay">
+                        </span>
+                    </div>
+               </div>
+             </xpath>
+           </field>
+     </record>
+    <!--   Form  View -->
+
+    <record id="view_employee_form_inherit" model="ir.ui.view">
+        <field name="name">hr.employee.form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form" />
+        <field name="arch" type="xml">
+            <h1 position="after">
+                <h3>
+                    <field name="display_name_en" placeholder="English Name" />
+                </h3>
+            </h1>
+            <field name="identification_id" position="attributes">
+              <attribute name="attrs">{'invisible':[('is_saudian','=',False)]}</attribute>
+            </field>
+              <field name="identification_id" position="after">
+                  <field name="is_saudian" invisible="1" />
+                   <field name="identification_date" attrs="{'invisible':[('is_saudian','=',False)]}" />
+                  <field name="expired_stay" invisible="1" />
+                     <field name="residence_id" attrs="{'invisible':[('is_saudian','=',True)]}" />
+                    <field name="residence_end_date" attrs="{'invisible':[('is_saudian','=',True)]}" />
+                    <field name="passport_end_date" />
+              </field>
+             <field name="job_id" position="replace" />
+             <field name="birthday" position="replace" />
+             <field name="place_of_birth" position="replace" />
+             <field name="country_of_birth" position="replace" />
+             <div name="div_km_home_work" position="after">
+                 <field name="birthday" />
+                 <field name="age" />
+                 <field name="place_of_birth" groups="hr.group_hr_user" />
+                 <field name="country_of_birth" groups="hr.group_hr_user" />
+             </div>
+              <group position="replace" />
+
+            <div id="o_work_employee_container" position="before">
+              <group>
+                <group>
+                    <field name="mobile_phone" widget="phone" />
+                    <field name="work_phone" widget="phone" />
+                    <field name="work_email" widget="email" />
+                    <field name="company_id" groups="base.group_multi_company" />
+                    <field name="gosi_no" />
+                    <field name="labour_office_no" />
+                </group>
+                <group>
+                    <field name="date_direct_action" />
+                    <field name="department_id" options="{'no_create':True}" />
+                    <field name="job_id" options="{'no_create':True}" />
+                    <field name="parent_id" />
+                </group>
+             </group>
+        </div>
+            <xpath expr="//page[last()]" position="after">
+                <page string="Attachments">
+                    <field name="attachment_ids" widget="many2many_binary" string="Select Files" nolabel="1" />
+                </page>
+            </xpath>
+            <xpath expr="//page[@name='personal_information']/group" position="inside">
+                 <group string="Insurance">
+                    <field name="insurance_attachment_ids" widget="many2many_binary" />
+                     <field name="insurance_no" />
+                     <field name="insurance_end_date" />
+                </group>
+                 <group string="Health">
+                    <field name="health_certificate_attachment_ids" widget="many2many_binary" />
+                     <field name="health_certificate_end_date" />
+                 </group>
+                 <group string="Driving">
+                    <field name="driving_license_attachment_ids" widget="many2many_binary" />
+                     <field name="driving_license_end_date" />
+                 </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id='hr.menu_hr_employee' model="ir.ui.menu">
+        <field name="groups_id" eval="[(6,0, [ref('hr.group_hr_manager')])]" />
+    </record>
+
+
+
+    <record id="hr_employee_information_setting_view_tree" model="ir.ui.view">
+        <field name="name">hr.employee.information.setting.view.tree</field>
+        <field name="model">hr.employee.information.setting</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="company_id" groups="base.group_multi_company" />
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="hr_employee_information_setting_view_form" model="ir.ui.view">
+        <field name="name">hr.employee.information.setting.view.form</field>
+        <field name="model">hr.employee.information.setting</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                         <field name="name" />
+                        <field name="company_id" groups="base.group_multi_company" options='{"no_create": True}' />
+                        <label for="residence" string="Residence" />
+                         <div class="o_row" name="residence">
+                            <field name="residence" nolabel="1" required="1" />
+                            <field name="residence_unity" class="o_inline" nolabel="1" required="1" />
+                        </div>
+                        <label for="passport" string="Passport" />
+                         <div class="o_row" name="passport">
+                            <field name="passport" nolabel="1" required="1" />
+                            <field name="passport_unity" class="o_inline" nolabel="1" required="1" />
+                        </div>
+                        </group>
+                        <group>
+                            <label for="insurance" string="Medical Insurance" />
+                         <div class="o_row" name="insurance">
+                            <field name="insurance" nolabel="1" required="1" />
+                            <field name="insurance_unity" class="o_inline" nolabel="1" required="1" />
+                        </div>
+                             <label for="health_certificate" string="Health certificate" />
+                             <div class="o_row" name="health_certificate">
+                                <field name="health_certificate" nolabel="1" required="1" />
+                                <field name="health_certificate_unity" class="o_inline" nolabel="1" required="1" />
+                            </div>
+                            <label for="driving_license" string="Driving licenses" />
+                             <div class="o_row" name="driving_license">
+                                <field name="driving_license" nolabel="1" required="1" />
+                                <field name="driving_license_unity" class="o_inline" nolabel="1" required="1" />
+                            </div>
+                        </group>
+                    </group>
+                     <notebook>
+                        <page string="Users">
+                             <div><b
+                                >The employee and the selected users will receive notifications about the expiry of the documents.</b>
+                 </div>
+                 <br />
+                            <group>
+                                <field
+                                    name="user_ids"
+                                    widget="many2many_tags"
+                                    options='{"no_open": True, "no_create": True}'
+                                />
+                            </group>
+                        </page>
+                         <page string="Residence Message">
+                            <field name="residence_msg" nolabel="1" required="1" />
+                        </page>
+                         <page string="Passport Message">
+                            <field name="passport_msg" nolabel="1" required="1" />
+                         </page>
+                         <page string="Medical Insurance Message">
+                            <field name="insurance_msg" nolabel="1" required="1" />
+                         </page>
+                         <page string="Health certificate Message">
+                            <field name="health_certificate_msg" nolabel="1" required="1" />
+                         </page>
+                         <page string="Driving license Message">
+                            <field name="driving_license_msg" nolabel="1" required="1" />
+                        </page>
+                     </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="hr_employee_information_setting_action" model="ir.actions.act_window">
+        <field name="name">Setting alerts for employee data</field>
+        <field name="res_model">hr.employee.information.setting</field>
+        <field name="view_mode">tree,form</field>
+     </record>
+
+    <menuitem
+        id="hr_employee_information_setting_menu"
+        name="Setting alerts for employee data"
+        action="hr_employee_information_setting_action"
+        parent="hr.menu_human_resources_configuration"
+        sequence="1"
+    />
+
+     <menuitem
+        id="resource_calendar_menu_hr"
+        action="resource.action_resource_calendar_form"
+        parent="hr.menu_human_resources_configuration"
+        sequence="2"
+    />
+
+
+</odoo>

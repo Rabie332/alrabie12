@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="clearance_payments_invoices_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <div class="header" />
+                <t t-call="web.internal_layout">
+                    <div class="page">
+                        <div class="row">
+                            <div class="col-3">
+                            </div>
+                            <div class="col-6 text-center">
+                                <center>
+                                    <h1 style="color:#507298;padding-top:20px;">
+                                         <t t-if="o.env.user.lang=='ar_001'">
+                                        <strong style="font-size: 25px;">
+                                             تقرير التكاليف والمداخيل
+                                        </strong>
+                                         </t>
+                                         <t t-else="">
+                                             <strong style="font-size: 25px;">
+                                            Costs and Incomes Report
+                                        </strong>
+                                         </t>
+                                    </h1>
+                                </center>
+                            </div>
+                            <div class="col-3">
+                                <img
+                                    style="max-height:120px !important;"
+                                    width="80%"
+                                    t-att-src="'data:image/png;base64,%s' % to_text(user.company_id.sudo().logo)"
+                                />
+
+                            </div>
+                        </div>
+                        <div class="oe_structure" />
+                        <div class="col-12 text-center">
+                                  <t t-if="o.env.user.lang=='ar_001'">
+                                 <strong>الفترة :</strong>
+                          </t>
+                         <t t-else="">
+                              <strong>Period :</strong>
+                         </t>
+                            <span t-field="o.date_from" t-options="{'format': 'yyyy/MM/dd'}" />
+                            -
+                            <span t-field="o.date_to" t-options="{'format': 'yyyy/MM/dd'}" />
+                            <br />
+                            <br />
+                        </div>
+                        <br />
+
+                        <table class="table nowrap table-bordered">
+                              <t t-if="o.env.user.lang=='ar_001'">
+                             <tr
+                                    style=" background:#192d5a;; background: linear-gradient(#49708f, #293f50);color: #fff;"
+                                >
+                                    <th>رقم المعاملة</th>
+                                    <th>تاريخ المعاملة</th>
+                                    <th>رقم بوليصة الشحن</th>
+                                  <th>اسم العميل</th>
+                                    <th>نوع البوليصة</th>
+                                    <th>عدد أوامر النقل</th>
+                                    <th>التكاليف</th>
+                                    <th>المداخيل</th>
+                                    <th>الحالة</th>
+                                </tr>
+                              </t>
+                              <t t-else="">
+                             <tr
+                                    style=" background:#192d5a;; background: linear-gradient(#49708f, #293f50);color: #fff;"
+                                >
+                                    <th>Request Number</th>
+                                    <th>Request date</th>
+                                    <th>Shipping number</th>
+                                    <th>Customer Name</th>
+                                    <th>Request type</th>
+                                    <th>Shipping Orders Number</th>
+                                    <th>Costs</th>
+                                    <th>Incomes</th>
+                                    <th>State</th>
+                                </tr>
+                              </t>
+                            <t t-foreach="get_lines(o)" t-as="line">
+                                    <tr>
+                                        <td>
+                                            <span t-field="line.name" />
+                                        </td>
+                                        <td>
+                                             <span t-field="line.date" t-options="{'format': 'yyyy-MM-dd'}" />
+                                        </td>
+                                        <td>
+                                            <span t-field="line.shipping_number" />
+                                        </td>
+                                        <td>
+                                            <span t-field="line.partner_id.name" />
+                                        </td>
+                                        <td>
+                                            <t t-if="o.env.user.lang=='ar_001'">
+                                                       <t t-if="line.request_type == 'clearance'">
+                                                           التخليص
+                                                       </t>
+                                                     <t t-if="line.request_type == 'transport'">
+                                                         نقل
+                                                       </t>
+                                                     <t t-if="line.request_type == 'other_service'">
+                                                         خدمات أخرى
+                                                       </t>
+                                               </t>
+                                                              <t t-else="">
+                                            <span t-field="line.request_type" />
+                                                              </t>
+                                        </td>
+                                        <td>
+                                            <t t-esc="len(line.order_ids)" />
+                                        </td>
+                                        <td>
+                                            <t
+                                            t-esc="sum(line.payment_ids.filtered(lambda payment: payment.state != 'cancel' and payment.partner_type == 'supplier').mapped('amount_total_signed'))"
+                                        />
+                                            <span
+                                            t-if="line.payment_ids"
+                                            t-field="line.payment_ids.currency_id.symbol"
+                                        />
+                                        </td>
+                                         <td>
+                                            <span t-field="line.invoices_amount" />
+                                        </td>
+                                        <td>
+                                            <span t-field="line.state" />
+                                        </td>
+                                    </tr>
+                            </t>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

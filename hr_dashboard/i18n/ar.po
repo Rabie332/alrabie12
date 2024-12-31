@@ -1,0 +1,111 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_dashboard
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-20 09:23+0000\n"
+"PO-Revision-Date: 2022-06-20 09:23+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_dashboard
+#. openerp-web
+#: code:addons/hr_dashboard/static/src/xml/dashboard_templates.xml:0
+#, python-format
+msgid "Contracts By States"
+msgstr "العقود حسب الحالة"
+
+#. module: hr_dashboard
+#: model:ir.actions.client,name:hr_dashboard.hr_dashboard_action
+#: model:ir.ui.menu,name:hr_dashboard.hr_dashboard_menu
+msgid "Dashboard"
+msgstr "لوحة المعلومات"
+
+#. module: hr_dashboard
+#. openerp-web
+#: code:addons/hr_dashboard/static/src/xml/dashboard_templates.xml:0
+#, python-format
+msgid "Employees by departments"
+msgstr "الموظفون حسب الإدارات"
+
+#. module: hr_dashboard
+#. openerp-web
+#: code:addons/hr_dashboard/static/src/xml/dashboard_templates.xml:0
+#, python-format
+msgid "Last 5 employees"
+msgstr "أخر 5 موظفين"
+
+#. module: hr_dashboard
+#. openerp-web
+#: code:addons/hr_dashboard/static/src/xml/dashboard_templates.xml:0
+#, python-format
+msgid "Latest requests"
+msgstr "أحدث الطلبات"
+
+#. module: hr_dashboard
+#: code:addons/hr_dashboard/controllers/dashboard.py:0
+#, python-format
+msgid "Non Saudi employees"
+msgstr "الموظفين الغير سعوديين"
+
+#. module: hr_dashboard
+#: code:addons/hr_dashboard/controllers/dashboard.py:0
+#, python-format
+msgid "Number of connected employees"
+msgstr "عدد الموظفين المداومين"
+
+#. module: hr_dashboard
+#: code:addons/hr_dashboard/controllers/dashboard.py:0
+#, python-format
+msgid "Number of non-connected employees"
+msgstr "عدد الموظفين غير المداومين"
+
+#. module: hr_dashboard
+#. openerp-web
+#: code:addons/hr_dashboard/static/src/xml/dashboard_templates.xml:0
+#, python-format
+msgid "Profile image"
+msgstr "صورة الملف الشخصي"
+
+#. module: hr_dashboard
+#: code:addons/hr_dashboard/controllers/dashboard.py:0
+#, python-format
+msgid "Residence expiration employee"
+msgstr "الموظفين المنتهية إقامتهم"
+
+#. module: hr_dashboard
+#: code:addons/hr_dashboard/controllers/dashboard.py:0
+#, python-format
+msgid "Saudi employees"
+msgstr "الموظفين السعوديين"
+
+#. module: hr_dashboard
+#: code:addons/hr_dashboard/controllers/dashboard.py:0
+#, python-format
+msgid "New"
+msgstr "جديد"
+
+#. module: hr_dashboard
+#: code:addons/hr_dashboard/controllers/dashboard.py:0
+#, python-format
+msgid "Cancelled"
+msgstr "ملغي"
+
+#. module: hr_dashboard
+#: code:addons/hr_dashboard/controllers/dashboard.py:0
+#, python-format
+msgid "Running"
+msgstr "جاري"
+
+#. module: hr_dashboard
+#: code:addons/hr_dashboard/controllers/dashboard.py:0
+#, python-format
+msgid "Expired"
+msgstr "منتهي"

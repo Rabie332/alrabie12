@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+    <t
+        t-name="ServicesScreen"
+        t-inherit="pos_pay_later.ServicesScreen"
+        t-inherit-mode="extension"
+        owl="1"
+    >
+        <xpath expr="//tr[hasclass('odoo-theme-color')]" position="inside">
+            <th>Service stage</th>
+        </xpath>
+    </t>
+    <t
+        t-name="ServiceLine"
+        t-inherit="pos_pay_later.ServiceLine"
+        t-inherit-mode="extension"
+        owl="1"
+    >
+        <xpath expr="//td[hasclass('service-state')]" position="after">
+            <td
+                class='service-service_state'
+                t-att-data-id='props.service.id'
+                t-on-click.stop="trigger('click-showDetails',props.service)"
+            >
+                <t t-esc='props.service.service_stage_id[1] or ""' />
+          </td>
+        </xpath>
+
+        <xpath expr="//tr" position="attributes">
+            <attribute
+                name="t-attf-style"
+                separator=" "
+                add="background-color: {{ props.service.service_stage_color }};border: 1px solid #ccc;"
+            />
+        </xpath>
+    </t>
+</templates>

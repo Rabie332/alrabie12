@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem
+        id="dms_root_menu"
+        name="DMS"
+        sequence="10"
+        groups="group_dms_user"
+        web_icon="dms,static/description/icon.png"
+    />
+    <!--  Dashboard-->
+    <record id="dms_dashboard_action" model="ir.actions.client">
+        <field name="name">Dashboard</field>
+        <field name="tag">dms_dashboard</field>
+    </record>
+    <menuitem
+        id="dms_dashboard_dashboard"
+        name="Dashboard"
+        action="dms_dashboard_action"
+        parent="dms.dms_root_menu"
+        sequence="0"
+    />
+    <menuitem id="dms_folder_menu" name="Folders" sequence="3" parent="dms_root_menu" />
+    <menuitem
+        id="dms_report_menu"
+        name="Reports"
+        sequence="10"
+        parent="dms_root_menu"
+    />
+    <menuitem
+        id="dms_settings_menu"
+        name="Settings"
+        sequence="50"
+        groups="group_dms_manager"
+        parent="dms_root_menu"
+    />
+    <!-- Folders-->
+    <record id="dms_folder_search" model="ir.ui.view">
+        <field name="name">dms.folder.search</field>
+        <field name="model">dms.folder</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <filter
+                    name="name"
+                    string="Favorites"
+                    domain="[('favorite_user_ids', 'in', uid)]"
+                />
+                <filter
+                    string="Archived"
+                    name="inactive"
+                    domain="[('active','=',False)]"
+                />
+                <group expand="0" string="Group by...">
+                    <filter
+                        name="parent_folder_id"
+                        string="Main folder"
+                        context="{'group_by':'parent_folder_id'}"
+                    />
+                </group>
+                <group expand="1" string="Group by...">
+                    <filter
+                        name="cabinet_id"
+                        string="Cabinet"
+                        context="{'group_by':'cabinet_id'}"
+                    />
+                </group>
+                <searchpanel>
+                    <field name="parent_folder_id" icon="fa-users" />
+                    <field name="cabinet_id" icon="fa-align-justify" />
+                </searchpanel>
+            </search>
+        </field>
+    </record>
+    <record id="folder_2_subfolder_action" model="ir.actions.act_window">
+        <field name="name">Sub Folders</field>
+        <field name="res_model">dms.folder</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="context">{'default_parent_folder_id': active_id}</field>
+        <field name="domain">[("parent_folder_id", "=", active_id)]</field>
+    </record>
+    <record id="folder_2_attachment_action" model="ir.actions.act_window">
+        <field name="name">Documents</field>
+        <field name="res_model">ir.attachment</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="context">{'default_folder_id': active_id}</field>
+        <field name="domain">[("folder_id", "=", active_id),('res_model', 'not in',
+            ['ir.ui.view','Country','ir.ui.menu'])]
+        </field>
+    </record>
+    <record id="Dms_folder_tree" model="ir.ui.view">
+        <field name="name">dms.folder.tree</field>
+        <field name="model">dms.folder</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="code" />
+                <field name="name" />
+                <field name="parent_folder_id" />
+                <field name="cabinet_id" />
+                <field name="folders_count" />
+                <field name="documents_count" />
+            </tree>
+        </field>
+    </record>
+    <record id="dms_folder_form" model="ir.ui.view">
+        <field name="name">dms.folder.form</field>
+        <field name="model">dms.folder</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button
+                        name="%(dms.folder_share_action)d"
+                        string="Share with an employee"
+                        type="action"
+                        class="btn-primary"
+                        groups="dms.group_dms_user"
+                    />
+                    <button name="link_unlinked_attachments" type="object"/>
+                </header>
+                <field name="write_date" invisible="1" />
+                <field name="is_favorite" invisible="1" />
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button
+                            name="%(dms.folder_2_attachment_action)d"
+                            class="oe_stat_button"
+                            icon="fa-file"
+                            type="action"
+                        >
+                            <field
+                                string="Number of documents"
+                                name="documents_count"
+                                widget="statinfo"
+                            />
+                        </button>
+                        <button
+                            name="%(dms.folder_2_subfolder_action)d"
+                            class="oe_stat_button"
+                            icon="fa-folder"
+                            type="action"
+                        >
+                            <field
+                                name="folders_count"
+                                string="Number of sub folders"
+                                widget="statinfo"
+                            />
+                        </button>
+                        <button
+                            name="add_remove_favorite"
+                            type="object"
+                            class="not_favorite pull-right"
+                            icon="fa-star-o pull-right"
+                            attrs="{'invisible':[('is_favorite', '=', True)]}"
+                            confirm="Follow the folder"
+                        />
+                        <button
+                            name="add_remove_favorite"
+                            type="object"
+                            class="favorite pull-right"
+                            icon="fa-star pull-right"
+                            attrs="{'invisible':[('is_favorite', '!=', True)]}"
+                            confirm="Unfollow"
+                        />
+                    </div>
+                    <widget
+                        name="web_ribbon"
+                        title="Archived"
+                        bg_color="bg-danger"
+                        attrs="{'invisible': [('active', '=', True)]}"
+                    />
+                    <group>
+                        <group>
+                            <field name="active" invisible="1" />
+                            <field
+                                name="code"
+                                attrs="{'invisible':[('id', '==', False)]}"
+                            />
+                            <field name="name" />
+                            <field
+                                name="parent_folder_id"
+                                domain="[('id', '!=', active_id),('id', 'not in', child_ids)]"
+                            />
+                            <field
+                                name="company_id"
+                                groups="base.group_multi_company"
+                                options="{'no_create': True}"
+                            />
+                        </group>
+                        <group>
+                            <field name="cabinet_id" />
+                            <field
+                                name="tag_ids"
+                                widget="many2many_tags"
+                                options="{'color_field': 'color', 'no_create_edit': True}"
+                            />
+                            <label
+                                for="alias_name"
+                                string="Email Alias"
+                                attrs="{'invisible': [('alias_domain', '=', False)]}"
+                            />
+                            <div
+                                name="alias_def"
+                                attrs="{'invisible': [('alias_domain', '=', False)]}"
+                            >
+                                <field
+                                    name="alias_id"
+                                    class="oe_read_only"
+                                    string="Email Alias"
+                                    required="0"
+                                />
+                                <div class="oe_edit_only" name="edit_alias">
+                                    <field name="alias_name" class="oe_inline" />@
+                                    <field
+                                        name="alias_domain"
+                                        class="oe_inline"
+                                        readonly="1"
+                                    />
+                                </div>
+                            </div>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Sub Folders">
+                            <field name="child_ids" readonly="1" />
+                        </page>
+                        <page string="Groups" groups="dms.dms_group_manage_permissions">
+                            <field name="group_ids" />
+                        </page>
+                        <page string="Dashboard settings" name="dashboard">
+                            <group string="Graph" name="graph">
+                                <field name="dashboard_graph_period" />
+                                <field name="dashboard_graph_group" />
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" />
+                    <field name="activity_ids" widget="mail_activity" />
+                    <field name="message_ids" widget="mail_thread" />
+                </div>
+            </form>
+        </field>
+    </record>
+    <record id="dms_folder_action_create_folder" model="ir.actions.act_window">
+        <field name="name">Create a folder</field>
+        <field name="res_model">dms.folder</field>
+        <field name="view_mode">form</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="context">{'default_parent_folder_id': active_id}</field>
+    </record>
+    <record id="folder_2_attachment_action_graph" model="ir.actions.act_window">
+        <field name="name">Report of the documents in the folder</field>
+        <field name="res_model">ir.attachment</field>
+        <field
+            name="domain"
+        >[("folder_id", "=", active_id),('res_model', 'not in', ['ir.ui.view',
+            'Country','ir.ui.menu']), ('res_field', '=', False)]
+        </field>
+        <field name="view_mode">graph,pivot</field>
+    </record>
+    <record id="folder_2_attachment_action_create" model="ir.actions.act_window">
+        <field name="name">Create a document</field>
+        <field name="res_model">ir.attachment</field>
+        <field name="view_mode">form</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="context">{'default_folder_id': active_id}</field>
+    </record>
+    <record id="dms_folder_kanban" model="ir.ui.view">
+        <field name="name">dms.folder.kanban</field>
+        <field name="model">dms.folder</field>
+        <field name="arch" type="xml">
+            <kanban class="oe_background_grey o_kanban_dashboard o_salesteam_kanban">
+                <field name="id" />
+                <field name="code" />
+                <field name="color" />
+                <field name="name" />
+                <field name="child_ids" />
+                <field name="folders_count" />
+                <field name="documents_count" />
+                <field name="write_uid" />
+                <field name="dashboard_graph_type" />
+                <field name="is_favorite" />
+                <field name="alias_name" />
+                <field name="alias_id" />
+                <field name="alias_domain" />
+                <templates>
+                    <t t-name="kanban-box">
+                        <div
+                            t-attf-class="#{kanban_color(record.color.raw_value)} oe_kanban_global_click"
+                        >
+                            <div t-attf-class="o_kanban_card_header">
+                                <div t-attf-class="o_kanban_card_header">
+                                    <div class="o_kanban_card_header_title">
+                                        <div class="o_primary">
+                                            <field name="name" />
+                                        </div>
+                                    </div>
+                                    <div class="o_kanban_manage_button_section">
+                                        <a
+                                            class="o_kanban_manage_toggle_button"
+                                            href="#"
+                                        >
+                                            <i
+                                                class="fa fa-ellipsis-v"
+                                                role="img"
+                                                aria-label="Manage"
+                                                title="Manage"
+                                            />
+                                        </a>
+                                    </div>
+                                    <br />
+                                    <div
+                                        class="col-xs-5 o_kanban_primary_right"
+                                        style="padding-bottom:0;"
+                                    >
+                                        <a
+                                            type="action"
+                                            name="dms.folder_2_attachment_action"
+                                        >
+                                            <span>Documents</span>
+                                            <field name="documents_count" />
+                                        </a>
+                                        <br />
+                                        <a
+                                            type="action"
+                                            name="dms.folder_2_subfolder_action"
+                                        >
+                                            <span>Folders</span>
+                                            <field name="folders_count" />
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <small t-translation="off">
+                                            <i
+                                                class="fa fa-envelope-o"
+                                            />&amp;nbsp;
+                                            <field name="alias_id" />
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container o_kanban_card_content">
+                                <div
+                                    class="row"
+                                    invisible="context.get('dashboard_invisible',False)"
+                                    attrs="{'invisible': [('is_favorite', '=', False)]}"
+                                >
+                                    <div class="col-xs-12 o_kanban_primary_bottom">
+                                        <t t-call="arhive_dashboard_graph" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="container o_kanban_card_manage_pane dropdown-menu"
+                                role="menu"
+                            >
+                                <div class="row">
+                                    <div
+                                        class="col-xs-4 o_kanban_card_manage_section o_kanban_manage_view"
+                                    >
+                                        <div class="o_kanban_card_manage_title">
+                                            <span>Show</span>
+                                        </div>
+                                        <div>
+                                            <a
+                                                name="%(dms.folder_2_attachment_action)d"
+                                                type="action"
+                                            >
+                                                Documents
+                                            </a>
+                                            <a
+                                                name="%(dms.folder_2_subfolder_action)d"
+                                                type="action"
+                                            >
+                                                Folders
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-xs-4 o_kanban_card_manage_section o_kanban_manage_new"
+                                    >
+                                        <div class="o_kanban_card_manage_title">
+                                            <span>Create</span>
+                                        </div>
+                                        <div>
+                                            <a
+                                                name="%(dms.folder_2_attachment_action_create)d"
+                                                type="action"
+                                            >
+                                                Documents
+                                            </a>
+                                            <a
+                                                name="%(dms.dms_folder_action_create_folder)d"
+                                                type="action"
+                                            >
+                                                Folders
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="col-xs-4 o_kanban_card_manage_section o_kanban_manage_reports"
+                                    >
+                                        <div class="o_kanban_card_manage_title">
+                                            <span>Report</span>
+                                        </div>
+                                        <div>
+                                            <a
+                                                name="%(dms.folder_2_attachment_action_graph)d"
+                                                type="action"
+                                            >
+                                                Documents
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="o_kanban_card_manage_settings row">
+                                    <div
+                                        role="menuitem"
+                                        aria-haspopup="true"
+                                        class="col-8"
+                                    >
+                                        <ul
+                                            class="oe_kanban_colorpicker"
+                                            data-field="color"
+                                            role="menu"
+                                        />
+                                    </div>
+                                    <div role="menuitem" class="col-4 text-right">
+                                        <a type="edit">Settings</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                    <t t-name="arhive_dashboard_graph">
+                        <div
+                            t-if="record.dashboard_graph_data.raw_value"
+                            class="o_dms_folders_kanban_graph_section"
+                        >
+                            <field
+                                name="dashboard_graph_data"
+                                widget="dashboard_graph"
+                                t-att-graph_type="record.dashboard_graph_type.raw_value"
+                            />
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+    <record id="dms_folder_action_my_favorite" model="ir.actions.act_window">
+        <field name="name">My favorite</field>
+        <field name="res_model">dms.folder</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field
+            name="domain"
+        >[('is_favorite','!=',False),('favorite_user_ids', 'in',[uid])]</field>
+    </record>
+    <menuitem
+        id="dms_folder_menu_my_favorite"
+        name="My favorite"
+        sequence="2"
+        parent="dms_folder_menu"
+        action="dms_folder_action_my_favorite"
+    />
+    <record id="dms_folder_action_all_folders" model="ir.actions.act_window">
+        <field name="name">Folders</field>
+        <field name="res_model">dms.folder</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="context">{'dashboard_invisible': True}</field>
+    </record>
+    <menuitem
+        id="dms_folder_menu_all_folders"
+        name="Folders"
+        sequence="1"
+        parent="dms_folder_menu"
+        action="dms_folder_action_all_folders"
+    />
+    <!-- Dms Setting -->
+    <!-- Tags-->
+    <record id="dms_tag_tree" model="ir.ui.view">
+        <field name="name">dms.tag.tree</field>
+        <field name="model">dms.tag</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name" />
+                <field name="color" />
+            </tree>
+        </field>
+    </record>
+    <record id="dms_tag_action" model="ir.actions.act_window">
+        <field name="name">Tags</field>
+        <field name="res_model">dms.tag</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem
+        name="Tags"
+        id="menu_dms_tag"
+        parent="dms_settings_menu"
+        action="dms_tag_action"
+        sequence="1"
+    />
+    <!-- cabinet-->
+    <record id="dms_cabinet_tree" model="ir.ui.view">
+        <field name="name">dms.cabinet.tree</field>
+        <field name="model">dms.cabinet</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+    <record id="dms_cabinet_form" model="ir.ui.view">
+        <field name="name">dms.cabinet.form</field>
+        <field name="model">dms.cabinet</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field
+                            name="company_id"
+                            groups="base.group_multi_company"
+                            options="{'no_create': True}"
+                        />
+                        <label for="drawer_ids">Drawers</label>
+                        <field name="drawer_ids" nolabel="1">
+                            <tree editable="bottom">
+                                <field name="name" nolabel="1" />
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_dms_cabinet" model="ir.actions.act_window">
+        <field name="name">Cabinets</field>
+        <field name="res_model">dms.cabinet</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem
+        name="Cabinets"
+        id="menu_dms_cabinet"
+        parent="dms_settings_menu"
+        action="action_dms_cabinet"
+        sequence="2"
+    />
+    <!--Documents type-->
+    <record id="ir_attachment_type_tree" model="ir.ui.view">
+        <field name="name">ir.attachment.type.tree</field>
+        <field name="model">ir.attachment.type</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+    <record id="ir_attachment_type_action" model="ir.actions.act_window">
+        <field name="name">Documents type</field>
+        <field name="res_model">ir.attachment.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem
+        name="Documents type"
+        id="menu_dms_documents_type"
+        parent="dms_settings_menu"
+        action="ir_attachment_type_action"
+        sequence="2"
+    />
+    <!-- Secrecy-->
+    <!-- Form View -->
+    <record id="dms_secrecy_view_form" model="ir.ui.view">
+        <field name="name">dms.secrecy.view.form</field>
+        <field name="model">dms.secrecy</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="code" />
+                        <field name="name" />
+                    </group>
+                    <notebook>
+                        <page string="Groups" groups="dms.dms_group_manage_permissions">
+                            <group>
+                                <field name="group_ids" />
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="dms_secrecy_tree" model="ir.ui.view">
+        <field name="name">dms.secrecy.tree</field>
+        <field name="model">dms.secrecy</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="code" />
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+    <record id="dms_secrecy_action" model="ir.actions.act_window">
+        <field name="name">Secrecy</field>
+        <field name="res_model">dms.secrecy</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem
+        id="dms_secrecy_menu"
+        name="Secrecy"
+        parent="dms_settings_menu"
+        sequence="3"
+        action="dms_secrecy_action"
+    />
+    <!--General settings-->
+    <record id="dms_settings_form" model="ir.ui.view">
+        <field name="name">dms.settings.form</field>
+        <field name="model">dms.settings</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form create='0' delete='0' duplicate='0'>
+                <sheet>
+                    <group>
+                        <field name="name" invisible="1" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="dms_settings_action" model="ir.actions.server">
+        <field name="name">General settings</field>
+        <field name="model_id" ref="model_dms_settings" />
+        <field name="state">code</field>
+        <field name="type">ir.actions.server</field>
+        <field name="code">action=env['dms.settings'].open_settings()</field>
+    </record>
+    <!--    <menuitem name="General settings"
+                  id="menu_dms_settings"
+                  parent="dms_settings_menu"
+                  action="dms_settings_action"
+                  sequence="4"/>
+    -->
+    <!--Search-->
+    <record id="dms_search_view_form" model="ir.ui.view">
+        <field name="name">dms.search.view.form</field>
+        <field name="model">dms.search</field>
+        <field name="arch" type="xml">
+            <form delete="0" create="0" edit="0">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="user_id" />
+                            <field name="code" />
+                            <field name="document_type_id" />
+                            <field name="content" />
+                            <br />
+                            <br />
+                            <button
+                                name="button_filter_search"
+                                string="Search"
+                                type="object"
+                                class="oe_highlight"
+                                icon="fa-search"
+                            />
+                        </group>
+                        <group>
+                            <field name="date_from" />
+                            <field name="date_to" />
+                        </group>
+                        <field
+                            name="document_ids"
+                            widget="many2many_binary"
+                            nolabel="1"
+                            readonly="1"
+                        />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="dms_search_action" model="ir.actions.act_window">
+        <field name="name">Search</field>
+        <field name="res_model">dms.search</field>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+    </record>
+    <menuitem
+        name="Search"
+        id="dms_search_menu"
+        parent="dms_root_menu"
+        action="dms_search_action"
+        sequence="8"
+    />
+</odoo>

@@ -1,0 +1,150 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_kitchen_screen
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-09 10:58+0000\n"
+"PO-Revision-Date: 2022-10-09 10:58+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_kitchen_screen
+#: model:ir.model.fields,field_description:pos_kitchen_screen.field_kitchen_stage__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: pos_kitchen_screen
+#: model:ir.model.fields,field_description:pos_kitchen_screen.field_kitchen_stage__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: pos_kitchen_screen
+#: model:ir.model.fields,field_description:pos_kitchen_screen.field_kitchen_stage__display_name
+#: model:ir.model.fields,field_description:pos_kitchen_screen.field_pos_config__display_name
+#: model:ir.model.fields,field_description:pos_kitchen_screen.field_pos_order__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: pos_kitchen_screen
+#: model:kitchen.stage,name:pos_kitchen_screen.stage_done
+msgid "Done"
+msgstr "تم"
+
+#. module: pos_kitchen_screen
+#: model:ir.model.fields,field_description:pos_kitchen_screen.field_kitchen_stage__fold
+msgid "Folded in Pipeline"
+msgstr "مطوية في الخط"
+
+#. module: pos_kitchen_screen
+#: model:ir.model.fields,field_description:pos_kitchen_screen.field_kitchen_stage__id
+#: model:ir.model.fields,field_description:pos_kitchen_screen.field_pos_config__id
+#: model:ir.model.fields,field_description:pos_kitchen_screen.field_pos_order__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: pos_kitchen_screen
+#: code:addons/pos_kitchen_screen/models/pos_config.py:0
+#, python-format
+msgid "Kitchen Screen"
+msgstr "شاشة المطبخ"
+
+#. module: pos_kitchen_screen
+#: model:ir.actions.act_window,name:pos_kitchen_screen.kitchen_stage_action
+#: model:ir.model,name:pos_kitchen_screen.model_kitchen_stage
+#: model:ir.ui.menu,name:pos_kitchen_screen.kitchen_stage_menu
+msgid "Kitchen Stages"
+msgstr "مراحل شاشة المطبخ"
+
+#. module: pos_kitchen_screen
+#: model_terms:ir.ui.view,arch_db:pos_kitchen_screen.view_pos_config_kanban_inherit_pos_kitchen_screen
+msgid "Kitchen screen"
+msgstr "شاشة المطبخ"
+
+#. module: pos_kitchen_screen
+#: model:ir.model.fields,field_description:pos_kitchen_screen.field_kitchen_stage____last_update
+#: model:ir.model.fields,field_description:pos_kitchen_screen.field_pos_config____last_update
+#: model:ir.model.fields,field_description:pos_kitchen_screen.field_pos_order____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: pos_kitchen_screen
+#: model:ir.model.fields,field_description:pos_kitchen_screen.field_kitchen_stage__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: pos_kitchen_screen
+#: model:ir.model.fields,field_description:pos_kitchen_screen.field_kitchen_stage__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: pos_kitchen_screen
+#: model:kitchen.stage,name:pos_kitchen_screen.stage_new
+msgid "New"
+msgstr "جديد"
+
+#. module: pos_kitchen_screen
+#: model:ir.model,name:pos_kitchen_screen.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "إعدادات نقطة البيع"
+
+#. module: pos_kitchen_screen
+#: model:ir.model,name:pos_kitchen_screen.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "أوامر نقطة البيع"
+
+#. module: pos_kitchen_screen
+#: model_terms:ir.ui.view,arch_db:pos_kitchen_screen.pos_order_view_kanban_kitchen
+msgid "Quantity:"
+msgstr "الكمية:"
+
+#. module: pos_kitchen_screen
+#: model:ir.model.fields,field_description:pos_kitchen_screen.field_kitchen_stage__sequence
+msgid "Sequence"
+msgstr "تسلسل"
+
+#. module: pos_kitchen_screen
+#: model_terms:ir.actions.act_window,help:pos_kitchen_screen.kitchen_stage_action
+msgid "Set a new stage in your pipeline"
+msgstr "ضع مرحلة جديدة في خط المراحل"
+
+#. module: pos_kitchen_screen
+#: model:ir.model.fields,field_description:pos_kitchen_screen.field_pos_order__stage_id
+#: model_terms:ir.ui.view,arch_db:pos_kitchen_screen.kitchen_stage_view_form
+msgid "Stage"
+msgstr "مرحلة"
+
+#. module: pos_kitchen_screen
+#: model:ir.model.fields,field_description:pos_kitchen_screen.field_kitchen_stage__name
+msgid "Stage Name"
+msgstr "إسم المرحلة"
+
+#. module: pos_kitchen_screen
+#: model:ir.model.fields,help:pos_kitchen_screen.field_kitchen_stage__fold
+msgid ""
+"This stage is folded in the kanban view when there are no records in that "
+"stage to display."
+msgstr ""
+"يتم طي هذه المرحلة عند استخدام طريقة كانبان للعرض عندما لا توجد سجلات يمكن "
+"عرضها في هذه المرحلة."
+
+#. module: pos_kitchen_screen
+#: model:ir.model.fields,help:pos_kitchen_screen.field_kitchen_stage__sequence
+msgid "Used to order stages. Lower is better."
+msgstr "يستخدم في ترتيب المراحل، العدد الأقل له الأسبقية."
+
+#. module: pos_kitchen_screen
+#: model_terms:ir.ui.view,arch_db:pos_kitchen_screen.pos_order_view_kanban_kitchen
+msgid "note:"
+msgstr "ملاحظة:"
+
+#. module: pos_kitchen_screen
+#: model:kitchen.stage,name:pos_kitchen_screen.stage_progress
+msgid "progress"
+msgstr "جاري"

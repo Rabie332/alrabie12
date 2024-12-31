@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="paperformat_hr_overtime_report" model="report.paperformat">
+        <field name="name">Hr Overtime Resume</field>
+         <field name="default" eval="True" />
+            <field name="format">custom</field>
+            <field name="page_height">297</field>
+            <field name="page_width">210</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">3</field>
+            <field name="margin_bottom">3</field>
+            <field name="margin_left">3</field>
+            <field name="margin_right">3</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">3</field>
+            <field name="dpi">90</field>
+    </record>
+
+    <record id="hr_overtime_report" model="ir.actions.report">
+        <field name="name">Hr overtime mandate</field>
+        <field name="model">hr.overtime.mandate</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hr_overtime.report_overtime_mandate</field>
+        <field name="report_file">hr_overtime.report_overtime_mandate</field>
+        <field name="print_report_name">'Hr overtime mandate'</field>
+        <field name="binding_model_id" ref="model_hr_overtime_mandate" />
+
+        <field name="binding_type">report</field>
+    </record>
+      <record id="action_report_hr_overtime_lines" model="ir.actions.report">
+        <field name="name">Hr overtime Lines Resume</field>
+        <field name="model">hr.overtime.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hr_overtime.report_hr_overtime_lines_resume</field>
+        <field name="report_file">hr_overtime.report_hr_overtime_lines_resume</field>
+        <field name="print_report_name">'Hr Overtime Resume'</field>
+            <field name="paperformat_id" ref="paperformat_hr_overtime_report" />
+        <field name="binding_type">report</field>
+    </record>
+     <record id="hr_overtime_line_report_xlsx" model="ir.actions.report">
+        <field name="name">Hr overtime Lines Resume Excel</field>
+         <field name="report_type">xlsx</field>
+        <field name="model">report.hr_overtime.report_hr_overtime_lines_xlsx</field>
+        <field name="report_name">hr_overtime.report_hr_overtime_lines_xlsx</field>
+        <field name="report_file">Hr Overtime Resume</field>
+    </record>
+
+
+
+
+</odoo>

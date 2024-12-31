@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="paperformat_hr_attendance_summary" model="report.paperformat">
+        <field name="name">Attendance paperformat</field>
+        <field name="default" eval="True" />
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Landscape</field>
+        <field name="margin_top">10</field>
+        <field name="margin_bottom">10</field>
+        <field name="margin_left">5</field>
+        <field name="margin_right">5</field>
+        <field name="header_line" eval="False" />
+        <field name="header_spacing">6</field>
+    </record>
+
+     <record id="hr_attendance_summary_report" model="ir.actions.report">
+        <field name="name">Attendance Summary Report</field>
+        <field name="model">hr.attendance.report</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hr_attendance_summary.hr_attendance_summary_template</field>
+        <field name="report_file">hr_attendance_summary.hr_attendance_summary_template</field>
+        <field name="binding_model_id" eval="False" />
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="paperformat_hr_attendance_summary" />
+    </record>
+
+    <record id="hr_attendance_summary_report_xlsx" model="ir.actions.report">
+        <field name="name">Attendance Summary Report Excel</field>
+        <field name="model">report.hr_attendance_summary.report_attendance_summary_xlsx</field>
+        <field name="report_name">hr_attendance_summary.report_attendance_summary_xlsx</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_file">hr_attendance_summary.report_attendance_summary_xlsx</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,148 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_contract_allowances
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-21 09:46+0000\n"
+"PO-Revision-Date: 2022-12-21 09:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_contract_allowances
+#: model:ir.model.fields,field_description:hr_contract_allowances.field_hr_contract__allowances_ids
+msgid "Allowances"
+msgstr "البدلات"
+
+#. module: hr_contract_allowances
+#: model:ir.model.fields,field_description:hr_contract_allowances.field_hr_contract_allowance_line__amount
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: hr_contract_allowances
+#: model:ir.model.fields,field_description:hr_contract_allowances.field_hr_contract_allowance_line__contract_id
+msgid "Contract"
+msgstr "العقد"
+
+#. module: hr_contract_allowances
+#: model:ir.model,name:hr_contract_allowances.model_hr_contract_allowance_line
+msgid "Contract Allowance Line"
+msgstr "بند بدل العقد"
+
+#. module: hr_contract_allowances
+#: model:ir.model.fields,field_description:hr_contract_allowances.field_hr_contract_allowance_line__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hr_contract_allowances
+#: model:ir.model.fields,field_description:hr_contract_allowances.field_hr_contract_allowance_line__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hr_contract_allowances
+#: model:ir.model.fields,field_description:hr_contract_allowances.field_hr_contract__display_name
+#: model:ir.model.fields,field_description:hr_contract_allowances.field_hr_contract_allowance_line__display_name
+#: model:ir.model.fields,field_description:hr_contract_allowances.field_hr_payslip__display_name
+#: model:ir.model.fields,field_description:hr_contract_allowances.field_hr_salary_rule__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_contract_allowances
+#: model:ir.model,name:hr_contract_allowances.model_hr_contract
+msgid "Employee Contract"
+msgstr "عقد الموظف"
+
+#. module: hr_contract_allowances
+#: model:ir.model.fields,field_description:hr_contract_allowances.field_hr_contract__id
+#: model:ir.model.fields,field_description:hr_contract_allowances.field_hr_contract_allowance_line__id
+#: model:ir.model.fields,field_description:hr_contract_allowances.field_hr_payslip__id
+#: model:ir.model.fields,field_description:hr_contract_allowances.field_hr_salary_rule__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_contract_allowances
+#: model:ir.model.fields,field_description:hr_contract_allowances.field_hr_contract____last_update
+#: model:ir.model.fields,field_description:hr_contract_allowances.field_hr_contract_allowance_line____last_update
+#: model:ir.model.fields,field_description:hr_contract_allowances.field_hr_payslip____last_update
+#: model:ir.model.fields,field_description:hr_contract_allowances.field_hr_salary_rule____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_contract_allowances
+#: model:ir.model.fields,field_description:hr_contract_allowances.field_hr_contract_allowance_line__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_contract_allowances
+#: model:ir.model.fields,field_description:hr_contract_allowances.field_hr_contract_allowance_line__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_contract_allowances
+#: model:ir.model,name:hr_contract_allowances.model_hr_payslip
+msgid "Pay Slip"
+msgstr "قسيمة الراتب"
+
+#. module: hr_contract_allowances
+#: model:ir.model,name:hr_contract_allowances.model_hr_salary_rule
+msgid "Salary Rule"
+msgstr "قاعدة مرتبات"
+
+#. module: hr_contract_allowances
+#: model:ir.model.fields,field_description:hr_contract_allowances.field_hr_contract_allowance_line__rule_id
+msgid "Salary rule"
+msgstr "قاعدة الراتب"
+
+#. module: hr_contract_allowances
+#: model:ir.model.fields,field_description:hr_contract_allowances.field_hr_payslip_line__is_specific_allowance
+#: model:ir.model.fields,field_description:hr_contract_allowances.field_hr_salary_rule__is_specific_allowance
+msgid "Specific allowance"
+msgstr "بدل خاص"
+
+#. module: hr_contract_allowances
+#: model:ir.model.fields,field_description:hr_contract_allowances.field_hr_contract__total_bonus
+msgid "Sum Allowances and Fixed Bonus"
+msgstr "مجموع البدلات و المزايا المالية الثابتة"
+
+#. module: hr_contract_allowances
+#: code:addons/hr_contract_allowances/models/hr_contract.py:0
+#: model:ir.model.constraint,message:hr_contract_allowances.constraint_hr_contract_allowance_line_rule_uniq
+#, python-format
+msgid "The rule already exists!"
+msgstr "قاعدة الراتب موجودة بالفعل!"
+
+#. module: hr_contract_allowances
+#: model:ir.model.fields,help:hr_contract_allowances.field_hr_contract_allowance_line__is_variable_bonus
+msgid ""
+"This rule will appear in the contract's allowances and you can set an amount"
+" for it. When you create a bonus with this rule you can set a percent to "
+"allowance's amount."
+msgstr ""
+"ستظهر هذه القاعدة في بدلات العقد ويمكنك تحديد مبلغ"
+" لها. عندما تنشئ مزية مالية بهذه القاعدة ، يمكنك تعيين نسبة مئوية إلى "
+"مبلغ البدل."
+
+#. module: hr_contract_allowances
+#: model_terms:ir.ui.view,arch_db:hr_contract_allowances.hr_contract_hour_price_view_form
+msgid "Total"
+msgstr "إجمالي"
+
+#. module: hr_contract_allowances
+#: model:ir.model.fields,field_description:hr_contract_allowances.field_hr_contract_allowance_line__is_variable_bonus
+msgid "Variable Bonus"
+msgstr "مزية مالية متغيرة"
+
+#. module: hr_contract_allowances
+#: model:ir.model.fields,help:hr_contract_allowances.field_hr_payslip_line__is_specific_allowance
+#: model:ir.model.fields,help:hr_contract_allowances.field_hr_salary_rule__is_specific_allowance
+msgid ""
+"You can select this rule and set an amount for it in the contract's "
+"allowances"
+msgstr ""
+"يمكنك تحديد هذه القاعدة وتحديد مبلغ لها في بدلات العقد "

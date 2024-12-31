@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Discount Product -->
+
+     <record id="product_product_discount" model="product.product">
+            <field name="name">Discount</field>
+            <field name="standard_price">0.00</field>
+            <field name="list_price">0.00</field>
+            <field name="weight">0.00</field>
+            <field name="type">consu</field>
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+            <field name="default_code">DISCR</field>
+            <field name="purchase_ok">False</field>
+            <field name="discount">True</field>
+            <field name="invoice_policy">order</field>
+            <field name="taxes_id" eval="[]" />
+        </record>
+
+    <record id="product_product_insurance" model="product.product">
+            <field name="name">Insurance</field>
+            <field name="standard_price">0.00</field>
+            <field name="list_price">0.00</field>
+            <field name="weight">0.00</field>
+            <field name="type">consu</field>
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+            <field name="default_code">INS</field>
+            <field name="purchase_ok">False</field>
+            <field name="insurance">True</field>
+            <field name="invoice_policy">order</field>
+            <field name="taxes_id" eval="[]" />
+        </record>
+
+    <record id="product_product_returnable" model="product.product">
+            <field name="name">Returnable</field>
+            <field name="standard_price">0.00</field>
+            <field name="list_price">0.00</field>
+            <field name="weight">0.00</field>
+            <field name="type">consu</field>
+            <field name="uom_id" ref="uom.product_uom_unit" />
+            <field name="uom_po_id" ref="uom.product_uom_unit" />
+            <field name="default_code">R</field>
+            <field name="purchase_ok">False</field>
+            <field name="returnable">True</field>
+            <field name="invoice_policy">order</field>
+            <field name="taxes_id" eval="[]" />
+    </record>
+
+    <!-- Reservation Visit Reason -->
+
+         <record id="reservation_visit_reason" model="reservation.visit.reason">
+            <field name="name">Tourism</field>
+        </record>
+
+     <record id="reservation_visit_reason_family" model="reservation.visit.reason">
+            <field name="name">Family or Friends</field>
+        </record>
+
+     <record id="reservation_visit_reason_religious" model="reservation.visit.reason">
+            <field name="name">Religious</field>
+        </record>
+
+     <record id="reservation_visit_reason_job" model="reservation.visit.reason">
+            <field name="name">Job</field>
+        </record>
+
+     <record id="reservation_visit_reason_athlete" model="reservation.visit.reason">
+            <field name="name">Athlete</field>
+        </record>
+
+     <record id="reservation_visit_reason_entertainment" model="reservation.visit.reason">
+            <field name="name">Entertainment</field>
+        </record>
+
+     <record id="reservation_visit_reason_other" model="reservation.visit.reason">
+            <field name="name">Other</field>
+        </record>
+
+    <record id="reservation_visit_reason_office" model="reservation.visit.reason">
+            <field name="name">Office Clerk</field>
+        </record>
+
+    <record id="reservation_visit_reason_booking_guest" model="reservation.visit.reason">
+            <field name="name">Booking Guest</field>
+        </record>
+
+    <record id="reservation_visit_reason_health" model="reservation.visit.reason">
+            <field name="name">Ministry of Health Employee</field>
+        </record>
+
+    <!-- Reservation Source -->
+
+      <record id="hotel_reservation_source_reception" model="hotel.reservation.source">
+            <field name="name">Reception</field>
+        </record>
+
+       <record id="hotel_reservation_source_booking_site" model="hotel.reservation.source">
+            <field name="name">Booking site</field>
+        </record>
+
+         <record id="hotel_reservation_source_agoda" model="reservation.visit.reason">
+            <field name="name">Agoda site</field>
+        </record>
+
+     <record id="hotel_reservation_source_flyin" model="reservation.visit.reason">
+            <field name="name">Flyin site</field>
+        </record>
+
+       <record id="hotel_reservation_source_almosafer" model="hotel.reservation.source">
+            <field name="name">Almosafer website</field>
+        </record>
+
+       <record id="hotel_reservation_source_expedia" model="hotel.reservation.source">
+            <field name="name">Expedia</field>
+        </record>
+
+       <record id="hotel_reservation_source_yamsafer" model="hotel.reservation.source">
+            <field name="name">Yamsafer</field>
+        </record>
+
+       <record id="hotel_reservation_source_haraj" model="hotel.reservation.source">
+            <field name="name">HARAJ</field>
+        </record>
+
+       <record id="hotel_reservation_source_social_media" model="hotel.reservation.source">
+            <field name="name">Social Media</field>
+        </record>
+
+       <record id="hotel_reservation_source_contracting_company" model="hotel.reservation.source">
+            <field name="name">Contracting Company</field>
+        </record>
+
+       <record id="hotel_reservation_source_oyo" model="hotel.reservation.source">
+            <field name="name">Oyo</field>
+        </record>
+
+       <record id="hotel_reservation_source_holdinn" model="hotel.reservation.source">
+            <field name="name">Holdinn</field>
+        </record>
+
+       <record id="hotel_reservation_source_nirvana" model="hotel.reservation.source">
+            <field name="name">Nirvana Company</field>
+        </record>
+
+      <record id="hotel_reservation_source_air_bnb" model="hotel.reservation.source">
+            <field name="name">Airbnb</field>
+        </record>
+
+      <record id="hotel_reservation_source_instagram" model="hotel.reservation.source">
+            <field name="name">Instagram</field>
+        </record>
+
+      <record id="hotel_reservation_source_real_estate" model="hotel.reservation.source">
+            <field name="name">Real Estate</field>
+        </record>
+
+      <record id="hotel_reservation_source_gathern" model="hotel.reservation.source">
+            <field name="name">Gathern</field>
+        </record>
+
+      <record id="hotel_reservation_source_webbeds" model="hotel.reservation.source">
+            <field name="name">Webbeds</field>
+        </record>
+
+      <record id="hotel_reservation_source_trips" model="hotel.reservation.source">
+            <field name="name">trips</field>
+        </record>
+
+        <record id="payment_type_inbound" model="account.payment.support.type">
+            <field name="name">Inbound</field>
+            <field name="support_type">inbound</field>
+        </record>
+
+        <record id="payment_type_promissory" model="account.payment.support.type">
+            <field name="name">Promissory</field>
+            <field name="support_type">inbound</field>
+        </record>
+
+        <record id="payment_type_assurance" model="account.payment.support.type">
+            <field name="name">Advance Assurance</field>
+            <field name="support_type">inbound</field>
+        </record>
+
+      <record id="payment_type_rent" model="account.payment.support.type">
+            <field name="name">Refundable rent</field>
+            <field name="support_type">outbound</field>
+        </record>
+
+      <record id="payment_type_insurance" model="account.payment.support.type">
+            <field name="name">Insurance allowance</field>
+          <field name="support_type">outbound</field>
+        </record>
+
+      <record id="payment_type_rental" model="account.payment.support.type">
+            <field name="name">Rental allowance</field>
+          <field name="support_type">outbound</field>
+        </record>
+
+
+</odoo>

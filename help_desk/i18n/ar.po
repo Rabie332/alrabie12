@@ -1,0 +1,405 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* help_desk
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0-20231106\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-26 18:47+0000\n"
+"PO-Revision-Date: 2023-12-26 18:47+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__message_needaction
+msgid "Action Needed"
+msgstr "الإجراء المطلوب"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "زينة استثناء النشاط"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "رمز نوع النشاط"
+
+#. module: help_desk
+#: model_terms:ir.ui.view,arch_db:help_desk.view_tickets_search
+msgid "Archived"
+msgstr "مؤرشف"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__assigned_to
+msgid "Assigned To"
+msgstr "تعيين لـ"
+
+#. module: help_desk
+#: model_terms:ir.ui.view,arch_db:help_desk.view_tickets_kanban
+msgid "Assigned To :"
+msgstr "تعيين لـ :"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_ticket_stage__create_uid
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__create_uid
+msgid "Created by"
+msgstr "تم الإنشاء بواسطة"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_ticket_stage__create_date
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__create_date
+msgid "Created on"
+msgstr "تم الإنشاء في"
+
+#. module: help_desk
+#: model:ir.model.fields.selection,name:help_desk.selection__it_tickets__state__denied
+#: model_terms:ir.ui.view,arch_db:help_desk.view_tickets_form
+msgid "Denied"
+msgstr "مرفوض"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__ticket_department
+msgid "Department"
+msgstr "القسم"
+
+#. module: help_desk
+#: model_terms:ir.ui.view,arch_db:help_desk.view_tickets_kanban
+msgid "Department :"
+msgstr "القسم :"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__ticket_description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_ticket_stage__display_name
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: help_desk
+#: model:ir.model.fields.selection,name:help_desk.selection__it_tickets__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__employee_id
+msgid "Employee"
+msgstr "موظف"
+
+#. module: help_desk
+#: model_terms:ir.ui.view,arch_db:help_desk.view_tickets_kanban
+msgid "Employee ID :"
+msgstr "معرف الموظف :"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__message_follower_ids
+msgid "Followers"
+msgstr "المتابعين"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعين (القنوات)"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعين (الشركاء)"
+
+#. module: help_desk
+#: model:ir.model.fields,help:help_desk.field_it_tickets__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "رمز رائع مثل fa-tasks"
+
+#. module: help_desk
+#: model:ir.ui.menu,name:help_desk.menu_help_desk
+msgid "Helpdesk"
+msgstr "مكتب المساعدة"
+
+#. module: help_desk
+#: model:ir.model.fields.selection,name:help_desk.selection__it_tickets__assigned_to__helpdesk_team
+msgid "Helpdesk Team"
+msgstr "فريق مكتب المساعدة"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_ticket_stage__id
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__id
+msgid "ID"
+msgstr "معرف"
+
+#. module: help_desk
+#: model_terms:ir.ui.view,arch_db:help_desk.view_tickets_form
+msgid "IT Ticket"
+msgstr "تذكرة تقنية"
+
+#. module: help_desk
+#: model:ir.model,name:help_desk.model_it_ticket_stage
+msgid "IT Ticket Stage"
+msgstr "مرحلة تذكرة تقنية"
+
+#. module: help_desk
+#: model:ir.actions.act_window,name:help_desk.action_it_tickets
+#: model:ir.model,name:help_desk.model_it_tickets
+#: model_terms:ir.ui.view,arch_db:help_desk.view_tickets_search
+#: model_terms:ir.ui.view,arch_db:help_desk.view_tickets_tree
+msgid "IT Tickets"
+msgstr "تذاكر تقنية"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__activity_exception_icon
+msgid "Icon"
+msgstr "رمز"
+
+#. module: help_desk
+#: model:ir.model.fields,help:help_desk.field_it_tickets__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "رمز للإشارة إلى نشاط استثناء."
+
+#. module: help_desk
+#: model:ir.model.fields,help:help_desk.field_it_tickets__message_needaction
+#: model:ir.model.fields,help:help_desk.field_it_tickets__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم التحقق، فإن الرسائل الجديدة تتطلب اهتمامك."
+
+#. module: help_desk
+#: model:ir.model.fields,help:help_desk.field_it_tickets__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم التحقق، فهناك بعض الرسائل تحتوي على خطأ في التسليم."
+
+#. module: help_desk
+#: model:ir.model.fields.selection,name:help_desk.selection__it_tickets__state__in_progress
+#: model_terms:ir.ui.view,arch_db:help_desk.view_tickets_form
+msgid "In Progress"
+msgstr "قيد التنفيذ"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__message_is_follower
+msgid "Is Follower"
+msgstr "هل هو متابع"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__kind_of_odoo_probelm
+msgid "Kind Of Odoo Problem"
+msgstr "نوع مشكلة أودو"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_ticket_stage____last_update
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_ticket_stage__write_uid
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_ticket_stage__write_date
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ تسليم الرسالة"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__message_ids
+msgid "Messages"
+msgstr "رسائل"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي لأنشطتي"
+
+#. module: help_desk
+#: model:ir.model.fields.selection,name:help_desk.selection__it_tickets__kind_of_odoo_probelm__new_feature
+msgid "New Feature"
+msgstr "ميزة جديدة"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: help_desk
+#: model:ir.model.fields,help:help_desk.field_it_tickets__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراءً"
+
+#. module: help_desk
+#: model:ir.model.fields,help:help_desk.field_it_tickets__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي تحتوي على خطأ في التسليم"
+
+#. module: help_desk
+#: model:ir.model.fields,help:help_desk.field_it_tickets__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل غير المقروءة"
+
+#. module: help_desk
+#: model:ir.model.fields.selection,name:help_desk.selection__it_tickets__assigned_to__odoo_team
+msgid "Odoo Team"
+msgstr "فريق أودو"
+
+#. module: help_desk
+#: model:ir.model.fields.selection,name:help_desk.selection__it_tickets__state__on_hold
+msgid "On Hold"
+msgstr "معلق"
+
+#. module: help_desk
+#: model_terms:ir.ui.view,arch_db:help_desk.view_tickets_kanban
+msgid "Problem Type :"
+msgstr "نوع المشكلة :"
+
+#. module: help_desk
+#: model:ir.model.fields.selection,name:help_desk.selection__it_tickets__state__resolved
+#: model_terms:ir.ui.view,arch_db:help_desk.view_tickets_form
+msgid "Resolved"
+msgstr "تم حله"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: help_desk
+#: model_terms:ir.ui.view,arch_db:help_desk.view_tickets_form
+msgid "Send"
+msgstr "إرسال"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_ticket_stage__sequence
+msgid "Sequence"
+msgstr "تسلسل"
+
+#. module: help_desk
+#: model_terms:ir.ui.view,arch_db:help_desk.view_tickets_form
+msgid "Set to Draft"
+msgstr "تعيين كمسودة"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__stage_id
+msgid "Stage"
+msgstr "المرحلة"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_ticket_stage__name
+msgid "Stage Name"
+msgstr "اسم المرحلة"
+
+#. module: help_desk
+#: model_terms:ir.ui.view,arch_db:help_desk.view_tickets_kanban
+msgid "Stage:"
+msgstr "المرحلة:"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: help_desk
+#: model:ir.model.fields,help:help_desk.field_it_tickets__activity_state
+msgid "Status based on activities\nOverdue: Due date is already passed\nToday: Activity date is today\nPlanned: Future activities."
+msgstr "الحالة استنادًا إلى الأنشطة\nمتأخرة: تاريخ الاستحقاق قد مضى بالفعل\nاليوم: تاريخ النشاط هو اليوم\nمخطط: أنشطة مستقبلية."
+
+#. module: help_desk
+#: model:ir.model.fields.selection,name:help_desk.selection__it_tickets__kind_of_odoo_probelm__system_error
+msgid "System Error"
+msgstr "خطأ النظام"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__name
+msgid "Ticket Title"
+msgstr "عنوان التذكرة"
+
+#. module: help_desk
+#: model:ir.ui.menu,name:help_desk.menu_it_tickets
+msgid "Tickets"
+msgstr "تذاكر"
+
+#. module: help_desk
+#: model_terms:ir.ui.view,arch_db:help_desk.view_tickets_kanban
+msgid "Title :"
+msgstr "العنوان :"
+
+#. module: help_desk
+#: model:ir.model.fields,help:help_desk.field_it_tickets__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع نشاط الاستثناء في السجل."
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل غير المقروءة"
+
+#. module: help_desk
+#: model:ir.model.fields,field_description:help_desk.field_it_tickets__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عداد الرسائل غير المقروءة"
+
+#. module: help_desk
+#: model:ir.model.fields,help:help_desk.field_it_ticket_stage__sequence
+msgid "Used to order the stages."
+msgstr "يستخدم لترتيب المراحل."
+
+#. module: help_desk
+#: model_terms:ir.ui.view,arch_db:help_desk.view_tickets_search
+msgid "state filter"
+msgstr "مرشح الحالة"

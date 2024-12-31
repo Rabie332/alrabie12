@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+<record id="cron_send_email_clearances_transport" model="ir.cron">
+        <field name="name">Send Email To user About today transaction transport</field>
+        <field name="model_id" ref="base.model_res_users" />
+        <field name="state">code</field>
+        <field name="code">model._cron_send_email_clearances_transport()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="active" eval="True" />
+        <field name="doall" eval="False" />
+    </record>
+
+    <record id="cron_clearance_request" model="ir.cron">
+        <field name="name">Clearance request report</field>
+        <field eval="True" name="active" />
+        <field name="user_id" ref="base.user_root" />
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="model_id" ref="clearance_reports.model_clearance_request" />
+        <field name="state">code</field>
+        <field name="code">model.cron_clearance_request_reports()</field>
+    </record>
+</odoo>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="hr_contract_view_form_payroll_contract_net_inherit" model="ir.ui.view">
+        <field name="name">hr.contract.view.form.inherit</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='wage']" position="after">
+                <label for="wage_net" />
+                <div class="o_row">
+                    <field name="wage_net" nolabel="1" />
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

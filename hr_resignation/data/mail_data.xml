@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+
+    <!-- Mail Activity Type-->
+
+    <record id="mail_hr_resignation_approval" model="mail.activity.type">
+        <field name="name">Resignation is ready to be approved</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="res_model_id" ref="hr_resignation.model_hr_resignation" />
+        <field name="category">validation</field>
+    </record>
+
+    <record id="mail_hr_resignation_feedback" model="mail.activity.type">
+        <field name="name">Resignation is done</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="res_model_id" ref="hr_resignation.model_hr_resignation" />
+        <field name="category">feedback</field>
+    </record>
+
+         <!-- Mail Message Subtype-->
+
+    <record id="mt_hr_resignation_approved" model="mail.message.subtype">
+        <field name="name">Approved</field>
+        <field name="res_model">hr.resignation</field>
+        <field name="description">Resignation is approved</field>
+    </record>
+
+    <record id="mt_hr_resignation_refused" model="mail.message.subtype">
+        <field name="name">Refused</field>
+        <field name="res_model">hr.resignation</field>
+        <field name="description">Resignation is refused</field>
+    </record>
+
+</odoo>

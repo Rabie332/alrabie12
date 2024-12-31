@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="pos_session_view_form_inherit_pos_cash_atm" model="ir.ui.view">
+        <field name="name">pos.session.form.view.inherit</field>
+        <field name="model">pos.session</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_session_form" />
+        <field name="arch" type="xml">
+            <field name="start_at" position="after">
+                <field
+                    name="system_cash"
+                    string="Cash (System)"
+                    widget="monetary"
+                    options="{'currency_field': 'currency_id'}"
+                />
+                <field
+                    name="cash"
+                    string="Cash (Cashier)"
+                    decoration-danger="cash&lt;system_cash"
+                    decoration-info="cash&gt;system_cash"
+                    widget="monetary"
+                    options="{'currency_field': 'currency_id'}"
+                />
+                <field
+                    name="bank_register_balance_end"
+                    string="ATM (System)"
+                    widget="monetary"
+                    options="{'currency_field': 'currency_id'}"
+                />
+                <field
+                    name="atm"
+                    string="ATM (Cashier)"
+                    decoration-danger="atm&lt;bank_register_balance_end"
+                    decoration-info="atm&gt;bank_register_balance_end"
+                    widget="monetary"
+                    options="{'currency_field': 'currency_id'}"
+                />
+            </field>
+            <notebook position="inside">
+                <page name="history" string="History">
+                    <group>
+                        <field name="history_ids" nolabel="1">
+                            <tree create="0" edit="0">
+                                <field name="session_id" invisible="1" />
+                                <field name="create_date" />
+                                <field name="create_uid" />
+                                <field name="expected_cash" />
+                                <field
+                                    name="cash"
+                                    decoration-danger="cash&lt;expected_cash"
+                                    decoration-info="cash&gt;expected_cash"
+                                />
+                                <field name="checkout_cash" />
+                                <field name="expected_atm" />
+                                <field
+                                    name="atm"
+                                    decoration-danger="atm&lt;expected_atm"
+                                    decoration-info="atm&gt;expected_atm"
+                                />
+                                <field name="checkout_atm" />
+                            </tree>
+                        </field>
+                    </group>
+                </page>
+
+            </notebook>
+
+        </field>
+    </record>
+
+
+</odoo>

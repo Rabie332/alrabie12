@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="hr_attendance_summary_line_view_search" model="ir.ui.view">
+        <field name="name">hr.attendance.summary.line.view.search</field>
+        <field name="model">hr.attendance.summary.line</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="employee_id" />
+                <filter
+                    name="day"
+                    string="Today"
+                    domain="[('date', '&gt;=', context_today().strftime('%Y-%m-%d 00:00:00'))]"
+                />
+                <group string="Grouped by">
+                    <filter name="group_by_date" string="Date" context="{'group_by': 'date:day'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+    <record id="hr_attendance_summary_line_view_form" model="ir.ui.view">
+        <field name="name">hr.attendance.summary.line.view.form</field>
+        <field name="model">hr.attendance.summary.line</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="employee_id" />
+                        <field name="presence_state" />
+                    </group>
+                    <group>
+                        <field name="delay_hours" widget="float_time" />
+                        <field name="overtime_hours" widget="float_time" />
+                        <field name="early_exit_hours" widget="float_time" />
+                        <field name="absence_hours" widget="float_time" />
+                        <field name="worked_hours" widget="float_time" />
+                        <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}" />
+
+                    </group>
+                </group>
+                <group>
+                    <field name="attendance_ids" nolabel="1" />
+                </group>
+            </form>
+        </field>
+    </record>
+    <record id="hr_attendance_summary_line_view_tree" model="ir.ui.view">
+        <field name="name">hr.attendance.summary.line.view.tree</field>
+        <field name="model">hr.attendance.summary.line</field>
+        <field name="arch" type="xml">
+            <tree create="0">
+                <field name="employee_id" />
+                <field name="check_in_date" />
+                <field name="check_out_date" />
+                <field
+                    name="delay_hours_manuel"
+                    widget="float_time"
+                    groups="hr_attendance_summary.group_manual_pointing"
+                />
+                <field name="delay_hours" widget="float_time" />
+                <field
+                    name="overtime_hours_manuel"
+                    widget="float_time"
+                    groups="hr_attendance_summary.group_manual_pointing"
+                />
+                <field name="overtime_hours" widget="float_time" />
+                <field name="early_exit_hours" widget="float_time" />
+                <field name="absence_hours" widget="float_time" />
+                <field
+                    name="worked_hours_manuel"
+                    widget="float_time"
+                    groups="hr_attendance_summary.group_manual_pointing"
+                />
+                <field name="worked_hours" widget="float_time" />
+                <field name="presence_state" />
+                <field name="company_id" groups="base.group_multi_company" />
+
+            </tree>
+
+        </field>
+    </record>
+
+    <record id="hr_attendance_summary_line_action" model="ir.actions.act_window">
+        <field name="name">Detail Summary Line</field>
+        <field name="res_model">hr.attendance.summary.line</field>
+        <field name="context">{'search_default_group_by_date': 1}</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="hr_attendance_summary_line_menu"
+        name="Detail Summary Line"
+        parent="hr_attendance.menu_hr_attendance_manage_attendances"
+        action="hr_attendance_summary_line_action"
+        sequence="41"
+    />
+
+
+</odoo>

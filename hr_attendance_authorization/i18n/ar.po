@@ -1,0 +1,89 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_attendance_authorization
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-30 14:23+0000\n"
+"PO-Revision-Date: 2022-05-30 14:23+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_attendance_authorization
+#: model:ir.model.fields,field_description:hr_attendance_authorization.field_hr_attendance_summary_line__authorization_hours
+#: model_terms:ir.ui.view,arch_db:hr_attendance_authorization.hr_attendance_summary_template_inherit
+msgid "Authorization"
+msgstr "إستئذان"
+
+#. module: hr_attendance_authorization
+#: model:ir.ui.menu,name:hr_attendance_authorization.attendance_authorization_request_menu
+#: model:ir.ui.menu,name:hr_attendance_authorization.hr_attendance_authorization_menu_root
+msgid "Authorizations"
+msgstr "الإستئذانات"
+
+#. module: hr_attendance_authorization
+#: model:base.automation,name:hr_attendance_authorization.attendance_summary_automation_hr_authorization
+#: model:ir.actions.server,name:hr_attendance_authorization.attendance_summary_automation_hr_authorization_ir_actions_server
+msgid ""
+"Base Automation: update attendance summary when the status of authorization "
+"is updated"
+msgstr "تحديث ملخص الحضور عند تحديث حالة استثناء الحضور"
+
+#. module: hr_attendance_authorization
+#: model:ir.model.fields,field_description:hr_attendance_authorization.field_hr_attendance_summary_line__display_name
+#: model:ir.model.fields,field_description:hr_attendance_authorization.field_report_hr_attendance_summary_report_attendance_summary_xlsx__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_attendance_authorization
+#: model:ir.model,name:hr_attendance_authorization.model_hr_attendance_summary_line
+msgid "Hr attendance summary line"
+msgstr "خط ملخص الحضور و الإنصراف"
+
+#. module: hr_attendance_authorization
+#: model:ir.model.fields,field_description:hr_attendance_authorization.field_hr_attendance_summary_line__id
+#: model:ir.model.fields,field_description:hr_attendance_authorization.field_report_hr_attendance_summary_report_attendance_summary_xlsx__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_attendance_authorization
+#: model:ir.model.fields,field_description:hr_attendance_authorization.field_hr_attendance_summary_line____last_update
+#: model:ir.model.fields,field_description:hr_attendance_authorization.field_report_hr_attendance_summary_report_attendance_summary_xlsx____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_attendance_authorization
+#: model:ir.ui.menu,name:hr_attendance_authorization.hr_authorization_resume_wizard_menu_attendance
+msgid "Authorization Resume Report"
+msgstr "تقرير حصر الاستئذانات"
+
+#. module: hr_attendance_authorization
+#: model:ir.ui.menu,name:hr_attendance_authorization.hr_authorization_stage_menu
+msgid "Authorization Stages"
+msgstr "مراحل الإستئذان"
+
+#. module: hr_attendance_authorization
+#: model:ir.ui.menu,name:hr_attendance_authorization.hr_authorization_type_menu
+msgid "Authorization types"
+msgstr "أنواع الإستئذان"
+
+#. module: hr_attendance_authorization
+#: model:ir.ui.menu,name:hr_attendance_authorization.hr_attendance_authorization_configuration_menu
+msgid "Configuration"
+msgstr "إعدادات"
+
+#. module: hr_attendance_authorization
+#: model:ir.ui.menu,name:hr_attendance_authorization.attendance_authorization_my_request_menu
+msgid "My authorizations"
+msgstr "استئذاناتي"
+
+#. module: hr_attendance_authorization
+#: model:ir.model,name:hr_attendance_authorization.model_report_hr_attendance_summary_report_attendance_summary_xlsx
+msgid "Attendance Summary Reports XLS"
+msgstr "تقرير حصر الإستئذانات بصيغة اكسل"

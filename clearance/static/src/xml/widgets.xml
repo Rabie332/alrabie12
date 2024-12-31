@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+
+
+    <!-- Widget for shipping agent data-->
+    <t t-name="widget_shipping_agent_data">
+        <t t-if="shipping_agent_data != 0">
+            <center>
+            <i class="fa fa-ship pull-right" style="color:red;" />
+            </center>
+        </t>
+
+    </t>
+
+      <!-- Widget for customs declaration data-->
+    <t t-name="widget_customs_declaration_data">
+        <t t-if="customs_declaration_data != 0">
+            <center>
+            <i class="fa fa-file pull-right" style="color:red;" />
+            </center>
+        </t>
+    </t>
+
+      <!-- Widget for not good data-->
+    <t t-name="widget_is_not_goods_data">
+        <t t-if="is_not_goods_data != 0">
+            <center>
+            <i class="fa fa-cubes pull-right" style="color:red;" />
+            </center>
+        </t>
+    </t>
+      <!-- Widget for not customs data-->
+    <t t-name="widget_is_not_customs_data">
+        <t t-if="is_not_customs_data != 0">
+            <center>
+            <i class="fa fa-money pull-right" style="color:red;" />
+            </center>
+        </t>
+
+
+    </t>
+      <!-- Widget for is equals weight-->
+    <t t-name="widget_is_equals_weight">
+        <t t-if="is_equals_weight">
+            <center>
+            <i class="fa fa-building pull-right" style="color:blue;" />
+            </center>
+        </t>
+
+    </t>
+</templates>

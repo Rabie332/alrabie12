@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <menuitem
+        id="dms.dms_root_menu"
+        name="DMS"
+        sequence="10"
+        groups="dms.group_dms_user"
+        web_icon="dms_icon,static/description/icon.png"
+    />
+
+</odoo>

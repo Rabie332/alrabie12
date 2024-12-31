@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="account_move_farha_template_inherit" inherit_id="farha_report_invoice.account_move_farha_template">
+        <xpath expr="//div[@class='row' and .//span[contains(text(),'أعده')]]" position="replace">
+            <div class="row" style="width:100%;padding-top: 20px; page-break-inside: avoid;">
+                <div class="col-3">
+                    <span>أعده</span>
+                    <br />
+                    <!-- Removed the original span with t-esc -->
+                </div>
+                <div class="col-3">
+                    <span>راجعه</span>
+                    <br />
+                    <!-- Removed the original span for شهد الغامدي -->
+                </div>
+                <div class="col-3">
+                    <span>إعتمده</span>
+                    <br />
+                    <!-- Removed the original span for أحمد خضر -->
+                </div>
+                <div class="col-3">
+                    <span>المستلم</span>
+                    <br />
+                    <!-- You can add or modify content here if needed -->
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

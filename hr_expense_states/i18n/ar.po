@@ -1,0 +1,200 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_expense_states
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-17 12:46+0000\n"
+"PO-Revision-Date: 2022-03-17 12:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_expense_states
+#: model:ir.model.fields.selection,name:hr_expense_states.selection__hr_expense__state__approve
+#: model:ir.model.fields.selection,name:hr_expense_states.selection__hr_expense_sheet__state__approve
+#: model_terms:ir.ui.view,arch_db:hr_expense_states.hr_expense_sheet_view_form_inherit_hr_expense_states
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: hr_expense_states
+#: model:ir.model.fields.selection,name:hr_expense_states.selection__hr_expense__state__approved
+#: model:ir.model.fields.selection,name:hr_expense_states.selection__hr_expense_sheet__state__post
+msgid "Confirmed"
+msgstr "مؤكد"
+
+#. module: hr_expense_states
+#: model:ir.model.fields,field_description:hr_expense_states.field_hr_expense__display_name
+#: model:ir.model.fields,field_description:hr_expense_states.field_hr_expense_sheet__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_expense_states
+#: model:ir.model.fields.selection,name:hr_expense_states.selection__hr_expense__state__draft
+#: model:ir.model.fields.selection,name:hr_expense_states.selection__hr_expense_sheet__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: hr_expense_states
+#: model:ir.model,name:hr_expense_states.model_hr_expense
+msgid "Expense"
+msgstr "المصروف"
+
+#. module: hr_expense_states
+#: model:ir.model,name:hr_expense_states.model_hr_expense_sheet
+msgid "Expense Report"
+msgstr "تقرير المصروف"
+
+#. module: hr_expense_states
+#: model:ir.model.fields,help:hr_expense_states.field_hr_expense_sheet__state
+msgid "Expense Report State"
+msgstr "حالة تقرير المصروف"
+
+#. module: hr_expense_states
+#: code:addons/hr_expense_states/models/hr_expense.py:0
+#, python-format
+msgid ""
+"Expenses must have an expense journal specified to generate accounting "
+"entries."
+msgstr "يجب تحديد دفتر يومية مصروفات لإنشاء قيود محاسبية."
+
+#. module: hr_expense_states
+#: model:ir.model.fields,field_description:hr_expense_states.field_hr_expense__id
+#: model:ir.model.fields,field_description:hr_expense_states.field_hr_expense_sheet__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_expense_states
+#: model_terms:ir.ui.view,arch_db:hr_expense_states.hr_expense_sheet_view_form_inherit_hr_expense_states
+msgid "Journal Items"
+msgstr "عناصر اليومية"
+
+#. module: hr_expense_states
+#: model:ir.model.fields,field_description:hr_expense_states.field_hr_expense_sheet__move_line_ids
+msgid "Journal Lines"
+msgstr "عناصر اليومية"
+
+#. module: hr_expense_states
+#: model:ir.model.fields,field_description:hr_expense_states.field_hr_expense____last_update
+#: model:ir.model.fields,field_description:hr_expense_states.field_hr_expense_sheet____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_expense_states
+#: code:addons/hr_expense_states/models/hr_expense.py:0
+#, python-format
+msgid "Only Managers and HR Officers can approve expenses"
+msgstr "يمكن للمديرين وموظفي الموارد البشرية فقط تأكيد المصروفات"
+
+#. module: hr_expense_states
+#: model_terms:ir.ui.view,arch_db:hr_expense_states.hr_expense_sheet_view_form_inherit_hr_expense_states
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: hr_expense_states
+#: model:ir.model.fields.selection,name:hr_expense_states.selection__hr_expense__state__refused
+#: model:ir.model.fields.selection,name:hr_expense_states.selection__hr_expense_sheet__state__cancel
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: hr_expense_states
+#: model:ir.model.fields.selection,name:hr_expense_states.selection__hr_expense__state__reviewed
+#: model:ir.model.fields.selection,name:hr_expense_states.selection__hr_expense_sheet__state__reviewed
+#: model_terms:ir.ui.view,arch_db:hr_expense_states.hr_expense_sheet_view_form_inherit_hr_expense_states
+msgid "Reviewed"
+msgstr "تمت المراجعة"
+
+#. module: hr_expense_states
+#: model_terms:ir.ui.view,arch_db:hr_expense_states.hr_expense_sheet_view_form_inherit_hr_expense_states
+msgid "Set Confirm"
+msgstr "مؤكد"
+
+#. module: hr_expense_states
+#: model:ir.model.fields,field_description:hr_expense_states.field_hr_expense__state
+#: model:ir.model.fields,field_description:hr_expense_states.field_hr_expense_sheet__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: hr_expense_states
+#: model:ir.model.fields,help:hr_expense_states.field_hr_expense__state
+msgid "Status of the expense."
+msgstr "حالة المصروف."
+
+#. module: hr_expense_states
+#: model:ir.model.fields.selection,name:hr_expense_states.selection__hr_expense__state__reported
+#: model:ir.model.fields.selection,name:hr_expense_states.selection__hr_expense_sheet__state__submit
+msgid "Submitted"
+msgstr "تم الإرسال"
+
+#. module: hr_expense_states
+#: model:mail.activity.type,name:hr_expense_states.mail_assigned_expense_to_confirm
+msgid "The Expense is ready for confirmation"
+msgstr "المصاريف جاهزة للإعتماد"
+
+#. module: hr_expense_states
+#: model:mail.activity.type,name:hr_expense_states.mail_assigned_expense_to_review
+msgid "The Expense is ready for review"
+msgstr "المصاريف جاهزة للمراجعة"
+
+#. module: hr_expense_states
+#: model:mail.activity.type,name:hr_expense_states.mail_assigned_expense_to_validate
+msgid "The Expense is ready for validation"
+msgstr "المصاريف جاهزة للتأكيد"
+
+#. module: hr_expense_states
+#: code:addons/hr_expense_states/models/hr_expense.py:0
+#, python-format
+msgid ""
+"The expense cannot be set as a draft because it is paid by an employee."
+msgstr "لا يمكن تعيين المصروف كمسودة لأنه مدفوع بواسطة موظف"
+
+#. module: hr_expense_states
+#: model:ir.model.fields.selection,name:hr_expense_states.selection__hr_expense__state__to_review
+#: model:ir.model.fields.selection,name:hr_expense_states.selection__hr_expense_sheet__state__to_review
+msgid "To Review"
+msgstr "للمراجعة"
+
+#. module: hr_expense_states
+#: model_terms:ir.ui.view,arch_db:hr_expense_states.hr_expense_sheet_view_form_inherit_hr_expense_states
+msgid "Total Credit"
+msgstr "إجمالي الدائن"
+
+#. module: hr_expense_states
+#: model_terms:ir.ui.view,arch_db:hr_expense_states.hr_expense_sheet_view_form_inherit_hr_expense_states
+msgid "Total Debit"
+msgstr "إجمالي المدين"
+
+#. module: hr_expense_states
+#: model:ir.model.fields.selection,name:hr_expense_states.selection__hr_expense__state__done
+#: model:ir.model.fields.selection,name:hr_expense_states.selection__hr_expense_sheet__state__done
+msgid "Validated"
+msgstr "تم الاعتماد"
+
+#. module: hr_expense_states
+#: code:addons/hr_expense_states/models/hr_expense.py:0
+#, python-format
+msgid "You can only approve your department expenses"
+msgstr "يمكنك اعتماد مصروفات قسمك فقط"
+
+#. module: hr_expense_states
+#: code:addons/hr_expense_states/models/hr_expense.py:0
+#, python-format
+msgid "You can only generate accounting entry for approved expense(s)."
+msgstr "يمكنك إنشاء قيود محاسبية للمصروفات المعتمدة فقط."
+
+#. module: hr_expense_states
+#: code:addons/hr_expense_states/models/hr_expense.py:0
+#, python-format
+msgid "You can't mix sample expenses and regular ones"
+msgstr "لا يمكنك المزج بين نفقات العينة والنفقات العادية"
+
+#. module: hr_expense_states
+#: code:addons/hr_expense_states/models/hr_expense.py:0
+#, python-format
+msgid "You cannot approve your own expenses"
+msgstr "لا يمكنك اعتماد مصروفاتك بنفسك"

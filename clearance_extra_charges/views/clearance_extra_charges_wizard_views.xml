@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+  <record id="clearance_request_form_inherit" model="ir.ui.view">
+    <field name="model">clearance.request</field>
+    <field name="inherit_id" ref="clearance.clearance_request_view_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//header" position="inside">
+        <button name="action_open_extra_charges_wizard"
+                        type="object"
+                        string="Handle Extra Charges"
+                        class="oe_highlight"
+                        attrs="{'invisible': [('extra_charges_delivery', '!=', 'extra_charge'), ('extra_charges_customs_statement', '!=', 'extra_charge')]}"/>
+      </xpath>
+      <xpath expr="//group[@id='clearance_master_data']" position="after">
+        <group string="Extra Charges Details">
+          <field name="extra_charges_delivery" 
+                           attrs="{'invisible': [('state', '!=', 'delivery')], 'required': [('state', '=', 'delivery')]}"/>
+          <field name="extra_charges_delivery_wizard_status" invisible="1"/>
+          <field name="extra_charges_customs_statement" 
+                           attrs="{'invisible': [('state', '!=', 'customs_statement')], 'required': [('state', '=', 'customs_statement')]}"/>
+          <field name="extra_charges_customs_statement_wizard_status" invisible="1"/>
+        </group>
+        <group  string="Request Priorities">
+          <field name="request_priority"   attrs="{'required': [('state', '=', 'customs_statement')]}"/>
+          <field name="clearance_request_priority" attrs="{'required': [('state', '=', 'draft')]}"/>
+        </group>
+      </xpath>
+    </field>
+  </record>
+  <record id="view_clearance_extra_charges_wizard_form" model="ir.ui.view">
+    <field name="name">clearance.extra.charges.wizard.form</field>
+    <field name="model">clearance.extra.charges.wizard</field>
+    <field name="arch" type="xml">
+      <form string="Extra Charges">
+        <sheet>
+          <group>
+            <field name="clearance_request_id" invisible="1"/>
+            <field name="product_ids" widget="many2many_tags" options="{'no_create': True, 'no_create_edit': True}"/>
+          </group>
+          <footer>
+            <button string="Create Invoice" type="object" name="create_invoice_action" class="oe_highlight"/>
+            <button string="Cancel" class="oe_link" special="cancel"/>
+          </footer>
+        </sheet>
+      </form>
+    </field>
+  </record>
+</odoo>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template
+        id="assets_backend"
+        name="assets_backend_rtl_font"
+        inherit_id="web.assets_backend"
+    >
+        <xpath expr="." position="inside">
+            <link
+                t-if="request.env['res.lang'].search([('code', '=', request.env.lang)]).direction == 'rtl'"
+                href="/web_ar/static/src/css/rtl.css"
+                rel="stylesheet"
+            />
+        </xpath>
+    </template>
+
+    <template id="report_assets_pdf_font" inherit_id="web.report_assets_pdf">
+        <xpath expr="link[last()]" position="after">
+            <link
+                t-if="request.env['res.lang'].search([('code', '=', request.env.lang)]).direction == 'rtl'"
+                href="/web_ar/static/src/css/rtl.css"
+                rel="stylesheet"
+            />
+        </xpath>
+    </template>
+
+    <template
+        id="assets_common"
+        inherit_id="web.assets_common"
+        name="Web AR common assets"
+    >
+        <xpath expr="." position="inside">
+            <link
+                rel="stylesheet"
+                type="text/scss"
+                href="/web_ar/static/src/scss/ui.scss"
+            />
+        </xpath>
+    </template>
+
+</odoo>

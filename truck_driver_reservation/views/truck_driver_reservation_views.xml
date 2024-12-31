@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_truck_driver_reservation_form" model="ir.ui.view">
+            <field name="name">truck.driver.reservation.form</field>
+            <field name="model">truck.driver.reservation</field>
+            <field name="arch" type="xml">
+                <form string="Truck Driver Reservation" create="true" edit="true" delete="true">
+                    <sheet>
+                        <group>
+                            <field name="vehicle_id" options="{'no_create': True}"/>
+                            <field name="driver_id" options="{'no_create': True}"/>
+                            <field name="company_id" options="{'no_create': True}"/>
+                            <field name="is_reserved"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" />
+                        <field name="activity_ids" widget="mail_activity" />
+                        <field name="message_ids" widget="mail_thread" />
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="view_truck_driver_reservation_tree" model="ir.ui.view">
+            <field name="name">truck.driver.reservation.tree</field>
+            <field name="model">truck.driver.reservation</field>
+            <field name="arch" type="xml">
+                <tree string="Truck-Driver Reservation">
+                    <field name="vehicle_id" options="{'no_create': True}"/>
+                    <field name="driver_id" options="{'no_create': True}"/>
+                    <field name="company_id" options="{'no_create': True}"/>
+                    <field name="is_reserved"/>
+                </tree>
+            </field>
+        </record>
+        <record id="action_truck_driver_reservation" model="ir.actions.act_window">
+            <field name="name">Truck Driver Reservation</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">truck.driver.reservation</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create and manage reservations for trucks and their drivers.
+                </p>
+            </field>
+        </record>
+        <menuitem id="menu_truck_driver_reservation"
+          name="Truck Driver Reservation"
+          parent="fleet.fleet_configuration"
+          action="action_truck_driver_reservation"
+          sequence="5"/>
+    </data>
+</odoo>

@@ -1,0 +1,22 @@
+{
+    'name': 'Invoices & Payments Import Wizard',
+    'version': '1.0',
+    'summary': 'Import old invoices from Excel',
+    'category': 'accounting',
+    'author': 'Eng. Fares',
+    'website': 'http://www.farhaholding.com',
+    'depends': ['base', 'account', 'queue_job'],
+    'data': [
+        "security/ir.model.access.csv",
+        'views/invoice_import_wizard_view.xml',
+        'views/account_move_view.xml',
+        'views/payment_import_wizard_view.xml',
+        'views/credit_note_import_wizard_view.xml',
+        'views/expense_import_wizard_view.xml',
+        'views/delete_journal_entries_wizard_view.xml',
+        'views/journal_entry_wizard_view.xml',
+    ],
+    'demo': [],
+    'installable': True,
+    'auto_install': False,
+}

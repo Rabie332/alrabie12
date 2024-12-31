@@ -1,0 +1,171 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_contract
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-05 09:38+0000\n"
+"PO-Revision-Date: 2020-11-05 09:38+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_contract
+#: model:ir.model.fields,field_description:hr_contract.field_hr_contract__hr_responsible_id
+msgid "HR Responsible"
+msgstr "مسؤول الموارد البشرية"
+
+#. module: hr_contract
+#: model:ir.model.fields,field_description:hr_contract.field_hr_employee__contract_warning
+#: model_terms:ir.ui.view,arch_db:hr_contract.hr_employee_view_search
+msgid "Contract Warning"
+msgstr "موظفين غير متعاقد"
+
+#. module: hr_contract
+#: code:addons/hr_contract/models/hr_contract.py:0
+#, python-format
+msgid ""
+"An employee can only have one contract at the same time. (Excluding Draft "
+"and Cancelled contracts)"
+msgstr ""
+"يمكن للموظف الحصول على عقد واحد فقط في نفس الوقت. (باستثناء المسودة"
+"والعقود الملغاة)"
+
+#. module: hr_contract
+#: model:ir.model.fields,field_description:hr_contract.field_hr_contract__calendar_mismatch
+#: model:ir.model.fields,field_description:hr_contract.field_hr_employee__calendar_mismatch
+msgid "Calendar Mismatch"
+msgstr "عدم تطابق التقويم"
+
+#. module: hr_contract
+#: model_terms:ir.ui.view,arch_db:hr_contract.hr_departure_wizard_view_form
+msgid "Contract End Date"
+msgstr "تاريخ انتهاء العقد"
+
+#. module: hr_contract
+#: model:ir.model.fields,help:hr_contract.field_hr_employee__contract_id
+msgid "Current contract of the employee"
+msgstr "العقد الحالي للموظف"
+
+#. module: hr_contract
+#: code:addons/hr_contract/wizard/hr_departure_wizard.py:0
+#, python-format
+msgid ""
+"Departure date can't be earlier than the start date of current contract."
+msgstr "لا يمكن أن يكون تاريخ المغادرة قبل تاريخ بدء العقد الحالي."
+
+#. module: hr_contract
+#: model_terms:ir.ui.view,arch_db:hr_contract.hr_contract_view_search
+msgid "Employed"
+msgstr "يعمل"
+
+#. module: hr_contract
+#: model:ir.model.fields,help:hr_contract.field_hr_contract__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "رمز الخط الرائع ، على سبيل المثال FA المهام"
+
+
+#. module: hr_contract
+#: model:ir.model.fields,help:hr_contract.field_hr_contract__hr_responsible_id
+msgid "Person responsible for validating the employee's contracts."
+msgstr "Person responsible for validating the employee's contracts."
+
+#. module: hr_contract
+#: model:ir.model.fields,field_description:hr_contract.field_hr_contract__structure_type_id
+msgid "Salary Structure Type"
+msgstr "نوع هيكل الراتب"
+
+#. module: hr_contract
+#: model:ir.model.fields,field_description:hr_contract.field_hr_departure_wizard__set_date_end
+msgid "Set Contract End Date"
+msgstr "حدد تاريخ انتهاء العقد"
+
+#. module: hr_contract
+#: model_terms:ir.ui.view,arch_db:hr_contract.hr_departure_wizard_view_form
+msgid "Set end date to current contract"
+msgstr "تعيين تاريخ الانتهاء للعقد الحالي"
+
+#. module: hr_contract
+#: model_terms:ir.ui.view,arch_db:hr_contract.hr_contract_view_search
+msgid "Show all records which have a next action date before today"
+msgstr "عرض كافة السجلات التي لها تاريخ الإجراء التالي قبل اليوم"
+
+#. module: hr_contract
+#: code:addons/hr_contract/models/hr_contract.py:0
+#, python-format
+msgid "The contract of %s is about to expire."
+msgstr "عقد %s على وشك الانتهاء."
+
+#. module: hr_contract
+#: model_terms:ir.ui.view,arch_db:hr_contract.hr_hr_employee_view_form2
+msgid ""
+"<span class=\"o_stat_text text-danger\" attrs=\"{'invisible' : [('contract_warning', '=', False)]}\" title=\"In Contract Since\">\n"
+"                                    In Contract Since\n"
+"                                </span>"
+msgstr ""
+"<span class=\"o_stat_text text-danger\" attrs=\"{'invisible' : [('contract_warning', '=', False)]}\" title=\"في العقد منذ\">\n"
+"                                    في العقد منذ \n"
+"                                </span>"
+#. module: hr_contract
+#: model_terms:ir.ui.view,arch_db:hr_contract.hr_hr_employee_view_form2
+msgid ""
+"<span class=\"o_stat_text text-danger\">\n"
+"                                    Contracts\n"
+"                                </span>"
+msgstr ""
+"<span class=\"o_stat_text text-danger\">\n"
+"                                    العقود\n"
+"                                </span>"
+#. module: hr_contract
+#: model_terms:ir.ui.view,arch_db:hr_contract.hr_hr_employee_view_form2
+msgid ""
+"<span class=\"o_stat_text text-success\" attrs=\"{'invisible' : "
+"[('contract_warning', '=', True)]}\" title=\"In Contract Since\"> In "
+"Contract Since</span>"
+msgstr ""
+"<span class=\"o_stat_text text-success\" attrs=\"{'invisible' : "
+"[('contract_warning', '=', True)]}\" title=\"في العقد منذ\">"
+"في العقد منذ</span>"
+#. module: hr_contract
+#: model_terms:ir.ui.view,arch_db:hr_contract.hr_contract_view_form
+msgid ""
+"<span attrs=\"{'invisible': ['|', ('calendar_mismatch', '=', False), ('state', '!=', 'open')]}\" class=\"fa fa-exclamation-triangle text-danger o_calendar_warning pl-3\">\n"
+"                                </span>\n"
+"                                <span class=\"o_calendar_warning_tooltip text-danger\">\n"
+"                                    Calendar Mismatch : The employee's calendar does not match this contract's calendar. This could lead to unexpected behaviors.\n"
+"                                </span>"
+msgstr ""
+"<span attrs=\"{'invisible': ['|', ('calendar_mismatch', '=', False), ('state', '!=', 'open')]}\" class=\"fa fa-exclamation-triangle text-danger o_calendar_warning pl-3\">\n"
+"                                </span>\n"
+"                                <span class=\"o_calendar_warning_tooltip text-danger\">\n"
+"                                    عدم تطابق التقويم: تقويم الموظف لا يتطابق مع تقويم هذا العقد. هذا يمكن أن يؤدي إلى سلوكيات غير متوقعة.\n"
+"                                </span>"
+#. module: hr_contract
+#: model_terms:ir.ui.view,arch_db:hr_contract.hr_hr_employee_view_form2
+msgid ""
+"<span attrs=\"{'invisible': [('calendar_mismatch', '=', False)]}\" class=\"fa fa-exclamation-triangle text-danger o_calendar_warning pl-3\">\n"
+"                            </span>\n"
+"                            <span class=\"o_calendar_warning_tooltip text-danger\">\n"
+"                                Calendar Mismatch : The employee's calendar does not match its current contract calendar. This could lead to unexpected behaviors.\n"
+"                            </span>"
+msgstr ""
+"<span attrs=\"{'invisible': [('calendar_mismatch', '=', False)]}\" class=\"fa fa-exclamation-triangle text-danger o_calendar_warning pl-3\">\n"
+"                            </span>\n"
+"                            <span class=\"o_calendar_warning_tooltip text-danger\">\n"
+"                                عدم تطابق التقويم: تقويم الموظف لا يتطابق مع تقويم العقد الحالي. هذا يمكن أن يؤدي إلى سلوكيات غير متوقعة.\n"
+"                            </span>"
+
+#. module: hr_contract
+#: model:ir.model.fields,field_description:hr_contract.field_hr_payroll_structure_type__name
+msgid "Contract Type"
+msgstr "المسمى"
+
+#. module: hr_contract
+#: model:ir.model.fields,field_description:hr_contract.field_hr_payroll_structure_type__default_resource_calendar_id
+msgid "Default Working Hours"
+msgstr " جدول العمل"

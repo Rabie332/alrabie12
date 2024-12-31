@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+    <template id="way_bill_template">
+        <t t-call="web.html_container" t-lang="en_US">
+            <t t-set="docs" t-value="docs.with_context(lang='en_US')" />
+            <t t-foreach="docs" t-as="o">
+                <div class="header" />
+                <div class="footer" />
+                <t t-call="web.internal_layout" t-lang="en_US">
+                    <t t-foreach="o.line_ids.filtered(lambda l: l.to_print)" t-as="line">
+
+                        <div class="page" style="font-size: 16px;page-break-after: always;">
+                            <div class="row" style="padding-top:8%;">
+                                <div class="col-12">
+                                    <div class="col-4 pull-left">
+                                        <br />
+                                        <br />
+                                        <span t-field="o.create_date" t-options="{'format': 'dd/MM/yyyy'}" />
+                                        <br />
+                                        <span t-field="o.create_date" t-options="{'format': 'HH:mm:ss'}" />
+                                    </div>
+                                    <div class="col-4" />
+                                    <div class="col-4 pull-right" style="margin-left:-8%;">
+                                        <br />
+                                        <br />
+                                        <span t-field="o.name" />
+                                        <br />
+                                        <span t-field="o.clearance_request_id.name" />
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row" style="padding-top:6%;">
+                                <div class="col-12">
+                                    <div class="col-8 pull-left" style="padding-left:8%;">
+                                        <b>
+                                            <span t-field="o.clearance_request_id.partner_id.name" />
+                                        </b>
+                                    </div>
+                                    <div class="col-2 pull-right" style="margin-left:-8%;">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row" style="padding-top:4%;">
+                                <div class="col-12">
+                                    <div class="col-6 pull-left" style="padding-left:10%;">
+                                        <span t-field="line.container_number" />
+                                        <br />
+                                        <br />
+                                        <span t-field="line.container_category_id.name" />
+                                        <br />
+                                        <br />
+                                        <span t-field="o.clearance_request_id.vessel" />
+                                        <br />
+                                        <span t-field="o.clearance_request_id.port_lading" />
+                                        <br />
+                                        <br />
+                                        <span t-field="o.clearance_request_id.shipping_number" />
+                                        <br />
+                                        <br />
+
+                                        <span t-field="o.clearance_request_id.reference" />
+                                    </div>
+                                    <div class="col-6 pull-right" style="padding-left:15%;">
+                                        <span t-field="line.shipment_from" />
+                                        -
+                                        <span t-field="line.shipment_to" />
+                                        <br />
+                                        <br />
+                                        <t
+                                            t-set="driver_number"
+                                            t-value="request.env['hr.employee'].search([('address_home_id', '=', line.driver_id.id)], limit=1).number"
+                                        />
+                                        <t t-esc="driver_number" />
+                                        <br />
+                                        <br />
+                                        <span t-field="line.driver_id.name" />
+                                        <br />
+                                        <span t-field="line.vehicle_id.license_plate" />
+                                        <br />
+                                        <br />
+                                        <span t-field="line.vehicle_id.model_id.name" />
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <t
+                                            t-set="create_employee_number"
+                                            t-value="request.env['hr.employee'].search([('user_id', '=', create_uid)], limit=1).number"
+                                        />
+                                        <span t-field="o.create_uid.name" />
+                                        <t t-esc="create_employee_number" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <template id="way_bill_line_template">
+        <t t-call="web.html_container" t-lang="en_US">
+            <t t-set="docs" t-value="docs.with_context(lang='en_US')" />
+            <t t-foreach="docs" t-as="o">
+                <div class="header" />
+                <div class="footer" />
+                <t t-call="web.internal_layout" t-lang="en_US">
+                    <div class="page" style="font-size: 16px;page-break-after: always;">
+                        <div class="row" style="padding-top:8%;">
+                            <div class="col-12">
+                                <div class="col-4 pull-left">
+                                    <br />
+                                    <br />
+                                    <span
+                                        t-field="o.shipping_order_id.create_date"
+                                        t-options="{'format': 'dd/MM/yyyy'}"
+                                    />
+                                    <br />
+                                    <span
+                                        t-field="o.shipping_order_id.create_date"
+                                        t-options="{'format': 'HH:mm:ss'}"
+                                    />
+                                </div>
+                                <div class="col-4" />
+                                <div class="col-4 pull-right" style="margin-left:-8%;">
+                                    <br />
+                                    <br />
+                                    <span t-field="o.shipping_order_id.name" />/
+                                    <span t-field="o.number" />
+                                    <br />
+                                    <span t-field="o.shipping_order_id.clearance_request_id.name" />
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row" style="padding-top:6%;">
+                            <div class="col-12">
+                                <div class="col-8 pull-left" style="padding-left:8%;">
+                                    <b>
+                                        <span t-field="o.shipping_order_id.clearance_request_id.partner_id.name" />
+                                    </b>
+                                </div>
+                                <div class="col-2 pull-right" style="margin-left:-8%;">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row" style="padding-top:4%;">
+                            <div class="col-12">
+                                <div class="col-6 pull-left" style="padding-left:10%;">
+                                    <span t-field="o.container_number" />
+                                    <br />
+                                    <br />
+                                    <span t-field="o.container_category_id.name" />
+                                    <br />
+                                    <br />
+                                    <span t-field="o.shipping_order_id.clearance_request_id.vessel" />
+                                    <br />
+                                    <span t-field="o.shipping_order_id.clearance_request_id.port_lading" />
+                                    <br />
+                                    <br />
+                                    <span t-field="o.shipping_order_id.clearance_request_id.shipping_number" />
+                                    <br />
+                                    <br />
+
+                                    <span t-field="o.shipping_order_id.clearance_request_id.reference" />
+                                </div>
+                                <div class="col-6 pull-right" style="padding-left:15%;">
+                                    <span t-field="o.shipment_from" />
+                                    -
+                                    <span t-field="o.shipment_to" />
+                                    <br />
+                                    <br />
+                                    <t
+                                        t-set="driver_number"
+                                        t-value="request.env['hr.employee'].search([('address_home_id', '=', o.driver_id.id)], limit=1).number"
+                                    />
+                                    <t t-esc="driver_number" />
+                                    <br />
+                                    <br />
+                                    <span t-field="o.driver_id.name" />
+                                    <br />
+                                    <span t-field="o.vehicle_id.license_plate" />
+                                    <br />
+                                    <br />
+                                    <span t-field="o.vehicle_id.model_id.name" />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <t
+                                        t-set="create_employee_number"
+                                        t-value="request.env['hr.employee'].search([('user_id', '=', create_uid)], limit=1).number"
+                                    />
+                                    <span t-field="o.create_uid.name" />
+                                    <t t-esc="create_employee_number" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

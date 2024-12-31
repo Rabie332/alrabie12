@@ -1,0 +1,105 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_payment_state
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-26 16:37+0000\n"
+"PO-Revision-Date: 2022-12-26 16:37+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account_payment_state
+#: model_terms:ir.ui.view,arch_db:account_payment_state.account_payment_view_form_inherit_state
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: account_payment_state
+#: model:ir.actions.server,name:account_payment_state.action_account_confirmed_payments
+msgid "Confirm Payments"
+msgstr "أكد الدفعات"
+
+#. module: account_payment_state
+#: model:ir.model.fields,field_description:account_payment_state.field_account_payment__confirm_user_id
+msgid "Confirm User"
+msgstr "تأكيد المستخدم"
+
+#. module: account_payment_state
+#: model:ir.model.fields,field_description:account_payment_state.field_account_payment__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: account_payment_state
+#: model:ir.model.fields,field_description:account_payment_state.field_account_payment__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: account_payment_state
+#: model:ir.model.fields,field_description:account_payment_state.field_account_payment____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: account_payment_state
+#: model:ir.model,name:account_payment_state.model_account_payment
+msgid "Payments"
+msgstr "المدفوعات"
+
+#. module: account_payment_state
+#: model_terms:ir.ui.view,arch_db:account_payment_state.account_payment_view_form_inherit_state
+msgid "Review"
+msgstr "مراجعة"
+
+#. module: account_payment_state
+#: model:ir.actions.server,name:account_payment_state.action_account_review_payments
+msgid "Review Payments"
+msgstr "إرسال للمراجعة"
+
+#. module: account_payment_state
+#: model:ir.actions.server,name:account_payment_state.action_account_reviewed_payments
+msgid "Reviewed Payments"
+msgstr "مراجعة"
+
+#. module: account_payment_state
+#: code:addons/account_payment_state/models/account_payment.py:0
+#, python-format
+msgid "There are no confirmed payment to post."
+msgstr "لا يوجد دفعات مؤكدة لنشرها"
+
+#. module: account_payment_state
+#: code:addons/account_payment_state/models/account_payment.py:0
+#, python-format
+msgid "There are no payment in the draft state to review."
+msgstr "لا يوجد دفعات مسودة لإرسالها"
+
+#. module: account_payment_state
+#: code:addons/account_payment_state/models/account_payment.py:0
+#, python-format
+msgid "There are no payment under review to reviewed."
+msgstr "لا يوجد دفعات تحت المراجعة لمراجعتها"
+
+#. module: account_payment_state
+#: code:addons/account_payment_state/models/account_payment.py:0
+#, python-format
+msgid "There are no reviewed payment to confirm."
+msgstr "لا يوجد دفعات مراجعة لتأكيدها"
+
+#. module: account_payment_state
+#: model_terms:ir.ui.view,arch_db:account_payment_state.account_payment_view_form_inherit_state
+msgid "To Review"
+msgstr "للمراجعة"
+
+#. module: account_payment_state
+#: model_terms:ir.ui.view,arch_db:account_payment_state.account_payment_view_form_inherit_state
+msgid "Validate"
+msgstr "إعتماد"
+
+#. module: account_payment_state
+#: model:ir.model.fields,field_description:account_payment_state.field_account_payment__date_validate
+msgid "Validate Date"
+msgstr "تاريخ التأكيد"

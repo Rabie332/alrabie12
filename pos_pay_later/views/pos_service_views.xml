@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+        <record id="view_pos_service_tree_view" model="ir.ui.view">
+            <field name="name">pos.service.tree.view</field>
+            <field name="model">pos.service</field>
+            <field name="mode">primary</field>
+            <field
+            name="inherit_id"
+            ref="point_of_sale.view_pos_order_tree_no_session_id"
+        />
+            <field name="arch" type="xml">
+                <field name="name" position="before">
+                    <field name="pos_reference" />
+                </field>
+            </field>
+        </record>
+
+    <record id="view_pos_service_form_view" model="ir.ui.view">
+        <field name="name">pos.service.form.view</field>
+        <field name="model">pos.service</field>
+        <field name="mode">primary</field>
+        <field name="priority">100</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form" />
+        <field name="arch" type="xml">
+            <header position="replace">
+                <header>
+                    <field
+                        name="state"
+                        widget="statusbar"
+                        statusbar_visible="draft,paid,done"
+                    />
+                </header>
+            </header>
+            <field name="name" position="before">
+                <field name="pos_reference" />
+            </field>
+            <field name="lines" position="replace">
+                <field name="service_line_ids" />
+            </field>
+        </field>
+    </record>
+
+    <record id="pos_service_action" model="ir.actions.act_window">
+        <field name="name">Services</field>
+        <field name="res_model">pos.service</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="pos_service_menu"
+        parent="point_of_sale.menu_point_root"
+        action="pos_service_action"
+        sequence="3"
+        groups="point_of_sale.group_pos_manager,point_of_sale.group_pos_user"
+    />
+
+</odoo>

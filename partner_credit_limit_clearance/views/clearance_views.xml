@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+     <record id="clearance_form_inherit_credit_insurance_partner" model="ir.ui.view">
+            <field name="name">clearance.request.view.form.inherit.credit.insurance</field>
+            <field name="model">clearance.request</field>
+            <field name="inherit_id" ref="clearance.clearance_request_view_form" />
+            <field name="arch" type="xml">
+                <field name="company_id" position="after">
+                    <field name="show_credit_limit" invisible="1" />
+                    <field
+                    name="credit_insurance_amount"
+                    attrs="{'invisible': [('show_credit_limit', '=', False)]}"
+                    readonly="1"
+                    force_save="1"
+                />
+                    <field
+                    name="total_open_invoices"
+                    attrs="{'invisible': [('show_credit_limit', '=', False)]}"
+                    decoration-danger="total_open_invoices > credit_insurance_amount"
+                    readonly="1"
+                    force_save="1"
+                />
+                </field>
+            </field>
+       </record>
+
+</odoo>

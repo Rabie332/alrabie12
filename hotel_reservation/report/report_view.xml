@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!--Report for hotel check-in details -->
+  <!--   <report
+        id="hotel_checkin_details"
+        string="CheckIn Detail"
+        model="hotel.reservation"
+        report_type="qweb-pdf"
+        file="hotel_reservation.report_checkin_qweb"
+        name="hotel_reservation.report_checkin_qweb"
+        menu="True"
+    /> -->
+    <record id="hotel_checkin_details" model="ir.actions.report">
+        <field name="name">CheckIn Detail</field>
+        <field name="model">hotel.reservation</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_file">hotel_reservation.report_checkin_qweb</field>
+        <field name="report_name">hotel_reservation.report_checkin_qweb</field>
+    </record>
+    <!--Report for hotel room reservation details -->
+    <!-- <report
+        id="hotel_roomres_details"
+        string="Room Reservation Detail"
+        model="hotel.reservation"
+        report_type="qweb-pdf"
+        file="hotel_reservation.report_room_reservation_qweb"
+        name="hotel_reservation.report_room_reservation_qweb"
+        menu="True"
+    /> -->
+    <record id="hotel_roomres_details" model="ir.actions.report">
+        <field name="name">Room Reservation Detail</field>
+        <field name="model">hotel.reservation</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_file">hotel_reservation.report_room_reservation_qweb</field>
+        <field name="report_name">hotel_reservation.report_room_reservation_qweb</field>
+    </record>
+    <!--Report for hotel check-out details -->
+  <!--   <report
+        id="hotel_checkout_details"
+        string="CheckOut Detail"
+        model="hotel.reservation"
+        report_type="qweb-pdf"
+        file="hotel_reservation.report_checkout_qweb"
+        name="hotel_reservation.report_checkout_qweb"
+        menu="True"
+    /> -->
+    <record id="hotel_checkout_details" model="ir.actions.report">
+        <field name="name">CheckOut Detail</field>
+        <field name="model">hotel.reservation</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_file">hotel_reservation.report_checkout_qweb</field>
+        <field name="report_name">hotel_reservation.report_checkout_qweb</field>
+    </record>
+    <!--Report for hotel Maximum used room details -->
+    <!-- <report
+        id="hotel_maxroom_details"
+        string="MaxRoom Detail"
+        model="hotel.reservation"
+        report_type="qweb-pdf"
+        file="hotel_reservation.report_maxroom_qweb"
+        name="hotel_reservation.report_maxroom_qweb"
+        menu="True"
+    /> -->
+    <record id="hotel_maxroom_details" model="ir.actions.report">
+        <field name="name">MaxRoom Detail</field>
+        <field name="model">hotel.reservation</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_file">hotel_reservation.report_maxroom_qweb</field>
+        <field name="report_name">hotel_reservation.report_maxroom_qweb</field>
+    </record>
+
+     <record id="paperformat_hotel_reservation" model="report.paperformat">
+        <field name="name">Paperformat Hotel Reservation</field>
+        <field name="default" eval="True" />
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">0</field>
+        <field name="margin_bottom">5</field>
+        <field name="margin_left">5</field>
+        <field name="margin_right">5</field>
+        <field name="header_line" eval="False" />
+        <field name="header_spacing">0</field>
+        <field name="dpi">80</field>
+    </record>
+
+    <!-- <record id="guest_insurance_receipt_report" model="ir.actions.report">
+        <field name="name">Guest Insurance Receipt</field>
+        <field name="model">hotel.reservation</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_file">hotel_reservation.report_insurance_receipt_template</field>
+        <field name="report_name">hotel_reservation.report_insurance_receipt_template</field>
+        <field name="binding_model_id" ref="model_hotel_reservation" />
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="hotel_reservation.paperformat_hotel_reservation" />
+    </record> -->
+
+    <record id="hotel_booking_summary" model="ir.actions.report">
+        <field name="name">Booking Summary</field>
+        <field name="model">hotel.reservation</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_file">hotel_reservation.report_booking_summary_template</field>
+        <field name="report_name">hotel_reservation.report_booking_summary_template</field>
+        <field name="binding_model_id" ref="model_hotel_reservation" />
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="hotel_reservation.paperformat_hotel_reservation" />
+    </record>
+
+    <record id="rent_contract_summary" model="ir.actions.report">
+        <field name="name">Rent Contract</field>
+        <field name="model">hotel.reservation</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_file">hotel_reservation.report_rent_contract_template</field>
+        <field name="report_name">hotel_reservation.report_rent_contract_template</field>
+        <field name="binding_model_id" ref="model_hotel_reservation" />
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="hotel_reservation.paperformat_hotel_reservation" />
+    </record>
+
+    <record id="hotel_booking_folio_summary" model="ir.actions.report">
+        <field name="name">Booking Summary</field>
+        <field name="model">hotel.folio</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_file">hotel_reservation.report_booking_summary_folio_template</field>
+        <field name="report_name">hotel_reservation.report_booking_summary_folio_template</field>
+        <field name="binding_model_id" ref="model_hotel_folio" />
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="hotel_reservation.paperformat_hotel_reservation" />
+    </record>
+
+    <record id="rent_contract_folio_summary" model="ir.actions.report">
+        <field name="name">Rent Contract</field>
+        <field name="model">hotel.folio</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_file">hotel_reservation.report_rent_contract_folio_template</field>
+        <field name="report_name">hotel_reservation.report_rent_contract_folio_template</field>
+        <field name="binding_model_id" ref="model_hotel_folio" />
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="hotel_reservation.paperformat_hotel_reservation" />
+    </record>
+
+</odoo>

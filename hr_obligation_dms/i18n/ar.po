@@ -1,0 +1,51 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_obligation_dms
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-15 12:22+0000\n"
+"PO-Revision-Date: 2021-10-15 12:22+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_obligation_dms
+#: model:ir.model.fields,field_description:hr_obligation_dms.field_hr_obligation_setting__display_name
+msgid "Display Name"
+msgstr "المسمى"
+
+#. module: hr_obligation_dms
+#: model_terms:ir.ui.view,arch_db:hr_obligation_dms.view_hr_obligation_setting_inherit_dms
+msgid "Folders"
+msgstr "المجلدات"
+
+#. module: hr_obligation_dms
+#: model:ir.model.fields,field_description:hr_obligation_dms.field_hr_obligation_setting__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: hr_obligation_dms
+#: model:ir.model.fields,field_description:hr_obligation_dms.field_hr_obligation_setting____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_obligation_dms
+#: model:ir.model,name:hr_obligation_dms.model_hr_obligation_setting
+msgid "Obligation Setting"
+msgstr "إعدادات"
+
+#. module: hr_obligation_dms
+#: model_terms:ir.ui.view,arch_db:hr_obligation_dms.view_hr_obligation_setting_inherit_dms
+msgid "Settings"
+msgstr "إعدادات"
+
+#. module: hr_obligation_dms
+#: model:ir.model.fields,field_description:hr_obligation_dms.field_hr_obligation_setting__folder_ids
+msgid "folders"
+msgstr "المجلدات"

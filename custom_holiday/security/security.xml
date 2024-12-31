@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Create a new category for Helpdesk -->
+        <record id="module_category_helpdesk" model="ir.module.category">
+            <field name="name">Helpdesk</field>
+        </record>
+
+        <!-- Create Helpdesk Admin group -->
+        <record id="group_helpdesk_admin" model="res.groups">
+            <field name="name">Helpdesk Admin</field>
+            <field name="category_id" ref="module_category_helpdesk"/>
+        </record>
+
+        <!-- Security rule example: Allow Helpdesk Admin to view all tickets -->
+        <record id="ticket_helpdesk_admin_rule" model="ir.rule">
+            <field name="name">Helpdesk Admin Rule</field>
+            <field name="model_id" ref="model_it_tickets"/>
+            <field name="groups" eval="[(4, ref('group_helpdesk_admin'))]"/>
+            <field name="domain_force">[]</field>
+            <field name="perm_read">True</field>
+            <field name="perm_write">True</field>
+            <field name="perm_create">True</field>
+            <field name="perm_unlink">True</field>
+        </record>
+        
+        <!-- Add other groups as needed -->
+    </data>
+</odoo>

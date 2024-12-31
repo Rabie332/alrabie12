@@ -1,0 +1,88 @@
+<odoo>
+    <template id="report_partner_reclamation_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="oe_structure" />
+                        <div class="col-12">
+                            <center>
+                                <strong>Partner Reclamation</strong>
+                            </center>
+                            <br />
+                            <br />
+                            <br />
+                            <table width="100%">
+                                <tr>
+                                    <th>Date from :</th>
+                                    <th>date to :</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span t-field="o.date_from" t-options="{'format': 'yyyy/MM/dd'}" />
+                                    </td>
+                                    <td>
+                                        <span t-field="o.date_to" t-options="{'format': 'yyyy/MM/dd'}" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <br />
+                        <br />
+
+                        <table class="table table-condensed">
+                            <tr>
+                                <td>
+                                    <strong>Number</strong>
+                                </td>
+                                <td>
+                                    <strong>Date</strong>
+                                </td>
+                                <td>
+                                    <strong>Complain</strong>
+                                </td>
+                                <td>
+                                    <strong>Guest</strong>
+                                </td>
+                                <td>
+                                    <strong>state</strong>
+                                </td>
+
+                            </tr>
+                            <t t-foreach="get_lines(o)" t-as="line">
+                                <tr>
+
+                                    <td>
+                                        <span t-field="line.name" />
+                                    </td>
+                                    <td>
+                                        <span t-field="line.date" />
+                                    </td>
+                                    <td>
+                                        <span t-field="line.complaint_text" />
+                                    </td>
+                                    <td>
+                                        <span t-field="line.partner_id" />
+                                    </td>
+                                    <td>
+                                        <span t-field="line.state" />
+                                    </td>
+                                </tr>
+                            </t>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+
+    <record id="report_partner_reclamation" model="ir.actions.report">
+        <field name="name">Partner Reclamation Report</field>
+        <field name="model">partner.reclamation</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_file">hotel_room.report_partner_reclamation_template</field>
+        <field name="report_name">hotel_room.report_partner_reclamation_template</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="assets_backend" name="Backend Assets" inherit_id="web.assets_backend">
+        <xpath expr="//script[last()]" position="after">
+            <script
+                type="text/javascript"
+                src="/web_apps_background/static/src/js/apps.js"
+            />
+        </xpath>
+    </template>
+
+</odoo>

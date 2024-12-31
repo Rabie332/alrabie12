@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+ <data noupdate="1">
+    <!-- Obligation setting -->
+
+    <record id="data_hr_obligation_setting" model="hr.obligation.setting">
+        <field name="name">Policies and Regulations</field>
+    </record>
+ </data>
+</odoo>

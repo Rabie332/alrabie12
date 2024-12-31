@@ -1,0 +1,544 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_pay_later
+#
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-15 04:47+0000\n"
+"PO-Revision-Date: 2023-06-15 04:47+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,help:pos_pay_later.field_pos_service__sequence_number
+msgid "A session-unique sequence number for the order"
+msgstr "رقم تسلسل فريد للجلسة للطلب"
+#. module: pos_pay_later
+#: model:ir.model.fields,help:pos_pay_later.field_pos_service__sale_journal
+msgid "Accounting journal used to post sales entries."
+msgstr "دفتر يومية محاسبة يستخدم لترحيل إدخالات المبيعات."
+
+#. module: pos_pay_later
+#. openerp-web
+#: code:addons/pos_pay_later/static/src/xml/services.xml:0
+#, python-format
+msgid "Cancelled"
+msgstr "ملغي"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__cashier
+msgid "Cashier"
+msgstr "أمين الصندوق"
+
+#. module: pos_pay_later
+#. openerp-web
+#: code:addons/pos_pay_later/static/src/xml/services.xml:0
+#, python-format
+msgid "Checkout"
+msgstr "دفع"
+
+#. module: pos_pay_later
+#. openerp-web
+#: code:addons/pos_pay_later/static/src/xml/services.xml:0
+#, python-format
+msgid "Close"
+msgstr "إقفال"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__company_id
+msgid "Company"
+msgstr "شركة"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__currency_rate
+msgid "Currency Rate"
+msgstr "سعر صرف العملة"
+
+#. module: pos_pay_later
+#. openerp-web
+#: code:addons/pos_pay_later/static/src/xml/services.xml:0
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__partner_id
+#, python-format
+msgid "Customer"
+msgstr "العميل"
+
+#. module: pos_pay_later
+#. openerp-web
+#: code:addons/pos_pay_later/static/src/xml/services.xml:0
+#, python-format
+msgid "Customer:"
+msgstr "العميل:"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__date_order
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: pos_pay_later
+#. openerp-web
+#: code:addons/pos_pay_later/static/src/xml/services.xml:0
+#, python-format
+msgid "Discard"
+msgstr "تجاهل"
+
+#. module: pos_pay_later
+#. openerp-web
+#: code:addons/pos_pay_later/static/src/xml/services.xml:0
+#, python-format
+msgid "Discount"
+msgstr "الخصم"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_config__display_name
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_order__display_name
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_order_line__display_name
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: pos_pay_later
+#. openerp-web
+#: code:addons/pos_pay_later/static/src/xml/pay_later.xml:0
+#, python-format
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: pos_pay_later
+#. openerp-web
+#: code:addons/pos_pay_later/static/src/xml/services.xml:0
+#, python-format
+msgid "Draft/New"
+msgstr "مسودة / جديد"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: pos_pay_later
+#. openerp-web
+#: code:addons/pos_pay_later/static/src/js/Screens/PaymentScreen.js:0
+#, python-format
+msgid "Empty Order"
+msgstr "أمر فارغ"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,help:pos_pay_later.field_pos_service__invoice_group
+msgid "Enables invoice generation from the Point of Sale."
+msgstr "يفعّل إمكانية إنشاء الفواتير من نقطة البيع."
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__failed_pickings
+msgid "Failed Pickings"
+msgstr "عمليات الانتقاء الفاشلة "
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__fiscal_position_id
+msgid "Fiscal Position"
+msgstr "الموقف الضريبي"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_config__id
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_order__id
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_order_line__id
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__note
+msgid "Internal Notes"
+msgstr "ملاحظات داخلية"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__account_move
+msgid "Invoice"
+msgstr "فاتورة ضريبية"
+
+#. module: pos_pay_later
+#. openerp-web
+#: code:addons/pos_pay_later/static/src/xml/services.xml:0
+#, python-format
+msgid "Invoiced"
+msgstr "المفوتر"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__invoice_group
+msgid "Invoicing"
+msgstr "الفوترة"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__is_invoiced
+msgid "Is Invoiced"
+msgstr "مفوتر"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__is_tipped
+msgid "Is this already tipped?"
+msgstr "هل تم منح بقشيش بالفعل؟ "
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_config____last_update
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_order____last_update
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_order_line____last_update
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: pos_pay_later
+#. openerp-web
+#: code:addons/pos_pay_later/static/src/xml/pay_later.xml:0
+#, python-format
+msgid "Later Payment"
+msgstr "الدفع اللاحق"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_config__allow_later_payment
+msgid "Later payment"
+msgstr "الدفع اللاحق"
+
+#. module: pos_pay_later
+#. openerp-web
+#: code:addons/pos_pay_later/static/src/xml/services.xml:0
+#, python-format
+msgid "Loading..."
+msgstr "جار التحميل..."
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__nb_print
+msgid "Number of Print"
+msgstr "عدد المطبوعات"
+
+#. module: pos_pay_later
+#. openerp-web
+#: code:addons/pos_pay_later/static/src/js/Screens/ServicesScreen.js:0
+#, python-format
+msgid "Offline"
+msgstr "مقطوع"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__picking_type_id
+msgid "Operation Type"
+msgstr "نوع العملية"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__lines
+msgid "Order Lines"
+msgstr "بنود الأمر"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_order_line__order_id
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__name
+msgid "Order Ref"
+msgstr "رقم إشارة الأمر"
+
+#. module: pos_pay_later
+#: model:ir.model,name:pos_pay_later.model_pos_service
+msgid "POS service"
+msgstr "خدمة نقاط البيع"
+
+#. module: pos_pay_later
+#. openerp-web
+#: code:addons/pos_pay_later/static/src/xml/services.xml:0
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__amount_paid
+#, python-format
+msgid "Paid"
+msgstr "مسدد"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__payment_ids
+msgid "Payments"
+msgstr "الدفعات"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,help:pos_pay_later.field_pos_service__employee_id
+#: model:ir.model.fields,help:pos_pay_later.field_pos_service__user_id
+msgid ""
+"Person who uses the cash register. It can be a reliever, a student or an "
+"interim employee."
+msgstr ""
+"الشخص الذي يستخدم صندوق الكاشير. قد يكون بائع تجزئة أو طالب أو موظف متدرب."
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__picking_ids
+msgid "Picking"
+msgstr "استلام"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__picking_count
+msgid "Picking Count"
+msgstr "عدد الاستلامات"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__config_id
+msgid "Point of Sale"
+msgstr "نقطة البيع"
+
+#. module: pos_pay_later
+#: model:ir.model,name:pos_pay_later.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "إعدادات نقطة البيع"
+
+#. module: pos_pay_later
+#: model:ir.model,name:pos_pay_later.model_pos_order_line
+msgid "Point of Sale Order Lines"
+msgstr "بنود أمر نقطة البيع"
+
+#. module: pos_pay_later
+#: model:ir.model,name:pos_pay_later.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "أوامر نقطة البيع"
+
+#. module: pos_pay_later
+#. openerp-web
+#: code:addons/pos_pay_later/static/src/xml/services.xml:0
+#, python-format
+msgid "Posted"
+msgstr "مُرحل"
+
+#. module: pos_pay_later
+#. openerp-web
+#: code:addons/pos_pay_later/static/src/xml/services.xml:0
+#, python-format
+msgid "Price"
+msgstr "السعر"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__pricelist_id
+msgid "Pricelist"
+msgstr "قائمه الأسعار"
+
+#. module: pos_pay_later
+#. openerp-web
+#: code:addons/pos_pay_later/static/src/xml/services.xml:0
+#, python-format
+msgid "Product"
+msgstr "المنتج"
+
+#. module: pos_pay_later
+#. openerp-web
+#: code:addons/pos_pay_later/static/src/xml/services.xml:0
+#, python-format
+msgid "Quantity"
+msgstr "الكمية"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__pos_reference
+msgid "Receipt Number"
+msgstr "رقم الإيصال "
+
+#. module: pos_pay_later
+#. openerp-web
+#: code:addons/pos_pay_later/static/src/xml/services.xml:0
+#, python-format
+msgid "Receipt Ref"
+msgstr "مرجع الاستلام"
+
+#. module: pos_pay_later
+#. openerp-web
+#: code:addons/pos_pay_later/static/src/xml/services.xml:0
+#, python-format
+msgid "Receipt Ref:"
+msgstr "مرجع الاستلام:"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__user_id
+msgid "Responsible"
+msgstr "مسؤول"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__amount_return
+msgid "Returned"
+msgstr "المرتجع"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__sale_journal
+msgid "Sales Journal"
+msgstr "دفتر يومية المبيعات"
+
+#. module: pos_pay_later
+#. openerp-web
+#: code:addons/pos_pay_later/static/src/xml/services.xml:0
+#, python-format
+msgid "Search Services"
+msgstr "البحث في الخدمات"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__sequence_number
+msgid "Sequence Number"
+msgstr "الرقم المسلسل"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_order__service_id
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__service_id
+msgid "Service"
+msgstr "الخدمة"
+
+#. module: pos_pay_later
+#. openerp-web
+#: code:addons/pos_pay_later/static/src/xml/services.xml:0
+#, python-format
+msgid "Service Date"
+msgstr "تاريخ الخدمة"
+
+#. module: pos_pay_later
+#. openerp-web
+#: code:addons/pos_pay_later/static/src/xml/services.xml:0
+#, python-format
+msgid "Service Date:"
+msgstr "تاريخ الخدمة:"
+
+#. module: pos_pay_later
+#. openerp-web
+#: code:addons/pos_pay_later/static/src/xml/services.xml:0
+#, python-format
+msgid "Service Details"
+msgstr "تفاصيل الخدمة"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__service_line_ids
+msgid "Service Lines"
+msgstr "بنود  الخدمة"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_order_line__service_id
+msgid "Service Ref"
+msgstr "مرجع الخدمة"
+
+#. module: pos_pay_later
+#. openerp-web
+#: code:addons/pos_pay_later/static/src/xml/services.xml:0
+#: model:ir.actions.act_window,name:pos_pay_later.pos_service_action
+#: model:ir.ui.menu,name:pos_pay_later.pos_service_menu
+#, python-format
+msgid "Services"
+msgstr "الاستلامات"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__session_id
+msgid "Session"
+msgstr "الجلسة"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__session_move_id
+msgid "Session Journal Entry"
+msgstr "قيد اليومية للجلسة "
+
+#. module: pos_pay_later
+#. openerp-web
+#: code:addons/pos_pay_later/static/src/xml/services.xml:0
+#, python-format
+msgid "State"
+msgstr "حالة الفاتورة"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__state
+msgid "Status"
+msgstr "حالة الفاتورة"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__amount_tax
+msgid "Taxes"
+msgstr "الضرائب"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,help:pos_pay_later.field_pos_service__config_id
+msgid "The physical point of sale you will use."
+msgstr "نقطه البيع المادية التي سوف تستخدمها."
+
+#. module: pos_pay_later
+#: model:ir.model.fields,help:pos_pay_later.field_pos_service__currency_rate
+msgid ""
+"The rate of the currency to the currency of rate applicable at the date of "
+"the order"
+msgstr "نسبة العملة إلى العملة ذات النسبة الممكن تطبيقها في تاريخ الأمر"
+
+#. module: pos_pay_later
+#. openerp-web
+#: code:addons/pos_pay_later/static/src/js/Screens/PaymentScreen.js:0
+#, python-format
+msgid "There must be at least one product in your order."
+msgstr "يجب أن يكون هناك منتج واحد على الأقل في طلبك."
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__tip_amount
+msgid "Tip Amount"
+msgstr "قيمة البقشيش"
+
+#. module: pos_pay_later
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__to_invoice
+msgid "To invoice"
+msgstr "في انتظار الفوترة"
+
+#. module: pos_pay_later
+#. openerp-web
+#: code:addons/pos_pay_later/static/src/xml/services.xml:0
+#: model:ir.model.fields,field_description:pos_pay_later.field_pos_service__amount_total
+#, python-format
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: pos_pay_later
+#. openerp-web
+#: code:addons/pos_pay_later/static/src/xml/services.xml:0
+#, python-format
+msgid "Total Amount:"
+msgstr "المبلغ الإجمالي:"
+
+#. module: pos_pay_later
+#. openerp-web
+#: code:addons/pos_pay_later/static/src/js/Popups/ServiceDetails.js:0
+#, python-format
+msgid "Total is different, please check if there are taxes differences."
+msgstr "الإجمالي مختلف ، يرجى التحقق مما إذا كانت هناك اختلافات ضريبية."
+
+#. module: pos_pay_later
+#. openerp-web
+#: code:addons/pos_pay_later/static/src/js/Screens/ServicesScreen.js:0
+#, python-format
+msgid "Unable to load services."
+msgstr "تعذر تحميل الخدمات."
+
+#. module: pos_pay_later
+#. openerp-web
+#: code:addons/pos_pay_later/static/src/js/Screens/PaymentScreen.js:0
+#, python-format
+msgid "You cannot perform a later payment. Select a customer first."
+msgstr "لا يمكنك إجراء الدفع اللاحق . حدد الزبون أولا."
+
+#. module: pos_pay_later
+#: model:ir.model,name:pos_pay_later.model_pos_service
+msgid "pos.service"
+msgstr ""

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t
+        t-name="OrderReceipt"
+        t-inherit="point_of_sale.OrderReceipt"
+        t-inherit-mode="extension"
+        owl="1"
+    >
+        <xpath expr="//div[hasclass('pos-receipt-contact')]" position="before">
+            <h2 class="pos-receipt-center-align">Simplified Tax Invoice</h2>
+            <h2 class="pos-receipt-center-align">فاتورة ضريبية مبسطة</h2>
+            <h2 class="pos-receipt-center-align">
+                <t t-esc='receipt.name' />
+            </h2>
+        </xpath>
+        <xpath expr="//t[@t-if='receipt.company.vat']" position="before">
+            <div>Invoice date:
+                <t t-esc="receipt.date.localestring" />
+            </div>
+            <div>Company CR:
+                <t t-esc="receipt.company.company_registry" />
+            </div>
+        </xpath>
+        <xpath expr="//t[@t-if='receipt.company.contact_address']" position="after">
+            <t t-if='receipt.company.city and receipt.company.street'>
+                <div>
+                    <t t-esc='receipt.company.city' />,
+                    <t t-esc='receipt.company.street' />
+                </div>
+            </t>
+        </xpath>
+        <xpath expr="//t[@t-if='receipt.company.email']" position="replace" />
+        <xpath expr="//t[@t-if='receipt.company.website']" position="replace" />
+        <!--  Fix RTL direction of price * quantity    -->
+        <xpath
+            expr="//t[@t-else='']//span[hasclass('price_display')]/.."
+            position="attributes"
+        >
+            <attribute name="style">unicode-bidi: plaintext;</attribute>
+        </xpath>
+        <xpath expr="//div[hasclass('pos-receipt-order-data')]" position="attributes">
+            <attribute name="style">display:none;</attribute>
+        </xpath>
+        <xpath expr="//div[hasclass('pos-receipt-order-data')]" position="after">
+            <div class="pos-receipt-order-data">
+                <img
+                    id="qrcode"
+                    t-att-src="receipt.qr_code"
+                    class="pos-receipt-logo"
+                />
+            </div>
+        </xpath>
+    </t>
+</templates>

@@ -1,0 +1,546 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_cash_atm
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-15 08:50+0000\n"
+"PO-Revision-Date: 2023-06-15 08:50+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_cash_atm
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_sale_report_template
+msgid "<strong>Z-REPORT</strong>"
+msgstr "<strong>تقرير Z</strong>"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Popups/PopUpSelectionBox.xml:0
+#: model:ir.model.fields,field_description:pos_cash_atm.field_pos_session__atm
+#, python-format
+msgid "ATM"
+msgstr "المدى"
+
+#. module: pos_cash_atm
+#: model:ir.model.fields,field_description:pos_cash_atm.field_pos_session_history__atm
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_session_view_form_inherit_pos_cash_atm
+msgid "ATM (Cashier)"
+msgstr "صراف آلي (البائع)"
+
+#. module: pos_cash_atm
+#: model:ir.model.fields,field_description:pos_cash_atm.field_pos_session_history__expected_atm
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_session_view_form_inherit_pos_cash_atm
+msgid "ATM (System)"
+msgstr "صراف آلي (النظام)"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Reports/ReportSalesSummarySession.xml:0
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_sale_report_template
+#, python-format
+msgid "ATM Total"
+msgstr "مجموع مبالغ المدى"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/js/Chrome.js:0
+#: code:addons/pos_cash_atm/static/src/xml/Reports/ReportScreen.xml:0
+#, python-format
+msgid "Back"
+msgstr "رجوع"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Reports/ReportSalesSummarySession.xml:0
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_sale_report_template
+#, python-format
+msgid "CASH IN"
+msgstr "التدفقات النقدية الداخلة"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Reports/ReportSalesSummarySession.xml:0
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_sale_report_template
+#, python-format
+msgid "CASH OUT"
+msgstr "المصروفات"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Popups/PopUpSelectionBox.xml:0
+#, python-format
+msgid "CLOSING CONTROL"
+msgstr "التحكم في الإغلاق"
+
+#. module: pos_cash_atm
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_sale_report_form_view
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Popups/PopUpSelectionBox.xml:0
+#: model:ir.model.fields,field_description:pos_cash_atm.field_pos_session__cash
+#, python-format
+msgid "Cash"
+msgstr "الكاش"
+
+#. module: pos_cash_atm
+#: model:ir.model.fields,field_description:pos_cash_atm.field_pos_session_history__cash
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_session_view_form_inherit_pos_cash_atm
+msgid "Cash (Cashier)"
+msgstr "نقدي (البائع)"
+
+#. module: pos_cash_atm
+#: model:ir.model.fields,field_description:pos_cash_atm.field_pos_session__system_cash
+#: model:ir.model.fields,field_description:pos_cash_atm.field_pos_session_history__expected_cash
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_session_view_form_inherit_pos_cash_atm
+msgid "Cash (System)"
+msgstr "نقدي (النظام)"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Reports/ReportSalesSummarySession.xml:0
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_sale_report_template
+#, python-format
+msgid "Cash Register Balance Start"
+msgstr "بدء رصيد تسجيل النقدية"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Reports/ReportSalesSummarySession.xml:0
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_sale_report_template
+#, python-format
+msgid "Cash Total"
+msgstr "مجموع المبالغ النقدية"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Reports/ReportSalesSummarySession.xml:0
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_sale_report_template
+#, python-format
+msgid "Cash-Regis Balance End"
+msgstr "نهاية رصيد Cash-Regis"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Reports/ReportSalesSummarySession.xml:0
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_sale_report_template
+#, python-format
+msgid "Cashier/Seller"
+msgstr "أمين الصندوق / البائع"
+
+#. module: pos_cash_atm
+#: model:ir.model.fields,field_description:pos_cash_atm.field_pos_session_history__checkout_atm
+msgid "Checkout ATM"
+msgstr "مبلغ الصراف الألي عند الخروج"
+
+#. module: pos_cash_atm
+#: model:ir.model.fields,field_description:pos_cash_atm.field_pos_session_history__checkout_cash
+msgid "Checkout cash"
+msgstr "مبلغ الكاش عند الخروج"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/js/Chrome.js:0
+#, python-format
+msgid "Close Session"
+msgstr "إغلاق الجلسة"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/js/Chrome.js:0
+#, python-format
+msgid "Close Session/Logout"
+msgstr "إغلاق الجلسة/الخروج"
+
+#. module: pos_cash_atm
+#: code:addons/pos_cash_atm/models/pos_session.py:0
+#, python-format
+msgid "Closed & Posted"
+msgstr "مغلقة ومرحّلة"
+
+#. module: pos_cash_atm
+#: code:addons/pos_cash_atm/models/pos_session.py:0
+#, python-format
+msgid "Closing Control"
+msgstr "التحكم في الإغلاق"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Reports/ReportSalesSummarySession.xml:0
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_sale_report_template
+#, python-format
+msgid "Closing Total"
+msgstr "إجمالي الإغلاق"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Popups/PopUpSelectionBox.xml:0
+#, python-format
+msgid "Continue Selling"
+msgstr "متابعة البيع"
+
+#. module: pos_cash_atm
+#: model:ir.model.fields,field_description:pos_cash_atm.field_pos_sale_report__create_uid
+#: model:ir.model.fields,field_description:pos_cash_atm.field_pos_session_history__create_uid
+msgid "Created by"
+msgstr "البائع"
+
+#. module: pos_cash_atm
+#: model:ir.model.fields,field_description:pos_cash_atm.field_pos_sale_report__create_date
+#: model:ir.model.fields,field_description:pos_cash_atm.field_pos_session_history__create_date
+msgid "Created on"
+msgstr "التاريخ"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Reports/ReportSalesSummarySession.xml:0
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_sale_report_template
+#, python-format
+msgid "Difference"
+msgstr "الفرق"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Reports/ReportSalesSummarySession.xml:0
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_sale_report_template
+#, python-format
+msgid "Discount"
+msgstr "الخصم:"
+
+#. module: pos_cash_atm
+#: model:ir.model.fields,field_description:pos_cash_atm.field_pos_sale_report__display_name
+#: model:ir.model.fields,field_description:pos_cash_atm.field_pos_session__display_name
+#: model:ir.model.fields,field_description:pos_cash_atm.field_pos_session_history__display_name
+#: model:ir.model.fields,field_description:pos_cash_atm.field_report_pos_cash_atm_pos_sale_report_template__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: pos_cash_atm
+#: model:ir.model.fields,field_description:pos_cash_atm.field_pos_session__cash_register_balance_end_real
+msgid "Ending Balance"
+msgstr "الرصيد الختامي"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Reports/ReportSalesSummarySession.xml:0
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_sale_report_template
+#, python-format
+msgid "Gross"
+msgstr "الاجمالي"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Reports/ReportSalesSummarySession.xml:0
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_sale_report_template
+#, python-format
+msgid "Gross Profit"
+msgstr "اجمالي الربح"
+
+#. module: pos_cash_atm
+#: model:ir.model.fields,field_description:pos_cash_atm.field_pos_session__history_ids
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_session_view_form_inherit_pos_cash_atm
+msgid "History"
+msgstr "السجل"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Reports/ReportScreen.xml:0
+#, python-format
+msgid "How would you like to receive your receipt?"
+msgstr "كيف تريد استلام إيصالك ؟"
+
+#. module: pos_cash_atm
+#: model:ir.model.fields,field_description:pos_cash_atm.field_pos_sale_report__id
+#: model:ir.model.fields,field_description:pos_cash_atm.field_pos_session__id
+#: model:ir.model.fields,field_description:pos_cash_atm.field_pos_session_history__id
+#: model:ir.model.fields,field_description:pos_cash_atm.field_report_pos_cash_atm_pos_sale_report_template__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: pos_cash_atm
+#: code:addons/pos_cash_atm/models/pos_session.py:0
+#, python-format
+msgid "In Progress"
+msgstr "قيد التقدم"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/js/Chrome.js:0
+#, python-format
+msgid "Keep Session"
+msgstr "الحفاظ على الجلسة"
+
+#. module: pos_cash_atm
+#: model:ir.model.fields,field_description:pos_cash_atm.field_pos_sale_report____last_update
+#: model:ir.model.fields,field_description:pos_cash_atm.field_pos_session____last_update
+#: model:ir.model.fields,field_description:pos_cash_atm.field_pos_session_history____last_update
+#: model:ir.model.fields,field_description:pos_cash_atm.field_report_pos_cash_atm_pos_sale_report_template____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: pos_cash_atm
+#: model:ir.model.fields,field_description:pos_cash_atm.field_pos_sale_report__write_uid
+#: model:ir.model.fields,field_description:pos_cash_atm.field_pos_session_history__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: pos_cash_atm
+#: model:ir.model.fields,field_description:pos_cash_atm.field_pos_sale_report__write_date
+#: model:ir.model.fields,field_description:pos_cash_atm.field_pos_session_history__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/js/Chrome.js:0
+#, python-format
+msgid "Logout System"
+msgstr "تسجيل الخروج"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Reports/ReportSalesSummarySession.xml:0
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_sale_report_template
+#, python-format
+msgid "Net"
+msgstr "الصافي"
+
+#. module: pos_cash_atm
+#: code:addons/pos_cash_atm/models/pos_session.py:0
+#, python-format
+msgid "New Session"
+msgstr "جلسة جديدة"
+
+#. module: pos_cash_atm
+#: code:addons/pos_cash_atm/models/pos_session.py:0
+#, python-format
+msgid "Opening Control"
+msgstr "فتح التحكم"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Reports/ReportSalesSummarySession.xml:0
+#, python-format
+msgid "Order Ref"
+msgstr "مرجع الطلب"
+
+#. module: pos_cash_atm
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_sale_report_template
+msgid "Order Ref:"
+msgstr "مرجع الطلب:"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Reports/ReportSalesSummarySession.xml:0
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_sale_report_template
+#, python-format
+msgid "PAYMENT METHOD"
+msgstr "طريقة الدفع او السداد"
+
+#. module: pos_cash_atm
+#: model:ir.model,name:pos_cash_atm.model_pos_session
+msgid "Point of Sale Session"
+msgstr "جلسة نقطة البيع"
+
+#. module: pos_cash_atm
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_sale_report_form_view
+msgid "Print"
+msgstr "طباعة"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Reports/ReportSalesSummarySession.xml:0
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_sale_report_template
+#, python-format
+msgid "Print Date"
+msgstr "تاريخ الطباعة"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Reports/ReportScreen.xml:0
+#, python-format
+msgid "Print Receipt"
+msgstr "طباعة الإيصال"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Reports/ReportSalesSummarySession.xml:0
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_sale_report_template
+#, python-format
+msgid "Print Time"
+msgstr "وقت الطباعة"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Reports/ReportSalesSummarySession.xml:0
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_sale_report_template
+#, python-format
+msgid "Refund"
+msgstr "إعادة المبلغ"
+
+#. module: pos_cash_atm
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_sale_report_template
+msgid "Reversal"
+msgstr "انعكاس، ارتداد، انقلاب"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Reports/ReportSalesSummarySession.xml:0
+#, python-format
+msgid "Reversal Information"
+msgstr "عكس المعلومات"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Reports/ReportSalesSummarySession.xml:0
+#, python-format
+msgid "Reversal Total"
+msgstr "عكس المجموع"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Reports/ReportSalesSummarySession.xml:0
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_sale_report_template
+#, python-format
+msgid "SUMMARY"
+msgstr "ملخص"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Reports/ReportSalesSummarySession.xml:0
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_sale_report_template
+#, python-format
+msgid "Sale Total"
+msgstr "إجمالي البيع"
+
+#. module: pos_cash_atm
+#: model:ir.model.fields,field_description:pos_cash_atm.field_pos_session_history__session_id
+msgid "Session"
+msgstr "الجلسة"
+
+#. module: pos_cash_atm
+#: model:ir.model,name:pos_cash_atm.model_pos_session_history
+msgid "Session History"
+msgstr "سجل الجلسة"
+
+#. module: pos_cash_atm
+#: model:ir.model.fields,field_description:pos_cash_atm.field_pos_sale_report__session_ids
+msgid "Session(s)"
+msgstr "الجلسات"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Reports/ReportSalesSummarySession.xml:0
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_sale_report_template
+#, python-format
+msgid "Shop"
+msgstr "المتجر"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Reports/ReportSalesSummarySession.xml:0
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_sale_report_template
+#, python-format
+msgid "Started at"
+msgstr "بدأت في"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Reports/ReportSalesSummarySession.xml:0
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_sale_report_template
+#, python-format
+msgid "State"
+msgstr "الحالة"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Reports/ReportSalesSummarySession.xml:0
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_sale_report_template
+#, python-format
+msgid "Stop at"
+msgstr "توقف عند"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Reports/ReportSalesSummarySession.xml:0
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_sale_report_template
+#, python-format
+msgid "TAXES DETAIL"
+msgstr "تفاصيل الضرائب"
+
+#. module: pos_cash_atm
+#: model:ir.model,name:pos_cash_atm.model_report_pos_cash_atm_pos_sale_report_template
+msgid "Template Report of sale"
+msgstr "نموذج تقرير البيع"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Reports/ReportSalesSummarySession.xml:0
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_sale_report_template
+#, python-format
+msgid "Total Orders"
+msgstr "إجمالي الطلبات"
+
+#. module: pos_cash_atm
+#: model:ir.model.fields,help:pos_cash_atm.field_pos_session__cash_register_balance_end_real
+msgid "Total of closing cash control lines."
+msgstr "إجمالي بنود إقفال التحكم النقدي."
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Reports/ReportSalesSummarySession.xml:0
+#: model_terms:ir.ui.view,arch_db:pos_cash_atm.pos_sale_report_template
+#, python-format
+msgid "USERS SUMMARY"
+msgstr "ملخص المستخدمين"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/js/Chrome.js:0
+#, python-format
+msgid "You should add Cash or ATM."
+msgstr "يجب  إضافة الكاش و المدى."
+
+#. module: pos_cash_atm
+#: model:ir.actions.act_window,name:pos_cash_atm.action_pos_sale_report
+#: model:ir.ui.menu,name:pos_cash_atm.menu_action_pos_sale_report
+msgid "Z Report"
+msgstr "تقرير Z"
+
+#. module: pos_cash_atm
+#: model:ir.actions.report,name:pos_cash_atm.report_pos_sales_pdf
+msgid "Z Report Report"
+msgstr "تقرير Z"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/Reports/ReportSalesSummarySession.xml:0
+#, python-format
+msgid "Z-REPORT"
+msgstr "تقرير Z"
+
+#. module: pos_cash_atm
+#: model:ir.model,name:pos_cash_atm.model_pos_sale_report
+msgid "Z-Report Backend"
+msgstr "Z- تقرير الخلفية"
+
+#. module: pos_cash_atm
+#. openerp-web
+#: code:addons/pos_cash_atm/static/src/xml/ChromeWidgets/SaleDetailsButton.xml:0
+#, python-format
+msgid "display:none"
+msgstr ""
+
+#. module: pos_cash_atm
+#: model:ir.actions.report,print_report_name:pos_cash_atm.report_pos_sales_pdf
+msgid "object.name"
+msgstr ""

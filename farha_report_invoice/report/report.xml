@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="account_move_clearance_report" model="ir.actions.report">
+        <field name="name">Clearance Invoice Report</field>
+        <field name="model">account.move</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">farha_report_invoice.account_move_farha_template</field>
+        <field name="report_file">farha_report_invoice.account_move_farha_template</field>
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>

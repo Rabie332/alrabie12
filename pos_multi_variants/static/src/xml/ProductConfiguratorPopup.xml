@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+    <t
+        t-name="ProductConfiguratorPopup"
+        t-inherit="point_of_sale.ProductConfiguratorPopup"
+        t-inherit-mode="extension"
+        owl="1"
+    >
+        <xpath expr="//ColorProductAttribute" position="after">
+            <MultipleProductAttribute
+                t-elif="attribute.display_type === 'multiple'"
+                attribute="attribute"
+            />
+        </xpath>
+    </t>
+
+    <t t-name="MultipleProductAttribute" owl="1">
+        <div class="configurator_radio">
+            <div t-foreach="values" t-as="value" style="margin-bottom: 2%">
+                <input
+                    type="checkbox"
+                    t-on-click="_onMultipleClick"
+                    t-att-name="attribute.id"
+                    t-attf-id="{{ attribute.id }}_{{ value.id }}"
+                    t-att-value="value.id"
+                />
+
+                <label t-attf-for="{{ attribute.id }}_{{ value.id }}">
+                    <div class="radio_attribute_label">
+                        <t t-esc="value.name" />
+                        <span t-if="value.price_extra" class="price_extra">
+                            + <t t-esc="env.pos.format_currency(value.price_extra)" />
+                        </span>
+                    </div>
+
+                    <t
+                        t-if="value.id == state.selected_value &amp;&amp; value.is_custom"
+                    >
+                        <input
+                            class="custom_value"
+                            type="text"
+                            t-model="state.custom_value"
+                        />
+                    </t>
+                </label>
+            </div>
+        </div>
+    </t>
+
+</templates>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+  <data>
+    <record id="hr_overtime_form_custom" model="ir.ui.view">
+      <field name="name">hr.overtime.form.custom.form</field>
+      <field name="model">hr.overtime</field>
+      <field name="inherit_id" ref="hr_overtime.hr_overtime_form" />
+      <field name="arch" type="xml">
+        <header>
+          <button name="action_send_clone" type="object" string="Send Request" invisible='1'/>
+          <button name="action_reset_to_draft" string="Set Draft" type="object" class="btn-danger" invisible='1'/>
+        </header>
+      </field>
+    </record>
+  </data>
+</odoo>

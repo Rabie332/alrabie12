@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+     <record id="view_res_country_form_inherit_building" model="ir.ui.view">
+        <field name="name">res.country.form</field>
+        <field name="model">res.country</field>
+        <field name="inherit_id" ref="base.view_country_form" />
+        <field name="arch" type="xml">
+            <field name="code" position="after">
+                <field name="population_density" />
+                <field name="land_area" />
+            </field>
+        </field>
+    </record>
+
+    <record id="view_res_country_tree_inherit_building" model="ir.ui.view">
+        <field name="name">res.country.tree</field>
+        <field name="model">res.country</field>
+        <field name="inherit_id" ref="base.view_country_tree" />
+        <field name="arch" type="xml">
+            <field name="code" position="after">
+                <field name="population_density" />
+                <field name="land_area" />
+            </field>
+        </field>
+    </record>
+
+    <menuitem
+        id="res_country_menu"
+        action="base.action_country"
+        parent="real_estate.building_setting_menu"
+        sequence="1"
+    />
+
+</odoo>

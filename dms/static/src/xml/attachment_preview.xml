@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+    <t t-name="FieldViewer">
+        <div
+            t-if="widget.recordData.extension == '.pdf'"
+            class="o_field_pdfviewer"
+            aria-atomic="true"
+        >
+            <div
+                t-if="widget.mode !== 'readonly'"
+                class="o_form_pdf_controls mt8"
+                role="toolbar"
+                aria-label="PDF controls"
+            >
+                <span class="o_form_binary_progress">Uploading...</span>
+                <button
+                    type="button"
+                    class="btn btn-primary o_select_file_button"
+                    title="Select"
+                >Upload your file</button>
+                <button
+                    class="btn btn-secondary fa fa-pencil o_select_file_button"
+                    title="Select"
+                    aria-label="Select"
+                    type="button"
+                />
+                <button
+                    class="btn btn-secondary fa fa-trash-o o_clear_file_button"
+                    title="Clear"
+                    aria-label="Clear"
+                    type="button"
+                />
+            </div>
+            <iframe class="o_pdfview_iframe o_field_pdfviewer" />
+            <t t-set="fileupload_id" t-value="widget.fileupload_id" />
+            <t t-set="fileupload_style" t-translation="off">overflow-x: hidden</t>
+        </div>
+        <div
+            t-elif="widget.recordData.extension in ['.png', '.jpe', '.gif', '.ico']"
+            class="o_attachment_image"
+            style="display: flex !important;  width: 100%;height: 450px;"
+        />
+        <div
+            t-else=""
+            class="page-wrap d-flex flex-row align-items-center"
+            style="background: #dedede;min-height: 95%;display: flex !important;"
+        >
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 text-center">
+                        <div
+                            t-if="widget.recordData.extension"
+                            class="mb-4 lead"
+                        >Sorry ! This type of document cannot be displayed</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>

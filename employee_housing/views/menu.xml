@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem id="menu_housing_root"
+              name="Employee Housing"
+              web_icon="employee_housing,static/description/icon.png"
+              sequence="0"/>
+</odoo>

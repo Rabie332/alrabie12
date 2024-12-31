@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+  <template id="snippets" inherit_id="website.snippets" name="custom Snippets">
+    <xpath expr="//div[@id='snippet_effect']/div[@class='o_panel_body']" position="inside">
+      <t t-snippet="custom_website_snippets.s_custom_list_group" t-thumbnail="/custom_website_snippets/static/src/img/thumbnail.svg"/>
+    </xpath>
+    <xpath expr="//div[@id='snippet_effect']/div[hasclass('o_panel_body')]" position="inside">
+      <t t-snippet="custom_website_snippets.s_dynamic_text_image_slider" t-thumbnail="/custom_website_snippets/static/src/img/thumbnail.svg"/>
+    </xpath>
+    <xpath expr="//div[@id='snippet_effect']/div[hasclass('o_panel_body')]" position="inside">
+      <t t-snippet="custom_website_snippets.s_custom_block" t-thumbnail="/custom_website_snippets/static/src/img/thumbnail.svg"/>
+    </xpath>
+    <xpath expr="//div[@id='snippet_effect']/div[hasclass('o_panel_body')]" position="inside">
+      <t t-snippet="custom_website_snippets.s_img_title_list" t-thumbnail="/custom_website_snippets/static/src/img/thumbnail.svg"/>
+    </xpath>
+    <xpath expr="//div[@id='snippet_effect']/div[hasclass('o_panel_body')]" position="inside">
+      <t t-snippet="custom_website_snippets.s_farha_pitch" t-thumbnail="/custom_website_snippets/static/src/img/thumbnail.svg"/>
+    </xpath>
+    <xpath expr="//div[@id='snippet_effect']/div[hasclass('o_panel_body')]" position="inside">
+      <t t-snippet="custom_website_snippets.s_farha_group" t-thumbnail="/custom_website_snippets/static/src/img/thumbnail.svg"/>
+    </xpath>
+    <xpath expr="//div[@id='snippet_effect']/div[hasclass('o_panel_body')]" position="inside">
+      <t t-snippet="custom_website_snippets.s_farha_vision" t-thumbnail="/custom_website_snippets/static/src/img/thumbnail.svg"/>
+    </xpath>
+    <xpath expr="//div[@id='snippet_effect']/div[hasclass('o_panel_body')]" position="inside">
+      <t t-snippet="custom_website_snippets.s_farha_goals" t-thumbnail="/custom_website_snippets/static/src/img/thumbnail.svg"/>
+    </xpath>
+    <xpath expr="//div[@id='snippet_effect']/div[hasclass('o_panel_body')]" position="inside">
+      <t t-snippet="custom_website_snippets.s_farha_clients" t-thumbnail="/custom_website_snippets/static/src/img/thumbnail.svg"/>
+    </xpath>
+    <xpath expr="//div[@id='snippet_effect']/div[hasclass('o_panel_body')]" position="inside">
+      <t t-snippet="custom_website_snippets.s_farha_swiper" t-thumbnail="/custom_website_snippets/static/src/img/thumbnail.svg"/>
+    </xpath>
+    <xpath expr="//div[@id='snippet_effect']/div[hasclass('o_panel_body')]" position="inside">
+      <t t-snippet="custom_website_snippets.s_farha_footer" t-thumbnail="/custom_website_snippets/static/src/img/thumbnail.svg"/>
+    </xpath>
+    <xpath expr="//div[@id='snippet_effect']/div[hasclass('o_panel_body')]" position="inside">
+      <t t-snippet="custom_website_snippets.s_farha_header" t-thumbnail="/custom_website_snippets/static/src/img/thumbnail.svg"/>
+    </xpath>
+  </template>
+  <template id="s_dynamic_text_image_slider" name="Dynamic Text Image Slider">
+    <section class="hero-slider">
+      <t t-set="images" t-value="['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg']"/>
+      <t t-foreach="images" t-as="image">
+        <div class="slide" t-attf-style="background-image: url('/custom_website_snippets/static/src/img/#{image}');"></div>
+      </t>
+      <div class="hero-text">
+        <h1>Software Consulting and Development</h1>
+        <h2>
+          We
+          <span id="dynamic-text-wrapper">
+            <span id="dynamic-text"></span>
+          </span>
+          digital success
+        </h2>
+      </div>
+    </section>
+  </template>
+  <template id="s_custom_list_group" name="Custom List Group">
+    <section class="s_custom_list_group p-5 oe_structure">
+      <div class="col oe_structure">
+        <p class="font-weight-bold oe_structure">Explore Our Offering</p>
+      </div>
+      <div class="row oe_structure">
+        <div class="col-4 oe_structure">
+          <div class="list-group oe_structure" id="list-tab" role="tablist">
+            <a class="list-group-item oe_structure list-group-item-action active" id="list-software-list" data-toggle="list" href="#list-software" role="tab" aria-controls="software">Software Development</a>
+            <a class="list-group-item list-group-item-action" id="list-api-list" data-toggle="list" href="#list-api" role="tab" aria-controls="api">API Integration Services</a>
+            <a class="list-group-item oe_structure list-group-item-action" id="list-ux-list" data-toggle="list" href="#list-ux" role="tab" aria-controls="ux">UX/UI Design</a>
+            <a class="list-group-item list-group-item-action" id="list-it-list" data-toggle="list" href="#list-it" role="tab" aria-controls="it">IT Consulting</a>
+            <a class="list-group-item oe_structure list-group-item-action" id="list-cyber-list" data-toggle="list" href="#list-cyber" role="tab" aria-controls="cyber">Cybersecurity, CCTV Services</a>
+            <a class="list-group-item oe_structure list-group-item-action" id="list-networking-list" data-toggle="list" href="#list-networking" role="tab" aria-controls="networking">Cloud, Networking Services</a>
+            <a class="list-group-item oe_structure list-group-item-action" id="list-3d-list" data-toggle="list" href="#list-3d" role="tab" aria-controls="3d">3D Design, Printing Services</a>
+          </div>
+        </div>
+        <div class="col-8 oe_structure">
+          <div class="tab-content oe_structure" id="nav-tabContent">
+            <div class="tab-pane oe_structure fade show active" id="list-software" role="tabpanel" aria-labelledby="list-software-list">
+              <h2>Software Development</h2>
+              <p>A software development company with 34 years of business excellence, we can develop reliable, scalable, and secure software solutions for any OS, browser, and device. We bring together deep industry expertise and the latest IT advancements to deliver custom solutions and products that perfectly fit the needs and behavior of their users.</p>
+              <ul class="row">
+                <li class="col-sm-6">ERP Solutions</li>
+                <li class="col-sm-6">Custom Software Development</li>
+                <li class="col-sm-6">Embedded Software</li>
+                <li class="col-sm-6">Cloud Website, Application Development</li>
+              </ul>
+            </div>
+            <div class="tab-pane oe_structure fade" id="list-api" role="tabpanel" aria-labelledby="list-api-list">
+              <h2>Government API's Integration</h2>
+              <p>Our company provide seamless access to various Saudi government, and non-government APIs, offering simplified connection to government agencies for real-time data access. Our services enhance operational efficiency and reduce tedius reputable works. Among the APIs we provide are the following:</p>
+              <ul class="row">
+                <li class="col-sm-6">Nafath API</li>
+                <li class="col-sm-6">Bayan API</li>
+                <li class="col-sm-6">Muqeem API</li>
+                <li class="col-sm-6">Tamm API</li>
+                <li class="col-sm-6">Basher API</li>
+                <li class="col-sm-6">Natheer API</li>
+              </ul>
+            </div>
+            <div class="tab-pane oe_structure fade" id="list-ux" role="tabpanel" aria-labelledby="list-ux-list">
+              <h2>UX/UI Design</h2>
+              <p>User experience and user interface design for all types of websites, SaaS, and web/mobile apps. We combine the latest UI/UX trends with out customers' individual goals and needs to deliver intuitive, vibrant, and impactful designs that power up businesses.</p>
+              <ul class="row">
+                <li class="col-sm-6">User Interface (UI) Design</li>
+                <li class="col-sm-6">Responsive Web App Design</li>
+                <li class="col-sm-6">Ecommerce Website Design</li>
+                <li class="col-sm-6">User Experience (UX) Design</li>
+              </ul>
+            </div>
+            <div class="tab-pane oe_structure fade" id="list-it" role="tabpanel" aria-labelledby="list-it-list">
+              <h2>IT Consulting</h2>
+              <p>Our experts can help to develop and implement an effective IT strategy, assist in smooth digital transformation and system integration as well as advise on improvements to your digital customer experience.</p>
+              <ul class="row">
+                <li class="col-sm-6">Digital Transformation Consulting</li>
+                <li class="col-sm-6">Project Management Consulting</li>
+                <li class="col-sm-6">Enterprise IT Consulting</li>
+                <li class="col-sm-6">IT Services Management Consulting</li>
+              </ul>
+            </div>
+            <div class="tab-pane oe_structure fade" id="list-cyber" role="tabpanel" aria-labelledby="list-cyber-list">
+              <h2>Cybersecurity and Low Current</h2>
+              <p>Providing comprehensive expertise in the fields of information security and CCTV surveillance services, and utilizing ISO 27001 certified information security management practices, we ensure enhanced safeguarding of companies' digital applications, networks, and physical security. Our approach integrates cutting-edge cybersecurity measures with advanced CCTV monitoring solutions to offer a multi-layered defense strategy, ensuring robust protection against both digital and physical threats.</p>
+              <ul class="row">
+                <li class="col-sm-6">CCTV</li>
+                <li class="col-sm-6">Video Management System</li>
+                <li class="col-sm-6">Automatic Number Plate Recognition</li>
+                <li class="col-sm-6">Access Control and Time Attendance</li>
+                <li class="col-sm-6">IP telephone System</li>
+                <li class="col-sm-6">IP telephone System</li>
+              </ul>
+            </div>
+            <div class="tab-pane oe_structure fade" id="list-networking" role="tabpanel" aria-labelledby="list-networking-list">
+              <h2>Cloud and Networking Services</h2>
+              <p>Leveraging deep expertise in cloud computing and networking, our services are designed to empower businesses with scalable, secure, and efficient IT infrastructures. By adhering to best practices and employing cutting-edge technologies, we ensure that your digital assets are accessible, reliable, and protected against today's ever-evolving threats.Leveraging deep expertise in cloud computing and networking, our services are designed to empower businesses with scalable, secure, and efficient IT infrastructures. By adhering to best practices and employing cutting-edge technologies, we ensure that your digital assets are accessible, reliable, and protected against today's ever-evolving threats.</p>
+              <ul class="row">
+                <li class="col-sm-6">Cloud Storage Solutions</li>
+                <li class="col-sm-6">Virtual Private Network (VPN) Setup.</li>
+                <li class="col-sm-6">Network Performance Monitoring</li>
+                <li class="col-sm-6">Cloud Migration and Management</li>
+                <li class="col-sm-6">Networking and Connectivity Solutions</li>
+                <li class="col-sm-6">Cloud Infrastructure Design and Implementation</li>
+              </ul>
+            </div>
+            <div class="tab-pane oe_structure fade" id="list-3d" role="tabpanel" aria-labelledby="list-3d-list">
+              <h2>3D Design and Printing Services</h2>
+              <p>Offering a full spectrum of 3D design and printing services, we provide innovative solutions that bring your ideas to life. From initial concept to final product, our team employs the latest technologies and creative processes to deliver high-quality, custom 3D designs and prints. Whether for prototypes, functional parts, or artistic creations, we ensure precision, efficiency, and customization to meet your specific needs. Our Services include:</p>
+              <ul class="row">
+                <li class="col-sm-6">3D Scanning and Reverse Engineering</li>
+                <li class="col-sm-6">High-Resolution 3D Printing.</li>
+                <li class="col-sm-6">Small to large-volume production Runs </li>
+                <li class="col-sm-6">Rapid Prototyping</li>
+                <li class="col-sm-6">Custom 3D Design and Modeling</li>
+                <li class="col-sm-6">Material Selection and Consultation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </template>
+  <template id="s_custom_block" name="Custom Block">
+    <section class="s_custom_block bg-primary py-5">
+      <ul class="row">
+        <li class="col-sm-6">Description lists</li>
+        <li class="col-sm-6">A description list is perfect for defining terms.</li>
+      </ul>
+    </section>
+  </template>
+  <template id="s_img_title_list" name="Image Title List">
+    <section class="s_img_title_list">
+      <ul class="row">
+        <li>
+          <img src="/custom_website_snippets/static/src/img/farhaholding.png" class="img-fluid" alt="Responsive image"/>
+        </li>
+        <li class="col">Description lists</li>
+        <li class="col">A description list is perfect for defining terms.</li>
+      </ul>
+    </section>
+  </template>
+  <template id="s_farha_pitch" name="Farha Pitch">
+    <section class="s_farha_pitch">
+      <div class="container-fluid p-5 s_farha_pitch">
+        <div class="row align-items-center">
+          <div class="col">
+            <div>
+              <p class="lead title fw-bold fs-2">
+              شركة فرحه: رحلة نجاح منذ 1979
+            </p>
+              <p class="fs-5" t-attf-style="max-width: 60rem;">
+              رحلة نجاح منذ 1979 نبدأ بتقديم لكم شركة فرحه، التي تأسست على يد
+              السيد صالح فرحه الزهراني في عام 1979. ابتدأت الشركة بأعمال جمارك
+              ولوجستيات بسيطة، ولكن مع مرور الزمن، نمت وتحولت إلى مجموعة متنوعة
+              من الشركات.
+                <br></br>
+                <br></br>
+              يتضمن تشكيلنا الآن 6 شركة تعمل في مجموعة واسعة من القطاعات، بدءًا
+              من اللوجستيات وصولاً إلى الفنادق والعقارات ومحطات الوقود. نحن
+              فخورون بالنمو الذي حققناه ونتطلع إلى المزيد. فرحه ليست مجرد شركة،
+              بل هي عائلة تعمل بشغف لتحقيق أفضل جودة وخدمة لعملائها.
+                <br></br>
+                <br></br> نسعى دائمًا للتفوق والتجديد، مع التركيز على الاستدامة
+              وتقديم قيمة مضافة للمجتمعات التي نخدمها. نحن ندعوكم للانضمام إلى
+              رحلتنا المستدامة والمليئة بالفرص. شكرًا لكم لدعمكم وتشجيعكم،
+              ونتطلع إلى تواصلنا المستمر وتحقيق المزيد من النجاح معًا.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-12">
+            <div class="ms-5 ps-5 w-100">
+              <img src="/custom_website_snippets/static/src/img/founder.jpeg" alt="logo" class="rounded w-100" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </template>
+  <template id="s_farha_group" name="Farha Group">
+    <section class="s_farha_group">
+      <div class="container" id="s_farha_group">
+        <div class="container text-center border-bottom mb-5">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <img src="/custom_website_snippets/static/src/img/farhaholding.png" alt="logo" class="w-50" />
+            </div>
+            <div class="col-12 py-5">
+              <h1>مجموعة شركات فرحه القابضة في المملكة العربية السعودية</h1>
+            </div>
+          </div>
+        </div>
+        <div class="container border-bottom mb-5 pb-2">
+          <ul
+          class=" row fw-bolder list-unstyled "
+          t-attf-style="
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          "
+        >
+            <li class="col fs-4">
+            فرحه لوجستك
+          </li>
+            <li class="col fs-4" >
+            فرحه فنادق
+          </li>
+            <li class="col fs-4" >
+            محطات ففكو
+          </li>
+            <li class="col fs-4">
+            مغاسل فرحه العالمية
+          </li>
+            <li class="col fs-4">
+            ذلول العقارية
+          </li>
+            <li class="col fs-4">
+            فرحه للإستثمار
+          </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </template>
+  <template id="s_farha_vision" name="Farha Vision">
+    <section class="s_farha_vision">
+      <div class="container-fluid">
+        <div class="row fs-4 text-light">
+          <div
+          class="col-lg-4 col-sm-12 p-5"
+          t-attf-style="background-color: #d4c087;"
+        >
+            <h1 class="mb-5">حول شركة فرحة القابضة</h1>
+            <p class="mb-5">
+              في شركة فرحة القابضة، نكرس أنفسنا لتعزيز النمو والازدهار من خلال
+              الاستثمارات الاستراتيجية ومحفظة متنوعة من الشركات التابعة. بتاريخ
+              يمتد لأكثر من ثلاثة عقود في المملكة العربية السعودية، لدينا
+              التفاني العميق في تقديم التميز، والابتكار، وتطوير وطننا
+            </p>
+          </div>
+          <div
+          class="col-lg-4 col-sm-12 p-5"
+          t-attf-style="background-color: #b5a474;"
+        >
+            <h1 class="mb-5">رؤيتنـــــا</h1>
+            <p class="mb-5">
+              في شركة فرحة القابضة، نتصور مستقبلاً يجمع بين الابتكار،
+              والاستدامة، والنمو لإنشاء تأثير دائم. رؤيتنا هي أن نكون في طليعة
+              القيادة لدفع التغيير الإيجابي، ليس فقط داخل منظمتنا ولكن أيضًا عبر
+              الصناعات والمجتمعات التي نخدمها. نطمح إلى القيادة بالنزاهة، ونحن
+              نرحب بالتنوع، ونكون روادًا في الحلول التي تسهم في مستقبل أكثر
+              إشراقًا وازدهارًا.
+            </p>
+          </div>
+          <div
+          class="col-lg-4 col-sm-12 p-5"
+          t-attf-style="background-color: #5f6444;"
+        >
+            <h1 class="mb-5">رسالتنــــا</h1>
+            <p class="mb-5">
+              رسالة شركة فرحة القابضة هي رسالة التفاني. نحن ملتزمون بالتميز في
+              كل مسعى، وبرفاهية عملائنا وشركائنا وموظفينا، وبتطوير وتقدم
+              الاقتصاد السعودي. رسالتنا واضحة: نحن هنا لنحقق الفارق، لنلهم
+              التقدم، ولنبني إرثًا ناجحًا يتحدى اختبار الزمن. معًا، بالعزم
+              والتفاني، يمكننا تحقيق عظمة.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </template>
+  <template id="s_farha_goals" name="Farha Goals">
+    <section class="s_farha_goals">
+      <div class="container-fluid">
+        <h1 class="border-bottom text-center py-5 my-5 font-weight-bold">أهدافنا وقيمنا</h1>
+        <div class="container-fluid d-flex flex-lg-row flex-column align-items-center gap-5 justify-content-center">
+          <div class="row">
+            <div class='col'>
+              <div class="col">
+                <h3 class="font-weight-bold py-3" t-attf-style="color: #cea981">تنظيم وتنسيق الموارد</h3>
+                <p t-attf-style="color: #999999">
+                في شركة فرحة القابضة، نتفوق في فن تنظيم وتنسيق الموارد...
+              </p>
+              </div>
+              <div class="col">
+                <h3 class="font-weight-bold py-3" t-attf-style="color: #cea981">إشراك وتمكين موظفينا</h3>
+                <p t-attf-style="color: #999999">
+                نجاحنا مرتبط بعمق بقدرتنا على جذب وتمكين موظفينا...
+              </p>
+              </div>
+              <div class="col">
+                <h3 class="font-weight-bold py-3" t-attf-style="color: #cea981">التدرج في التصنيفات</h3>
+                <p t-attf-style="color: #999999">
+                في شركة فرحة القابضة، نفتخر برحلتنا المستمرة نحو التحسين والنمو...
+              </p>
+              </div>
+            </div>
+          </div>
+          <div class="row-12">
+            <img src="/custom_website_snippets/static/src/img/farhaholding.png" alt="logo" class="img-fluid" />
+          </div>
+          <div class="row">
+            <dic class="col">
+              <div class="col">
+                <h3 class="font-weight-bold py-3" t-attf-style="color: #cea981">الإحترافية</h3>
+                <p t-attf-style="color: #999999">
+                الاحترافية هي جوهر قيمنا في شركة فرحة القابضة...
+              </p>
+              </div>
+              <div class="col">
+                <h3 class="font-weight-bold py-3" t-attf-style="color: #cea981">القدرة</h3>
+                <p t-attf-style="color: #999999">
+                في عالم متغير بسرعة، التكيف هو مفتاح نجاحنا...
+              </p>
+              </div>
+              <div class="col">
+                <h3 class="font-weight-bold py-3" t-attf-style="color: #cea981">العلاقات</h3>
+                <p t-attf-style="color: #999999">
+                بناء علاقات قوية ودائمة هو ركن من ركائن فلسفتنا في الأعمال...
+              </p>
+              </div>
+            </dic>
+          </div>
+        </div>
+      </div>
+    </section>
+  </template>
+  <template id="s_farha_clients" name="Farha Clients">
+    <section class="s_farha_clients">
+      <div class="container text-center">
+        <h1>عملائنا</h1>
+        <div class="row my-3">
+          <t t-set="clients_images" t-value="['client_armco.webp','client_port.webp','client_sabic.webp','client_pepsi.webp','client_nahdi.webp','client_tamimi.webp', 'client_uni.webp', 'client_army.webp', 'client_trans_min.webp', 'client_airforce.webp', 'client_napco.png', 'client_rajhi_400x300.webp', 'client_reda.png', 'client_arabian.png', 'client_armex.webp', 'client_jarir.svg']"/>
+          <t t-foreach="clients_images" t-as="client_image">
+            <div class="col-sm-12 col-lg-3 p-5 border client_logo">
+              <img class="w-50" t-att-src="'/custom_website_snippets/static/src/img/' + client_image"/>
+            </div>
+          </t>
+        </div>
+      </div>
+    </section>
+  </template>
+  <template id="s_farha_swiper" name="Farha Swiper">
+    <section class="s_farha_swiper py-5">
+      <div class="container">
+        <h1 class="text-center pb-5">أخر الأخبار</h1>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <t t-set="news_cards" t-value="[
+              {'image': 'farha_assets.jpeg', 'title': 'فرحه لوجستيك', 'desc': 'شركة فرحة تتألق بأسطول جديد ونظام تكنولوجيا معلومات متطور...🚚🌐'},
+              {'image': 'thalol.jpeg', 'title': 'ذلول للعقارات', 'desc': 'شركة ذلول تستمر في التفوق في مجال العقارات... 🏡🌟'},
+              {'image': 'farha_assets7.jpeg', 'title': 'فيفكو للخدمات البترولية', 'desc': 'تم إفتتاح محطات وقود مذهلة...🚗☕🍔 '},
+              {'image': 'farhaHotel.jpeg', 'title': 'فرحة العالمية', 'desc': 'فرحة العالمية تمنحك تجربة لا مثيل لها... 🏨✨'},
+              {'image': 'chargerCoffee.jpg', 'title': 'تشارجر كافيه', 'desc': 'تشارجر كافيه يقدم لزبائنها لحظات لذيذة...☕📊'},
+              {'image': 'investment.jpg', 'title': 'فرحه للإستثمار', 'desc': 'فرحة للاستثمار تبقى على الجبهة الرائدة...📈💼'}
+            ]"/>
+            <t t-foreach="news_cards" t-as="card">
+              <div class="swiper-slide">
+                <div class="card" style="width: 18rem;">
+                  <img t-att-src="'/custom_website_snippets/static/src/img/' + card['image']" class="img-fluid" alt="Slide Image"/>
+                  <div class="card-body">
+                    <h5 class="card-title" t-esc="card['title']"></h5>
+                    <p class="card-text" t-esc="card['desc']"></p>
+                  </div>
+                </div>
+              </div>
+            </t>
+          </div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next">
+            <a href="#">next</a>
+          </div>
+          <div class="swiper-button-prev">
+            <a href="#">prev</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </template>
+  <template  id="s_farha_footer" name="Farha Footer">
+    <section class='s_farha_footer'>
+      <footer>
+        <div class="footer_details bg-light container-fluid mt-1 d-flex">
+          <div class="row justify-content-center">
+            <div class="col-lg-6 col-sm-12 mx-5 start_project_section">
+              <div class="">
+                <img src="/custom_website_snippets/static/src/img/farhaholding.png"  alt="logo" class="w-50" />
+              </div>
+              <p class="pargraph_footer fs-5">
+              بدءًا من تحسين العمليات اللوجستية إلى إدارة الفنادق ذات المستوى
+              العالمي، والإشراف على الاستثمارات العقارية الرئيسية، وتعزيز النجاح
+              في صناعة محطات الوقود، تضمن مجموعة خدماتنا المتنوعة ازدهار كل جانب
+              من جوانب مقتنياتنا.
+            </p>
+              <button
+              class="btn btn-light START_YOUR_PROJECT_btn fs-4 fw-bold"
+            >
+              إبدا مشروعك معنا
+                <span class="material-symbols-outlined">west</span>
+              </button>
+            </div>
+          </div>
+          <div class="row justify-content-center contact_details">
+            <div class="col-lg-12 col-sm-12">
+              <h5 class="Connect_with_us1">تواصل معنا</h5>
+              <div class="d-flex  mt-5">
+                <a class="btn" href="mailto:Info@Farhaintl.com">
+                  <i class="fa-regular fa-envelope fs-1"></i>
+                </a>
+                <a
+                class="btn"
+                href="https://api.whatsapp.com/send?phone=920021977"
+              >
+                  <i class="fa-solid fa-phone fs-1"></i>
+                </a>
+                <a
+                class="btn"
+                href="https://www.linkedin.com/company/farha-holding-co"
+              >
+                  <i class="fa-brands fa-linkedin-in fs-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rights_section pe-3">
+        فرحة الدولية 2023 / جميع الحقوق محفوظة
+      </div>
+      </footer>
+    </section>
+  </template>
+  <template id="s_farha_header" name="Farha Header">
+    <section class="position-relative w-100 h-100">
+      <video autoPlay='autoPlay' loop='loop' muted='muted'  class="w-100 h-100" id="video-id">
+        <source src="/custom_website_snippets/static/src/img/introVid.mp4" type="video/mp4" />
+      </video>
+      <div class="header_text">
+        <h1 >فرحه القابضة</h1>
+        <h3>امتداد لماضي عريق.</h3>
+        <a
+              href="#"
+              class='d-flex justify-content-center align-center'
+            >
+              الخدمات
+          <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
+    </section>
+  </template>
+</odoo>

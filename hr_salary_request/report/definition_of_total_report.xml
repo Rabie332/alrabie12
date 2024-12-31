@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="definition_of_total_report">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <div class="header">
+                    <div class="row">
+                        <div class="col-12" style="text-align: right;direction:rtl;">
+                            <p>الرقم المرجعي</p>
+                            <p t-field="o.name" />
+                        </div>
+                        <div class="col-4" style="text-align: right;direction:rtl;">
+                            <br />
+                            <br />
+                            <p>التاريخ
+                                <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y/%m/%d')" />
+                                م
+                            </p>
+                        </div>
+                        <div class="col-6" />
+                        <div class="col-2">
+                            <img
+                                t-if="o.company_id.logo"
+                                t-att-src="image_data_uri(o.company_id.logo)"
+                                style="padding: height: 140px; width: 140px;"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div class="footer" />
+                <t t-call="web.external_layout">
+                    <div class="page" style="font-size: 15px; font-weight: bold;">
+                        <div class="row">
+                            <div class="col-2" style="text-align: right;direction:rtl;">
+                                <p>إلى :</p>
+                            </div>
+                            <div class="col-8" style="text-align: center">
+                                <span t-field="o.destined_to" />
+                            </div>
+                            <div class="col-2" style="text-align: left;direction:ltr;">
+                                <p>To :</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6" style="text-align: right;direction:rtl;">
+                                <p>تحية طيبة وبعد ...</p>
+                                <br />
+                                <p>
+                                    نفيـدكم نحن شركة
+                                    <span t-field="o.company_id.name" />
+                                    بأن الموضـح بياناتـه
+                                    <br />
+                                    أدناه يعمـل لدينـا ومـازال على رأس العمـل، وقـد
+                                    <br />
+                                    أعطـي لــه هــذا التعريف بنـاء علــى طلبـه دون
+                                    <br />
+                                    أدنى مسئولية.
+                                </p>
+                            </div>
+                            <div class="col-6" style="text-align: left;direction:ltr;">
+                                <p>Greeting ...</p>
+                                <br />
+                                <p>
+                                    This certifies that the following person is a
+                                    <br />
+                                    staff member of
+                                    <span t-field="o.company_id.name" />
+                                    company and is
+                                    <br />
+                                    being provided this certificate upon his
+                                    <br />
+                                    request without any responsibility.
+                                    <br />
+                                </p>
+                            </div>
+                        </div>
+                        <br />
+                        <br />
+                        <div class="row">
+                            <div class="col-2" style="text-align: right;direction:rtl;">
+                                <p>الاسم</p>
+                                <p>الجنسية</p>
+                                <p>رقم البطاقة</p>
+                                <p>بداية الخدمة</p>
+                                <p>مسمى الوظيفة</p>
+                                <p>رقم الموظف</p>
+                                <p>الراتب الشهري الإجمالي</p>
+                            </div>
+                            <div class="col-4" style="text-align: right;direction:rtl;">
+                                <p>:
+                                    <span t-field="o.employee_id.name" />
+                                </p>
+                                <p>:
+                                    <span t-field="o.employee_id.country_id" />
+                                </p>
+                                <p>:
+                                    <span t-field="o.employee_id.residence_id" />
+                                </p>
+                                <p>:
+                                    <span t-field="o.employee_id.date_direct_action" />
+                                </p>
+                                <p>:
+                                    <span t-field="o.employee_id.job_id.name" />
+                                </p>
+                                <p>:
+                                    <span t-field="o.employee_id.number" />
+                                </p>
+                                <p>:
+                                    <t t-if="o.employee_id.slip_ids">
+                                        <t t-foreach="o.employee_id.slip_ids[-1].line_ids" t-as="line">
+                                            <t t-if="line.code == 'GROSS'">
+                                                <span t-field="line.total" />
+                                            </t>
+                                        </t>
+                                    </t>
+                                </p>
+                            </div>
+                            <div class="col-4" style="text-align: left;direction:ltr;">
+                                <p>:
+                                    <span t-field="o.employee_id.display_name_en" />
+                                </p>
+                                <p>:
+                                    <span t-field="o.with_context({'lang': 'en'}).employee_id.country_id" />
+                                </p>
+                                <p>:
+                                    <span t-field="o.employee_id.residence_id" />
+                                </p>
+                                <p>:
+                                    <span t-field="o.employee_id.date_direct_action" />
+                                </p>
+                                <p>:
+                                    <span t-field="o.with_context({'lang': 'en'}).employee_id.job_id.name" />
+                                </p>
+                                <p>:
+                                    <span t-field="o.employee_id.number" />
+                                </p>
+                                <p>:
+                                    <t t-if="o.employee_id.slip_ids">
+                                        <t t-foreach="o.employee_id.slip_ids[-1].line_ids" t-as="line">
+                                            <t t-if="line.code == 'GROSS'">
+                                                <span t-field="line.total" />
+                                            </t>
+                                        </t>
+                                    </t>
+                                </p>
+                            </div>
+                            <div class="col-2" style="text-align: left;direction:ltr;">
+                                <p>Name</p>
+                                <p>Nationality</p>
+                                <p>ID Number</p>
+                                <p>Joined date</p>
+                                <p>Position</p>
+                                <p>Employee’s No</p>
+                                <p>Total Monthly Salary</p>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row mt48">
+                            <p style="text-align: right;direction:rtl;">والله الموفق ...
+                            </p>
+                        </div>
+                        <t t-set="approvals" t-value="o.sudo().get_approvals()" />
+                        <table class="table table-sm table-bordered" width="100%" style="font-size:16px; border:none;">
+                            <tr>
+                                <td
+                                    colspan="4"
+                                    width="40%"
+                                    style="background-color:#282D61; color:#FFFFFF; font-weight:bold; border:none;"
+                                >Stages Of Request Approval
+                                </td>
+                            </tr>
+                            <t t-foreach="approvals" t-as="approval">
+                                <tr>
+                                    <td style="background-color:#F0EFEF; color:#A79559; border-left:none;">
+                                        <t t-esc="approval.get('stage', false)" />
+                                    </td>
+                                    <td style="background-color:#F0EFEF;">
+                                        <t t-esc="approval.get('date', False)" />
+                                    </td>
+                                    <td style="background-color:#F0EFEF; border-right:none;">
+                                        <t t-esc="approval.get('approver_name', false)" />
+                                    </td>
+                                    <td style="background-color:#F0EFEF;">
+                                        <img
+                                            t-if="approval.get('signature', false)"
+                                            t-att-src="image_data_uri(approval.get('signature', false))"
+                                            width="150px"
+                                            height="50px"
+                                        />
+                                    </td>
+                                </tr>
+                            </t>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+    <record id="action_report_definition_of_total" model="ir.actions.report">
+        <field name="name">Definition of total</field>
+        <field name="print_report_name">(object.name + '_definition_of_total.pdf')
+        </field>
+        <field name="model">hr.salary.request</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hr_salary_request.definition_of_total_report</field>
+        <field name="report_file">hr_salary_request.definition_of_total_report</field>
+        <field name="binding_model_id" eval="False" />
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

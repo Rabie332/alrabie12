@@ -1,0 +1,131 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_attendance_dashboard
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-10 11:15+0000\n"
+"PO-Revision-Date: 2022-06-10 11:15+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_attendance_dashboard
+#. openerp-web
+#: code:addons/hr_attendance_dashboard/controllers/main.py:0
+#: code:addons/hr_attendance_dashboard/controllers/main.py:0
+#: code:addons/hr_attendance_dashboard/static/src/xml/dashboard_templates.xml:0
+#, python-format
+msgid "Absences"
+msgstr "الغياب"
+
+#. module: hr_attendance_dashboard
+#. openerp-web
+#: code:addons/hr_attendance_dashboard/static/src/xml/dashboard_templates.xml:0
+#, python-format
+msgid "Authorization"
+msgstr "إستئذان"
+
+#. module: hr_attendance_dashboard
+#: code:addons/hr_attendance_dashboard/controllers/main.py:0
+#, python-format
+msgid "Authorizations"
+msgstr "الإستئذانات"
+
+#. module: hr_attendance_dashboard
+#. openerp-web
+#: code:addons/hr_attendance_dashboard/static/src/xml/dashboard_templates.xml:0
+#, python-format
+msgid "Authorizations hours"
+msgstr "ساعات الاستئذانات"
+
+#. module: hr_attendance_dashboard
+#: model:ir.actions.client,name:hr_attendance_dashboard.action_attendance_dashboard
+#: model:ir.ui.menu,name:hr_attendance_dashboard.menu_hr_attendance_dashboard
+msgid "Dashboard"
+msgstr "لوحة المعلومات"
+
+#. module: hr_attendance_dashboard
+#. openerp-web
+#: code:addons/hr_attendance_dashboard/static/src/js/attendance_dashboard.js:0
+#, python-format
+msgid "Date from should be greater than Date to."
+msgstr "يجب أن يكون التاريخ من أكبر من تاريخ إلى."
+
+#. module: hr_attendance_dashboard
+#. openerp-web
+#: code:addons/hr_attendance_dashboard/static/src/xml/dashboard_templates.xml:0
+#, python-format
+msgid "Delay hours"
+msgstr "ساعات التأخير"
+
+#. module: hr_attendance_dashboard
+#. openerp-web
+#: code:addons/hr_attendance_dashboard/controllers/main.py:0
+#: code:addons/hr_attendance_dashboard/static/src/xml/dashboard_templates.xml:0
+#, python-format
+msgid "Delays"
+msgstr "التأخير"
+
+#. module: hr_attendance_dashboard
+#: code:addons/hr_attendance_dashboard/controllers/main.py:0
+#, python-format
+msgid "Employees"
+msgstr "الموظفين"
+
+#. module: hr_attendance_dashboard
+#: code:addons/hr_attendance_dashboard/controllers/main.py:0
+#, python-format
+msgid "Justified Absences"
+msgstr "غياب مبرر"
+
+#. module: hr_attendance_dashboard
+#. openerp-web
+#: code:addons/hr_attendance_dashboard/controllers/main.py:0
+#: code:addons/hr_attendance_dashboard/static/src/xml/dashboard_templates.xml:0
+#, python-format
+msgid "Justified absences"
+msgstr "غياب مبرر"
+
+#. module: hr_attendance_dashboard
+#. openerp-web
+#: code:addons/hr_attendance_dashboard/controllers/main.py:0
+#: code:addons/hr_attendance_dashboard/controllers/main.py:0
+#: code:addons/hr_attendance_dashboard/static/src/xml/dashboard_templates.xml:0
+#, python-format
+msgid "On duty"
+msgstr "الحضور"
+
+#. module: hr_attendance_dashboard
+#. openerp-web
+#: code:addons/hr_attendance_dashboard/static/src/xml/dashboard_templates.xml:0
+#, python-format
+msgid "Overtime hours"
+msgstr "ساعات الإضافية"
+
+#. module: hr_attendance_dashboard
+#. openerp-web
+#: code:addons/hr_attendance_dashboard/controllers/main.py:0
+#: code:addons/hr_attendance_dashboard/static/src/xml/dashboard_templates.xml:0
+#, python-format
+msgid "Public holidays"
+msgstr "عطل رسمية"
+
+#. module: hr_attendance_dashboard
+#. openerp-web
+#: code:addons/hr_attendance_dashboard/static/src/xml/dashboard_templates.xml:0
+#, python-format
+msgid "Real worked hours"
+msgstr "ساعات العمل الفعلية"
+
+#. module: hr_attendance_dashboard
+#. openerp-web
+#: code:addons/hr_attendance_dashboard/static/src/xml/dashboard_templates.xml:0
+#, python-format
+msgid "Scheduled working hours"
+msgstr "ساعات العمل المقررة"

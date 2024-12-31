@@ -1,0 +1,606 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* farha_custom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-17 16:15+0000\n"
+"PO-Revision-Date: 2022-10-17 16:15+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: farha_custom
+#: model_terms:ir.ui.view,arch_db:farha_custom.report_saleorder_document_without_total
+msgid "<span>Pro-Forma Invoice # </span>"
+msgstr "<span>فاتورة مبدئية # </span>"
+
+#. module: farha_custom
+#: model_terms:ir.ui.view,arch_db:farha_custom.report_saleorder_document_without_total
+msgid "<strong class=\"mr16\">Subtotal</strong>"
+msgstr "<strong class=\"mr16\">الإجمالي الفرعي</strong>"
+
+#. module: farha_custom
+#: model_terms:ir.ui.view,arch_db:farha_custom.report_saleorder_document_without_total
+msgid "<strong>Expiration:</strong>"
+msgstr "<strong>انتهاء الصلاحية:</strong>"
+
+#. module: farha_custom
+#: model_terms:ir.ui.view,arch_db:farha_custom.report_saleorder_document_without_total
+msgid "<strong>Fiscal Position Remark:</strong>"
+msgstr "<strong>الوضع المالي:</strong>"
+
+#. module: farha_custom
+#: model_terms:ir.ui.view,arch_db:farha_custom.report_saleorder_document_without_total
+msgid "<strong>Order Date:</strong>"
+msgstr "<strong>تاريخ الأمر:</strong>"
+
+#. module: farha_custom
+#: model_terms:ir.ui.view,arch_db:farha_custom.report_saleorder_document_without_total
+msgid "<strong>Quotation Date:</strong>"
+msgstr "<strong>تاريخ عرض السعر:</strong>"
+
+#. module: farha_custom
+#: model_terms:ir.ui.view,arch_db:farha_custom.report_saleorder_document_without_total
+msgid "<strong>Salesperson:</strong>"
+msgstr "<strong>مسئول المبيعات:</strong>"
+
+#. module: farha_custom
+#: model_terms:ir.ui.view,arch_db:farha_custom.report_saleorder_document_without_total
+msgid "<strong>Shipping Address:</strong>"
+msgstr "<strong>عنوان الشحن:</strong>"
+
+#. module: farha_custom
+#: model_terms:ir.ui.view,arch_db:farha_custom.report_saleorder_document_without_total
+msgid "<strong>Signature</strong>"
+msgstr "<strong>التوقيع</strong>"
+
+#. module: farha_custom
+#: model_terms:ir.ui.view,arch_db:farha_custom.report_saleorder_document_without_total
+msgid "<strong>Your Reference:</strong>"
+msgstr "<strong>رقم إشارتك:</strong>"
+
+#. module: farha_custom
+#: model:ir.model.fields,field_description:farha_custom.field_account_bank_statement_line__active
+#: model:ir.model.fields,field_description:farha_custom.field_account_move__active
+#: model:ir.model.fields,field_description:farha_custom.field_account_move_line__active
+#: model:ir.model.fields,field_description:farha_custom.field_account_payment__active
+msgid "Active"
+msgstr "أرشفة"
+
+#. module: farha_custom
+#: model:ir.model.fields,field_description:farha_custom.field_realestate_contract_service__amount
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: farha_custom
+#: model_terms:ir.ui.view,arch_db:farha_custom.view_account_move_filter_inherit_farha_custom
+#: model_terms:ir.ui.view,arch_db:farha_custom.view_account_payment_search_inherit_farha_custom
+msgid "Archived"
+msgstr "مؤرشف"
+
+#. module: farha_custom
+#: model_terms:ir.ui.view,arch_db:farha_custom.realestate_contract_view_form_inherit_farha_custom
+msgid "Attachments"
+msgstr "المرفقات"
+
+#. module: farha_custom
+#: model:ir.model.fields,field_description:farha_custom.field_realestate_contract__attachment_count
+msgid "Attachments number"
+msgstr "عدد المرفقات"
+
+#. module: farha_custom
+#: model:ir.model.fields,field_description:farha_custom.field_hr_employee__is_not_bank_account_id
+msgid "Bank Account Data"
+msgstr "بيانات الحساب البنكي"
+
+#. module: farha_custom
+#: model:ir.model,name:farha_custom.model_hr_bonus
+msgid "Bonus Request"
+msgstr "طلب المزية المالية"
+
+#. module: farha_custom
+#: model:ir.model,name:farha_custom.model_res_company
+msgid "Companies"
+msgstr "شركات"
+
+#. module: farha_custom
+#: model_terms:ir.ui.view,arch_db:farha_custom.hr_expense_form_inherit_hr_expense_states
+msgid "Confirm"
+msgstr "موافق"
+
+#. module: farha_custom
+#: model:ir.model.fields.selection,name:farha_custom.selection__hr_expense__state__post
+#: model:ir.model.fields.selection,name:farha_custom.selection__hr_expense_sheet__state__post
+msgid "Confirmed"
+msgstr "مؤكد"
+
+#. module: farha_custom
+#: model:ir.model.fields,field_description:farha_custom.field_account_bank_statement_line__contract_id
+#: model:ir.model.fields,field_description:farha_custom.field_account_move__contract_id
+#: model:ir.model.fields,field_description:farha_custom.field_account_payment__contract_id
+#: model:ir.model.fields,field_description:farha_custom.field_realestate_contract_service__contract_id
+msgid "Contract"
+msgstr "العقد"
+
+#. module: farha_custom
+#: model:ir.model.fields,field_description:farha_custom.field_account_bank_statement_line__contract_line_id
+#: model:ir.model.fields,field_description:farha_custom.field_account_move__contract_line_id
+#: model:ir.model.fields,field_description:farha_custom.field_account_payment__contract_line_id
+msgid "Contract line"
+msgstr "أقساط العقد"
+
+#. module: farha_custom
+#: model:ir.actions.server,name:farha_custom.cron_create_invoice_installment_ir_actions_server
+#: model:ir.cron,cron_name:farha_custom.cron_create_invoice_installment
+#: model:ir.cron,name:farha_custom.cron_create_invoice_installment
+msgid "Create invoice for contract installment "
+msgstr "انشاء فاتورة لقسط العقد"
+
+#. module: farha_custom
+#: model_terms:ir.ui.view,arch_db:farha_custom.report_saleorder_document_without_total
+msgid "Description"
+msgstr "الوصف"
+
+#. module: farha_custom
+#: model:ir.model.fields.selection,name:farha_custom.selection__hr_expense__state__reported
+#: model:ir.model.fields.selection,name:farha_custom.selection__hr_expense_sheet__state__submit
+msgid "Direct manager"
+msgstr "المدير المباشر"
+
+#. module: farha_custom
+#: model:ir.model.fields,field_description:farha_custom.field_account_move__display_name
+#: model:ir.model.fields,field_description:farha_custom.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:farha_custom.field_account_payment__display_name
+#: model:ir.model.fields,field_description:farha_custom.field_fleet_vehicle__display_name
+#: model:ir.model.fields,field_description:farha_custom.field_hr_bonus__display_name
+#: model:ir.model.fields,field_description:farha_custom.field_hr_expense__display_name
+#: model:ir.model.fields,field_description:farha_custom.field_hr_expense_sheet__display_name
+#: model:ir.model.fields,field_description:farha_custom.field_hr_leave_allocation__display_name
+#: model:ir.model.fields,field_description:farha_custom.field_hr_loan__display_name
+#: model:ir.model.fields,field_description:farha_custom.field_hr_payslip__display_name
+#: model:ir.model.fields,field_description:farha_custom.field_hr_payslip_run__display_name
+#: model:ir.model.fields,field_description:farha_custom.field_report_farha_custom_report_payslip_run_bank_xlsx__display_name
+#: model:ir.model.fields,field_description:farha_custom.field_res_company__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: farha_custom
+#: model:ir.model.fields,field_description:farha_custom.field_hr_expense_sheet__display_button_action_reviewed
+msgid "Display button"
+msgstr "الزر المعروض"
+
+#. module: farha_custom
+#: model:ir.model.fields.selection,name:farha_custom.selection__hr_expense__state__draft
+#: model:ir.model.fields.selection,name:farha_custom.selection__hr_expense_sheet__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: farha_custom
+#: model:ir.model.fields,field_description:farha_custom.field_hr_leave_allocation__number_of_days_display
+msgid "Duration (days)"
+msgstr "المدة (بالأيام)"
+
+#. module: farha_custom
+#: model:ir.model,name:farha_custom.model_hr_expense
+msgid "Expense"
+msgstr "المصروف"
+
+#. module: farha_custom
+#: model:ir.model,name:farha_custom.model_hr_expense_sheet
+msgid "Expense Report"
+msgstr "تقرير المصروف"
+
+#. module: farha_custom
+#: model:ir.model.fields,help:farha_custom.field_hr_expense_sheet__state
+msgid "Expense Report State"
+msgstr "حالة تقرير المصروف"
+
+#. module: farha_custom
+#: model:ir.model.fields.selection,name:farha_custom.selection__hr_expense__state__approve
+#: model:ir.model.fields.selection,name:farha_custom.selection__hr_expense_sheet__state__approve
+msgid "Finance"
+msgstr "المالية"
+
+#. module: farha_custom
+#: model:ir.model.fields.selection,name:farha_custom.selection__hr_expense__state__to_review
+#: model:ir.model.fields.selection,name:farha_custom.selection__hr_expense_sheet__state__to_review
+msgid "Financial Manger"
+msgstr "المدير المالي"
+
+#. module: farha_custom
+#: model:ir.model.fields,field_description:farha_custom.field_hr_employee__is_not_gosi_no
+msgid "Gosi No Data"
+msgstr "بيانات رقم التأمنيات الاجتماعية"
+
+#. module: farha_custom
+#: model:ir.model.fields,field_description:farha_custom.field_hr_employee__guarantor_company
+msgid "Guarantor Company"
+msgstr "الشركة الكفيل"
+
+#. module: farha_custom
+#: model:ir.model.fields,field_description:farha_custom.field_account_move__id
+#: model:ir.model.fields,field_description:farha_custom.field_account_move_line__id
+#: model:ir.model.fields,field_description:farha_custom.field_account_payment__id
+#: model:ir.model.fields,field_description:farha_custom.field_fleet_vehicle__id
+#: model:ir.model.fields,field_description:farha_custom.field_hr_bonus__id
+#: model:ir.model.fields,field_description:farha_custom.field_hr_expense__id
+#: model:ir.model.fields,field_description:farha_custom.field_hr_expense_sheet__id
+#: model:ir.model.fields,field_description:farha_custom.field_hr_leave_allocation__id
+#: model:ir.model.fields,field_description:farha_custom.field_hr_loan__id
+#: model:ir.model.fields,field_description:farha_custom.field_hr_payslip__id
+#: model:ir.model.fields,field_description:farha_custom.field_hr_payslip_run__id
+#: model:ir.model.fields,field_description:farha_custom.field_report_farha_custom_report_payslip_run_bank_xlsx__id
+#: model:ir.model.fields,field_description:farha_custom.field_res_company__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: farha_custom
+#: model:ir.model.fields,help:farha_custom.field_hr_leave_allocation__number_of_days_display
+msgid ""
+"If Accrual Allocation: Number of days allocated in addition to the ones you "
+"will get via the accrual' system."
+msgstr ""
+"إذا كان تخصيصاً على أساس الاستحقاق: عدد الأيام المخصصة بالإضافة إلى الأيام "
+"التي سوف تحصل عليها عن طريق نظام الاستحقاق. "
+
+#. module: farha_custom
+#: model:ir.model.fields,field_description:farha_custom.field_hr_employee__is_not_insurance_no
+msgid "Insurance No Data"
+msgstr "بيانات رقم التأمين الطبي"
+
+#. module: farha_custom
+#: model:ir.model,name:farha_custom.model_installment_template
+msgid "Installment Template"
+msgstr "نموذج الأقساط"
+
+#. module: farha_custom
+#: model:ir.model.fields,field_description:farha_custom.field_realestate_contract_line__invoice_id
+msgid "Invoice"
+msgstr "فاتورة"
+
+#. module: farha_custom
+#: model:ir.model.fields,field_description:farha_custom.field_realestate_contract__invoice_ids
+#: model_terms:ir.ui.view,arch_db:farha_custom.realestate_contract_view_form_inherit_farha_custom
+msgid "Invoices"
+msgstr "الفواتير"
+
+#. module: farha_custom
+#: model_terms:ir.ui.view,arch_db:farha_custom.report_saleorder_document_without_total
+msgid "Invoicing Address:"
+msgstr "عنوان الفوترة"
+
+#. module: farha_custom
+#: model_terms:ir.ui.view,arch_db:farha_custom.report_saleorder_document_without_total
+msgid "Invoicing and Shipping Address:"
+msgstr "عنوان الفاتورة والشحن:"
+
+#. module: farha_custom
+#: model:ir.model,name:farha_custom.model_account_move
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: farha_custom
+#: model:ir.model,name:farha_custom.model_account_move_line
+msgid "Journal Item"
+msgstr "عنصر اليومية"
+
+#. module: farha_custom
+#: model:ir.model.fields,field_description:farha_custom.field_hr_employee__is_not_labour_office_no
+msgid "Labour Office No Data"
+msgstr "بيانات رقم مكتب العمل"
+
+#. module: farha_custom
+#: model:ir.model.fields,field_description:farha_custom.field_account_move____last_update
+#: model:ir.model.fields,field_description:farha_custom.field_account_move_line____last_update
+#: model:ir.model.fields,field_description:farha_custom.field_account_payment____last_update
+#: model:ir.model.fields,field_description:farha_custom.field_fleet_vehicle____last_update
+#: model:ir.model.fields,field_description:farha_custom.field_hr_bonus____last_update
+#: model:ir.model.fields,field_description:farha_custom.field_hr_expense____last_update
+#: model:ir.model.fields,field_description:farha_custom.field_hr_expense_sheet____last_update
+#: model:ir.model.fields,field_description:farha_custom.field_hr_leave_allocation____last_update
+#: model:ir.model.fields,field_description:farha_custom.field_hr_loan____last_update
+#: model:ir.model.fields,field_description:farha_custom.field_hr_payslip____last_update
+#: model:ir.model.fields,field_description:farha_custom.field_hr_payslip_run____last_update
+#: model:ir.model.fields,field_description:farha_custom.field_report_farha_custom_report_payslip_run_bank_xlsx____last_update
+#: model:ir.model.fields,field_description:farha_custom.field_res_company____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: farha_custom
+#: model:ir.model,name:farha_custom.model_hr_loan
+msgid "Loan"
+msgstr "القرض"
+
+#. module: farha_custom
+#: model:ir.model.fields,field_description:farha_custom.field_res_company__mol_establishment
+msgid "Mol Establishment"
+msgstr "رقم مكتب العمل"
+
+#. module: farha_custom
+#: model:ir.actions.act_window,name:farha_custom.mail_activity_action_my
+#: model:ir.ui.menu,name:farha_custom.mail_activity_menu_my
+msgid "My Activities"
+msgstr "أنشطتي"
+
+#. module: farha_custom
+#: model_terms:ir.ui.view,arch_db:farha_custom.report_saleorder_document_without_total
+msgid "Name"
+msgstr "منتج"
+
+#. module: farha_custom
+#: model:ir.model.fields,field_description:farha_custom.field_realestate_contract_service__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: farha_custom
+#: model_terms:ir.actions.act_window,help:farha_custom.purchase_rfq_request
+msgid "No request for quotation found. Let's create one!"
+msgstr ""
+
+#. module: farha_custom
+#: code:addons/farha_custom/models/account_move.py:0
+#, python-format
+msgid "Only canceled entries can be archived"
+msgstr "يمكن أرشفة القيود الملغاة فقط"
+
+#. module: farha_custom
+#: code:addons/farha_custom/models/account_payment.py:0
+#, python-format
+msgid "Only canceled payments can be archived"
+msgstr "يمكن أرشفة الدفعات الملغاة فقط"
+
+#. module: farha_custom
+#: model_terms:ir.ui.view,arch_db:farha_custom.report_saleorder_document_without_total
+msgid "Order #"
+msgstr "الأمر #"
+
+#. module: farha_custom
+#: model:ir.model,name:farha_custom.model_hr_payslip
+msgid "Pay Slip"
+msgstr "قسيمة الراتب"
+
+#. module: farha_custom
+#: model:ir.model,name:farha_custom.model_account_payment
+msgid "Payments"
+msgstr "المدفوعات"
+
+#. module: farha_custom
+#: code:addons/farha_custom/models/hr_payslip.py:0
+#, python-format
+msgid "Payroll of month %s/%s submitted to the bank"
+msgstr "راتب شهر %s/%s"
+
+#. module: farha_custom
+#: code:addons/farha_custom/report/payslip_run_report.py:0
+#: model:ir.actions.report,name:farha_custom.payslip_run_bank_report_xlsx
+#, python-format
+msgid "Payroll submitted to the bank"
+msgstr "كشف الرواتب المرفوع للبنك"
+
+#. module: farha_custom
+#: model:ir.model,name:farha_custom.model_hr_payslip_run
+msgid "Payslip Batches"
+msgstr "دفعات الراتب"
+
+#. module: farha_custom
+#: model:ir.model,name:farha_custom.model_report_farha_custom_report_payslip_run_bank_xlsx
+msgid "Payslip Run Bank Report Excel"
+msgstr "كشف الرواتب المرفوع للبنك اكسل"
+
+#. module: farha_custom
+#: model_terms:ir.ui.view,arch_db:farha_custom.hr_bonus_view_form_inherit_farha_custom
+msgid "Period From"
+msgstr "الفترة من"
+
+#. module: farha_custom
+#: model:ir.model.fields,field_description:farha_custom.field_hr_bonus__hr_period_to_id
+msgid "Period To"
+msgstr "الفترة إلى"
+
+#. module: farha_custom
+#: code:addons/farha_custom/models/hr_bonus.py:0
+#, python-format
+msgid "Period To must be great than the period from"
+msgstr "يجب أن تكون الفترة إلى أكبر من الفترة من"
+
+#. module: farha_custom
+#: model_terms:ir.ui.view,arch_db:farha_custom.hr_payslip_run_form_inherit
+msgid "Print payslip Bank"
+msgstr "كشف الرواتب المرفوع للبنك"
+
+#. module: farha_custom
+#: model:ir.model.fields,field_description:farha_custom.field_installment_template__product_id
+msgid "Product"
+msgstr "المنتج"
+
+#. module: farha_custom
+#: model_terms:ir.ui.view,arch_db:farha_custom.report_saleorder_document_without_total
+msgid "Quantity"
+msgstr "الكمية"
+
+#. module: farha_custom
+#: model_terms:ir.ui.view,arch_db:farha_custom.report_saleorder_document_without_total
+msgid "Quotation #"
+msgstr "عرض سعر #"
+
+#. module: farha_custom
+#: model:ir.actions.report,name:farha_custom.action_report_saleorder_without_total
+msgid "Quotation / Order (Without Total)"
+msgstr "عرض السعر / الطلب (بدون اجمالي)"
+
+#. module: farha_custom
+#: model:ir.model.fields.selection,name:farha_custom.selection__hr_expense__state__cancel
+#: model:ir.model.fields.selection,name:farha_custom.selection__hr_expense_sheet__state__cancel
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: farha_custom
+#: model:ir.actions.act_window,name:farha_custom.purchase_rfq_request
+#: model:ir.ui.menu,name:farha_custom.menu_purchase_rfq_request
+msgid "Requests for Purchase"
+msgstr "طلبات المشتريات"
+
+#. module: farha_custom
+#: model_terms:ir.actions.act_window,help:farha_custom.purchase_rfq_request
+msgid ""
+"Requests for quotation are documents that will be sent to your suppliers to request prices for different products you consider buying.\n"
+"                Once an agreement has been found with the supplier, they will be confirmed and turned into purchase orders."
+msgstr ""
+
+#. module: farha_custom
+#: model:ir.model.fields,field_description:farha_custom.field_hr_employee__is_not_residence_id
+msgid "Residence Data"
+msgstr "بيانات رقم الاقامة"
+
+#. module: farha_custom
+#: model_terms:ir.ui.view,arch_db:farha_custom.hr_expense_form_inherit_hr_expense_states
+msgid "Reviewed"
+msgstr "تمت المراجعة"
+
+#. module: farha_custom
+#: model_terms:ir.ui.view,arch_db:farha_custom.hr_expense_form_inherit_hr_expense_states
+msgid "Set Confirm"
+msgstr "مؤكد"
+
+#. module: farha_custom
+#: model:ir.model.fields,field_description:farha_custom.field_hr_expense__state
+#: model:ir.model.fields,field_description:farha_custom.field_hr_expense_sheet__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: farha_custom
+#: model:ir.model.fields,help:farha_custom.field_hr_expense__state
+msgid "Status of the expense."
+msgstr "حالة المصروف."
+
+#. module: farha_custom
+#: code:addons/farha_custom/models/fleet_vehicle.py:0
+#, python-format
+msgid "The plate number already exists %s."
+msgstr "رقم اللوحة موجود سابقا %s."
+
+#. module: farha_custom
+#: model:ir.model,name:farha_custom.model_hr_leave_allocation
+msgid "Time Off Allocation"
+msgstr "تخصيص إجازة"
+
+#. module: farha_custom
+#: model_terms:ir.ui.view,arch_db:farha_custom.report_saleorder_document_without_total
+msgid "Total Price"
+msgstr "السعر الإجمالي"
+
+#. module: farha_custom
+#: model_terms:ir.ui.view,arch_db:farha_custom.report_saleorder_document_without_total
+msgid "Unit Price"
+msgstr "سعر الوحدة"
+
+#. module: farha_custom
+#: model_terms:ir.ui.view,arch_db:farha_custom.report_saleorder_document_without_total
+msgid "Unit of measure"
+msgstr "وحدة القياس"
+
+#. module: farha_custom
+#: model:ir.model.fields.selection,name:farha_custom.selection__hr_expense__state__done
+#: model:ir.model.fields.selection,name:farha_custom.selection__hr_expense_sheet__state__done
+msgid "Validated"
+msgstr "تم الاعتماد"
+
+#. module: farha_custom
+#: model:ir.model,name:farha_custom.model_fleet_vehicle
+msgid "Vehicle"
+msgstr "المركبة"
+
+
+#. module: farha_custom
+#: model_terms:ir.ui.view,arch_db:farha_custom.hr_expense_form_inherit_hr_expense_states
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: farha_custom
+#: model_terms:ir.ui.view,arch_db:farha_custom.hr_expense_form_inherit_hr_expense_states
+msgid "Accept"
+msgstr "موافق"
+
+#. module: farha_custom
+#: model_terms:ir.ui.view,arch_db:farha_custom.hr_expense_form_inherit_hr_expense_states
+msgid "Send"
+msgstr "إرسال"
+
+#. module: farha_custom
+#: model_terms:ir.ui.view,arch_db:farha_custom.realestate_contract_view_form_inherit_farha_custom
+msgid "Services"
+msgstr "الخدمات"
+
+#. module: farha_custom
+#: model:ir.model.fields,field_description:farha_custom.field_realestate_contract__services_ids
+msgid "services"
+msgstr "الخدمات"
+
+#. module: farha_custom
+#: model_terms:ir.ui.view,arch_db:farha_custom.view_employee_form_inherit
+msgid ""
+"<span attrs=\"{'invisible': [('is_not_gosi_no','=', False)]}\" class=\"fa fa-users pull-right\" style=\"color:red;\" role=\"img\" aria-label=\"Warning: Employee Gosi Number data must be filled\" title=\"Warning: Employee Gosi Number data must be filled\"/>\n"
+"                <span attrs=\"{'invisible': [('is_not_residence_id','=', False)]}\" class=\"fa fa-home pull-right\" style=\"color:red;\" role=\"img\" aria-label=\"Warning: Employee Residence data must be filled\" title=\"Warning: Employee Residence data must be filled\"/>\n"
+"                <span attrs=\"{'invisible': [('is_not_insurance_no','=', False)]}\" class=\"fa fa-stethoscope pull-right\" style=\"color:red;\" aria-label=\"Warning: Employee Insurance Number data must be filled\" title=\"Warning: Employee Insurance Number data must be filled\"/>\n"
+"                <span attrs=\"{'invisible': [('is_not_bank_account_id','=', False)]}\" class=\"fa fa-credit-card-alt pull-right\" style=\"color:red;\" role=\"img\" aria-label=\"Warning: Employee Bank Account data must be filled\" title=\"Warning: Employee Bank Account data must be filled\"/>\n"
+"                <span attrs=\"{'invisible': [('is_not_labour_office_no','=', False)]}\" class=\"fa fa-university pull-right\" style=\"color:red;\" role=\"img\" aria-label=\"Warning: Employee Labour Office Number data must be filled\" title=\"Warning: Employee Labour Office Number data must be filled\"/>"
+msgstr ""
+"<span attrs=\"{'invisible': [('is_not_gosi_no','=', False)]}\" class=\"fa fa-users pull-right\" style=\"color:red;\" role=\"img\" aria-label=\"تنبيه: يجب إدخال رقم مكتب العمل\" title=\"تنبيه: يجب إدخال رقم مكتب العمل\"/>\n"
+"                <span attrs=\"{'invisible': [('is_not_residence_id','=', False)]}\" class=\"fa fa-home pull-right\" style=\"color:red;\" role=\"img\" aria-label=\"تنبيه: يجب تعبئة بيانات إقامة الموظف\" title=\"تنبيه: يجب تعبئة بيانات إقامة الموظف\"/>\n"
+"                <span attrs=\"{'invisible': [('is_not_insurance_no','=', False)]}\" class=\"fa fa-stethoscope pull-right\" style=\"color:red;\" aria-label=\"تنبيه: يجب إدخال رقم التأمين الطبي\" title=\"تنبيه: يجب إدخال رقم التأمين الطبي\"/>\n"
+"                <span attrs=\"{'invisible': [('is_not_bank_account_id','=', False)]}\" class=\"fa fa-credit-card-alt pull-right\" style=\"color:red;\" role=\"img\" aria-label=\"تنبيه: يجب إدخال رقم الحساب البنكي\" title=\"تنبيه: يجب إدخال رقم الحساب البنكي\"/>\n"
+"                <span attrs=\"{'invisible': [('is_not_labour_office_no','=', False)]}\" class=\"fa fa-university pull-right\" style=\"color:red;\" role=\"img\" aria-label=\"تنبيه: يجب تعبئة بيانات رقم مكتب عمل الموظف\" title=\"تنبيه: يجب تعبئة بيانات رقم مكتب عمل الموظف\"/>"
+
+#. module: farha_custom
+#: code:addons/farha_custom/models/realestate_contract.py:0
+#, python-format
+msgid "Rent of  installment {} of period {} to {}"
+msgstr "قيمة الايجـــار  {} للفتــرة من {} الي {}"
+
+#. module: farha_custom
+#: model:ir.model.fields,field_description:farha_custom.field_realestate_contract__unified_contract_number
+msgid "Unified Contract Number"
+msgstr "رقم العقد الموحد"
+
+#. module: farha_custom
+#: model:ir.model.fields,field_description:farha_custom.field_fleet_vehicle__transport_driver_card_number
+msgid "Transport Authority driver card number"
+msgstr "رقم بطاقة السائق بهيئة النقل"
+
+#. module: farha_custom
+#: model:ir.model.fields,field_description:farha_custom.field_fleet_vehicle__expiration_date_authority_card
+#: code:addons/farha_custom/models/fleet_vehicle.py:0
+msgid "Expiration date transportation authority card"
+msgstr "تاريخ إنتهاء بطاقة هيئة النقل"
+
+#. module: farha_custom
+#: model:ir.model.fields.selection,name:farha_custom.selection__fleet_vehicle__odometer_unit__hours
+msgid "Hours"
+msgstr "ساعات"
+
+#. module: farha_custom
+#: model:ir.ui.menu,name:farha_custom.menu_hr_payment_request_root_purchase
+#: model:ir.ui.menu,name:farha_custom.menu_hr_payment_request_all_purchase
+msgid "Payment Requests"
+msgstr "طلبات الصرف"
+
+#. module: farha_custom
+#: model:ir.ui.menu,name:farha_custom.hr_payment_request_stage_menu_purchase
+msgid "Stages"
+msgstr "المراحل"
+
+#. module: farha_custom
+#: model:res.groups,name:farha_custom.group_create_product
+msgid "Create products"
+msgstr " إضافة منتجات"
+
+#. module: point_of_sale
+#: model:ir.ui.menu,name:point_of_sale.menu_pos_dashboard
+msgid "Dashboard"
+msgstr "الفروع"

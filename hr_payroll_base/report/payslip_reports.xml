@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="paperformat_payslip_run" model="report.paperformat">
+        <field name="name">Payslip Run Paperformat</field>
+        <field name="default" eval="True" />
+        <field name="format">custom</field>
+        <field name="page_height">297</field>
+        <field name="page_width">210</field>
+        <field name="orientation">Landscape</field>
+        <field name="margin_top">10</field>
+        <field name="margin_bottom">23</field>
+        <field name="margin_left">5</field>
+        <field name="margin_right">5</field>
+        <field name="header_line" eval="False" />
+        <field name="header_spacing">20</field>
+        <field name="dpi">90</field>
+    </record>
+
+    <record id="payslip_run_report_xlsx" model="ir.actions.report">
+        <field name="name">Payslip Run Report Excel</field>
+        <field name="model">report.hr_payroll_base.report_payslip_run_xlsx</field>
+        <field name="report_name">hr_payroll_base.report_payslip_run_xlsx</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_file">hr_payroll_base.report_payslip_run_xlsx</field>
+    </record>
+
+</odoo>

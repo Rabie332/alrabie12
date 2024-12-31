@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template
+        id="assets_pos_receipt"
+        name="pos_receipt"
+        inherit_id="point_of_sale.assets"
+    >
+        <xpath expr="." position="inside">
+            <script
+                type="text/javascript"
+                src="/pos_receipt_qr_code/static/src/libs/zxing.js"
+            />
+            <script
+                type="text/javascript"
+                src="/pos_receipt_qr_code/static/src/js/models.js"
+            />
+        </xpath>
+    </template>
+
+</odoo>

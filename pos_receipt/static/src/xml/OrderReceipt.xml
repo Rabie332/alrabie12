@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t
+        t-name="OrderReceipt"
+        t-inherit="point_of_sale.OrderReceipt"
+        t-inherit-mode="extension"
+        owl="1"
+    >
+        <xpath expr="//div[hasclass('pos-receipt-contact')]" position="before">
+            <t t-if="props.isBill"><div
+                    class="pos-receipt-center-align"
+                    style="padding-bottom: 10px;"
+                ><b>Draft</b></div></t>
+            <t t-else=""><div
+                    class="pos-receipt-center-align"
+                    style="padding-bottom: 10px;"
+                ><b>Paid</b></div></t>
+        </xpath>
+        <xpath expr="//t[@t-if='receipt.table']" position="replace">
+            <t t-if="receipt.table">
+                <b style="font-size:16px;">at table <t t-esc="receipt.table" /></b>
+            </t>
+        </xpath>
+    </t>
+
+</templates>

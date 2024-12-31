@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="realestate_building_view_search" model="ir.ui.view">
+            <field name="name">realestate.building.search</field>
+            <field name="model">realestate.building</field>
+            <field name="arch" type="xml">
+                <search>
+                        <field name="name" />
+                        <field name="state" />
+                        <field name="country_id" />
+                    <group>
+                        <filter
+                        string="State"
+                        name="state"
+                        context="{'group_by':'state'}"
+                    />
+                        <filter
+                        string="Country"
+                        name="country_id"
+                        context="{'group_by':'country_id'}"
+                    />
+                        <filter
+                        string="City"
+                        name="city_id"
+                        context="{'group_by':'city_id'}"
+                    />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+     <record model="ir.ui.view" id="realestate_building_view_tree">
+        <field name="name">realestate.building.tree</field>
+        <field name="model">realestate.building</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="code" />
+                <field name="name" />
+                <field name="city_id" />
+                <field name="country_id" />
+                <field name="partner_id" />
+                <field name="land_area" />
+                <field name="building_area" />
+                <field name="lift" />
+                <field name="company_id" groups="base.group_multi_company" />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="realestate_building_view_form">
+        <field name="name">realestate.building.form</field>
+        <field name="model">realestate.building</field>
+        <field name="priority">1</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="sequence" />
+                            <field name="name" />
+                            <field name="code" />
+                            <field name="active" />
+                        </group>
+                        <group>
+                            <field name="building_type_id" />
+                            <field name="purchase_date" />
+                            <field name="sale_date" />
+                            <field
+                                name="company_id"
+                                groups="base.group_multi_company"
+                            />
+                        </group>
+                        <div class="o_address_format">
+                                <group string="Address">
+                                    <field
+                                    name="country_id"
+                                    options="{'no_create': True, 'no_open': True}"
+                                />
+                                    <field
+                                    name="city_id"
+                                    domain="[('country_id','=', country_id)]"
+                                    options="{'no_create': True, 'no_open': True}"
+                                />
+                                    <field
+                                    name="street"
+                                    placeholder="Street...."
+                                    class="o_address_street"
+                                />
+                                    <field
+                                    name="street2"
+                                    placeholder="Street2 "
+                                    class="o_address_street"
+                                />
+                                    <field
+                                    name="zip"
+                                    placeholder="Postal Code"
+                                    class="o_address_zip"
+                                />
+                                </group>
+                                </div>
+                    </group>
+                    <notebook>
+                        <page string="Basic Information">
+                            <group>
+                                <group>
+                                    <field name="surface" />
+                                    <field name="building_area" />
+                                    <field name="land_area" />
+                                    <field name="garage" />
+                                    <field name="garden" />
+                                </group>
+                                <group>
+                                    <field name="lift" />
+                                    <field name="price" />
+                                    <field name="north" />
+                                    <field name="south" />
+                                    <field name="east" />
+                                    <field name="west" />
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Additional Information">
+                            <group>
+                                <group>
+                                    <field name="license_code" />
+                                    <field name="license_date" />
+                                </group>
+                                <group>
+                                    <field name="date_added" />
+                                    <field name="license_location" />
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Notes">
+                            <field name="note" colspan="4" nolabel="1" />
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" />
+                        <field name="message_ids" widget="mail_thread" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="realestate_building_action">
+        <field name="name">Buildings</field>
+        <field name="res_model">realestate.building</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="realestate_building_menu"
+        name="Buildings"
+        action="realestate_building_action"
+        parent="realestate_building_management_menu"
+        sequence="1"
+    />
+
+</odoo>

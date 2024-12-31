@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+ <!-- HR SALARY RULES of salary base-->
+    <record id="hr_payroll.hr_rule_basic" model="hr.salary.rule">
+        <field name="name">Basic Salary</field>
+        <field name="code">BASE</field>
+        <field name="sequence">5</field>
+        <field name="amount_select">percentage</field>
+        <field name="condition_select">none</field>
+        <field
+            name="amount_percentage_base"
+        >(worked_days.WORK100.number_of_days and payslip.hr_period_id.number_worked_days  and (contract.wage / payslip.hr_period_id.number_worked_days)) or contract.wage</field>
+        <field name="quantity">
+            worked_days.WORK100.number_of_days  or worked_days.WORK100.number_of_hours
+        </field>
+        <field name="amount_percentage">100</field>
+    </record>
+
+     <record id="hr_rule_gosi" model="hr.salary.rule">
+        <field name="name">Gosi</field>
+        <field name="code">GOSI</field>
+          <field name="category_id" ref="hr_payroll.DED" />
+        <field name="sequence">5</field>
+        <field name="amount_select">percentage</field>
+        <field name="condition_select">none</field>
+        <field
+            name="amount_percentage_base"
+        >(worked_days.WORK100.number_of_days and payslip.hr_period_id.number_worked_days  and (contract.wage +(contract.wage*0.25)) / payslip.hr_period_id.number_worked_days) * -0.0975</field>
+        <field name="quantity">
+            worked_days.WORK100.number_of_days
+        </field>
+        <field name="amount_percentage">100</field>
+    </record>
+</odoo>

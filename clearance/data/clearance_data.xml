@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+
+    <!-- Data -->
+
+    <record id="clearance_shipment_type_size_20f" model="clearance.shipment.type.size">
+        <field name="name">20F</field>
+    </record>
+
+    <record id="clearance_shipment_type_size_40f" model="clearance.shipment.type.size">
+        <field name="name">40F</field>
+    </record>
+
+      <!-- Payment methods -->
+        <record id="account_payment_method_transfer_in" model="account.payment.method">
+            <field name="name">Transfer</field>
+            <field name="code">transfer</field>
+            <field name="payment_type">inbound</field>
+        </record>
+        <record id="account_payment_method_transfer_out" model="account.payment.method">
+            <field name="name">Transfer</field>
+            <field name="code">transfer</field>
+            <field name="payment_type">outbound</field>
+        </record>
+
+        <record id="account_payment_method_pay_in" model="account.payment.method">
+            <field name="name">Pay</field>
+            <field name="code">pay</field>
+            <field name="payment_type">inbound</field>
+        </record>
+        <record id="account_payment_method_pay_out" model="account.payment.method">
+            <field name="name">Pay</field>
+            <field name="code">pay</field>
+            <field name="payment_type">outbound</field>
+        </record>
+
+     <!-- Shipment Type FCL -->
+
+        <record id="clearance_shipment_type_lcl_normal" model="clearance.shipment.type.lcl">
+            <field name="name">Normal</field>
+        </record>
+
+       <record id="clearance_shipment_type_lcl_coils" model="clearance.shipment.type.lcl">
+            <field name="name">Coils</field>
+        </record>
+
+        <record id="clearance_shipment_type_lcl_jumbo" model="clearance.shipment.type.lcl">
+            <field name="name">Jumbo Back</field>
+        </record>
+
+       <record id="clearance_shipment_type_lcl_wire_coils" model="clearance.shipment.type.lcl">
+            <field name="name">Wire Coils</field>
+       </record>
+
+    <!-- Cron -->
+
+    <record id="ir_cron_send_mail_account_payment_date_expiration" model="ir.cron">
+        <field name="name">Notification about payments fees</field>
+        <field name="model_id" ref="account.model_account_payment" />
+        <field name="state">code</field>
+        <field name="code">model.send_mail_payment_fees()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="active" eval="True" />
+        <field name="doall" eval="False" />
+    </record>
+
+
+    <record id="ir_cron_send_mail_deadline_shipment_receive" model="ir.cron">
+        <field name="name">Notification about Deadline shipment receive</field>
+        <field name="model_id" ref="clearance.model_clearance_request" />
+        <field name="state">code</field>
+        <field name="code">model.send_mail_deadline_shipment_receive()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="active" eval="True" />
+        <field name="doall" eval="False" />
+    </record>
+
+
+    <!-- Activities -->
+
+     <record id="mail_translation_officer_approval" model="mail.activity.type">
+        <field name="name">Clearance Request Translation Officer Approval</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="res_model_id" ref="clearance.model_clearance_request" />
+    </record>
+
+    <record id="mail_shipping_agent_responsible_approval" model="mail.activity.type">
+        <field name="name">Clearance Request Shipping Agent Approval</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="res_model_id" ref="clearance.model_clearance_request" />
+    </record>
+
+
+</odoo>

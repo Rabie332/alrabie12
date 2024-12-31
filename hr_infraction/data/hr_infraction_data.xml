@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="sequence_hr_infraction_type" model="ir.sequence">
+        <field name="name">Sequence of infraction type</field>
+        <field name="code">request.type.seq</field>
+        <field name="prefix">INF</field>
+        <field name="padding">3</field>
+    </record>
+
+    <record id="sequence_hr_infraction" model="ir.sequence">
+        <field name="name">Sequence of infraction</field>
+        <field name="code">hr.infraction.seq</field>
+        <field eval="1" name="number_increment" />
+     <field name="padding">5</field>
+        </record>
+    <!-- Request-related subtypes for messaging / Chatter -->
+
+    <record id="mt_hr_infraction_approved" model="mail.message.subtype">
+        <field name="name">Approved</field>
+        <field name="res_model">hr.infraction</field>
+        <field name="description">Request approved</field>
+    </record>
+
+    <record id="mt_hr_infraction_refused" model="mail.message.subtype">
+        <field name="name">Refused</field>
+        <field name="res_model">hr.infraction</field>
+        <field name="default" eval="False" />
+        <field name="description">Request refused</field>
+    </record>
+
+    <!-- Request specific activities -->
+
+    <record id="mail_hr_infraction_approval" model="mail.activity.type">
+        <field name="name">Request Approval</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="category">validation</field>
+        <field name="res_model_id" ref="hr_infraction.model_hr_infraction" />
+    </record>
+
+</odoo>

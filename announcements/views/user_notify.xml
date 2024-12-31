@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- User Notify Views -->
+        <record id="view_user_notify_tree" model="ir.ui.view">
+            <field name="name">user.notify.tree</field>
+            <field name="model">user.notify</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="datetime" widget="remaining_days"/>
+                    <field name="state" widget="badge"/>
+                    <field name="notification_line_count"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_user_notify_form" model="ir.ui.view">
+            <field name="name">user.notify.form</field>
+            <field name="model">user.notify</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <!-- State Bar -->
+                        <button name="set_active" string="Active" type="object" class="oe_highlight" attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                        <button name="set_cancel" string="Cancel" type="object" class="btn btn-danger" attrs="{'invisible': [('state', '=', 'cancel')]}" confirm="Are you sure to cancel this ?"/>
+                        <button name="change_action" string="Start Dynamic Send" type="object" class="oe_highlight" attrs="{'invisible': ['|', ('dynamic', '=', True), ('state', '!=', 'active')]}"/>
+                        <button name="change_action" string="Stop Dynamic Send" type="object" class="oe_default" attrs="{'invisible': ['|', ('dynamic', '=', False), ('state', '!=', 'active')]}"/>
+
+
+                        <button name="send_msg" string="Send Now" type="object" class="oe_highlight" attrs="{'invisible': [('state', '!=', 'active')]}"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,active,cancel"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button type="object" name="action_go_to_notification_lines" class="oe_stat_button" icon="fa-users" attrs="{'invisible':[('notification_line_count','=', 0)]}">
+                                <field name="notification_line_count" widget="statinfo" string="Received users" help="Received users"/>
+                            </button>
+                        </div>
+                        <group>
+                            <field name="name" attrs="{'readonly': [('state', '!=', 'draft')]}" widget="char_emojis"/>
+                            <field name="message" attrs="{'readonly': [('state', '!=', 'draft')]}" widget="html"/>
+                            <field name="datetime" attrs="{'readonly': [('state', '=', 'cancel')]}"/>
+                            <field name="dynamic" invisible="1" />
+                            <field name="recipient_type" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="users" widget='many2many_tags' options="{'no_quick_create':True,'no_create_edit':True}" attrs="{'readonly': [('state', '!=', 'draft')], 'invisible': [('recipient_type', '!=', 'user')]}"/>
+                            <field name="groups" widget='many2many_tags' options="{'no_quick_create':True,'no_create_edit':True}" attrs="{'readonly': [('state', '!=', 'draft')], 'invisible': [('recipient_type', '!=', 'group')]}"/>
+                            <field name="departments" widget='many2many_tags' options="{'no_quick_create':True,'no_create_edit':True}" attrs="{'readonly': [('state', '!=', 'draft')], 'invisible': [('recipient_type', '!=', 'department')]}"/>
+                        </group>
+                    </sheet>
+                    <!-- Chatter -->
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                        <field name="activity_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+
+        
+
+        
+        <!-- Action for User Notify tree & form Views -->
+        <record id="action_user_notify" model="ir.actions.act_window">
+            <field name="name">User Notifications</field>
+            <field name="res_model">user.notify</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+        
+    </data>
+</odoo>

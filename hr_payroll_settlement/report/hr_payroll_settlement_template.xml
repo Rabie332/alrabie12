@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="hr_settlement_report_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <div class="header">
+                    <div class="row">
+                        <div class="col-9" />
+                        <div class="col-3">
+                            <img
+                                t-if="o.company_id.logo"
+                                t-att-src="image_data_uri(o.company_id.logo)"
+                                style="padding: height: 140px; width: 140px;"
+                                alt="logo"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <t t-call="web.internal_layout">
+                    <div class="page" style="font-size: 17px;">
+                        <div class="row">
+                            <div class="col-10 text-left">
+                                <span
+                                    style="font-size:34px; font-weight:bold;"
+                                >Settlement Request -
+                                    <span t-if="o.name" t-field="o.name" />
+                                </span>
+                            </div>
+                            <div class="col-2" />
+                        </div>
+                        <br />
+                        <br />
+                        <table
+                            class="table-sm"
+                            width="100%"
+                            style="font-size:16px; padding:15px"
+                        >
+                            <tr>
+                                <td
+                                    width="20%"
+                                    style="background-color:#F0EFEF; color:#A79559; border:none; padding:15px"
+                                >Requester
+                                </td>
+                                <td
+                                    width="30%"
+                                    style="background-color:#F0EFEF; padding:15px;"
+                                >
+                                    <span
+                                        t-if="o.employee_id"
+                                        t-field="o.employee_id.name"
+                                    />
+                                </td>
+                                <td
+                                    width="20%"
+                                    style="background-color:#F0EFEF; color:#A79559; padding:15px;"
+                                >Settlement Type
+                                </td>
+                                <td
+                                    width="30%"
+                                    style="background-color:#F0EFEF; border:none; padding:15px;"
+                                >
+                                    <span
+                                        t-if="o.with_context(lang='ar_001').type"
+                                        t-field="o.with_context(lang='ar_001').type"
+                                    />
+                                </td>
+                            </tr>
+                            <tr style="padding:15px;">
+                                <td
+                                    style="background-color:#F0EFEF; color:#A79559; border:none; padding:15px;"
+                                >Settlement Date
+                                </td>
+                                <td style="background-color:#F0EFEF; padding:15px;">
+                                    <span t-if="o.date" t-field="o.date" />
+                                </td>
+                                <td
+                                    style="background-color:#F0EFEF; color:#A79559; padding:15px;"
+                                >Settlement Method
+                                </td>
+                                <td
+                                    style="background-color:#F0EFEF; border:none; padding:15px;"
+                                >
+                                    <span
+                                        t-if="o.compute_method"
+                                        t-field="o.compute_method"
+                                    />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    style="background-color:#F0EFEF; color:#A79559; border:none; padding:15px;"
+                                >Allocated Period
+                                </td>
+                                <td style="background-color:#F0EFEF; padding:15px;">
+                                    <span
+                                        t-if="o.period_id"
+                                        t-field="o.period_id.name"
+                                    />
+                                </td>
+                                <td
+                                    style="background-color:#F0EFEF; color:#A79559; padding:15px;"
+                                >
+                                    <t
+                                        t-if="o.type=='deduction' and o.compute_method=='amount'"
+                                    >
+                                        <span>Amount Deduction</span>
+                                    </t>
+                                    <t
+                                        t-if="o.type=='addition' and o.compute_method=='amount'"
+                                    >
+                                        <span>Amount Addition</span>
+                                    </t>
+                                    <t t-if="o.compute_method!='amount'">
+                                        Days Number
+                                    </t>
+                                </td>
+                                <td
+                                    style="background-color:#F0EFEF; border:none; padding:15px;"
+                                >
+                                    <t
+                                        t-if="o.type=='deduction' and o.compute_method=='amount'"
+                                    >
+                                        <span
+                                            t-field="o.amount_deduction"
+                                            t-options='{"widget": "float", "precision": 2}'
+                                        />
+                                    </t>
+                                    <t
+                                        t-if="o.type=='addition' and o.compute_method=='amount'"
+                                    >
+                                        <span
+                                            t-field="o.amount_addition"
+                                            t-options='{"widget": "float", "precision": 2}'
+                                        />
+                                    </t>
+                                    <t t-if="o.compute_method!='amount'">
+                                        <span t-if="o.days" t-field="o.days" />
+                                    </t>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    style="background-color:#F0EFEF; color:#A79559; border:none; padding:15px;"
+                                >Amount
+                                </td>
+                                <td style="background-color:#F0EFEF; padding:15px;">
+                                    <span
+                                        t-if="o.amount"
+                                        t-field="o.amount"
+                                        t-options='{"widget": "float", "precision": 2}'
+                                    />
+                                </td>
+                                <td
+                                    style="background-color:#F0EFEF; color:#A79559; padding:15px;"
+                                >Company
+                                </td>
+                                <td
+                                    style="background-color:#F0EFEF; border:none; padding:15px;"
+                                >
+                                    <span
+                                        t-if="o.company_id"
+                                        t-field="o.company_id.name"
+                                    />
+                                </td>
+                            </tr>
+                        </table>
+                        <br />
+                        <t t-set="approvals" t-value="o.sudo().get_approvals()" />
+                        <table
+                            class="table table-sm table-bordered"
+                            width="100%"
+                            style="font-size:16px; border:none;"
+                        >
+                            <tr>
+                                <td
+                                    colspan="4"
+                                    width="40%"
+                                    style="background-color:#282D61; color:#FFFFFF; font-weight:bold; border:none;"
+                                >Stages Of Request Approval
+                                </td>
+                            </tr>
+                            <t t-foreach="approvals" t-as="approval">
+                                <tr>
+                                    <td
+                                        style="background-color:#F0EFEF; color:#A79559; border-left:none;"
+                                    >
+                                        <t t-esc="approval.get('stage', false)" />
+                                    </td>
+                                    <td style="background-color:#F0EFEF;">
+                                        <t t-esc="approval.get('date', False)" />
+                                    </td>
+                                    <td
+                                        style="background-color:#F0EFEF; border-right:none;"
+                                    >
+                                        <t
+                                            t-esc="approval.get('approver_name', false)"
+                                        />
+                                    </td>
+                                    <td style="background-color:#F0EFEF;">
+                                        <img
+                                            t-if="approval.get('signature', false)"
+                                            t-att-src="image_data_uri(approval.get('signature', false))"
+                                            width="150px"
+                                            height="50px"
+                                        />
+                                    </td>
+                                </tr>
+                            </t>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

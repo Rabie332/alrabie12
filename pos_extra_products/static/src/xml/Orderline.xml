@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+
+    <t
+        t-name="Orderline"
+        t-inherit="point_of_sale.Orderline"
+        t-inherit-mode="extension"
+        owl="1"
+    >
+        <xpath expr="//li[hasclass('orderline')]" position="attributes">
+                <attribute
+                name="t-att-style"
+            >props.line.product.is_extra ? 'padding-left: 10% !important;' : ''</attribute>
+        </xpath>
+        <xpath
+            expr="//li[hasclass('orderline')]//span[hasclass('price')]"
+            position="attributes"
+        >
+                <attribute
+                name="t-att-style"
+            >props.line.product.is_extra ? 'padding-right: 20% !important;' : ''</attribute>
+        </xpath>
+        <xpath
+            expr="//li[hasclass('orderline')]//span[hasclass('price')]"
+            position="before"
+        >
+              <div
+                class="row"
+                style="padding-left: 10px;font-weight: bold;float: right;display: flex;"
+                t-if="!props.line.product.is_extra"
+            >
+                  <div
+                    t-if="env.pos.config.extra_products"
+                    t-on-click="trigger('click-extra-product', props)"
+                    class="extra-product col-6"
+                    style="padding: 10px;background-color: #90C8AC;margin-bottom: 3px;color: white; border-radius: 19%;margin-left: 3px;"
+                >
+                      <span class="extra-product">
+                        <i class="fa fa-plus-circle" />
+                      </span>
+                  </div>
+                <div
+                    t-on-click="trigger('click-product-notes', props)"
+                    class="extra-product col-6"
+                    style="padding: 10px;background-color: #73A9AD;margin-bottom: 3px;color: white; border-radius: 19%;margin-left: 3px;"
+                >
+                  <span>
+                    <i class="fa fa-comments" />
+                    </span>
+                     </div>
+              </div>
+        </xpath>
+        <xpath expr="//ul[hasclass('info-list')]" position="inside">
+            <t t-if="props.line.get_note()">
+                <li class="info orderline-product-note">
+                    <i
+                        class="fa fa-comments"
+                        role="img"
+                        aria-label="Note"
+                        title="Note"
+                    />
+                    <t t-esc="props.line.get_note()" />
+                </li>
+            </t>
+        </xpath>
+    </t>
+
+</templates>

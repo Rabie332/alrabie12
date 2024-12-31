@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+
+    <menuitem
+        id="menu_hr_training_root"
+        parent="hr.menu_hr_root"
+        name="Trainings"
+        groups="hr_training.group_training_managment"
+        sequence="3"
+    />
+
+    <menuitem
+        id="menu_hr_training_setting"
+        parent="menu_hr_training_root"
+        name="Setting"
+        sequence="6"
+        groups="hr_training.group_training_managment"
+    />
+
+</odoo>

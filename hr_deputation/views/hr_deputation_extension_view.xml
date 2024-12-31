@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="hr_deputation_extension_view_tree" model="ir.ui.view">
+        <field name="name">hr.deputation.extension.tree</field>
+        <field name="model">hr.deputation.extension</field>
+        <field name="arch" type="xml">
+            <tree create='0' edit='0'>
+                <field name="employee_id" widget="many2one_avatar_employee" />
+                <field name="date_from" />
+                <field name="date_to" />
+                <field name="duration" />
+                <field name="new_duration" />
+                <field name="stage_id" />
+                <field name="state" invisible="1" />
+                <field name="company_id" groups="base.group_multi_company" />
+            </tree>
+        </field>
+    </record>
+    <record id="hr_deputation_extension_view_search" model="ir.ui.view">
+        <field name="name">hr.deputation.extension.view.search</field>
+        <field name="model">hr.deputation.extension</field>
+         <field name="inherit_id" ref="request.request_view_search" />
+        <field name="arch" type="xml">
+            <field name="employee_id" position="after">
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]" />
+            </field>
+        </field>
+    </record>
+    <record id="hr_deputation_extension_view_form" model="ir.ui.view">
+        <field name="name">hr.deputation.extension.form</field>
+        <field name="model">hr.deputation.extension</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="request.request_view_form" />
+        <field name="arch" type="xml">
+            <form position="attributes">
+                <attribute name="create">0</attribute>
+            </form>
+                 <button name="action_refuse" position="replace">
+                <button
+                    name="%(request_refuse.action_refuse_wizard)d"
+                    context="{'action_name': 'action_refuse','field_name': 'refuse_reason'}"
+                    string="Refuse"
+                    class="btn-danger"
+                    type="action"
+                    confirm="Are you sure you want to do this?"
+                    attrs="{'invisible':[('display_button_refuse', '=', False)]}"
+                />
+            </button>
+            <group name="principal" position="replace" />
+            <sheet position="inside">
+                <widget
+                    name="web_ribbon"
+                    title="Canceled"
+                    bg_color="bg-danger"
+                    attrs="{'invisible': [('state', '!=', 'cancel')]}"
+                />
+
+                <label for="name" class="oe_edit_only" invisible="1" />
+                <h1>
+                    <field
+                        name="name"
+                        readonly="1"
+                        attrs="{'invisible':[('state', '=', ['draft'])]}"
+                        force_save="1"
+                        invisible="1"
+                    />
+                </h1>
+                <group>
+                    <group string="Deputation Details">
+                        <field name="employee_id" force_save="1" readonly="1" />
+                        <field name="company_id" force_save="1" groups="base.group_multi_company" />
+                        <field name="date_from" force_save="1" />
+                        <field name="date_to" force_save="1" />
+                        <field name="duration" force_save="1" />
+                        <field name="active" invisible="1" />
+                        <field
+                            name="refuse_reason"
+                            readonly="1"
+                            force_save="1"
+                            attrs="{'invisible' : [('state', '!=', 'cancel')]}"
+                        />
+                    </group>
+                    <group string="Extension Details">
+
+                        <field name="request_type_id" invisible="1" />
+                        <field name="new_duration" />
+                        <field name="reason" />
+                    </group>
+                </group>
+            </sheet>
+        </field>
+    </record>
+
+    <record id="hr_deputation_extension_view_kanban" model="ir.ui.view">
+        <field name="name">hr.deputation.extension.kanban</field>
+        <field name="model">hr.deputation.extension</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="request.request_view_kanban" />
+        <field name="arch" type="xml">
+            <kanban position="attributes">
+                <attribute name="create">0</attribute>
+                <attribute name="edit">0</attribute>
+            </kanban>
+            <div name="card_body" position="inside">
+                <br />
+                <span name="deputation_id" t-if="record.deputation_id.raw_value">Deputation :
+                    <field name="deputation_id" />
+                    <br />
+                </span>
+                <span name="date_from" t-if="record.date_from.raw_value">Date From :
+                    <field name="date_from" />
+                    <br />
+                </span>
+                <span name="date_to" t-if="record.date_to.raw_value">Date To :
+                    <field name="date_to" />
+                    <br />
+                </span>
+                <span name="duration" t-if="record.duration.raw_value">Old Duration:
+                    <field name="duration" />
+                    <br />
+                </span>
+                <span name="new_duration" t-if="record.new_duration.raw_value">New Duration:
+                    <field name="new_duration" />
+                    <br />
+                </span>
+            </div>
+
+        </field>
+    </record>
+
+    <record id="hr_deputation_extension_action" model="ir.actions.act_window">
+        <field name="name">Extension requests</field>
+        <field name="res_model">hr.deputation.extension</field>
+        <field name="view_mode">kanban,tree,form</field>
+    </record>
+
+    <menuitem
+        name="Extension requests"
+        id="menu_deputation_extension"
+        sequence="4"
+        parent="hr_deputation.menu_hr_deputation_root"
+        action="hr_deputation_extension_action"
+    />
+
+    <record model="ir.actions.act_window" id="hr_deputation_extension_action_my">
+        <field name="name">Extension requests</field>
+        <field name="res_model">hr.deputation.extension</field>
+        <field name="domain">[('employee_id.user_id','=', uid)]</field>
+        <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <menuitem
+        id="hr_deputation_extension_menu_my"
+        sequence="4"
+        parent="deputation_self_service_root"
+        action="hr_deputation_extension_action_my"
+    />
+
+    <!--    Drive actions Menu -->
+    <record id="hr_deputation_extension_view_tree_drive_action" model="ir.ui.view">
+        <field name="name">hr.deputation.extension.tree</field>
+        <field name="model">hr.deputation.extension</field>
+        <field name="arch" type="xml">
+            <tree create='0' edit='0'>
+                <field name="employee_id" widget="many2one_avatar_employee" />
+                <field name="date_from" />
+                <field name="date_to" />
+                <field name="stage_id" />
+                <field name="state" invisible="1" />
+                <field name="company_id" groups="base.group_multi_company" />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_hr_deputation_extension_drive_actions">
+        <field name="name">Extension requests</field>
+        <field name="res_model">hr.deputation.extension</field>
+        <field name="context">{'group_by':'stage_id'}</field>
+        <field
+            name="view_ids"
+            eval="[(5, 0, 0),
+                         (0, 0, {'view_mode': 'tree', 'view_id': ref('hr_deputation.hr_deputation_extension_view_tree_drive_action')})]"
+        />
+    </record>
+
+    <menuitem
+        id="menu_hr_deputation_extension_drive_actions"
+        sequence="4"
+        parent="hr_deputation_menu_drive_actions"
+        action="action_hr_deputation_extension_drive_actions"
+    />
+</odoo>

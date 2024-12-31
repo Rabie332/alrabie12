@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<odoo>
+        <record id="clearance_request_assign_view_form" model="ir.ui.view">
+            <field name="name">clearance.request.assign.form</field>
+            <field name="model">clearance.request.assign</field>
+            <field name="arch" type="xml">
+                <form string="Clearance Request Assign">
+                    <group class="oe_title">
+                        <field name="user_id" options="{'no_create_edit': True}" />
+                    </group>
+                    <footer>
+                        <button name="action_clearance_assign" string="Assign To" type="object" class="btn-primary" />
+                        <button
+                        name="action_clearance_assign_to_me"
+                        string="Assign To Me"
+                        type="object"
+                        class="btn-primary"
+                    />
+                        <button string="Cancel" class="btn-secondary" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+         <record id="clearance_request_assign_action" model="ir.actions.act_window">
+            <field name="name">Assign To Responsible</field>
+            <field name="res_model">clearance.request.assign</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="clearance_request_assign_view_form" />
+            <field name="target">new</field>
+            <field name="groups_id" eval="[(6, 0, [ref('clearance.group_admin_setting')])]" />
+            <field name="binding_model_id" ref="clearance.model_clearance_request" />
+            <field name="binding_view_types">list</field>
+        </record>
+</odoo>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="request_view_search" model="ir.ui.view">
+        <field name="name">request.filter</field>
+        <field name="model">request</field>
+        <field name="arch" type="xml">
+            <search>
+                <field
+                    name="employee_id"
+                    string="Employee"
+                    filter_domain="['|',('employee_id.identification_id','ilike',self),('employee_id.name','ilike',self)]"
+                />
+                <filter
+                    name="my_requests"
+                    string="My Requests"
+                    domain="[('employee_id.user_id', '=', uid)]"
+                />
+                <group string="Group by">
+                    <filter
+                        name="employee_id"
+                        string="Employee"
+                        context="{'group_by': 'employee_id'}"
+                    />
+                    <filter
+                        name="stage"
+                        string="Stage"
+                        context="{'group_by': 'stage_id'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="request_view_kanban" model="ir.ui.view">
+        <field name="name">request.kanban</field>
+        <field name="model">request</field>
+        <field name="arch" type="xml">
+            <kanban
+                default_group_by="stage_id"
+                class="o_kanban_small_column"
+                edit="false"
+                quick_create="false"
+                group_create="false"
+                group_edit="false"
+                records_draggable="false"
+            >
+                <field name="name" />
+                <field name="kanban_color" />
+                <field name="stage_id" />
+                <field name="employee_id" />
+                <templates>
+                    <t t-name="kanban-box">
+                        <div
+                            t-attf-class="oe_kanban_color_#{kanban_getcolor(record.kanban_color.raw_value)} o_kanban_record oe_kanban_global_click"
+                        >
+                            <div
+                                class="o_dropdown_kanban dropdown"
+                                name="card_dropdown_menu"
+                            >
+                                <a
+                                    role="button"
+                                    class="dropdown-toggle o-no-caret btn"
+                                    data-toggle="dropdown"
+                                    href="#"
+                                    aria-label="Dropdown menu"
+                                    title="Dropdown menu"
+                                >
+                                    <span class="fa fa-bars fa-lg" />
+                                </a>
+                                <ul
+                                    class="dropdown-menu"
+                                    role="menu"
+                                    aria-labelledby="dLabel"
+                                >
+                                    <li t-if="widget.editable">
+                                        <a type="edit">Edit</a>
+                                    </li>
+                                    <li>
+                                        <ul
+                                            class="oe_kanban_colorpicker"
+                                            data-field="kanban_color"
+                                        />
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="o_kanban_title" name="card_header">
+                            </div>
+                            <div class="oe_kanban_details" name="card_body">
+                            </div>
+                            <div class="o_kanban_footer" name="card_footer">
+                                <div
+                                    class="oe_kanban_bottom_left"
+                                    name="div_bottom_left"
+                                >
+                                </div>
+                                <div class="oe_kanban_bottom_right">
+                                    <img
+                                        t-att-src="kanban_image('hr.employee', 'image_128', record.employee_id.raw_value)"
+                                        t-att-title="record.employee_id.value"
+                                        t-att-alt="record.employee_id.value"
+                                        width="24"
+                                        height="24"
+                                        class="oe_kanban_avatar float-right"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="request_view_form" model="ir.ui.view">
+        <field name="name">request.form</field>
+        <field name="model">request</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button
+                        name="action_send"
+                        class="btn-success"
+                        string="Send"
+                        type="object"
+                        attrs="{'invisible':[('display_button_send', '=', False)]}"
+                    />
+
+                    <button
+                        name="action_accept"
+                        class="btn-success"
+                        string="Accept"
+                        type="object"
+                        attrs="{'invisible':[('display_button_accept', '=', False)]}"
+                    />
+
+                    <button
+                        name="action_refuse"
+                        class="btn-danger"
+                        string="Refuse"
+                        type="object"
+                        attrs="{'invisible':[('display_button_refuse', '=', False)]}"
+                    />
+
+                    <field name="state" invisible="1" />
+                    <field name="display_button_send" invisible="1" />
+                    <field name="display_button_accept" invisible="1" />
+                    <field name="display_button_refuse" invisible="1" />
+                    <field
+                        name="stage_id"
+                        widget="statusbar"
+                        options="{'fold_field': 'fold'}"
+                    />
+                </header>
+                <sheet>
+                    <widget
+                        name="web_ribbon"
+                        title="Canceled"
+                        bg_color="bg-danger"
+                        attrs="{'invisible': [('state', '!=', 'cancel')]}"
+                    />
+                    <group name="principal">
+                        <field name="request_type_id" invisible="1" />
+                                                        <field
+                            name="active"
+                            invisible="1"
+                        />
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" />
+                    <field name="activity_ids" widget="mail_activity" />
+                    <field name="message_ids" widget="mail_thread" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Views of request type -->
+
+    <record id="request_type_view_tree" model="ir.ui.view">
+        <field name="name">request.type.view.tree</field>
+        <field name="model">request.type</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="code" />
+                <field name="name" />
+                <field name="active" invisible="1" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="request_type_view_form" model="ir.ui.view">
+        <field name="name">request.type.view.form</field>
+        <field name="model">request.type</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="active" invisible="1" />
+                        </group>
+                        <group>
+                            <field name="code" />
+                            <field name="res_model_id" invisible="1" />
+                            <field name="res_model" invisible="1" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

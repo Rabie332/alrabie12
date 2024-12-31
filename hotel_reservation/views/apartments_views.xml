@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!--Apartment search views. -->
+    <record id="hotel_apartment_view_search" model="ir.ui.view">
+        <field name="name">hotel.room.search</field>
+        <field name="model">hotel.room</field>
+        <field name="inherit_id" ref="hotel.view_hotel_room_search" />
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='is_withheld']" position="after">
+                <filter domain="[('status','=','occupied')]" string="Leased" name="leased" />
+                <filter domain="[('status','=','maintenance')]" string="In Maintenance" name="maintenance" />
+                <filter domain="[('to_exit_today','=',True)]" string="Exit Today" name="to_exit_today" />
+                <filter domain="[('waiting_check_in','=',True)]" string="Waiting To Check In" name="waiting_check_in" />
+                <filter domain="[('to_checked_in','=',True)]" string="To Check In" name="to_checked_in" />
+                <filter
+                    domain="[('status','=','available'), ('is_clean','=',False)]"
+                    string="Dirty And Available"
+                    name="dirty_available"
+                />
+                <filter
+                    domain="[('status','=','occupied'), ('is_clean','=',False)]"
+                    string="Dirty And Occupied"
+                    name="dirty_occupied"
+                />
+            </xpath>
+        </field>
+    </record>
+
+    <!--Apartment kanban views. -->
+    <record id="apartment_view_kanban" model="ir.ui.view">
+        <field name="name">hotel.room.kanban</field>
+        <field name="model">hotel.room</field>
+        <field name="arch" type="xml">
+            <kanban create="0">
+                <field name="name" />
+                <field name="status" />
+                <field name="color" />
+                <field name="lst_price" />
+                <field name="monthly_price" />
+                <field name="hourly_price" />
+                <field name="id" />
+                <field name="code" />
+                <field name="is_clean" />
+                <field name="to_checked_in" />
+                <field name="to_exit_today" />
+                <field name="waiting_checkin_to_reserve" />
+                <field name="to_extend" />
+                <field name="bg_color" />
+                <field name="is_hospitality" />
+                <field name="kanban_color" />
+                <templates>
+                    <t t-name="kanban-box">
+                        <div
+                            t-att-class="record.kanban_color.raw_value + ' oe_kanban_card oe_kanban_global_click'"
+                            t-attf-style="background-color: #{record.bg_color.raw_value};max: 330px !important;width: 10%;"
+                        >
+
+                            <div class="oe_kanban_details">
+                                <div class="row oe_kanban_content">
+                                    <div class="col-3">
+                                        <img
+                                            alt="room_image"
+                                            t-att-src="kanban_image('hotel.room', 'image_medium', record.id.value)"
+                                            style="height:50px;width:50px;margin-top: -5px;"
+                                            class="oe_avatar oe_kanban_avatar_smallbox"
+                                        />
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="oe_kanban_project_list">
+                                            <h3>
+                                                <div class="row">
+                                                     <div
+                                                        t-att-class="record.to_checked_in.raw_value or record.to_exit_today.raw_value? 'col-0' : 'col-1'"
+                                                    >
+
+                                                    </div>
+                                                    <div class="col-1">
+                                                        <a
+                                                            type="object"
+                                                            name="open_reservation_action"
+                                                            context="{'is_from_check_in': context.get('is_from_check_in', False), 'is_from_check_out': context.get('is_from_check_out', False)}"
+                                                            style="height: 25px;width: 25px;background-color: #E9DAC1; border-radius: 50%;display: inline-block;"
+                                                        >
+                                                            <i
+                                                                class="fa fa-pencil-square-o"
+                                                                style="color: #FFF;padding: 4px;"
+                                                                title="Create/Edit"
+                                                            />
+                                                        </a>
+                                                    </div>
+                                                     <div class="col-1" t-if="record.to_exit_today.raw_value">
+                                                        <span
+                                                            style="height: 25px;width: 25px;background-color: #357EC7; border-radius: 50%;display: inline-block;"
+                                                        >
+                                                            <i
+                                                                t-if="record.to_exit_today.raw_value"
+                                                                class="fa fa-toggle-off"
+                                                                style="color: #FFF;padding: 4px;"
+                                                                title="To Check out"
+                                                            />
+                                                        </span>
+                                                    </div>
+                                                    <div class="col-1" t-if="record.to_checked_in.raw_value">
+                                                        <span
+                                                            style="height: 25px;width: 25px;background-color: #90C8AC; border-radius: 50%;display: inline-block;"
+                                                        >
+                                                            <i
+                                                                t-if="record.to_checked_in.raw_value"
+                                                                class="fa fa-toggle-on"
+                                                                style="color: #FFF;padding: 4px;"
+                                                                title="To Check In"
+                                                            />
+                                                        </span>
+                                                    </div>
+                                                    <div class="col-1">
+                                                        <span
+                                                            t-if="record.status.raw_value=='available'"
+                                                            style="height: 25px;width: 25px;background-color: #00C897; border-radius: 50%;display: inline-block;"
+                                                        >
+                                                            <i
+                                                                class="fa fa-user-times"
+                                                                style="color: #FFF;padding: 4px;"
+                                                                title="Available"
+                                                            />
+                                                        </span>
+                                                        <span
+                                                            t-if="record.status.raw_value=='occupied'"
+                                                            style="height: 25px;width: 25px;background-color: #D82148; border-radius: 50%;display: inline-block;"
+                                                        >
+                                                            <i
+                                                                class="fa fa-bed"
+                                                                style="color: #FFF;padding: 4px;"
+                                                                title="Occupied"
+                                                            />
+                                                        </span>
+                                                        <span
+                                                            t-if="record.status.raw_value=='maintenance'"
+                                                            style="height: 25px;width: 25px;background-color: #bbb; border-radius: 50%;display: inline-block;"
+                                                        >
+                                                            <i
+                                                                class="fa fa-wrench"
+                                                                style="color: #FFF;padding: 4px;"
+                                                                title="Maintenance"
+                                                            />
+                                                        </span>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <span
+                                                            t-if="record.is_clean.raw_value"
+                                                            style="height: 25px;width: 25px;background-color: #00FFAB; border-radius: 50%;display: inline-block;"
+                                                        >
+                                                            <i
+                                                                class="fa fa-paint-brush"
+                                                                style="color: #FFF;padding: 4px;"
+                                                                title="Clean"
+                                                            />
+                                                        </span>
+                                                        <span
+                                                            t-if="!record.is_clean.raw_value"
+                                                            style="height: 25px;width: 25px;background-color: #FFAD60; border-radius: 50%;display: inline-block;"
+                                                        >
+                                                            <i
+                                                                class="fa fa-paint-brush"
+                                                                style="color: #FFF;padding: 4px;"
+                                                                title="Not Clean"
+                                                            />
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                 <center>
+                                        <a
+                                        type="object"
+                                        name="open_reservation_action"
+                                        context="{'is_from_check_in': context.get('is_from_check_in', False), 'is_from_check_out': context.get('is_from_check_out', False)}"
+                                        style="font-size: 12px;color: white;"
+                                    >
+                                            <t t-if="record.code.raw_value">
+                                                [
+                                                <field name="code" />
+                                                ]
+                                            </t>
+                                            <field name="name" />
+                                        </a>
+                                        </center>
+                            </div>
+                            <div class="oe_clear" />
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- Action of apartment check in. -->
+    <record id="apartment_check_in_action" model="ir.actions.server">
+        <field name="name">Check In</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_hotel_room" />
+        <field name="state">code</field>
+        <field name="code">action=model.apartment_check_in()</field>
+    </record>
+
+    <menuitem
+        id="apartment_check_in_menu"
+        name="Check In"
+        action="apartment_check_in_action"
+        sequence="1"
+        parent="hotel_reservation.apartments_menu_root"
+    />
+
+    <!-- Action of apartment check out. -->
+    <record id="apartment_check_out_action" model="ir.actions.server">
+            <field name="name">Check Out</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="model_hotel_room" />
+            <field name="state">code</field>
+            <field name="code">action=model.apartment_check_out()</field>
+    </record>
+
+    <menuitem
+        id="apartment_check_out_menu"
+        name="Check Out"
+        action="apartment_check_out_action"
+        sequence="2"
+        parent="hotel_reservation.apartments_menu_root"
+    />
+
+    <!-- Action of apartment check in. -->
+    <record id="apartment_status_management_action" model="ir.actions.act_window">
+        <field name="name">Manage Apartments Status</field>
+        <field name="res_model">hotel.room</field>
+        <field name="view_mode">kanban</field>
+        <field name="view_id" ref="apartment_view_kanban" />
+    </record>
+
+    <menuitem
+        id="apartment_status_management_menu"
+        name="Manage Apartments Status"
+        action="apartment_status_management_action"
+        sequence="3"
+        parent="hotel_reservation.apartments_menu_root"
+    />
+
+</odoo>

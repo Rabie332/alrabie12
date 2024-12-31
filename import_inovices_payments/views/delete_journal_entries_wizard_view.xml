@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="view_delete_journal_entries_wizard_form" model="ir.ui.view">
+    <field name="name">delete.journal.entries.wizard.form</field>
+    <field name="model">delete.journal.entries.wizard</field>
+    <field name="arch" type="xml">
+      <form string="Delete Journal Entries">
+        <group>
+          <field name="employee_id"/>
+          <field name="datetime_from"/>
+          <field name="datetime_to"/>
+        </group>
+        <footer>
+          <button string="Delete" type="object" name="start_background_job" class="btn-primary"/>
+          <button string="Cancel" class="btn-secondary" special="cancel"/>
+        </footer>
+      </form>
+    </field>
+  </record>
+</odoo>

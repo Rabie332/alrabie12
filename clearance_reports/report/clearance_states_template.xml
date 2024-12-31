@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="report_resume_clearance">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <div class="header" />
+                <t t-call="web.internal_layout">
+                    <div class="page">
+                        <div class="row">
+                            <div class="col-3">
+                            </div>
+                            <div class="col-6 text-center">
+                                <center>
+                                    <h1 style="color:#507298;padding-top:20px;">
+                                          <t t-if="o.env.user.lang=='ar_001'">
+                                        <strong style="font-size: 25px;">
+                                             تقرير حالة المعاملات
+                                        </strong>
+                                          </t>
+                                         <t t-else="">
+                                               <strong style="font-size: 25px;">
+                                                                                     Clearance States Report
+
+                                        </strong>
+                                         </t>
+                                    </h1>
+                                </center>
+                            </div>
+                            <div class="col-3">
+                                <img
+                                    style="max-height:120px !important;"
+                                    width="80%"
+                                    t-att-src="'data:image/png;base64,%s' % to_text(user.company_id.sudo().logo)"
+                                />
+
+                            </div>
+                        </div>
+                        <div class="oe_structure" />
+                         <div class="col-12 text-center">
+                          <t t-if="o.env.user.lang=='ar_001'">
+                                 <strong>الفترة :</strong>
+                          </t>
+                         <t t-else="">
+                              <strong>Period :</strong>
+                         </t>
+                            <span t-field="o.date_from" t-options="{'format': 'yyyy/MM/dd'}" />
+                            -
+                            <span t-field="o.date_to" t-options="{'format': 'yyyy/MM/dd'}" />
+                            <br />
+                            <br />
+
+                        </div>
+                        <br />
+
+                        <table class="table nowrap table-bordered">
+                              <t t-if="o.env.user.lang=='ar_001'">
+                             <tr
+                                    style=" background:#192d5a;; background: linear-gradient(#49708f, #293f50);color: #fff;"
+                                >
+                                    <th>رقم المعاملة</th>
+                                    <th>تاريخ المعاملة</th>
+                                    <th>رقم بوليصة الشحن</th>
+                                    <th>نوع البوليصة</th>
+                                    <th>اسم العميل</th>
+                                    <th>البريد الإلكتروني</th>
+                                    <th>رقم الجوال</th>
+                                    <th>نوع المعاملة</th>
+                                    <th>طريقة الاستلام</th>
+                                </tr>
+                              </t>
+                              <t t-else="">
+                                   <tr
+                                    style=" background:#192d5a;; background: linear-gradient(#49708f, #293f50);color: #fff;"
+                                >
+                                    <th>Request Number</th>
+                                    <th>Request date</th>
+                                    <th>Shipping number</th>
+                                    <th>Shipping type</th>
+                                    <th>Customer Name</th>
+                                    <th>Customer Email</th>
+                                    <th>Customer Phone</th>
+                                    <th>Request type</th>
+                                    <th>Receipt method</th>
+                                   </tr></t>
+                            <t t-foreach="get_lines(o)[1]" t-as="state">
+                                <t
+                                    t-set="clearances"
+                                    t-value="get_lines(o)[0].filtered(lambda line: line.state == state)"
+                                />
+                                <t t-if="clearances">
+                                      <t t-if="o.env.user.lang=='ar_001'">
+                                <tr>
+                                    <th
+                                                style="background: #192d5a; background: linear-gradient(#49708f, #293f50);color: #fff;text-transform: uppercase;"
+                                                colspan="9"
+                                            >
+                                        <strong>
+                                            <t t-if="state == 'draft'">
+                                                مسودة
+                                            </t>
+                                            <t t-if="state == 'customs_clearance'">
+                                                التخليص الجمركي
+                                            </t>
+                                            <t t-if="state == 'customs_statement'">
+                                                البيان الجمركي
+                                            </t>
+                                            <t t-if="state == 'transport'">
+                                                نقل
+                                            </t>
+                                              <t t-if="state == 'delivery'">
+                                                استلام و توصيل
+                                            </t>
+                                             <t t-if="state == 'delivery_done'">
+                                                تم التسليم
+                                            </t>
+                                              <t t-if="state == 'close'">
+                                                مقفل
+                                            </t>
+
+                                           :  <t t-esc="len(clearances)" /></strong>
+                                    </th>
+                                </tr>
+                                           </t>
+                              <t t-else="">
+                                   <tr>
+                                    <th
+                                                style="background: #192d5a; background: linear-gradient(#49708f, #293f50);color: #fff;text-transform: uppercase;"
+                                                colspan="9"
+                                            >
+                                        <strong>
+                                            <t t-if="state == 'draft'">
+                                                Draft
+                                            </t>
+                                            <t t-if="state == 'customs_clearance'">
+                                                Customs Clearance
+                                            </t>
+                                            <t t-if="state == 'customs_statement'">
+                                                Customs Statement
+                                            </t>
+                                            <t t-if="state == 'transport'">
+                                                Transport
+                                            </t>
+                                              <t t-if="state == 'delivery'">
+                                                Receipt and Delivery
+                                            </t>
+                                             <t t-if="state == 'delivery_done'">
+                                                Delivery Done
+                                            </t>
+                                              <t t-if="state == 'close'">
+                                                Close deal
+                                            </t>
+
+                                           :  <t t-esc="len(clearances)" /></strong>
+                                    </th>
+                                </tr>
+                              </t>
+                                <t t-foreach="clearances" t-as="clearance">
+                                    <tr>
+                                        <td>
+                                            <span t-field="clearance.name" />
+                                        </td>
+                                        <td>
+                                             <span t-field="clearance.date" t-options="{'format': 'yyyy-MM-dd'}" />
+                                        </td>
+                                        <td>
+                                            <span t-field="clearance.shipping_number" />
+                                        </td>
+                                        <td>
+                                            <span t-field="clearance.shipping_type" />
+                                        </td>
+                                        <td>
+                                            <span t-field="clearance.partner_id.name" />
+                                        </td>
+                                        <td>
+                                            <span t-field="clearance.partner_email" />
+                                        </td>
+                                        <td>
+                                            <span t-field="clearance.partner_phone" />
+                                        </td>
+                                        <td>
+                                               <t t-if="o.env.user.lang=='ar_001'">
+                                                       <t t-if="clearance.request_type == 'clearance'">
+                                                           التخليص
+                                                       </t>
+                                                     <t t-if="clearance.request_type == 'transport'">
+                                                         نقل
+                                                       </t>
+                                                     <t t-if="clearance.request_type == 'other_service'">
+                                                         خدمات أخرى
+                                                       </t>
+                                               </t>
+                                                              <t t-else="">
+                                            <span t-field="clearance.request_type" />
+                                                              </t>
+                                        </td>
+                                        <td>
+                                            <span t-field="clearance.receipt_method" />
+                                        </td>
+                                    </tr>
+                                    </t>
+                                </t>
+                            </t>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

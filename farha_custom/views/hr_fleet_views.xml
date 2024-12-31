@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+     <record id="fleet_vehicle_view_form_inherit_farha_custom" model="ir.ui.view">
+        <field name="name">fleet.vehicle.view.form.inherit.information</field>
+        <field name="model">fleet.vehicle</field>
+        <field name="inherit_id" ref="fleet.fleet_vehicle_view_form" />
+        <field name="arch" type="xml">
+            <field name="car_value" position="attributes">
+                <attribute name="groups">account.group_account_invoice</attribute>
+            </field>
+            <field name="net_car_value" position="attributes">
+                <attribute name="groups">account.group_account_invoice</attribute>
+            </field>
+            <field name="residual_value" position="attributes">
+                <attribute name="groups">account.group_account_invoice</attribute>
+            </field>
+        </field>
+     </record>
+
+    <record id="fleet_vehicle_information_view_form_inherit_farha_custom" model="ir.ui.view">
+        <field name="name">fleet.vehicle.view.form.inherit.farha</field>
+        <field name="model">fleet.vehicle</field>
+        <field name="inherit_id" ref="hr_fleet_information.fleet_vehicle_view_form_inherit_hr_fleet_information" />
+        <field name="arch" type="xml">
+            <field name="port_permit_end_date" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <field name="driver_license_expiry_date" position="after">
+                <field name="transport_driver_card_number" />
+                <field name="expiration_date_authority_card" />
+            </field>
+        </field>
+     </record>
+
+</odoo>

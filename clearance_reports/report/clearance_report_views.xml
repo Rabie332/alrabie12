@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+      <menuitem
+        id="clearance_request_report_menu"
+        name="Reports"
+        sequence="2"
+        parent="clearance.clearance_menu_root"
+        groups="group_clearance_reports"
+    />
+
+
+    <record id="clearance_report_form" model="ir.ui.view">
+        <field name="name">clearance.report.form</field>
+        <field name="model">clearance.report</field>
+        <field name="arch" type="xml">
+            <form delete="0" create="0">
+                <sheet>
+                    <group>
+                    <group>
+                        <field name="date_from" />
+                    </group>
+                    <group>
+                    <field name="date_to" />
+                    </group>
+                    </group>
+                    <br />
+                    <br />
+
+
+                    <button
+                        name="print_states_report"
+                        string="Print States Report"
+                        type="object"
+                        class="oe_highlight"
+                        icon="fa-print"
+                        style="margin-right:1%;"
+                    />
+                    <button
+                        name="print_shipping_order_report"
+                        string="Print Shipping Orders Report"
+                        type="object"
+                        class="oe_highlight"
+                        icon="fa-print"
+                        style="margin-right:1%;"
+                    />
+                    <button
+                        name="print_cost_income_report"
+                        string="Print Costs and Incomes Report"
+                        type="object"
+                        class="oe_highlight"
+                        icon="fa-print"
+                        style="margin-right:1%;"
+                    />
+                    <button
+                        name="print_transport_order_report"
+                        string="Print Transport Order Report"
+                        type="object"
+                        class="oe_highlight"
+                        icon="fa-print"
+                        style="margin-right:1%;"
+                    />
+                     <button
+                        name="print_warehouse_report"
+                        string="Print Warehouse Report"
+                        type="object"
+                        class="oe_highlight"
+                        icon="fa-print"
+                        style="margin-right:1%;"
+                    />
+                     <br />
+                      <br />
+                      <br />
+                      <button
+                        name="print_states_report_preview"
+                        string="States Report Preview"
+                        type="object"
+                        class="oe_highlight"
+                        icon="fa-print"
+                        style="margin-right:1%;"
+                    />
+                     <button
+                        name="print_shipping_order_report_preview"
+                        string="Shipping Orders Report Preview"
+                        type="object"
+                        class="oe_highlight"
+                        icon="fa-print"
+                        style="margin-right:1%;"
+                    />
+                      <button
+                        name="print_cost_income_report_preview"
+                        string="Costs and Incomes Report Preview"
+                        type="object"
+                        class="oe_highlight"
+                        icon="fa-print"
+                        style="margin-right:1%;"
+                    />
+                     <button
+                        name="print_transport_order_report_preview"
+                        string="Transport Order Report Preview"
+                        type="object"
+                        class="oe_highlight"
+                        icon="fa-print"
+                        style="margin-right:1%;"
+                    />
+                </sheet>
+                <footer />
+            </form>
+        </field>
+    </record>
+
+
+    <record id="clearance_report_action" model="ir.actions.act_window">
+        <field name="name">Clearance Reports</field>
+        <field name="res_model">clearance.report</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="clearance_report_form" />
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="clearance_report_menu"
+        name="Clearance Reports"
+        sequence="10"
+        parent="clearance_request_report_menu"
+        action="clearance_report_action"
+    />
+
+</odoo>

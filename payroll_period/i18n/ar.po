@@ -1,0 +1,172 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* payroll_period
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-19 15:23+0000\n"
+"PO-Revision-Date: 2020-02-19 15:23+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: payroll_period
+#: model:ir.model.fields,field_description:payroll_period.field_hr_payslip_employees__company_id
+#: model:ir.model.fields,field_description:payroll_period.field_hr_payslip_run__company_id
+#: model_terms:ir.ui.view,arch_db:payroll_period.hr_payslip_run_filter
+msgid "Company"
+msgstr "الشركة"
+
+#. module: payroll_period
+#: model:ir.model.fields,field_description:payroll_period.field_hr_employee__contract_id
+msgid "Current Contract"
+msgstr "العقد الحالي"
+
+#. module: payroll_period
+#: model:ir.model.fields,help:payroll_period.field_hr_employee__contract_id
+msgid "Current contract of the employee"
+msgstr "العقد الحالي للموظف"
+
+#. module: payroll_period
+#: model_terms:ir.ui.view,arch_db:payroll_period.hr_payslip_run_form
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: payroll_period
+#: model:ir.model.fields,field_description:payroll_period.field_hr_payslip__date_payment
+#: model:ir.model.fields,field_description:payroll_period.field_hr_payslip_run__date_payment
+msgid "Date of Payment"
+msgstr "تاريخ السداد"
+
+#. module: payroll_period
+#: model:ir.model.fields,help:payroll_period.field_hr_contract__schedule_pay
+msgid "Defines the frequency of the wage payment."
+msgstr "حدد تواتر دفع الأجور."
+
+#. module: payroll_period
+#: model:ir.model,name:payroll_period.model_hr_employee
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: payroll_period
+#: model:ir.model,name:payroll_period.model_hr_contract
+msgid "Employee Contract"
+msgstr "عقد الموظف"
+
+#. module: payroll_period
+#: model:ir.ui.menu,name:payroll_period.menu_action_hr_fiscalyear
+msgid "Fiscal Years"
+msgstr "السنوات المالية"
+
+#. module: payroll_period
+#: code:addons/payroll_period/models/hr_payslip_run.py:0
+#: model_terms:ir.ui.view,arch_db:payroll_period.hr_payslip_run_form
+#, python-format
+msgid "Generate Payslips"
+msgstr " توليد قسائم الرواتب "
+
+#. module: payroll_period
+#: model:ir.model,name:payroll_period.model_hr_payslip_employees
+msgid "Generate payslips for all selected employees"
+msgstr "إنشاء كشوف الرواتب لجميع الموظفين الذين تم تحديدهم"
+
+#. module: payroll_period
+#: model_terms:ir.ui.view,arch_db:payroll_period.hr_payslip_run_filter
+msgid "Group By..."
+msgstr "رتب بواسطة..."
+
+#. module: payroll_period
+#: model:ir.ui.menu,name:payroll_period.menu_action_hr_period
+msgid "HR Periods"
+msgstr "فترات الموارد البشرية"
+
+#. module: payroll_period
+#: model:ir.model.fields,field_description:payroll_period.field_hr_payslip_run__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: payroll_period
+#: model:ir.model,name:payroll_period.model_hr_payslip
+msgid "Pay Slip"
+msgstr "قسيمة الراتب"
+
+#. module: payroll_period
+#: model_terms:ir.ui.view,arch_db:payroll_period.hr_payslip_run_filter
+#: model_terms:ir.ui.view,arch_db:payroll_period.view_hr_payslip_filter
+msgid "Payment Date"
+msgstr "تاريخ الدفع"
+
+#. module: payroll_period
+#: model:ir.model,name:payroll_period.model_hr_payslip_run
+msgid "Payslip Batches"
+msgstr "دفعات المرتب"
+
+#. module: payroll_period
+#: model:ir.model.fields,field_description:payroll_period.field_hr_payslip__hr_period_id
+#: model:ir.model.fields,field_description:payroll_period.field_hr_payslip_run__hr_period_id
+msgid "Period"
+msgstr "فترة"
+
+#. module: payroll_period
+#: model:ir.ui.menu,name:payroll_period.menu_date_range_type_action
+msgid "Period Types"
+msgstr "أنواع الفترات"
+
+#. module: payroll_period
+#: code:addons/payroll_period/models/hr_payslip.py:0
+#: code:addons/payroll_period/models/hr_payslip.py:0
+#, python-format
+msgid "Salary Slip of %s for %s"
+msgstr "قسيمة مرتب %s لـ%s"
+
+#. module: payroll_period
+#: model:ir.model.fields,field_description:payroll_period.field_hr_contract__schedule_pay
+#: model:ir.model.fields,field_description:payroll_period.field_hr_payslip_employees__schedule_pay
+#: model:ir.model.fields,field_description:payroll_period.field_hr_payslip_run__schedule_pay
+#: model_terms:ir.ui.view,arch_db:payroll_period.hr_payslip_run_filter
+msgid "Scheduled Pay"
+msgstr "الدفع المجدول "
+
+#. module: payroll_period
+#: code:addons/payroll_period/models/hr_payslip_run.py:0
+#, python-format
+msgid ""
+"The company on the selected period must be the same as the company on the "
+"payslip batch."
+msgstr ""
+"يجب أن تكون الشركة في الفترة المحددة هي نفسها الشركة على دُفعات كشوف "
+"الرواتب."
+
+#. module: payroll_period
+#: code:addons/payroll_period/models/hr_payslip.py:0
+#, python-format
+msgid ""
+"The company on the selected period must be the same as the company on the "
+"payslip."
+msgstr "يجب أن تكون الشركة في الفترة المحددة هي نفسها الشركة في كشف الراتب "
+
+#. module: payroll_period
+#: code:addons/payroll_period/models/hr_payslip_run.py:0
+#, python-format
+msgid ""
+"The schedule on the selected period\n"
+"                        must be the same as the schedule on the\n"
+"                        payslip batch."
+msgstr ""
+"يجب أن يكون الجدول الزمني في الفترة المحددة هو نفسه الجدول الزمني للدفعة "
+"الكشوفات."
+
+#. module: payroll_period
+#: model:ir.model.fields,field_description:payroll_period.field_hr_period__number_worked_days
+msgid "Number work days"
+msgstr "عدد أيام العمل"
+
+#. module: payroll_period
+#: model:ir.model.fields,field_description:payroll_period.field_hr_period__number_worked_hours
+msgid "Number work hours"
+msgstr "عدد ساعات العمل"

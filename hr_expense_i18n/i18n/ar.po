@@ -1,0 +1,405 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-06 09:12+0000\n"
+"PO-Revision-Date: 2021-07-06 09:12+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_expense
+#: model_terms:ir.ui.view,arch_db:hr_expense.product_product_expense_form_view
+msgid ""
+"<i class=\"text-muted oe_edit_only\">Use this reference as a subject prefix "
+"when submitting by email.</i>"
+msgstr ""
+"<i class=\"text-muted oe_edit_only\">استخدم هذا المرجع كبادئة للموضوع "
+"عند الإرسال عبر البريد الإلكتروني.</i>"
+
+#. module: hr_expense
+#: model:res.groups,name:hr_expense.group_hr_expense_user
+msgid "All Approver"
+msgstr "كل الموافقات"
+
+#. module: hr_expense
+#: model:ir.actions.act_window,name:hr_expense.hr_expense_actions_my_all
+#: model:ir.ui.menu,name:hr_expense.menu_hr_expense_my_expenses_all
+msgid "All My Expenses"
+msgstr "كل مصاريفي"
+
+#. module: hr_expense
+#: model:ir.actions.act_window,name:hr_expense.action_hr_expense_sheet_all
+#: model:ir.ui.menu,name:hr_expense.menu_hr_expense_sheet_all
+msgid "All Reports"
+msgstr "كافة التقارير"
+
+#. module: hr_expense
+#. openerp-web
+#: code:addons/hr_expense/static/src/js/upload_mixin.js:0
+#, python-format
+msgid "An error occurred during the upload"
+msgstr "حدث خطأ أثناء التحميل"
+
+#. module: hr_expense
+#: code:addons/hr_expense/models/hr_expense.py:0
+#, python-format
+msgid "An expense report must contain only lines from the same company."
+msgstr "يجب أن يحتوي تقرير المصاريف على سطور من نفس الشركة فقط."
+
+#. module: hr_expense
+#: model:ir.actions.server,name:hr_expense.hr_expense_sheet_approve_action_server
+msgid "Approve Report"
+msgstr "الموافقة على التقرير"
+
+#. module: hr_expense
+#: model_terms:ir.actions.act_window,help:hr_expense.action_hr_expense_sheet_all_to_approve
+msgid "Approve the new expense reports submitted by the employees you manage."
+msgstr "قم بالموافقة على تقارير المصروفات الجديدة المقدمة من الموظفين الذين تديرهم. "
+
+#. module: hr_expense
+#: model_terms:ir.ui.view,arch_db:hr_expense.hr_expense_view_form
+msgid "Attach Receipt"
+msgstr "إرفاق الإيصال"
+
+#. module: hr_expense
+#: model_terms:ir.ui.view,arch_db:hr_expense.res_config_settings_view_form
+msgid "Create expenses from incoming emails"
+msgstr "إنشاء نفقات من رسائل البريد الإلكتروني الواردة"
+
+#. module: hr_expense
+#: model_terms:ir.actions.act_window,help:hr_expense.hr_expense_actions_all
+msgid "Create new expenses to get statistics."
+msgstr "إنشاء نفقات جديدة للحصول على الإحصائيات."
+
+#. module: hr_expense
+#: model_terms:ir.actions.act_window,help:hr_expense.hr_expense_actions_my_all
+#: model_terms:ir.actions.act_window,help:hr_expense.hr_expense_actions_my_unsubmitted
+msgid "Did you try the mobile app?"
+msgstr "هل جربت تطبيق الجوال؟ "
+
+#. module: hr_expense
+#: model_terms:ir.ui.view,arch_db:hr_expense.res_config_settings_view_form
+msgid "Digitalize your receipts with OCR and Artificial Intelligence"
+msgstr "قم برقم إيصالاتك باستخدام OCR والذكاء الاصطناعي"
+
+#. module: hr_expense
+#: model_terms:digest.tip,tip_description:hr_expense.digest_tip_hr_expense_0
+msgid ""
+"Do not keep your expense tickets in your pockets any longer. Just snap a "
+"picture of your receipt and let Odoo digitalizes it for you. The OCR and "
+"Artificial Intelligence will fill the data automatically."
+msgstr ""
+"لا تحتفظ بتذاكر نفقتك في جيوبك بعد الآن. فقط التقط"
+"صورة إيصالك ودع Odoo يرقمها نيابة عنك. التعرف الضوئي على الحروف و"
+"الذكاء الاصطناعي سوف يملأ البيانات تلقائيًا."
+
+#. module: hr_expense
+#: model_terms:ir.ui.view,arch_db:hr_expense.view_employee_tree_inherit_expense
+msgid "Expense Approver"
+msgstr "اعتماد المصروفات"
+
+#. module: hr_expense
+#: model_terms:ir.ui.view,arch_db:hr_expense.res_config_settings_view_form
+msgid "Expense Digitalization (OCR)"
+msgstr "رقمنة المصاريف (OCR)"
+
+#. module: hr_expense
+#: model:ir.model.fields,field_description:hr_expense.field_hr_employee_public__expense_manager_id
+msgid "Expense Manager"
+msgstr "مدير المصاريف"
+
+#. module: hr_expense
+#: model_terms:ir.actions.act_window,help:hr_expense.hr_expense_product
+msgid "Expense products can be reinvoiced to your customers."
+msgstr "يمكن إعادة إصدار منتجات المصاريف لعملائك."
+
+#. module: hr_expense
+#: model_terms:ir.actions.act_window,help:hr_expense.action_hr_expense_sheet_all
+msgid ""
+"Expense reports regroup all the expenses incurred during a specific event."
+msgstr ""
+"تقارير المصاريف تعيد تجميع جميع النفقات المتكبدة خلال حدث معين."
+
+#. module: hr_expense
+#: model:ir.model.fields,field_description:hr_expense.field_hr_expense__is_refused
+msgid "Explicitly Refused by manager or accountant"
+msgstr "الرفض من قبل المدير أو المحاسب"
+
+#. module: hr_expense
+#: code:addons/hr_expense/models/hr_expense.py:0
+#, python-format
+msgid "Generated Expense"
+msgstr "المصاريف المولدة"
+
+#. module: hr_expense
+#: code:addons/hr_expense/models/hr_expense.py:0
+#, python-format
+msgid "Generated Expenses"
+msgstr "المصاريف المولدة"
+
+#. module: hr_expense
+#: code:addons/hr_expense/models/hr_expense.py:0
+#, python-format
+msgid "Invalid attachments!"
+msgstr "المرفقات غير صحيحة!"
+
+#. module: hr_expense
+#: model:ir.model.fields,field_description:hr_expense.field_hr_expense__is_editable
+msgid "Is Editable By Current User"
+msgstr "قابل للتحرير بواسطة المستخدم الحالي"
+
+#. module: hr_expense
+#: model:ir.actions.act_window,name:hr_expense.hr_expense_actions_my_unsubmitted
+#: model:ir.ui.menu,name:hr_expense.menu_hr_expense_my_expenses_to_submit
+msgid "My Expenses to Report"
+msgstr "مصاريفي للإبلاغ عنها"
+
+#. module: hr_expense
+#: code:addons/hr_expense/models/hr_expense.py:0
+#, python-format
+msgid ""
+"No Outstanding Payments Account found for the %s journal, please configure "
+"one."
+msgstr ""
+"لم يتم العثور على حساب مدفوعات معلقة لمجلة %s ، يرجى التهيئة"
+"واحد."
+
+#. module: hr_expense
+#: code:addons/hr_expense/models/hr_expense.py:0
+#, python-format
+msgid "No account found for the %s journal, please configure one."
+msgstr "لم يتم العثور على حساب للدفتر %s ، يرجى تكوين واحد."
+
+#. module: hr_expense
+#: model_terms:ir.actions.act_window,help:hr_expense.action_hr_expense_sheet_department_filtered
+#: model_terms:ir.actions.act_window,help:hr_expense.hr_expense_actions_all
+msgid "No data yet!"
+msgstr "لا توجد بيانات حتى الآن!"
+
+#. module: hr_expense
+#: model_terms:ir.actions.act_window,help:hr_expense.hr_expense_product
+msgid "No expense products found. Let's create one!"
+msgstr "لم يتم العثور على مصاريف منتجات. دعونا ننشئ واحدة!"
+
+#. module: hr_expense
+#: model_terms:ir.actions.act_window,help:hr_expense.action_hr_expense_sheet_my_all
+msgid "No expense report found. Let's create one!"
+msgstr "لم يتم العثور على تقرير مصاريف. لنقم بإنشاء واحد!"
+
+#. module: hr_expense
+#: model_terms:ir.actions.act_window,help:hr_expense.action_hr_expense_sheet_all_to_approve
+#: model_terms:ir.actions.act_window,help:hr_expense.action_hr_expense_sheet_all_to_pay
+#: model_terms:ir.actions.act_window,help:hr_expense.action_hr_expense_sheet_all_to_post
+msgid "No expense reports found"
+msgstr "لم يتم العثور على تقارير المصاريف"
+
+#. module: hr_expense
+#: model_terms:ir.actions.act_window,help:hr_expense.action_hr_expense_sheet_all
+msgid "No expense reports found. Let's create one!"
+msgstr "لم يتم العثور على تقرير مصاريف. لنقم بإنشاء واحد!"
+
+#. module: hr_expense
+#: model_terms:ir.actions.act_window,help:hr_expense.action_hr_expense_sheet_all_to_post
+msgid ""
+"Post the journal entries of the new expense reports approved by the "
+"employees' manager."
+msgstr ""
+"انشر إدخالات دفتر اليومية لتقارير النفقات الجديدة المعتمدة من قِبل"
+"مدير الموظفين"
+
+#. module: hr_expense
+#: model_terms:ir.ui.view,arch_db:hr_expense.hr_expense_template_register
+msgid "Product: not found"
+msgstr "المنتج غير موجود"
+
+#. module: hr_expense
+#: model:ir.model.fields,field_description:hr_expense.field_hr_expense__is_ref_editable
+msgid "Reference Is Editable By Current User"
+msgstr "المرجع قابل للتحرير بواسطة المستخدم الحالي"
+
+#. module: hr_expense
+#: model:ir.model.fields,field_description:hr_expense.field_res_config_settings__module_hr_payroll_expense
+msgid "Reimburse Expenses in Payslip"
+msgstr "سداد المصاريف في قسيمة الدفع"
+
+#. module: hr_expense
+#: model_terms:ir.ui.view,arch_db:hr_expense.res_config_settings_view_form
+msgid "Reimburse expenses in payslips"
+msgstr "سداد المصاريف في كشوف المرتبات"
+
+#. module: hr_expense
+#: model_terms:ir.ui.view,arch_db:hr_expense.res_config_settings_view_form
+msgid "Reimburse in Payslip"
+msgstr "سداد في قسيمة الدفع"
+
+#. module: hr_expense
+#: model_terms:ir.actions.act_window,help:hr_expense.action_hr_expense_sheet_all_to_pay
+msgid ""
+"Reimburse the employees who incurred these costs or simply register the "
+"corresponding payments."
+msgstr ""
+"قم بتعويض الموظفين الذين تكبدوا هذه التكاليف أو قم ببساطة بتسجيل"
+"المدفوعات المقابلة"
+
+#. module: hr_expense
+#. openerp-web
+#: code:addons/hr_expense/static/src/xml/expense_qr_modal_template.xml:0
+#, python-format
+msgid "Scan this QR code to get the Odoo app:"
+msgstr "امسح رمز الاستجابة السريعة QR هذا للحصول على تطبيق Odoo"
+
+#. module: hr_expense
+#: model:ir.model.fields,help:hr_expense.field_hr_employee__expense_manager_id
+#: model:ir.model.fields,help:hr_expense.field_res_users__expense_manager_id
+msgid ""
+"Select the user responsible for approving \"Expenses\" of this employee.\n"
+"If empty, the approval is done by an Administrator or Approver (determined in settings/users)."
+msgstr ""
+"حدد المستخدم المسؤول عن اعتماد نفقات هذا الموظف. \ n"
+"إذا كانت الموافقة فارغة ، يتم إجراء الموافقة بواسطة المسؤول أو الموافق (يتم تحديده في الإعدادات / المستخدمين)."
+
+#. module: hr_expense
+#: model_terms:ir.ui.view,arch_db:hr_expense.res_config_settings_view_form
+msgid ""
+"Send an email to this email alias with the receipt in attachment to create "
+"an expense in one click. If the first word of the mail subject contains the "
+"product's internal reference or the product name, the corresponding product "
+"will automatically be set. Type the expense amount in the mail subject to "
+"set it on the expense too."
+msgstr ""
+"أرسل بريدًا إلكترونيًا إلى الاسم المستعار للبريد الإلكتروني هذا مع الإيصال المرفق للإنشاء"
+"نفقة بنقرة واحدة. إذا كانت الكلمة الأولى لموضوع البريد تحتوي على"
+"المرجع الداخلي للمنتج أو اسم المنتج أو المنتج المقابل"
+"سيتم تعيينه تلقائيًا. اكتب مبلغ المصاريف في البريد موضوع"
+"ضعه على الحساب أيضًا"
+
+#. module: hr_expense
+#: model:ir.model.fields,field_description:hr_expense.field_res_config_settings__module_hr_expense_extract
+msgid "Send bills to OCR to generate expenses"
+msgstr "إرسال الفواتير إلى OCR لتوليد النفقات"
+
+#. module: hr_expense
+#: model_terms:ir.actions.act_window,help:hr_expense.hr_expense_actions_my_all
+#: model_terms:ir.actions.act_window,help:hr_expense.hr_expense_actions_my_unsubmitted
+msgid ""
+"Snap pictures of your receipts and let Odoo<br> automatically create "
+"expenses for you."
+msgstr ""
+"التقط صورًا لإيصالاتك ودع Odoo ينشئ تلقائيًا"
+"نفقات لك"
+
+#. module: hr_expense
+#: code:addons/hr_expense/models/hr_expense.py:0
+#, python-format
+msgid "The current user has no related employee. Please, create one."
+msgstr "المستخدم الحالي ليس لديه موظف ذو صلة. من فضلك ، أنشئ واحدة."
+
+#. module: hr_expense
+#: model_terms:ir.ui.view,arch_db:hr_expense.hr_expense_template_register
+msgid ""
+"The first word of the email subject did not correspond to any product code. "
+"You'll have to set the product manually on the expense."
+msgstr ""
+"الكلمة الأولى في موضوع البريد الإلكتروني لا تتوافق مع أي رمز منتج."
+"سيتعين عليك ضبط المنتج يدويًا على النفقة."
+
+#. module: hr_expense
+#: model:ir.model.constraint,message:hr_expense.constraint_hr_expense_sheet_journal_id_required_posted
+msgid "The journal must be set on posted expense"
+msgstr "يجب تعيين الدفتر على حساب مرحل"
+
+#. module: hr_expense
+#: model:digest.tip,name:hr_expense.digest_tip_hr_expense_0
+#: model_terms:digest.tip,tip_description:hr_expense.digest_tip_hr_expense_0
+msgid "Tip: Snap pictures of your receipts with the remote app"
+msgstr "نصيحة: التقط صورًا لإيصالاتك باستخدام التطبيق البعيد"
+
+#. module: hr_expense
+#: model_terms:ir.ui.view,arch_db:hr_expense.hr_expense_view_search
+msgid "To Report"
+msgstr "للإبلاغ"
+
+#. module: hr_expense
+#: code:addons/hr_expense/models/hr_expense.py:0
+#, python-format
+msgid "Uploaded Attachment"
+msgstr "المرفقات التي تم تحميلها"
+
+#. module: hr_expense
+#: model_terms:ir.ui.view,arch_db:hr_expense.hr_expense_template_register
+msgid "View Expense"
+msgstr "مشاهدة المصروفات"
+
+#. module: hr_expense
+#: code:addons/hr_expense/models/hr_expense.py:0
+#, python-format
+msgid "You are not authorized to edit the reference of this expense report."
+msgstr "غير مصرح لك بتحرير مرجع تقرير المصاريف هذا."
+
+#. module: hr_expense
+#: code:addons/hr_expense/models/hr_expense.py:0
+#, python-format
+msgid "You are not authorized to edit this expense report."
+msgstr "لست مخولاً لتحرير تقرير المصاريف هذا."
+
+#. module: hr_expense
+#: code:addons/hr_expense/models/hr_expense.py:0
+#, python-format
+msgid "You can not create report without product."
+msgstr "لا يمكنك إنشاء تقرير بدون منتج."
+
+#. module: hr_expense
+#: model_terms:ir.ui.view,arch_db:hr_expense.hr_expense_template_register
+msgid "You can now submit it to the manager from the following link."
+msgstr "يمكنك الآن إرسالها إلى المدير من الرابط التالي."
+
+#. module: hr_expense
+#: code:addons/hr_expense/models/hr_expense.py:0
+#, python-format
+msgid "You can't mix sample expenses and regular ones"
+msgstr "لا يمكنك المزج بين نفقات العينة والنفقات العادية"
+
+#. module: hr_expense
+#: code:addons/hr_expense/models/hr_expense.py:0
+#, python-format
+msgid ""
+"You need to have at least one product that can be expensed in your database "
+"to proceed!"
+msgstr ""
+"يجب أن يكون لديك منتج واحد على الأقل يمكن إنفاقه في قاعدة البيانات الخاصة بك"
+"المضي قدما!"
+
+#. module: hr_expense
+#: model_terms:ir.ui.view,arch_db:hr_expense.hr_expense_template_register
+msgid "Your expense has been successfully registered."
+msgstr "تم تسجيل نفقتك بنجاح."
+
+#. module: hr_expense
+#: code:addons/hr_expense/models/hr_expense.py:0
+#, python-format
+msgid "to be reimbursed"
+msgstr "لسداد"
+
+#. module: hr_expense
+#: code:addons/hr_expense/models/hr_expense.py:0
+#, python-format
+msgid "to report"
+msgstr "للإبلاغ"
+
+#. module: hr_expense
+#: code:addons/hr_expense/models/hr_expense.py:0
+#, python-format
+msgid "under validation"
+msgstr "قيد التحقق"
+
+#. module: hr_expense
+#: model_terms:ir.ui.view,arch_db:hr_expense.res_config_settings_view_form
+msgid "use OCR to fill data from a picture of the bill"
+msgstr "استخدم OCR لملء البيانات من صورة الفاتورة"

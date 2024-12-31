@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template
+            id='pos_pay_assets'
+            name='POS Summary Assets'
+            inherit_id='point_of_sale.assets'
+        >
+            <xpath expr='.' position='inside'>
+                <script
+                    type="text/javascript"
+                    src="/pos_pay_later/static/src/js/Screens/PaymentScreen.js"
+                />
+                <script
+                    type="text/javascript"
+                    src="/pos_pay_later/static/src/js/Buttons/ServicesButton.js"
+                />
+                <script
+                    type="text/javascript"
+                    src="/pos_pay_later/static/src/js/Screens/ServicesScreen.js"
+                />
+                <script
+                    type="text/javascript"
+                    src="/pos_pay_later/static/src/js/Screens/ServiceLine.js"
+                />
+                <script
+                    type="text/javascript"
+                    src="/pos_pay_later/static/src/js/Popups/ServiceDetails.js"
+                />
+                <script
+                    type="text/javascript"
+                    src="/pos_pay_later/static/src/js/models.js"
+                />
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

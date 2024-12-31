@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+
+        <t
+        t-name="ProductsWidgetControlPanel"
+        t-inherit="point_of_sale.ProductsWidgetControlPanel"
+        t-inherit-mode="extension"
+        owl="1"
+    >
+            <xpath
+            expr="//div[hasclass('products-widget-control')]//Portal"
+            position="before"
+        >
+                <Portal target="'.pos .search-bar-portal'">
+                    <div class="search-box" style="display:block;">
+                        <input
+                        t-ref="update-is-extra"
+                        type="checkbox"
+                        t-on-click="updateIsExtra"
+                        style="display:none;"
+                    />
+                    </div>
+                </Portal>
+            </xpath>
+        </t>
+
+</templates>

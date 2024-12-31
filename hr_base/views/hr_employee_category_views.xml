@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!--   Form  View -->
+
+      <record id="view_employee_category_list_inherit" model="ir.ui.view">
+           <field name="name">hr.employee.category.list</field>
+             <field name="model">hr.employee.category</field>
+        <field name="inherit_id" ref="hr.view_employee_category_list" />
+        <field name="arch" type="xml">
+
+            <field name="name" position="after">
+              <field name="color" />
+            </field>
+        </field>
+    </record>
+</odoo>

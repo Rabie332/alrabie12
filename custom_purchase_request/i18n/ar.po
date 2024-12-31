@@ -1,0 +1,34 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: custom_purchase_request 1.0\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"MIME-Version: 1.0\n"
+"Language: ar\n"
+
+#. module: custom_purchase_request
+#: model:ir.model,name:custom_purchase_request.model_purchase_request
+msgid "Purchase Request"
+msgstr "طلب الشراء"
+
+#. module: custom_purchase_request
+#: model:ir.model.fields,field_description:custom_purchase_request.field_purchase_request__display_name
+msgid "Display Name"
+msgstr "الإسم"
+
+#. module: custom_purchase_request
+#: model:ir.model.fields,field_description:custom_purchase_request.field_purchase_request__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: custom_purchase_request
+#: model:ir.model.fields,field_description:custom_purchase_request.field_purchase_request____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: custom_purchase_request
+#: model_terms:ir.ui.view,arch_db:custom_purchase_request.view_purchase_request_form_inherit
+msgid "Reset to Draft"
+msgstr "ارجاع الى مسودة"

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="hotel_housekeeping_comp_rule" model="ir.rule">
+        <field name="name">Hotel Housekeeping multi company rule</field>
+        <field name="model_id" ref="model_hotel_housekeeping" />
+        <field eval="True" name="global" />
+        <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record>
+
+     <record id="group_service_officer" model="res.groups">
+        <field name="name">Administration Services Officer</field>
+          <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]" />
+         <field name="category_id" ref="hotel.hms_category" />
+         <field name="implied_ids" eval="[(4, ref('hotel.group_hotel_user'))]" />
+    </record>
+
+     <record id="group_clean_worker" model="res.groups">
+        <field name="name">Clean Worker</field>
+         <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]" />
+         <field name="category_id" ref="hotel.hms_category" />
+         <field name="implied_ids" eval="[(4, ref('hotel.group_hotel_user'))]" />
+    </record>
+
+     <record id="group_maintenance_worker" model="res.groups">
+        <field name="name">Maintenance worker</field>
+         <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]" />
+         <field name="category_id" ref="hotel.hms_category" />
+         <field name="implied_ids" eval="[(4, ref('hotel.group_hotel_user'))]" />
+    </record>
+
+
+    <record id="hotel_housekeeping_rule_my_worker" model="ir.rule">
+        <field name="name">Hotel Housekeeping Worker</field>
+        <field name="model_id" ref="model_hotel_housekeeping" />
+        <field name="domain_force">[('activity_line_ids.housekeeper_id','in', [user.id])]</field>
+        <field
+            name="groups"
+            eval="[(4, ref('hotel_housekeeping.group_clean_worker')), (4, ref('hotel_housekeeping.group_maintenance_worker'))]"
+        />
+    </record>
+
+
+     <!--CMS  outbound rules for manager department and senders and receivers users -->
+    <record id="cms_correspondence_rule_employee" model="ir.rule">
+        <field name="name">Hotel Housekeeping Officer</field>
+        <field name="model_id" ref="model_hotel_housekeeping" />
+        <field name="domain_force">[(1,'=',1)]
+        </field>
+        <field name="groups" eval="[(4, ref('hotel_housekeeping.group_service_officer'))]" />
+    </record>
+
+
+</odoo>

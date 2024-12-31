@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+<!-- Form View Inherit -->
+    <record id="account_state_account_move_view_form_inherit_account_state" model="ir.ui.view">
+        <field name="name">account.move.form</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form" />
+        <field name="arch" type="xml">
+            <header position="inside">
+                <button
+                    name="action_review"
+                    string="To Review"
+                    class="oe_highlight"
+                    groups="account.group_account_invoice"
+                    type="object"
+                    attrs="{'invisible': [('state', '!=', 'draft')]}"
+                />
+                 <button
+                    name="action_reviewed"
+                    string="Reviewed"
+                    class="oe_highlight"
+                    groups="account_state.group_account_reviewer"
+                    type="object"
+                    attrs="{'invisible': [('state', '!=', 'under_review')]}"
+                />
+                 <button
+                    name="action_confirm"
+                    string="Confirm"
+                    class="oe_highlight"
+                    groups="account_state.group_account_confirm_user"
+                    type="object"
+                    attrs="{'invisible': [('state', '!=', 'reviewed')]}"
+                />
+
+               </header>
+            <xpath expr="//header/button[@name='action_post'][1]" position="attributes">
+                 <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//header/button[@name='action_post'][2]" position="attributes">
+                <attribute name="string">Validate</attribute>
+                <attribute name="attrs">{'invisible': [('state', '!=', 'confirm')]} </attribute>
+            </xpath>
+            <field name="state" position="attributes">
+                <attribute name="statusbar_visible">draft,under_review,reviewed,confirm,posted
+                </attribute>
+            </field>
+        </field>
+    </record>
+
+</odoo>

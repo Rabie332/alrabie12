@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template
+        id="pos_extra_products_assets"
+        name="pos_extra_products assets"
+        inherit_id="point_of_sale.assets"
+    >
+        <xpath expr="." position="inside">
+            <script
+                type="text/javascript"
+                src="/pos_multi_variants/static/src/js/ProductConfiguratorPopup.js"
+            />
+        </xpath>
+    </template>
+
+
+</odoo>

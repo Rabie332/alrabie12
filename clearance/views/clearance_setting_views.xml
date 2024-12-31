@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Setting-->
+    <record id="clearance_type_size_view_search" model="ir.ui.view">
+        <field name="name">clearance.shipment.type.size.view.search</field>
+        <field name="model">clearance.shipment.type.size</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]" />
+            </search>
+        </field>
+    </record>
+    <record id="clearance_type_size_view_tree" model="ir.ui.view">
+        <field name="name">clearance.shipment.type.size.view.tree</field>
+        <field name="model">clearance.shipment.type.size</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="name" />
+                <field name="active" invisible="1" />
+            </tree>
+        </field>
+    </record>
+    <record id="clearance_type_size_action" model="ir.actions.act_window">
+        <field name="name">Sizes</field>
+        <field name="res_model">clearance.shipment.type.size</field>
+        <field name="view_mode">tree</field>
+    </record>
+    <menuitem
+        id="clearance_type_size_menu"
+        name="Sizes"
+        action="clearance_type_size_action"
+        parent="clearance_configuration_menu"
+        sequence="5"
+    />
+    <record id="clearance_type_lcl_view_search" model="ir.ui.view">
+        <field name="name">clearance.shipment.type.lcl.view.search</field>
+        <field name="model">clearance.shipment.type.lcl</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]" />
+            </search>
+        </field>
+    </record>
+    <record id="clearance_type_lcl_view_tree" model="ir.ui.view">
+        <field name="name">clearance.shipment.type.lcl.view.tree</field>
+        <field name="model">clearance.shipment.type.lcl</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="shipment_type_size_id" options="{'no_create': True,'no_open': True}" />
+                <field name="is_unlimited" />
+                <field name="active" invisible="1" />
+            </tree>
+        </field>
+    </record>
+    <record id="clearance_type_lcl_view_form" model="ir.ui.view">
+        <field name="name">clearance.shipment.type.lcl.view.form</field>
+        <field name="model">clearance.shipment.type.lcl</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" required="1" />
+                            <field name="shipment_type_size_id" options="{'no_create': True,'no_open': True}" />
+                            <field name="display_button_shipments_number" invisible="1" />
+                            <field
+                                name="is_difference_number"
+                                attrs="{'invisible':[('display_button_shipments_number','=',False)]}"
+                            />
+                            <label
+                                for="difference_number"
+                                attrs="{'invisible':['|', ('is_difference_number','=',False), ('display_button_shipments_number','=',False)]}"
+                            />
+                            <div
+                                class="o_row"
+                                attrs="{'invisible':['|', ('is_difference_number','=',False), ('display_button_shipments_number','=',False)]}"
+                            >
+                                <field name="difference_number" />
+                                <button
+                                    name="create_shipments_number_type"
+                                    type="object"
+                                    aria-label="Automatic generation of detailed operations lines"
+                                    title="Automatic generation of detailed operations lines"
+                                    class="btn btn-primary fa fa-copy"
+                                    role="img"
+                                />
+                            </div>
+                            <field name="active" invisible="1" />
+                        </group>
+                        <group>
+                            <field name="is_unlimited" />
+                            <field
+                                name="shipments_number"
+                                attrs="{'invisible':[('is_unlimited','=',True)], 'required':[('is_unlimited','=',False)]}"
+                            />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="shipments" string="Shipments" attrs="{'invisible':[('is_unlimited','=',True)]}">
+                            <group>
+                                <field name="line_ids" nolabel="1">
+                                    <tree editable="1">
+                                        <field name="shipment_type_id" invisible="1" />
+                                        <field name="number_from" />
+                                        <field name="number_to" />
+                                        <field name="shipments_number" />
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="clearance_type_lcl_action" model="ir.actions.act_window">
+        <field name="name">Shipment Types LCL</field>
+        <field name="res_model">clearance.shipment.type.lcl</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem
+        id="clearance_type_lcl_menu"
+        name="Shipment Types LCL"
+        action="clearance_type_lcl_action"
+        parent="clearance_configuration_menu"
+        sequence="10"
+    />
+    <record id="clearance_request_shipment_route_view_search" model="ir.ui.view">
+        <field name="name">clearance.shipment.type.size.view.search</field>
+        <field name="model">clearance.shipment.type.size</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]" />
+            </search>
+        </field>
+    </record>
+    <record id="clearance_request_shipment_route_view_tree" model="ir.ui.view">
+        <field name="name">clearance.request.shipment.route.view.tree</field>
+        <field name="model">clearance.request.shipment.route</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" invisible="0" groups="base.group_system" />
+                <field name="shipment_from" />
+                <field name="shipment_to" />
+                <field name="transport_type" />
+                <field name="container_transport" />
+                <field name="parcel_transport" />
+                <field name="minimum_amount" />
+                <field name="product_id" />
+                <field name="currency_id" />
+                <field name="company_id" groups="base.group_multi_company" />
+                <field name="active" invisible="1" />
+            </tree>
+        </field>
+    </record>
+    <record id="clearance_request_shipment_route_view_form" model="ir.ui.view">
+        <field name="name">clearance.request.shipment.route.view.form</field>
+        <field name="model">clearance.request.shipment.route</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="active" invisible="1" />
+                            <field name="name" invisible="0" groups="base.group_system" required="1" />
+                            <field name="shipment_from" />
+                            <field name="shipment_to" />
+                            <field name="transport_type" required="1" />
+                            <field
+                                name="company_id"
+                                groups="base.group_multi_company"
+                                options="{'no_create': True,'no_open': True}"
+                                required="0"
+                            />
+                        </group>
+                        <group>
+                            <field name="container_transport" required="1" />
+                            <field name="parcel_transport" required="1" />
+                            <field name="minimum_amount" required="1" />
+                            <field name="product_id" required="True" options="{'no_create': True,'no_open': True}" />
+                            <field name="currency_id" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="amounts_period" string="Amounts by Dates">
+                            <group>
+                                <field name="line_ids" nolabel="1" context="{'default_currency_id': currency_id}">
+                                    <tree editable="1">
+                                        <field name="route_id" invisible="1" />
+                                        <field name="date_from" />
+                                        <field name="date_to" />
+                                        <field name="container_transport" required="1" />
+                                        <field name="parcel_transport" required="1" />
+                                        <field name="minimum_amount" required="1" />
+                                        <field name="currency_id" invisible="1" />
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                        <page name="amounts_period" string="Prices by Dates">
+                            <group>
+                                <field name="line_price_ids" nolabel="1" context="{'default_currency_id': currency_id}">
+                                    <tree editable="1">
+                                        <field name="route_id" invisible="1" />
+                                        <field name="date_from" />
+                                        <field name="date_to" />
+                                        <field name="amount" required="1" />
+                                        <field name="currency_id" invisible="1" />
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="clearance_request_shipment_route_action" model="ir.actions.act_window">
+        <field name="name">Routes</field>
+        <field name="res_model">clearance.request.shipment.route</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem
+        id="clearance_request_shipment_route_menu"
+        name="Routes"
+        action="clearance_request_shipment_route_action"
+        parent="clearance_configuration_menu"
+        sequence="10"
+    />
+    <!-- Goods definition-->
+    <record id="goods_definition_view_tree" model="ir.ui.view">
+        <field name="name">goods.definition.view.tree</field>
+        <field name="model">goods.definition</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="fee_category" />
+                <field name="arabic_description" />
+            </tree>
+        </field>
+    </record>
+    <record id="goods_definition_view_form" model="ir.ui.view">
+        <field name="name">goods.definition.view.form</field>
+        <field name="model">goods.definition</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="fee_category" required="1" />
+                        <field name="active" invisible="1" />
+                    </group>
+                    <notebook>
+                        <page name="arabic_description" string="Arabic Description">
+                            <group>
+                                <field name="arabic_description" nolabel="1" />
+                            </group>
+                        </page>
+                        <page name="english_description" string="English Description">
+                            <group>
+                                <field name="english_description" nolabel="1" />
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="goods_definition_action" model="ir.actions.act_window">
+        <field name="name">Goods definition</field>
+        <field name="res_model">goods.definition</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem
+        id="goods_definition_menu"
+        name="Goods definition"
+        action="goods_definition_action"
+        parent="clearance_configuration_menu"
+        sequence="15"
+    />
+    <record id="fees_type_view_search" model="ir.ui.view">
+        <field name="name">fees.type.view.search</field>
+        <field name="model">fees.type</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]" />
+            </search>
+        </field>
+    </record>
+    <record id="fees_type_view_tree" model="ir.ui.view">
+        <field name="name">fees.type.view.tree</field>
+        <field name="model">fees.type</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="name" />
+                <field name="supplier_id" />
+                <field name="is_default" />
+                <field name="active" invisible="1" />
+            </tree>
+        </field>
+    </record>
+    <record id="fees_type_action" model="ir.actions.act_window">
+        <field name="name">Fees Types</field>
+        <field name="res_model">fees.type</field>
+        <field name="view_mode">tree</field>
+    </record>
+    <menuitem
+        id="fees_type_menu"
+        name="Fees Types"
+        action="fees_type_action"
+        parent="clearance_configuration_menu"
+        sequence="15"
+    />
+    <record id="container_category_view_search" model="ir.ui.view">
+        <field name="name">container.category.view.search</field>
+        <field name="model">container.category</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]" />
+            </search>
+        </field>
+    </record>
+    <record id="container_category_view_tree" model="ir.ui.view">
+        <field name="name">container.category.view.tree</field>
+        <field name="model">container.category</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="name" />
+                <field name="is_default_value" />
+                <field name="active" invisible="1" />
+            </tree>
+        </field>
+    </record>
+    <record id="container_category_action" model="ir.actions.act_window">
+        <field name="name">Containers categories</field>
+        <field name="res_model">container.category</field>
+        <field name="view_mode">tree</field>
+    </record>
+    <menuitem
+        id="container_category_menu"
+        name="Containers categories"
+        action="container_category_action"
+        parent="clearance_configuration_menu"
+        sequence="20"
+    />
+    <record id="clearance_request_other_view_tree" model="ir.ui.view">
+        <field name="name">clearance.request.other.view.tree</field>
+        <field name="model">clearance.request.other</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="name" />
+                <field name="active" invisible="1" />
+            </tree>
+        </field>
+    </record>
+    <record id="clearance_request_other_action" model="ir.actions.act_window">
+        <field name="name">Other Attachments</field>
+        <field name="res_model">clearance.request.other</field>
+        <field name="view_mode">tree</field>
+    </record>
+    <menuitem
+        id="clearance_request_other_menu"
+        name="Other Attachments"
+        action="clearance_request_other_action"
+        parent="clearance_configuration_menu"
+        sequence="25"
+    />
+    <!-- Products Invoice Setting -->
+    <record id="clearance_product_invoice_setting_view_search" model="ir.ui.view">
+        <field name="name">clearance.product.invoice.setting.view.search</field>
+        <field name="model">clearance.product.invoice.setting</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]" />
+            </search>
+        </field>
+    </record>
+    <record id="clearance_product_invoice_setting_view_tree" model="ir.ui.view">
+        <field name="name">clearance.product.invoice.setting.view.tree</field>
+        <field name="model">clearance.product.invoice.setting</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="company_id" groups="base.group_multi_company" />
+            </tree>
+        </field>
+    </record>
+    <record id="clearance_product_invoice_setting_view_form" model="ir.ui.view">
+        <field name="name">clearance.product.invoice.setting.view.form</field>
+        <field name="model">clearance.product.invoice.setting</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="active" invisible="1" />
+                            <field
+                                name="company_id"
+                                groups="base.group_multi_company"
+                                options="{'no_create': True,'no_open': True}"
+                            />
+                        </group>
+                        <group>
+                            <field name="clearance_product_id" />
+                            <field name="transport_product_id" />
+                            <field name="warehousing_product_id" />
+                            <field name="services_ids" widget="many2many_tags" />
+                            <field name="appointment_product_id" required="1" />
+                        </group>
+                    </group>
+                    <group col="4" string="Customer Free Warehousing Days">
+                        <field name="line_ids" nolabel="1">
+                            <tree editable="1">
+                                <field name="setting_id" invisible="1" />
+                                <field name="partner_ids" options="{'no_create': True}" widget="many2many_tags" />
+                                <field name="free_warehousing_days" />
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="clearance_product_invoice_setting_action" model="ir.actions.act_window">
+        <field name="name">Products Invoices Customer Setting</field>
+        <field name="res_model">clearance.product.invoice.setting</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem
+        id="clearance_product_invoice_setting_menu"
+        name="Products Invoices Customer Setting"
+        action="clearance_product_invoice_setting_action"
+        parent="clearance_configuration_menu"
+        sequence="20"
+    />
+</odoo>

@@ -1,0 +1,4 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+emp_housing_admin_buildings,Manage Buildings,model_housing_building,employee_housing.group_emp_housing_admin,1,1,1,1
+emp_housing_admin_units,Manage Units,model_housing_unit,employee_housing.group_emp_housing_admin,1,1,1,1
+emp_housing_admin_unit_types,Manage Unit Types,model_housing_unit_type,employee_housing.group_emp_housing_admin,1,1,1,1

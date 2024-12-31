@@ -1,0 +1,56 @@
+<odoo>
+    <record id="view_hotel_verification_wizard" model="ir.ui.view">
+        <field name="name">hotel.verification.wizard.report</field>
+        <field name="model">hotel.verification.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group col="4">
+                    <field name="date_from" required="1" />
+                    <field name="date_to" required="1" />
+                </group>
+                <footer>
+                    <button
+                        name="print_report"
+                        string="Print report"
+                        icon="fa-print"
+                        type="object"
+                        class="oe_highlight"
+                    />
+                    <button string="Cancel" icon="fa-close" class="btn btn-primary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="hotel_field_inspection_action" model="ir.actions.act_window">
+        <field name="name">Field Inspection Report</field>
+        <field name="res_model">hotel.verification.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{'default_type':'day'}</field>
+    </record>
+
+    <menuitem
+        name="Field Inspection"
+        action="hotel_field_inspection_action"
+        id="wizard_field_inspection_menu"
+        parent="hotel_report_menu"
+        sequence="35"
+    />
+    <record id="hotel_night_inspection_action" model="ir.actions.act_window">
+        <field name="name">Night Inspection Report</field>
+        <field name="res_model">hotel.verification.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{'default_type':'night'}</field>
+    </record>
+
+    <menuitem
+        name="Night Inspection"
+        action="hotel_night_inspection_action"
+        id="wizard_night_inspection_menu"
+        parent="hotel_report_menu"
+        sequence="36"
+    />
+
+</odoo>

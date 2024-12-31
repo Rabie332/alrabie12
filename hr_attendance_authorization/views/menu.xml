@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <menuitem
+        id="hr_attendance_authorization_menu_root"
+        name="Authorizations"
+        parent="hr_attendance.menu_hr_attendance_root"
+        sequence="50"
+    />
+
+
+    <menuitem
+        id="hr_attendance_authorization_configuration_menu"
+        name="Configuration"
+        groups="hr_authorization.group_hr_authorization_manager"
+        parent="hr_attendance_authorization_menu_root"
+        sequence="100"
+    />
+
+    <menuitem
+        id="hr_authorization_type_menu"
+        parent="hr_attendance_authorization_configuration_menu"
+        sequence="50"
+        action="hr_authorization.hr_authorization_type_action"
+    />
+
+
+    <menuitem
+        id="attendance_authorization_my_request_menu"
+        name="My authorizations"
+        parent="hr_attendance_authorization_menu_root"
+        action="hr_authorization.hr_authorization_action_my"
+        sequence="2"
+    />
+    <menuitem
+        id="attendance_authorization_request_menu"
+        name="Authorizations"
+        parent="hr_attendance_authorization_menu_root"
+        action="hr_authorization.hr_authorization_action_all"
+        sequence="29"
+    />
+     <menuitem
+        id="hr_authorization_stage_menu"
+        action="hr_authorization.hr_authorization_stage_action"
+        groups="request.group_stages_manager"
+        name="Authorization Stages"
+        parent="hr_attendance_authorization_configuration_menu"
+    />
+
+    <menuitem
+        id="hr_authorization_resume_wizard_menu_attendance"
+        parent="hr_attendance_summary.hr_attendance_report_menu_root"
+        name="Authorization Resume Report"
+        action="hr_authorization.hr_authorization_resume_wizard_action"
+        sequence="26"
+    />
+
+</odoo>

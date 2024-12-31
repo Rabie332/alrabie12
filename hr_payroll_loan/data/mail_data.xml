@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+     <!-- Request-related subtypes for messaging / Chatter -->
+
+    <record id="mt_hr_loan_approved" model="mail.message.subtype">
+        <field name="name">Approved</field>
+        <field name="res_model">hr.loan</field>
+        <field name="description">Request approved</field>
+    </record>
+
+    <record id="mt_hr_loan_refused" model="mail.message.subtype">
+        <field name="name">Refused</field>
+        <field name="res_model">hr.loan</field>
+        <field name="default" eval="False" />
+        <field name="description">Request refused</field>
+    </record>
+
+    <!-- Request specific activities -->
+
+    <record id="mail_hr_loan_approval" model="mail.activity.type">
+        <field name="name">Request Approval</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="category">validation</field>
+        <field name="res_model_id" ref="hr_payroll_loan.model_hr_loan" />
+    </record>
+
+     <!-- Set to draft activities -->
+
+    <record id="mail_hr_loan_set_to_draft" model="mail.activity.type">
+        <field name="name">Edit request</field>
+        <field name="icon">fa-sun-o</field>
+         <field name="category">validation</field>
+        <field name="res_model_id" ref="hr_payroll_loan.model_hr_loan" />
+    </record>
+</odoo>

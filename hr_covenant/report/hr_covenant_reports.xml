@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+ <record id="paperformat_hr_covenant_report" model="report.paperformat">
+        <field name="name">Hr Covenant Resume</field>
+         <field name="default" eval="True" />
+            <field name="format">custom</field>
+            <field name="page_height">297</field>
+            <field name="page_width">210</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">3</field>
+            <field name="margin_bottom">3</field>
+            <field name="margin_left">3</field>
+            <field name="margin_right">3</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">3</field>
+            <field name="dpi">90</field>
+    </record>
+
+    <record id="hr_covenant_resume_report_action" model="ir.actions.report">
+        <field name="name">Hr Covenant Resume</field>
+        <field name="model">hr.covenant.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hr_covenant.report_covenant_resume</field>
+        <field name="report_file">hr_covenant.report_covenant_resume</field>
+        <field name="print_report_name">'Hr Covenant Resume'</field>
+        <field name="paperformat_id" ref="paperformat_hr_covenant_report" />
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="hr_covenant_resume_report_xlsx_action" model="ir.actions.report">
+        <field name="name">Hr Covenant Resume Excel</field>
+         <field name="report_type">xlsx</field>
+        <field name="model">report.hr_covenant.report_hr_covenant_resume_xlsx</field>
+        <field name="report_name">hr_covenant.report_hr_covenant_resume_xlsx</field>
+        <field name="report_file">Hr Covenant Resume</field>
+    </record>
+
+
+
+</odoo>

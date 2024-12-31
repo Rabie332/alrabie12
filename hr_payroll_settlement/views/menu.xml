@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+ <!-- Settlement Menu Roots -->
+
+    <menuitem
+        id="hr_settlement_menu_root"
+        name="Settlements"
+        parent="hr_payroll.menu_hr_payroll_root"
+        groups="group_hr_payroll_settlement_manager"
+    />
+</odoo>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="hotel_lost_found_view_search" model="ir.ui.view">
+        <field name="name">hotel.lost.found.view.search</field>
+        <field name="model">hotel.lost.found</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="delivery_date" />
+                <field name="room_id" />
+                <field name="partner_id" />
+                <field name="found_date" />
+                <filter name="active" string="Archived" domain="[('active', '=', False)]" />
+                <filter name="company" string="Hotel" context="{'group_by': 'company_id'}" />
+                <filter
+                    name="day"
+                    string="Today"
+                    domain="[('found_date', '&gt;=', context_today().strftime('%Y-%m-%d 00:00:00'))]"
+                />
+                <filter
+                    name="week"
+                    string="Last week"
+                    domain="[
+                            '&amp;',
+                            ('found_date', '&gt;=', (context_today()-relativedelta(days=7)).strftime('%Y-%m-%d')),
+                            ('found_date', '&lt;=', context_today().strftime('%Y-%m-%d')),
+                        ]"
+                />
+                <filter
+                    name="month"
+                    string="Last month"
+                    domain="[
+                            '&amp;',
+                            ('found_date', '&gt;=', (context_today()-relativedelta(months=1)).strftime('%Y-%m-%d')),
+                            ('found_date', '&lt;=', context_today().strftime('%Y-%m-%d')),
+                        ]"
+                />
+                <filter
+                    name="year"
+                    string="Last year"
+                    domain="[
+                            '&amp;',
+                            ('found_date', '&gt;=', (context_today()-relativedelta(years=1)).strftime('%Y-%m-%d')),
+                            ('found_date', '&lt;=', context_today().strftime('%Y-%m-%d')),
+                         ]"
+                />
+            </search>
+        </field>
+    </record>
+
+    <record id="hotel_lost_found_view_tree" model="ir.ui.view">
+        <field name="name">hotel.lost.found.view.tree</field>
+        <field name="model">hotel.lost.found</field>
+        <field name="arch" type="xml">
+            <tree
+                decoration-success="delivered==True"
+                decoration-warning="type=='lost' and delivered==False"
+                decoration-info="type=='found' and delivered==False"
+            >
+                <field name="name" />
+                <field name="room_id" />
+                <field name="type" invisible="1" />
+                <field name="founder" />
+                <field name="found_date" />
+                <field name="description" />
+                <field name="partner_id" />
+                <field name="delivered" />
+                <field name="delivery_date" />
+                <field name="company_id" groups="base.group_multi_company" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="hotel_lost_found_view_form" model="ir.ui.view">
+        <field name="name">hotel.lost.found.view.form</field>
+        <field name="model">hotel.lost.found</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" force_save="1" attrs="{'invisible' : [('name','=',False)]}" />
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field
+                                name="partner_id"
+                                attrs="{'required' : ['|',('type','=','lost'),('delivered','=',True)]}"
+                                options="{'no_create':True}"
+                            />
+                            <field name="room_id" options="{'no_create':True}" />
+                            <field name="create_date" attrs="{'invisible' : [('create_date','=',False)]}" />
+                            <field name="delivered" />
+                            <field
+                                name="company_id"
+                                required="1"
+                                options="{'no_create':True,'no_open':True}"
+                                groups="base.group_multi_company"
+                            />
+                            <field name="type" invisible="1" />
+                        </group>
+                        <group>
+                            <field name="description" />
+                            <field name="founder" attrs="{'required' : [('type','=','found')]}" />
+                            <field name="found_date" attrs="{'required' : [('type','=','found')]}" />
+                            <field
+                                name="delivery_date"
+                                attrs="{'invisible' : [('delivered','=',False)],'required' : [('delivered','=',True)]}"
+                            />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="found_stuff_action" model="ir.actions.act_window">
+        <field name="name">The found stuff</field>
+        <field name="res_model">hotel.lost.found</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('type','=','found')]</field>
+        <field name="context">{'default_type': 'found'}</field>
+    </record>
+
+    <menuitem
+        id="found_stuff_menu"
+        name="Found stuff"
+        parent="menu_hotel_room"
+        action="found_stuff_action"
+        sequence="6"
+    />
+
+    <record id="lost_stuff_action" model="ir.actions.act_window">
+        <field name="name">The Lost stuff</field>
+        <field name="res_model">hotel.lost.found</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('type','=','lost')]</field>
+        <field name="context">{'default_type': 'lost'}</field>
+    </record>
+
+    <menuitem id="lost_stuff_menu" name="Lost stuff" parent="menu_hotel_room" action="lost_stuff_action" sequence="7" />
+
+</odoo>

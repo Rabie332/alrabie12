@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+     <record id="sale_order_form_inherit_partner_credit_limit" model="ir.ui.view">
+            <field name="name">sale.order.view.form.inherit.credit.limit</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form" />
+            <field name="arch" type="xml">
+                <field name="partner_shipping_id" position="after">
+                    <field name="show_credit_limit" invisible="1" />
+                    <field
+                    name="credit_insurance_amount"
+                    attrs="{'invisible': [('show_credit_limit', '=', False)]}"
+                    readonly="1"
+                    force_save="1"
+                />
+                    <field
+                    name="total_open_invoices"
+                    attrs="{'invisible': [('show_credit_limit', '=', False)]}"
+                    decoration-danger="total_open_invoices > credit_insurance_amount"
+                    readonly="1"
+                    force_save="1"
+                />
+                </field>
+            </field>
+       </record>
+
+</odoo>

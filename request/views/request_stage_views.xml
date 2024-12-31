@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+       <record id="request_stage_search_view" model="ir.ui.view">
+            <field name="name">request.stage.search</field>
+            <field name="model">request.stage</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name" />
+                    <filter
+                    string="Archived"
+                    name="inactive"
+                    domain="[('active', '=', False)]"
+                />
+                </search>
+            </field>
+        </record>
+
+        <record id="request_stage_from_view" model="ir.ui.view">
+            <field name="name">request.stage.form</field>
+            <field name="model">request.stage</field>
+            <field name="arch" type="xml">
+                <form string="Request Stage">
+                    <sheet>
+                        <widget
+                        name="web_ribbon"
+                        title="Archived"
+                        bg_color="bg-danger"
+                        attrs="{'invisible': [('active', '=', True)]}"
+                    />
+                        <field name="active" invisible="1" />
+
+
+                        <group>
+                            <group>
+
+                                <field name="name" />
+                                <field name="name_dept"/>
+                                <field
+                                name="move_next_stage"
+                                attrs="{'invisible': [('state', '!=', 'in_progress')]}"
+                            />
+                            <label
+                                for="days_number"
+                                string="The number of waiting days"
+                                attrs="{'invisible': ['|',('move_next_stage', '=', False),('state', '!=', 'in_progress')]}"
+                            />
+
+                            <div
+                                attrs="{'invisible': ['|',('move_next_stage', '=', False),('state', '!=', 'in_progress')]}"
+                            >
+                                <field name="days_number" class="oe_inline" />
+                                <span class="ml8">Days</span>
+                            </div>
+                                <field name="res_model_id" invisible="1" />
+                                <field name="res_model" invisible="1" />
+                                <field name="mail_template_id" invisible="1" />
+                            </group>
+                            <group>
+                                <field name="fold" />
+                                <field
+                                name="request_type_ids"
+                                options="{'no_create': True, 'no_edit': True}"
+                                widget="many2many_tags"
+                                domain="[('res_model', '=', res_model)]"
+                            />
+                                <field name="sequence" />
+                                <field name="state" required="1" />
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Validate">
+
+                            <group>
+                                 <field name="assign_type" widget="radio" />
+                                <field
+                                    name="default_role_ids"
+                                    widget="many2many_tags"
+                                    options="{'no_create': True, 'no_edit': True}"
+                                    attrs="{'invisible':[('assign_type', '!=', 'role')], 'required':[('state', 'not in',['new','done','cancel']),('assign_type', '=', 'role')]}"
+                                />
+                                <field
+                                    name="default_user_id"
+                                    options="{'no_create': True, 'no_edit': True}"
+                                    attrs="{'required':[('state', 'not in',['draft','done','cancel']),('assign_type', '=', 'user')],'invisible':[('assign_type', '!=', 'user')]}"
+                                />
+                                <field
+                                    name="code"
+                                    widget="ace"
+                                    attrs="{'required':[('state', 'not in',['draft','done','cancel']),('assign_type', '=', 'python')], 'invisible':[('assign_type', '!=', 'python')]}"
+                                />
+                            </group>
+                        </page>
+                        <page string="Stage Description">
+                            <field
+                                name="description"
+                                placeholder="Add a description..."
+                                nolabel="1"
+                                colspan="2"
+                            />
+                        </page>
+                           </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- <record id="request_stage_tree_view" model="ir.ui.view">
+            <field name="name">request.stage.tree</field>
+            <field name="model">request.stage</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="sequence" widget="handle" />
+                    <field name="name" />
+                    <field name="fold" />
+                    <field name="description" />
+                </tree>
+            </field>
+        </record> -->
+
+        <record id="request_stage_view_kanban" model="ir.ui.view">
+            <field name="name">request.stage.kanban</field>
+            <field name="model">request.stage</field>
+            <field name="arch" type="xml">
+                <kanban class="o_kanban_mobile">
+                    <field name="name" />
+                    <field name="fold" />
+                    <field name="description" />
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_global_click">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <strong><t t-esc="record.name.value" /></strong>
+                                    </div>
+                                </div>
+                                <t t-if="record.description.value">
+                                    <hr class="mt8 mb8" />
+                                    <t t-esc="record.description.value" />
+                                </t>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+</odoo>

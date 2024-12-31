@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Share document with other users. -->
+    <record id="ir_attachment_share_view_form" model="ir.ui.view">
+        <field name="name">ir.attachment.share.form</field>
+        <field name="model">ir.attachment.share</field>
+        <field name="arch" type="xml">
+            <form string="Share with employees">
+                <sheet>
+                    <group>
+                        <field name="shared_user_ids" widget="many2many_tags" />
+                    </group>
+                </sheet>
+                <footer>
+                    <button
+                        name="action_share"
+                        string="Share with other employees"
+                        type="object"
+                        icon="fa-floppy-o"
+                        class="oe_inline"
+                    />
+                    <button string="Cancel" class="oe_link" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="ir_attachment_share_action" model="ir.actions.act_window">
+        <field name="name">Share with other employees</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ir.attachment.share</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="ir_attachment_share_view_form" />
+        <field name="target">new</field>
+    </record>
+
+</odoo>

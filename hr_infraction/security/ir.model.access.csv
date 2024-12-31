@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+,,,,,,,
+access_hr_infraction_user,name_hr_infraction_user,model_hr_infraction,hr.group_hr_user,1,1,1,0
+access_hr_infraction_manager,name_hr_infraction_manager,model_hr_infraction,hr_infraction_group_manager,1,1,1,0
+access_hr_infraction_type_user,name_hr_infraction_type_user,model_request_type,hr.group_hr_user,1,0,0,0
+access_hr_infraction_type_manager,name_hr_infraction_type_manager,model_request_type,hr_infraction_group_manager,1,1,1,0

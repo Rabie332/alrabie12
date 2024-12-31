@@ -1,0 +1,131 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_vat_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-10 03:12+0000\n"
+"PO-Revision-Date: 2022-10-10 03:12+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_vat_report
+#: model_terms:ir.ui.view,arch_db:pos_vat_report.pos_vat_report
+msgid "<strong>Point of sale VAT report</strong>"
+msgstr "<strong>تقرير ضريبة القيمة المضافة في نقاط البيع</strong>"
+
+#. module: pos_vat_report
+#: model_terms:ir.ui.view,arch_db:pos_vat_report.pos_vat_report
+msgid "Bill number"
+msgstr "رقم الفاتوره"
+
+#. module: pos_vat_report
+#: model:ir.model.fields,field_description:pos_vat_report.field_pos_vat_report_wizard__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: pos_vat_report
+#: model:ir.model.fields,field_description:pos_vat_report.field_pos_vat_report_wizard__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: pos_vat_report
+#: model_terms:ir.ui.view,arch_db:pos_vat_report.pos_vat_report
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: pos_vat_report
+#: model:ir.model.fields,field_description:pos_vat_report.field_pos_vat_report_wizard__date_from
+msgid "Date from"
+msgstr "التاريخ من"
+
+#. module: pos_vat_report
+#: model_terms:ir.ui.view,arch_db:pos_vat_report.pos_vat_report
+msgid "Date from:"
+msgstr "التاريخ من:"
+
+#. module: pos_vat_report
+#: model:ir.model.fields,field_description:pos_vat_report.field_pos_vat_report_wizard__date_to
+msgid "Date to"
+msgstr "التاريخ إلى"
+
+#. module: pos_vat_report
+#: model_terms:ir.ui.view,arch_db:pos_vat_report.pos_vat_report
+msgid "Date to:"
+msgstr "التاريخ إلى:"
+
+#. module: pos_vat_report
+#: model:ir.model.fields,field_description:pos_vat_report.field_pos_vat_report_wizard__display_name
+#: model:ir.model.fields,field_description:pos_vat_report.field_report_pos_vat_report_pos_vat_report__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: pos_vat_report
+#: model:ir.model.fields,field_description:pos_vat_report.field_pos_vat_report_wizard__id
+#: model:ir.model.fields,field_description:pos_vat_report.field_report_pos_vat_report_pos_vat_report__id
+msgid "ID"
+msgstr ""
+
+#. module: pos_vat_report
+#: model:ir.model.fields,field_description:pos_vat_report.field_pos_vat_report_wizard____last_update
+#: model:ir.model.fields,field_description:pos_vat_report.field_report_pos_vat_report_pos_vat_report____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: pos_vat_report
+#: model:ir.model.fields,field_description:pos_vat_report.field_pos_vat_report_wizard__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: pos_vat_report
+#: model:ir.model.fields,field_description:pos_vat_report.field_pos_vat_report_wizard__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: pos_vat_report
+#: model:ir.actions.report,name:pos_vat_report.action_pos_vat_report
+#: model:ir.model,name:pos_vat_report.model_report_pos_vat_report_pos_vat_report
+msgid "POS VAT Report"
+msgstr "تقرير ضريبة القيمة المضافة في نقاط البيع"
+
+#. module: pos_vat_report
+#: model:ir.model,name:pos_vat_report.model_pos_vat_report_wizard
+msgid "POS vat report"
+msgstr "تقرير ضريبة القيمة المضافة في نقاط البيع"
+
+#. module: pos_vat_report
+#: model_terms:ir.ui.view,arch_db:pos_vat_report.pos_vat_report
+msgid "Point of Sale:"
+msgstr "نقطة البيع:"
+
+#. module: pos_vat_report
+#: model:ir.model.fields,field_description:pos_vat_report.field_pos_vat_report_wizard__pos_id
+msgid "Point of sale"
+msgstr "نقطة البيع"
+
+#. module: pos_vat_report
+#: model_terms:ir.ui.view,arch_db:pos_vat_report.pos_vat_report_wizard_form
+msgid "Print report"
+msgstr "طباعة التقرير"
+
+#. module: pos_vat_report
+#: model_terms:ir.ui.view,arch_db:pos_vat_report.pos_vat_report
+msgid "Tax amount"
+msgstr " قيمة الضريبة"
+
+#. module: pos_vat_report
+#: model_terms:ir.ui.view,arch_db:pos_vat_report.pos_vat_report
+msgid "Taxable amount"
+msgstr "المبلغ الخاضع للضريبة"
+
+#. module: pos_vat_report
+#: model:ir.actions.act_window,name:pos_vat_report.pos_vat_report_wizard_action
+#: model:ir.ui.menu,name:pos_vat_report.pos_vat_report_wizard_menu
+msgid "Vat report"
+msgstr "تقرير ضريبة القيمة المضافة"

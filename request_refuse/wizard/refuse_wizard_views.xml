@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Refuse Wizard -->
+
+    <record id="refuse_wizard_view_form" model="ir.ui.view">
+        <field name="name">refuse.wizard.form</field>
+        <field name="model">refuse.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Explanation">
+                <field name="message" required="1" />
+                <footer>
+                    <button
+                        name="button_refuse"
+                        string="Save"
+                        type="object"
+                        icon="fa-floppy-o"
+                        class="oe_inline "
+                    />
+                    or
+                    <button string="Refuse" class="oe_link" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_refuse_wizard" model="ir.actions.act_window">
+        <field name="name">Explanation</field>
+        <field name="res_model">refuse.wizard</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="refuse_wizard_view_form" />
+        <field name="target">new</field>
+    </record>
+
+</odoo>

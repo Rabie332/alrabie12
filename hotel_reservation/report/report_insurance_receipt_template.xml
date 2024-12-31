@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_insurance_receipt_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <div class="header"/>
+                <div class="footer"/>
+                <t t-call="web.external_layout">
+                    <div class="page" style="font-size:11px;">
+                        <div class="oe_structure"/>
+                        <!-- Header -->
+                        <table class="table table-bordered" style="padding: 10px; width: 100%; border: 1pt solid black; border-collapse: separate; border-radius: 8pt;">
+                            <tr>
+                                <td width="10%" valign="middle" align="left"/>
+                                <td valign="middle" align="center" width="70%">
+                                    <address 
+                                        style="font-size:13px;" 
+                                        t-field="o.company_id.partner_id" 
+                                        t-options='{"widget": "contact", "fields": ["name", "address", "phone"], "no_marker": True}'/>
+                                </td>
+                                <td valign="middle" align="center" width="10%">
+                                    <img 
+                                        t-if="o.company_id.logo" 
+                                        t-att-src="image_data_uri(o.company_id.logo)"
+                                        alt="Company Logo" 
+                                        style="padding:5%; width:120px;"/>
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- Insurance Date and Reservation Info -->
+                        <table class="table table-bordered" style="padding: 10px; width: 100%; height:30pt; margin-top: 20px;">
+                            <tr>
+                                <td width="30%">
+                                    <strong style="margin:5%;">التاريخ:</strong>
+                                    <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')" style="margin:5%;"/>
+                                    <br/>
+                                    <strong style="margin:5%;">الموافق الى:</strong>
+                                    <span t-esc="o.get_hijri_date(context_timestamp(datetime.datetime.now()), '/')"/>
+                                </td>
+                                <td width="40%" style="text-align:center;">
+                                    <strong style="font-size:13px;">سند قبض التأمين</strong>
+                                </td>
+                                <td width="30%">
+                                    <strong style="margin:5%;">رقم الحجز:</strong>
+                                    <span t-field="o.reservation_no" />
+                                    <br/>
+                                    <strong style="margin:5%;">رقم الايصال:</strong>
+                                    <span t-field="o.folio_id.name" />
+                                    <br/>
+                                    <strong style="margin:5%;">الرقم الضريبي:</strong>
+                                    <span t-field="o.company_id.vat" />
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- Customer Info -->
+                        <table class="table table-bordered" style="padding: 10px; width: 97%; border: 1pt solid black; border-collapse: separate; border-radius: 8pt; margin: 10px;">
+                            <tr>
+                                <td colspan="4" style="font-size: 13px;">
+                                    <strong style="margin: 2%;">معلومات الضيف: </strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%">
+                                    <strong style="margin: 7%;">اسم الضيف:</strong>
+                                    <br/>
+                                    <strong style="margin: 7%;">نوع التعريف:</strong>
+                                    <br/>
+                                    <strong style="margin: 7%;">رقم الهاتف:</strong>
+                                    <br/>
+                                </td>
+                                <td width="30%">
+                                    <span t-field="o.partner_id.name"/>
+                                    <br/>
+                                    <t t-if="o.partner_id.identification_id">
+                                        <span>الهوية الوطنية</span>
+                                    </t>
+                                    <t t-elif="o.partner_id.passport_id">
+                                        <span>جواز السفر</span>
+                                    </t>
+                                    <t t-elif="o.partner_id.residence_number">
+                                        <span>الاقامة</span>
+                                    </t>
+                                    <t t-elif="o.partner_id.company_type =='company'">
+                                        <span>الرقم الضريبي</span>
+                                    </t>
+                                    <t t-else="">
+                                        <br/>
+                                    </t>
+                                    <br/>
+                                    <span t-field="o.partner_id.mobile"/>
+                                    <br/>
+                                </td>
+                                <td width="20%">
+                                    <strong style="margin: 7%;">الجنسية:</strong>
+                                    <br/>
+                                    <strong style="margin: 7%;">رقم الهوية:</strong>
+                                    <br/>
+                                </td>
+                                <td width="30%">
+                                    <span t-field="o.partner_id.country_id.name"/>
+                                    <br/>
+                                    <t t-if="o.partner_id.identification_id">
+                                        <span t-field="o.partner_id.identification_id"/>
+                                    </t>
+                                    <t t-elif="o.partner_id.passport_id">
+                                        <span t-field="o.partner_id.passport_id"/>
+                                    </t>
+                                    <t t-elif="o.partner_id.residence_number">
+                                        <span t-field="o.partner_id.residence_number"/>
+                                    </t>
+                                    <t t-elif="o.partner_id.company_type =='company'">
+                                        <span t-field="o.partner_id.vat"/>
+                                    </t>
+                                    <t t-else="">
+                                    </t>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="table table-bordered" 
+                               style="width: 97%; border: 1pt solid black; border-collapse: separate; border-radius: 8pt; margin: 10px;">
+                            <tr>
+                                <td colspan="2" style="font-size: 13px;">
+                                    <strong style="margin: 2%;">تفاصيل التأمين: </strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong style="margin: 7%;">مبلغ التأمين المدفوع:</strong>
+                                </td>
+                                <td>
+                                    <span t-field="o.total_inbound_insurance"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="font-size: 13px;">
+                                    <strong style="margin: 2%;">معلومات الغرفة: </strong>
+                                </td>
+                            </tr>
+                            <!-- Loop through each reservation line to display room information -->
+                            <tr t-foreach="o.reservation_line" t-as="reservation_line">
+                                <td>
+                                    <strong>الغرفة:</strong>
+                                </td>
+                                <td>
+                                    <span t-esc="reservation_line.room_id.name"/>
+                                </td>
+                            </tr>
+                        </table>
+                        <footer class="footer">
+                            <br/>
+                            <strong>سجل الشركة:</strong>
+                            <span t-field="o.company_id.company_registry"/>
+                        </footer>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

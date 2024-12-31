@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "JF Flat";
+    font-style: normal;
+    font-weight: 700;
+    src: url(/web_ar/static/src/fonts/JF-Flat-medium.ttf) format("truetype");
+}
+
+*:not(.fa) {
+    font-family: "JF Flat", serif;
+}

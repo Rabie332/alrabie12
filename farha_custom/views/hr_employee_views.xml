@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_employee_form_inherit" model="ir.ui.view">
+        <field name="name">hr.employee.form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form" />
+        <field name="arch" type="xml">
+             <field name="identification_id" position="attributes">
+                  <attribute name="required">0</attribute>
+              <attribute
+                    name="attrs"
+                >{'invisible':[('is_saudian','=',False)], 'required':[('is_saudian','=',True)]}</attribute>
+            </field>
+            <field name="address_id" position="before">
+                <field name="guarantor_company" />
+                <field name="is_not_gosi_no" invisible="1" />
+                <field name="is_not_labour_office_no" invisible="1" />
+                <field name="is_not_residence_id" invisible="1" />
+                <field name="is_not_insurance_no" invisible="1" />
+                <field name="is_not_bank_account_id" invisible="1" />
+                <field name="is_saudian" invisible="1" />
+            </field>
+            <field name="job_title" position="after">
+                <span
+                    attrs="{'invisible': [('is_not_gosi_no','=', False)]}"
+                    class="fa fa-users pull-right"
+                    style="color:red;"
+                    role="img"
+                    aria-label="Warning: Employee Gosi Number data must be filled"
+                    title="Warning: Employee Gosi Number data must be filled"
+                />
+                <span
+                    attrs="{'invisible': [('is_not_residence_id','=', False)]}"
+                    class="fa fa-home pull-right"
+                    style="color:red;"
+                    role="img"
+                    aria-label="Warning: Employee Residence data must be filled"
+                    title="Warning: Employee Residence data must be filled"
+                />
+                <span
+                    attrs="{'invisible': [('is_not_insurance_no','=', False)]}"
+                    class="fa fa-stethoscope pull-right"
+                    style="color:red;"
+                    aria-label="Warning: Employee Insurance Number data must be filled"
+                    title="Warning: Employee Insurance Number data must be filled"
+                />
+                <span
+                    attrs="{'invisible': [('is_not_bank_account_id','=', False)]}"
+                    class="fa fa-credit-card-alt pull-right"
+                    style="color:red;"
+                    role="img"
+                    aria-label="Warning: Employee Bank Account data must be filled"
+                    title="Warning: Employee Bank Account data must be filled"
+                />
+                <span
+                    attrs="{'invisible': [('is_not_labour_office_no','=', False)]}"
+                    class="fa fa-university pull-right"
+                    style="color:red;"
+                    role="img"
+                    aria-label="Warning: Employee Labour Office Number data must be filled"
+                    title="Warning: Employee Labour Office Number data must be filled"
+                />
+
+            </field>
+        </field>
+    </record>
+
+</odoo>

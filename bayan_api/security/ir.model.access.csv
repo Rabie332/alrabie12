@@ -1,0 +1,3 @@
+id,name,model_id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+goods_type_user,Base User,goods.type,base.group_user,1,0,0,0
+api_message_user,Base User,api.message.wizard,base.group_user,1,1,1,0

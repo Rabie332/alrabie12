@@ -1,0 +1,804 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_authorization
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-27 15:04+0000\n"
+"PO-Revision-Date: 2022-12-27 15:04+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_authorization
+#: model:ir.actions.report,print_report_name:hr_authorization.action_report_hr_authorization_resume
+msgid "'Hr Authorization Resume'"
+msgstr "'حصر الإستئذنات'"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.report_hr_authorization_resume
+msgid ""
+"<strong>\n"
+"                                    Resume Authorizations\n"
+"                                </strong>\n"
+"                                <br/>\n"
+"                                <br/>"
+msgstr ""
+"                                    حصر الاستئذانات\n"
+"                                </strong>\n"
+"                                <br/>\n"
+"                                <br/>"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.report_authorization
+msgid ""
+"<strong>EXIT AUTHORIZATION\n"
+"                                </strong>"
+msgstr "<strong>إذن بالخروج</strong>"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.report_authorization
+msgid "<strong>Human Resources Coordinator:</strong>"
+msgstr "<strong>منسق الموارد البشرية:</strong>"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.report_hr_authorization_resume
+msgid "<strong>Period:</strong>"
+msgstr "<strong>الفترة:</strong>"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.report_authorization
+msgid "<strong>Signature of the employee :</strong>"
+msgstr "<strong>توقيع الموظف :</strong>"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.report_hr_authorization_resume
+msgid "<strong>Total</strong>"
+msgstr "<strong>المجموع</strong>"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "نشاط استثناء الديكور"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "رمز نوع النشاط"
+
+#. module: hr_authorization
+#: model:mail.message.subtype,name:hr_authorization.mt_hr_authorization_approved
+msgid "Approved"
+msgstr "أعتمد"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.hr_authorization_serach_view
+msgid "Archived"
+msgstr "مؤرشفة"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: hr_authorization
+#: model:ir.actions.report,name:hr_authorization.action_report_authorization
+#: model:ir.model,name:hr_authorization.model_hr_authorization
+#: model:ir.module.category,name:hr_authorization.module_category_hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.hr_authorization_serach_view
+msgid "Authorization"
+msgstr "إستئذان"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.report_hr_authorization_resume
+msgid "Authorization Order Number"
+msgstr "رقم الطلب"
+
+#. module: hr_authorization
+#: model:ir.ui.menu,name:hr_authorization.hr_authorization_resume_wizard_menu
+msgid "Authorization Resume Report"
+msgstr "تقرير حصر الاستئذانات"
+
+#. module: hr_authorization
+#: model:ir.ui.menu,name:hr_authorization.hr_authorization_stage_menu
+msgid "Authorization Stages"
+msgstr "مراحل الإستئذان"
+
+#. module: hr_authorization
+#: model:mail.activity.type,name:hr_authorization.mail_hr_authorization_feedback
+msgid "Authorization is done"
+msgstr "الإستأذان معتمد"
+
+#. module: hr_authorization
+#: model:ir.actions.act_window,name:hr_authorization.hr_authorization_type_action
+#: model:ir.ui.menu,name:hr_authorization.hr_authorization_type_menu
+msgid "Authorization types"
+msgstr "أنواع الإستئذان"
+
+#. module: hr_authorization
+#: model:ir.actions.act_window,name:hr_authorization.hr_authorization_action
+#: model:ir.actions.act_window,name:hr_authorization.hr_authorization_action_all
+#: model:ir.actions.act_window,name:hr_authorization.hr_authorization_action_drive_actions
+#: model:ir.ui.menu,name:hr_authorization.authorization_all_request_menu
+#: model:ir.ui.menu,name:hr_authorization.hr_authorization_menu
+#: model:ir.ui.menu,name:hr_authorization.hr_authorization_menu_drive_actions
+#: model:ir.ui.menu,name:hr_authorization.hr_authorization_menu_root
+msgid "Authorizations"
+msgstr "الإستئذانات"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.hr_authorization_form_view
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__canceled
+msgid "Canceled"
+msgstr "ملغى"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__company_id
+msgid "Company"
+msgstr "المؤسسة"
+
+#. module: hr_authorization
+#: model:ir.ui.menu,name:hr_authorization.hr_authorization_configuration_menu
+msgid "Configuration"
+msgstr "إعدادات"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__create_uid
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization_wizard__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__create_date
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization_wizard__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__current_authorization_hours
+msgid "Current Authorization stock"
+msgstr "الرصيد الحالي"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.hr_authorization_serach_view
+#: model_terms:ir.ui.view,arch_db:hr_authorization.report_hr_authorization_resume
+msgid "Date"
+msgstr "تاريخ الطلب"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.report_authorization
+msgid "Date :"
+msgstr "تاريخ الطلب :"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.hr_authorization_view_kanban
+msgid "Date:"
+msgstr "تاريخ الإستئذان :"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__department_id
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization_wizard__department_id
+#: model_terms:ir.ui.view,arch_db:hr_authorization.report_hr_authorization_resume
+msgid "Department"
+msgstr "القسم"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__description
+#: model_terms:ir.ui.view,arch_db:hr_authorization.report_hr_authorization_resume
+msgid "Description"
+msgstr "الوصف"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__display_button_accept
+msgid "Display Button Accept"
+msgstr "عرض زر قبول"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__display_button_previous
+msgid "Display Button Previous"
+msgstr "عرض زر سابق"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__display_button_refuse
+msgid "Display Button Refuse"
+msgstr "عرض زر رفض"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__display_button_send
+msgid "Display Button Send"
+msgstr "عرض زر الإرسال"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__display_name
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization_wizard__display_name
+#: model:ir.model.fields,field_description:hr_authorization.field_report_hr_authorization_report_hr_authorization_resume__display_name
+#: model:ir.model.fields,field_description:hr_authorization.field_request_type__display_name
+msgid "Display Name"
+msgstr "الإسم"
+
+#. module: hr_authorization
+#: model:request.stage,name:hr_authorization.hr_authorization_stage_done
+msgid "Done"
+msgstr "اعتمد"
+
+#. module: hr_authorization
+#: model:request.stage,name:hr_authorization.hr_authorization_stage_draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__duration
+msgid "Duration"
+msgstr "المدة"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.hr_authorization_view_kanban
+msgid "Duration :"
+msgstr "المدة :"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__employee_id
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization_wizard__employee_id
+#: model_terms:ir.ui.view,arch_db:hr_authorization.report_hr_authorization_resume
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.hr_authorization_view_kanban
+msgid "Employee:"
+msgstr "الموظف:"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__hour_start
+msgid "Exit hour"
+msgstr "ساعة الخروج"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.hr_authorization_view_kanban
+msgid "Exit hour :"
+msgstr "ساعة الخروج :"
+
+#. module: hr_authorization
+#: model:request.stage,name:hr_authorization.hr_authorization_stage_first_approve
+msgid "First approve"
+msgstr "للموافقة"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: hr_authorization
+#: model:ir.model.fields,help:hr_authorization.field_hr_authorization__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "رمز الخط الرائع ، على سبيل المثال FA المهام"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.report_authorization
+msgid "For the following reason:"
+msgstr "للسبب التالي:"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.report_authorization
+msgid "From"
+msgstr "من"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.report_authorization
+msgid "From :"
+msgstr "من:"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization_wizard__date_from
+msgid "From Date"
+msgstr "من التاريخ"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.report_hr_authorization_resume
+msgid "From Hour"
+msgstr "من الساعة"
+
+#. module: hr_authorization
+#: code:addons/hr_authorization/wizard/hr_authorization_wizard.py:0
+#, python-format
+msgid "From date must be less than Date to"
+msgstr "يجب أن يكون تاريخ البداية قبل تاريخ النهاية"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.report_authorization
+msgid "Function :"
+msgstr "الوظيفة :"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.hr_authorization_serach_view
+msgid "Group By"
+msgstr "مجموعة من"
+
+#. module: hr_authorization
+#: model:ir.model,name:hr_authorization.model_request_type
+msgid "HR Authorization Type"
+msgstr "نوع الإستئذان"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.report_hr_authorization_resume
+msgid "Hours Number"
+msgstr "عدد الساعات"
+
+#. module: hr_authorization
+#: model:ir.actions.report,name:hr_authorization.action_report_hr_authorization_resume
+msgid "Hr Authorization Resume"
+msgstr "تقرير حصر الإستئذنات "
+
+#. module: hr_authorization
+#: model:ir.model,name:hr_authorization.model_hr_authorization_wizard
+msgid "Hr Authorization Wizard"
+msgstr "معالج تفويض الموارد البشرية"
+
+#. module: hr_authorization
+#: model:ir.actions.act_window,name:hr_authorization.hr_authorization_resume_wizard_action
+msgid "Hr Authorizations Resume"
+msgstr "تقرير حصر الاستئذانات"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.report_authorization
+msgid "I request authorization to leave my work:"
+msgstr "أطلب إستئذان لمغادرة عملي"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__id
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization_wizard__id
+#: model:ir.model.fields,field_description:hr_authorization.field_report_hr_authorization_report_hr_authorization_resume__id
+#: model:ir.model.fields,field_description:hr_authorization.field_request_type__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__activity_exception_icon
+msgid "Icon"
+msgstr "ايقونة"
+
+#. module: hr_authorization
+#: model:ir.model.fields,help:hr_authorization.field_hr_authorization__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "أيقونة للإشارة إلى نشاط استثناء"
+
+#. module: hr_authorization
+#: model:ir.model.fields,help:hr_authorization.field_hr_authorization__message_needaction
+#: model:ir.model.fields,help:hr_authorization.field_hr_authorization__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "اذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل"
+
+#. module: hr_authorization
+#: model:ir.model.fields,help:hr_authorization.field_hr_authorization__message_has_error
+#: model:ir.model.fields,help:hr_authorization.field_hr_authorization__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده ، فبعض الرسائل بها خطأ في التسليم."
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__job_id
+msgid "Job"
+msgstr "المهنة"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.report_hr_authorization_resume
+msgid "Job ID"
+msgstr "الرقم الوظيفي"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__kanban_color
+msgid "Kanban Color Index"
+msgstr "لون كانبان"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization____last_update
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization_wizard____last_update
+#: model:ir.model.fields,field_description:hr_authorization.field_report_hr_authorization_report_hr_authorization_resume____last_update
+#: model:ir.model.fields,field_description:hr_authorization.field_request_type____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__write_uid
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization_wizard__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__write_date
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization_wizard__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.report_authorization
+msgid "Last name and First name :"
+msgstr "الإسم و اللقب :"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__manager_id
+#: model:res.groups,name:hr_authorization.group_hr_authorization_manager
+msgid "Manager"
+msgstr "مسؤول"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__message_ids
+msgid "Messages"
+msgstr "رسائل"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي لنشاطي"
+
+#. module: hr_authorization
+#: model:ir.actions.act_window,name:hr_authorization.hr_authorization_action_my
+#: model:ir.ui.menu,name:hr_authorization.authorization_my_request_menu
+#: model:ir.ui.menu,name:hr_authorization.menu_hr_authorizations_my
+msgid "My authorizations"
+msgstr "استئذاناتي"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.hr_authorization_serach_view
+msgid "New Requests"
+msgstr "طلبات جديدة"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__name
+msgid "Number"
+msgstr "رقم الطلب"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__current_nb_authorization
+msgid "Number of authorization"
+msgstr "عدد الإستئذانات"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_request_type__hours_authorization
+msgid "Number of authorization hours"
+msgstr "عدد ساعات الاستئذان المسموح بها شهريا"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_request_type__number_authorization
+msgid "Number of authorizations"
+msgstr "عدد الإستئذانات"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: hr_authorization
+#: model:ir.model.fields,help:hr_authorization.field_hr_authorization__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: hr_authorization
+#: model:ir.model.fields,help:hr_authorization.field_hr_authorization__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل مع خطأ التسليم"
+
+#. module: hr_authorization
+#: model:ir.model.fields,help:hr_authorization.field_hr_authorization__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل غير المقروءة"
+
+#. module: hr_authorization
+#: model:res.groups,name:hr_authorization.group_hr_authorization_user
+msgid "Officer"
+msgstr "مدير المباشر"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.hr_authorization_wizard_view_form
+msgid "Other Options"
+msgstr "خيارات أخرى"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.hr_authorization_wizard_view_form
+msgid "Period"
+msgstr "الفترة"
+
+#. module: hr_authorization
+#: model:request.type,name:hr_authorization.hr_authorization_type_personal_affair
+msgid "Personal affair"
+msgstr "شأن شخصي"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.hr_authorization_wizard_view_form
+msgid "Print PDF Report"
+msgstr "طباعة التقرير بصيغة PDF"
+
+#. module: hr_authorization
+#: model:mail.message.subtype,name:hr_authorization.mt_hr_authorization_refused
+#: model:request.stage,name:hr_authorization.hr_authorization_stage_refuse
+#: model:request.stage,name:hr_authorization.hr_authorization_stage_refused
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.hr_authorization_serach_view
+msgid "Refused Requests"
+msgstr "طلبات مرفوضة"
+
+#. module: hr_authorization
+#: model:ir.model,name:hr_authorization.model_report_hr_authorization_report_hr_authorization_resume
+msgid "Report Hr Authorization Resume"
+msgstr "تقرير حصر الاستئذانات"
+
+#. module: hr_authorization
+#: model:mail.activity.type,name:hr_authorization.mail_hr_authorization_approval
+msgid "Request Approval"
+msgstr "طلب للموافقة"
+
+#. module: hr_authorization
+#: model:mail.message.subtype,description:hr_authorization.mt_hr_authorization_approved
+msgid "Request approved"
+msgstr "تم الموافقة على الطلب"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__date
+msgid "Request date"
+msgstr "تاريخ الطلب"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.hr_authorization_view_kanban
+msgid "Request number:"
+msgstr "رقم الطلب:"
+
+#. module: hr_authorization
+#: model:mail.message.subtype,description:hr_authorization.mt_hr_authorization_refused
+msgid "Request refused"
+msgstr "طلب مرفوض"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__activity_user_id
+msgid "Responsible User"
+msgstr "المسؤول"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__hour_stop
+msgid "Return hour"
+msgstr "ساعة العودة"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.hr_authorization_view_kanban
+msgid "Return hour :"
+msgstr " ساعة العودة:"
+
+#. module: hr_authorization
+#: code:addons/hr_authorization/models/hr_authorization.py:0
+#, python-format
+msgid "Return hour should be greater than exit hour."
+msgstr "ساعة الرجوع يجب أن تكون أكبر من ساعة الخروج"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: hr_authorization
+#: model:request.stage,name:hr_authorization.hr_authorization_stage_second_approve
+msgid "Second approve"
+msgstr "الموافقة الثانية"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__stage_id
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization_wizard__stage_id
+#: model_terms:ir.ui.view,arch_db:hr_authorization.hr_authorization_serach_view
+#: model_terms:ir.ui.view,arch_db:hr_authorization.report_hr_authorization_resume
+msgid "Stage"
+msgstr "المرحلة"
+
+#. module: hr_authorization
+#: model:ir.actions.act_window,name:hr_authorization.hr_authorization_stage_action
+msgid "Stages"
+msgstr "مراحل"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__state
+msgid "State"
+msgstr "حالة"
+
+#. module: hr_authorization
+#: model:ir.model.fields,help:hr_authorization.field_hr_authorization__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "المخطط: الأنشطة المستقبلية."
+
+#. module: hr_authorization
+#: code:addons/hr_authorization/models/hr_authorization.py:0
+#, python-format
+msgid "There's an intersection in dates with another authorization"
+msgstr "هناك تقاطع في التواريخ مع إستأذان آخر"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.report_authorization
+msgid "To"
+msgstr "إلى"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization_wizard__date_to
+msgid "To Date"
+msgstr "إلى التاريخ"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.report_hr_authorization_resume
+msgid "To Hour"
+msgstr "إلى الساعة"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__request_type_id
+#: model_terms:ir.ui.view,arch_db:hr_authorization.report_hr_authorization_resume
+msgid "Type"
+msgstr "النوع"
+
+#. module: hr_authorization
+#: model:ir.model.fields,help:hr_authorization.field_hr_authorization__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع نشاط الاستثناء في السجل"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عداد الرسائل غير المقروءة"
+
+#. module: hr_authorization
+#: model:request.stage,name:hr_authorization.hr_authorization_stage_validate
+msgid "Validate"
+msgstr "التأكيد"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.hr_authorization_serach_view
+msgid "Validated Requests"
+msgstr "طلبات موافق عليها"
+
+#. module: hr_authorization
+#: model:request.type,name:hr_authorization.hr_authorization_type_work_mission
+msgid "Work mission"
+msgstr " مهمة عمل"
+
+#. module: hr_authorization
+#: code:addons/hr_authorization/models/hr_authorization.py:0
+#, python-format
+msgid "You do not have sufficient hours of authorization"
+msgstr "ليس لديك الرصيد الكافي"
+
+#. module: hr_authorization
+#: code:addons/hr_authorization/models/hr_authorization.py:0
+#, python-format
+msgid "You have met the allowed number of authorization per month"
+msgstr "لقد استوفيت عدد الإستئذانات المسموح بها شهريا"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.hr_authorization_serach_view
+msgid "employee"
+msgstr "موظف"
+
+#. module: hr_authorization
+#: model:ir.ui.menu,name:hr_authorization.hr_authorization_reports_menu
+msgid "Reports"
+msgstr "التقارير"
+
+#. module: hr_authorization
+#: model:ir.actions.report,name:hr_authorization.hr_authorization_report_xlsx
+msgid "Hr Authorizations Resume Excel"
+msgstr "تقرير حصر الإستئذانات بصيغة اكسل"
+
+#. module: hr_authorization
+#: model_terms:ir.ui.view,arch_db:hr_authorization.hr_authorization_wizard_view_form
+msgid "Print xlsx Report"
+msgstr "طباعة التقرير بصيغة اكسل"
+
+#. module: hr_authorization
+#: code:addons/hr_authorization/wizard/hr_authorization_wizard.py:0
+#, python-format
+msgid "Hr Authorization Resume Report"
+msgstr "تقرير حصر الإستئذانات"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_request_type__required_attachments
+msgid "Required Attachments"
+msgstr "إجبارية المرفقات"
+
+#. module: hr_authorization
+#: code:addons/hr_authorization/models/hr_authorization.py:0
+#, python-format
+msgid "You have to insert your attachments first"
+msgstr "يجب عليك إدخال المرفقات أولاً"
+
+#. module: hr_authorization
+#: model:ir.model.fields,field_description:hr_authorization.field_hr_authorization__attachment_ids
+#: model_terms:ir.ui.view,arch_db:hr_authorization.hr_authorization_form_view
+msgid "Attachments"
+msgstr "المرفقات"
+
+#. module: hr_authorization
+#: model:ir.actions.server,name:hr_authorization.action_refuse_authorization_requests
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: hr_authorization
+#: model:ir.actions.server,name:hr_authorization.action_accept_authorization_requests
+msgid "Accept"
+msgstr "موافقة"

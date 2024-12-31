@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="res_users_view_form_inherit_invoice_qr_code" model="ir.ui.view">
+        <field name="name">res.users.view.form.inherit</field>
+        <field name="model">res.users</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="base.view_users_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='references']" position="inside">
+                <group string="Livraison">
+                    <field name="code_carrier" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

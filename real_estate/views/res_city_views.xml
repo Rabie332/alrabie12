@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+        <!-- Cities -->
+
+    <record id="view_res_city_tree_inherit_building" model="ir.ui.view">
+        <field name="name">res.city.tree</field>
+        <field name="model">res.city</field>
+        <field name="inherit_id" ref="base_address_city.view_city_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="attributes">
+                <attribute name="edit">false</attribute>
+            </xpath>
+           <field name="country_id" position="after">
+                <field name="population_density" />
+                <field name="land_area" />
+            </field>
+        </field>
+    </record>
+
+
+    <record id="view_city_form" model="ir.ui.view">
+            <field name="name">res.city.form</field>
+            <field name="model">res.city</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                    <group>
+                        <group>
+                           <field name="name" />
+                            <field name="zipcode" />
+                            <field name="country_id" />
+                            <field
+                                name="state_id"
+                                context="{'default_country_id': country_id}"
+                            />
+                        </group>
+                        <group>
+                            <field name="population_density" />
+                            <field name="land_area" />
+                        </group>
+                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    <record id="base_address_city.action_res_city_tree" model="ir.actions.act_window">
+        <field name="view_mode">tree,form</field>
+    </record>
+
+     <menuitem
+        action="base_address_city.action_res_city_tree"
+        id="res_city_menu"
+        parent="building_setting_menu"
+        sequence="2"
+    />
+
+</odoo>

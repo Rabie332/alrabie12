@@ -1,0 +1,4 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+crossovered_budget_move_access_right_user,crossovered_budget_move_access_right_user,model_crossovered_budget_move,base.group_user,1,1,1,0
+crossovered_budget_move_line_access_right_user,crossovered_budget_move_line_access_right_user,model_crossovered_budget_move_lines,base.group_user,1,1,1,1
+access_crossovered_budget_user,crossovered.budget.user,account_budget_oca.model_crossovered_budget,base.group_user,1,0,0,0

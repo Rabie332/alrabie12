@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+
+    <record id="hr_attendance_report_notification" model="ir.actions.act_window">
+        <field name="name">Attendance Notification</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.attendance.report</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="hr_attendance_summary.hr_attendance_report_view_form" />
+        <field name="context">{'display_attendance_notification':True}</field>
+        <field name="target">inline</field>
+        <field name="binding_type">report</field>
+    </record>
+
+    <menuitem
+        id="hr_attendance_notification_menu"
+        name="Attendance Notification"
+        sequence="29"
+        action="hr_attendance_report_notification"
+        parent="hr_attendance.menu_hr_attendance_root"
+    />
+
+</odoo>

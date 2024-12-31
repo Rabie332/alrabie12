@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="infraction_report_templates">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <br>
+                </br>
+                <div class="page" style="direction:rtl;padding-top:160px;">
+                    <style>
+                        .grey-cell{
+                        background-color: rgb(236, 240, 245);
+                        }
+                    </style>
+                    <div class="oe_structure" />
+                    <!-- تفاصيل طلــــب المخالفة -->
+                    <t t-foreach="docs" t-as="o">
+                        <h2>
+                            <center>
+                                <strong>رقم المخالفة :</strong>
+                                <span t-field="o.name" />
+                            </center>
+                        </h2>
+                        <div class="row">
+                            <div class="col-xs-2" style="margin:auto;">
+                            </div>
+                        </div>
+                        <div class="col-xs-8" style="margin:auto;">
+                            <table class="table table-sm" style="border-bottom: 3px solid lack !important;">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <p style="text-align:right">
+                                                <strong>الموظف :
+                                                </strong>
+                                            </p>
+                                            <p style="text-align:right">
+                                                <strong>تاريخ المخالفة :
+                                                </strong>
+                                            </p>
+                                            <p style="text-align:right">
+                                                <strong>الفترة :</strong>
+                                            </p>
+                                            <p style="text-align:right">
+                                                <strong>النوع:
+                                                </strong>
+                                            </p>
+                                            <p style="text-align:right">
+                                                <strong>الوصف :
+                                                </strong>
+                                            </p>
+                                        </td>
+
+                                        <td>
+                                            <p style="text-align:left;padding-left:10px" t-field="o.employee_id" />
+                                            <p style="text-align:left;padding-left:10px" t-field="o.date" />
+                                            <p style="text-align:left;padding-left:10px" t-field="o.period_id" />
+                                            <p style="text-align:left;padding-left:10px" t-field="o.request_type_id" />
+                                            <p style="text-align:left;padding-left:10px" t-field="o.description" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </table>
+                        </div>
+                    </t>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

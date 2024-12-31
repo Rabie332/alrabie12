@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+ <!-- Loan Menu Roots -->
+
+    <menuitem
+        id="hr_loan_menu_root_hr"
+        name="Loans"
+        parent="hr_payroll.menu_hr_payroll_root"
+        groups="hr_payroll_loan.group_hr_payroll_loan_manager"
+    />
+
+    <menuitem
+        id="loan_setting_menu_root"
+        name="Setting"
+        parent="hr_loan_menu_root_hr"
+        groups="hr_payroll_loan.group_hr_payroll_loan_manager"
+    />
+</odoo>

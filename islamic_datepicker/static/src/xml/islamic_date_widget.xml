@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+    <t t-name="web.datepicker">
+          <t
+            t-set="placeholder"
+            t-value="widget.getParent().node and widget.getParent().node.attrs.placeholder"
+        />
+            <t t-set="datepickerID" t-value="_.uniqueId('datepicker')" />
+        <div
+            class="o_datepicker row"
+            aria-atomic="false"
+            t-att-id="datepickerID"
+            data-target-input="nearest"
+        >
+            <t
+                t-set="placeholder"
+                t-value="widget.getParent().node and widget.getParent().node.attrs.placeholder"
+            />
+
+            <input
+                type="text"
+                t-att-class="'o_datepicker_input o_input datetimepicker-input' + (widget.type_of_date == 'date' ? ' col-5' : '')"
+                t-att-name="widget.name"
+                t-att-placeholder="placeholder"
+                t-att-data-target="datepickerID"
+                autocomplete="off"
+            />
+
+            <input
+                t-if="widget.type_of_date == 'date'"
+                t-att-id="widget.name"
+                type="text"
+                t-att-placeholder="placeholder"
+                class="oe_hijri oe_simple_date o_input col-5"
+            />
+
+
+        </div>
+    </t>
+</templates>

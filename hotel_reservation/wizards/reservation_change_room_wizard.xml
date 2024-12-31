@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="reservation_room_change_wizard_form_view" model="ir.ui.view">
+        <field name="name">reservation.room.change.wizard.form</field>
+        <field name="model">reservation.room.change.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Change Room">
+                <group>
+                    <field name="reservation_id" invisible="1" />
+                    <field name="reservation_line_id" invisible="1" />
+                     <field name="rooms_available_ids" invisible="1" />
+                     <field name="rent" invisible="1" />
+                     <field name="old_room_id" invisible="1" />
+                     <field name="old_room_insurance" invisible="1" />
+                     <field name="old_room_price" invisible="1" />
+                     <field name="display_insurance" invisible="1" />
+                     <field name="display_discount" invisible="1" />
+                     <field name="is_change_rent" invisible="1" />
+                    <field name="change_date" required="1" />
+                    <field
+                        name="room_id"
+                        options="{'no_create': True}"
+                        required="1"
+                        context="{'search_default_group_by_room_categ': 1}"
+                        domain="[('id','in',rooms_available_ids)]"
+                    >
+                    </field>
+                    <field name="origin_rent" attrs="{'invisible': [('rent', '!=', 'monthly')]}" />
+                    <field name="insurance" attrs="{'invisible': [('display_insurance', '=', False)]}" />
+                    <field name="is_minimum_price" />
+                    <field name="is_other_price" />
+                     <div class="o_td_label">
+                    <label
+                            for="other_price"
+                            string="Minimum Price"
+                            attrs="{'invisible': [('is_minimum_price', '=', False)]}"
+                        />
+                    <label for="other_price" string="Price" attrs="{'invisible': [('is_other_price', '=', False)]}" />
+                     </div>
+                    <field
+                        name="other_price"
+                        nolabel='1'
+                        attrs="{'invisible': [('is_minimum_price', '=', False), ('is_other_price', '=', False)]}"
+                    />
+                    <label
+                        for="discount_type"
+                        class="oe_inline"
+                        attrs="{'invisible': [('display_discount', '=', False)]}"
+                    />
+                            <div attrs="{'invisible': [('display_discount', '=', False)]}">
+                                <field
+                            name="discount_type"
+                            nolabel="1"
+                            class="oe_inline"
+                            style="width: 35% !important;"
+                            attrs="{'required': [('display_discount', '=', True)]}"
+                        />
+                                <field
+                            name="discount"
+                            style="width: 30% !important;margin-left: 7%;margin-right: 5%;"
+                            attrs="{'invisible': [('discount_type', '=', 'no_discount')]}"
+                        />
+                                   <span
+                            class="oe_inline"
+                            attrs="{'invisible': [('discount_type', '!=', 'percentage')]}"
+                        >%
+                                </span>
+                            </div>
+
+
+                </group>
+                <group>
+                      <p style="color:red;" attrs="{'invisible': [('is_change_rent', '=', False)]}">
+                                        Changing the type of rent will affect the final cost.
+                                    </p>
+                </group>
+                <footer>
+                    <button
+                        name='action_change_room'
+                        string="Change Room"
+                        type="object"
+                        icon="fa-exchange"
+                        class="btn btn-primary"
+                    />
+                    <button special="cancel" string="Cancel" icon="fa-close" class="btn btn-primary" />
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="reservation_room_change_wizard_action" model="ir.actions.act_window">
+        <field name="name">Change Room</field>
+        <field name="res_model">reservation.room.change.wizard</field>
+        <field name="binding_view_types">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

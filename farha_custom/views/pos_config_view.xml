@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <menuitem
+        id="point_of_sale.menu_pos_dashboard"
+        parent="point_of_sale.menu_point_root"
+        name="Branches"
+        sequence="1"
+    />
+</odoo>

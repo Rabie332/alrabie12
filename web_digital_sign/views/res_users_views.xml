@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="view_users_form_digital_signature" model="ir.ui.view">
+        <field name="name">res.users.form.digital_signature</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='signature']" position="after">
+                <label
+                    for="digital_signature"
+                    string="Signature pour les documents"
+                    class="oe_edit_only"
+                />
+                <h2>
+                    <field
+                        name="digital_signature"
+                        widget="image"
+                        style="max-height: 3cm; max-width: 5cm;"
+                    />
+                </h2>
+            </xpath>
+        </field>
+    </record>
+    <record id="view_users_form_simple_modif_digital_signature" model="ir.ui.view">
+        <field name="name">res.users.form.preferences.digital_signature</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form_simple_modif" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='signature']" position="after">
+                <label
+                    for="digital_signature"
+                    string="Signature"
+                    class="oe_edit_only"
+                />
+                <h2>
+                    <field
+                        name="digital_signature"
+                        widget="image"
+                        style="max-height: 3cm; max-width: 5cm;"
+                    />
+                </h2>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

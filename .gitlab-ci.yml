@@ -1,0 +1,7 @@
+build:
+  when: on_success
+
+include:
+  - project: "devops/ci"
+    ref: "2.0"
+    file: "/.gitlab-ci-14.0.yml"

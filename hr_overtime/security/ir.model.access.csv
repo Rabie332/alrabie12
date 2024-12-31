@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+,,,,,,,
+access_hr_overtime_mandate_group_overtime,name_hr_overtime_mandate_group_overtime,model_hr_overtime_mandate,base.group_user,1,1,1,0
+access_hr_overtime_mandate_line_group_overtime,name_hr_overtime_mandate_line_group_overtime,model_hr_overtime_mandate_line,base.group_user,1,1,1,0
+access_hr_overtime_setting_group_overtime,name_hr_overtime_setting_group_overtime,model_hr_overtime_setting,base.group_user,1,1,1,0
+access_hr_overtime_group_overtime,name_hr_overtime_group_overtime,model_hr_overtime,base.group_user,1,1,1,0
+access_hr_overtime_line_group_overtime,name_hr_overtime__line_group_overtime,model_hr_overtime_line,base.group_user,1,1,1,0
+access_hr_overtime_wizard_group_overtime,name_hr_overtime_wizard_group_overtime,model_hr_overtime_wizard,base.group_user,1,1,1,0

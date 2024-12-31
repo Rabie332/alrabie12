@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+fleet_maintenance_access_right_user,fleet_maintenance_access_right,model_fleet_maintenance,fleet.fleet_group_user,1,1,1,0
+access_stock_picking_fleet,stock.picking fleet,stock.model_stock_picking,fleet.fleet_group_user,1,1,1,0
+access_stock_picking_type_fleet,stock.picking.type fleet,stock.model_stock_picking_type,fleet.fleet_group_user,1,0,0,0
+access_stock_move_fleet,stock.move fleet,stock.model_stock_move,fleet.fleet_group_user,1,1,1,0
+access_stock_move_line_fleet,stock.move.line fleet,stock.model_stock_move_line,fleet.fleet_group_user,1,1,1,1
+access_stock_scrap_fleet,stock.scrap.fleet,stock.model_stock_scrap,fleet.fleet_group_user,1,1,1,0

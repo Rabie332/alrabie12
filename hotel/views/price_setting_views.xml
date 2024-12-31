@@ -1,0 +1,81 @@
+<odoo>
+
+    <!-- Search view of price settings -->
+    <record id="price_setting_view_search" model="ir.ui.view">
+        <field name="name">price.setting.search</field>
+        <field name="model">price.setting</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="room_type_id" />
+                <group expand="0" string="Group By">
+                    <filter name="room_type_id" string="Price By room type" context="{'group_by':'room_type_id'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+    <!-- Tree view of price settings -->
+    <record id="price_setting_view_tree" model="ir.ui.view">
+        <field name="name">price.setting.tree</field>
+        <field name="model">price.setting</field>
+        <field name="arch" type="xml">
+            <tree string="Price Settings">
+                <field name="room_type_id" />
+                <field name="date_from" />
+                <field name="date_to" />
+                <field name="addition_type" />
+                <field name="amount" />
+                <field name="company_id" groups="base.group_multi_company" />
+            </tree>
+        </field>
+    </record>
+    <!-- Form view of price settings -->
+    <record id="price_setting_view_form" model="ir.ui.view">
+        <field name="name">price.setting.form</field>
+        <field name="model">price.setting</field>
+        <field name="arch" type="xml">
+            <form string="Price Settings">
+                <sheet>
+                    <group>
+                         <group>
+                            <field name="room_type_id" options="{'no_create': True, 'no_open':True}" />
+                            <field name="date_from" />
+                            <field name="date_to" />
+                            <field
+                                name="company_id"
+                                required="1"
+                                groups="base.group_multi_company"
+                                options="{'no_create': True}"
+                            />
+                         </group>
+                        <group>
+                           <field name="addition_type" />
+                             <lable for="amount"><b>Amount</b></lable>
+                            <div>
+                                <field name="amount" class="oe_inline" />
+                                <span
+                                    class="o_form_label oe_inline"
+                                    attrs="{'invisible': [('addition_type', '!=', 'percentage')]}"
+                                >%</span>
+                            </div>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- Action of price settings -->
+    <record id="price_setting_action" model="ir.actions.act_window">
+        <field name="name">Price Settings</field>
+        <field name="res_model">price.setting</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="price_setting_menu"
+        name="Price Settings"
+        parent="hotel.hotel_configuration_menu"
+        action="price_setting_action"
+        sequence="25"
+    />
+
+</odoo>

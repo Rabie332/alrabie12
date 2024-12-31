@@ -1,0 +1,127 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* invoice_whatsapp_integration
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-09 11:27+0000\n"
+"PO-Revision-Date: 2021-11-09 11:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: invoice_whatsapp_integration
+#: code:addons/invoice_whatsapp_integration/models/account_move.py:0
+#, python-format
+msgid ""
+"     Dear *{partner_name}*,%0a\n"
+"Your Invoice *{invoice_name}* has been posted.%0a\n"
+"*Invoice Date:{invoice_date}*,%0a\n"
+"Due Date:*{invoice_date_due}*,%0a\n"
+"Untaxed Amount:*{amount_untaxed} {currency}*,%0a\n"
+"Taxes:*{total_taxes} {currency}*,%0a\n"
+"Total Amount:*{amount_total} {currency}*,%0a\n"
+"*Due Amount:{amount_residual} {currency}*,%0a\n"
+"_Best regards_,%0a\n"
+"*{user_name}* , *{company_name}*"
+msgstr ""
+"     عزيزي *{partner_name}*،%0a\n"
+"تم ترحيل فاتورتك *{partner_name}*.%0a\n"
+"*تاريخ الفاتورة:{invoice_date}*،%0a\n"
+"تاريخ الاستحقاق:*{invoice_date_due}*،%0a\n"
+"المبلغ بدون ضرائب:*{amount_untaxed} {currency}*،%0a\n"
+"الضرائب:*{total_taxes} {currency}*،%0a\n"
+"إجمالي المبلغ:*{amount_total} {currency}*،%0a\n"
+"*المبلغ المستحق:{amount_residual} {currency}*،%0a\n"
+"_مع اطيب التحيات_،%0a\n"
+"*{user_name}* ، *{company_name}*"
+
+#. module: invoice_whatsapp_integration
+#: model_terms:ir.ui.view,arch_db:invoice_whatsapp_integration.whatsapp_send_form_view
+msgid "Cancel"
+msgstr "الغاء"
+
+#. module: invoice_whatsapp_integration
+#: model:ir.model.fields,field_description:invoice_whatsapp_integration.field_whatsapp_message_wizard__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: invoice_whatsapp_integration
+#: model:ir.model.fields,field_description:invoice_whatsapp_integration.field_whatsapp_message_wizard__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: invoice_whatsapp_integration
+#: model:ir.model.fields,field_description:invoice_whatsapp_integration.field_account_move__display_name
+#: model:ir.model.fields,field_description:invoice_whatsapp_integration.field_whatsapp_message_wizard__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: invoice_whatsapp_integration
+#: model:ir.model.fields,field_description:invoice_whatsapp_integration.field_account_move__id
+#: model:ir.model.fields,field_description:invoice_whatsapp_integration.field_whatsapp_message_wizard__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: invoice_whatsapp_integration
+#: model:ir.model,name:invoice_whatsapp_integration.model_account_move
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: invoice_whatsapp_integration
+#: model:ir.model.fields,field_description:invoice_whatsapp_integration.field_account_move____last_update
+#: model:ir.model.fields,field_description:invoice_whatsapp_integration.field_whatsapp_message_wizard____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: invoice_whatsapp_integration
+#: model:ir.model.fields,field_description:invoice_whatsapp_integration.field_whatsapp_message_wizard__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: invoice_whatsapp_integration
+#: model:ir.model.fields,field_description:invoice_whatsapp_integration.field_whatsapp_message_wizard__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: invoice_whatsapp_integration
+#: model:ir.model.fields,field_description:invoice_whatsapp_integration.field_whatsapp_message_wizard__message
+msgid "Message"
+msgstr "رسالة"
+
+#. module: invoice_whatsapp_integration
+#: model:ir.model.fields,field_description:invoice_whatsapp_integration.field_whatsapp_message_wizard__mobile
+msgid "Mobile"
+msgstr "الهاتف المحمول"
+
+#. module: invoice_whatsapp_integration
+#: model:ir.model.fields,field_description:invoice_whatsapp_integration.field_whatsapp_message_wizard__partner_id
+msgid "Recipient"
+msgstr "المستلم"
+
+#. module: invoice_whatsapp_integration
+#: model_terms:ir.ui.view,arch_db:invoice_whatsapp_integration.whatsapp_send_form_view
+msgid "Send"
+msgstr "إرسال"
+
+#. module: invoice_whatsapp_integration
+#: model_terms:ir.ui.view,arch_db:invoice_whatsapp_integration.view_move_form_inherit_invoice_whatsapp_integration
+#: model_terms:ir.ui.view,arch_db:invoice_whatsapp_integration.whatsapp_send_form_view
+msgid "Send by Whatsapp"
+msgstr "إرسال عبر الواتساب"
+
+#. module: invoice_whatsapp_integration
+#: code:addons/invoice_whatsapp_integration/models/account_move.py:0
+#, python-format
+msgid "Send invoice by Whatsapp"
+msgstr "إرسال الفاتورة عبر الواتساب"
+
+#. module: invoice_whatsapp_integration
+#: model:ir.model,name:invoice_whatsapp_integration.model_whatsapp_message_wizard
+msgid "Whatsapp Wizard"
+msgstr "معالج الواتساب"

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <!--    Request sequence of numbers -->
+
+    <record id="hr_authorization_seq" forcecreate="1" model="ir.sequence">
+        <field name="name">Sequence</field>
+        <field name="code">hr.authorization.seq</field>
+        <field eval="1" name="number_increment" />
+        <field name="padding">5</field>
+    </record>
+
+    <!-- Request specific activities -->
+
+    <record id="mail_hr_authorization_approval" model="mail.activity.type">
+        <field name="name">Request Approval</field>
+        <field name="icon">fa-sun-o</field>
+         <field name="category">validation</field>
+        <field name="res_model_id" ref="hr_authorization.model_hr_authorization" />
+    </record>
+
+    <record id="mail_hr_authorization_feedback" model="mail.activity.type">
+        <field name="name">Authorization is done</field>
+        <field name="icon">fa-sun-o</field>
+         <field name="category">feedback</field>
+        <field name="res_model_id" ref="hr_authorization.model_hr_authorization" />
+    </record>
+
+    <!-- Request-related subtypes for messaging / Chatter -->
+
+    <record id="mt_hr_authorization_approved" model="mail.message.subtype">
+        <field name="name">Approved</field>
+        <field name="res_model">hr.authorization</field>
+        <field name="description">Request approved</field>
+    </record>
+
+    <record id="mt_hr_authorization_refused" model="mail.message.subtype">
+        <field name="name">Refused</field>
+        <field name="res_model">hr.authorization</field>
+        <field name="description">Request refused</field>
+    </record>
+
+    <!-- Authorization stages -->
+    <record id="hr_authorization_stage_draft" model="request.stage">
+            <field name="name">Draft</field>
+            <field name="res_model_id" ref="hr_authorization.model_hr_authorization" />
+            <field name="sequence">1</field>
+            <field name="res_model">hr.authorization</field>
+            <field name="state">draft</field>
+        </record>
+
+        <record id="hr_authorization_stage_validate" model="request.stage">
+            <field name="name">Validate</field>
+            <field name="res_model_id" ref="hr_authorization.model_hr_authorization" />
+            <field name="sequence">2</field>
+            <field name="res_model">hr.authorization</field>
+            <field name="state">in_progress</field>
+        </record>
+
+        <record id="hr_authorization_stage_done" model="request.stage">
+            <field name="name">Done</field>
+            <field name="res_model_id" ref="hr_authorization.model_hr_authorization" />
+            <field name="sequence">3</field>
+            <field name="res_model">hr.authorization</field>
+            <field name="state">done</field>
+        </record>
+
+        <record id="hr_authorization_stage_refused" model="request.stage">
+            <field name="name">Refused</field>
+            <field name="res_model_id" ref="hr_authorization.model_hr_authorization" />
+            <field name="sequence">4</field>
+            <field name="res_model">hr.authorization</field>
+            <field name="state">cancel</field>
+        </record>
+
+</odoo>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+      <record id="paperformat_entry_landscape" model="report.paperformat">
+        <field name="name">Landscape Report</field>
+        <field name="default" eval="True" />
+        <field name="format">custom</field>
+        <field name="page_height">297</field>
+        <field name="page_width">210</field>
+        <field name="orientation">Landscape</field>
+        <field name="margin_top">25</field>
+        <field name="margin_bottom">15</field>
+        <field name="margin_left">5</field>
+        <field name="margin_right">5</field>
+        <field name="header_line" eval="False" />
+        <field name="header_spacing">26</field>
+        <field name="dpi">90</field>
+    </record>
+
+    <record id="account_entry_report" model="ir.actions.report">
+        <field name="name">Entries Report PDF</field>
+        <field name="model">account.move</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">account_move_report.account_entry_report_template</field>
+        <field name="report_file">account_move_report.account_entry_report_template</field>
+        <field name="binding_model_id" eval="False" />
+        <field name="paperformat_id" ref="paperformat_entry_landscape" />
+        <field name="binding_type">report</field>
+    </record>
+
+     <record id="account_entry_template_xlsx" model="ir.actions.report">
+        <field name="name">Entries Report Xlst</field>
+        <field name="model">report.account_move_report.account_entry_report_template_xlsx</field>
+        <field name="type">ir.actions.report</field>
+        <field name="report_name">account_move_report.account_entry_report_template_xlsx</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_file">Entries Report Xlst</field>
+    </record>
+
+
+</odoo>

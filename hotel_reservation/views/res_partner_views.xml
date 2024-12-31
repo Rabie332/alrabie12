@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_partner_hotel_reservation_search" model="ir.ui.view">
+            <field name="name">res.partner.hotel.search</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name" />
+                    <field name="identification_id" />
+                    <field name="residence_number" />
+                    <field name="visa_number" />
+                    <field name="card_number" />
+                    <field name="passport_id" />
+                    <field name="mobile" />
+                    <field name="last_room_id" />
+                    <filter string="Room" name="room" context="{'group_by':'last_room_id'}" />
+                    <filter string="Guest Type" name="guest_type" context="{'group_by':'guest_type'}" />
+                </search>
+            </field>
+        </record>
+
+    <record id="res_partner_view_form_hotel" model="ir.ui.view">
+        <field name="name">res.partner.view.form.inherit.hotel_customer</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <field name="vat" position="attributes">
+                <attribute name="attrs">{'invisible': [('company_type', '=', 'person')]}
+                </attribute>
+            </field>
+              <field name="mobile" position="attributes">
+                <attribute name="required">1
+                </attribute>
+            </field>
+               <field name="country_id" position="attributes">
+                <attribute name="required">1
+                </attribute>
+            </field>
+            <div name="button_box" position="inside">
+                <button
+                    class="oe_stat_button"
+                    icon="fa-book"
+                    name="action_get_attachment_tree_view"
+                    type="object"
+                    string="Documents"
+                >
+                    <field name="documents_count" widget="statinfo" nolabel="1" />
+                </button>
+                <button
+                    class="oe_stat_button"
+                    icon="fa-id-card-o"
+                    name="action_get_reservation_tree_view"
+                    type="object"
+                >
+                    <div class="o_form_field o_stat_info">
+                        <span class="o_stat_value">
+                            <field name="reservation_count" widget="statinfo" nolabel="1" />
+                        </span>
+                        <span class="o_stat_text">Reservations</span>
+                    </div>
+                </button>
+            </div>
+            <field name="type" position="before">
+                <field name="is_guest" invisible="1" />
+                <field
+                    name="guest_type"
+                    attrs="{'invisible': ['|', ('company_type', '!=', 'person'), ('is_guest', '=', False)], 'required': [('company_type', '=', 'person'), ('is_guest', '=', True)]}"
+                />
+                <field
+                    name="identification_id"
+                    attrs="{'invisible': ['|','|',('company_type', '!=', 'person'), ('is_guest', '=', False), ('guest_type', '!=', 'citizen')],'required':[('guest_type','=', 'citizen'),('company_type', '=', 'person')]}"
+                />
+                <field
+                    name="residence_number"
+                    attrs="{'invisible': ['|','|',('company_type', '!=', 'person'), ('is_guest', '=', False), ('guest_type', '!=', 'resident')],
+                    'required': [('company_type', '=', 'person'), ('is_guest', '=', True), ('guest_type', '=', 'resident')]}"
+                />
+                 <field
+                    name="visa_number"
+                    attrs="{'invisible': ['|','|',('company_type', '!=', 'person'), ('is_guest', '=', False), ('guest_type', '!=', 'visitor')],'required':[('guest_type','=', 'visitor'),('company_type', '=', 'person')]}"
+                />
+                 <field
+                    name="card_number"
+                    attrs="{'invisible': ['|','|',('company_type', '!=', 'person'), ('is_guest', '=', False), ('guest_type', '!=', 'gulf_citizen')],'required':[('guest_type','=', 'gulf_citizen'),('company_type', '=', 'person')]}"
+                />
+                <field
+                    name="passport_id"
+                    attrs="{'invisible': ['|', ('company_type', '!=', 'person'), ('is_guest', '=', False)]}"
+                />
+                <field
+                    name="birthday"
+                    attrs="{'invisible': [('company_type', '!=', 'person')],'required': [('company_type', '=', 'person'), ('is_guest', '=', True)]}"
+                />
+                <field
+                    name="gender"
+                    attrs="{'invisible': [('company_type', '!=', 'person')],'required': [('company_type', '=', 'person'), ('is_guest', '=', True)]}"
+                />
+                <field
+                    name="nationality_id"
+                    attrs="{'invisible': [('company_type', '!=', 'person')],'required': [('company_type', '=', 'person'), ('is_guest', '=', True)]}"
+                />
+
+                <field name="last_room_id" attrs="{'invisible': [('is_guest', '=', False)]}" />
+                <field name="age_group" invisible="1" />
+            </field>
+            <sheet position="inside">
+                <span
+                    style="color:red"
+                    attrs="{'invisible': ['|', ('company_type', '!=', 'person'), ('is_guest', '=', False)]}"
+                >
+                    Important warning: Please check the accuracy and decency in writing notes as the user who wrote
+                    these notes is responsible for his observation.
+                </span>
+            </sheet>
+        </field>
+    </record>
+
+    <record id="ir_attachment_view_search" model="ir.ui.view">
+        <field name="name">ir.attachment.search.inherit.employee</field>
+        <field name="model">ir.attachment</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="base.view_attachment_search" />
+        <field name="arch" type="xml">
+            <field name="create_date" position="after">
+                <field name="index_content" string="Content" />
+            </field>
+            <xpath expr="//filter[@name='my_documents_filter']" position="attributes">
+                <attribute name='invisible'>1</attribute>
+            </xpath>
+            <xpath expr="//filter[@name='url_filter']" position="attributes">
+                <attribute name='invisible'>1</attribute>
+            </xpath>
+            <xpath expr="//filter[@name='binary_filter']" position="attributes">
+                <attribute name='invisible'>1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Action of hotel guest management -->
+    <record id="hotel_customer_management_action" model="ir.actions.act_window">
+        <field name="name">Guests</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="domain">[('is_guest','=',True)]</field>
+        <field name="context">{'default_is_guest': True}</field>
+    </record>
+
+    <menuitem
+        id="hotel_customer_management_menu"
+        name="Guests"
+        action="hotel_customer_management_action"
+        sequence="17"
+        parent="hotel_reservation.menu_action_hotel_reservation_tree_all"
+    />
+
+</odoo>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+
+      <!-- Meeting Types -->
+    <record model="calendar.event.type" id="categ_meet_appointment_reservation">
+        <field name="name">Appointment Reservation</field>
+    </record>
+</odoo>

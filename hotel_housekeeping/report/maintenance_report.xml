@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="maintenance_report">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+
+                        <h3>
+                            <center>Housekeeping Services Maintenance</center>
+                        </h3>
+                        <br />
+                        <br />
+                        <br />
+                        <div class="row">
+                            <div class="col-6">Today's Date :
+                                <span t-field="o.current_date" />
+                                <br />
+                                Maintenance Type :
+                                <span t-field="o.maintenance_type_id" />
+                                <br />Hotel :
+                                <span t-field="o.company_id" />
+                                <br />Room No :
+                                <span t-field="o.room_id" />
+                            </div>
+                            <div class="col-6">Inspector :
+                                <span t-field="o.inspector_id" />
+                                <br />
+                                Inspect Date Time :
+                                <span t-field="o.inspect_date_time" />
+                                <br />Quality :
+                                <span t-field="o.quality" />
+                                <br />State :
+                                <span t-field="o.state" />
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <table class="table table-bordered">
+
+                            <tr>
+                                <th class="grey-cell text-center">Housekeeping Activity
+                                </th>
+                                <th class="grey-cell text-center">Housekeeper</th>
+                                <th class="grey-cell text-center">Today date</th>
+                                <th class="grey-cell text-center">Start Time</th>
+                                <th class="grey-cell text-center">End Time</th>
+                                <th class="grey-cell text-center">Maintenance</th>
+                            </tr>
+                            <t t-foreach="o.activity_line_ids" t-as="line">
+                                <td>
+                                    <span t-field="line.activity_id" />
+                                </td>
+                                <td>
+                                    <span t-field="line.housekeeper_id" />
+                                </td>
+                                <td>
+                                    <span t-field="line.today_date" />
+                                </td>
+                                <td>
+                                    <span t-field="line.clean_start_time" />
+                                </td>
+                                <td>
+                                    <span t-field="line.clean_end_time" />
+                                </td>
+                                <td>
+                                    <center>
+                                        <strong t-if="line.is_maintenance">X
+                                        </strong>
+                                    </center>
+                                </td>
+                            </t>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <record id="report_hotel_maintenance" model="ir.actions.report">
+        <field name="name">Maintenance</field>
+        <field name="model">hotel.housekeeping</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hotel_housekeeping.maintenance_report</field>
+        <field name="report_file">hotel_housekeeping.maintenance_report</field>
+        <field name="binding_model_id" ref="hotel_housekeeping.model_hotel_housekeeping" />
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>

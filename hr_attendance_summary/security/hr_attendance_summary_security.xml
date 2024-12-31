@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="group_manual_pointing" model="res.groups">
+        <field name="name">Manual pointing</field>
+        <field name="category_id" ref="base.module_category_hidden" />
+    </record>
+
+      <record id="hr_attendance_summary_line_company_rule" model="ir.rule">
+        <field name="name">Summary Line: multi-company</field>
+        <field name="model_id" ref="model_hr_attendance_summary_line" />
+        <field name="domain_force">['|',('company_id', 'in', company_ids),('company_id','=',False)]</field>
+    </record>
+</odoo>

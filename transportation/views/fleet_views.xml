@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+      <record id="fleet_vehicle_view_form_inherit_transportation" model="ir.ui.view">
+        <field name="name">fleet.vehicle.view.form.inherit.transportation</field>
+        <field name="model">fleet.vehicle</field>
+        <field name="inherit_id" ref="fleet.fleet_vehicle_view_form" />
+        <field name="arch" type="xml">
+              <div name="button_box" position="inside">
+                  <button name="shipping_orders_action" type="object" icon="fa-truck">
+                                <field
+                        name="shipping_orders_number"
+                        class="o_stat_value"
+                        string="Shipping Orders"
+                        widget="statinfo"
+                    />
+                        </button>
+              </div>
+        </field>
+     </record>
+
+</odoo>

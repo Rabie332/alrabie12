@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+
+    <menuitem
+        id="hr_overtime_mandate_menu"
+        name="Overtime mandate"
+        sequence="40"
+        parent="hr.menu_hr_root"
+        groups="hr_overtime.group_hr_overtime_mandate_user"
+    />
+    <!--    Hr.Overtime.Setting   -->
+
+    <menuitem
+        id="hr_overtime_mandate_setting_menu"
+        name="Setting"
+        sequence="20"
+        parent="hr_overtime_mandate_menu"
+        groups="hr_overtime.group_hr_overtime_mandate_user"
+    />
+
+    <menuitem
+        id="overtime_mandate_self_service_root"
+        parent="request.self_services_menu"
+        name="Overtime mandate"
+        sequence="20"
+    />
+
+     <menuitem
+        id="hr_overtime_menu"
+        name="Overtimes"
+        sequence="41"
+        parent="hr.menu_hr_root"
+        groups="hr_overtime.group_hr_overtime_user"
+    />
+    <!--    Hr.Overtime.Setting   -->
+
+    <menuitem
+        id="hr_overtime_setting_menu"
+        name="Setting"
+        sequence="20"
+        parent="hr_overtime_menu"
+        groups="hr_overtime.group_hr_overtime_user"
+    />
+
+    <menuitem id="overtime_self_service_root" parent="request.self_services_menu" name="Overtimes" sequence="21" />
+
+
+</odoo>

@@ -1,0 +1,519 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-31 11:46+0000\n"
+"PO-Revision-Date: 2022-08-31 11:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_base
+#: model_terms:ir.ui.view,arch_db:hr_base.hr_employee_information_setting_view_form
+msgid ""
+"<b>The employee and the selected users will receive notifications about the "
+"expiry of the documents.</b>"
+msgstr ""
+"<b>سيتلقى كل من الموظف والمستخدمين الذين تم اختيارهم إشعارات حول قرب انتهاء "
+"صلاحية الوثائق.</b>"
+
+#. module: hr_base
+#: code:addons/hr_base/models/hr_employee.py:0
+#, python-format
+msgid "<br/> Driving license Expiration Date: %s <br/><br/>"
+msgstr "<br/> تاريخ انتهاء رخص القيادة: %s <br/><br/>"
+
+#. module: hr_base
+#: code:addons/hr_base/models/hr_employee.py:0
+#, python-format
+msgid "<br/> Health certificate Expiration Date: %s <br/><br/>"
+msgstr "<br/> تاريخ انتهاء الشهادة الصحية: %s <br/><br/>"
+
+#. module: hr_base
+#: code:addons/hr_base/models/hr_employee.py:0
+#, python-format
+msgid ""
+"<br/> Insurance No: %s <br/> Medical Insurance Expiration Date: %s "
+"<br/><br/>"
+msgstr "<br/> رقم التأمين: %s <br/> تاريخ انتهاء التأمين الطبي: %s <br/><br/>"
+
+#. module: hr_base
+#: code:addons/hr_base/models/hr_employee.py:0
+#, python-format
+msgid "<br/> Passport No: %s <br/> Passport Expiration Date: %s <br/><br/>"
+msgstr "<br/> رقم جواز السفر: %s <br/> تاريخ انتهاء جواز السفر: %s <br/><br/>"
+
+#. module: hr_base
+#: code:addons/hr_base/models/hr_employee.py:0
+#, python-format
+msgid ""
+"<br/> Residence Number: %s <br/> Residence Expiration Date: %s <br/><br/>"
+msgstr "<br/> رقم الإقامة: %s <br/> تاريخ انتهاء الاقامة: %s <br/><br/>"
+
+#. module: hr_base
+#: model_terms:ir.ui.view,arch_db:hr_base.hr_kanban_view_employees_inherit_hr_base
+msgid ""
+"<span class=\"fa fa-ban\" role=\"img\" aria-label=\"Expired Stay\" title=\"Expired Stay\">\n"
+"                        </span>"
+msgstr ""
+"<span class=\"fa fa-ban\" role=\"img\" aria-label=\"إقامة منتهية\" title=\"إقامة منتهية\">\n"
+"                        </span>"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee__age
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_base__age
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_public__age
+msgid "Age"
+msgstr "العمر"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee__attachment_ids
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_base__attachment_ids
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_public__attachment_ids
+#: model_terms:ir.ui.view,arch_db:hr_base.view_employee_form_inherit
+msgid "Attachments"
+msgstr "المرفقات"
+
+#. module: hr_base
+#: model:ir.model,name:hr_base.model_hr_employee_base
+msgid "Basic Employee"
+msgstr "الموظف الأساسي"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_information_setting__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: hr_base
+#: model:ir.ui.menu,name:hr_base.res_country_menu_all
+msgid "Countries"
+msgstr "الدول"
+
+#. module: hr_base
+#: model:ir.ui.menu,name:hr_base.res_country_group_menu_all
+msgid "Country Group"
+msgstr "فئات الدول"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_information_setting__create_uid
+msgid "Created by"
+msgstr "انشأ من قبل"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_information_setting__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee__birthday
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_base__birthday
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_public__birthday
+msgid "Date of Birth"
+msgstr "تاريخ الميلاد"
+
+#. module: hr_base
+#: model:ir.model.fields.selection,name:hr_base.selection__hr_employee_information_setting__driving_license_unity__day
+#: model:ir.model.fields.selection,name:hr_base.selection__hr_employee_information_setting__health_certificate_unity__day
+#: model:ir.model.fields.selection,name:hr_base.selection__hr_employee_information_setting__insurance_unity__day
+#: model:ir.model.fields.selection,name:hr_base.selection__hr_employee_information_setting__passport_unity__day
+#: model:ir.model.fields.selection,name:hr_base.selection__hr_employee_information_setting__residence_unity__day
+msgid "Day"
+msgstr "يوم"
+
+#. module: hr_base
+#: model:ir.model,name:hr_base.model_hr_department
+msgid "Department"
+msgstr "القسم"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_department__name
+msgid "Department Name"
+msgstr "اسم القسم"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee__date_direct_action
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_base__date_direct_action
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_public__date_direct_action
+msgid "Direct Action Date"
+msgstr "تاريخ مباشرة العمل"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_department__display_name
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_base__display_name
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_information_setting__display_name
+#: model:ir.model.fields,field_description:hr_base.field_resource_resource__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_base
+#: model_terms:ir.ui.view,arch_db:hr_base.view_employee_form_inherit
+msgid "Driving"
+msgstr "القيادة"
+
+#. module: hr_base
+#: code:addons/hr_base/models/hr_employee.py:0
+#: code:addons/hr_base/models/hr_employee.py:0
+#, python-format
+msgid "Driving license Expiration"
+msgstr "إنتهاء رخص القيادة"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee__driving_license_end_date
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_base__driving_license_end_date
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_public__driving_license_end_date
+msgid "Driving license Expiration Date"
+msgstr "تاريخ انتهاء رخص القيادة"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_information_setting__driving_license_msg
+#: model_terms:ir.ui.view,arch_db:hr_base.hr_employee_information_setting_view_form
+msgid "Driving license Message"
+msgstr "رسالة انتهاء رخص القيادة"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_information_setting__driving_license_unity
+msgid "Driving license Unity"
+msgstr "وحدة رخصة القيادة"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee__driving_license_attachment_ids
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_base__driving_license_attachment_ids
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_information_setting__driving_license
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_public__driving_license_attachment_ids
+#: model_terms:ir.ui.view,arch_db:hr_base.hr_employee_information_setting_view_form
+msgid "Driving licenses"
+msgstr " رخص القيادة"
+
+#. module: hr_base
+#: model:ir.model,name:hr_base.model_hr_employee
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_base
+#: model:ir.model,name:hr_base.model_hr_employee_information_setting
+msgid "Employee Information Setting"
+msgstr "إعدادات معلومات الموظفين"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee__display_name_en
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_base__display_name_en
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_public__display_name_en
+#: model_terms:ir.ui.view,arch_db:hr_base.view_employee_form_inherit
+msgid "English Name"
+msgstr "الإسم بالانجليزية"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee__expired_stay
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_base__expired_stay
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_public__expired_stay
+msgid "Expired Stay"
+msgstr "إقامة منتهية"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee__gosi_no
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_base__gosi_no
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_public__gosi_no
+msgid "Gosi No"
+msgstr "رقم التأمينات الإجتماعية"
+
+#. module: hr_base
+#: model_terms:ir.ui.view,arch_db:hr_base.view_employee_form_inherit
+msgid "Health"
+msgstr "الصحة"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee__health_certificate_attachment_ids
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_base__health_certificate_attachment_ids
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_information_setting__health_certificate
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_public__health_certificate_attachment_ids
+#: model_terms:ir.ui.view,arch_db:hr_base.hr_employee_information_setting_view_form
+msgid "Health certificate"
+msgstr "الشهادة الصحية"
+
+#. module: hr_base
+#: code:addons/hr_base/models/hr_employee.py:0
+#: code:addons/hr_base/models/hr_employee.py:0
+#, python-format
+msgid "Health certificate Expiration"
+msgstr "انتهاء الشهادة الصحية"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee__health_certificate_end_date
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_base__health_certificate_end_date
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_public__health_certificate_end_date
+msgid "Health certificate Expiration Date"
+msgstr "تاريخ انتهاء الشهادة الصحية"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_information_setting__health_certificate_msg
+#: model_terms:ir.ui.view,arch_db:hr_base.hr_employee_information_setting_view_form
+msgid "Health certificate Message"
+msgstr "رسالة انتهاء الشهادة الصحية"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_information_setting__health_certificate_unity
+msgid "Health certificate Unity"
+msgstr "شهادة صحية الوحدة"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_department__id
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee__id
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_base__id
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_information_setting__id
+#: model:ir.model.fields,field_description:hr_base.field_resource_resource__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_base
+#: code:addons/hr_base/models/hr_employee.py:0
+#, python-format
+msgid "Identification ID should be unique !"
+msgstr " رقم الهوية يجب أن يكون فريداً. "
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee__identification_id
+msgid "Identification No"
+msgstr "الرقم القومي"
+
+#. module: hr_base
+#: model_terms:ir.ui.view,arch_db:hr_base.view_employee_form_inherit
+msgid "Insurance"
+msgstr "التأمين"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee__insurance_no
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_base__insurance_no
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_public__insurance_no
+msgid "Insurance No"
+msgstr "رقم التأمين"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee__labour_office_no
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_base__labour_office_no
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_public__labour_office_no
+msgid "Labour Office No"
+msgstr "رقم مكتب العمل"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_department____last_update
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_base____last_update
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_information_setting____last_update
+#: model:ir.model.fields,field_description:hr_base.field_resource_resource____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_information_setting__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_information_setting__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee__insurance_attachment_ids
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_base__insurance_attachment_ids
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_information_setting__insurance
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_public__insurance_attachment_ids
+#: model_terms:ir.ui.view,arch_db:hr_base.hr_employee_information_setting_view_form
+msgid "Medical Insurance"
+msgstr "التأمين الطبي"
+
+#. module: hr_base
+#: code:addons/hr_base/models/hr_employee.py:0
+#: code:addons/hr_base/models/hr_employee.py:0
+#, python-format
+msgid "Medical Insurance Expiration"
+msgstr "انتهاء التأمين الطبي"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee__insurance_end_date
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_base__insurance_end_date
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_public__insurance_end_date
+msgid "Medical Insurance Expiration Date"
+msgstr "تاريخ انتهاء التأمين الطبي "
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_information_setting__insurance_msg
+#: model_terms:ir.ui.view,arch_db:hr_base.hr_employee_information_setting_view_form
+msgid "Medical Insurance Message"
+msgstr "رسالة انتهاء التأمين الطبي"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_information_setting__insurance_unity
+msgid "Medical Insurance Unity"
+msgstr "وحدة التأمين الطبي"
+
+#. module: hr_base
+#: model:ir.model.fields.selection,name:hr_base.selection__hr_employee_information_setting__driving_license_unity__month
+#: model:ir.model.fields.selection,name:hr_base.selection__hr_employee_information_setting__health_certificate_unity__month
+#: model:ir.model.fields.selection,name:hr_base.selection__hr_employee_information_setting__insurance_unity__month
+#: model:ir.model.fields.selection,name:hr_base.selection__hr_employee_information_setting__passport_unity__month
+#: model:ir.model.fields.selection,name:hr_base.selection__hr_employee_information_setting__residence_unity__month
+msgid "Month"
+msgstr "شهر"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_information_setting__name
+#: model:ir.model.fields,field_description:hr_base.field_resource_resource__name
+msgid "Name"
+msgstr "الإسم"
+
+#. module: hr_base
+#: code:addons/hr_base/models/hr_employee.py:0
+#, python-format
+msgid "Name: %s <br/> Job number: %s <br/> Company: %s"
+msgstr "الاسم: %s <br/>  الرقم الوظيفي: %s <br/> الشركة: %s"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee__identification_date
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_base__identification_date
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_public__identification_date
+msgid "National Identity Expiry Date"
+msgstr "تاريخ إنتهاء الهوية الوطنية"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee__country_id
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_base__country_id
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_public__country_id
+msgid "Nationality (Country)"
+msgstr "الجنسية (البلد)"
+
+#. module: hr_base
+#: model:ir.actions.server,name:hr_base.ir_cron_send_mail_employee_expiration_ir_actions_server
+#: model:ir.cron,cron_name:hr_base.ir_cron_send_mail_employee_expiration
+#: model:ir.cron,name:hr_base.ir_cron_send_mail_employee_expiration
+msgid "Notification about documents employees expiration"
+msgstr " إشعارات بقرب إنتهاء وثائق الموظفين"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_information_setting__passport
+#: model_terms:ir.ui.view,arch_db:hr_base.hr_employee_information_setting_view_form
+msgid "Passport"
+msgstr "جواز السفر"
+
+#. module: hr_base
+#: code:addons/hr_base/models/hr_employee.py:0
+#: code:addons/hr_base/models/hr_employee.py:0
+#, python-format
+msgid "Passport Expiration"
+msgstr "انتهاء جواز السفر"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee__passport_end_date
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_base__passport_end_date
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_public__passport_end_date
+msgid "Passport Expiration Date"
+msgstr "تاريخ انتهاء جواز السفر"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_information_setting__passport_msg
+#: model_terms:ir.ui.view,arch_db:hr_base.hr_employee_information_setting_view_form
+msgid "Passport Message"
+msgstr "رسالة انتهاء جواز السفر"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_information_setting__passport_unity
+msgid "Passport Unity"
+msgstr "وحدة جواز السفر"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_information_setting__residence
+#: model_terms:ir.ui.view,arch_db:hr_base.hr_employee_information_setting_view_form
+msgid "Residence"
+msgstr "الاقامة"
+
+#. module: hr_base
+#: code:addons/hr_base/models/hr_employee.py:0
+#: code:addons/hr_base/models/hr_employee.py:0
+#, python-format
+msgid "Residence Expiration"
+msgstr "انتهاء الاقامة"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee__residence_end_date
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_base__residence_end_date
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_public__residence_end_date
+msgid "Residence Expiration Date"
+msgstr "تاريخ انتهاء الاقامة"
+
+#. module: hr_base
+#: code:addons/hr_base/models/hr_employee.py:0
+#, python-format
+msgid "Residence ID should be unique !"
+msgstr "رقم الإقامة يجب أن يكون فريداً. "
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_information_setting__residence_msg
+#: model_terms:ir.ui.view,arch_db:hr_base.hr_employee_information_setting_view_form
+msgid "Residence Message"
+msgstr "رسالة انتهاء الاقامة"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee__residence_id
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_base__residence_id
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_public__residence_id
+msgid "Residence Number"
+msgstr "رقم الإقامة"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_information_setting__residence_unity
+msgid "Residence Unity"
+msgstr "وحدة الإقامة"
+
+#. module: hr_base
+#: model:ir.model,name:hr_base.model_resource_resource
+msgid "Resources"
+msgstr "الموارد"
+
+#. module: hr_base
+#: model_terms:ir.ui.view,arch_db:hr_base.view_employee_form_inherit
+msgid "Select Files"
+msgstr "اختر مرفقات"
+
+#. module: hr_base
+#: model:ir.actions.server,name:hr_base.ir_cron_set_expired_stay_ir_actions_server
+#: model:ir.cron,cron_name:hr_base.ir_cron_set_expired_stay
+#: model:ir.cron,name:hr_base.ir_cron_set_expired_stay
+msgid "Set Expired Stay"
+msgstr "تعيين إقامة منتهية الصلاحية"
+
+#. module: hr_base
+#: model:ir.actions.act_window,name:hr_base.hr_employee_information_setting_action
+#: model:ir.ui.menu,name:hr_base.hr_employee_information_setting_menu
+msgid "Setting alerts for employee data"
+msgstr "إعداد التنبيهات الخاصة ببيانات الموظفين"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_information_setting__user_ids
+#: model_terms:ir.ui.view,arch_db:hr_base.hr_employee_information_setting_view_form
+msgid "Users"
+msgstr "المستخدمين"
+
+#. module: hr_base
+#: model:ir.ui.menu,name:hr_base.resource_calendar_menu_hr
+msgid "Working Times"
+msgstr "فترات العمل"
+
+#. module: hr_base
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee__is_saudian
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_base__is_saudian
+#: model:ir.model.fields,field_description:hr_base.field_hr_employee_public__is_saudian
+msgid "is saudian"
+msgstr "سعودي"
+
+#. module: hr_base
+#: model:ir.ui.menu,name:hr_base.res_country_state_menu
+msgid "Country states"
+msgstr "المحافظات"

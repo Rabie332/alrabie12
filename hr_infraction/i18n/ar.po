@@ -1,0 +1,526 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_infraction
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-13 16:38+0000\n"
+"PO-Revision-Date: 2020-11-13 16:38+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_infraction
+#: model:ir.model,name:hr_infraction.model_request_type
+msgid " Request Type"
+msgstr "نوع الطلب"
+
+#. module: hr_infraction
+#: model_terms:ir.ui.view,arch_db:hr_infraction.infraction_report_templates
+msgid "<strong>الفترة المطبقة</strong>"
+msgstr ""
+
+#. module: hr_infraction
+#: model_terms:ir.ui.view,arch_db:hr_infraction.infraction_report_templates
+msgid ""
+"<strong>النوع\n"
+"                                                            </strong>"
+msgstr ""
+
+#. module: hr_infraction
+#: model_terms:ir.ui.view,arch_db:hr_infraction.infraction_report_templates
+msgid ""
+"<strong>الوصف\n"
+"                                                            </strong>"
+msgstr ""
+
+#. module: hr_infraction
+#: model_terms:ir.ui.view,arch_db:hr_infraction.infraction_report_templates
+msgid ""
+"<strong>تاريخ الطلب\n"
+"                                                            </strong>"
+msgstr ""
+
+#. module: hr_infraction
+#: model_terms:ir.ui.view,arch_db:hr_infraction.infraction_report_templates
+msgid "<strong>رقم طلــــب المخالفة :</strong>"
+msgstr ""
+
+#. module: hr_infraction
+#: model_terms:ir.ui.view,arch_db:hr_infraction.infraction_report_templates
+msgid ""
+"<strong>صاحب الطلب\n"
+"                                                            </strong>"
+msgstr ""
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__message_needaction
+msgid "Action Needed"
+msgstr "الإجراءات اللازمة"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__active
+#: model:ir.model.fields,field_description:hr_infraction.field_request_type__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "نشاط استثناء الديكور"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__amount
+#: model:ir.model.fields.selection,name:hr_infraction.selection__request_type__infraction_type__amount
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: hr_infraction
+#: code:addons/hr_infraction/models/hr_infraction.py:0
+#, python-format
+msgid "Amount should be greater than zero"
+msgstr "المبلغ يجب أن يكون  أكبر من الصفر"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__employee_id
+msgid "Applicant"
+msgstr "الموظف"
+
+#. module: hr_infraction
+#: model:mail.message.subtype,name:hr_infraction.mt_hr_infraction_approved
+msgid "Approved"
+msgstr "أعتمد"
+
+#. module: hr_infraction
+#: model_terms:ir.ui.view,arch_db:hr_infraction.hr_infraction_view_form
+#: model_terms:ir.ui.view,arch_db:hr_infraction.hr_infraction_view_search
+#: model_terms:ir.ui.view,arch_db:hr_infraction.request_type_view_form_inherit_infraction
+#: model_terms:ir.ui.view,arch_db:hr_infraction.request_type_view_search
+msgid "Archived"
+msgstr "مؤرشف"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: hr_infraction
+#: model:ir.ui.menu,name:hr_infraction.hr_infraction_configuration_menu_hr
+msgid "Configuration"
+msgstr "إعدادات"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__create_uid
+msgid "Created by"
+msgstr "انشأ من قبل"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hr_infraction
+#: model_terms:ir.ui.view,arch_db:hr_infraction.hr_infraction_view_search
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: hr_infraction
+#: model_terms:ir.ui.view,arch_db:hr_infraction.hr_infraction_view_kanban
+msgid "Date:"
+msgstr "التاريخ:"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__type_deduction
+msgid "Deduction Type"
+msgstr "نوع الخصم"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__department_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__display_button_accept
+msgid "Display Button Accept"
+msgstr "عرض زر قبول"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__display_button_refuse
+msgid "Display Button Refuse"
+msgstr "عرض زر رفض"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__display_button_send
+msgid "Display Button Send"
+msgstr "عرض زر إرسال"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__display_name
+msgid "Display Name"
+msgstr "الاسم"
+
+#. module: hr_infraction
+#: model:request.stage,name:hr_infraction.hr_infraction_stage_done
+msgid "Done"
+msgstr "تم"
+
+#. module: hr_infraction
+#: model:request.stage,name:hr_infraction.hr_infraction_stage_draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: hr_infraction
+#: model_terms:ir.ui.view,arch_db:hr_infraction.hr_infraction_view_search
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_infraction
+#: model_terms:ir.ui.view,arch_db:hr_infraction.hr_infraction_view_kanban
+msgid "Employee :"
+msgstr "الموظف :"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__date_from
+msgid "From"
+msgstr "من"
+
+#. module: hr_infraction
+#: model_terms:ir.ui.view,arch_db:hr_infraction.hr_infraction_view_search
+msgid "Grouped by"
+msgstr "تم تجميعها بواسطة"
+
+#. module: hr_infraction
+#: model:ir.actions.report,name:hr_infraction.report_hr_infraction
+msgid "Hr Infraction Report"
+msgstr "تقرير مخالفة الموارد البشرية"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__id
+msgid "ID"
+msgstr "رقم الهوية"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__activity_exception_icon
+msgid "Icon"
+msgstr "أيقونة"
+
+#. module: hr_infraction
+#: model:ir.model.fields,help:hr_infraction.field_hr_infraction__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr " أيقونة للإشارة إلى نشاط مستثنى ."
+
+#. module: hr_infraction
+#: model:ir.model.fields,help:hr_infraction.field_hr_infraction__message_needaction
+#: model:ir.model.fields,help:hr_infraction.field_hr_infraction__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم تحديد ذلك ، فإن الرسائل الجديدة تتطلب اهتمامك."
+
+#. module: hr_infraction
+#: model:ir.model.fields,help:hr_infraction.field_hr_infraction__message_has_error
+#: model:ir.model.fields,help:hr_infraction.field_hr_infraction__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده ، فبعض الرسائل بها خطأ في التسليم."
+
+#. module: hr_infraction
+#: model:ir.model,name:hr_infraction.model_hr_infraction
+msgid "Infraction"
+msgstr "مخالفة"
+
+#. module: hr_infraction
+#: model:res.groups,name:hr_infraction.hr_infraction_group_manager
+msgid "Infraction Manager"
+msgstr "مسؤول المخالفات"
+
+#. module: hr_infraction
+#: model:ir.ui.menu,name:hr_infraction.hr_infraction_stage_menu_hr
+msgid "Infraction Stages"
+msgstr "مراحل المخالفات"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_request_type__infraction_type
+msgid "Infraction Type"
+msgstr "نوع المخالفة"
+
+#. module: hr_infraction
+#: model:ir.actions.act_window,name:hr_infraction.hr_infraction_action
+#: model:ir.actions.act_window,name:hr_infraction.hr_infraction_action_drive_actions
+#: model:ir.module.category,name:hr_infraction.module_category_hr_infraction
+#: model:ir.ui.menu,name:hr_infraction.hr_infraction_menu_drive_actions
+#: model:ir.ui.menu,name:hr_infraction.hr_infraction_menu_hr
+#: model:ir.ui.menu,name:hr_infraction.hr_infraction_menu_root_hr
+msgid "Infractions"
+msgstr "المخالفات"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__job_id
+msgid "Job"
+msgstr "المهنة"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__kanban_color
+msgid "Kanban Color Index"
+msgstr "مؤشر لون كانبان"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__manager_id
+msgid "Manager"
+msgstr "المشرف"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "أخر موعد للنشاط المقبل"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__name
+msgid "Number"
+msgstr "المسمى"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: hr_infraction
+#: model:ir.model.fields.selection,name:hr_infraction.selection__request_type__infraction_type__nb_days
+msgid "Number of Days"
+msgstr "عدد الأيام"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__number_days
+#: model_terms:ir.ui.view,arch_db:hr_infraction.hr_infraction_view_form
+msgid "Number of days"
+msgstr "عدد الأيام"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: hr_infraction
+#: model:ir.model.fields,help:hr_infraction.field_hr_infraction__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: hr_infraction
+#: model:ir.model.fields,help:hr_infraction.field_hr_infraction__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل مع خطأ التسليم"
+
+#. module: hr_infraction
+#: model:ir.model.fields,help:hr_infraction.field_hr_infraction__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل غير المقروءة"
+
+#. module: hr_infraction
+#: model_terms:ir.ui.view,arch_db:hr_infraction.hr_infraction_view_form
+#: model_terms:ir.ui.view,arch_db:hr_infraction.hr_infraction_view_search
+msgid "Period"
+msgstr "فترة"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__period_id
+msgid "Period applied"
+msgstr "الفترة"
+
+#. module: hr_infraction
+#: model_terms:ir.ui.view,arch_db:hr_infraction.hr_infraction_view_form
+msgid "Print"
+msgstr "طباعة"
+
+#. module: hr_infraction
+#: model:mail.message.subtype,name:hr_infraction.mt_hr_infraction_refused
+#: model:request.stage,name:hr_infraction.hr_infraction_stage_refuse
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: hr_infraction
+#: model:mail.activity.type,name:hr_infraction.mail_hr_infraction_approval
+msgid "Request Approval"
+msgstr "طلب للموافقة"
+
+#. module: hr_infraction
+#: model:mail.message.subtype,description:hr_infraction.mt_hr_infraction_approved
+msgid "Request approved"
+msgstr "تم الموافقة على الطلب"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__date
+msgid "Request date"
+msgstr "تاريخ الطلب"
+
+#. module: hr_infraction
+#: model:mail.message.subtype,description:hr_infraction.mt_hr_infraction_refused
+msgid "Request refused"
+msgstr "طلب مرفوض"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__stage_id
+msgid "Stage"
+msgstr "مرحلة"
+
+#. module: hr_infraction
+#: model:ir.actions.act_window,name:hr_infraction.hr_infraction_stage_action
+msgid "Stages"
+msgstr "المراحل"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: hr_infraction
+#: model:ir.model.fields,help:hr_infraction.field_hr_infraction__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: hr_infraction
+#: code:addons/hr_infraction/models/hr_infraction.py:0
+#, python-format
+msgid "The start date must be anterior to the end date."
+msgstr "تاريخ البدء يجب أن يكون أصغر من تاريخ الانتهاء."
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__date_to
+msgid "To"
+msgstr "إلى"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__request_type_id
+#: model_terms:ir.ui.view,arch_db:hr_infraction.hr_infraction_view_search
+msgid "Type"
+msgstr "النوع"
+
+#. module: hr_infraction
+#: model_terms:ir.ui.view,arch_db:hr_infraction.hr_infraction_view_kanban
+msgid "Type :"
+msgstr "النوع:"
+
+#. module: hr_infraction
+#: model:ir.model.fields,help:hr_infraction.field_hr_infraction__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع نشاط المستثنى في السجل."
+
+#. module: hr_infraction
+#: model:ir.actions.act_window,name:hr_infraction.hr_infraction_type_action
+#: model:ir.ui.menu,name:hr_infraction.hr_infraction_type_menu_hr
+msgid "Types"
+msgstr "الأنواع"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__message_unread
+msgid "Unread Messages"
+msgstr "رسائل غير مقروءة"
+
+#. module: hr_infraction
+#: model:ir.model.fields,field_description:hr_infraction.field_hr_infraction__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عداد الرسائل غير المقروءة"
+
+#. module: hr_infraction
+#: model:request.stage,name:hr_infraction.hr_infraction_stage_approve
+msgid "Validate"
+msgstr "أعتمد"
+
+#. module: hr_infraction
+#: model:ir.model.fields.selection,name:hr_infraction.selection__request_type__infraction_type__no_deduction
+msgid "Without Deduction"
+msgstr "دون خصم"

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="report_booking_summary_folio_template">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="hotel_reservation.report_booking_summary_template">
+                    <t t-set="docs" t-value="o.reservation_id" />
+                </t>
+            </t>
+        </template>
+
+         <template id="report_rent_contract_folio_template">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="hotel_reservation.report_rent_contract_template">
+                    <t t-set="docs" t-value="o.reservation_id" />
+                </t>
+            </t>
+        </template>
+
+    </data>
+</odoo>

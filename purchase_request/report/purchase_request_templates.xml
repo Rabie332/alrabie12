@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="purchase_request_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <div class="header" />
+                <div class="footer" />
+                <t t-call="web.external_layout">
+                    <div class="page" style="direction:rtl;">
+                        <style>
+                            .grey-cell{
+                            background-color: rgb(236, 240, 245);
+                            }
+                        </style>
+                        <div class="oe_structure" />
+                        <div class="col-xs-12">
+
+                            <div class="col-xs-6 pull-right" style="text-align:left;">
+                                <img
+                                    style="width:160px !important;height:160px !important;margin-bottom:30px;"
+                                    t-att-src="'data:image/png;base64,%s' % to_text(o.create_uid.company_id.sudo().logo)"
+                                />
+                            </div>
+
+                            <div
+                                class="col-xs-6 report-primary-color"
+                                style="text-align:right;font-size:40px;"
+                            >
+                                <br />
+                                <h2 style="color:#507298;">
+                                    <span>طلب شراء</span>
+                                    -
+                                    <span t-field="o.name" />
+                                </h2>
+                            </div>
+                        </div>
+
+                        <table class="table table-bordered">
+                            <tr>
+                                <td colspan="4" class="grey-cell">
+                                    <strong>معلومات الطلب</strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="10%" class="grey-cell">
+                                    <strong>رقم الطلب</strong>
+                                </td>
+                                <td width="40%">
+                                    <span t-field="o.name" />
+                                </td>
+                                <td width="10%" class="grey-cell">
+                                    <strong>تاريخ الطلب</strong>
+                                </td>
+                                <td width="40%">
+                                    <span t-field="o.date" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="10%" class="grey-cell">
+                                    <strong>طريقة الشراء</strong>
+                                </td>
+                                <td colspan="3">
+                                    <t
+                                        t-set="types"
+                                        t-value="request.env['request.type'].sudo().search([('res_model','=', 'purchase.request')])"
+                                    />
+                                    <t t-foreach="types" t-as="type">
+                                        <t t-if="type">
+                                            <t t-if="o.request_type_id == type">
+                                                <input type="checkbox" checked="True" />
+                                            </t>
+                                            <t t-else="">
+                                                <input type="checkbox" />
+                                            </t>
+                                            <span t-field="type.name" />
+                                             &#160;  &#160;  &#160;  &#160;  &#160;
+                                        </t>
+                                    </t>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="10%" class="grey-cell">
+                                    <strong>مبررات ألية الطرح</strong>
+                                </td>
+                                <td colspan="3">
+                                    <span t-field="o.reason" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="10%" class="grey-cell">
+                                    <strong>الوصف</strong>
+                                </td>
+                                <td colspan="3">
+                                    <span t-field="o.description" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%" class="grey-cell">
+                                    <strong>الميزانية المطلوبة (بالريال)</strong>
+                                </td>
+                                <td colspan="3">
+                                    <span t-field="o.estimated_budget" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%" class="grey-cell">
+                                    <strong>صاحب الطلب</strong>
+                                </td>
+                                <td width="30%">
+                                    <span t-field="o.employee_id" />
+                                </td>
+                                <td width="20%" class="grey-cell">
+                                    <strong>الوظيفة</strong>
+                                </td>
+                                <td width="30%">
+                                    <span t-field="o.job_id" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%" class="grey-cell">
+                                    <strong>التاريخ</strong>
+                                </td>
+                                <td width="30%">
+                                    <span
+                                        t-field="o.create_date"
+                                        t-options='{"widget": "date"}'
+                                    />
+                                </td>
+                                <td width="20%" class="grey-cell">
+                                    <strong>التوقيع</strong>
+                                </td>
+                                <td width="30%" />
+                            </tr>
+
+                        </table>
+
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <td class="grey-cell" style="width :5%;">
+                                        <strong>م</strong>
+                                    </td>
+                                    <td class="grey-cell" style="width :40%;">
+                                        <strong>المنتج</strong>
+                                    </td>
+                                    <td class="grey-cell" style="width :15%;">
+                                        <strong>الكمية</strong>
+                                    </td>
+                                    <td class="grey-cell" style="width :40%;">
+                                        <strong>ملاحظات</strong>
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-set="line_index" t-value="0" />
+                                <t t-foreach="o.line_ids" t-as="line">
+                                    <tr>
+                                        <td class="text-center">
+                                            <span t-esc="line_index + 1" />
+                                        </td>
+                                        <td>
+                                            <span t-field="line.product_id" />
+                                        </td>
+                                        <td>
+                                            <span t-field="line.product_qty" />
+                                        </td>
+                                        <td>
+                                            <span t-esc="line.notes" />
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                        <table class="table table-bordered">
+                            <tr>
+                                <td colspan="4" class="grey-cell">
+                                    <strong>مراحل الموافقة على طلب</strong>
+                                </td>
+                            </tr>
+
+                        </table>
+
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

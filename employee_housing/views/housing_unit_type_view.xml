@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <record id="housing_unit_type_action" model="ir.actions.act_window">
+    <field name="name">Unit Type</field>
+    <field name="res_model">housing.unit.type</field>
+    <field name="view_mode">tree,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">
+            Create your first unit type
+          </p>
+      <p>
+            here you can add all unit types.
+          </p>
+    </field>
+  </record>
+  <menuitem id="menu_rems_unit_type"
+              parent="menu_housing_root"
+              action="housing_unit_type_action"
+              sequence="10"/>
+</odoo>

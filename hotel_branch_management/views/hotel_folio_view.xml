@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- ====== Company Configuration ====== -->
+    <record id="view_hotel_folio_form_branch" model="ir.ui.view">
+        <field name="name">hotel.room.form.branch</field>
+        <field name="model">hotel.folio</field>
+        <field name="inherit_id" ref="hotel.view_hotel_folio_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='reservation_id']" position="after">
+                <field name="folio_branch_id" string="Folio Branch"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="hr_attendance_biotime_view_form" model="ir.ui.view">
+        <field name="name">hr.attendance.biotime.form</field>
+        <field name="model">hr.attendance.biotime</field>
+        <field name="arch" type="xml">
+            <form string="Biotime Settings" create="0">
+                <header>
+                    <button
+                        name="download_attendance"
+                        type="object"
+                        string="Update attendance"
+                        class="oe_highlight"
+                        icon="fa-download "
+                        confirm="Are you sure you want to do that ?"
+                    />
+                </header>
+                <sheet>
+                    <field name="active" invisible="1" />
+                    <widget
+                        name="web_ribbon"
+                        title="Archived"
+                        bg_color="bg-danger"
+                        attrs="{'invisible': [('active', '=', True)]}"
+                    />
+                    <div class="oe_title">
+                        <label for="name" />
+                        <h1>
+                            <field name="name" placeholder="URL" />
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="biotime_tz" />
+                        </group>
+                        <group>
+                            <div class="alert alert-info" role="alert">
+                                If left unchecked, employees who forget to check
+                                out it, will get the last check-out
+                                as the last check in.
+                            </div>
+                            <field name="forgive_no_check_out" />
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="port_no" placeholder="Port" />
+                            <field name="last_transaction_date" readonly="1" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_attendance_biotime_view_tree" model="ir.ui.view">
+        <field name="name">hr.attendance.biotime.tree</field>
+        <field name="model">hr.attendance.biotime</field>
+        <field name="arch" type="xml">
+            <tree string="Biotime Settings" create="0">
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="hr_attendance_biotime_action" model="ir.actions.act_window">
+        <field name="name">Biotime Settings</field>
+        <field name="res_model">hr.attendance.biotime</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem
+        action="hr_attendance_biotime_action"
+        id="menu_hr_attendance_biotime_action"
+        name="Biotime Settings"
+        sequence="300"
+        parent="hr_attendance.menu_hr_attendance_manage_attendances"
+    />
+</odoo>

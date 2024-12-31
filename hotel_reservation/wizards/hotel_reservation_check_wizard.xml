@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="hotel_reservation_check_wizard_form_view" model="ir.ui.view">
+        <field name="name">hotel.reservation.check.wizard.form</field>
+        <field name="model">hotel.reservation.check.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Check IN/Out Reservation">
+                <group>
+                    <field name="is_all" />
+                    <field name="reservation_id" invisible="1" />
+                    <field name="check_type" invisible="1" />
+                    <field
+                        name="reservation_line_ids"
+                        options="{'no_create': True}"
+                        attrs="{'invisible': [('is_all', '=', True)],
+                                'required': [('is_all', '=', False)]}"
+                    >
+                    </field>
+                </group>
+                <footer>
+                    <button
+                        name='action_check_in'
+                        string="Register Check IN"
+                        type="object"
+                        icon="fa-sign-in"
+                        class="btn btn-primary"
+                        attrs="{'invisible': [('check_type', '=', 'out')]}"
+                    />
+                    <button
+                        name='action_check_out'
+                        string="Register Check OUt"
+                        type="object"
+                        icon="fa-sign-out"
+                        class="btn btn-primary"
+                        attrs="{'invisible': [('check_type', '=', 'in')]}"
+                    />
+                    <button special="cancel" string="Cancel" icon="fa-close" class="btn btn-primary" />
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="hotel_reservation_check_action" model="ir.actions.act_window">
+        <field name="name">Check IN/Out Reservation</field>
+        <field name="res_model">hotel.reservation.check.wizard</field>
+        <field name="binding_view_types">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

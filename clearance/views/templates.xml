@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<odoo>
+    <template id="assets_backend" name="clearance_assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+               <script type="text/javascript" src="/clearance/static/src/js/render_header_cell.js" />
+            <script type="text/javascript" src="/clearance/static/src/js/widget_shipping_agent_data.js" />
+            <script type="text/javascript" src="/clearance/static/src/js/widget_customs_declaration_data.js" />
+             <script type="text/javascript" src="/clearance/static/src/js/widget_is_not_goods_data.js" />
+            <script type="text/javascript" src="/clearance/static/src/js/widget_is_equals_weight.js" />
+            <script type="text/javascript" src="/clearance/static/src/js/widget_is_not_customs_data.js" />
+        </xpath>
+    </template>
+</odoo>

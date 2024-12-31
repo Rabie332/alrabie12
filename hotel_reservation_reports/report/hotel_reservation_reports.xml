@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+     <record id="paperformat_hotel_reservation_reports_summary" model="report.paperformat">
+        <field name="name">Reservation Reports Summary</field>
+        <field name="default" eval="True" />
+        <field name="format">custom</field>
+        <field name="page_height">297</field>
+        <field name="page_width">220</field>
+        <field name="orientation">Landscape</field>
+        <field name="margin_top">10</field>
+        <field name="margin_bottom">23</field>
+        <field name="margin_left">0</field>
+        <field name="margin_right">0</field>
+        <field name="header_line" eval="False" />
+        <field name="header_spacing">20</field>
+        <field name="dpi">90</field>
+    </record>
+
+    <record id="reservation_financial_report_preview" model="ir.actions.report">
+        <field name="name">Fund Movement Report</field>
+        <field name="model">hotel.reservation.financial.report</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">hotel_reservation_reports.report_reservation_financial</field>
+        <field name="report_file">hotel_reservation_reports.report_reservation_financial</field>
+        <field name="binding_model_id" eval="False" />
+        <field name="paperformat_id" ref="hotel_reservation_reports.paperformat_hotel_reservation_reports_summary" />
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="reservation_payment_report_preview" model="ir.actions.report">
+        <field name="name">Payments Report</field>
+        <field name="model">hotel.reservation.payment.report</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">hotel_reservation_reports.report_reservation_payment</field>
+        <field name="report_file">hotel_reservation_reports.report_reservation_payment</field>
+        <field name="binding_model_id" eval="False" />
+        <field name="paperformat_id" ref="hotel_reservation_reports.paperformat_hotel_reservation_reports_summary" />
+        <field name="binding_type">report</field>
+    </record>
+
+     <record id="reservation_invoice_report_preview" model="ir.actions.report">
+        <field name="name">Invoices Report</field>
+        <field name="model">hotel.reservation.invoice.report</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">hotel_reservation_reports.report_reservation_invoice</field>
+        <field name="report_file">hotel_reservation_reports.report_reservation_invoice</field>
+        <field name="binding_model_id" eval="False" />
+        <field name="paperformat_id" ref="hotel_reservation_reports.paperformat_hotel_reservation_reports_summary" />
+        <field name="binding_type">report</field>
+    </record>
+
+      <record id="reservation_tax_report_preview" model="ir.actions.report">
+        <field name="name">Taxes and Fees Report</field>
+        <field name="model">hotel.reservation.tax.report</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">hotel_reservation_reports.report_reservation_tax</field>
+        <field name="report_file">hotel_reservation_reports.report_reservation_tax</field>
+        <field name="binding_model_id" eval="False" />
+        <field name="paperformat_id" ref="hotel_reservation_reports.paperformat_hotel_reservation_reports_summary" />
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="reservation_tax_report_xlsx" model="ir.actions.report">
+        <field name="name">Baladi Report Xlst</field>
+        <field name="model">report.hotel_reservation_reports.reservation_tax_template_xlsx</field>
+        <field name="type">ir.actions.report</field>
+        <field name="report_name">hotel_reservation_reports.reservation_tax_template_xlsx</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_file">Baladi Report Xlst</field>
+    </record>
+
+     <record id="reservation_payment_invoice_report_preview" model="ir.actions.report">
+        <field name="name">Payments/Invoice Report</field>
+        <field name="model">hotel.reservation.payment.invoice.report</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">hotel_reservation_reports.report_payment_invoice</field>
+        <field name="report_file">hotel_reservation_reports.report_payment_invoice</field>
+        <field name="binding_model_id" ref="hotel_reservation_reports.model_hotel_reservation_payment_invoice_report" />
+        <field name="paperformat_id" ref="hotel_reservation_reports.paperformat_hotel_reservation_reports_summary" />
+        <field name="binding_type">report</field>
+    </record>
+
+     <record id="reservation_monthly_collection_report_preview" model="ir.actions.report">
+        <field name="name">Monthly revenue and receipts report</field>
+        <field name="model">hotel.reservation.monthly.report</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">hotel_reservation_reports.report_reservation_monthly</field>
+        <field name="report_file">hotel_reservation_reports.report_reservation_monthly</field>
+        <field name="paperformat_id" ref="hotel_reservation_reports.paperformat_hotel_reservation_reports_summary" />
+        <field name="binding_type">report</field>
+    </record>
+
+
+    <record id="reservation_monthly_total_report_preview" model="ir.actions.report">
+        <field name="name">Report of total monthly revenues and receipts</field>
+        <field name="model">hotel.reservation.monthly.report</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">hotel_reservation_reports.report_reservation_monthly</field>
+        <field name="report_file">hotel_reservation_reports.report_reservation_monthly</field>
+        <field name="paperformat_id" ref="hotel_reservation_reports.paperformat_hotel_reservation_reports_summary" />
+        <field name="binding_type">report</field>
+    </record>
+
+
+    <record id="reservation_promissory_report_preview" model="ir.actions.report">
+        <field name="name">Report Promissory Notes</field>
+        <field name="model">hotel.reservation.promissory.report</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">hotel_reservation_reports.report_reservation_promissory</field>
+        <field name="report_file">hotel_reservation_reports.report_reservation_promissory</field>
+        <field name="paperformat_id" ref="hotel_reservation_reports.paperformat_hotel_reservation_reports_summary" />
+        <field name="binding_type">report</field>
+    </record>
+
+
+
+
+
+</odoo>

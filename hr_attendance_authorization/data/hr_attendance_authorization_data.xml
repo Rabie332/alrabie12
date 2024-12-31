@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="attendance_summary_automation_hr_authorization" model="base.automation">
+        <field
+            name="name"
+        >Base Automation: update attendance summary when the status of authorization is updated</field>
+        <field name="model_id" ref="hr_authorization.model_hr_authorization" />
+        <field name="state">code</field>
+        <field name="code">
+            env['hr.attendance.summary.line'].update_summary_attendance(record)
+        </field>
+        <field name="trigger">on_write</field>
+        <field name="active" eval="True" />
+        <field name="filter_domain">[('state', 'in', ['done', 'cancel'])]</field>
+    </record>
+
+</odoo>

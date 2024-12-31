@@ -1,0 +1,331 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_move_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-14 15:52+0000\n"
+"PO-Revision-Date: 2022-11-14 15:52+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account_move_report
+#: model_terms:ir.ui.view,arch_db:account_move_report.account_entry_report_template
+msgid ""
+"<strong>\n"
+"                                                            Entries Report\n"
+"                                                        </strong>\n"
+"\n"
+"                                                        <br/>"
+msgstr ""
+"<strong>\n"
+"                                                            تقرير القيود اليومية\n"
+"                                                        </strong>\n"
+"\n"
+"                                                        <br/>"
+
+#. module: account_move_report
+#: model_terms:ir.ui.view,arch_db:account_move_report.account_entry_report_template
+msgid "<strong>Period</strong>"
+msgstr "<strong>الفترة</strong>"
+
+#. module: account_move_report
+#: model_terms:ir.ui.view,arch_db:account_move_report.account_move_report
+msgid "Account"
+msgstr "الحساب"
+
+#. module: account_move_report
+#: model:ir.model,name:account_move_report.model_account_entry_report_wizard
+msgid "Account Entries Report"
+msgstr "تقرير القيود اليومية"
+
+#. module: account_move_report
+#: code:addons/account_move_report/report/account_entry_xlsx_template.py:0
+#: model_terms:ir.ui.view,arch_db:account_move_report.account_entry_report_template
+#, python-format
+msgid "Approver"
+msgstr "معتمد القيد"
+
+#. module: account_move_report
+#: code:addons/account_move_report/report/account_entry_xlsx_template.py:0
+#: model_terms:ir.ui.view,arch_db:account_move_report.account_entry_report_template
+#, python-format
+msgid "Confirm User"
+msgstr "مؤكد القيد"
+
+#. module: account_move_report
+#: model_terms:ir.ui.view,arch_db:account_move_report.account_move_report
+msgid ""
+"Confirmation\n"
+"                                            <br/>\n"
+"                                            Billing Confirmation Officer"
+msgstr ""
+"التأكيد\n"
+"                                            <br/>\n"
+"                                            مسؤول تأكيد الفواتير"
+
+#. module: account_move_report
+#: model:ir.model.fields,field_description:account_move_report.field_account_entry_report_wizard__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: account_move_report
+#: model:ir.model.fields,field_description:account_move_report.field_account_entry_report_wizard__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: account_move_report
+#: model_terms:ir.ui.view,arch_db:account_move_report.account_entry_report_template
+#: model_terms:ir.ui.view,arch_db:account_move_report.account_move_report
+msgid "Credit"
+msgstr "الدائن"
+
+#. module: account_move_report
+#: code:addons/account_move_report/report/account_entry_xlsx_template.py:0
+#: code:addons/account_move_report/report/account_entry_xlsx_template.py:0
+#: code:addons/account_move_report/report/account_entry_xlsx_template.py:0
+#: code:addons/account_move_report/report/account_entry_xlsx_template.py:0
+#: model_terms:ir.ui.view,arch_db:account_move_report.account_entry_report_template
+#, python-format
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: account_move_report
+#: model_terms:ir.ui.view,arch_db:account_move_report.account_move_report
+msgid "Date :"
+msgstr "التاريخ :"
+
+#. module: account_move_report
+#: model_terms:ir.ui.view,arch_db:account_move_report.account_entry_report_template
+#: model_terms:ir.ui.view,arch_db:account_move_report.account_move_report
+msgid "Debit"
+msgstr "المدين"
+
+#. module: account_move_report
+#: model:ir.model.fields,field_description:account_move_report.field_account_entry_report_wizard__display_name
+#: model:ir.model.fields,field_description:account_move_report.field_ir_actions_report__display_name
+#: model:ir.model.fields,field_description:account_move_report.field_report_account_move_report_account_entry_report_template__display_name
+#: model:ir.model.fields,field_description:account_move_report.field_report_account_move_report_account_entry_report_template_xlsx__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: account_move_report
+#: model:ir.model.fields,field_description:account_move_report.field_account_entry_report_wizard__date_to
+msgid "End Date"
+msgstr "تاريخ الانتهاء"
+
+#. module: account_move_report
+#: code:addons/account_move_report/report/account_entry_xlsx_template.py:0
+#: model:ir.ui.menu,name:account_move_report.account_entry_report_wizard_menu
+#, python-format
+msgid "Entries Report"
+msgstr "تقرير القيود اليومية"
+
+#. module: account_move_report
+#: model:ir.actions.report,name:account_move_report.account_entry_report
+msgid "Entries Report PDF"
+msgstr "تقرير القيود اليومية PDF "
+
+#. module: account_move_report
+#: model:ir.actions.report,name:account_move_report.account_entry_template_xlsx
+msgid "Entries Report Xlst"
+msgstr "تقرير القيود اليومية بالإكسل"
+
+#. module: account_move_report
+#: model:ir.actions.act_window,name:account_move_report.account_entry_report_wizard_action
+msgid "Entries Report wizard"
+msgstr "تقرير القيود اليومية"
+
+#. module: account_move_report
+#: model:ir.model,name:account_move_report.model_report_account_move_report_account_entry_report_template
+msgid "Entries Reports"
+msgstr "تقرير القيود اليومية"
+
+#. module: account_move_report
+#: model:ir.model,name:account_move_report.model_report_account_move_report_account_entry_report_template_xlsx
+msgid "Entries Xlsx Template"
+msgstr "تقرير القيود اليومية بالإكسل"
+
+#. module: account_move_report
+#: code:addons/account_move_report/report/account_entry_xlsx_template.py:0
+#: model_terms:ir.ui.view,arch_db:account_move_report.account_entry_report_template
+#, python-format
+msgid "Entry creator"
+msgstr "منشئ القيد"
+
+#. module: account_move_report
+#: code:addons/account_move_report/report/account_entry_xlsx_template.py:0
+#: model_terms:ir.ui.view,arch_db:account_move_report.account_entry_report_template
+#, python-format
+msgid "Entry number"
+msgstr "رقم القيد"
+
+#. module: account_move_report
+#: model_terms:ir.ui.view,arch_db:account_move_report.account_move_report
+msgid "Entry number:"
+msgstr "رقم القيد :"
+
+#. module: account_move_report
+#: model_terms:ir.ui.view,arch_db:account_move_report.account_move_report
+msgid "Entry with number:"
+msgstr "القيد رقم :"
+
+#. module: account_move_report
+#: model:ir.model.fields,field_description:account_move_report.field_account_entry_report_wizard__id
+#: model:ir.model.fields,field_description:account_move_report.field_ir_actions_report__id
+#: model:ir.model.fields,field_description:account_move_report.field_report_account_move_report_account_entry_report_template__id
+#: model:ir.model.fields,field_description:account_move_report.field_report_account_move_report_account_entry_report_template_xlsx__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: account_move_report
+#: code:addons/account_move_report/report/account_entry_xlsx_template.py:0
+#: model_terms:ir.ui.view,arch_db:account_move_report.account_entry_report_template
+#, python-format
+msgid "Journal"
+msgstr "دفتر اليومية"
+
+#. module: account_move_report
+#: model_terms:ir.ui.view,arch_db:account_move_report.account_move_report
+msgid "Journal :"
+msgstr "دفتر اليومية :"
+
+#. module: account_move_report
+#: model_terms:ir.ui.view,arch_db:account_move_report.account_move_report
+msgid "Label"
+msgstr "التسمية"
+
+#. module: account_move_report
+#: model:ir.model.fields,field_description:account_move_report.field_account_entry_report_wizard____last_update
+#: model:ir.model.fields,field_description:account_move_report.field_ir_actions_report____last_update
+#: model:ir.model.fields,field_description:account_move_report.field_report_account_move_report_account_entry_report_template____last_update
+#: model:ir.model.fields,field_description:account_move_report.field_report_account_move_report_account_entry_report_template_xlsx____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: account_move_report
+#: model:ir.model.fields,field_description:account_move_report.field_account_entry_report_wizard__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: account_move_report
+#: model:ir.model.fields,field_description:account_move_report.field_account_entry_report_wizard__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: account_move_report
+#: model_terms:ir.ui.view,arch_db:account_move_report.account_move_report
+msgid "Logo"
+msgstr "الشعار"
+
+#. module: account_move_report
+#: code:addons/account_move_report/models/ir_actions_report.py:0
+#, python-format
+msgid "Only entries could be printed."
+msgstr "يمكن طباعة القيود فقط."
+
+#. module: account_move_report
+#: model_terms:ir.ui.view,arch_db:account_move_report.account_move_report
+msgid "Partner"
+msgstr "الشريك"
+
+#. module: account_move_report
+#: model:ir.model.fields,field_description:account_move_report.field_account_entry_report_wizard__is_posted_entry
+msgid "Posted Entry"
+msgstr "القيود المرحلة فقط"
+
+#. module: account_move_report
+#: model_terms:ir.ui.view,arch_db:account_move_report.account_move_report
+msgid ""
+"Prepared by\n"
+"                                            <br/>\n"
+"                                            Accountant"
+msgstr ""
+"أعده\n"
+"                                            <br/>\n"
+"                                            المحاسب"
+
+#. module: account_move_report
+#: model:ir.actions.report,name:account_move_report.report_account_move
+msgid "Print Entries"
+msgstr "طباعة القيود"
+
+#. module: account_move_report
+#: model_terms:ir.ui.view,arch_db:account_move_report.view_move_form_inherit_account_move_report
+msgid "Print Entry"
+msgstr "طباعة القيد"
+
+#. module: account_move_report
+#: model_terms:ir.ui.view,arch_db:account_move_report.account_entry_report_wizard_view_form
+msgid "Print Entries Report PDF"
+msgstr "طباعة تقرير القيود اليومية PDF"
+
+#. module: account_move_report
+#: model_terms:ir.ui.view,arch_db:account_move_report.account_entry_report_wizard_view_form
+msgid "Print Entries Report XLS"
+msgstr "طباعة تقرير القيود اليومية بالإكسل"
+
+#. module: account_move_report
+#: model_terms:ir.ui.view,arch_db:account_move_report.account_move_report
+msgid ""
+"Recommendation\n"
+"                                            <br/>\n"
+"                                            Director of Financial and Administrative Affairs"
+msgstr ""
+"توصية\n"
+"                                            <br/>\n"
+"                                            مدير الشؤون المالية و الإدارية"
+
+#. module: account_move_report
+#: model_terms:ir.ui.view,arch_db:account_move_report.account_move_report
+msgid "Reference :"
+msgstr "رقم الإشارة :"
+
+#. module: account_move_report
+#: model:ir.model,name:account_move_report.model_ir_actions_report
+msgid "Report Action"
+msgstr "إجراء التقرير"
+
+#. module: account_move_report
+#: code:addons/account_move_report/report/account_entry_xlsx_template.py:0
+#: model_terms:ir.ui.view,arch_db:account_move_report.account_entry_report_template
+#, python-format
+msgid "Reviewer"
+msgstr "مراجع القيد"
+
+#. module: account_move_report
+#: model:ir.model.fields,field_description:account_move_report.field_account_entry_report_wizard__date_from
+msgid "Start Date"
+msgstr "تاريخ البداية"
+
+#. module: account_move_report
+#: model_terms:ir.ui.view,arch_db:account_move_report.account_move_report
+msgid ""
+"Validation\n"
+"                                            <br/>\n"
+"                                            Chief Executive Officer"
+msgstr ""
+"الاعتماد\n"
+"                                            <br/>\n"
+"                                            الرئيس التنفيذي"
+
+#. module: account_move_report
+#: model_terms:ir.ui.view,arch_db:account_move_report.account_move_report
+msgid "Voucher details"
+msgstr "تفاصيل السند"
+
+#. module: account_move_report
+#: model_terms:ir.ui.view,arch_db:account_move_report.account_entry_report_template
+msgid "Entry Explanation"
+msgstr "شرح القيد"
+
+#. module: account_move_report
+#: model_terms:ir.ui.view,arch_db:account_move_report.account_entry_report_template
+msgid "Account Number"
+msgstr "رقم الحساب"

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+      <record id="hr_overtime_line_wizard_view_form" model="ir.ui.view">
+            <field name="name">hr.overtime.line.wizard.form</field>
+            <field name="model">hr.overtime.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <separator string="Period" name="period" />
+                        <group>
+                        <group>
+
+
+                            <field name="date_from" />
+                        </group>
+                        <group>
+                            <field name="date_to" />
+                        </group>
+                        </group>
+                        <separator string="Other Options" name="Other Options" />
+                        <group>
+                                                        <field name="department_id" options="{'no_create': True}" />
+
+                            <field name="employee_id" options="{'no_create': True}" />
+
+                            <field
+                            name="stage_id"
+                            domain="[('res_model','=','hr.overtime')]"
+                            options="{'no_create': True}"
+                        />
+
+
+                        </group>
+                    </sheet>
+                    <footer>
+                    <button
+                        name="print_report"
+                        string="Print PDF Report"
+                        type="object"
+                        class="btn-primary"
+                        icon="fa-floppy-o"
+                    />
+                        <button
+                        name="print_xls_report"
+                        string="Print Excel Report"
+                        type="object"
+                        class="btn-primary"
+                        icon="fa-floppy-o"
+                    />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="hr_overtime_line_wizard_action" model="ir.actions.act_window">
+            <field name="name">Hr Overtime Lines</field>
+            <field name="res_model">hr.overtime.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+    <menuitem
+        id="hr_overtime_line_wizard_menu"
+        parent="hr_overtime.hr_overtime_menu"
+        name="Overtime Resume Report"
+        action="hr_overtime_line_wizard_action"
+        sequence="6"
+        groups="hr_overtime.group_hr_overtime_manager"
+    />
+</odoo>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="pos_extra_products_view_tree" model="ir.ui.view">
+        <field name="name">pos.notes.tree.view</field>
+        <field name="model">pos.notes</field>
+        <field name="arch" type="xml"> <tree editable="bottom">
+                <field name="name" required="1" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="pos_notes_action" model="ir.actions.act_window">
+        <field name="name">Product Notes</field>
+        <field name="res_model">pos.notes</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem
+        id="pos_notes_menu"
+        name="Product Notes"
+        parent="point_of_sale.pos_config_menu_catalog"
+        action="pos_notes_action"
+        sequence="15"
+    />
+
+</odoo>

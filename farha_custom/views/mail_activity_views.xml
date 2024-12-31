@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="mail_activity_action_my" model="ir.actions.act_window">
+        <field name="name">My Activities</field>
+        <field name="res_model">mail.activity</field>
+        <field name="domain">[('user_id','=', uid)]</field>
+        <field name="view_mode">tree,kanban,form</field>
+    </record>
+
+
+    <menuitem
+        action="mail_activity_action_my"
+        id="mail_activity_menu_my"
+        parent="request.self_services_menu"
+        name="My Activities"
+        sequence="10"
+    />
+</odoo>

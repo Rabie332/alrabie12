@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <record id="clearance_request_view_form_bayan" model="ir.ui.view">
+    <field name="name">clearance.request.view.form.bayan</field>
+    <field name="model">clearance.request</field>
+    <field name="inherit_id" ref="clearance.clearance_request_view_form" />
+    <field name="arch" type="xml">
+      <xpath expr="//button[@name='action_cancel']" position="replace">
+        <button
+            name="action_cancel"
+            string="Cancel"
+            type="object"
+            attrs="{'invisible':[('state', '=','canceled')]}"
+            class="btn btn-danger"
+            groups="clearance.group_responsible_cancel"
+            confirm="Are you sure you want to cancel this record?"
+        />
+      </xpath>
+      <xpath expr="//button[@name='set_to_draft']" position="replace">
+        <button
+          name="set_to_draft"
+          string="Set To Draft"
+          type="object"
+          attrs="{'invisible':[('state','=','draft')]}"
+          class="btn-primary"
+          groups="clearance.group_set_to_draft_clearance"
+          confirm="Are you sure you want to set this record to draft?"
+        />
+      </xpath>
+      <xpath expr="//button[@name='action_send']" position="replace">
+        <button
+            name="action_send"
+            string="Send"
+            type="object"
+            states="draft"
+            class="btn-primary"
+            groups="clearance.group_reception_responsible,sales_team.group_sale_manager,clearance.group_data_entry"
+            confirm="Are you sure you want to send this record?"
+        />
+      </xpath>
+      <xpath expr="//button[@name='action_customs_statement']" position="replace">
+        <button
+            name="action_customs_statement"
+            string="Validate"
+            type="object"
+            states="customs_clearance"
+            class="btn-success"
+            groups="clearance.group_translation_officer"
+            confirm="Are you sure you want to validate this Record ?"
+        />
+      </xpath>
+      <xpath expr="//button[@name='action_transport']" position="replace">
+        <button
+            name="action_transport"
+            string="Validate"
+            type="object"
+            states="customs_statement"
+            class="btn-success"
+            groups="clearance.group_customs_declaration_responsible,clearance.group_customs_responsible"
+            confirm="Are you sure you want to validate this Record ?"
+        />
+      </xpath>
+      <header>
+        <button name="update_goods_type_for_all_lines" string="Update Goods Types" type="object" class="oe_highlight" attrs="{'invisible': [('state', 'not in', ['customs_clearance', 'transport', 'delivery'])]}"/>
+      </header>
+      <xpath expr="//field[@name='shipment_type_line_ids']/tree/field[last()]" position="after">
+        <field name="goods_type_bayan" string="Bayan Goods Name" options="{'no_create': True, 'no_create_edit': True}"/>
+      </xpath>
+    </field>
+  </record>
+  <record id="clearance_request_view_form_inherit_transportation_bayan" model="ir.ui.view">
+    <field name="name">clearance.request.view.form.transportation.bayan</field>
+    <field name="model">clearance.request</field>
+    <field name="inherit_id" ref="transportation.clearance_request_view_form_inherit_transportation" />
+    <field name="arch" type="xml">
+      <xpath expr="//button[@name='action_delivery']" position="replace">
+        <button
+            name="action_delivery"
+            string="Validate"
+            type="object"
+            states="transport"
+            class="btn-success"
+            groups="transportation.group_transportation_responsible"
+            confirm="Are you sure you want to validate this record?"
+        />
+      </xpath>
+      <xpath expr="//button[@name='action_delivery_done']" position="replace">
+        <button
+            name="action_delivery_done"
+            string="Validate"
+            type="object"
+            states="delivery"
+            class="btn-success"
+            groups="transportation.group_transportation_admin"
+            confirm="Are you sure you want to validate this record?"
+        />
+      </xpath>
+      <xpath expr="//button[@name='action_close']" position="replace">
+        <button
+            name="action_close"
+            string="Close Request"
+            type="object"
+            attrs="{'invisible':[('display_button_close','=', False)]}"
+            class="btn-success"
+            groups="transportation.group_closing_manager,transportation.group_transportation_responsible"
+            confirm="Are you sure you want to close this record?"
+        />
+      </xpath>
+    </field>
+  </record>
+  <record id="clearance_request_shipment_route_view_tree_bayan" model="ir.ui.view">
+    <field name="name">clearance.request.shipment.route.view.tree.bayan</field>
+    <field name="model">clearance.request.shipment.route</field>
+    <field name="inherit_id" ref="clearance.clearance_request_shipment_route_view_tree" />
+    <field name="arch" type="xml">
+      <xpath expr="//field[@name='name']" position="after">
+        <field name="bayan_route_from"/>
+        <field name="bayan_route_to"/>
+        <field name="bayan_route_from_id"/>
+        <field name="bayan_route_to_id"/>
+      </xpath>
+    </field>
+  </record>
+  <record id="clearance_request_shipment_route_view_form_bayan" model="ir.ui.view">
+    <field name="name">clearance.request.shipment.route.view.form.bayan</field>
+    <field name="model">clearance.request.shipment.route</field>
+    <field name="inherit_id" ref="clearance.clearance_request_shipment_route_view_form" />
+    <field name="arch" type="xml">
+      <xpath expr="//field[@name='name']" position="after">
+        <field name="bayan_route_from"/>
+        <field name="bayan_route_to"/>
+        <field name="bayan_route_from_id"/>
+        <field name="bayan_route_to_id"/>
+      </xpath>
+    </field>
+  </record>
+</odoo>

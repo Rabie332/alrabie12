@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="clearance_request_report">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <div class="header" />
+                <t t-call="web.internal_layout">
+                    <div class="page">
+                        <div class="row">
+                            <div class="col-3">
+                            </div>
+                            <div class="col-6 text-center">
+                                <center>
+                                    <h1 style="color:#507298;padding-top:20px;">
+                                        <strong style="font-size: 25px;">
+                                            Clearance States Report
+                                        </strong>
+                                    </h1>
+                                </center>
+                            </div>
+                            <div class="col-3">
+                                <img
+                                    style="max-height:120px !important;"
+                                    width="80%"
+                                    t-att-src="'data:image/png;base64,%s' % to_text(user.company_id.sudo().logo)"
+                                />
+                            </div>
+                        </div>
+                        <div class="oe_structure" />
+                        <div class="col-12 text-center">
+                            <strong>Period :</strong>
+                            <span t-field="o.date_from" t-options="{'format': 'yyyy/MM/dd'}" />
+                            -
+                            <span t-field="o.date_to" t-options="{'format': 'yyyy/MM/dd'}" />
+                            <br />
+                            <br />
+                        </div>
+                        <br />
+                <div class="col-12 text-center">
+                        <table
+                                class="table table-bordered table-sm"
+                                style="font-size:14px; width:100%;padding: 0px 8px 0px 8px"
+                            >
+
+                            <thead>
+                                <tr
+                                        style=" background:#192d5a;; background: linear-gradient(#49708f, #293f50);color: #fff;width:100%"
+                                    >
+                                    <th width="5%">S.N</th>
+                                    <th width="5%">Job No</th>
+                                    <th width="5%">PO</th>
+                                    <th width="5%">B/L</th>
+                                    <th width="5%">Quantity</th>
+                                    <th width="10%">Bayan</th>
+                                    <th width="12%">Schedule Delivery Date</th>
+                                    <th width="12%">Pull Out Date</th>
+                                    <th width="12%">Actual Delivery Date</th>
+                                    <th width="12%">Return the empty Continer</th>
+                                    <th width="12%">Last Date for Return the Containers</th>
+                                    <th width="5%">State</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-set="line_index" t-value="0" />
+                                <t t-foreach="get_lines(o)" t-as="line">
+                                    <tr>
+                                        <td class="text-center">
+                                            <span t-esc="line_index + 1" />
+                                        </td>
+                                        <td>
+                                            <span t-field="line.name" />
+                                        </td>
+                                        <td>
+                                             <t t-if="line.reference">
+                                                <span t-field="line.reference" />
+                                            </t>
+                                             <t t-else="else">
+                                                 -
+                                             </t>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.shipping_number" />
+                                        </td>
+                                        <td>
+                                                    <t t-foreach="line.shipment_type_line_ids" t-as="shipment">
+                                                         <t t-esc="line.number_shipment" />
+                                                        X
+                                                <t t-esc="shipment.shipment_type_size_id.name" />
+                                                        <br />
+                                                    </t>
+
+                                        </td>
+                                        <td>
+                                            <span t-field="line.statement_number" />
+                                        </td>
+                                        <td width="15%">
+                                            <t t-if="line.order_ids and line.order_ids[-1].line_ids">
+                                                  <t t-foreach="line.order_ids[-1].line_ids" t-as="order">
+                                                <span
+                                                            t-field="order.delivery_date"
+                                                            t-options="{'format': 'yyyy-MM-dd'}"
+                                                        />
+                                                      <br />
+                                                  </t>
+                                            </t>
+
+
+                                        </td>
+                                        <td>
+                                            <t t-if="line.order_ids">
+                                                <span
+                                                        t-field="line.order_ids[0].create_date"
+                                                        t-options="{'format': 'yyyy-MM-dd'}"
+                                                    />
+                                            </t>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.date_receipt" t-options="{'format': 'yyyy-MM-dd'}" />
+                                        </td>
+                                        <td>
+                                            <span
+                                                    t-field="line.last_date_empty_container"
+                                                    t-options="{'format': 'yyyy-MM-dd'}"
+                                                />
+                                        </td>
+                                        <td>
+                                            <t t-if="line.account_move_ids">
+                                                <span
+                                                        t-field="line.account_move_ids[0].invoice_date"
+                                                        t-options="{'format': 'yyyy-MM-dd'}"
+                                                    />
+                                            </t>
+                                        </td>
+                                        <td>
+                                                <span t-field="line.state" />
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

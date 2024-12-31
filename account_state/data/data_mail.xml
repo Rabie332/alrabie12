@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+   <record id="mail_assigned_invoice_to_review" model="mail.activity.type">
+        <field name="name">The invoice is ready for review</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="res_model_id" ref="account.model_account_move" />
+    </record>
+    <record id="mail_assigned_move_to_review" model="mail.activity.type">
+        <field name="name">The move is ready for review</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="res_model_id" ref="account.model_account_move" />
+    </record>
+
+     <record id="mail_assigned_entry_to_confirm" model="mail.activity.type">
+        <field name="name">The entry is ready for confirmation</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="res_model_id" ref="account.model_account_move" />
+    </record>
+    <record id="mail_assigned_invoice_to_confirm" model="mail.activity.type">
+        <field name="name">The invoice is ready for confirmation</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="res_model_id" ref="account.model_account_move" />
+    </record>
+
+       <record id="mail_assigned_entry_to_under_review" model="mail.activity.type">
+        <field name="name">The entry is ready for approve</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="res_model_id" ref="account.model_account_move" />
+    </record>
+    <record id="mail_assigned_invoice_to_under_review" model="mail.activity.type">
+        <field name="name">The invoice is ready for approve</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="res_model_id" ref="account.model_account_move" />
+    </record>
+</odoo>

@@ -1,0 +1,500 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_salary_request
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-05 14:42+0000\n"
+"PO-Revision-Date: 2022-12-05 14:42+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_salary_request
+#: model:ir.actions.report,print_report_name:hr_salary_request.action_report_detailed_definition
+msgid "(object.name + '_comprehensive_detailed_definition.pdf')"
+msgstr "(object.name + 'تعريف مفصل شامل الاستشارات.pdf')"
+
+#. module: hr_salary_request
+#: model:ir.actions.report,print_report_name:hr_salary_request.action_report_definition_of_total
+msgid ""
+"(object.name + '_definition_of_total.pdf')\n"
+"        "
+msgstr "(object.name + '_تعريف الإجمالي.pdf')"
+
+#. module: hr_salary_request
+#: model:ir.actions.report,print_report_name:hr_salary_request.action_report_fixing_salary
+msgid "(object.name + '_fixing_salary.pdf')"
+msgstr "(object.name + '_تثبيت الراتب.pdf')"
+
+#. module: hr_salary_request
+#: model_terms:ir.ui.view,arch_db:hr_salary_request.no_salary_definition_report
+msgid "<span>Definition Without Salary</span>"
+msgstr "<strong>تعريف بدون راتـــب</strong>"
+
+#. module: hr_salary_request
+#: model_terms:ir.ui.view,arch_db:hr_salary_request.no_salary_definition_report
+msgid "<strong>Date of hiring</strong>"
+msgstr "<strong>تاريخ المباشرة</strong>"
+
+#. module: hr_salary_request
+#: model_terms:ir.ui.view,arch_db:hr_salary_request.no_salary_definition_report
+msgid "<strong>Date order</strong>"
+msgstr "<strong>تاريخ الطلب</strong>"
+
+#. module: hr_salary_request
+#: model_terms:ir.ui.view,arch_db:hr_salary_request.no_salary_definition_report
+msgid "<strong>Department</strong>"
+msgstr "<strong>الادارة</strong>"
+
+#. module: hr_salary_request
+#: model_terms:ir.ui.view,arch_db:hr_salary_request.no_salary_definition_report
+msgid "<strong>Destination</strong>"
+msgstr "<strong>الوجهة</strong>"
+
+#. module: hr_salary_request
+#: model_terms:ir.ui.view,arch_db:hr_salary_request.no_salary_definition_report
+msgid "<strong>Functional number</strong>"
+msgstr "<strong>الرقم الوظيفي</strong>"
+
+#. module: hr_salary_request
+#: model_terms:ir.ui.view,arch_db:hr_salary_request.no_salary_definition_report
+msgid "<strong>Job</strong>"
+msgstr "<strong>المهنة</strong>"
+
+#. module: hr_salary_request
+#: model_terms:ir.ui.view,arch_db:hr_salary_request.no_salary_definition_report
+msgid "<strong>Name</strong>"
+msgstr "<strong>الاسم</strong>"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__message_needaction
+msgid "Action Needed"
+msgstr "الإجراءات اللازمة"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "ترتيب استثناء النشاط"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_request_stage__appears_in_salary_report
+msgid "Appears in salary request report"
+msgstr "يظهر في تقرير خطابات الموارد البشرية"
+
+#. module: hr_salary_request
+#: model:mail.message.subtype,name:hr_salary_request.mt_salary_request_approved
+msgid "Approved"
+msgstr "مقبول"
+
+#. module: hr_salary_request
+#: model_terms:ir.ui.view,arch_db:hr_salary_request.hr_salary_request_view_form
+msgid "Are you sure you want to do this?"
+msgstr "هل أنت متأكد من القيام بهذا الإجراء ؟"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد الوثائق"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: hr_salary_request
+#: model:ir.actions.report,name:hr_salary_request.action_report_detailed_definition
+#: model:ir.model.fields.selection,name:hr_salary_request.selection__hr_salary_request__type__detailed_definition
+msgid "Comprehensive detailed definition"
+msgstr "تعريف مفصل شامل الاستشارات"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hr_salary_request
+#: model_terms:ir.ui.view,arch_db:hr_salary_request.no_salary_definition_report
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: hr_salary_request
+#: model:ir.actions.report,name:hr_salary_request.action_report_definition_of_total
+#: model:ir.model.fields.selection,name:hr_salary_request.selection__hr_salary_request__type__definition_of_total
+msgid "Definition of total"
+msgstr "تعريف الإجمالي"
+
+#. module: hr_salary_request
+#: model:ir.model.fields.selection,name:hr_salary_request.selection__hr_salary_request__type__no_salary_definition
+msgid "Definition without salary"
+msgstr "تعريف بدون راتب"
+
+
+#. module: hr_salary_request
+#: model_terms:ir.ui.view,arch_db:hr_salary_request.no_salary_definition_report
+msgid "<strong>Identification Number</strong>"
+msgstr "<strong>رقم الهوية</strong>"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__department_id
+msgid "Department"
+msgstr "الإدارة"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__destined_to
+msgid "Destined to"
+msgstr "الجهة الموجه لها"
+
+#. module: hr_salary_request
+#: model_terms:ir.ui.view,arch_db:hr_salary_request.hr_salary_request_view_kanban
+msgid "Destined to :"
+msgstr "الجهة الموجه لها :"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__display_button_accept
+msgid "Display Button Accept"
+msgstr "عرض زر قبول"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__display_button_previous
+msgid "Display Button Previous"
+msgstr "عرض زر سابق"
+
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__display_button_refuse
+msgid "Display Button Refuse"
+msgstr "عرض زر رفض"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__display_button_send
+msgid "Display Button Send"
+msgstr "عرض زر إرسال"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__display_name
+#: model:ir.model.fields,field_description:hr_salary_request.field_report_hr_salary_request_salary_history_template_xlsx__display_name
+#: model:ir.model.fields,field_description:hr_salary_request.field_request_stage__display_name
+msgid "Display Name"
+msgstr "المسمى"
+
+#. module: hr_salary_request
+#: model:request.stage,name:hr_salary_request.hr_salary_request_stage_done
+msgid "Done"
+msgstr "تمت الطباعة"
+
+#. module: hr_salary_request
+#: model_terms:ir.ui.view,arch_db:hr_salary_request.no_salary_definition_report
+msgid "Due respect ."
+msgstr " و تقبلوا منا فائق الإحترام و التقدير"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__employee_id
+#: model_terms:ir.ui.view,arch_db:hr_salary_request.hr_salary_request_view_form
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_salary_request
+#: model_terms:ir.ui.view,arch_db:hr_salary_request.hr_salary_request_view_kanban
+msgid "Employee :"
+msgstr "الموظف :"
+
+#. module: hr_salary_request
+#: model:ir.actions.report,name:hr_salary_request.action_report_fixing_salary
+msgid "Fixing Salary"
+msgstr "تثبيت الراتب"
+
+#. module: hr_salary_request
+#: model:ir.model.fields.selection,name:hr_salary_request.selection__hr_salary_request__type__fixing_salary
+msgid "Fixing salary"
+msgstr "تثبيت الراتب"
+
+#. module: hr_salary_request
+#: model:request.stage,name:hr_salary_request.hr_salary_request_stage_manager
+msgid "HR Responsible"
+msgstr "مسؤول الموارد البشرية"
+
+#. module: hr_salary_request
+#: model_terms:ir.ui.view,arch_db:hr_salary_request.no_salary_definition_report
+msgid "Hello,"
+msgstr "السلام عليكم و رحمة الله و بركاته و بعد"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__id
+#: model:ir.model.fields,field_description:hr_salary_request.field_report_hr_salary_request_salary_history_template_xlsx__id
+#: model:ir.model.fields,field_description:hr_salary_request.field_request_stage__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__job_id
+msgid "Job"
+msgstr "الوظيفة"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__number
+msgid "Job number"
+msgstr "الرقم الوظيفي"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request____last_update
+#: model:ir.model.fields,field_description:hr_salary_request.field_report_hr_salary_request_salary_history_template_xlsx____last_update
+#: model:ir.model.fields,field_description:hr_salary_request.field_request_stage____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__manager_id
+msgid "Manager"
+msgstr "المدير"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "أخر موعد لنشاط التالي"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: hr_salary_request
+#: model:ir.actions.report,name:hr_salary_request.action_report_no_salary_definition
+msgid "No Salary Definition"
+msgstr "تعريف بدون راتب"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__name
+msgid "Number"
+msgstr "الرقم"
+
+
+#. module: hr_salary_request
+#: model_terms:ir.ui.view,arch_db:hr_salary_request.hr_salary_request_view_form
+msgid "Print Report"
+msgstr "طباعة التقرير"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__reason
+msgid "Reason"
+msgstr "السبب"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__refuse_reason
+msgid "Refusal reason"
+msgstr "سبب الرفض"
+
+#. module: hr_salary_request
+#: model_terms:ir.ui.view,arch_db:hr_salary_request.hr_salary_request_view_form
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: hr_salary_request
+#: model:mail.message.subtype,name:hr_salary_request.mt_salary_request_refused
+#: model:request.stage,name:hr_salary_request.hr_salary_request_stage_refused
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: hr_salary_request
+#: model:request.stage,name:hr_salary_request.hr_salary_request_stage_send
+msgid "Request"
+msgstr "طلب"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__date
+msgid "Request date"
+msgstr " تاريخ الطلب"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__activity_user_id
+msgid "Responsible User"
+msgstr " المستخدم المسؤول"
+
+#. module: hr_salary_request
+#: model:mail.activity.type,name:hr_salary_request.mail_hr_salary_request_cancellation_approval
+msgid "Salary Request Cancellation is ready to be approved"
+msgstr "الطلب جاهز للموافقة"
+
+#. module: hr_salary_request
+#: model:ir.actions.act_window,name:hr_salary_request.hr_salary_request_stage_action
+#: model:ir.ui.menu,name:hr_salary_request.hr_salary_request_stage_menu
+msgid "Salary Request Stages"
+msgstr "مراحل خطابات الموارد البشرية"
+
+#. module: hr_salary_request
+#: model:mail.message.subtype,description:hr_salary_request.mt_salary_request_approved
+msgid "Salary Request is approved"
+msgstr "تم قبول الطلب"
+
+#. module: hr_salary_request
+#: model:mail.activity.type,name:hr_salary_request.mail_hr_salary_request_feedback
+msgid "Salary Request is done"
+msgstr "تم إعتماد الطلب"
+
+#. module: hr_salary_request
+#: model:mail.message.subtype,description:hr_salary_request.mt_salary_request_refused
+msgid "Salary Request is refused"
+msgstr "تم رفض الطلب"
+
+#. module: hr_salary_request
+#: model:mail.activity.type,name:hr_salary_request.mail_hr_salary_request_approval
+msgid "Salary Request request is ready to be approved"
+msgstr "الطلب جاهز للموافقة"
+
+#. module: hr_salary_request
+#: model:ir.actions.act_window,name:hr_salary_request.action_hr_salary_request
+#: model:ir.ui.menu,name:hr_salary_request.hr_salary_request_menu
+#: model:ir.ui.menu,name:hr_salary_request.hr_salary_request_menu_root
+msgid "Salary Requests"
+msgstr "خطابات الموارد البشرية"
+
+#. module: hr_salary_request
+#: model:ir.model.fields.selection,name:hr_salary_request.selection__hr_salary_request__type__history_salary_3_months
+msgid "Salary of 3 months"
+msgstr "كشف 3 أشهر"
+
+#. module: hr_salary_request
+#: model:ir.model,name:hr_salary_request.model_hr_salary_request
+msgid "Salary request"
+msgstr "خطابات الموارد البشرية"
+
+#. module: hr_salary_request
+#: model:ir.actions.act_window,name:hr_salary_request.hr_salary_request_action_my
+#: model:ir.ui.menu,name:hr_salary_request.my_hr_salary_request_menu
+msgid "Salary requests"
+msgstr "خطابات الموارد البشرية"
+
+#. module: hr_salary_request
+#: model:ir.model,name:hr_salary_request.model_request_stage
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__stage_id
+msgid "Stage"
+msgstr "المرحلة"
+
+#. module: hr_salary_request
+#: model_terms:ir.ui.view,arch_db:hr_salary_request.hr_salary_request_view_kanban
+msgid "Stage :"
+msgstr "المرحلة :"
+
+#. module: hr_salary_request
+#: model_terms:ir.ui.view,arch_db:hr_salary_request.comprehensive_detailed_definition_report
+#: model_terms:ir.ui.view,arch_db:hr_salary_request.definition_of_total_report
+#: model_terms:ir.ui.view,arch_db:hr_salary_request.fixing_salary_report
+#: model_terms:ir.ui.view,arch_db:hr_salary_request.no_salary_definition_report
+msgid "Stages Of Request Approval"
+msgstr "مراحل الموافقة على الطلب"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__request_type_id
+msgid "Type"
+msgstr "النوع"
+
+#. module: hr_salary_request
+#: model_terms:ir.ui.view,arch_db:hr_salary_request.hr_salary_request_view_kanban
+msgid "Type :"
+msgstr "النوع :"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__type
+msgid "Type of request"
+msgstr "النوع"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,help:hr_salary_request.field_hr_salary_request__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع نشاط الاستثناء في السجل"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل غير المقروءة"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,field_description:hr_salary_request.field_hr_salary_request__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: hr_salary_request
+#: model:ir.model.fields,help:hr_salary_request.field_hr_salary_request__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: hr_salary_request
+#: model_terms:ir.ui.view,arch_db:hr_salary_request.hr_salary_request_view_form
+msgid "refused"
+msgstr "مرفوض"
+
+#. module: hr_salary_request
+#: model_terms:ir.ui.view,arch_db:hr_salary_request.no_salary_definition_report
+msgid "The company"
+msgstr "تفيد المؤسسة"
+
+#. module: hr_salary_request
+#: model_terms:ir.ui.view,arch_db:hr_salary_request.no_salary_definition_report
+msgid ""
+"states that the employee whose\n"
+"                                    data is shown above works for us to date,\n"
+"                                    and upon his request, this definition was given without any responsibility on the\n"
+"                                    part of the company."
+msgstr ""
+" بأن الموظف الموضح بياناته أعلاه يعمل لدينا حتى تاريخه\n"
+"بناء على طلبه أعطي هذا التعريف دون أدنى مسؤولية على الشركة.,\n"

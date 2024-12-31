@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="PopUpSelectionBox" owl="1">
+        <div role="dialog" class="modal-dialog">
+            <div class="popup close-pos-popup">
+            <header class="title">
+                    CLOSING CONTROL
+                </header>
+                <main class="body" t-att-class="{'oe_hidden':Items[0].hidden}">
+                           <input
+                        name="cash"
+                        id="cash"
+                        placeholder="Cash"
+                        type="text"
+                    />
+                     <br />
+                     <br />
+                    <input name="atm" id="atm" placeholder="ATM" type="text" />
+                    <br />
+                </main>
+                     <footer class="footer">
+                         <div
+                        class="button"
+                        t-att-class="{'oe_hidden':Items[0].hidden}"
+                        t-on-click="cancel()"
+                        style="margin-bottom: 10px;width:150px;"
+                    >Continue Selling</div>
+                        <t t-foreach="Items" t-as="item" t-key="item.id">
+                            <div
+                            t-att-class="{'oe_hidden':item.hidden}"
+                            class="button"
+                            style="margin-bottom: 10px;width:150px !important;"
+                            t-on-click="trigger('click-item', {item: item})"
+                        >
+                                <t t-esc="item.name or item.display_name" />
+                            </div>
+                        </t>
+                        </footer>
+            </div>
+        </div>
+    </t>
+
+
+</templates>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+      <record id="report_account_move" model="ir.actions.report">
+        <field name="name">Print Entries</field>
+        <field name="model">account.move</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">account_move_report.account_move_report</field>
+        <field name="report_file">account_move_report.account_move_report</field>
+        <field name="binding_model_id" ref="account.model_account_move" />
+        <field name="binding_type">report</field>
+    </record>
+
+
+    <template id="account_move_report">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <div class="header">
+                    <img
+                        t-if="o.company_id.logo"
+                        t-att-src="image_data_uri(o.company_id.logo)"
+                        class="float-left"
+                        alt="Logo"
+                        style="height: 120px; width: 120px;"
+                    />
+                    <div class="float-left company_address">
+                        <div>
+                            <strong t-field="o.company_id.partner_id.name" />
+                        </div>
+                        <span
+                            t-field="o.company_id.partner_id"
+                            t-options='{"widget": "contact", "fields": ["address"], "no_marker": true}'
+                        />
+                    </div>
+                    <div class="clearfix mb8" />
+                </div>
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2 style="color : #22B14C;">Entry with number:
+                            <span t-field="o.name" />
+                        </h2>
+                        <table width="100%" class="table-sm table-bordered">
+                            <thead>
+                                <tr>
+                                    <th width="50%" style="background-color: #ECF0F5;">Entry number:
+                                    </th>
+                                    <td width="50%">
+                                        <span t-field="o.name" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th style="background-color: #ECF0F5;">Journal :
+                                    </th>
+                                    <td>
+                                        <span t-field="o.journal_id" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th style="background-color: #ECF0F5;">Date :
+                                    </th>
+                                    <td>
+                                        <span t-field="o.date" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th style="background-color: #ECF0F5;">Reference :
+                                    </th>
+                                    <td>
+                                        <span t-field="o.ref" />
+                                    </td>
+                                </tr>
+                            </thead>
+                        </table>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <table width="100%" class="table-sm table-bordered">
+                            <thead>
+                                <tr>
+                                    <th style="background-color: #ECF0F5;" colspan="5">Voucher details
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="background-color: #ECF0F5;">Account
+                                    </td>
+                                     <td style="background-color: #ECF0F5;">Partner
+                                     </td>
+                                    <td style="background-color: #ECF0F5;">Label
+                                    </td>
+                                    <td style="background-color: #ECF0F5;">Debit
+                                    </td>
+                                    <td style="background-color: #ECF0F5;">Credit
+                                    </td>
+
+                                </tr>
+                                <t t-set="debit" t-value="0" />
+                                <t t-set="credit" t-value="0" />
+                                <t t-foreach="o.line_ids" t-as="line">
+                                    <t t-set="debit" t-value="debit + line.debit" />
+                                    <t t-set="credit" t-value="credit + line.credit" />
+                                    <tr>
+                                        <td width="25%">
+                                            <span t-field="line.account_id" />
+                                        </td>
+                                           <td width="25%">
+                                            <span t-field="line.partner_id" />
+                                        </td>
+                                        <td width="25%">
+                                            <span t-field="line.name" />
+                                        </td>
+                                        <td width="15%">
+                                            <span t-field="line.debit" />
+                                        </td>
+                                        <td width="15%">
+                                            <span t-field="line.credit" />
+                                        </td>
+                                    </tr>
+                                </t>
+
+                                <tr>
+                                    <td style="background-color: #ECF0F5;" />
+                                    <td style="background-color: #ECF0F5;" />
+                                       <td style="background-color: #ECF0F5;" />
+                                    <td style="background-color: #ECF0F5;">
+                                        <span
+                                            t-esc="debit"
+                                            t-options="{'widget': 'float', 'precision': currency_precision}"
+                                        />
+
+                                    </td>
+                                    <td style="background-color: #ECF0F5;">
+                                        <span
+                                            t-esc="credit"
+                                            t-options="{'widget': 'float', 'precision': currency_precision}"
+                                        />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

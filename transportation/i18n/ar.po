@@ -1,0 +1,1466 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* transportation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-11 15:21+0000\n"
+"PO-Revision-Date: 2022-01-11 15:21+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: transportation
+#: model:ir.model.fields.selection,name:transportation.selection__clearance_request__state__delivery
+msgid " Receipt and Delivery"
+msgstr "استلام و توصيل"
+
+#. module: transportation
+#: model:mail.template,body_html:transportation.transportation_rating_email_template
+msgid ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 15px;\">\n"
+"                % set access_token = object.rating_get_access_token()\n"
+"                <p style=\"margin: 0px; padding: 0px; font-size: 15px;\">\n"
+"                    Dear customer,\n"
+"                    <br/>\n"
+"                    <br/>\n"
+"                    Clearance ${object.name} is closed.\n"
+"                </p>\n"
+"                <p>\n"
+"                    We hope that our solutions will satisfy you.\n"
+"                    <br/>\n"
+"                    Tell us how you rate our service\n"
+"                </p>\n"
+"                <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" summary=\"o_mail_notification\" style=\"width:100%; margin: 32px 0px 32px 0px;\">\n"
+"                    <tr>\n"
+"                        <td style=\"font-size: 13px;\">\n"
+"                            <table style=\"width:100%;text-align:center;\">\n"
+"                                <tr>\n"
+"                                    <td>\n"
+"                                        <a href=\"/rating/clearance/${access_token}/5\">\n"
+"                                            <img alt=\"Satisfied\" src=\"/rating/static/src/img/rating_5.png\" title=\"Satisfied\"/>\n"
+"                                        </a>\n"
+"                                    </td>\n"
+"\n"
+"                                    <td>\n"
+"                                        <a href=\"/rating/clearance/${access_token}/3\">\n"
+"                                            <img alt=\"Not Satisfied\" src=\"/rating/static/src/img/rating_3.png\" title=\"Not Satisfied\"/>\n"
+"                                        </a>\n"
+"                                    </td>\n"
+"                                    <td>\n"
+"                                        <a href=\"/rating/clearance/${access_token}/1\">\n"
+"                                            <img alt=\"Highly Dissatisfied\" src=\"/rating/static/src/img/rating_1.png\" title=\"Highly Dissatisfied\"/>\n"
+"                                        </a>\n"
+"                                    </td>\n"
+"                                </tr>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                </table>\n"
+"            </div>\n"
+"        "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 15px;\">\n"
+"                % set access_token = object.rating_get_access_token()\n"
+"                <p style=\"margin: 0px; padding: 0px; font-size: 15px;\">\n"
+"                    عزيزي العميل,\n"
+"                    <br/>\n"
+"                    <br/>\n"
+"                    تم اقفال طلب النقل ${object.name}.\n"
+"                </p>\n"
+"                <p>\n"
+"                    .نأمل أن ترضيك خدمتنا\n"
+"                    <br/>\n"
+"                    .أخبرنا كيف تقيم خدمتنا\n"
+"                </p>\n"
+"                <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" summary=\"o_mail_notification\" style=\"width:100%; margin: 32px 0px 32px 0px;\">\n"
+"                    <tr>\n"
+"                        <td style=\"font-size: 13px;\">\n"
+"                            <table style=\"width:100%;text-align:center;\">\n"
+"                                <tr>\n"
+"                                    <td>\n"
+"                                        <a href=\"/rating/clearance/${access_token}/5\">\n"
+"                                            <img alt=\"راض\" src=\"/rating/static/src/img/rating_5.png\" title=\"راض\"/>\n"
+"                                        </a>\n"
+"                                    </td>\n"
+"\n"
+"                                    <td>\n"
+"                                        <a href=\"/rating/clearance/${access_token}/3\">\n"
+"                                            <img alt=\"غير راض\" src=\"/rating/static/src/img/rating_3.png\" title=\"غير راض\"/>\n"
+"                                        </a>\n"
+"                                    </td>\n"
+"                                    <td>\n"
+"                                        <a href=\"/rating/clearance/${access_token}/1\">\n"
+"                                            <img alt=\"مستاء تمامًا\" src=\"/rating/static/src/img/rating_1.png\" title=\"مستاء تمامًا\"/>\n"
+"                                        </a>\n"
+"                                    </td>\n"
+"                                </tr>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                </table>\n"
+"            </div>\n"
+"        "
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.rating_external_transportation_page_view
+msgid ""
+"<i class=\"fa fa-check-circle fa-5x text-success\" role=\"img\" aria-"
+"label=\"Thank you!\" title=\"Thank you!\"/>"
+msgstr ""
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__message_needaction
+msgid "Action Needed"
+msgstr "الإجراءات اللازمة"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_clearance_lock_requirement__active
+#: model:ir.model.fields,field_description:transportation.field_clearance_lock_setting__active
+#: model:ir.model.fields,field_description:transportation.field_transportation_financial_settings__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__activity_ids
+msgid "Activities"
+msgstr "النشاط"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "نشاط استثناء الديكور"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_clearance_lock__answer
+msgid "Answer"
+msgstr "الإجابة"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.clearance_lock_requirement_view_search
+#: model_terms:ir.ui.view,arch_db:transportation.clearance_lock_setting_view_search
+#: model_terms:ir.ui.view,arch_db:transportation.transportation_financial_settings_view_search
+msgid "Archived"
+msgstr "مؤرشف"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: transportation
+#: code:addons/transportation/models/clearance_request.py:0
+#, python-format
+msgid "Attachment required for requiremnts: %s"
+msgstr "تتطلب كل من متطلبات الإقفال التالية مرفقات: %s"
+
+#. module: transportation
+#: model:ir.model,name:transportation.model_ir_attachment
+#: model:ir.model.fields,field_description:transportation.field_clearance_lock__attachment_ids
+msgid "Attachments"
+msgstr "المرفقات"
+
+#. module: transportation
+#: model:ir.model.fields.selection,name:transportation.selection__shipping_order_line__type_lcl__bale
+msgid "Bale"
+msgstr "بالة"
+
+#. module: transportation
+#: model:ir.model,name:transportation.model_calendar_event
+msgid "Calendar Event"
+msgstr "حدث التقويم"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_clearance_lock__clearance_id
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__clearance_request_id
+#: model_terms:ir.ui.view,arch_db:transportation.shipping_order_view_search
+msgid "Clearance"
+msgstr "طلب تخليص"
+
+#. module: transportation
+#: model:mail.template,subject:transportation.transportation_rating_email_template
+msgid "Clearance ${object.name} is Closed"
+msgstr "تم اقفال طلب النقل ${object.name}"
+
+#. module: transportation
+#: model:ir.model,name:transportation.model_clearance_lock
+msgid "Clearance Lock"
+msgstr "إقفال التخليص"
+
+#. module: transportation
+#: model:ir.model,name:transportation.model_clearance_lock_requirement
+msgid "Clearance Lock Requirements"
+msgstr "متطلبات الإقفال"
+
+#. module: transportation
+#: model:ir.model,name:transportation.model_clearance_lock_setting
+msgid "Clearance Lock Settings"
+msgstr "اعدادات متطلبات الإقفال"
+
+#. module: transportation
+#: model:ir.model,name:transportation.model_clearance_request
+msgid "Clearance Request"
+msgstr "طلب تخليص"
+
+#. module: transportation
+#: model:ir.actions.act_window,name:transportation.clearance_lock_setting_action
+#: model:ir.ui.menu,name:transportation.clearance_lock_setting_menu
+#: model:ir.ui.menu,name:transportation.clearance_lock_setting_menu_clearance
+msgid "Close Deal Settings"
+msgstr "اعدادات متطلبات الإقفال"
+
+#. module: transportation
+#: model:ir.model.fields.selection,name:transportation.selection__clearance_request__state__close
+msgid "Close deal"
+msgstr "مقفل"
+
+#. module: transportation
+#: code:addons/transportation/models/clearance_request.py:0
+#, python-format
+msgid "Close deal Request"
+msgstr "اقفال طلب النقل"
+
+#. module: transportation
+#: model:res.groups,name:transportation.group_closing_manager
+msgid "Closing Manager"
+msgstr "مسؤول اقفال المهام"
+
+#. module: transportation
+#: model:ir.model,name:transportation.model_res_company
+msgid "Companies"
+msgstr "الشركات"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_clearance_lock_setting__company_id
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__company_id
+#: model:ir.model.fields,field_description:transportation.field_shipping_order_line__company_id
+#: model:ir.model.fields,field_description:transportation.field_transportation_financial_settings__company_id
+#: model_terms:ir.ui.view,arch_db:transportation.shipping_order_view_search
+msgid "Company"
+msgstr "الشركة"
+
+#. module: transportation
+#: model:ir.ui.menu,name:transportation.transportation_configuration_menu
+msgid "Configuration"
+msgstr "الاعدادات"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order_line__container_category_id
+msgid "Container Category"
+msgstr "فئة الحاوية"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order_line__container_number
+msgid "Container Number"
+msgstr "رقم الحاوية"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.shipping_order_view_form
+msgid "Create Drivers Rewards"
+msgstr "تسجيل أوامر صرف مكافئات للسائقين"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_clearance_lock__create_uid
+#: model:ir.model.fields,field_description:transportation.field_clearance_lock_requirement__create_uid
+#: model:ir.model.fields,field_description:transportation.field_clearance_lock_setting__create_uid
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__create_uid
+#: model:ir.model.fields,field_description:transportation.field_shipping_order_line__create_uid
+#: model:ir.model.fields,field_description:transportation.field_transportation_financial_settings__create_uid
+msgid "Created by"
+msgstr "انشأ من قبل"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_clearance_lock__create_date
+#: model:ir.model.fields,field_description:transportation.field_clearance_lock_requirement__create_date
+#: model:ir.model.fields,field_description:transportation.field_clearance_lock_setting__create_date
+#: model:ir.model.fields,field_description:transportation.field_shipping_order_line__create_date
+#: model:ir.model.fields,field_description:transportation.field_transportation_financial_settings__create_date
+msgid "Created on"
+msgstr "أنشأت في"
+
+#. module: transportation
+#: model:ir.model.fields.selection,name:transportation.selection__shipping_order__transport_type__customer
+msgid "Customer site"
+msgstr "موقع العميل"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_clearance_request__date_receipt
+msgid "Date Receipt from Customer"
+msgstr "تاريخ إستلام العميل"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order_line__shipping_datetime
+msgid "Date and Time"
+msgstr "التاريخ والوقت"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order_line__delivery_date
+msgid "Delivery date"
+msgstr "تاريخ التسليم"
+
+#. module: transportation
+#: model:res.groups,name:transportation.group_delivery_responsible
+msgid "Delivery responsible"
+msgstr "مسؤول التوصيل"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_account_move__display_name
+#: model:ir.model.fields,field_description:transportation.field_account_payment__display_name
+#: model:ir.model.fields,field_description:transportation.field_calendar_event__display_name
+#: model:ir.model.fields,field_description:transportation.field_clearance_lock__display_name
+#: model:ir.model.fields,field_description:transportation.field_clearance_lock_requirement__display_name
+#: model:ir.model.fields,field_description:transportation.field_clearance_lock_setting__display_name
+#: model:ir.model.fields,field_description:transportation.field_clearance_request__display_name
+#: model:ir.model.fields,field_description:transportation.field_fleet_vehicle__display_name
+#: model:ir.model.fields,field_description:transportation.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:transportation.field_ir_attachment__display_name
+#: model:ir.model.fields,field_description:transportation.field_res_company__display_name
+#: model:ir.model.fields,field_description:transportation.field_sale_order__display_name
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__display_name
+#: model:ir.model.fields,field_description:transportation.field_shipping_order_line__display_name
+#: model:ir.model.fields,field_description:transportation.field_transportation_financial_settings__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order_line__driver_id
+msgid "Driver"
+msgstr "السائق"
+
+#. module: transportation
+#: model:ir.actions.act_window,name:transportation.account_payment_action_rewards
+#: model:ir.ui.menu,name:transportation.rewards_drivers_menu
+#: model_terms:ir.ui.view,arch_db:transportation.shipping_order_view_form
+msgid "Drivers Rewards"
+msgstr "مكافئات السائقين"
+
+#. module: transportation
+#: model:ir.model,name:transportation.model_hr_employee
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_transportation_financial_settings__journal_id
+msgid "Financial Covenant Journal"
+msgstr "دفتر يومية العهد المالية "
+
+#. module: transportation
+#: model:ir.actions.act_window,name:transportation.transportation_financial_settings_action
+#: model:ir.model,name:transportation.model_transportation_financial_settings
+#: model:ir.ui.menu,name:transportation.transportation_financial_settings_menu
+msgid "Financial Settings"
+msgstr "اعدادات مالية"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order_line__shipment_from
+msgid "From"
+msgstr "من"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.rating_external_transportation_page_view
+msgid "Go to our website"
+msgstr "اذهب إلى موقعنا"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order_line__goods_id
+msgid "Good"
+msgstr "البضاعة"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__used_goods
+#: model_terms:ir.ui.view,arch_db:transportation.shipping_order_view_form
+msgid "Goods"
+msgstr "البضاعة"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.shipping_order_view_search
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.rating_page_transportation_submit
+msgid "Highly Dissatisfied"
+msgstr "مستاء تمامًا"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_account_move__id
+#: model:ir.model.fields,field_description:transportation.field_account_payment__id
+#: model:ir.model.fields,field_description:transportation.field_calendar_event__id
+#: model:ir.model.fields,field_description:transportation.field_clearance_lock__id
+#: model:ir.model.fields,field_description:transportation.field_clearance_lock_requirement__id
+#: model:ir.model.fields,field_description:transportation.field_clearance_lock_setting__id
+#: model:ir.model.fields,field_description:transportation.field_clearance_request__id
+#: model:ir.model.fields,field_description:transportation.field_fleet_vehicle__id
+#: model:ir.model.fields,field_description:transportation.field_hr_employee__id
+#: model:ir.model.fields,field_description:transportation.field_ir_attachment__id
+#: model:ir.model.fields,field_description:transportation.field_res_company__id
+#: model:ir.model.fields,field_description:transportation.field_sale_order__id
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__id
+#: model:ir.model.fields,field_description:transportation.field_shipping_order_line__id
+#: model:ir.model.fields,field_description:transportation.field_transportation_financial_settings__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__activity_exception_icon
+msgid "Icon"
+msgstr "أيقونة"
+
+#. module: transportation
+#: model:ir.model.fields,help:transportation.field_shipping_order__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "أيقونة للإشارة إلى نشاط استثنائي."
+
+#. module: transportation
+#: model:ir.model.fields,help:transportation.field_shipping_order__message_needaction
+#: model:ir.model.fields,help:transportation.field_shipping_order__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم تحديده  ، فإن الرسائل الجديدة تتطلب اهتمامك."
+
+#. module: transportation
+#: model:ir.model.fields,help:transportation.field_shipping_order__message_has_error
+#: model:ir.model.fields,help:transportation.field_shipping_order__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده ، فبعض الرسائل بها خطأ في التسليم"
+
+#. module: transportation
+#: model:ir.actions.act_window,name:transportation.shipping_order_action_independents
+#: model:ir.ui.menu,name:transportation.independents_shipping_order_menu
+msgid "Independents Shipping Orders"
+msgstr "أوامر النقل المستقلة"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: transportation
+#: model:ir.model,name:transportation.model_account_move
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_account_move____last_update
+#: model:ir.model.fields,field_description:transportation.field_account_payment____last_update
+#: model:ir.model.fields,field_description:transportation.field_calendar_event____last_update
+#: model:ir.model.fields,field_description:transportation.field_clearance_lock____last_update
+#: model:ir.model.fields,field_description:transportation.field_clearance_lock_requirement____last_update
+#: model:ir.model.fields,field_description:transportation.field_clearance_lock_setting____last_update
+#: model:ir.model.fields,field_description:transportation.field_clearance_request____last_update
+#: model:ir.model.fields,field_description:transportation.field_fleet_vehicle____last_update
+#: model:ir.model.fields,field_description:transportation.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:transportation.field_ir_attachment____last_update
+#: model:ir.model.fields,field_description:transportation.field_res_company____last_update
+#: model:ir.model.fields,field_description:transportation.field_sale_order____last_update
+#: model:ir.model.fields,field_description:transportation.field_shipping_order____last_update
+#: model:ir.model.fields,field_description:transportation.field_shipping_order_line____last_update
+#: model:ir.model.fields,field_description:transportation.field_transportation_financial_settings____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_clearance_lock__write_uid
+#: model:ir.model.fields,field_description:transportation.field_clearance_lock_requirement__write_uid
+#: model:ir.model.fields,field_description:transportation.field_clearance_lock_setting__write_uid
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__write_uid
+#: model:ir.model.fields,field_description:transportation.field_shipping_order_line__write_uid
+#: model:ir.model.fields,field_description:transportation.field_transportation_financial_settings__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_clearance_lock__write_date
+#: model:ir.model.fields,field_description:transportation.field_clearance_lock_requirement__write_date
+#: model:ir.model.fields,field_description:transportation.field_clearance_lock_setting__write_date
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__write_date
+#: model:ir.model.fields,field_description:transportation.field_shipping_order_line__write_date
+#: model:ir.model.fields,field_description:transportation.field_transportation_financial_settings__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order_line__location_number
+msgid "Location number"
+msgstr "رقم الموقع"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_clearance_request__meeting_count
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__meeting_count
+#: model:ir.model.fields,help:transportation.field_clearance_request__meeting_count
+#: model:ir.model.fields,help:transportation.field_shipping_order__meeting_count
+msgid "Meeting Count"
+msgstr "عدد المواعيد"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.clearance_request_view_form_inherit_transportation
+#: model_terms:ir.ui.view,arch_db:transportation.shipping_order_view_form
+msgid "Meetings"
+msgstr "المواعيد"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي لنشاطي"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_clearance_lock_setting__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_clearance_lock_requirement__name
+msgid "Name "
+msgstr "الاسم"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_clearance_lock_requirement__need_attachment
+msgid "Need Attachment"
+msgstr "تتطلب مرفق"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "أخر موعد للنشاط المقبل"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.rating_page_transportation_submit
+msgid "Not Satisfied"
+msgstr "غير راضٍ"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__name
+msgid "Order Number"
+msgstr "رقم أمر النقل"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: transportation
+#: model:ir.model.fields,help:transportation.field_shipping_order__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: transportation
+#: model:ir.model.fields,help:transportation.field_shipping_order__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل مع خطأ في التسليم"
+
+#. module: transportation
+#: model:ir.model.fields,help:transportation.field_shipping_order__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل غير المقروءة"
+
+#. module: transportation
+#: model:ir.model.fields.selection,name:transportation.selection__shipping_order__transport_type__other
+msgid "Other site"
+msgstr "موقع أخر"
+
+#. module: transportation
+#: model:ir.model.fields.selection,name:transportation.selection__shipping_order_line__type_lcl__package
+msgid "Package"
+msgstr "طرد"
+
+#. module: transportation
+#: model:ir.model,name:transportation.model_account_payment
+msgid "Payments"
+msgstr "المدفوعات"
+
+#. module: transportation
+#: code:addons/transportation/models/account_payment.py:0
+#: model:ir.actions.server,name:transportation.account_covenant_action
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__payments_covenant_ids
+#: model:ir.ui.menu,name:transportation.payment_covenant_menu
+#: model_terms:ir.ui.view,arch_db:transportation.shipping_order_view_form
+#, python-format
+msgid "Payments Covenant"
+msgstr "الدفوعات المسددة من العهدة"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__payments_covenant_number
+msgid "Payments Covenant number"
+msgstr "عدد أوامر السداد من العهدة"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__payments_drivers_ids
+msgid "Payments Drivers"
+msgstr "مكافئات السائقين"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__payments_drivers_number
+msgid "Payments Drivers number"
+msgstr "رصيد السائقين"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_hr_employee__payments_rewards_number
+msgid "Payments Rewards number"
+msgstr "رصيد  مكافئات السائقين"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.rating_page_transportation_submit
+msgid ""
+"Please write your notes and return the clearance to the team until it is\n"
+"                            repaired in the right way"
+msgstr ""
+"يرجى كتابة ملاحظاتك وإعادة الإتصال بالفريق حتى يتم الإصلاح بالطريقة الصحيحة"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_clearance_request__rating_ids
+msgid "Rating"
+msgstr "التقييم"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_clearance_request__rating_avg
+msgid "Rating Average"
+msgstr "متوسط التقييم"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_clearance_request__rating_last_feedback
+msgid "Rating Last Feedback"
+msgstr "آخر ملاحظات التقييم"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_clearance_request__rating_last_image
+msgid "Rating Last Image"
+msgstr "آخر صورة للتقييم"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_clearance_request__rating_last_value
+msgid "Rating Last Value"
+msgstr "آخر قيمة للتقييم"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_clearance_request__rating_count
+msgid "Rating count"
+msgstr "عدد التقييمات"
+
+#. module: transportation
+#: model:ir.model.fields,help:transportation.field_clearance_request__rating_last_feedback
+msgid "Reason of the rating"
+msgstr "سبب التقييم"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_clearance_lock__requirement_id
+msgid "Requirement"
+msgstr "المتطلبات"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_clearance_lock_setting__requirement_ids
+#: model:ir.model.fields,field_description:transportation.field_clearance_request__requirement_ids
+#: model_terms:ir.ui.view,arch_db:transportation.clearance_lock_setting_view_form
+msgid "Requirements"
+msgstr "المتطلبات"
+
+#. module: transportation
+#: model:ir.actions.act_window,name:transportation.clearance_lock_requirement_action
+#: model:ir.ui.menu,name:transportation.clearance_lock_requirement_menu
+#: model:ir.ui.menu,name:transportation.clearance_lock_requirement_menu_clearance
+#: model_terms:ir.ui.view,arch_db:transportation.clearance_request_view_form_inherit_transportation
+msgid "Requirements Close deal"
+msgstr "متطلبات الإقفال"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_account_payment__is_reward_drivers
+msgid "Reward Drivers"
+msgstr "مكافئات السائقين"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.hr_employee_view_form_inherit_transportation
+msgid "Rewards"
+msgstr "المكافئات"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order_line__route_id
+msgid "Route"
+msgstr "المسار"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: transportation
+#: model:ir.model,name:transportation.model_sale_order
+msgid "Sales Order"
+msgstr "أمر البيع"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.rating_page_transportation_submit
+msgid "Satisfied"
+msgstr "راضٍ"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.shipping_order_view_form
+msgid "Schedule appointment for this shipping order"
+msgstr "حجز المواعيد"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.rating_page_transportation_submit
+msgid "Send Feedback"
+msgstr "إرسال ملحوظة"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.clearance_request_view_form_inherit_transportation
+msgid "Send Rating Form to Customer"
+msgstr "ارسال نموذج تقييم للعميل"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__shipment_type
+msgid "Shipment type"
+msgstr "نوع النقل"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_account_payment__shipping_order_id
+#: model:ir.model.fields,field_description:transportation.field_calendar_event__shipping_order_id
+#: model:ir.model.fields,field_description:transportation.field_shipping_order_line__shipping_order_id
+msgid "Shipping Order"
+msgstr "امر النقل"
+
+#. module: transportation
+#: code:addons/transportation/models/transportation.py:0
+#, python-format
+msgid "Shipping Order "
+msgstr "امر النقل"
+
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_res_company__shipping_order_sequence_id
+msgid "Shipping Order Sequence"
+msgstr "تسلسل أمر النقل"
+
+#. module: transportation
+#: model:ir.actions.act_window,name:transportation.shipping_order_action
+#: model:ir.actions.act_window,name:transportation.shipping_order_action_clearance
+#: model:ir.model,name:transportation.model_shipping_order
+#: model:ir.model.fields,field_description:transportation.field_clearance_request__order_ids
+#: model_terms:ir.ui.view,arch_db:transportation.clearance_request_view_form_inherit_transportation
+#: model_terms:ir.ui.view,arch_db:transportation.fleet_vehicle_view_form_inherit_transportation
+msgid "Shipping Orders"
+msgstr "أوامر النقل"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_clearance_request__shipping_order_number
+msgid "Shipping Orders number"
+msgstr "أوامر النقل"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.shipping_order_view_form
+msgid "Shipping orders Details"
+msgstr "إرسال رسالة واتساب بتفاصيل أمر النقل"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_fleet_vehicle__shipping_orders_number
+msgid "Shipping orders number"
+msgstr "عدد أوامر النقل"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order_line__shipment_type_size_id
+msgid "Size"
+msgstr "الحجم"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.shipping_order_view_form
+msgid "Start Receipt and Delivery"
+msgstr "إرسال رسالة واتساب لبدء التوصيل "
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_clearance_request__state
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__state
+#: model:ir.model.fields,field_description:transportation.field_shipping_order_line__state
+#: model_terms:ir.ui.view,arch_db:transportation.shipping_order_view_search
+msgid "State"
+msgstr "الحالة"
+
+#. module: transportation
+#: model:ir.model.fields,help:transportation.field_shipping_order__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.rating_page_transportation_submit
+msgid "Thanks! We appreciate your feedback"
+msgstr "شكرا! نحن نقدر ملاحظاتك"
+
+#. module: transportation
+#: code:addons/transportation/models/clearance_request.py:0
+#, python-format
+msgid ""
+"The clearance request %s has been closed and the shipment has been received "
+"successfully on %s"
+msgstr "لقد تم اقفال طلب التخليص %s و استلام الشحنة بنجاح في %s"
+
+#. module: transportation
+#: code:addons/transportation/models/transportation.py:0
+#, python-format
+msgid ""
+"The goods [%s] %s will be transferred from %s to %s on %s with  delivery "
+"date %s via vehicle %s"
+msgstr ""
+"سيتم نقل البضائع [%s] %s  من %s إلى %s في %s ذات تاريخ "
+"تسليم %s عبر الشاحنة %s"
+
+#. module: transportation
+#: code:addons/transportation/models/transportation.py:0
+#, python-format
+msgid "There is no goods left"
+msgstr "لا توجد بضائع متبقية"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order_line__shipment_to
+msgid "To"
+msgstr "الى"
+
+#. module: transportation
+#: model:ir.ui.menu,name:transportation.clearance_request_transportation_menu
+msgid "Transport"
+msgstr "النقل"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__transport_type
+#: model_terms:ir.ui.view,arch_db:transportation.shipping_order_view_search
+msgid "Transport type"
+msgstr "نوع النقل"
+
+#. module: transportation
+#: model:ir.actions.act_window,name:transportation.clearance_request_action_transportation
+#: model:ir.ui.menu,name:transportation.transportation_menu_root
+msgid "Transportation"
+msgstr "إدارة النقل"
+
+#. module: transportation
+#: model:res.groups,name:transportation.group_transportation_responsible
+msgid "Transportation responsible"
+msgstr "مسؤول النقل"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order_line__type_lcl
+msgid "Type"
+msgstr "النوع"
+
+#. module: transportation
+#: model:ir.model.fields,help:transportation.field_shipping_order__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع نشاط الاستثناء في السجل."
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order_line__uom_id
+msgid "Unit of Measure"
+msgstr "الوحدة"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__message_unread
+msgid "Unread Messages"
+msgstr "عدد الرسائل غير المقروءة"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عداد الرسائل غير المقروءة"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.clearance_request_view_form_inherit_transportation
+msgid "Validate"
+msgstr "تأكيد"
+
+#. module: transportation
+#: model:ir.model,name:transportation.model_fleet_vehicle
+#: model:ir.model.fields,field_description:transportation.field_shipping_order_line__vehicle_id
+msgid "Vehicle"
+msgstr "الشاحنة"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_fleet_vehicle__vehicle_type_id
+msgid "Vehicle type"
+msgstr "النوع"
+
+#. module: transportation
+#: model:ir.actions.report,name:transportation.report_way_bill
+#: model:ir.actions.report,name:transportation.report_way_bill_line
+#: model_terms:ir.ui.view,arch_db:transportation.shipping_order_view_form
+msgid "WAY BILL"
+msgstr "كشف شحن بضاعة"
+
+#. module: transportation
+#: model:ir.model.fields.selection,name:transportation.selection__shipping_order__transport_type__warehouse
+msgid "Yard"
+msgstr "الساحة"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.rating_external_transportation_page_view
+msgid "We appreciate your feedback"
+msgstr "نحن نقدر ملاحظاتك"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order_line__weight
+msgid "Weight"
+msgstr "الوزن"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.rating_page_transportation_submit
+msgid "Would be great if you can provide more information."
+msgstr "سيكون رائعًا إذا كان بإمكانك تقديم المزيد من المعلومات."
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.rating_page_transportation_submit
+msgid "You can write your feedback here."
+msgstr "يمكنك كتابة ملاحظاتك هنا"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.rating_page_transportation_submit
+msgid "by"
+msgstr "بواسطة"
+
+#. module: transportation
+#: code:addons/transportation/controllers/main.py:0
+#, python-format
+msgid "highly dissatisfied"
+msgstr "مستاء تمامًا"
+
+#. module: transportation
+#: code:addons/transportation/controllers/main.py:0
+#, python-format
+msgid "not satisfied"
+msgstr "غير راضٍ"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.rating_page_transportation_submit
+msgid "on our services of Transportation \""
+msgstr " من خدمة النقل "
+
+#. module: transportation
+#: code:addons/transportation/controllers/main.py:0
+#, python-format
+msgid "satisfied"
+msgstr "راضٍ"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.rating_page_transportation_submit
+msgid "you are"
+msgstr "أنت"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__request_type
+msgid "Request Type"
+msgstr "نوع طلب التخليص"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.view_account_payment_tree_reward_transportation
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_account_payment__route_ids
+msgid "Routes"
+msgstr "المسارات"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_account_payment__residual_reward
+msgid "Residual Reward"
+msgstr "المبلغ المتبقي"
+
+#. module: transportation
+#: code:addons/transportation/models/clearance_request.py:0
+#: model:ir.actions.server,name:transportation.shipment_type_action_packages
+#: model:ir.ui.menu,name:transportation.packages_menu_all
+#, python-format
+msgid "Packages"
+msgstr "الحاويات"
+
+#. module: transportation
+#: code:addons/transportation/models/clearance_request.py:0
+#: model:ir.actions.server,name:transportation.shipment_type_action_bales
+#: model:ir.ui.menu,name:transportation.bales_menu_all
+#, python-format
+msgid "Parcel/Bales"
+msgstr "طرود/بالات"
+
+#. module: transportation
+#: model:ir.ui.menu,name:transportation.shipments_menu_all
+msgid "Shipments"
+msgstr "الشحنات"
+
+#. module: transportation
+#: model:ir.actions.act_window,name:transportation.shipping_order_action_warehouse
+#: model_terms:ir.ui.view,arch_db:transportation.shipping_order_view_form
+msgid "Shipping Orders From Yard"
+msgstr "أوامر النقل من الساحة"
+
+#. module: transportation
+#: code:addons/transportation/models/transportation.py:0
+#, python-format
+msgid "You Can't choose a yard"
+msgstr "لا يمكن إختيار نوع ساحة"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_clearance_request__shipping_order_warehouse
+msgid "Warehouse "
+msgstr "الساحة"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_clearance_request__shipping_order_customer
+msgid "Customer"
+msgstr "العميل"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_account_payment__reward
+#: model_terms:ir.ui.view,arch_db:transportation.view_account_payment_tree_reward_transportation
+msgid "Reward"
+msgstr "المكافأة"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.view_account_payment_tree_reward_transportation
+msgid "Paid"
+msgstr "مدفوع"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_account_payment__shipping_order_number
+msgid "Shipping Order Number"
+msgstr "رقم أمر النقل"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.view_account_payment_search_inherit_transportation
+#: model_terms:ir.ui.view,arch_db:transportation.view_account_payment_tree_reward_transportation
+msgid "Driver Name"
+msgstr "إسم السائق"
+
+#. module: transportation
+#: code:addons/transportation/models/account_payment.py:0
+#: model:ir.actions.server,name:transportation.ir_actions_button_my_rewards
+#: model:ir.ui.menu,name:transportation.my_rewards_menu
+#, python-format
+msgid "My Rewards"
+msgstr "مكافآتي"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__is_paid
+#: model:ir.model.fields,field_description:transportation.field_shipping_order_line__is_paid
+msgid "Is Paid"
+msgstr "مدفوع"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_account_payment__shipping_line_ids
+msgid "Shipping Lines"
+msgstr "بنود النقل"
+
+#. module: transportation
+#: code:addons/transportation/models/transportation.py:0
+#, python-format
+msgid "You can't delete this paid line"
+msgstr "لا يمكن حذف بند مدفوع"
+
+#. module: transportation
+#: model:ir.model.fields.selection,name:transportation.selection__clearance_request__state__delivery_done
+msgid "Delivery Done"
+msgstr "تم التسليم"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.shipping_order_view_form
+msgid "Confirm"
+msgstr "إعتماد"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.shipping_order_view_form
+msgid "Create Driver Reward"
+msgstr "تسجيل أمر صرف مكافئة السائق"
+
+#. module: transportation
+#: model:ir.model.fields.selection,name:transportation.selection__shipping_order__state__done
+msgid "Done"
+msgstr "معتمد"
+
+#. module: transportation
+#: model:ir.model.fields.selection,name:transportation.selection__shipping_order__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order_line__payment_reward_id
+msgid "Payment Reward"
+msgstr "مكافئة السائق"
+
+#. module: transportation
+#: code:addons/transportation/models/clearance_request.py:0
+#, python-format
+msgid "Shipping orders must be added"
+msgstr "يجب إضافة أوامر النقل"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.shipping_order_view_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: transportation
+#: model:ir.model.fields.selection,name:transportation.selection__shipping_order__state__canceled
+msgid "Canceled"
+msgstr "ملغى"
+
+#. module: transportation
+#: model:res.groups,name:transportation.group_set_to_draft_responsible
+msgid "Set To Draft Responsible For Shipping Orders"
+msgstr " مسؤول الإعادة إلى مسودة في أوامر النقل"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.shipping_order_view_form
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__is_set_to_draft
+msgid "Set To Draft	"
+msgstr "إعادة إلى مسودة"
+
+#. module: transportation
+#: code:addons/transportation/models/transportation.py:0
+#, python-format
+msgid "Cannot print WAY BILL if the %s  has expired:%s"
+msgstr "لا يمكن طباعة كشف شحن البضاعة %s منتهي:%s"
+
+#. module: transportation
+#: code:addons/transportation/models/transportation.py:0
+#, python-format
+msgid "Driving License Expiration Date"
+msgstr "وتاريخ رخصة السير في المركبة"
+
+#. module: transportation
+#: code:addons/transportation/models/transportation.py:0
+#, python-format
+msgid "Port Licence Expiration Date"
+msgstr "وتاريخ  ترخيص المينا"
+
+#. module: transportation
+#: code:addons/transportation/models/transportation.py:0
+#, python-format
+msgid "Port Permit Expiration Date "
+msgstr "وتاريخ  تصريح المينا"
+
+#. module: transportation
+#: code:addons/transportation/models/transportation.py:0
+#, python-format
+msgid "Drive Play Card Expiration Date"
+msgstr "وتاريخ كرت التشغيل"
+
+#. module: transportation
+#: code:addons/transportation/models/transportation.py:0
+#, python-format
+msgid "Insurance Expiration Date"
+msgstr "وتاريخ التامين"
+
+#. module: transportation
+#: code:addons/transportation/models/transportation.py:0
+#, python-format
+msgid "Expiry Card Expiration Date"
+msgstr "وتاريخ بطاقة زاول"
+
+#. module: transportation
+#: code:addons/transportation/models/transportation.py:0
+#, python-format
+msgid "Play Card Expiration Date"
+msgstr "وتاريخ كرت التشغيل"
+
+#. module: transportation
+#: code:addons/transportation/models/transportation.py:0
+#, python-format
+msgid "Driving license Expiration Date"
+msgstr "وتاريخ رخصة السياقة"
+
+#. module: transportation
+#: code:addons/transportation/models/transportation.py:0
+#, python-format
+msgid "Health certificate Expiration Date"
+msgstr "وتاريخ  الشهادة الصحية"
+
+#. module: transportation
+#: code:addons/transportation/models/transportation.py:0
+#, python-format
+msgid "Periodic inspection Expiration Date"
+msgstr "وتاريخ الفحص الدوري"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_clearance_request__shipping_order_port
+msgid "Port"
+msgstr "الميناء"
+
+
+#. module: transportation
+#: model:ir.model.fields.selection,name:transportation.selection__shipping_order__state__closed
+msgid "Closed"
+msgstr "مغلق"
+
+#. module: transportation
+#: code:addons/transportation/models/clearance_request.py:0
+#, python-format
+msgid "We can't create more than two customer orders"
+msgstr "لا يمكن إنشاء أكثر من أمرين نقل نوع عميل"
+
+#. module: transportation
+#: code:addons/transportation/models/clearance_request.py:0
+#, python-format
+msgid "We can't create more than one warehouse orders"
+msgstr "لا يمكن إنشاء أكثر من أمر نقل نوع ساحة"
+
+#. module: transportation
+#: code:addons/transportation/models/clearance_request.py:0
+#, python-format
+msgid "We can't create more than one other orders"
+msgstr "لا يمكن إنشاء أكثر من أمر نقل نوع موقع أخر"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order_line__number
+msgid "Number"
+msgstr "رقم"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order_line__confirmed
+msgid "Confirmed"
+msgstr "معتمد"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.shipping_order_view_form
+msgid "Cash Receipt"
+msgstr "إيصال الاستلام النقدي"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.clearance_request_view_search_inherit_transportation
+msgid "Overdue Clearance"
+msgstr "المعاملات المتأخرة"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.clearance_request_view_search_inherit_transportation
+msgid "Ready Clearance"
+msgstr "المعاملات الجاهزة"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.clearance_request_view_search_inherit_transportation
+msgid "Upcoming Clearance"
+msgstr "المعاملات القادمة"
+
+#. module: transportation
+#: code:addons/transportation/models/transportation.py:0
+#, python-format
+msgid "Shipping order transport type is different to transport types of containers routes"
+msgstr "نوع نقل أمر النقل مختلف عن أنواع النقل في مسارات الحاويات"
+
+#. module: transportation
+#: model:ir.model.fields.selection,name:transportation.selection__shipping_order__transport_type__empty
+msgid "Return empty"
+msgstr "ارجاع الفارغ"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.report_payment_receipt_document_inherit_transportation
+msgid "<span>Container Number</span>"
+msgstr "<span>رقم الحاوية</span>"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.report_payment_receipt_document_inherit_transportation
+msgid "<span>Customer Name</span>"
+msgstr "<span>اسم العميل</span>"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.report_payment_receipt_document_inherit_transportation
+msgid "<span>Receipt Serial Number</span>"
+msgstr "<span>رقم تسلسي للايصال</span>"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.report_payment_receipt_document_inherit_transportation
+msgid "<span>Reward</span>"
+msgstr "<span>المكافأة</span>"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.report_payment_receipt_document_inherit_transportation
+msgid "<span>Route</span>"
+msgstr "<span>المسار</span>"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.report_payment_receipt_document_inherit_transportation
+msgid "<span>Shipping Order Number</span>"
+msgstr "<span>رقم امر النقل</span>"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.report_payment_receipt_document_inherit_transportation
+msgid "<span>Vehicle Number</span>"
+msgstr "<span>رقم المركبة </span>"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.report_payment_receipt_document_inherit_transportation
+msgid "<span>Minimum amount</span>"
+msgstr "<span>المبلغ الادنى</span>"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.report_payment_receipt_document_inherit_transportation
+msgid "<span>Residual</span>"
+msgstr "<span>المتبقي</span>"
+
+#. module: transportation
+#: code:addons/transportation/models/transportation.py:0
+#, python-format
+msgid "Route : "
+msgstr "المسار :"
+
+#. module: transportation
+#: code:addons/transportation/models/transportation.py:0
+#, python-format
+msgid "The Route is changed from %s to %s"
+msgstr "تم تغيير المسار من %s إلى %s"
+
+#. module: transportation
+#: code:addons/transportation/models/transportation.py:0
+#, python-format
+msgid "The shipment to is Changed from %s to %s"
+msgstr "تم تغيير مسار الشحنة من %s إلى %s"
+
+#. module: transportation
+#: code:addons/transportation/models/transportation.py:0
+#, python-format
+msgid "Driver Expiry Date"
+msgstr "تاريخ انتهاء زاول للسائق"
+
+#. module: transportation
+#: code:addons/transportation/models/transportation.py:0
+#, python-format
+msgid "Driver License Expiry Date"
+msgstr "تاريخ انتهاء رخصة السائق"
+
+#. module: transportation
+#: code:addons/transportation/models/transportation.py:0
+#, python-format
+msgid "Insurance No/Cargo End Date"
+msgstr "تاريخ إنتهاء رقم التأمين / الحمولة"
+
+#. module: transportation
+#: code:addons/transportation/models/clearance_request.py:0
+#, python-format
+msgid ""
+"Dear customer,%0awe would like to inform you that your shipment with\n"
+"Farha {clearance_name} Has been delivered.\n"
+"                    %0aThanks for trust.%0aFarha logistics "
+msgstr ""
+"عميلنا العزيز,%0aنفيدكم بأنه تم تسليم ارساليتكم رقم فرحه\n"
+" {clearance_name}.\n"
+"%0aنشكر ثقتكم بنا.%0aفرحه لوجستك."
+
+#. module: transportation
+#: code:addons/transportation/models/transportation.py:0
+#, python-format
+msgid ""
+"Dear driver,%0a\n"
+"        The goods transfer order has been issued.%0a\n"
+"        Shipping details {container_number} {shipment_type} from {shipment_from} to {shipment_to} must begin.%0a\n"
+"        Kindly, proceed to dispatch office\n"
+"        "
+msgstr ""
+"عزيزي السائق,%0a\n"
+"تم إصدار أمر نقل بضائع.%0a\n"
+"تفاصيل الشحنة {container_number} {shipment_type} من {shipment_from} إلى {shipment_to} .%0a\n"
+"الرجاء التفضل لمكتب الترحيل.\n"
+"        "
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__create_date
+msgid "Shipping Order Date"
+msgstr "تاريخ أمر النقل"
+
+#. module: transportation
+#: model:ir.actions.act_window,name:transportation.transportation_shipments_orders_action
+#: model:ir.ui.menu,name:transportation.shipments_orders_menu
+msgid "Shipments Orders"
+msgstr "أوامر النقل"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.shipping_order_view_tree
+msgid "Transaction Number"
+msgstr "رقم المعاملة"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.clearance_request_view_form_inherit_transportation
+msgid "Close"
+msgstr "إقفال"
+
+#. module: transportation
+#: model_terms:ir.ui.view,arch_db:transportation.shipping_order_view_form
+msgid "Close"
+msgstr "إغلاق"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__partner_id
+msgid "Partner"
+msgstr "إسم العميل"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__shipping_number
+msgid "BL Number"
+msgstr "رقم بوليصة الشحن"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order__statement_number
+msgid "Statement Number"
+msgstr "رقم البيان"
+
+#. module: transportation
+#: model:ir.model.fields,field_description:transportation.field_shipping_order_line__service_id
+msgid "Service"
+msgstr "الخدمة"

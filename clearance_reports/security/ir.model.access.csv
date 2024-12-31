@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_clearance_request_reports,name_clearance_request_reports,clearance.model_clearance_request,clearance_reports.group_clearance_reports,1,0,0,0
+access_clearance_report,name_clearance_report,model_clearance_report,,1,1,1,0
+access_clearance_request_wizard,name_clearance_request_wizard,model_clearance_request_wizard,,1,1,1,0

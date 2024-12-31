@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="action_accept_authorization_requests" model="ir.actions.server">
+        <field name="name">Accept</field>
+        <field name="model_id" ref="hr_authorization.model_hr_authorization" />
+        <field name="binding_model_id" ref="hr_authorization.model_hr_authorization" />
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">
+            if records:
+            action = records.open_multi_accept_wizard()
+        </field>
+    </record>
+
+    <record id="action_refuse_authorization_requests" model="ir.actions.server">
+        <field name="name">Refuse</field>
+        <field name="model_id" ref="hr_authorization.model_hr_authorization" />
+        <field name="binding_model_id" ref="hr_authorization.model_hr_authorization" />
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">
+            if records:
+            action = records.open_multi_refuse_wizard()
+        </field>
+    </record>
+    <menuitem id="hr_authorization_menu_root" name="Authorizations" parent="hr.menu_hr_root" sequence="50" />
+
+    <menuitem
+        id="hr_authorization_configuration_menu"
+        name="Configuration"
+        groups="hr_authorization.group_hr_authorization_manager"
+        parent="hr_authorization_menu_root"
+        sequence="100"
+    />
+
+    <record id="hr_authorization_tree_view" model="ir.ui.view">
+        <field name="name">hr.authorization.tree</field>
+        <field name="model">hr.authorization</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="employee_id" widget="many2one_avatar_employee" />
+                <field name="date" />
+                <field name="hour_start" />
+                <field name="hour_stop" />
+                <field name="stage_id" />
+                <field name="state" invisible="1" />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="hr_authorization_form_view">
+        <field name="name">hr.authorization.form</field>
+        <field name="model">hr.authorization</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="request.request_view_form" />
+        <field name="arch" type="xml">
+            <field name="stage_id" position="attributes">
+                <attribute name="attrs">{'invisible': [('request_type_id', '=', False)]}
+                </attribute>
+            </field>
+            <button name="action_refuse" position="after">
+                <button
+                    name="action_cancel"
+                    string="Cancel"
+                    class="btn-warning"
+                    type="object"
+                    groups="hr.group_hr_manager"
+                    attrs="{'invisible': [('state', 'in', ['draft','cancel'])]}"
+                />
+            </button>
+            <group name="principal" position="replace" />
+            <sheet position="inside">
+                <group>
+                    <group>
+                        <field name="name" />
+                        <field name="date" attrs="{'readonly':[('state','!=','draft')]}" />
+                        <field name="employee_id" options="{'no_create': True}" />
+                        <field name="request_type_id" required="1" options="{'no_create': True}" />
+                        <field name="department_id" force_save="1" />
+                        <field name="company_id" groups="base.group_multi_company" />
+
+                    </group>
+                    <group>
+                        <field name="hour_start" widget="float_time" />
+                        <field name="hour_stop" widget="float_time" />
+                        <field name="duration" widget="float_time" force_save="1" />
+                        <field name="current_authorization_hours" widget="float_time" />
+                        <field name="current_nb_authorization" />
+                        <field name="active" invisible="1" />
+                    </group>
+                </group>
+                <group>
+                    <field name="description" />
+                </group>
+                <notebook>
+                    <page name="attachments" string="Attachments">
+                        <field name="attachment_ids" widget="many2many_binary" nolabel="1" />
+                    </page>
+                </notebook>
+            </sheet>
+        </field>
+    </record>
+
+    <record id="hr_authorization_view_kanban" model="ir.ui.view">
+        <field name="name">hr.authorization.kanban</field>
+        <field name="model">hr.authorization</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="request.request_view_kanban" />
+        <field name="arch" type="xml">
+            <div name="card_body" position="inside">
+                <br />
+                <span name="name" t-if="record.name.raw_value">Request number:
+                    <field name="name" />
+                    <br />
+                </span>
+                <span name="employee_id" t-if="record.employee_id.raw_value">Employee:
+                    <field name="employee_id" />
+                    <br />
+                </span>
+                <span name="date" t-if="record.date.raw_value">Date:
+                    <field name="date" />
+                    <br />
+                </span>
+                <span name="hour_start" t-if="record.hour_start.raw_value">Exit hour :
+                    <field name="hour_start" />
+                    <br />
+                </span>
+                <span name="hour_stop" t-if="record.hour_stop.raw_value">Return hour :
+                    <field name="hour_stop" />
+                    <br />
+                </span>
+                <span name="duration" t-if="record.hour_stop.raw_value">Duration :
+                    <field name="duration" />
+                    <br />
+                </span>
+            </div>
+        </field>
+    </record>
+
+    <record id="hr_authorization_serach_view" model="ir.ui.view">
+        <field name="name">hr.authorization.search</field>
+        <field name="model">hr.authorization</field>
+        <field name="arch" type="xml">
+            <search string="Authorization">
+                <field name="employee_id" string="employee" filter_domain="[('employee_id.name','ilike',self)]" />
+                <filter name="hr.authorization_draft" string="New Requests" domain="[('state', '=', 'draft')]" />
+                <filter
+                    name="hr.authorization_validate"
+                    string="Validated Requests"
+                    domain="[('state', '=', 'done')]"
+                />
+                <filter name="hr.authorization_refuse" string="Refused Requests" domain="[('state', '=', 'cancel')]" />
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]" />
+                <group string="Group By">
+                    <filter name="stage_id" string="Stage" context="{'group_by': 'stage_id'}" />
+                    <filter name="date" string="Date" context="{'group_by': 'date'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="hr_authorization_action">
+        <field name="name">Authorizations</field>
+        <field name="res_model">hr.authorization</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="hr_authorization_menu"
+        name="Authorizations"
+        parent="hr_authorization_menu_root"
+        sequence="50"
+        action="hr_authorization_action"
+    />
+
+
+    <!-- Authorization Type-->
+
+
+    <record model="ir.ui.view" id="request_type_view_form_inherit_hr_authorization">
+        <field name="name">request.type.form.inherit</field>
+        <field name="model">request.type</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="request.request_type_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field
+                    name="hours_authorization"
+                    widget="float_time"
+                    attrs="{'invisible': [('res_model', '!=', 'hr.authorization')], 'required': [('res_model', '=', 'hr.authorization')]}"
+                />
+            </xpath>
+            <xpath expr="//field[@name='code']" position="after">
+                <field
+                    name="number_authorization"
+                    attrs="{'invisible': [('res_model', '!=', 'hr.authorization')], 'required': [('res_model', '=', 'hr.authorization')]}"
+                />
+                <field name="required_attachments" attrs="{'invisible': [('res_model', '!=', 'hr.authorization')]}" />
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="hr_authorization_type_action">
+        <field name="name">Authorization types</field>
+        <field name="res_model">request.type</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('res_model','=', 'hr.authorization')]</field>
+        <field name="context">{'default_res_model': 'hr.authorization'}</field>
+    </record>
+
+    <menuitem
+        id="hr_authorization_type_menu"
+        parent="hr_authorization_configuration_menu"
+        sequence="50"
+        action="hr_authorization_type_action"
+    />
+
+    <!--    Drive Actions Authorization Menu & Action -->
+
+    <record id="hr_authorization_tree_view_drive_actions" model="ir.ui.view">
+        <field name="name">hr.authorization.tree.drive.actions</field>
+        <field name="model">hr.authorization</field>
+        <field name="arch" type="xml">
+            <tree create="0" edit="0">
+                <field name="name" />
+                <field name="employee_id" widget="many2one_avatar_employee" />
+                <field name="date" />
+                <field name="stage_id" />
+                <field name="state" invisible="1" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="hr_authorization_action_drive_actions" model="ir.actions.act_window">
+        <field name="name">Authorizations</field>
+        <field name="res_model">hr.authorization</field>
+        <field name="context">{'group_by':'stage_id'}</field>
+        <field
+            name="view_ids"
+            eval="[(5, 0, 0),
+                         (0, 0, {'view_mode': 'tree', 'view_id': ref('hr_authorization.hr_authorization_tree_view_drive_actions')})]"
+        />
+    </record>
+
+    <menuitem
+        id="hr_authorization_menu_drive_actions"
+        sequence="1"
+        parent="request.self_service_menu_drive_action"
+        action="hr_authorization_action_drive_actions"
+    />
+
+    <!--add new action for authorization-->
+    <record id="hr_authorization_action_my" model="ir.actions.act_window">
+        <field name="name">My authorizations</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.authorization</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('employee_id.user_id','=',uid)]</field>
+    </record>
+
+    <!--Add menu my Requests authorization-->
+    <menuitem
+        id="authorization_my_request_menu"
+        name="My authorizations"
+        parent="hr_authorization_menu_root"
+        action="hr_authorization_action_my"
+        sequence="2"
+    />
+    <!--Add menu my authorizations in self service-->
+
+    <menuitem
+        id="menu_hr_authorizations_my"
+        sequence="4"
+        parent="request.self_services_menu"
+        action="hr_authorization_action_my"
+    />
+
+    <!--add new action for authorization-->
+    <record id="hr_authorization_action_all" model="ir.actions.act_window">
+        <field name="name">Authorizations</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.authorization</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!--Add menu all Requests authorization-->
+    <menuitem
+        id="authorization_all_request_menu"
+        name="Authorizations"
+        parent="hr_authorization_menu_root"
+        action="hr_authorization_action_all"
+        sequence="3"
+    />
+
+    <!--hide authorization menu-->
+    <record id="hr_authorization_menu" model="ir.ui.menu">
+        <field name="active" eval="False" />
+    </record>
+</odoo>

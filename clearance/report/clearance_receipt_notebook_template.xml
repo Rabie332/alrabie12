@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="receipt_notebook_template">
+        <t t-call="web.html_container" t-lang="en_US">
+            <t t-set="docs" t-value="docs.with_context(lang='en_US')" />
+            <t t-foreach="docs" t-as="o">
+                <div class="header" />
+                <div class="footer" />
+                <t t-call="web.external_layout" t-lang="en_US">
+                    <div class="page" style="font-size: 16px;">
+                         <div class="row">
+                        <div class="col-12" style="border-bottom: 1px solid black;">
+                            <center>
+                            <img
+                                        t-att-src="image_data_uri(o.company_id.landscape_logo)"
+                                        style="height: 62px; max-width:70%;min-width:70%;"
+                                        alt="logo"
+                                    />
+                            </center>
+                        </div>
+                    </div>
+                        <div class="row">
+                            <div class="col-12" style="text-align:right;font-weight: bold;">
+                                <strong><span t-field="o.with_context({'lang': 'ar_001'}).company_id.city" />: <span
+                                        t-field="o.with_context({'lang': 'ar_001'}).company_id.street"
+                                    /><t t-if="o.company_id.vat"> - <span t-field="o.company_id.vat" /></t> - <span
+                                        t-field="o.with_context({'lang': 'ar_001'}).company_id.country_id.name"
+                                    /></strong>
+                            </div>
+
+                        </div>
+                           <div class="row">
+                            <br />
+                            <div
+                                class="col-12"
+                                style="text-align:left;font-weight: bold;border-bottom: 1px solid black;"
+                            >
+                                <strong><span t-field="o.company_id.city" />: <span
+                                        t-field="o.with_context({'lang': 'en'}).company_id.street"
+                                    /><t t-if="o.company_id.vat"> - <span t-field="o.company_id.vat" /></t> - <span
+                                        t-field="o.with_context({'lang': 'en'}).company_id.country_id.name"
+                                    /></strong>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12" style="text-align:center;">
+                                <br />
+                               <span>سند إستلام مستندات التخليص</span>
+                                <br />
+                               <span style="text-decoration: underline;">RECEIPT OF CUSTOM CLEARANCE DOCUMENTS</span>
+                            </div>
+                        </div>
+                        <div class="row" style="padding-top:2%;">
+                            <div class="col-12">
+                                <div class="col-4 pull-left">
+                                    <span>Our Job No. </span> <span t-field="o.name" />
+                                </div>
+                                <div class="col-4" />
+                               <div class="col-4 pull-right" style="margin-left:-8%;">
+                                    <span>Date </span> <span t-field="o.date" />
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row" style="padding-top:2%;">
+                            <div class="col-12" style="text-align:left;">
+                                <span
+                                >Received the following documents with thanks for custom clearance services from</span>
+                                <br />
+                                <span>M/S.</span>  <span t-field="o.partner_id.name" />
+                                <br />
+                            </div>
+                        </div>
+                         <div class="row" style="padding-top:3%;">
+                            <br />
+                            <div class="col-12">
+                                <div class="col-6 pull-left" style="margin-left:-1.9%;">
+                                    <span>From the Vessel</span>  <span t-field="o.vessel" />
+                                </div>
+                                <div class="col-6 pull-right">
+                                    <span>B/L No.: </span> <span t-field="o.shipping_number" />
+                                </div>
+
+                            </div>
+                        </div>
+                         <div class="row">
+                            <br />
+                            <div class="col-12">
+                                <div class="col-6 pull-left" style="margin-left:-1.9%;">
+                                    <span>1 - Bill of Lading</span> <b><t
+                                            t-if="o.shipping_type == 'original'"
+                                        >Original<span /></t>
+                                    <t t-elif="o.shipping_type == 'waybill'">Sea waybill </t>
+                                    <t t-else="">Copy </t>
+                                </b>
+                                </div>
+                                <div class="col-6 pull-right">
+                                    <span>2 - Invoices </span> <t t-if="o.clearance_invoice_ids">
+                                    <b>
+                                    <t t-if="o.clearance_invoice_ids[0].invoice_type == 'original'">Original<span /></t>
+                                        <t t-else="">Copy</t></b>
+                                </t>
+                                </div>
+
+                            </div>
+                        </div>
+                         <div class="row">
+                            <br />
+                            <div class="col-12">
+                                <div class="col-6 pull-left" style="margin-left:-1.9%;">
+                                    <span>3 -  Certificate of Origin</span> <b> <t
+                                            t-if="o.shipping_type == 'original'"
+                                        >Original<span /></t>
+                                     <t t-elif="o.shipping_type == 'waybill'">Sea waybill </t>
+                                    <t t-else="">Copy </t></b>
+                                </div>
+                                <div class="col-6 pull-right">
+                                    <span>4 - Packing List </span> <b><t
+                                            t-if="o.shipping_type == 'original'"
+                                        >Original<span /></t>
+                                    <t t-elif="o.shipping_type == 'waybill'">Sea waybill </t>
+                                    <t t-else="">Copy </t></b>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <br />
+                            <div class="col-12" style="padding-top:3%;">
+                                <div class="col-6 pull-left">
+                                </div>
+                                <div class="col-6 pull-right" style="text-align:center;">
+                                    <strong>For: <span t-field="o.company_id.name" /></strong>
+                                </div>
+
+                            </div>
+                        </div>
+                         <div class="row" style="padding-top:3%;">
+                            <div class="col-12">
+                                <div class="col-6 pull-left" style="text-align:center;">
+                                    <span style="padding-top:7%;">Manager</span>
+                                </div>
+                                <div class="col-6 pull-right" style="text-align:center;">
+                                    <span style="padding-top:2%;">Supervisor </span>
+                                    <br />
+                                    <span>Clearing Department</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row" style="padding-top:3%;">
+                            <div class="col-12" style="font-size: 16px; color:red;">
+                                <strong>NOTE:</strong>
+                                <br />
+                                <strong>
+                                    FOR ANY INQUIRY REGARDING THIS SHIPMENT, KINDLY REFER US WITH
+JOB NO. <br />IF WE RECEIVE DOCUMENTS ON THURSDAY THE DATE WILL
+COUNT FROM SUNDAY.
+                                </strong>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                </t>
+                </t>
+            </t>
+    </template>
+</odoo>

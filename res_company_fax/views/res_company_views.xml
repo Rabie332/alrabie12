@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="view_company_form_inherit_res_company_fax" model="ir.ui.view">
+        <field name="name">res.company.form.inherit.res.company.fax</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='phone']" position="after">
+                <field name="fax" />
+            </xpath>
+            <field name="street" position="attributes">
+                <attribute name="class" />
+            </field>
+        </field>
+    </record>
+
+    <record id="partner_autocomplete_inherit_res_company_fax" model="ir.ui.view">
+        <field name="name">res.company.form.inherit.partner.autocomplete</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="partner_autocomplete.view_company_form_inherit_partner_autocomplete" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('oe_title')]/h1/field[@name='name']" position="attributes">
+                <attribute name="widget" />
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

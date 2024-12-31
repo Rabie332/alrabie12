@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="hr_attendance_report_view_form" model="ir.ui.view">
+        <field name="name">hr.attendance.report.form</field>
+        <field name="model">hr.attendance.report</field>
+        <field name="arch" type="xml">
+            <form delete="0" create="0" edit="false">
+                <sheet>
+                    <group col="4" string="Period">
+                        <field name="date_from" />
+                        <field name="date_to" />
+                    </group>
+                    <group col="4">
+                            <field name="department_id" />
+                            <field name="employee_id" />
+                    </group>
+                    <br />
+                    <br />
+                    <br />
+                        <button
+                        name="print_attendance_summary_report"
+                        string="Print Attendance Summary PDF"
+                        type="object"
+                        icon="fa-print"
+                        class="oe_highlight"
+                        style="margin-left:1%;margin-right:1%;"
+                        invisible="context.get('display_attendance_notification', False)"
+                    />
+                        <button
+                        name="print_summary_xls_report"
+                        string="Print Attendance Summary XLS"
+                        type="object"
+                        icon="fa-print"
+                        class="oe_highlight"
+                        style="margin-left:1%;margin-right:1%;"
+                        invisible="context.get('display_attendance_notification', False)"
+                    />
+                     <button
+                        name="send_mail_summary_report"
+                        string="Send Attendance Summary to employees"
+                        type="object"
+                        icon="fa-envelope"
+                        class="oe_highlight"
+                        style="margin-left:1%;margin-right:1%;"
+                        invisible="not context.get('display_attendance_notification', False)"
+                    />
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="hr_attendance_report_action" model="ir.actions.act_window">
+        <field name="name">Attendance Summary Report</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.attendance.report</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="hr_attendance_report_view_form" />
+        <field name="target">inline</field>
+        <field name="binding_type">report</field>
+    </record>
+
+    <menuitem
+        id="hr_attendance_report_menu_root"
+        name="Reporting"
+        parent="hr_attendance.menu_hr_attendance_root"
+        sequence="30"
+        groups="hr_attendance.group_hr_attendance_user"
+    />
+
+    <menuitem
+        id="hr_attendance.menu_hr_attendance_report"
+        name="Attendance Analysis"
+        parent="hr_attendance_report_menu_root"
+        sequence="10"
+        action="hr_attendance.hr_attendance_action_graph"
+    />
+
+    <menuitem
+        id="hr_attendance_report__menu"
+        name="Attendance Summary Report"
+        sequence="25"
+        parent="hr_attendance_report_menu_root"
+        action="hr_attendance_report_action"
+    />
+
+</odoo>

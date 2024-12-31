@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+        <record id="view_res_partner_form_inherit_partner_autocomplete_inherit_araamis" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.partner.autocomplete</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="partner_autocomplete.view_res_partner_form_inherit_partner_autocomplete" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('oe_title')]/h1/field[@name='name']" position="attributes">
+                <attribute name="widget" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem
+        id="purchase_report_menu"
+        name="Reports"
+        parent="purchase.menu_purchase_root"
+        sequence="99"
+    />
+
+    <menuitem
+        name="Reports"
+        id="purchase.purchase_report"
+        parent="purchase_request.purchase_report_menu"
+    />
+
+</odoo>

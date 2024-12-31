@@ -1,0 +1,103 @@
+<odoo>
+    <template id="report_hotel_lost_found_objects">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="oe_structure" />
+                        <div class="col-12">
+                            <center>
+                                <strong t-if="o.type == 'lost'">Lost Stuff</strong>
+                                <strong t-if="o.type == 'found'">Found stuff</strong>
+                            </center>
+                            <br />
+                            <br />
+                            <br />
+                            <table width="100%">
+                                <tr>
+                                    <th>Date From :</th>
+                                    <th>date To :</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span t-field="o.date_from" t-options="{'format': 'yyyy/MM/dd'}" />
+                                    </td>
+                                    <td>
+                                        <span t-field="o.date_to" t-options="{'format': 'yyyy/MM/dd'}" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <br />
+                        <br />
+
+                        <table class="table table-condensed">
+                            <tr>
+
+                                <td>
+                                    <strong>Room</strong>
+                                </td>
+                                <td>
+                                    <strong>Guest</strong>
+                                </td>
+                                <td>
+                                    <strong>Description</strong>
+                                </td>
+                                <td>
+                                    <strong>Founder</strong>
+                                </td>
+                                <td>
+                                    <strong>Found date</strong>
+                                </td>
+                                <td>
+                                    <strong>Delivered</strong>
+                                </td>
+                                <td>
+                                    <strong>Delivery date</strong>
+                                </td>
+                            </tr>
+                            <t t-foreach="get_lines(o)" t-as="line">
+                                <tr>
+
+                                    <td>
+                                        <span t-field="line.room_id" />
+                                    </td>
+                                    <td>
+                                        <span t-field="line.partner_id" />
+                                    </td>
+                                    <td>
+                                        <span t-field="line.description" />
+                                    </td>
+                                    <td>
+                                        <span t-field="line.founder" />
+                                    </td>
+                                    <td>
+                                        <span t-field="line.found_date" />
+                                    </td>
+                                    <td>
+                                        <t t-if="line.delivered">
+                                            <span>X</span>
+                                        </t>
+                                    </td>
+                                    <td>
+                                        <span t-field="line.delivery_date" />
+                                    </td>
+                                </tr>
+                            </t>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+
+    <record id="report_hotel_lost_found" model="ir.actions.report">
+        <field name="name">Hotel Lost Found Report</field>
+        <field name="model">hotel.lost.found</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_file">hotel.report_hotel_lost_found_objects</field>
+        <field name="report_name">hotel.report_hotel_lost_found_objects</field>
+    </record>
+
+</odoo>

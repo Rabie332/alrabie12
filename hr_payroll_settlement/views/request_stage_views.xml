@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+      <record
+        id="request_stage_from_view_inherit_hr_payroll_settlement"
+        model="ir.ui.view"
+    >
+        <field name="name">request.stage.form.inherit</field>
+        <field name="model">request.stage</field>
+        <field name="inherit_id" ref="request.request_stage_from_view" />
+        <field name="arch" type="xml">
+                <field name="fold" position="after">
+                    <field
+                    name="appears_in_settlement_report"
+                    attrs="{'invisible': [('res_model', '!=', 'hr.settlement')]}"
+                />
+                </field>
+        </field>
+    </record>
+
+</odoo>

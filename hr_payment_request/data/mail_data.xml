@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Mail Activity Type-->
+
+    <record id="mail_hr_payment_request_approval" model="mail.activity.type">
+        <field name="name">Payment Request is ready to be approved</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="res_model_id" ref="hr_payment_request.model_hr_payment_request" />
+        <field name="category">validation</field>
+    </record>
+
+        <!-- Mail Activities Type feedback -->
+
+    <record id="mail_hr_payment_request_feedback" model="mail.activity.type">
+        <field name="name">Payment Request is done</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="res_model_id" ref="hr_payment_request.model_hr_payment_request" />
+        <field name="category">feedback</field>
+    </record>
+
+     <!-- Mail Message Subtype-->
+
+    <record id="mt_hr_payment_request_approved" model="mail.message.subtype">
+        <field name="name">Approved</field>
+        <field name="res_model">hr.payment.request</field>
+        <field name="description">Payment Request is approved</field>
+    </record>
+
+    <record id="mt_hr_payment_request_refused" model="mail.message.subtype">
+        <field name="name">Refused</field>
+        <field name="res_model">hr.payment.request</field>
+        <field name="description">Payment Request is refused</field>
+    </record>
+
+</odoo>

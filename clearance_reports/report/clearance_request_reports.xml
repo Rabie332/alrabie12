@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+     <record id="paperformat_clearance_reports_summary" model="report.paperformat">
+        <field name="name">Clearance Reports Summary</field>
+        <field name="default" eval="True" />
+        <field name="format">custom</field>
+        <field name="page_height">297</field>
+        <field name="page_width">210</field>
+        <field name="orientation">Landscape</field>
+        <field name="margin_top">10</field>
+        <field name="margin_bottom">23</field>
+        <field name="margin_left">5</field>
+        <field name="margin_right">5</field>
+        <field name="header_line" eval="False" />
+        <field name="header_spacing">20</field>
+        <field name="dpi">90</field>
+    </record>
+
+     <record id="clearance_states_report" model="ir.actions.report">
+        <field name="name">Clearance States Report</field>
+        <field name="model">clearance.report</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">clearance_reports.report_resume_clearance</field>
+        <field name="report_file">clearance_reports.report_resume_clearance</field>
+        <field name="binding_model_id" eval="False" />
+        <field name="paperformat_id" ref="clearance_reports.paperformat_clearance_reports_summary" />
+        <field name="binding_type">report</field>
+    </record>
+    <record id="clearance_states_report_preview" model="ir.actions.report">
+        <field name="name">States Report Preview</field>
+        <field name="model">clearance.report</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">clearance_reports.report_resume_clearance</field>
+        <field name="report_file">clearance_reports.report_resume_clearance</field>
+        <field name="binding_model_id" eval="False" />
+        <field name="paperformat_id" ref="clearance_reports.paperformat_clearance_reports_summary" />
+        <field name="binding_type">report</field>
+    </record>
+
+     <record id="shipping_order_report" model="ir.actions.report">
+        <field name="name">Shipping Orders Report</field>
+        <field name="model">clearance.report</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">clearance_reports.shipping_order_template</field>
+        <field name="report_file">clearance_reports.shipping_order_template</field>
+        <field name="binding_model_id" eval="False" />
+        <field name="paperformat_id" ref="clearance_reports.paperformat_clearance_reports_summary" />
+        <field name="binding_type">report</field>
+    </record>
+    <record id="shipping_order_report_preview" model="ir.actions.report">
+        <field name="name">Shipping Orders Report Preview</field>
+        <field name="model">clearance.report</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">clearance_reports.shipping_order_template</field>
+        <field name="report_file">clearance_reports.shipping_order_template</field>
+        <field name="binding_model_id" eval="False" />
+        <field name="paperformat_id" ref="clearance_reports.paperformat_clearance_reports_summary" />
+        <field name="binding_type">report</field>
+    </record>
+
+     <record id="clearance_payments_invoices_report" model="ir.actions.report">
+        <field name="name">Costs and Incomes Report</field>
+        <field name="model">clearance.report</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">clearance_reports.clearance_payments_invoices_template</field>
+        <field name="report_file">clearance_reports.clearance_payments_invoices_template</field>
+        <field name="binding_model_id" eval="False" />
+        <field name="paperformat_id" ref="clearance_reports.paperformat_clearance_reports_summary" />
+        <field name="binding_type">report</field>
+    </record>
+     <record id="clearance_payments_invoices_report_preview" model="ir.actions.report">
+        <field name="name">Costs and Incomes Report Preview</field>
+        <field name="model">clearance.report</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">clearance_reports.clearance_payments_invoices_template</field>
+        <field name="report_file">clearance_reports.clearance_payments_invoices_template</field>
+        <field name="binding_model_id" eval="False" />
+        <field name="paperformat_id" ref="clearance_reports.paperformat_clearance_reports_summary" />
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="clearance_transport_order_report" model="ir.actions.report">
+        <field name="name">Transfer Order Transaction Report</field>
+        <field name="model">clearance.report</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">clearance_reports.clearance_transport_order_template</field>
+        <field name="report_file">clearance_reports.clearance_transport_order_template</field>
+        <field name="binding_model_id" eval="False" />
+        <field name="paperformat_id" ref="clearance_reports.paperformat_clearance_reports_summary" />
+        <field name="binding_type">report</field>
+    </record>
+     <record id="clearance_transport_order_report_preview" model="ir.actions.report">
+        <field name="name">Transfer Order Transaction Report Preview</field>
+        <field name="model">clearance.report</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">clearance_reports.clearance_transport_order_template</field>
+        <field name="report_file">clearance_reports.clearance_transport_order_template</field>
+        <field name="binding_model_id" eval="False" />
+        <field name="paperformat_id" ref="clearance_reports.paperformat_clearance_reports_summary" />
+        <field name="binding_type">report</field>
+    </record>
+
+
+
+    <record id="clearance_request_partner_xlsx" model="ir.actions.report">
+        <field name="name">Clearance request Partner Excel</field>
+        <field name="model">report.clearance.clearance_request_partner_xlsx</field>
+        <field name="report_name">clearance.clearance_request_partner_xlsx</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_file">clearance.clearance_request_xlsx</field>
+    </record>
+   <record id="clearance_request_xlsx" model="ir.actions.report">
+        <field name="name">Clearance request Excel</field>
+        <field name="model">report.clearance.clearance_request_xlsx</field>
+        <field name="report_name">clearance.clearance_request_xlsx</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_file">clearance.clearance_request_xlsx</field>
+    </record>
+    <record id="action_clearance_request_report" model="ir.actions.report">
+        <field name="name">Clearance Report</field>
+        <field name="model">clearance.request.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">clearance_reports.clearance_request_report</field>
+        <field name="report_file">clearance_reports.clearance_request_report</field>
+        <field name="binding_model_id" eval="False" />
+        <field name="paperformat_id" ref="clearance_reports.paperformat_clearance_reports_summary" />
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="clearance_warehouse_report" model="ir.actions.report">
+        <field name="name">Warehouse Report</field>
+        <field name="model">clearance.report</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">clearance_reports.clearance_warehouse_template</field>
+        <field name="report_file">clearance_reports.clearance_warehouse_template</field>
+        <field name="binding_model_id" eval="False" />
+        <field name="paperformat_id" ref="clearance_reports.paperformat_clearance_reports_summary" />
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>

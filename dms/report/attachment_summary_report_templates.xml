@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="attachments_summary_report">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="oe_structure" />
+                        <br />
+                        <br />
+                        <div class="col-xs-12 text-center">
+                            <h3 style="color:#395870;">
+                                <strong>
+                                    Documents summary‬ :
+                                    <t>
+                                        <span t-field="o.date_from" />
+                                    </t>
+                                    -
+                                    <t>
+                                        <span t-field="o.date_to" />
+                                    </t>
+                                </strong>
+                                <br />
+                                <br />
+                            </h3>
+                        </div>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Document name</th>
+                                    <th>Type</th>
+                                    <th>Folder</th>
+                                    <th>Create date</th>
+                                    <th>User</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="get_lines(data['form'])" t-as="line">
+                                    <tr>
+                                        <td>
+                                            <span t-field="line.name" />
+                                        </td>
+                                        <td>
+                                            <span t-field="line.type_id.name" />
+                                        </td>
+                                        <td>
+                                            <span t-field="line.folder_id.name" />
+                                        </td>
+                                        <td>
+                                            <span t-field="line.create_date" />
+                                        </td>
+                                        <td>
+                                            <span t-field="line.create_uid" />
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

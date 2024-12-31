@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="hr_training_action_my" model="ir.actions.act_window">
+        <field name="res_model">hr.training</field>
+        <field name="name">Trainings</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'no_display_create':True}</field>
+        <field name="domain">[('employee_id', '=', active_id), ('state', '=', 'done')]
+        </field>
+    </record>
+    <record id="hr_profile_res_users_view_form_inherit_hr_training" model="ir.ui.view">
+        <field name="name">res.users.view.form.inherit.profile</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="hr.res_users_view_form_profile" />
+        <field name="priority" eval="0" />
+        <field name="arch" type="xml">
+            <button id="hr_presence_button" position="before">
+                <button name="%(hr_training_action_my)d" class="oe_stat_button" icon="fa-book" type="action">
+                    <field name="training_balance" widget="statinfo" />
+                </button>
+            </button>
+        </field>
+    </record>
+</odoo>

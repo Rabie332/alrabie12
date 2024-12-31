@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!--Employee Form -->
+
+    <record id="hr_loan_action_employee" model="ir.actions.act_window">
+        <field name="res_model">hr.loan</field>
+        <field name="name">Loans</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('employee_id', '=', active_id)]</field>
+
+    </record>
+
+    <record id="view_employee_form_inherit_hr_loan" model="ir.ui.view">
+        <field name="name">hr.employee.form.inherit.loan</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form" />
+        <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <button
+                    name="%(hr_payroll_loan.hr_loan_action_employee)d"
+                    class="oe_stat_button"
+                    icon="fa-money"
+                    type="action"
+                    groups="hr_payroll_loan.group_hr_payroll_loan_manager"
+                >
+                        <field name="loan_count" widget="statinfo" string="Loans" />
+                </button>
+            </div>
+        </field>
+    </record>
+</odoo>

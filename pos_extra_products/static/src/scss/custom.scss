@@ -1,0 +1,92 @@
+.product-verified-round {
+    position: relative;
+}
+
+.product-verified-round label {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 28px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 28px;
+}
+
+.product-verified-round label:after {
+    border: 2px solid #fff;
+    border-top: none;
+    border-right: none;
+    content: "";
+    height: 6px;
+    left: 7px;
+    opacity: 0;
+    position: absolute;
+    top: 8px;
+    transform: rotate(-45deg);
+    width: 12px;
+}
+
+// .product-verified-round  #product-verified {
+//   visibility: hidden;
+// }
+
+.product-verified-round #product-verified:checked + label {
+    background-color: #66bb6a;
+    border-color: #66bb6a;
+}
+
+.product-verified-round #product-verified-round :checked + label:after {
+    opacity: 1;
+}
+
+.notes-list select {
+    padding: 4px;
+    border-radius: 3px;
+    border: solid 1px #cecbcb;
+    margin-bottom: 4px;
+    background: white;
+    font-family: "Lato", "Lucida Grande", Helvetica, Verdana, Arial;
+    color: #555555;
+    width: 340px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.notes-list .label {
+    font-weight: bold;
+    display: inline-block;
+    width: 75px;
+    text-align: right;
+    margin-right: 8px;
+}
+
+.is_extra {
+    padding-left: 10% !important;
+}
+
+.pos .order .orderline .product-extra {
+    padding: 10px !important;
+    background-color: #90c8ac !important;
+    margin-bottom: 3px !important;
+    color: white !important;
+    border-radius: 19% !important;
+}
+.pos .order .orderline .product-comment {
+    padding: 10px !important;
+    background-color: #73a9ad !important;
+    color: white !important;
+    margin-bottom: 3px !important;
+    border-radius: 19% !important;
+}
+.pos .order .orderline-product-note {
+    margin: 8px;
+}
+.orderline-product-note .fa {
+    opacity: 0.5;
+    margin-right: 4px;
+}
+.pos .order .orderline-note {
+    display: none;
+}

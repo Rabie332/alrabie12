@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="hr_training_view_search" model="ir.ui.view">
+        <field name="name">hr.training.filter</field>
+        <field name="model">hr.training</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="request.request_view_search" />
+        <field name="arch" type="xml">
+            <field name="employee_id" position="after">
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]" />
+                <filter name="type_internal" string="Internal training" domain="[('type', '=', 'internal')]" />
+                <filter name="type_external" string="External training" domain="[('type', '=', 'external')]" />
+            </field>
+            <filter name="stage" position="after">
+                <filter name="employee_id" string="Employee" context="{'group_by': 'employee_id'}" />
+                  <filter
+                    name="training_center"
+                    string="Training Center"
+                    context="{'group_by': 'training_center_id'}"
+                />
+                <filter name="create_date" string="Application Date" context="{'group_by': 'create_date'}" />
+
+            </filter>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="hr_training_tree">
+        <field name="name">hr.training.tree</field>
+        <field name="model">hr.training</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" string="Training Name" />
+                <field name="date" />
+                <field name="type" />
+                <field name="employee_id" string="Employee" invisible="context.get('my_request', False)" />
+                <field name="date_from" />
+                <field name="date_to" />
+                <field name="duration" />
+                <field name="travel_days" />
+                <field name="stage_id" />
+                <field name="state" invisible="1" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="hr_training_view_form" model="ir.ui.view">
+        <field name="name">hr.training.form</field>
+        <field name="model">hr.training</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="request.request_view_form" />
+        <field name="arch" type="xml">
+            <header position="inside">
+                <field name="state" invisible="1" />
+                                        <field name="display_button_set_to_draft" invisible="1" />
+            </header>
+               <button name="action_refuse" position="replace">
+                    <button
+                    name="%(request_refuse.action_refuse_wizard)d"
+                    context="{'action_name': 'action_refuse','field_name': 'refuse_reason'}"
+                    string="Refuse"
+                    class="btn-danger"
+                    type="action"
+                    confirm="Are you sure you want to do this?"
+                    attrs="{'invisible':[('display_button_refuse', '=', False)]}"
+                />
+                    <button
+                    string="Set to draft"
+                    name="set_to_draft"
+                    type='object'
+                    attrs="{'invisible':[('display_button_set_to_draft', '=', False)]}"
+                    class="oe_highlight"
+                />
+                         <button
+                    name="action_cancel"
+                    string="Cancel"
+                    class="btn-warning"
+                    type="object"
+                    groups="hr.group_hr_manager"
+                    attrs="{'invisible': [('state', 'in', ['draft','cancel'])]}"
+                />
+                      <!-- Training Report-->
+                <button
+                    name="%(hr_training.hr_training_report_action)d"
+                    string="Print Training"
+                    type="action"
+                    class="oe_highlight"
+                    attrs="{'invisible':[('state','!=','done')] }"
+                />
+                </button>
+            <group name="principal" position="replace" />
+
+            <sheet position="inside">
+                <widget
+                    name="web_ribbon"
+                    title="Canceled"
+                    bg_color="bg-danger"
+                    attrs="{'invisible': [('state', '!=', 'cancel')]}"
+                />
+                <group>
+                    <group>
+                        <field name="id" invisible='1' />
+                        <field name="date" readonly="1" force_save="1" attrs="{'invisible':[('id', '==', False)]}" />
+                        <field
+                            name="employee_id"
+                            invisible="context.get('my_request', False)"
+                            required="1"
+                            string="Employee"
+                        />
+                        <field name="number" force_save="1" invisible="context.get('my_request', False)" />
+                        <field name="job_id" invisible="context.get('my_request', False)" force_save="1" />
+                        <field name="department_id" force_save="1" invisible="context.get('my_request', False)" />
+
+                        <field name="company_id" groups="base.group_multi_company" />
+                        <field name="type" options="{'horizontal': true}" widget="radio" />
+                        <field name="country_id" attrs="{'readonly':[('type', '=', 'internal')]}" />
+                        <field name="city" attrs="{'invisible':[('type','=','internal')]}" />
+                        <field
+                            name="city_id"
+                            domain="[('country_id', '=', country_id)]"
+                            attrs="{'invisible':[('type','=','external')]}"
+                        />
+                        <field name="travel_days" force_save="1" />
+                        <field name="read_reviewed_policies_regulations" />
+                        <field name="description" />
+
+                    </group>
+                    <group>
+                        <field name="active" invisible="1" />
+                        <field name="request_type_id" invisible="1" />
+                        <field name="transportation_type" options="{'horizontal': true}" widget="radio" />
+                        <field name="date_from" required="1" />
+                        <field name="date_to" required="1" />
+                        <field name="duration" force_save="1" />
+
+
+                          <field
+                            name="refuse_reason"
+                            readonly="1"
+                            force_save="1"
+                            attrs="{'invisible' : [('state', '!=', 'cancel')]}"
+                        />
+                    </group>
+                </group>
+                <notebook>
+                    <page string="Training Details">
+                        <group name="amount_details">
+                            <group>
+                                <field name="food" />
+                                <field name="hosing" />
+                                <field name="transport" />
+                                <field name="include_ticket_total_amount" />
+                            </group>
+                            <group>
+                                <field name="ticket_price" />
+                                <field name="fees_amount" />
+                                <field name="training_allowance" force_save="1" />
+                                <field name="total" force_save="1" />
+                            </group>
+                        </group>
+
+
+                    </page>
+                    <page name="general" string="Training Information">
+                        <group>
+                            <group>
+                                <field name="name" required="1" string="Training Name" />
+                                <field name="training_center_id" required="1" options="{'no_create': True}" />
+                                <field name="training_center" invisible="1" />
+
+                            </group>
+                            <group>
+                                <field name="program_training" />
+                                  <field name="course_outcomes" />
+                            </group>
+                        </group>
+                    </page>
+                    <page name="attachments" string="Attachments">
+                        <br />
+                        <field name="attachment_ids" widget="many2many_binary" />
+                    </page>
+                </notebook>
+            </sheet>
+        </field>
+    </record>
+
+    <record id="hr_training_view_kanban" model="ir.ui.view">
+        <field name="name">hr.training.kanban</field>
+        <field name="model">hr.training</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="request.request_view_kanban" />
+        <field name="arch" type="xml">
+            <div name="card_body" position="inside">
+                <br />
+
+                 <span name="employee" t-if="record.employee_id.raw_value">Employee:
+                    <field name="employee_id" />
+                    <br />
+                </span>
+                <span name="type" t-if="record.type.raw_value">Training Type:
+                    <field name="type" />
+                    <br />
+                </span>
+                <span name="name" t-if="record.name.raw_value">Course Name:
+                    <field name="name" />
+                    <br />
+                </span>
+                 <span name="training_center" t-if="record.training_center_id.raw_value">Training Center Name:
+                    <field name="training_center_id" />
+                    <br />
+                </span>
+                <span name="date_from" t-if="record.date_from.raw_value">Date From :
+                    <field name="date_from" />
+                    <br />
+                </span>
+                <span name="date_to" t-if="record.date_to.raw_value">Date To :
+                    <field name="date_to" />
+                    <br />
+                </span>
+                <span name="duration" t-if="record.duration.raw_value">Duration:
+                    <field name="duration" />
+                    <br />
+                </span>
+                <span name="stage" t-if="record.stage_id.raw_value">Stage:
+                    <field name="stage_id" />
+                    <br />
+                </span>
+            </div>
+
+        </field>
+    </record>
+
+
+    <record id="action_hr_training_my" model="ir.actions.act_window">
+        <field name="name">Trainings</field>
+        <field name="res_model">hr.training</field>
+        <field name="domain">[('employee_id.user_id','=', uid)]</field>
+        <field name="context">{'my_request' : True}</field>
+        <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+   <menuitem
+        id="training_self_service_root"
+        action="action_hr_training_my"
+        parent="request.self_services_menu"
+        name="Trainings"
+    />
+
+    <!--add new action for all training-->
+    <record id="hr_training_action_manager" model="ir.actions.act_window">
+        <field name="name">All Requests</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.training</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="domain">[]</field>
+    </record>
+    <!--menu all request for manager-->
+    <menuitem
+        id="hr_training_manager_menu"
+        name="All Requests"
+        parent="hr_training.menu_hr_training_root"
+        action="hr_training_action_manager"
+        sequence="2"
+    />
+    <!--Add menu My Requests training-->
+    <menuitem
+        id="training_my_request_menu"
+        name="My Requests"
+        parent="hr_training.menu_hr_training_root"
+        action="action_hr_training_my"
+        sequence="1"
+    />
+
+</odoo>

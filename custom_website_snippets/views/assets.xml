@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <template id="assets_frontend" inherit_id="web.assets_frontend" name="Hero Slider Assets">
+    <xpath expr="." position="inside">
+      <link rel="stylesheet" href="/custom_website_snippets/static/src/css/hero_slider_style.css" />
+      <script type="text/javascript" src="/custom_website_snippets/static/src/js/hero_slider_animation.js"></script>
+      <script type="text/javascript" src="/custom_website_snippets/static/src/js/swiper_js.js"></script>
+    </xpath>
+  </template>
+</odoo>

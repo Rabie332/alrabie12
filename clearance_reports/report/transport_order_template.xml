@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="clearance_transport_order_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <div class="header" />
+                <t t-call="web.internal_layout">
+                    <div class="page">
+                        <div class="row">
+                            <div class="col-3">
+                            </div>
+                            <div class="col-6 text-center">
+                                <center>
+                                    <h1 style="color:#507298;padding-top:20px;">
+                                            <t t-if="o.env.user.lang=='ar_001'">
+                                        <strong style="font-size: 25px;">
+ تقرير معاملات أمر النقل                                        </strong>
+                                         </t>
+                                         <t t-else="">
+                                        <strong style="font-size: 25px;">
+                                            Transfer Order Transaction Report
+                                        </strong>
+                                         </t>
+                                    </h1>
+                                </center>
+                            </div>
+                            <div class="col-3">
+                                <img
+                                    style="max-height:120px !important;"
+                                    width="80%"
+                                    t-att-src="'data:image/png;base64,%s' % to_text(user.company_id.sudo().logo)"
+                                />
+
+                            </div>
+                        </div>
+                        <div class="oe_structure" />
+                        <div class="col-12 text-center">
+                            <t t-if="o.env.user.lang=='ar_001'">
+                                 <strong>الفترة :</strong>
+                          </t>
+                         <t t-else="">
+                              <strong>Period :</strong>
+                         </t>
+                            <span t-field="o.date_from" t-options="{'format': 'yyyy/MM/dd'}" />
+                            -
+                            <span t-field="o.date_to" t-options="{'format': 'yyyy/MM/dd'}" />
+                            <br />
+                            <br />
+                        </div>
+                        <br />
+
+                 <table width="100%" style="border: 2px solid black;">
+<t t-if="get_lines(o, 'clearance')">
+                    <tr style="border: 2px solid black;background:#4682B4;font-size:17px:" class="text-center">
+                           <td colspan="5">
+                              <t t-if="o.env.user.lang=='ar_001'">
+                               التخليص
+                          </t>
+                         <t t-else="">
+                             Clearance
+                         </t>
+
+                           </td>
+                       </tr>
+          <t t-foreach="get_lines(o, 'clearance')" t-as="clearance">
+              <t t-if="o.env.user.lang=='ar_001'">
+                   <tr style="border: 2px solid black;background:#4682B4;font-size:13px;" class="text-center">
+                           <td style="border: 2px solid black;width:20%;">رقم المعاملة</td>
+
+                          <td style="border: 2px solid black;width:20%;" colspan="2">اسم العميل</td>
+
+                          <td style="border: 2px solid black;width:20%;">عدد الشحنات</td>
+                           <td style="border: 2px solid black;width:40%;">نوع الشحنة</td>
+              </tr>
+                   </t>
+                         <t t-else="">
+              <tr style="border: 2px solid black;background:#4682B4;font-size:13px;" class="text-center">
+                           <td style="border: 2px solid black;width:20%;">Transaction Number</td>
+
+                          <td style="border: 2px solid black;width:20%;" colspan="2">Partner Name</td>
+
+                          <td style="border: 2px solid black;width:20%;">Shipment Number</td>
+                           <td style="border: 2px solid black;width:40%;">Shipment Type</td>
+              </tr>
+                         </t>
+               <tr style="border: 2px solid black;font-size:13px;" class="text-center">
+                   <td style="border: 2px solid black;width:20%;"><span t-field="clearance.name" /></td>
+
+                          <td style="border: 2px solid black;width:20%;" colspan="2"><span
+                                                t-field="clearance.partner_id.name"
+                                            /></td>
+
+                          <td style="border: 2px solid black;width:20%;"><span
+                                                t-field="clearance.number_shipment"
+                                            /></td>
+                   <td style="border: 2px solid black;width:20%;"><span t-field="clearance.shipment_type" /></td>
+               </tr>
+                <t t-if="o.env.user.lang=='ar_001'">
+                     <tr style="border: 2px solid black;background:#B0C4DE;font-size:13px;" class="text-center">
+                        <td style="border: 2px solid black;width:10%;">رقم الحاوية</td>
+                           <td style="border: 2px solid black;width:20%;">أخر تاريخ لإخراج الشحنة</td>
+                           <td style="border: 2px solid black;width:20%;">أخر تاريخ لتسليم الحاويات الفارغة</td>
+                               <td style="border: 2px solid black;width:20%;">تاريخ التسليم</td>
+                           <td style="border: 2px solid black;width:40%;">موقع العميل</td>
+
+                  </tr>
+                     </t>
+                         <t t-else="">
+                  <tr style="border: 2px solid black;background:#B0C4DE;font-size:13px;" class="text-center">
+                        <td style="border: 2px solid black;width:10%;">Container Number</td>
+                           <td style="border: 2px solid black;width:20%;">Deadline shipment receive</td>
+                           <td
+                                                style="border: 2px solid black;width:20%;"
+                                            >Last date for delivery of empty containers</td>
+                               <td style="border: 2px solid black;width:20%;">Delivery date</td>
+                           <td style="border: 2px solid black;width:40%;">Customer site</td>
+
+                  </tr>
+                         </t>
+               <t t-foreach="clearance.statement_line_ids" t-as="line">
+                     <tr style="border: 2px solid black;font-size:13px;" class="text-center">
+                          <td style="border: 2px solid black;width:10%;"><span t-field="line.container_number" /></td>
+                           <td style="border: 2px solid black;width:20%;"><span
+                                                    t-field="line.deadline_shipment_receive"
+                                                /></td>
+                           <td style="border: 2px solid black;width:20%;"><span
+                                                    t-field="line.last_date_empty_container"
+                                                /></td>
+                               <td style="border: 2px solid black;width:10%;"><span t-field="line.delivery_date" /></td>
+                           <td style="border: 2px solid black;width:40%;"><span t-field="line.customer_location" /></td>
+
+                       </tr>
+               </t>
+
+          </t>
+                     </t>
+  <t t-if="get_lines(o, 'transport')">
+                     <tr style="border: 2px solid black;background:#4682B4;font-size:17px:" class="text-center">
+                          <td style="border: 2px solid black;" colspan="5"><t t-if="o.env.user.lang=='ar_001'">
+                               نقل
+                                </t>
+                            <t t-else="">
+                               Transport
+                            </t></td>
+                       </tr>
+         <t t-foreach="get_lines(o, 'transport')" t-as="clearance">
+             <t t-if="o.env.user.lang=='ar_001'">
+                  <tr style="border: 2px solid black;background:#4682B4;font-size:13px;" class="text-center">
+                           <td style="border: 2px solid black;width:25%;">رقم المعاملة</td>
+
+                          <td style="border: 2px solid black;width:25%;">اسم العميل</td>
+
+                          <td style="border: 2px solid black;width:25%;">عدد الشحنات</td>
+                           <td style="border: 2px solid black;width:25%;" colspan="2">نوع الشحنة</td>
+                            </tr>
+              </t>
+                            <t t-else=""> <tr
+                                            style="border: 2px solid black;background:#4682B4;font-size:13px;"
+                                            class="text-center"
+                                        >
+                           <td style="border: 2px solid black;width:25%;">Transaction Number</td>
+
+                          <td style="border: 2px solid black;width:25%;">Partner Name</td>
+
+                          <td style="border: 2px solid black;width:25%;">Shipment Number</td>
+                           <td style="border: 2px solid black;width:25%;" colspan="2">Shipment Type</td>
+                            </tr></t>
+               <tr style="border: 2px solid black;" class="text-center">
+                   <td style="border: 2px solid black;width:25%;"><span t-field="clearance.name" /></td>
+
+                          <td style="border: 2px solid black;width:25%;"><span
+                                                t-field="clearance.partner_id.name"
+                                            /></td>
+
+                          <td style="border: 2px solid black;width:25%;"><span
+                                                t-field="clearance.number_shipment"
+                                            /></td>
+                   <td style="border: 2px solid black;width:25%;" colspan="2"><span
+                                                t-field="clearance.shipment_type"
+                                            /></td>
+               </tr>
+               <t t-if="o.env.user.lang=='ar_001'">
+                  <tr style="border: 2px solid black;background:#B0C4DE;font-size:13px;" class="text-center">
+                        <td style="border: 2px solid black;width:25%;">نوع الشاحنة</td>
+                           <td style="border: 2px solid black;width:25%;">المسار</td>
+
+                               <td style="border: 2px solid black;width:20%;">تاريخ التسليم</td>
+                           <td style="border: 2px solid black;width:30%;" colspan="2">موقع العميل</td>
+
+                       </tr>
+                     </t>
+                            <t t-else="">
+                       <tr style="border: 2px solid black;background:#B0C4DE;font-size:13px;" class="text-center">
+                        <td style="border: 2px solid black;width:25%;">Truck type</td>
+                           <td style="border: 2px solid black;width:25%;">Route</td>
+
+                               <td style="border: 2px solid black;width:20%;">Delivery date</td>
+                           <td style="border: 2px solid black;width:30%;" colspan="2">Customer site</td>
+
+                       </tr></t>
+               <t t-foreach="clearance.statement_line_ids" t-as="line">
+                     <tr style="border: 2px solid black;font-size:13px;" class="text-center">
+                          <td style="border: 2px solid black;width:25%;"><span t-field="line.truck_type_id" /></td>
+                           <td style="border: 2px solid black;width:25%;"><span t-field="line.route_id" /></td>
+
+                               <td style="border: 2px solid black;width:20%;"><span t-field="line.delivery_date" /></td>
+                           <td style="border: 2px solid black;width:30%;" colspan="2"><span
+                                                    t-field="line.customer_location"
+                                                /></td>
+
+                       </tr>
+               </t>
+
+          </t>
+  </t>
+                <t t-if="get_lines(o, 'other_service')">
+                     <tr style="border: 2px solid black;background:#4682B4;font-size:17px:" class="text-center">
+                           <td style="border: 2px solid black;" colspan="5"> <t t-if="o.env.user.lang=='ar_001'">
+                               خدمات أخرى
+                               </t>
+                               <t t-else="">Other Services</t></td>
+                       </tr>
+      <t t-foreach="get_lines(o, 'other_service')" t-as="clearance">
+          <t t-if="o.env.user.lang=='ar_001'">
+              <tr style="border: 2px solid black;background:#4682B4;font-size:13px;" class="text-center">
+                           <td style="border: 2px solid black;width:25%;">رقم المعاملة</td>
+
+                          <td style="border: 2px solid black;width:25%;">اسم العميل</td>
+
+                          <td style="border: 2px solid black;width:25%;">عدد الشحنات</td>
+                           <td style="border: 2px solid black;width:25%;" colspan="2">نوع الشحنة</td>
+                       </tr>
+           </t>
+                               <t t-else="">
+          <tr style="border: 2px solid black;background:#4682B4;font-size:13px;" class="text-center">
+                           <td style="border: 2px solid black;width:25%;">Transaction Number</td>
+
+                          <td style="border: 2px solid black;width:25%;">Partner Name</td>
+
+                          <td style="border: 2px solid black;width:25%;">Shipment Number</td>
+                           <td style="border: 2px solid black;width:25%;" colspan="2">Shipment Type</td>
+          </tr></t>
+               <tr style="border: 2px solid black;font-size:13px;" class="text-center">
+                   <td style="border: 2px solid black;width:25%;"><span t-field="clearance.name" /></td>
+
+                          <td style="border: 2px solid black;width:25%;"><span
+                                                t-field="clearance.partner_id.name"
+                                            /></td>
+
+                          <td style="border: 2px solid black;width:25%;"><span
+                                                t-field="clearance.number_shipment"
+                                            /></td>
+                   <td style="border: 2px solid black;width:25%;" colspan="2"><span
+                                                t-field="clearance.shipment_type"
+                                            /></td>
+               </tr>
+                  <tr style="border: 2px solid black;background:#B0C4DE;font-size:13px;" class="text-center">
+                        <td style="border: 2px solid black;" colspan="2">
+                             <t t-if="o.env.user.lang=='ar_001'">
+                            خدمة </t>
+                            <t t-else="">Service</t></td>
+                           <td style="border: 2px solid black;" colspan="3">
+                               <t t-if="o.env.user.lang=='ar_001'">
+                            الكمية </t>
+                            <t t-else="">Quantity</t></td>
+
+
+                       </tr>
+               <t t-foreach="clearance.statement_line_ids" t-as="line">
+                     <tr style="border: 2px solid black;font-size:13px;" class="text-center">
+                          <td style="border: 2px solid black;" colspan="2"><span t-field="line.service_id" /></td>
+                           <td style="border: 2px solid black;" colspan="3"><span t-field="line.quantity" /></td>
+
+
+                       </tr>
+               </t>
+
+          </t>
+                </t>
+                   </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

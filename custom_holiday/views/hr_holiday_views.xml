@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="view_hr_holiday_search" model="ir.ui.view">
+            <field name="name">hr.holiday.search</field>
+            <field name="model">hr.holiday</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="employee_id" />
+                    <field name="residence_num" />
+                    <field name="identification_num" />
+                </search>
+            </field>
+        </record>
+        <record id="view_hr_holiday_form" model="ir.ui.view">
+            <field name="name">hr.holiday.form</field>
+            <field name="model">hr.holiday</field>
+            <field name="arch" type="xml">
+                <form string="Employee Vacations">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="employee_id"/>
+                                <field name="residence_num"/>
+                                <field name="identification_num"/>
+                                <field name="company_id"/>
+                                <!-- <field name="employee_vacation_type"/> -->
+                                <field name="job_position"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="first_contract_date"/>
+                                <field name="years_of_service"/>
+                                <field name="total_vacation_days"/>
+                                <field name="used_days"/>
+                                <field name="final_balance"/>
+                                <field name="note"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="view_hr_holiday_tree" model="ir.ui.view">
+            <field name="name">hr.holiday.tree</field>
+            <field name="model">hr.holiday</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="employee_id"/>
+                    <field name="residence_num"/>
+                    <field name="identification_num"/>
+                    <field name="company_id"/>
+                    <!-- <field name="employee_vacation_type"/> -->
+                    <field name="job_position"/>
+                    <field name="first_contract_date"/>
+                    <field name="years_of_service"/>
+                    <field name="total_vacation_days"/>
+                    <field name="used_days"/>
+                    <field name="final_balance"/>
+                    <field name="note"/>
+                </tree>
+            </field>
+        </record>
+        <record id="action_hr_holiday" model="ir.actions.act_window">
+            <field name="name">HR Holidays</field>
+            <field name="res_model">hr.holiday</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="menu_hr_holiday" name="HR Holiday" parent="hr.menu_human_resources_configuration" action="action_hr_holiday" sequence="10"/>
+    </data>
+</odoo>

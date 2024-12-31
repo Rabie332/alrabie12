@@ -1,0 +1,40 @@
+<odoo>
+    <record id="empty_room_wizard_view_form" model="ir.ui.view">
+        <field name="name">empty.room.wizard.report</field>
+        <field name="model">empty.room.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="days" required="1" />
+                    </group>
+                </group>
+                <footer>
+                    <button
+                        name="print_report"
+                        string="Print report"
+                        icon="fa-print"
+                        type="object"
+                        class="oe_highlight"
+                    />
+                    <button string="Cancel" icon="fa-close" class="btn btn-primary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="empty_room_wizard_action" model="ir.actions.act_window">
+        <field name="name">Empty Rooms Report</field>
+        <field name="res_model">empty.room.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        name="Empty Rooms Report"
+        action="empty_room_wizard_action"
+        id="empty_room_hotel_menu"
+        parent="hotel.hotel_report_menu"
+        sequence="32"
+    />
+</odoo>

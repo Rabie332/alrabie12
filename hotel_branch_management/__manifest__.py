@@ -1,0 +1,22 @@
+{
+    'name': 'Hotel Branch Management',
+    'version': '1.0',
+    'summary': 'Manage Hotel Branch Specific Access',
+    'category': 'Hotel Management',
+    'author': 'Eng. Fares',
+    'website': 'Your Website',
+    'depends': ['base', 'hotel', 'hotel_reservation', 'hotel_restaurant', 'hotel_room', 'base', 'hr', 'sale'],  
+    'data': [
+        # 'security/branch_security.xml',
+        'security/ir.model.access.csv',
+        'views/hotel_branch_view.xml',
+        'views/hotel_room_view.xml',
+        "views/hotel_reservation_view.xml",
+        'views/res_users_view.xml',
+        'views/account_views.xml',
+        'views/hotel_folio_view.xml',
+    ],
+    'installable': True,
+    'application': False,
+    'auto_install': False,
+}

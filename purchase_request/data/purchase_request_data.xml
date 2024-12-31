@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+
+    <!-- purchase request stage -->
+
+    <record id="purchase_request_stage_draft" model="request.stage">
+        <field name="name">Purchase Request</field>
+        <field name="res_model_id" ref="purchase_request.model_purchase_request" />
+        <field name="sequence">1</field>
+        <field name="res_model">purchase.request</field>
+        <field name="state">draft</field>
+    </record>
+
+    <record id="purchase_request_stage_dm" model="request.stage">
+        <field name="name">Direct manager</field>
+        <field name="res_model_id" ref="purchase_request.model_purchase_request" />
+        <field name="sequence">2</field>
+        <field name="res_model">purchase.request</field>
+        <field name="assign_type">python</field>
+        <field name="state">in_progress</field>
+        <field name="code">result = object.employee_id.parent_id.user_id</field>
+    </record>
+
+           <record id="purchase_request_stage_review" model="request.stage">
+            <field name="name">Review</field>
+            <field name="res_model_id" ref="purchase_request.model_purchase_request" />
+            <field name="sequence">3</field>
+            <field name="res_model">purchase.request</field>
+            <field name="state">in_progress</field>
+        </record>
+
+    <record id="purchase_request_stage_reviewed" model="request.stage">
+            <field name="name">Reviewed</field>
+            <field name="res_model_id" ref="purchase_request.model_purchase_request" />
+            <field name="sequence">4</field>
+            <field name="res_model">purchase.request</field>
+            <field name="state">in_progress</field>
+        </record>
+
+    <record id="purchase_request_stage_confirm" model="request.stage">
+            <field name="name">Confirm</field>
+            <field name="res_model_id" ref="purchase_request.model_purchase_request" />
+            <field name="sequence">5</field>
+            <field name="res_model">purchase.request</field>
+            <field name="state">in_progress</field>
+        </record>
+
+        <record id="account_payment_request_stage_done" model="request.stage">
+            <field name="name">Done</field>
+            <field name="res_model_id" ref="purchase_request.model_purchase_request" />
+            <field name="sequence">6</field>
+            <field name="res_model">purchase.request</field>
+            <field name="state">done</field>
+        </record>
+
+        <record id="account_payment_request_stage_refused" model="request.stage">
+            <field name="name">Refused</field>
+            <field name="res_model_id" ref="purchase_request.model_purchase_request" />
+            <field name="sequence">7</field>
+            <field name="res_model">purchase.request</field>
+            <field name="state">cancel</field>
+        </record>
+    <!-- purchase request type -->
+
+    <record id="purchase_request_type_direct_purchase" model="request.type">
+        <field name="code">1</field>
+        <field name="name">Direct purchase</field>
+        <field name="budget_max">5000</field>
+        <field name="res_model_id" ref="purchase_request.model_purchase_request" />
+        <field name="res_model">purchase.request</field>
+    </record>
+
+    <record id="purchase_request_type_purchase_obligation" model="request.type">
+        <field name="code">2</field>
+        <field name="name">Purchase by obligation</field>
+        <field name="is_committee_required">True</field>
+        <field name="res_model_id" ref="purchase_request.model_purchase_request" />
+        <field name="res_model">purchase.request</field>
+    </record>
+
+    <record id="purchase_request_type_bidding" model="request.type">
+        <field name="code">3</field>
+        <field name="name">Bidding</field>
+        <field name="is_committee_required">True</field>
+        <field name="res_model_id" ref="purchase_request.model_purchase_request" />
+        <field name="res_model">purchase.request</field>
+    </record>
+
+    <record id="purchase_request_type_competition" model="request.type">
+        <field name="code">4</field>
+        <field name="name">Competition</field>
+        <field name="is_committee_required">True</field>
+        <field name="res_model_id" ref="purchase_request.model_purchase_request" />
+        <field name="res_model">purchase.request</field>
+    </record>
+
+    <!-- purchase request activity -->
+
+    <record id="mail_purchase_request_approval" model="mail.activity.type">
+        <field name="name">Purchase Request Approval</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="category">validation</field>
+        <field name="res_model_id" ref="purchase_request.model_purchase_request" />
+    </record>
+
+    <!-- purchase request sequence -->
+
+    <record id="purchase_request_seq" forcecreate="1" model="ir.sequence">
+        <field name="name">purchase request sequence</field>
+        <field name="code">purchase.request.seq</field>
+        <field eval="1" name="number_increment" />
+        <field name="padding">5</field>
+    </record>
+
+     <!-- Request-related subtypes for messaging / Chatter -->
+
+    <record id="mt_purchase_request_approved" model="mail.message.subtype">
+        <field name="name">Purchase Request Approved</field>
+        <field name="res_model">purchase.request</field>
+        <field name="description">Purchase Request approved</field>
+    </record>
+
+    <record id="mt_purchase_request_refused" model="mail.message.subtype">
+        <field name="name">Purchase Request Refused</field>
+        <field name="res_model">purchase.request</field>
+        <field name="default" eval="False" />
+        <field name="description">Purchase Request refused</field>
+    </record>
+
+    <record id="mail_purchase_request_feedback" model="mail.activity.type">
+        <field name="name">Purchase Request is Done</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="category">feedback</field>
+        <field name="res_model_id" ref="purchase_request.model_purchase_request" />
+    </record>
+
+</odoo>

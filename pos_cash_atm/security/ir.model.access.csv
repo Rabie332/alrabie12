@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_pos_session_history,access_pos_session_history,model_pos_session_history,base.group_user,1,1,1,0
+access_pos_sale_report_user,access_pos_sale_report_user,pos_cash_atm.model_pos_sale_report,point_of_sale.group_pos_user,1,0,0,0
+access_pos_sale_report_manager,access_pos_sale_report_manager,pos_cash_atm.model_pos_sale_report,point_of_sale.group_pos_manager,1,1,1,1

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+  <record id="view_payment_form" model="ir.ui.view">
+    <field name="name">loan.payment.form</field>
+    <field name="model">loan.payment</field>
+    <field name="arch" type="xml">
+      <form string="Loan Payment">
+        <sheet>
+          <group>
+            <field name="loan_id"/>
+            <field name="type"/>
+            <field name="date"/>
+            <field name="amount"/>
+            <field name="debit_account_id"/>
+            <field name="credit_account_id"/>
+            <field name="is_initial_payment"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+  <record id="view_payment_tree" model="ir.ui.view">
+    <field name="name">loan.payment.tree</field>
+    <field name="model">loan.payment</field>
+    <field name="arch" type="xml">
+      <tree string="Loan Payments">
+        <field name="loan_id"/>
+        <field name="type"/>
+        <field name="date"/>
+        <field name="amount"/>
+        <field name="debit_account_id"/>
+        <field name="credit_account_id"/>
+      </tree>
+    </field>
+  </record>
+  <record id="payment_action" model="ir.actions.act_window">
+    <field name="name">Loan Payments</field>
+    <field name="res_model">loan.payment</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+  <menuitem id="loan_payment_menu" name="Loan Payments" parent="loan_management_menu" action="payment_action"/>
+</odoo>

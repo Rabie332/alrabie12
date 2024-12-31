@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Form View Inherit -->
+
+    <record id="view_hr_obligation_setting_inherit_dms" model="ir.ui.view">
+        <field name="name">hr.obligation.setting.view.form.inherit</field>
+        <field name="model">hr.obligation.setting</field>
+        <field name="inherit_id" ref="hr_obligation.view_hr_obligation_setting" />
+        <field name="arch" type="xml">
+             <xpath expr="//page[@name='attachments']" position="replace">
+                  <page name="folders" string="Folders">
+
+
+                            <field name="folder_ids" widget="many2many_kanban">
+                                <kanban class="oe_background_grey o_kanban_dashboard o_salesteam_kanban">
+                                    <field name="id" />
+                                    <field name="code" />
+                                    <field name="color" />
+                                    <field name="name" />
+                                    <field name="child_ids" />
+                                    <field name="folders_count" />
+                                    <field name="documents_count" />
+                                    <field name="write_uid" />
+                                    <field name="dashboard_graph_type" />
+                                    <field name="is_favorite" />
+                                    <field name="alias_name" />
+                                    <field name="alias_id" />
+                                    <field name="alias_domain" />
+                                    <templates>
+                                        <t t-name="kanban-box">
+                                            <div
+                                        t-attf-class="#{kanban_color(record.color.raw_value)} oe_kanban_global_click"
+                                    >
+                                                <div t-attf-class="o_kanban_card_header">
+                                                    <div t-attf-class="o_kanban_card_header">
+                                                        <div class="o_kanban_card_header_title">
+                                                            <div class="o_primary">
+                                                                <field name="name" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="o_kanban_manage_button_section">
+                                                            <a class="o_kanban_manage_toggle_button" href="#">
+                                                                <i
+                                                            class="fa fa-ellipsis-v"
+                                                            role="img"
+                                                            aria-label="Manage"
+                                                            title="Manage"
+                                                        />
+                                                            </a>
+                                                        </div>
+                                                        <br />
+                                                        <div
+                                                    class="col-xs-5 o_kanban_primary_right"
+                                                    style="padding-bottom:0;"
+                                                >
+                                                            <a type="object" name="action_documents">
+                                                                <span>Documents</span>
+                                                                <field name="documents_count" />
+                                                            </a>
+                                                            <br />
+                                                            <a type="action" name="dms.folder_2_subfolder_action">
+                                                                <span>Folders</span>
+                                                                <field name="folders_count" />
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <small t-translation="off"><i
+                                                            class="fa fa-envelope-o"
+                                                        />&amp;nbsp;
+                                                                <field name="alias_id" />
+                                                            </small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="container o_kanban_card_content">
+                                                    <div
+                                                class="row"
+                                                invisible="context.get('dashboard_invisible',False)"
+                                                attrs="{'invisible': [('is_favorite', '=', False)]}"
+                                            >
+                                                        <div class="col-xs-12 o_kanban_primary_bottom">
+                                                            <t t-call="arhive_dashboard_graph" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                            class="container o_kanban_card_manage_pane dropdown-menu"
+                                            role="menu"
+                                        >
+                                                    <div class="row">
+                                                        <div
+                                                    class="col-xs-4 o_kanban_card_manage_section o_kanban_manage_view"
+                                                >
+                                                            <div class="o_kanban_card_manage_title">
+                                                                <span>Show</span>
+                                                            </div>
+                                                            <div>
+                                                                <a name="918" type="action">
+                                                                    Documents
+                                                                </a>
+                                                                <a name="917" type="action">
+                                                                    Folders
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                    class="col-xs-4 o_kanban_card_manage_section o_kanban_manage_new"
+                                                >
+                                                            <div class="o_kanban_card_manage_title">
+                                                                <span>Create</span>
+                                                            </div>
+                                                            <div>
+                                                                <a name="921" type="action">
+                                                                    Documents
+                                                                </a>
+                                                                <a name="919" type="action">
+                                                                    Folders
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                    class="col-xs-4 o_kanban_card_manage_section o_kanban_manage_reports"
+                                                >
+                                                            <div class="o_kanban_card_manage_title">
+                                                                <span>Report</span>
+                                                            </div>
+                                                            <div>
+                                                                <a name="920" type="action">
+                                                                    Documents
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="o_kanban_card_manage_settings row">
+                                                        <div role="menuitem" aria-haspopup="true" class="col-8">
+                                                            <ul
+                                                        class="oe_kanban_colorpicker"
+                                                        data-field="color"
+                                                        role="menu"
+                                                    />
+                                                        </div>
+                                                        <div role="menuitem" class="col-4 text-right">
+                                                            <a type="edit">Settings</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </t>
+                                        <t t-name="arhive_dashboard_graph">
+                                            <div
+                                        t-if="record.dashboard_graph_data.raw_value"
+                                        class="o_dms_folders_kanban_graph_section"
+                                    >
+                                                <field
+                                            name="dashboard_graph_data"
+                                            widget="dashboard_graph"
+                                            t-att-graph_type="record.dashboard_graph_type.raw_value"
+                                        />
+                                            </div>
+                                        </t>
+                                    </templates>
+                                </kanban>
+                            </field>
+                        </page>
+             </xpath>
+        </field>
+     </record>
+
+
+        <record id="dms_folder_form_inherit_r_obligation_setting" model="ir.ui.view">
+        <field name="name">dms.folder.form.inherit.obligation.setting</field>
+        <field name="model">dms.folder</field>
+        <field name="inherit_id" ref="dms.dms_folder_form" />
+            <field name="arch" type="xml">
+             <button name="%(dms.folder_2_attachment_action)d" position="attributes">
+                 <attribute name="name">action_documents</attribute>
+                 <attribute name="type">object</attribute>
+             </button>
+            </field>
+        </record>
+
+</odoo>

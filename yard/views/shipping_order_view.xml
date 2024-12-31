@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+  <data>
+    <record id="shipping_order_view_form_yard" model="ir.ui.view">
+      <field name="name">yard.transportation.form</field>
+      <field name="model">shipping.order</field>
+      <field name="inherit_id" ref="transportation.shipping_order_view_form" />
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='transport_type']" position="after">
+          <field name='return_yard' widget="radio" options="{'horizontal': true}" attrs="{'invisible': [('transport_type','!=','empty')], 'required': [('transport_type','=','empty')]}"/>
+          <field name='is_damm' invisible='1'/>
+        </xpath>
+        <xpath expr="//field[@name='driver_id']" position="after">
+          <field name='shipping_order_id' invisible="1"/>
+          <field name='transport_type' invisible="1"/>
+          <field name='display_yard_fields' invisible="1"/>
+          <field name='zone_id' 
+            attrs="{'column_invisible': ['|',('parent.transport_type','!=','warehouse'), ('parent.return_yard','!=','empty_to_yard'), ('parent.is_damm','=',False)], 'readonly': [('parent.state','!=','draft')], 'required': ['|',('parent.transport_type','=','warehouse'), ('parent.return_yard','=','empty_to_yard'), ('parent.is_damm','=',True)]}"/>
+          <field name='container_id' 
+            attrs="{'column_invisible': ['|',('parent.transport_type','!=','warehouse'), ('parent.return_yard','!=','empty_to_yard'), ('parent.is_damm','=',False)], 'readonly': [('parent.state','!=','draft')], 'required': ['|',('parent.transport_type','=','warehouse'), ('parent.return_yard','=','empty_to_yard'), ('parent.is_damm','=',True)]}"/>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>

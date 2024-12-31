@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- إعدادات الانتدابات -->
+
+    <record id="view_hr_deputation_setting" model="ir.ui.view">
+        <field name="name">hr.deputation.setting.form</field>
+        <field name="model">hr.deputation.setting</field>
+        <field name="arch" type="xml">
+            <form create='0' delete='0' duplicate='0'>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" invisible="1" />
+                            <field name="annual_balance" />
+                            <field name="deputation_with_kilometer" />
+                            <field name="balance_deputation_no_specified" />
+                        </group>
+                        <group>
+                            <field name="deputation_with_travel_dates" />
+                            <field name="count_public_holidays" />
+                                                        <field name="accumulative_balance" />
+
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="multiply_deputation_days" />
+                            <field
+                                name="multiply_deputation_holidays_days"
+                                attrs="{'invisible':[('multiply_deputation_days','=',False)]}"
+                            />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Allowance Deputation and Transport">
+                            <field name="line_ids">
+                                <tree>
+                                    <field name="internal_deputation_amount" />
+                                    <field name="external_deputation_amount" />
+                                    <field name="internal_transport_amount" />
+                                    <field name="external_transport_amount" />
+                                </tree>
+                                <form>
+                                    <group>
+                                        <group>
+                                            <field name="internal_deputation_amount" />
+                                            <field name="external_deputation_amount" />
+                                            <field name="internal_transport_amount" />
+                                            <field name="external_transport_amount" />
+                                            <field name="is_amount_kilometers" />
+                                            <field
+                                                name="kilometer_limit"
+                                                attrs="{'invisible':['|', ('is_amount_kilometers', '=', False), ('parent.deputation_with_kilometer', '=', True)]}"
+                                            />
+                                            <field
+                                                name="kilometer_amount"
+                                                attrs="{'invisible':[('is_amount_kilometers', '=', False)]}"
+                                            />
+                                        </group>
+                                        <group>
+                                            <field name="food" />
+                                            <field name="transport" />
+                                            <field name="hosing" />
+                                            <field name="ticket_type" />
+                                        </group>
+                                    </group>
+                                    <group string="kilometer Amounts">
+                                        <field name="deputation_kilometer_ids" nolabel="1">
+                                            <tree editable="top">
+                                                <field name="kilometer_from" />
+                                                <field name="kilometer_to" />
+                                                <field name="kilometer_amount" />
+                                                <field name="deputation_allowance_id" invisible="1" />
+                                            </tree>
+                                        </field>
+
+                                    </group>
+                                    <group string="Travel Days">
+                                        <field name="travel_days_ids" nolabel="1">
+                                            <tree>
+                                                <field name="country_group_id" />
+                                                <field name="travel_days" />
+                                            </tree>
+                                            <form>
+                                                <group>
+                                                    <group>
+                                                        <field name="country_group_id" />
+                                                    </group>
+                                                    <group>
+                                                        <field name="travel_days" />
+                                                    </group>
+                                                </group>
+                                            </form>
+                                        </field>
+
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="ir_actions_button_hr_deputation_setting" model="ir.actions.server">
+        <field name="sequence" eval="5" />
+        <field name="state">code</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_hr_deputation_setting" />
+        <field name="code">action=env['hr.deputation.setting'].button_setting()</field>
+        <field name="name">Deputation Setting</field>
+    </record>
+
+    <menuitem
+        id="hr_deputation_setting_menu"
+        parent="menu_hr_deputation_setting"
+        sequence="1"
+        action="ir_actions_button_hr_deputation_setting"
+    />
+
+    <!-- Form View Inherit -->
+
+    <record id="request_type_view_form_inherit_hr_deputation" model="ir.ui.view">
+        <field name="name">request.type.view.form.inherit</field>
+        <field name="model">request.type</field>
+        <field name="inherit_id" ref="request.request_type_view_form" />
+        <field name="arch" type="xml">
+            <field name='name' position="after">
+                <field name="need_fees" attrs="{'invisible':[('res_model', '!=', 'hr.deputation')]}" />
+                <field
+                    name="before_mission_days_internal"
+                    attrs="{'invisible':[('res_model', '!=', 'hr.deputation')]}"
+                />
+                <field
+                    name="after_mission_days_internal"
+                    attrs="{'invisible':[('res_model', '!=', 'hr.deputation')]}"
+                />
+            </field>
+            <field name="code" position="after">
+                <field
+                    name="before_mission_days_external"
+                    attrs="{'invisible':[('res_model', '!=', 'hr.deputation')]}"
+                />
+                <field
+                    name="after_mission_days_external"
+                    attrs="{'invisible':[('res_model', '!=', 'hr.deputation')]}"
+                />
+            </field>
+        </field>
+    </record>
+
+
+    <record id="hr_deputation_type_action" model="ir.actions.act_window">
+        <field name="name">Types</field>
+        <field name="res_model">request.type</field>
+        <field name="domain">[('res_model','=', 'hr.deputation')]</field>
+        <field name="context">{'default_res_model': 'hr.deputation'}</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        name="Deputation Types"
+        id="hr_deputation_type_menu"
+        parent="menu_hr_deputation_setting"
+        sequence="2"
+        action="hr_deputation_type_action"
+    />
+
+
+</odoo>

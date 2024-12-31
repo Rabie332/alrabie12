@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem
+        id="transportation_menu_root"
+        name="Transportation"
+        web_icon="transportation,static/description/icon.png"
+        groups="transportation.group_transportation_responsible,transportation.group_delivery_responsible"
+    />
+    <menuitem
+        id="transportation_configuration_menu"
+        name="Configuration"
+        parent="transportation_menu_root"
+        groups="clearance.group_admin_setting"
+        sequence="15"
+    />
+    <record id="clearance_request_view_search_inherit_transportation" model="ir.ui.view">
+        <field name="name">clearance.request.view.search.inherit</field>
+        <field name="model">clearance.request</field>
+        <field name="inherit_id" ref="clearance.clearance_request_view_search" />
+        <field name="arch" type="xml">
+            <xpath expr='//filter' position='before'>
+                <filter
+                    string="Overdue Clearance"
+                    name="overdue_clearance"
+                    domain="[('deadline_shipment_receive', '&lt;=', context_today().strftime('%Y-%m-%d')), ('state', 'in', ['draft','customs_clearance','customs_statement','transport'])]"
+                />
+                <filter
+                    string="Ready Clearance"
+                    name="ready_clearance"
+                    domain="[('deadline_shipment_receive', '&lt;=', (context_today() + relativedelta(days=3)).strftime('%Y-%m-%d')),
+                    ('deadline_shipment_receive', '>', context_today().strftime('%Y-%m-%d')), ('state', 'in', ['draft','customs_clearance','customs_statement','transport'])]"
+                />
+                <filter
+                    string="Upcoming Clearance"
+                    name="upcoming_clearance"
+                    domain="[('deadline_shipment_receive', '&gt;=', (context_today() + relativedelta(days=4)).strftime('%Y-%m-%d')), ('state', 'in', ['draft','customs_clearance','customs_statement','transport'])]"
+                />
+            </xpath>
+        </field>
+    </record>
+    <record id="clearance_request_view_tree_inherit_transportation" model="ir.ui.view">
+        <field name="name">clearance.request.view.tree.inherit</field>
+        <field name="model">clearance.request</field>
+        <field name="inherit_id" ref="clearance.clearance_request_view_tree" />
+        <field name="arch" type="xml">
+            <tree position="attributes">
+                <attribute
+                    name="decoration-danger"
+                > deadline_shipment_receive and current_date >= deadline_shipment_receive and state in ["draft","customs_clearance","customs_statement","transport"]</attribute>
+                <attribute
+                    name="decoration-warning"
+                >deadline_shipment_receive and deadline_shipment_receive &lt;= (context_today() + relativedelta(days=3)).strftime('%Y-%m-%d') and state in ["draft","customs_clearance","customs_statement","transport"]</attribute>
+                <attribute
+                    name="decoration-success"
+                >deadline_shipment_receive and not deadline_shipment_receive &lt;= (context_today() + relativedelta(days=3)).strftime('%Y-%m-%d') and deadline_shipment_receive > current_date and state in ["draft","customs_clearance","customs_statement","transport"]</attribute>
+            </tree>
+            <field name="number_shipment" position="after">
+                <field name="shipping_order_number" class="text-center" sum="Total Num"/>
+                <field name="shipping_order_warehouse" class="text-center" sum="Total Yard"/>
+                <field name="shipping_order_customer" class="text-center" sum="Total Customer"/>
+                <field name="shipping_order_port" class="text-center" sum="Total Port"/>
+            </field>
+            <field name="state" position="attributes">
+                <attribute name="decoration-success">state in ['delivery', 'delivery_done', 'close']
+                </attribute>
+            </field>
+        </field>
+    </record>
+    <record id="clearance_request_view_form_inherit_transportation" model="ir.ui.view">
+        <field name="name">clearance.request.view.form.inherit</field>
+        <field name="model">clearance.request</field>
+        <field name="inherit_id" ref="clearance.clearance_request_view_form" />
+        <field name="arch" type="xml">
+            <field name="state" position="attributes">
+                <attribute
+                    name="statusbar_visible"
+                >draft,customs_clearance,customs_statement,transport,delivery,delivery_done,close
+                </attribute>
+            </field>
+            <button name="payments_tree_view" position="after">
+                <button
+                    name="shipping_order_view"
+                    type="object"
+                    icon="fa-truck"
+                    attrs="{'invisible': ['|', ('state','in',['draft', 'customs_clearance', 'customs_statement']), ('request_type', '=', 'other_service')]}"
+                >
+                    <field
+                        name="shipping_order_number"
+                        class="o_stat_value"
+                        string="Shipping Orders"
+                        widget="statinfo"
+                    />
+                </button>
+                <button
+                    name="action_makeMeeting"
+                    class="oe_stat_button"
+                    icon="fa-calendar"
+                    type="object"
+                    attrs="{'invisible': [('state','in',['draft', 'customs_clearance', 'customs_statement'])]}"
+                >
+                    <field name="meeting_count" widget="statinfo" string="Meetings" />
+                </button>
+            </button>
+            <header position="inside">
+                <button
+                    name="action_delivery"
+                    string="Validate"
+                    type="object"
+                    states="transport"
+                    class="btn-success"
+                    groups="transportation.group_transportation_responsible"
+                />
+                <field name="display_button_close" invisible="1" />
+                <button
+                    name="action_delivery_done"
+                    string="Validate"
+                    type="object"
+                    states="delivery"
+                    class="btn-success"
+                    groups="transportation.group_transportation_responsible"
+                />
+                <button
+                    name="action_close"
+                    string="Close Request"
+                    type="object"
+                    attrs="{'invisible':[('display_button_close','=', False)]}"
+                    class="btn-success"
+                    groups="transportation.group_closing_manager,transportation.group_transportation_responsible"
+                />
+                <button
+                    name="send_rating_mail_customer"
+                    string="Send Rating Form to Customer"
+                    type="object"
+                    class="btn-success"
+                    groups="transportation.group_closing_manager,transportation.group_transportation_responsible"
+                    attrs="{'invisible':[('display_button_close','=', False)]}"
+                />
+            </header>
+            <field name="company_id" position="after">
+                <field
+                    name="date_receipt"
+                    attrs="{'required':[('state','=', 'delivery_done')], 'invisible':[('state','not in', ['delivery_done', 'close'])]}"
+                />
+            </field>
+            <notebook position="inside">
+                <page
+                    name="requirements"
+                    string="Requirements Close deal"
+                    attrs="{'invisible':[('state','not in', ['delivery_done', 'close'])]}"
+                >
+                    <group>
+                        <field name="requirement_ids" nolabel="1">
+                            <tree editable="top">
+                                <field name="answer" nolabel="1" style="width:1px !important;" />
+                                <field name="requirement_id" options='{"no_open": True, "no_create": True}' />
+                                <field name="attachment_ids" widget="many2many_binary" />
+                                <field name="clearance_id" invisible="1" />
+                            </tree>
+                        </field>
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+    <record id="clearance_request_action_transportation" model="ir.actions.act_window">
+        <field name="name">Transportation</field>
+        <field name="res_model">clearance.request</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('state', 'not in', ['draft', 'customs_clearance', 'customs_statement'])]
+        </field>
+        <field name="context">{'no_display_create':True}</field>
+    </record>
+    <menuitem
+        id="clearance_request_transportation_menu"
+        name="Transport"
+        parent="transportation.transportation_menu_root"
+        action="clearance_request_action_transportation"
+        sequence="5"
+    />
+    <record id="clearance_request_view_form_inherit_transportation_responsible" model="ir.ui.view">
+        <field name="name">clearance.request.view.form.inherit.shipping.agent</field>
+        <field name="model">clearance.request</field>
+        <field name="inherit_id" ref="clearance.clearance_request_view_form" />
+        <field name="groups_id" eval="[(6, 0, [ref('transportation.group_transportation_responsible')])]" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='goods']/group/field[@name='statement_line_ids']/tree" position="attributes">
+                <attribute name="delete">1</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

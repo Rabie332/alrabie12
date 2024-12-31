@@ -1,0 +1,177 @@
+.hero-slider {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: zoomAnimation 25s infinite;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+@keyframes zoomAnimation {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+.hero-text {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  width: max-content;
+}
+.hero-text h2{
+  display: flex;
+}
+#dynamic-text-wrapper {
+  margin-left: 2px;
+  padding-left: 2px;
+  display: flex;
+  flex-direction: row;
+  width: 10rem;
+  border: white 1px solid;
+  border-radius: 5px;
+  /* padding: 5px; */
+  height: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  text-align: start;
+  /* min-height: 5rem; */
+    /* Ensure a minimum height is maintained */
+  /* transition: 1.2s ease; */
+}
+#list-software-list{
+  color: black;
+}
+#dynamic-text{
+  color: #fcd23a;
+  /* background-color: rgba(252, 210, 58, 0.4); */
+}
+/* .bg-color-1 {
+  background-color: #f00;
+}
+
+.bg-color-2 {
+  background-color: #0f0;
+}
+
+.bg-color-3 {
+  background-color: #00f;
+} */
+.client_logo {
+  opacity: 0.4;
+  transition: opacity ease-in-out 0.3s;
+}
+
+.client_logo:hover {
+  opacity: 1;
+}
+.swiper-container {
+  overflow: hidden;
+  /* Ensures that non-active slides are not visible */
+}
+
+.swiper-slide {
+  width: 33.333%;
+  /* Adjust based on three slides per view */
+  float: left;
+  display: none;
+  /* Default state hides all slides */
+  opacity: 1;
+  /* Ensure visible slides are fully opaque */
+  transition: opacity 0.5s ease;
+}
+
+.swiper-slide.active {
+  display: block;
+  /* Only active slides are displayed */
+}
+.swiper-wrapper{
+  position: relative;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+}
+
+.swiper-button-next {
+  left: 98%;
+}
+
+.swiper-button-prev {
+  right: 99%;
+
+}
+
+#video-id {
+  filter: brightness(20%);
+}
+
+.s_farha_header{
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.header_text{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #fff;
+  top: 15rem;
+  left: 2rem;
+
+}
+.header_text a{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  justify-items: center;
+}
+  
+
+@media (max-width: 768px) {
+  .header_text {
+    top: 1.5rem;
+    font-size: small;
+    /* left: 0.5rem; */
+    /* align-items: center; */
+  }
+    .header_text h1{
+      font-size: small;
+    }
+}

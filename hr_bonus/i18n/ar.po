@@ -1,0 +1,501 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_bonus
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-21 09:06+0000\n"
+"PO-Revision-Date: 2022-12-21 09:06+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__type_id
+msgid " Bonus "
+msgstr "المزايا المالية"
+
+#. module: hr_bonus
+#: code:addons/hr_bonus/models/hr_bonus.py:0
+#, python-format
+msgid "%s hasn't a contract"
+msgstr "%s ليس له عقد"
+
+#. module: hr_bonus
+#: model_terms:ir.ui.view,arch_db:hr_bonus.hr_salary_rule_bonus_form
+msgid ""
+"<span colspan=\"2\">If you add a company for this rule, it will be visible "
+"only for this company</span>"
+msgstr ""
+"<span colspan=\"2\">إذا أضفت شركة لهذه القاعدة ، فستكون مرئية "
+"فقط لهذه الشركة</span>"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: hr_bonus
+#: model:ir.model.fields.selection,name:hr_bonus.selection__hr_bonus__bonus_method__amount
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__amount
+msgid "Amount NET"
+msgstr "صافي المبلغ"
+
+#. module: hr_bonus
+#: model:ir.actions.act_window,name:hr_bonus.hr_bonus_action_report
+#: model:ir.ui.menu,name:hr_bonus.hr_bonus_menu_report
+msgid "Analysis"
+msgstr "التحليل"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus_line__base_amount
+msgid "Base"
+msgstr "أساس"
+
+#. module: hr_bonus
+#: model:ir.actions.act_window,name:hr_bonus.hr_bonus_action
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus_line__bonus_id
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_payslip_input__bonus_id
+#: model:ir.ui.menu,name:hr_bonus.hr_bonus_menu
+#: model:ir.ui.menu,name:hr_bonus.hr_bonus_menu_root
+msgid "Bonus"
+msgstr "المزايا المالية"
+
+#. module: hr_bonus
+#: model:res.groups,name:hr_bonus.hr_bonus_group_manager
+msgid "Bonus Manager"
+msgstr "مدير المزايا المالية"
+
+#. module: hr_bonus
+#: model:ir.model,name:hr_bonus.model_hr_bonus
+msgid "Bonus Request"
+msgstr "طلب المزية المالية"
+
+#. module: hr_bonus
+#: model:ir.actions.act_window,name:hr_bonus.hr_bonus_type_action
+#: model:ir.ui.menu,name:hr_bonus.hr_bonus_type_menu
+msgid "Bonus Types"
+msgstr "أنواع المزايا المالية"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__bonus_method
+msgid "Bonus by"
+msgstr "المزية المالية حسب"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__company_id
+msgid "Company"
+msgstr "المؤسسة"
+
+#. module: hr_bonus
+#: model_terms:ir.ui.view,arch_db:hr_bonus.hr_bonus_view_form
+msgid "Compute gross per employee"
+msgstr "حساب الإجمالي لكل موظف"
+
+#. module: hr_bonus
+#: model:ir.ui.menu,name:hr_bonus.hr_bonus_configuration_menu
+msgid "Configuration"
+msgstr "الإعدادات "
+
+#. module: hr_bonus
+#: model_terms:ir.ui.view,arch_db:hr_bonus.hr_bonus_view_form
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: hr_bonus
+#: model:ir.model.fields.selection,name:hr_bonus.selection__hr_bonus__state__confirm
+msgid "Confirmed"
+msgstr "تأكيد"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__create_uid
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus_line__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__create_date
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus_line__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: hr_bonus
+#: model:ir.model.fields.selection,name:hr_bonus.selection__hr_bonus__target__department
+msgid "Department"
+msgstr "القسم"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__department_ids
+msgid "Departments"
+msgstr "الأقسام"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__line_ids
+#: model_terms:ir.ui.view,arch_db:hr_bonus.hr_bonus_view_form
+msgid "Details per employee"
+msgstr "التفاصيل لكل موظف"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__display_button_set_to_draft
+msgid "Display Button Set To Draft"
+msgstr "عرض زر إعادة الى مسودة"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__display_name
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus_line__display_name
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_payslip__display_name
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_payslip_input__display_name
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_salary_rule__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_bonus
+#: model:ir.model.fields.selection,name:hr_bonus.selection__hr_bonus__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus_line__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__employee_ids
+#: model:ir.model.fields.selection,name:hr_bonus.selection__hr_bonus__target__employee
+#: model_terms:ir.ui.view,arch_db:hr_bonus.hr_bonus_view_search
+msgid "Employees"
+msgstr "الموظفون"
+
+#. module: hr_bonus
+#: model_terms:ir.ui.view,arch_db:hr_bonus.hr_bonus_view_form
+msgid "Filter employees by categories..."
+msgstr "تصفية الموظفين حسب الفئات ..."
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus_line__amount
+msgid "Gross"
+msgstr "الاجمالي"
+
+#. module: hr_bonus
+#: model_terms:ir.ui.view,arch_db:hr_bonus.hr_bonus_view_search
+msgid "Grouped by"
+msgstr "تجميع حسب"
+
+#. module: hr_bonus
+#: model:ir.model,name:hr_bonus.model_hr_bonus_line
+msgid "Hr Bonus Line"
+msgstr "بند المزية المالية"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__id
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus_line__id
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_payslip__id
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_payslip_input__id
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_salary_rule__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_bonus
+#: model:ir.model.fields,help:hr_bonus.field_hr_bonus__message_needaction
+#: model:ir.model.fields,help:hr_bonus.field_hr_bonus__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: hr_bonus
+#: model:ir.model.fields,help:hr_bonus.field_hr_bonus__message_has_error
+#: model:ir.model.fields,help:hr_bonus.field_hr_bonus__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__payslip_input_ids
+msgid "Inputs"
+msgstr "المدخلات"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_payslip_line__is_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_salary_rule__is_bonus
+msgid "Is bonus"
+msgstr "مزية مالية"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__is_variable_bonus
+msgid "Is variable bonus"
+msgstr "مزية مالية متغيرة"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus____last_update
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus_line____last_update
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_payslip____last_update
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_payslip_input____last_update
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_salary_rule____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__write_uid
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus_line__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__write_date
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus_line__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus_line__net_amount
+msgid "NET"
+msgstr "الصافي"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: hr_bonus
+#: model:ir.model.fields,help:hr_bonus.field_hr_bonus__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب اجراء"
+
+#. module: hr_bonus
+#: model:ir.model.fields,help:hr_bonus.field_hr_bonus__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: hr_bonus
+#: model:ir.model.fields,help:hr_bonus.field_hr_bonus__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: hr_bonus
+#: code:addons/hr_bonus/models/hr_bonus.py:0
+#, python-format
+msgid "Only a  HR Officer or  Bonus Manager can approve Bonus requests."
+msgstr ""
+"يمكن فقط لمسؤول الموارد البشرية أو مدير المزايا المالية الموافقة على طلبات المزايا المالية "
+
+#. module: hr_bonus
+#: code:addons/hr_bonus/models/hr_bonus.py:0
+#, python-format
+msgid "Only an bonus manager can validate bonus requests."
+msgstr "يمكن فقط لمدير المزايا المالية إعتماد طلبات المزايا المالية"
+
+#. module: hr_bonus
+#: model:ir.model,name:hr_bonus.model_hr_payslip
+msgid "Pay Slip"
+msgstr "قسيمة الراتب"
+
+#. module: hr_bonus
+#: model:ir.model.fields.selection,name:hr_bonus.selection__hr_bonus__state__payed
+msgid "Payed"
+msgstr "مدفوع"
+
+#. module: hr_bonus
+#: model:ir.model,name:hr_bonus.model_hr_payslip_input
+msgid "Payslip Input"
+msgstr "مدخلات الراتب"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus_line__percent
+msgid "Percent (%)"
+msgstr "نسبة (%)"
+
+#. module: hr_bonus
+#: model:ir.model.fields.selection,name:hr_bonus.selection__hr_bonus__bonus_method__percentage
+msgid "Percentage"
+msgstr "النسبة"
+
+#. module: hr_bonus
+#: model_terms:ir.ui.view,arch_db:hr_bonus.hr_bonus_view_search
+msgid "Period"
+msgstr "الفترة"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__hr_period_id
+msgid "Period applied"
+msgstr "الفترة"
+
+#. module: hr_bonus
+#: code:addons/hr_bonus/models/hr_bonus.py:0
+#, python-format
+msgid "Please add a regular pay structure for salary structure type."
+msgstr "الرجاء إضافة هيكل رواتب منتظم لنوع هيكل الرواتب."
+
+#. module: hr_bonus
+#: code:addons/hr_bonus/models/hr_bonus.py:0
+#, python-format
+msgid "Please add number work days to the current period."
+msgstr "الرجاء إضافة عدد أيام العمل إلى الفترة الحالية."
+
+#. module: hr_bonus
+#: model:ir.ui.menu,name:hr_bonus.hr_bonus_report_menu
+msgid "Reports"
+msgstr "التقارير"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: hr_bonus
+#: model:ir.model,name:hr_bonus.model_hr_salary_rule
+msgid "Salary Rule"
+msgstr "قاعدة مرتبات"
+
+#. module: hr_bonus
+#: model_terms:ir.ui.view,arch_db:hr_bonus.hr_salary_rule_bonus_form
+msgid "Salary Rules"
+msgstr "قواعد المرتبات"
+
+#. module: hr_bonus
+#: model_terms:ir.ui.view,arch_db:hr_bonus.hr_bonus_view_form
+msgid "Set to Draft"
+msgstr "تعيين كمسودة"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__state
+#: model_terms:ir.ui.view,arch_db:hr_bonus.hr_bonus_view_search
+msgid "State"
+msgstr "الحالة"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_payslip_line__structure_ids
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_salary_rule__structure_ids
+msgid "Structures"
+msgstr "الهياكل"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__category_ids
+#: model:ir.model.fields.selection,name:hr_bonus.selection__hr_bonus__target__tags
+msgid "Tags"
+msgstr "الوسوم"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__target
+msgid "Target Group"
+msgstr "المجموعة المستهدفة"
+
+#. module: hr_bonus
+#: code:addons/hr_bonus/models/hr_bonus.py:0
+#, python-format
+msgid "The Code should not contain \".\""
+msgstr "الرمز يجب ألا يحتوي على"
+
+#. module: hr_bonus
+#: code:addons/hr_bonus/models/hr_bonus.py:0
+#, python-format
+msgid "The Net of employee %s must be greater then 0"
+msgstr "يجب أن يكون صافي الموظف%s أكبر من 0"
+
+#. module: hr_bonus
+#: code:addons/hr_bonus/models/hr_bonus.py:0
+#, python-format
+msgid "This employee %s already exist!"
+msgstr "هذا الموظف%s موجود بالفعل!"
+
+#. module: hr_bonus
+#: model:ir.model.fields,help:hr_bonus.field_hr_bonus__is_variable_bonus
+msgid ""
+"This rule will appear in the contract's allowances and you can set an amount"
+" for it. When you create a bonus with this rule you can set a percent to "
+"allowance's amount."
+msgstr ""
+"ستظهر هذه القاعدة في مخصصات العقد ويمكنك تحديد مبلغ لها ."
+" عندما تنشئ مكافأة بهذه القاعدة ، يمكنك تعيين نسبة مئوية لمبلغ البدل "
+
+#. module: hr_bonus
+#: model_terms:ir.ui.view,arch_db:hr_bonus.hr_bonus_view_form
+msgid "This will compute gross of bonus per employee."
+msgstr "سيحسب هذا إجمالي المكافأة لكل موظف."
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__total_amount
+msgid "Total Amount GROSS"
+msgstr "المبلغ الإجمالي"
+
+#. module: hr_bonus
+#: model_terms:ir.ui.view,arch_db:hr_bonus.hr_bonus_view_search
+msgid "Type"
+msgstr "النوع"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: hr_bonus
+#: model:ir.model.fields,field_description:hr_bonus.field_hr_bonus__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: hr_bonus
+#: model_terms:ir.ui.view,arch_db:hr_bonus.hr_bonus_view_form
+msgid "Validate"
+msgstr "اعتماد"
+
+#. module: hr_bonus
+#: code:addons/hr_bonus/models/hr_bonus.py:0
+#, python-format
+msgid "You must select an employee."
+msgstr "يجب عليك اختيار موظف"

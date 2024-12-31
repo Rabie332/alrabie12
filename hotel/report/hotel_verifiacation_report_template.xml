@@ -1,0 +1,75 @@
+<odoo>
+    <template id="report_hotel_verification_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="oe_structure" />
+                        <div class="col-12">
+                            <center>
+                                <strong t-if="o.type == 'day'">Field Inspection</strong>
+                                <strong t-if="o.type == 'night'">Night Inspection</strong>
+                            </center>
+                            <br />
+                            <br />
+                            <br />
+                            <table width="100%">
+                                <tr>
+                                    <th>Date From :</th>
+                                    <th>date To :</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span t-field="o.date_from" t-options="{'format': 'yyyy/MM/dd'}" />
+                                    </td>
+                                    <td>
+                                        <span t-field="o.date_to" t-options="{'format': 'yyyy/MM/dd'}" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <br />
+                        <br />
+
+                        <table class="table table-condensed">
+                            <tr>
+                                <td>
+                                    <strong>Verifier</strong>
+                                </td>
+                                <td>
+                                    <strong>Date</strong>
+                                </td>
+                                <td>
+                                    <strong>Notes</strong>
+                                </td>
+                            </tr>
+                            <t t-foreach="get_lines(o)" t-as="line">
+                                <tr>
+                                    <td>
+                                        <span t-field="line.verifier_id" />
+                                    </td>
+                                    <td>
+                                        <span t-field="line.date" />
+                                    </td>
+                                    <td>
+                                        <span t-field="line.notes" />
+                                    </td>
+                                </tr>
+                            </t>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+
+    <record id="report_hotel_verification" model="ir.actions.report">
+        <field name="name">Hotel Verification Report</field>
+        <field name="model">hotel.verification.found</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_file">hotel.report_hotel_verification_template</field>
+        <field name="report_name">hotel.report_hotel_verification_template</field>
+    </record>
+
+</odoo>

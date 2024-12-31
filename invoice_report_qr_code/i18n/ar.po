@@ -1,0 +1,149 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* invoice_report_qr_code
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-26 11:05+0000\n"
+"PO-Revision-Date: 2022-04-26 11:05+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: invoice_report_qr_code
+#: model_terms:ir.ui.view,arch_db:invoice_report_qr_code.report_invoice_document_inherit
+msgid "<span>Taxe Amount</span>"
+msgstr "<span>مبلغ الضريبة</span>"
+
+#. module: invoice_report_qr_code
+#: model_terms:ir.ui.view,arch_db:invoice_report_qr_code.report_invoice_document_inherit
+msgid "Amount"
+msgstr "المبلغ قبل الضريبة"
+
+#. module: invoice_report_qr_code
+#: model_terms:ir.ui.view,arch_db:invoice_report_qr_code.report_invoice_invoice_report_qr_code_template
+msgid "<strong style=\"display:inline-block;\">Customer Code:</strong>"
+msgstr "<strong style=\"display:inline-block;\">كود العميل:</strong>"
+
+#. module: invoice_report_qr_code
+#: model_terms:ir.ui.view,arch_db:invoice_report_qr_code.report_invoice_invoice_report_qr_code_template
+msgid "<strong style=\"display:inline-block;\">Due Date:</strong>"
+msgstr "<strong style=\"display:inline-block;\">تاريخ الاستحقاق:</strong>"
+
+#. module: invoice_report_qr_code
+#: model_terms:ir.ui.view,arch_db:invoice_report_qr_code.report_invoice_invoice_report_qr_code_template
+msgid "<strong style=\"display:inline-block;\">Invoice Date:</strong>"
+msgstr "<strong style=\"display:inline-block;\">تاريخ الفاتورة:</strong>"
+
+#. module: invoice_report_qr_code
+#: model_terms:ir.ui.view,arch_db:invoice_report_qr_code.report_invoice_invoice_report_qr_code_template
+msgid "<strong style=\"display:inline-block;\">Reference:</strong>"
+msgstr "<strong style=\"display:inline-block;\">رقم الإشارة:</strong>"
+
+#. module: invoice_report_qr_code
+#: model_terms:ir.ui.view,arch_db:invoice_report_qr_code.report_invoice_invoice_report_qr_code_template
+msgid "<strong style=\"display:inline-block;\">Source:</strong>"
+msgstr "<strong style=\"display:inline-block;\">المصدر:</strong>"
+
+#. module: invoice_report_qr_code
+#: model:ir.model.fields,field_description:invoice_report_qr_code.field_account_move__display_name
+#: model:ir.model.fields,field_description:invoice_report_qr_code.field_account_move_line__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: invoice_report_qr_code
+#: model:ir.model.fields,field_description:invoice_report_qr_code.field_account_move__id
+#: model:ir.model.fields,field_description:invoice_report_qr_code.field_account_move_line__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: invoice_report_qr_code
+#: model:ir.model,name:invoice_report_qr_code.model_account_move
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: invoice_report_qr_code
+#: model:ir.model,name:invoice_report_qr_code.model_account_move_line
+msgid "Journal Item"
+msgstr "عنصر اليومية"
+
+#. module: invoice_report_qr_code
+#: model:ir.model.fields,field_description:invoice_report_qr_code.field_account_move____last_update
+#: model:ir.model.fields,field_description:invoice_report_qr_code.field_account_move_line____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: invoice_report_qr_code
+#: model:ir.model.fields,field_description:invoice_report_qr_code.field_account_move_line__tax_amount
+msgid "Tax amount"
+msgstr "قيمة الضريبة"
+
+#. module: invoice_report_qr_code
+#: model_terms:ir.ui.view,arch_db:invoice_report_qr_code.external_layout_background_report
+#: model_terms:ir.ui.view,arch_db:invoice_report_qr_code.external_layout_boxed_report
+#: model_terms:ir.ui.view,arch_db:invoice_report_qr_code.external_layout_clean_report
+#: model_terms:ir.ui.view,arch_db:invoice_report_qr_code.external_layout_template_report
+msgid "Logo"
+msgstr "أيقونة"
+
+#. module: invoice_report_qr_code
+#: model:ir.model.fields,field_description:invoice_report_qr_code.field_account_bank_statement_line__qr_code
+#: model:ir.model.fields,field_description:invoice_report_qr_code.field_account_move__qr_code
+msgid "QR Code"
+msgstr "رمز الاستجابة السريعة QR"
+
+#. module: invoice_report_qr_code
+#: model_terms:ir.ui.view,arch_db:invoice_report_qr_code.report_invoice_document_inherit
+msgid "Refundable invoice for Tax bill"
+msgstr "فاتورة مسترجعة للفاتورة الضريبية"
+
+#. module: invoice_report_qr_code
+#: model_terms:ir.ui.view,arch_db:invoice_report_qr_code.report_invoice_document_inherit
+msgid "Refundable invoice for simplified invoice"
+msgstr "فاتورة مسترجعة للفاتورة المبسطة"
+
+#. module: invoice_report_qr_code
+#: model_terms:ir.ui.view,arch_db:invoice_report_qr_code.report_invoice_document_inherit
+msgid "Simplified tax invoice"
+msgstr "فاتورة ضريبية مبسطة"
+
+#. module: invoice_report_qr_code
+#: model_terms:ir.ui.view,arch_db:invoice_report_qr_code.external_layout_background_report
+#: model_terms:ir.ui.view,arch_db:invoice_report_qr_code.external_layout_boxed_report
+#: model_terms:ir.ui.view,arch_db:invoice_report_qr_code.external_layout_clean_report
+#: model_terms:ir.ui.view,arch_db:invoice_report_qr_code.external_layout_template_report
+msgid "Tax ID :"
+msgstr "رقم التعريف الضريبي :"
+
+#. module: invoice_report_qr_code
+#: model_terms:ir.ui.view,arch_db:invoice_report_qr_code.report_invoice_document_inherit
+msgid "Tax bill"
+msgstr "فاتورة ضريبية"
+
+#. module: invoice_report_qr_code
+#: model_terms:ir.ui.view,arch_db:invoice_report_qr_code.external_layout_clean_report
+msgid "Tel:"
+msgstr "الهاتف :"
+
+#. module: invoice_report_qr_code
+#: model_terms:ir.ui.view,arch_db:invoice_report_qr_code.report_invoice_document_inherit
+msgid "Total Price"
+msgstr "المبلغ بعد الضريبة"
+
+#. module: invoice_report_qr_code
+#: model_terms:ir.ui.view,arch_db:invoice_report_qr_code.report_invoice_document_inherit
+msgid "number"
+msgstr "رقم"
+
+#. module: invoice_report_qr_code
+#: model_terms:ir.ui.view,arch_db:invoice_report_qr_code.external_layout_background_report
+#: model_terms:ir.ui.view,arch_db:invoice_report_qr_code.external_layout_boxed_report
+#: model_terms:ir.ui.view,arch_db:invoice_report_qr_code.external_layout_clean_report
+#: model_terms:ir.ui.view,arch_db:invoice_report_qr_code.external_layout_template_report
+msgid "Tax ID: "
+msgstr "رقم التعريف الضريبي :"

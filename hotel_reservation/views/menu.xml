@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem
+        id="apartments_menu_root"
+        name="Apartments"
+        sequence="4"
+        groups="hotel_reservation.group_receptionist,hotel.group_hotel_manager"
+        web_icon="hotel_reservation,static/description/icon_apartment.png"
+    />
+    <menuitem name="Invoicing" id="account.menu_finance" groups="hotel_reservation.group_billing_responsible" />
+</odoo>

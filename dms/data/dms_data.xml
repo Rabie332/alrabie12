@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+
+    <!-- ir attachment sequence -->
+
+    <record id="ir_attachment_seq" forcecreate="1" model="ir.sequence">
+        <field name="name">Document sequence number‬</field>
+        <field name="code">ir.attachment.seq</field>
+        <field eval="1" name="number_increment" />
+        <field name="padding">5</field>
+    </record>
+
+    <!-- dms folder sequence -->
+
+    <record id="dms_folder_seq" forcecreate="1" model="ir.sequence">
+        <field name="name">Folder sequence number</field>
+        <field name="code">dms.folder.seq</field>
+        <field eval="1" name="number_increment" />
+        <field name="padding">5</field>
+    </record>
+
+    <!-- Sharing activities -->
+
+    <record id="mail_dms_folder_share" model="mail.activity.type">
+        <field name="name">Share folder</field>
+        <field name="icon">fa-sun-o</field>
+        <field name="res_model_id" ref="dms.model_dms_folder" />
+    </record>
+
+    <record id="mail_ir_attachment_share" model="mail.activity.type">
+        <field name="name">Share document</field>
+        <field name="icon">fa-sun-o</field>
+       <field name="res_model_id" ref="base.model_ir_attachment" />
+    </record>
+
+</odoo>

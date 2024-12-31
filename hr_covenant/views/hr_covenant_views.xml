@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="hr_covenant_view_tree" model="ir.ui.view">
+        <field name="name">hr.covenant.view.tree</field>
+        <field name="model">hr.covenant</field>
+        <field name="arch" type="xml">
+            <tree
+                decoration-warning="state == 'done' and retrieval == True"
+                decoration-success="state == 'done' and retrieval == False"
+            >
+                <field name="employee_id" widget="many2one_avatar_employee" />
+                <field name="covenant_type_id" />
+                <field name="description" />
+                <field name="stage_id" />
+                <field name="state" invisible="1" />
+                <field name="retrieval" invisible="1" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="hr_covenant_view_form" model="ir.ui.view">
+        <field name="name">hr.covenant.view.form</field>
+        <field name="model">hr.covenant</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="request.request_view_form" />
+        <field name="arch" type="xml">
+            <header position="inside">
+                <button
+                    string="Recover custody"
+                    name="action_retrieval"
+                    groups='hr.group_hr_manager'
+                    type='object'
+                    class="oe_highlight"
+                    attrs="{'invisible': ['|',('state', '!=', 'done'),('retrieval', '!=', False)]}"
+                    confirm="Are you sure you want to confirm it?"
+                />
+            </header>
+            <widget name="web_ribbon" position="attributes">
+                <attribute name="title">Refused</attribute>
+            </widget>
+            <widget name="web_ribbon" position="after">
+                <widget
+                    name="web_ribbon"
+                    title="Archived"
+                    bg_color="bg-danger"
+                    attrs="{'invisible': [('active', '=', True)]}"
+                />
+                <widget
+                    name="web_ribbon"
+                    title="َAt Employee"
+                    bg_color="bg-success"
+                    attrs="{'invisible': ['|',('state', '!=', 'done'),('retrieval', '!=', False)]}"
+                />
+                <widget
+                    name="web_ribbon"
+                    title="Been returned "
+                    bg_color="bg-warning"
+                    attrs="{'invisible': ['|',('state', '!=', 'done'),('retrieval', '!=', True)]}"
+                />
+            </widget>
+            <sheet position="inside">
+                <group>
+                    <group>
+                        <label for="name" />
+                        <h1>
+                            <field name="name" readonly="0" force_save="1" />
+                        </h1>
+                    </group>
+                </group>
+                <group>
+                    <group>
+                        <field name="date" string="Date" />
+                        <field name="employee_id" string="Employee" force_save="1" />
+                        <field name="active" invisible="1" />
+                        <field name="number" force_save="1" />
+                        <field name="job_id" force_save="1" />
+                        <field name="department_id" force_save="1" />
+                    </group>
+                    <group>
+                        <field name="request_type_id" invisible="1" />
+                        <field name="retrieval" invisible="1" />
+                        <field name="covenant_type_id" />
+                        <field name="received_date" />
+                        <field name="description" />
+                        <field name="company_id" groups="base.group_multi_company" />
+                    </group>
+                </group>
+                <notebook>
+                 <page name="attachments" string="Attachments">
+                        <br />
+                        <field name="attachment_ids" widget="many2many_binary" />
+                    </page>
+                 </notebook>
+            </sheet>
+        </field>
+    </record>
+
+    <record id="hr_covenant_view_kanban" model="ir.ui.view">
+        <field name="name">hr.covenant.kanban</field>
+        <field name="model">hr.covenant</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="request.request_view_kanban" />
+        <field name="arch" type="xml">
+            <div name="card_body" position="inside">
+                <span name="employee_id" t-if="record.employee_id.raw_value">Employee :
+                    <field name="employee_id" />
+                    <br />
+                </span>
+                <span name="covenant_type_id" t-if="record.covenant_type_id.raw_value">Covenant Type :
+                    <field name="covenant_type_id" />
+                    <br />
+                </span>
+                <span name="received_date" t-if="record.received_date.raw_value">Received Date :
+                    <field name="received_date" />
+                    <br />
+                </span>
+                <span name="stage" t-if="record.stage_id.raw_value">Stage :
+                    <field name="stage_id" />
+                </span>
+            </div>
+            <div name="div_bottom_left" position="inside">
+                <field name="state" invisible="1" />
+                <field name="retrieval" invisible="1" />
+                <div t-if="record.state.raw_value == 'done' and record.retrieval.raw_value">
+                    <span class="fa fa-circle text-warning" title="Been returned" />
+                </div>
+                <div t-if="record.state.raw_value == 'done' and record.retrieval.raw_value == false">
+                    <span class="fa fa-circle text-success" title="At Employee" />
+                </div>
+            </div>
+        </field>
+    </record>
+
+    <record id="hr_covenant_view_search" model="ir.ui.view">
+        <field name="name">hr.covenant.filter</field>
+        <field name="model">hr.covenant</field>
+        <field name="arch" type="xml">
+            <search string="Search Covenants">
+                <field name="name" />
+                <field name="employee_id" />
+                <field name="description" />
+                <filter string="Archived" name="inactive" domain="[('active','=',False)]" />
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_hr_covenant">
+        <field name="name">Covenants</field>
+        <field name="res_model">hr.covenant</field>
+        <field name="view_mode">tree,kanban,form</field>
+    </record>
+
+    <menuitem id="hr_covenant_menu_root" name="Covenants" sequence="5" parent="hr.menu_hr_root" />
+    <menuitem id="hr_covenant_menu" name="Covenants" parent="hr_covenant_menu_root" action="action_hr_covenant" />
+
+    <record id="hr_covenant_type_view_form" model="ir.ui.view">
+        <field name="name">hr.covenant.type.view.form</field>
+        <field name="model">hr.covenant.type</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="active" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_covenant_type_view_tree" model="ir.ui.view">
+        <field name="name">hr.covenant.type.view.tree</field>
+        <field name="model">hr.covenant.type</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="active" />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_hr_covenant_type">
+        <field name="name">Covenant Types</field>
+        <field name="res_model">hr.covenant.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="hr_covenant_type_menu"
+        name="Covenant Types"
+        parent="hr_covenant_menu_root"
+        action="action_hr_covenant_type"
+    />
+    <record id="hr_covenant_stage_action" model="ir.actions.act_window">
+        <field name="name">Covenant Stages</field>
+        <field name="res_model">request.stage</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="domain">[('res_model_id.model', '=', 'hr.covenant')]</field>
+        <field name="context">{'default_res_model':'hr.covenant'}</field>
+    </record>
+
+    <menuitem
+        id="hr_covenant_stage_menu"
+        action="hr_covenant_stage_action"
+        name="Covenants Stages"
+        groups="request.group_stages_manager"
+        parent="hr_covenant_menu_root"
+    />
+
+    <record id="hr_covenant_action_my_self_service" model="ir.actions.act_window">
+        <field name="res_model">hr.covenant</field>
+        <field name="name">Covenants</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="context">{'no_display_create':True}</field>
+        <field name="domain">[('employee_id.user_id', '=',uid)]
+        </field>
+    </record>
+
+    <menuitem
+        id="hr_covenant_menu_my"
+        name="Covenants"
+        parent="request.self_services_menu"
+        action="hr_covenant_action_my_self_service"
+    />
+
+</odoo>

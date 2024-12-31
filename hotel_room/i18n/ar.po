@@ -1,0 +1,603 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hotel_room
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-09 08:25+0000\n"
+"PO-Revision-Date: 2022-08-09 08:25+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hotel_room
+#: model_terms:ir.ui.view,arch_db:hotel_room.report_empty_room_template
+msgid "<span>Day</span>"
+msgstr "<span> يوم </span>"
+
+#. module: hotel_room
+#: model_terms:ir.ui.view,arch_db:hotel_room.report_empty_room_template
+msgid "<strong>Capacity</strong>"
+msgstr "<strong>السعة</strong>"
+
+#. module: hotel_room
+#: model_terms:ir.ui.view,arch_db:hotel_room.report_empty_room_template
+msgid "<strong>Category</strong>"
+msgstr "<strong>الفئة</strong>"
+
+#. module: hotel_room
+#: model_terms:ir.ui.view,arch_db:hotel_room.report_partner_reclamation_template
+msgid "<strong>Complain</strong>"
+msgstr "<strong>الشكوى</strong>"
+
+#. module: hotel_room
+#: model_terms:ir.ui.view,arch_db:hotel_room.report_empty_room_template
+msgid "<strong>Daily price</strong>"
+msgstr "<strong>السعر اليومي</strong>"
+
+#. module: hotel_room
+#: model_terms:ir.ui.view,arch_db:hotel_room.report_partner_reclamation_template
+msgid "<strong>Date</strong>"
+msgstr "<strong>التاريخ</strong>"
+
+#. module: hotel_room
+#: model_terms:ir.ui.view,arch_db:hotel_room.report_empty_room_template
+msgid ""
+"<strong>Empty Rooms</strong>\n"
+"                                <br/>\n"
+"                                <strong>Duration : </strong>"
+msgstr ""
+"<strong>الغرف الخالية</strong>\n"
+"                                <br/>\n"
+"                                <strong>المدة : </strong>"
+
+#. module: hotel_room
+#: model_terms:ir.ui.view,arch_db:hotel_room.report_empty_room_template
+msgid "<strong>Floor</strong>"
+msgstr "<strong>الطابق</strong>"
+
+#. module: hotel_room
+#: model_terms:ir.ui.view,arch_db:hotel_room.report_partner_reclamation_template
+msgid "<strong>Guest</strong>"
+msgstr "<strong>الضيف</strong>"
+
+#. module: hotel_room
+#: model_terms:ir.ui.view,arch_db:hotel_room.report_empty_room_template
+msgid "<strong>Hourly price</strong>"
+msgstr "<strong>السعر بالساعات</strong>"
+
+#. module: hotel_room
+#: model_terms:ir.ui.view,arch_db:hotel_room.report_empty_room_template
+msgid "<strong>Monthly price</strong>"
+msgstr "<strong>السعر الشهري</strong>"
+
+#. module: hotel_room
+#: model_terms:ir.ui.view,arch_db:hotel_room.report_partner_reclamation_template
+msgid "<strong>Number</strong>"
+msgstr "<strong>الرقم</strong>"
+
+#. module: hotel_room
+#: model_terms:ir.ui.view,arch_db:hotel_room.report_partner_reclamation_template
+msgid "<strong>Partner Reclamation</strong>"
+msgstr "<strong>شكاوي النزلاء</strong>"
+
+#. module: hotel_room
+#: model_terms:ir.ui.view,arch_db:hotel_room.report_empty_room_template
+msgid "<strong>Reservation Number</strong>"
+msgstr "<strong>عدد الحجوزات</strong>"
+
+#. module: hotel_room
+#: model_terms:ir.ui.view,arch_db:hotel_room.report_empty_room_template
+msgid "<strong>Room</strong>"
+msgstr "<strong>الغرفة</strong>"
+
+#. module: hotel_room
+#: model_terms:ir.ui.view,arch_db:hotel_room.report_partner_reclamation_template
+msgid "<strong>state</strong>"
+msgstr "<strong>الحالة</strong>"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__active
+#: model:ir.model.fields,field_description:hotel_room.field_room_status_sla__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "نشاط استثناء الديكور"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: hotel_room
+#: model_terms:ir.ui.view,arch_db:hotel_room.empty_room_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:hotel_room.view_partner_reclamation_wizard
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: hotel_room
+#: model:ir.model.fields.selection,name:hotel_room.selection__partner_reclamation__state__cancel
+#: model:ir.model.fields.selection,name:hotel_room.selection__partner_reclamation_wizard__state__cancel
+#: model_terms:ir.ui.view,arch_db:hotel_room.partner_reclamation_view_form
+#: model_terms:ir.ui.view,arch_db:hotel_room.partner_reclamation_view_search
+msgid "Cancelled"
+msgstr "ملغي"
+
+#. module: hotel_room
+#: model_terms:ir.ui.view,arch_db:hotel_room.partner_reclamation_view_search
+msgid "Company"
+msgstr "الفندق"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__complaint_text
+#: model_terms:ir.ui.view,arch_db:hotel_room.partner_reclamation_view_form
+msgid "Complaint text"
+msgstr "نص الشكوى"
+
+#. module: hotel_room
+#: model_terms:ir.ui.view,arch_db:hotel_room.partner_reclamation_view_form
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_empty_room_wizard__create_uid
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__create_uid
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation_wizard__create_uid
+#: model:ir.model.fields,field_description:hotel_room.field_room_status_sla__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_empty_room_wizard__create_date
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__create_date
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation_wizard__create_date
+#: model:ir.model.fields,field_description:hotel_room.field_room_status_sla__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation_wizard__date_from
+msgid "Date from"
+msgstr "تاريخ من"
+
+#. module: hotel_room
+#: model_terms:ir.ui.view,arch_db:hotel_room.report_partner_reclamation_template
+msgid "Date from :"
+msgstr "تاريخ من :"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation_wizard__date_to
+msgid "Date to"
+msgstr "تاريخ الى"
+
+#. module: hotel_room
+#: model:ir.model.fields.selection,name:hotel_room.selection__room_status_sla__unity__day
+msgid "Day"
+msgstr "يوم"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_empty_room_wizard__days
+msgid "Days"
+msgstr "الأيام"
+
+#. module: hotel_room
+#: model:ir.model.fields.selection,name:hotel_room.selection__room_status_sla__status__dirty
+msgid "Dirty"
+msgstr "غير نظيفة"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_empty_room_wizard__display_name
+#: model:ir.model.fields,field_description:hotel_room.field_hotel_room__display_name
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__display_name
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation_wizard__display_name
+#: model:ir.model.fields,field_description:hotel_room.field_report_hotel_room_report_empty_room_template__display_name
+#: model:ir.model.fields,field_description:hotel_room.field_report_hotel_room_report_partner_reclamation_template__display_name
+#: model:ir.model.fields,field_description:hotel_room.field_room_status_sla__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hotel_room
+#: model:ir.model.fields.selection,name:hotel_room.selection__partner_reclamation__state__draft
+#: model:ir.model.fields.selection,name:hotel_room.selection__partner_reclamation_wizard__state__draft
+#: model_terms:ir.ui.view,arch_db:hotel_room.partner_reclamation_view_search
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: hotel_room
+#: model:ir.model,name:hotel_room.model_empty_room_wizard
+msgid "Empty Room Wizard"
+msgstr "الغرف الخالية"
+
+#. module: hotel_room
+#: model:ir.actions.act_window,name:hotel_room.empty_room_wizard_action
+#: model:ir.actions.report,name:hotel_room.report_empty_room
+#: model:ir.model,name:hotel_room.model_report_hotel_room_report_empty_room_template
+#: model:ir.ui.menu,name:hotel_room.empty_room_hotel_menu
+msgid "Empty Rooms Report"
+msgstr "تقرير الغرف الخالية"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: hotel_room
+#: model:ir.model.fields,help:hotel_room.field_partner_reclamation__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "رمز الخط الرائع ، على سبيل المثال FA المهام"
+
+#. module: hotel_room
+#: model_terms:ir.ui.view,arch_db:hotel_room.partner_reclamation_view_search
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__partner_id
+#: model_terms:ir.ui.view,arch_db:hotel_room.partner_reclamation_view_search
+msgid "Guest"
+msgstr "النزيل"
+
+#. module: hotel_room
+#: model:ir.actions.act_window,name:hotel_room.partner_reclamation_action
+#: model:ir.ui.menu,name:hotel_room.partner_reclamation_menu
+msgid "Guest Complaints"
+msgstr "شكاوي النزلاء"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__company_id
+#: model:ir.model.fields,field_description:hotel_room.field_room_status_sla__company_id
+msgid "Hotel"
+msgstr "الفندق"
+
+#. module: hotel_room
+#: model:ir.model,name:hotel_room.model_hotel_room
+msgid "Hotel Room"
+msgstr "غرفة الفندقغرفة الفندق"
+
+#. module: hotel_room
+#: model:ir.model.fields.selection,name:hotel_room.selection__room_status_sla__unity__hour
+msgid "Hour"
+msgstr "ساعة"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_empty_room_wizard__id
+#: model:ir.model.fields,field_description:hotel_room.field_hotel_room__id
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__id
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation_wizard__id
+#: model:ir.model.fields,field_description:hotel_room.field_report_hotel_room_report_empty_room_template__id
+#: model:ir.model.fields,field_description:hotel_room.field_report_hotel_room_report_partner_reclamation_template__id
+#: model:ir.model.fields,field_description:hotel_room.field_room_status_sla__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: hotel_room
+#: model:ir.model.fields,help:hotel_room.field_partner_reclamation__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "الأيقونة للإشارة إلى استثناء النشاط."
+
+#. module: hotel_room
+#: model:ir.model.fields,help:hotel_room.field_partner_reclamation__message_needaction
+#: model:ir.model.fields,help:hotel_room.field_partner_reclamation__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "اذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل"
+
+#. module: hotel_room
+#: model:ir.model.fields,help:hotel_room.field_partner_reclamation__message_has_error
+#: model:ir.model.fields,help:hotel_room.field_partner_reclamation__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "اذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل"
+
+#. module: hotel_room
+#: model:ir.model.fields.selection,name:hotel_room.selection__partner_reclamation__state__progress
+#: model:ir.model.fields.selection,name:hotel_room.selection__partner_reclamation_wizard__state__progress
+#: model_terms:ir.ui.view,arch_db:hotel_room.partner_reclamation_view_search
+msgid "In progress"
+msgstr "جاري"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_empty_room_wizard____last_update
+#: model:ir.model.fields,field_description:hotel_room.field_hotel_room____last_update
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation____last_update
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation_wizard____last_update
+#: model:ir.model.fields,field_description:hotel_room.field_report_hotel_room_report_empty_room_template____last_update
+#: model:ir.model.fields,field_description:hotel_room.field_report_hotel_room_report_partner_reclamation_template____last_update
+#: model:ir.model.fields,field_description:hotel_room.field_room_status_sla____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_empty_room_wizard__write_uid
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__write_uid
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation_wizard__write_uid
+#: model:ir.model.fields,field_description:hotel_room.field_room_status_sla__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_empty_room_wizard__write_date
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__write_date
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation_wizard__write_date
+#: model:ir.model.fields,field_description:hotel_room.field_room_status_sla__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: hotel_room
+#: model:ir.model.fields.selection,name:hotel_room.selection__room_status_sla__status__maintenance
+msgid "Maintenance"
+msgstr "صيانة"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_room_status_sla__message
+msgid "Message"
+msgstr "نص الرسالة"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__message_ids
+msgid "Messages"
+msgstr "الرسالة"
+
+#. module: hotel_room
+#: model:ir.model.fields.selection,name:hotel_room.selection__room_status_sla__unity__month
+msgid "Month"
+msgstr "شهر"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي لنشاطي"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_room_status_sla__unity_number
+msgid "Number"
+msgstr "العدد"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: hotel_room
+#: model:ir.model.fields,help:hotel_room.field_partner_reclamation__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: hotel_room
+#: model:ir.model.fields,help:hotel_room.field_partner_reclamation__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل مع خطأ في التسليم"
+
+#. module: hotel_room
+#: model:ir.model.fields,help:hotel_room.field_partner_reclamation__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل غير المقروءة"
+
+#. module: hotel_room
+#: model:ir.model,name:hotel_room.model_partner_reclamation
+msgid "Partner Reclamation"
+msgstr "شكاوي النزلاء"
+
+#. module: hotel_room
+#: model:ir.actions.act_window,name:hotel_room.partner_reclamation_wizard_action
+#: model:ir.actions.report,name:hotel_room.report_partner_reclamation
+#: model:ir.model,name:hotel_room.model_partner_reclamation_wizard
+#: model:ir.model,name:hotel_room.model_report_hotel_room_report_partner_reclamation_template
+#: model:ir.ui.menu,name:hotel_room.partner_reclamation_hotel_menu
+msgid "Partner Reclamation Report"
+msgstr "تقرير شكاوي النزلاء"
+
+#. module: hotel_room
+#: model_terms:ir.ui.view,arch_db:hotel_room.empty_room_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:hotel_room.view_partner_reclamation_wizard
+msgid "Print report"
+msgstr "طباعة التقرير"
+
+#. module: hotel_room
+#: model_terms:ir.ui.view,arch_db:hotel_room.partner_reclamation_view_search
+msgid "Reclamation By Month"
+msgstr "الشكاوي بالشهر"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__activity_user_id
+msgid "Responsible User"
+msgstr "المسؤول"
+
+#. module: hotel_room
+#: model:ir.model,name:hotel_room.model_room_status_sla
+msgid "Room Status SLA"
+msgstr "SLA على حالات الغرف"
+
+#. module: hotel_room
+#: model:ir.ui.menu,name:hotel_room.hotel_room_management_menu_root
+msgid "Rooms Management"
+msgstr "إدارة الغرف"
+
+#. module: hotel_room
+#: model:ir.actions.act_window,name:hotel_room.room_status_sla_action
+#: model:ir.actions.server,name:hotel_room.sla_room_status_cron_ir_actions_server
+#: model:ir.cron,cron_name:hotel_room.sla_room_status_cron
+#: model:ir.cron,name:hotel_room.sla_room_status_cron
+#: model:ir.ui.menu,name:hotel_room.room_status_sla_menu
+msgid "SLA Rooms Status"
+msgstr "SLA على حالات الغرف"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: hotel_room
+#: model_terms:ir.ui.view,arch_db:hotel_room.partner_reclamation_view_form
+msgid "Send"
+msgstr "ارسال"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_hotel_room__is_send_mail_dirty
+msgid "Send mail Dirty"
+msgstr ""
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_hotel_room__is_send_mail_maintenance
+msgid "Send mail Maintenance"
+msgstr ""
+
+#. module: hotel_room
+#: model:ir.model.fields.selection,name:hotel_room.selection__partner_reclamation__state__solved
+#: model:ir.model.fields.selection,name:hotel_room.selection__partner_reclamation_wizard__state__solved
+#: model_terms:ir.ui.view,arch_db:hotel_room.partner_reclamation_view_search
+msgid "Solved"
+msgstr "تم حلها"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__state
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation_wizard__state
+#: model_terms:ir.ui.view,arch_db:hotel_room.partner_reclamation_view_search
+msgid "State"
+msgstr "الحالة"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_room_status_sla__status
+msgid "Status"
+msgstr "الحالة"
+
+#. module: hotel_room
+#: model:ir.model.fields,help:hotel_room.field_partner_reclamation__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "المخطط: الأنشطة المستقبلية."
+
+#. module: hotel_room
+#: model:ir.model.fields,help:hotel_room.field_partner_reclamation__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع نشاط الاستثناء في السجل"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_room_status_sla__unity
+msgid "Unity"
+msgstr "الوحدة"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديد"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عداد الرسائل غير المقروءة"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_room_status_sla__user_ids
+msgid "Users"
+msgstr "المستخدمون"
+
+#. module: hotel_room
+#: model:ir.model.fields,field_description:hotel_room.field_partner_reclamation__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: hotel_room
+#: model:ir.model.fields,help:hotel_room.field_partner_reclamation__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: hotel_room
+#: code:addons/hotel_room/models/hotel_room_sla.py:0
+#, python-format
+msgid "You can't have the same SLA for the same status %s"
+msgstr "لا يمكنك إنشاء SLA على حالات الغرف له نفس الحالة %s"
+
+#. module: hotel_room
+#: model_terms:ir.ui.view,arch_db:hotel_room.report_partner_reclamation_template
+msgid "date to :"
+msgstr "تاريخ الى :"

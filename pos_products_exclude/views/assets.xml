@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template
+        id="pos_products_exclude_assets"
+        name="pos_products_exclude assets"
+        inherit_id="point_of_sale.assets"
+    >
+        <xpath expr="." position="inside">
+            <script
+                type="text/javascript"
+                src="/pos_products_exclude/static/src/js/models.js"
+            />
+        </xpath>
+    </template>
+
+
+</odoo>

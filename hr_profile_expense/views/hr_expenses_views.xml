@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="my_expense_action" model="ir.actions.act_window">
+        <field name="name">My Expenses</field>
+        <field name="res_model">hr.expense</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="domain">[('employee_id.user_id', '=', uid)]</field>
+        <field name="help" type="html">
+                <p class="o_view_nocontent_expense_receipt">
+                    Did you try the mobile app?
+                </p>
+                <p>Snap pictures of your receipts and let Odoo<br /> automatically create expenses for you.</p>
+                <p>
+                    <a href="https://apps.apple.com/be/app/odoo/id1272543640" target="_blank">
+                        <img
+                        alt="Apple App Store"
+                        class="img img-fluid h-100 o_expense_apple_store"
+                        src="/hr_expense/static/img/app_store.png"
+                    />
+                    </a>
+                    <a
+                    href="https://play.google.com/store/apps/details?id=com.odoo.mobile"
+                    target="_blank"
+                    class="o_expense_google_store"
+                >
+                        <img
+                        alt="Google Play Store"
+                        class="img img-fluid h-100 o_expense_google_store"
+                        src="/hr_expense/static/img/play_store.png"
+                    />
+                    </a>
+                </p>
+            </field>
+    </record>
+
+    <menuitem
+        id="my_expense_menu"
+        name="My Expenses"
+        parent="request.self_services_menu"
+        action="my_expense_action"
+        sequence="2"
+    />
+
+</odoo>

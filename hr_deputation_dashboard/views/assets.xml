@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<odoo>
+    <template id="assets_backend" name="hr_assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/hr_deputation_dashboard/static/src/js/hr_dashboard.js" />
+        </xpath>
+    </template>
+</odoo>

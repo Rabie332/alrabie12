@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="hr_loan_wizard_form" model="ir.ui.view">
+        <field name="name">hr.loan.wizard.form</field>
+        <field name="model">hr.loan.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="loan_id" force_save="1" invisible="1" />
+                        <field
+                            name="installment_number_paid"
+                            attrs="{'invisible':[('action','!=','early_payment')], 'required':[('action','=','early_payment')]}"
+                        />
+                        <field
+                            name="number_months_to_postpone"
+                            attrs="{'invisible':[('action','!=','across')], 'required':[('action','=','across')]}"
+                        />
+                        </group>
+                    <group>
+                          <field
+                            name="date_from"
+                            attrs="{'invisible':[('action','!=','early_payment')]}"
+                        />
+                           <field
+                            name="period_id"
+                            options="{'no_create':True, 'no_open':True}"
+                            attrs="{'invisible':[('action','!=','across')], 'required':[('action','=','across')]}"
+                        />
+                          <field name="action" invisible="1" />
+                    </group>
+                </group>
+                <group>
+                                               <field name="reason" />
+
+                </group>
+                <footer>
+                    <button
+                        name="schedule_payment"
+                        string="Save"
+                        type="object"
+                        class="oe_highlight"
+                    />
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_loan_wizard_action" model="ir.actions.act_window">
+        <field name="name">Early Repayment / One Month Postponement of payment</field>
+        <field name="res_model">hr.loan.wizard</field>
+        <field name="view_id" ref="hr_loan_wizard_form" />
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

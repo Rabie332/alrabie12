@@ -1,0 +1,59 @@
+.openerp
+    .oe_list.oe_list_editable.oe_editing
+    .oe_form_field.oe_form_field_datetime
+    input.oe_simple_date {
+    width: 40% !important;
+}
+
+.openerp
+    .oe_list.oe_list_editable.oe_editing
+    .oe_form_field.oe_form_field_datetime
+    input.oe_hijri {
+    width: 40% !important;
+}
+.openerp .oe_list_content th.oe_list_header_date {
+    min-width: 250px !important;
+}
+
+.openerp th.oe_list_header_datetime {
+    min-width: 128px !important;
+}
+
+.openerp .oe_simple_date {
+    min-height: 0px !important;
+}
+.calendars-month {
+    width: 20em !important;
+}
+
+.o_datepicker .o_datepicker_button {
+    position: relative !important;
+}
+.calandar_picker {
+    min-width: 255px !important;
+}
+.calendars-month-row {
+    width: 255px !important;
+}
+.calendars-month {
+    width: 100% !important;
+}
+
+.calendars-month-header {
+    display: flex !important;
+}
+.calendars-month-header select,
+.calendars-month-header input {
+    height: 20px !important;
+}
+
+.calendars-month-header,
+.calendars-month-header select,
+.calendars-month-header input {
+    padding: 0px !important;
+    height: 25px !important;
+}
+
+.calendars-month-year {
+    width: 50% !important;
+}

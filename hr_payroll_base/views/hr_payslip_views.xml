@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="view_hr_payslip_form_base_inherit" model="ir.ui.view">
+        <field name="name">hr.payslip.form.base.inherit</field>
+        <field name="model">hr.payslip</field>
+        <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//sheet/group[1]/label[@for='date_from']"
+                position="attributes"
+            >
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//sheet/group[1]/div[1]" position="attributes">
+                <attribute name="attrs">{'invisible': [(1, '=', 1)]}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_payslip_view_tree_inherit" model="ir.ui.view">
+        <field name="name">hr.payslip.view.tree.inherit</field>
+        <field name="model">hr.payslip</field>
+        <field name="inherit_id" ref="hr_payroll.view_hr_payslip_tree" />
+        <field name="arch" type="xml">
+            <field name="state" position="before">
+                <field name="old_total_payslip" sum="Total" />
+                <field name="difference_old_new_payslip" sum="Total" />
+                <field name="total_payslip" sum="Total" />
+            </field>
+        </field>
+    </record>
+
+    <record id="hr_payslip_run_view_tree_inherit" model="ir.ui.view">
+        <field name="name">hr.payslip.run.view.tree.inherit</field>
+        <field name="model">hr.payslip.run</field>
+        <field name="inherit_id" ref="hr_payroll.hr_payslip_run_tree" />
+        <field name="arch" type="xml">
+            <field name="state" position="before">
+                <field name="total_slips" />
+            </field>
+        </field>
+    </record>
+
+    <record id="hr_payslip_run_form_inherit" model="ir.ui.view">
+        <field name="name">hr.payslip.run.form.inherit</field>
+        <field name="model">hr.payslip.run</field>
+        <field name="inherit_id" ref="hr_payroll.hr_payslip_run_form" />
+        <field name="arch" type="xml">
+            <header position="inside">
+
+                <button
+                    name="payslip_run_done"
+                    class="oe_highlight"
+                    string="Approve"
+                    type="object"
+                    states="draft"
+                />
+                <button
+                    name="print_xls_report"
+                    string="Print payslip run"
+                    class="oe_highlight"
+                    type="object"
+                    icon="fa-print"
+                    states="done,close"
+                />
+            </header>
+
+            <button name="close_payslip_run" position="attributes">
+                <attribute name="states">done</attribute>
+            </button>
+            <field name="credit_note" position="after">
+                <field
+                    name="total_slips"
+                    attrs="{'invisible': [('state', '=', 'draft')]}"
+                />
+            </field>
+        </field>
+    </record>
+
+
+</odoo>

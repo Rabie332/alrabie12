@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+   <record id="group_create_product" model="res.groups">
+        <field name="name">Create products</field>
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]" />
+     </record>
+
+
+ <record id="ir_rule_hr_expense_sheet_account_confirm_user" model="ir.rule">
+        <field name="name">Account Confirm User Expense Sheet</field>
+        <field name="model_id" ref="hr_expense.model_hr_expense_sheet" />
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('account_state.group_account_confirm_user'))]" />
+    </record>
+
+    <record id="ir_rule_hr_expense_sheet_account_reviewer" model="ir.rule">
+        <field name="name">Account Reviewer Expense Sheet</field>
+        <field name="model_id" ref="hr_expense.model_hr_expense_sheet" />
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('account_state.group_account_reviewer'))]" />
+    </record>
+
+    <record id="ir_rule_hr_expense_sheet_account_invoice_user" model="ir.rule">
+        <field name="name">Account Invoice Expense Sheet</field>
+        <field name="model_id" ref="hr_expense.model_hr_expense_sheet" />
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('account.group_account_invoice'))]" />
+    </record>
+
+    <record id="ir_rule_hr_expense_sheet_account_invoice_user" model="ir.rule">
+        <field name="name">Account Manager Expense Sheet</field>
+        <field name="model_id" ref="hr_expense.model_hr_expense_sheet" />
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('account.group_account_manager'))]" />
+    </record>
+
+    <record id="ir_rule_hr_expense_account_confirm_user" model="ir.rule">
+        <field name="name">Account Confirm User Expense</field>
+        <field name="model_id" ref="hr_expense.model_hr_expense" />
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('account_state.group_account_confirm_user'))]" />
+    </record>
+
+    <record id="ir_rule_hr_expense_account_reviewer" model="ir.rule">
+        <field name="name">Account Reviewer Expense</field>
+        <field name="model_id" ref="hr_expense.model_hr_expense" />
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('account_state.group_account_reviewer'))]" />
+    </record>
+
+    <record id="ir_rule_hr_expense_account_invoice_user" model="ir.rule">
+        <field name="name">Account Invoice Expense</field>
+        <field name="model_id" ref="hr_expense.model_hr_expense" />
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('account.group_account_invoice'))]" />
+    </record>
+
+    <record id="ir_rule_hr_expense_account_invoice_user" model="ir.rule">
+        <field name="name">Account Manager Expense</field>
+        <field name="model_id" ref="hr_expense.model_hr_expense" />
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('account.group_account_manager'))]" />
+    </record>
+
+
+</odoo>

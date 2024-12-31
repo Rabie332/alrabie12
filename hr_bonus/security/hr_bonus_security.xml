@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="hr_bonus_group_manager" model="res.groups">
+        <field name="name">Bonus Manager</field>
+        <field name="category_id" ref="hr_payroll.module_category_payroll" />
+        <field name="implied_ids" eval="[(4, ref('hr.group_hr_user'))]" />
+    </record>
+
+    <record id="base.user_admin" model="res.users">
+        <field name="groups_id" eval="[(4, ref('hr_bonus.hr_bonus_group_manager'))]" />
+    </record>
+
+    <data noupdate="1">
+        <record id="hr_bonus_comp_rule" model="ir.rule">
+            <field name="name">Hr bonus multi-company</field>
+            <field name="model_id" ref="model_hr_bonus" />
+            <field name="global" eval="True" />
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        </record>
+    </data>
+
+</odoo>

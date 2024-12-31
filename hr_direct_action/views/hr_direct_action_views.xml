@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="hr_direct_action_view_tree" model="ir.ui.view">
+        <field name="name">hr.direct.action.view.tree</field>
+        <field name="model">hr.direct.action</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="job_id" />
+                <field name="employee_id" widget="many2one_avatar_employee" />
+                <field name="department_id" />
+                <field name="date_direct_action" />
+                <field name="stage_id" />
+                <field name="state" invisible="1" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="hr_direct_action_view_form" model="ir.ui.view">
+        <field name="name">hr.direct.action.view.form</field>
+        <field name="model">hr.direct.action</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="request.request_view_form" />
+        <field name="arch" type="xml">
+            <header position="inside">
+                <button
+                    string="Print Direct Action report"
+                    name="%(action_report_direct_action)d"
+                    type='action'
+                    class="oe_highlight"
+                    attrs="{'invisible': [('state', '!=', 'done')]}"
+                />
+                <button
+                    string="Send Direct Action Report"
+                    name="%(hr_direct_action.hr_direct_action_wizard_action)d"
+                    type="action"
+                    class="oe_highlight"
+                    states="done"
+                />
+            </header>
+            <button name="action_refuse" position="replace">
+                <button
+                    name="%(request_refuse.action_refuse_wizard)d"
+                    context="{'action_name': 'action_refuse','field_name': 'refuse_reason'}"
+                    string="Refuse"
+                    class="btn-danger"
+                    type="action"
+                    confirm="Are you sure you want to do this?"
+                    attrs="{'invisible':[('display_button_refuse', '=', False)]}"
+                />
+            </button>
+            <widget name="web_ribbon" position="attributes">
+                <attribute name="title">refused</attribute>
+            </widget>
+            <sheet position="inside">
+
+                <group>
+                    <group>
+                        <label for="name" />
+                        <h1>
+                            <field
+                                name="name"
+                                readonly="1"
+                                required="0"
+                                force-save="1"
+                                attrs="{'invisible': [('id','=', False)]}"
+                            />
+                        </h1>
+                    </group>
+                </group>
+                <group>
+                    <group>
+                        <field name="employee_id" string="Employee" force_save="1" />
+                        <field name="number" force_save="1" />
+                        <field name="job_id" force_save="1" />
+                        <field name="department_id" force_save="1" />
+                        <field name="company_id" groups="base.group_multi_company" />
+                    </group>
+                    <group>
+                        <field name="request_type_id" options="{'no_create': True}" />
+                        <field name="date_direct_action" />
+                        <field name="refuse_reason" attrs="{'invisible' : [('state', '!=', 'cancel')]}" />
+                    </group>
+                </group>
+                <notebook>
+                    <page name="attachments" string="Attachments">
+                        <br />
+                        <field name="attachment_ids" widget="many2many_binary" />
+                    </page>
+                </notebook>
+            </sheet>
+        </field>
+    </record>
+
+    <record id="hr_direct_action_view_kanban" model="ir.ui.view">
+        <field name="name">hr.direct.action.kanban</field>
+        <field name="model">hr.direct.action</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="request.request_view_kanban" />
+        <field name="arch" type="xml">
+            <div name="card_body" position="inside">
+                <br />
+
+                <span name="employee_id" t-if="record.employee_id.raw_value">Employee :
+                    <field name="employee_id" />
+                    <br />
+                </span>
+                <span name="job_id" t-if="record.job_id.raw_value">Job :
+                    <field name="job_id" />
+                    <br />
+                </span>
+                <span name="department_id" t-if="record.department_id.raw_value">Department :
+                    <field name="department_id" />
+                    <br />
+                </span>
+                <span name="date_direct_action" t-if="record.employee_id.raw_value">Date of commencement :
+                    <field name="date_direct_action" />
+                    <br />
+                </span>
+                <span name="stage" t-if="record.stage_id.raw_value">Stage :
+                    <field name="stage_id" />
+                    <br />
+                </span>
+
+
+            </div>
+
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_hr_direct_action">
+        <field name="name">Direct Action</field>
+        <field name="res_model">hr.direct.action</field>
+        <field name="view_mode">tree,kanban,form</field>
+    </record>
+    <menuitem id="hr_direct_action_menu_root" name="Direct Actions" sequence="5" parent="hr.menu_hr_root" />
+    <menuitem
+        id="hr_direct_action_menu"
+        name="Direct Actions"
+        parent="hr_direct_action_menu_root"
+        action="action_hr_direct_action"
+        sequence="1"
+    />
+
+    <record id="hr_employee_view_form_inherit_hr_direct_action" model="ir.ui.view">
+        <field name="name">hr.employee.view.form.inherit</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form" />
+        <field name="arch" type="xml">
+            <field name="date_direct_action" position="attributes">
+                <attribute name="readonly">1</attribute>
+                <attribute name="force_save">1</attribute>
+            </field>
+        </field>
+    </record>
+
+    <record id="hr_direct_action_stage_action" model="ir.actions.act_window">
+        <field name="name">Direct Actions Stages</field>
+        <field name="res_model">request.stage</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="domain">[('res_model_id.model', '=', 'hr.direct.action')]</field>
+        <field name="context">{'default_res_model':'hr.direct.action'}</field>
+    </record>
+
+    <menuitem
+        id="hr_direct_action_stage_menu"
+        action="hr_direct_action_stage_action"
+        name="Direct Actions Stages"
+        groups="request.group_stages_manager"
+        parent="hr_direct_action_menu_root"
+        sequence="3"
+    />
+    <record id="hr_direct_action_type_action" model="ir.actions.act_window">
+        <field name="name">Direct Action types</field>
+        <field name="res_model">request.type</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('res_model','=', 'hr.direct.action')]</field>
+        <field name="context">{'default_res_model': 'hr.direct.action'}</field>
+    </record>
+
+    <menuitem
+        id="hr_direct_action_type_menu"
+        name="Direct Action types"
+        parent="hr_direct_action_menu_root"
+        sequence="2"
+        action="hr_direct_action_type_action"
+    />
+
+</odoo>

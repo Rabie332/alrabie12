@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_invoice_import_wizard" model="ir.ui.view">
+        <field name="name">invoice.import.wizard.form</field>
+        <field name="model">invoice.import.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Import Invoices">
+                <h4>
+                    <field name='wizard_desc'/>
+                </h4>
+                <group>
+                    <field name="file" filename="file_name"/>
+                    <field name="company"/>
+                    <field name="journal" />
+                    <field name="taxes" widget="many2many_tags" />
+                </group>
+                <footer>
+                    <button string="Import" type="object" name="import_file" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="action_invoice_import_wizard" model="ir.actions.act_window">
+        <field name="name">Import Old Invoices</field>
+        <field name="res_model">invoice.import.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

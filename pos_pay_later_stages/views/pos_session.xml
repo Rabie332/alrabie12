@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_pos_config_kanban_inherit_pos_pay_later_stages" model="ir.ui.view">
+        <field name="name">pos.config.kanban.view.pos_pay_later_stages</field>
+        <field name="model">pos.config</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_config_kanban" />
+        <field name="arch" type="xml">
+            <button name="open_ui" position="after">
+                <field name="allow_later_payment" invisible="1" />
+                <button
+                    t-if="record.allow_later_payment.raw_value"
+                    class="btn btn-info"
+                    name="open_services_screen"
+                    type="object"
+                >Services screen</button>
+            </button>
+        </field>
+    </record>
+</odoo>

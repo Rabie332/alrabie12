@@ -1,0 +1,1857 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_deputation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-31 13:36+0000\n"
+"PO-Revision-Date: 2022-10-31 13:36+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_setting__accumulative_balance
+msgid "Accumulative Balance"
+msgstr "رصيد تراكمي"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__message_needaction
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__message_needaction
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__message_needaction
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__message_needaction
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_employee_deputation_stock__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__active
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__active
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__active
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__activity_ids
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__activity_ids
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__activity_ids
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__activity_ids
+msgid "Activities"
+msgstr "أنشطة"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "استثناء النشاط"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__activity_state
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__activity_state
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__activity_state
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__activity_type_icon
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__activity_type_icon
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__activity_type_icon
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "رمز نوع النشاط"
+
+#. module: hr_deputation
+#: model:ir.model.fields.selection,name:hr_deputation.selection__hr_deputation__travel_days_setting__after_deputation
+msgid "After Deputation"
+msgstr "بعد الإنتداب"
+
+#. module: hr_deputation
+#: model:ir.model.fields.selection,name:hr_deputation.selection__hr_deputation__transportation_type__air_travel
+msgid "Air travel"
+msgstr "جوا"
+
+#. module: hr_deputation
+#: model:ir.actions.act_window,name:hr_deputation.hr_deputation_action_manager
+#: model:ir.ui.menu,name:hr_deputation.hr_deputation_manager_menu
+msgid "All Requests"
+msgstr "كل الطلبات "
+
+#. module: hr_deputation
+#: model:ir.model,name:hr_deputation.model_hr_deputation_allowance
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_kilometer__deputation_allowance_id
+#: model:ir.model.fields,field_description:hr_deputation.field_travel_days__deputation_allowance_id
+msgid "Allowance"
+msgstr "بدل"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.view_hr_deputation_setting
+msgid "Allowance Deputation and Transport"
+msgstr "بدل الإنتداب و النقل"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_setting__annual_balance
+msgid "Annual Balance"
+msgstr "الرصيد السنوي"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_request_stage__appears_in_deputation_report
+msgid "Appears in deputation report"
+msgstr "يظهر في تقرير الإنتداب"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__employee_id
+msgid "Applicant"
+msgstr "صاحب الطلب "
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_view_search
+msgid "Application Date"
+msgstr "تاريخ الطلب"
+
+#. module: hr_deputation
+#: model:mail.message.subtype,name:hr_deputation.mt_hr_deputation_approved
+#: model:mail.message.subtype,name:hr_deputation.mt_hr_deputation_cancellation_approved
+#: model:mail.message.subtype,name:hr_deputation.mt_hr_deputation_cut_approved
+#: model:mail.message.subtype,name:hr_deputation.mt_hr_deputation_extension_approved
+msgid "Approved"
+msgstr "موافق عليه"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_cancellation_view_search
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_cut_view_search
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_extension_view_search
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_view_search
+msgid "Archived"
+msgstr "مؤرشفة"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_cancellation_view_form
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_cut_view_form
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_extension_view_form
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_view_form
+msgid "Are you sure you want to do this?"
+msgstr "هل أنت متأكد ؟"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__message_attachment_count
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__message_attachment_count
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__message_attachment_count
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__message_attachment_count
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_employee_deputation_stock__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__attachment_ids
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_view_form
+msgid "Attachments"
+msgstr "المرفقات"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_setting__balance_deputation_no_specified
+msgid "Balance Deputation Not Specified"
+msgstr "رصيد الإنتداب غير محدد"
+
+#. module: hr_deputation
+#: model:ir.model.fields.selection,name:hr_deputation.selection__hr_deputation__travel_days_setting__before_deputation
+msgid "Before Deputation"
+msgstr "قبل الإنتداب "
+
+#. module: hr_deputation
+#: model:ir.model.fields.selection,name:hr_deputation.selection__hr_deputation__ticket_type__business
+#: model:ir.model.fields.selection,name:hr_deputation.selection__hr_deputation_allowance__ticket_type__business
+msgid "Business"
+msgstr "أعمال"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_view_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_view_form
+msgid "Cancel Deputation"
+msgstr "إلغاء الإنتداب "
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__reason
+msgid "Cancel Reason"
+msgstr "سبب الإلغاء "
+
+#. module: hr_deputation
+#: model:ir.actions.act_window,name:hr_deputation.hr_deputation_cancellation_action
+#: model:ir.actions.act_window,name:hr_deputation.hr_deputation_cancellation_action_drive_actions
+#: model:ir.actions.act_window,name:hr_deputation.hr_deputation_cancellation_action_my
+#: model:ir.ui.menu,name:hr_deputation.hr_deputation_cancellation_menu_my
+#: model:ir.ui.menu,name:hr_deputation.menu_hr_deputation_cancellation_drive_actions
+msgid "Cancel Requests"
+msgstr "طلبات الإلغاء"
+
+#. module: hr_deputation
+#: model:ir.ui.menu,name:hr_deputation.deputation_cancellation_menu
+msgid "Cancel requests"
+msgstr "طلبات الإلغاء"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__canceled
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_cancellation_view_form
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_cut_view_form
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_extension_view_form
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_view_form
+msgid "Canceled"
+msgstr "ملغى"
+
+#. module: hr_deputation
+#: model:ir.ui.menu,name:hr_deputation.res_city_menu_hr
+msgid "Cities"
+msgstr "المدن"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__city_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_location__city_name
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "City"
+msgstr "المدينة"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_view_form
+msgid "Clarification about the mission ..."
+msgstr "توضيح حول المهمة ..."
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__color
+msgid "Color Index"
+msgstr "مؤشر اللون"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__company_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__company_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__company_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__company_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_employee_deputation_stock__company_id
+msgid "Company"
+msgstr "المؤسسة"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__country_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_location__country_id
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "Country"
+msgstr "الدولة"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_travel_days__country_group_id
+msgid "Country categories"
+msgstr "فئات الدول"
+
+#. module: hr_deputation
+#: model_terms:ir.actions.act_window,help:hr_deputation.hr_deputation_cancellation_stage_action
+#: model_terms:ir.actions.act_window,help:hr_deputation.hr_deputation_cut_stage_action
+#: model_terms:ir.actions.act_window,help:hr_deputation.hr_deputation_extension_stage_action
+#: model_terms:ir.actions.act_window,help:hr_deputation.hr_deputation_stage_action
+msgid "Create a new stage in the task pipeline"
+msgstr "إنشاء مرحلة جديدة في خط المهمة"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__create_uid
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_allowance__create_uid
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__create_uid
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__create_uid
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__create_uid
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_kilometer__create_uid
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_location__create_uid
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_setting__create_uid
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_employee_deputation_stock__create_uid
+#: model:ir.model.fields,field_description:hr_deputation.field_travel_days__create_uid
+msgid "Created by"
+msgstr "انشأ من قبل"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__create_date
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_allowance__create_date
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__create_date
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__create_date
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__create_date
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_kilometer__create_date
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_location__create_date
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_setting__create_date
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_employee_deputation_stock__create_date
+#: model:ir.model.fields,field_description:hr_deputation.field_travel_days__create_date
+msgid "Created on"
+msgstr "تم إنشاؤها من قبل "
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_employee_deputation_stock__current_stock
+msgid "Current Stock"
+msgstr "الرصيد الحالي"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_cut_view_kanban
+msgid "Cut Date:"
+msgstr "تاريخ القطع:"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_view_form
+msgid "Cut Deputation"
+msgstr "قطع الإنتداب"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__reason_cut
+msgid "Cut Reason"
+msgstr "سبب القطع "
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__cut_date
+msgid "Cut date"
+msgstr "تاريخ القطع"
+
+#. module: hr_deputation
+#: model:ir.actions.act_window,name:hr_deputation.hr_deputation_cut_action
+#: model:ir.actions.act_window,name:hr_deputation.hr_deputation_cut_action_drive_actions
+#: model:ir.actions.act_window,name:hr_deputation.hr_deputation_cut_action_my
+#: model:ir.ui.menu,name:hr_deputation.hr_deputation_cut_menu_my
+#: model:ir.ui.menu,name:hr_deputation.menu_hr_deputation_cut
+#: model:ir.ui.menu,name:hr_deputation.menu_hr_deputation_cut_action_drives
+msgid "Cutting requests"
+msgstr "طلبات القطع "
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "Daily Entitlement"
+msgstr "الإستحقاق اليومي"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__date_from
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__date_from
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__date_from
+msgid "Date From"
+msgstr "تاريخ البداية"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_cancellation_view_kanban
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_cut_view_kanban
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_extension_view_kanban
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_view_kanban
+msgid "Date From :"
+msgstr "تاريخ البداية:"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__date_to
+msgid "Date To"
+msgstr "تاريخ النهاية"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_cancellation_view_kanban
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_cut_view_kanban
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_extension_view_kanban
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_view_kanban
+msgid "Date To :"
+msgstr "تاريخ النهاية:"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__date_from
+msgid "Date from"
+msgstr "تاريخ البداية"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__date_to
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__date_to
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__date_to
+msgid "Date to"
+msgstr "تاريخ النهاية"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "Date:"
+msgstr "التاريخ"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "Days Due"
+msgstr "الأيام المستحقة"
+
+#. module: hr_deputation
+#: model_terms:ir.actions.act_window,help:hr_deputation.hr_deputation_cancellation_stage_action
+#: model_terms:ir.actions.act_window,help:hr_deputation.hr_deputation_cut_stage_action
+#: model_terms:ir.actions.act_window,help:hr_deputation.hr_deputation_extension_stage_action
+#: model_terms:ir.actions.act_window,help:hr_deputation.hr_deputation_stage_action
+msgid ""
+"Define the steps that will be used in the project from the\n"
+"                creation of the task, up to the closing of the task or issue.\n"
+"                You will use these stages in order to track the progress in\n"
+"                solving a task or an issue."
+msgstr ""
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__department_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__department_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__department_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__department_id
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "Department"
+msgstr "الإدارة "
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_cut_view_form
+msgid "Depuation Cut"
+msgstr "قطع الإنتداب "
+
+#. module: hr_deputation
+#: model:ir.model,name:hr_deputation.model_hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__deputation_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__deputation_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__deputation_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_location__deputation_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_employee__deputation_ids
+#: model:ir.module.category,name:hr_deputation.module_category_hr_deputation
+#: model:ir.ui.menu,name:hr_deputation.hr_deputation_menu_drive_actions
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_tree
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_tree_drive_actions
+msgid "Deputation"
+msgstr "الإنتداب"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_cancellation_view_kanban
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_cut_view_kanban
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_extension_view_kanban
+msgid "Deputation :"
+msgstr "الإنتداب"
+
+#. module: hr_deputation
+#: model:ir.actions.act_window,name:hr_deputation.hr_employee_deputation_stock_action
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_employee__deputation_balance
+#: model:ir.model.fields,field_description:hr_deputation.field_res_users__deputation_balance
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_employee_deputation_stock_filter
+msgid "Deputation Balance"
+msgstr "رصيد الانتدابات"
+
+#. module: hr_deputation
+#: model:ir.model,name:hr_deputation.model_hr_deputation_cancellation
+msgid "Deputation Cancel"
+msgstr "إلغاء الإنتداب "
+
+#. module: hr_deputation
+#: model:ir.actions.act_window,name:hr_deputation.hr_deputation_cancellation_stage_action
+#: model:ir.ui.menu,name:hr_deputation.menu_hr_deputation_cancellation_stage
+msgid "Deputation Cancellation Stages"
+msgstr "مراحل إلغاء الانتداب"
+
+#. module: hr_deputation
+#: model:mail.message.subtype,description:hr_deputation.mt_hr_deputation_cancellation_approved
+msgid "Deputation Cancellation is approved"
+msgstr "تمت الموافقة على إلغاء الإنتداب"
+
+#. module: hr_deputation
+#: model:mail.activity.type,name:hr_deputation.mail_hr_deputation_cancellation_approval
+msgid "Deputation Cancellation is ready to be approved"
+msgstr "طلب إلغاء الإنتداب جاهز لموافقة عليه"
+
+#. module: hr_deputation
+#: model:mail.message.subtype,description:hr_deputation.mt_hr_deputation_cancellation_refused
+msgid "Deputation Cancellation is refused"
+msgstr "تم رفض إلغاء الإنتداب "
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "Deputation Cost"
+msgstr "تكلفة الإنتداب"
+
+#. module: hr_deputation
+#: model:ir.model,name:hr_deputation.model_hr_deputation_cut
+msgid "Deputation Cut"
+msgstr "قطع الإنتداب"
+
+#. module: hr_deputation
+#: model:ir.actions.act_window,name:hr_deputation.hr_deputation_cut_stage_action
+#: model:ir.ui.menu,name:hr_deputation.menu_hr_deputation_cut_stage
+msgid "Deputation Cut Stages"
+msgstr " مراحل قطع الإنتداب "
+
+#. module: hr_deputation
+#: model:mail.message.subtype,description:hr_deputation.mt_hr_deputation_cut_approved
+msgid "Deputation Cut is approved"
+msgstr "تمت الموافقة على قطع الإنتداب "
+
+#. module: hr_deputation
+#: model:mail.activity.type,name:hr_deputation.mail_hr_deputation_cut_approval
+msgid "Deputation Cut is ready to be approved"
+msgstr "طلب قطع الإنتداب  جاهز لموافقة عليه"
+
+#. module: hr_deputation
+#: model:mail.message.subtype,description:hr_deputation.mt_hr_deputation_cut_refused
+msgid "Deputation Cut is refused"
+msgstr "تم رفض قطع الإنتداب"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__date_to_travel
+msgid "Deputation Date Return"
+msgstr "تاريخ العودة من الإنتداب"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_cut_view_form
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_extension_view_form
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_view_form
+msgid "Deputation Details"
+msgstr "تفاصيل الإنتداب"
+
+#. module: hr_deputation
+#: model:ir.model,name:hr_deputation.model_hr_deputation_extension
+msgid "Deputation Extension"
+msgstr "تمديد الإنتداب "
+
+#. module: hr_deputation
+#: model:ir.actions.act_window,name:hr_deputation.hr_deputation_extension_stage_action
+#: model:ir.ui.menu,name:hr_deputation.menu_hr_deputation_extension_stage
+msgid "Deputation Extension Stages"
+msgstr " مراحل تمديد الإنتداب "
+
+#. module: hr_deputation
+#: model:mail.message.subtype,description:hr_deputation.mt_hr_deputation_extension_approved
+msgid "Deputation Extension is approved"
+msgstr "تمت الموافقة على تمديد الإنتداب"
+
+#. module: hr_deputation
+#: model:mail.activity.type,name:hr_deputation.mail_hr_deputation_extension_approval
+msgid "Deputation Extension is ready to be approved"
+msgstr "طلب تمديد الإنتداب جاهز لموافقة عليه "
+
+#. module: hr_deputation
+#: model:mail.message.subtype,description:hr_deputation.mt_hr_deputation_extension_refused
+msgid "Deputation Extension is refused"
+msgstr "تم رفض تمديد الإنتداب"
+
+#. module: hr_deputation
+#: model:ir.model,name:hr_deputation.model_hr_deputation_location
+msgid "Deputation Location"
+msgstr "مكان الانتداب"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "Deputation Mission"
+msgstr "مهمة الإنتداب"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "Deputation Request -"
+msgstr "طلب انتداب -"
+
+#. module: hr_deputation
+#: model:ir.actions.act_window,name:hr_deputation.action_hr_deputation_drive_actions
+#: model:ir.actions.act_window,name:hr_deputation.action_hr_deputation_my
+#: model:ir.ui.menu,name:hr_deputation.menu_hr_deputation_drive_actions
+#: model:ir.ui.menu,name:hr_deputation.menu_hr_deputation_my
+msgid "Deputation Requests"
+msgstr "طلبات الانتداب "
+
+#. module: hr_deputation
+#: code:addons/hr_deputation/models/hr_deputation_setting.py:0
+#: model:ir.actions.server,name:hr_deputation.ir_actions_button_hr_deputation_setting
+#: model:ir.model,name:hr_deputation.model_hr_deputation_setting
+#: model:ir.ui.menu,name:hr_deputation.hr_deputation_setting_menu
+#, python-format
+msgid "Deputation Setting"
+msgstr "إعدادات الانتدابات‬‬"
+
+#. module: hr_deputation
+#: model:ir.actions.act_window,name:hr_deputation.hr_deputation_stage_action
+#: model:ir.ui.menu,name:hr_deputation.menu_hr_deputation_stage
+msgid "Deputation Stages"
+msgstr "مراحل الإنتداب"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__date_from_travel
+msgid "Deputation Travel Date"
+msgstr "تاريخ السفر لإنتداب"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__request_type_id
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_view_search
+msgid "Deputation Type"
+msgstr "نوع الانتداب"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_view_kanban
+msgid "Deputation Type:"
+msgstr "نوع الانتداب"
+
+#. module: hr_deputation
+#: model:ir.ui.menu,name:hr_deputation.hr_deputation_type_menu
+msgid "Deputation Types"
+msgstr "أنواع  الانتداب"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__deputation_allowance
+msgid "Deputation allowance"
+msgstr "بدل الانتداب"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_employee_deputation_stock__deputation_available_stock
+msgid "Deputation available stock"
+msgstr "رصيد الانتداب"
+
+#. module: hr_deputation
+#: model:mail.activity.type,name:hr_deputation.mail_hr_deputation_cancellation_feedback
+msgid "Deputation cancellation is done"
+msgstr "تم إلغاء الانتداب"
+
+#. module: hr_deputation
+#: model:mail.activity.type,name:hr_deputation.mail_hr_deputation_cut_feedback
+msgid "Deputation cut is done"
+msgstr "تم قطع الإنتداب"
+
+#. module: hr_deputation
+#: model:mail.activity.type,name:hr_deputation.mail_hr_deputation_extension_feedback
+msgid "Deputation extension is done"
+msgstr "تم تمديد الإنتداب"
+
+#. module: hr_deputation
+#: model:mail.message.subtype,description:hr_deputation.mt_hr_deputation_approved
+msgid "Deputation is approved"
+msgstr "إنتداب موافق عليه"
+
+#. module: hr_deputation
+#: model:mail.activity.type,name:hr_deputation.mail_hr_deputation_feedback
+msgid "Deputation is done"
+msgstr "تم الإنتداب"
+
+#. module: hr_deputation
+#: model:mail.activity.type,name:hr_deputation.mail_hr_deputation_approval
+msgid "Deputation is ready to be approved"
+msgstr "طلب الإنتداب  جاهز لموافقة عليه"
+
+#. module: hr_deputation
+#: model:mail.message.subtype,description:hr_deputation.mt_hr_deputation_refused
+msgid "Deputation is refused"
+msgstr "إنتداب مرفوض"
+
+#. module: hr_deputation
+#: model:ir.actions.act_window,name:hr_deputation.action_hr_deputation_all
+#: model:ir.actions.act_window,name:hr_deputation.hr_deputation_action_my
+#: model:ir.actions.act_window,name:hr_deputation.hr_employee_deputation_action
+#: model:ir.ui.menu,name:hr_deputation.deputation_self_service_root
+#: model:ir.ui.menu,name:hr_deputation.menu_hr_deputation_all
+#: model:ir.ui.menu,name:hr_deputation.menu_hr_deputation_root
+msgid "Deputations"
+msgstr "الانتدابات"
+
+#. module: hr_deputation
+#: model:ir.ui.menu,name:hr_deputation.hr_employee_deputation_stock_menu
+msgid "Deputations Balance"
+msgstr "رصيد الانتدابات "
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_view_form
+msgid "Description"
+msgstr "وصف "
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_setting__line_ids
+msgid "Details"
+msgstr "تفاصيل"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__display_button_accept
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__display_button_accept
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__display_button_accept
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__display_button_accept
+msgid "Display Button Accept"
+msgstr "عرض زر قبول"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__display_button_cancel
+msgid "Display Button Cancel"
+msgstr "عرض زر إلغاء"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__display_button_cut
+msgid "Display Button Cut"
+msgstr "عرض زر قطع"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__display_button_extend
+msgid "Display Button Extend"
+msgstr "عرض زر تمديد"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__display_button_previous
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__display_button_previous
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__display_button_previous
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__display_button_previous
+msgid "Display Button Previous"
+msgstr "عرض زر سابق"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__display_button_refuse
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__display_button_refuse
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__display_button_refuse
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__display_button_refuse
+msgid "Display Button Refuse"
+msgstr "عرض زر رفض"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__display_button_send
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__display_button_send
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__display_button_send
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__display_button_send
+msgid "Display Button Send"
+msgstr "عرض زر إرسال"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__display_name
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_allowance__display_name
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__display_name
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__display_name
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__display_name
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_kilometer__display_name
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_location__display_name
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_setting__display_name
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_employee_deputation_stock__display_name
+#: model:ir.model.fields,field_description:hr_deputation.field_request_stage__display_name
+#: model:ir.model.fields,field_description:hr_deputation.field_request_type__display_name
+#: model:ir.model.fields,field_description:hr_deputation.field_res_users__display_name
+#: model:ir.model.fields,field_description:hr_deputation.field_travel_days__display_name
+msgid "Display Name"
+msgstr "المسمى"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__display_ticket_amount
+msgid "Display Ticket Amount"
+msgstr ""
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__display_travel_dates
+msgid "Display Travel Dates"
+msgstr "عرض تواريخ السفر "
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__distance
+msgid "Distance"
+msgstr "عدد الكيلومترات"
+
+#. module: hr_deputation
+#: model:request.stage,name:hr_deputation.hr_deputation_cancel_stage_done
+#: model:request.stage,name:hr_deputation.hr_deputation_cut_stage_done
+#: model:request.stage,name:hr_deputation.hr_deputation_extension_stage_done
+#: model:request.stage,name:hr_deputation.hr_deputation_stage_done
+msgid "Done"
+msgstr "أعتمد"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_setting__multiply_deputation_days
+msgid "Doubling the days of deputation"
+msgstr "مضاعفة بدل أيام الإنتداب"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_setting__multiply_deputation_holidays_days
+msgid "Doubling the holidays days By"
+msgstr "مضاعفة أيام الإنتداب"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__duration
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__duration
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__duration
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__duration
+msgid "Duration"
+msgstr "المدة"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__duration_holiday_days
+msgid "Duration holiday days"
+msgstr "عدد الأيام المتداخلة مع عطلة أو عيد"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_cancellation_view_kanban
+msgid "Duration:"
+msgstr ":المدة"
+
+#. module: hr_deputation
+#: model:ir.model.fields.selection,name:hr_deputation.selection__hr_deputation__ticket_type__economic
+#: model:ir.model.fields.selection,name:hr_deputation.selection__hr_deputation_allowance__ticket_type__economic
+msgid "Economic"
+msgstr "إقتصادي"
+
+#. module: hr_deputation
+#: model:ir.model,name:hr_deputation.model_hr_employee
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__employee_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__employee_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__employee_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_employee_deputation_stock__employee_id
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_view_form
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_view_search
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_employee_deputation_stock_filter
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_deputation
+#: model:ir.model,name:hr_deputation.model_hr_employee_deputation_stock
+msgid "Employee Deputation Stock"
+msgstr "رصيد الإنتداب لموظف "
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "End Date"
+msgstr "تاريخ النهاية"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__deputation_extension_ids
+msgid "Extension"
+msgstr "تمديد"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_extension_view_form
+msgid "Extension Details"
+msgstr "تفاصيل التمديد "
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__extension_duration
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__new_duration
+msgid "Extension Duration"
+msgstr "مدة التمديد"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__reason
+msgid "Extension Reason"
+msgstr "سبب التمديد"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_view_form
+msgid "Extension deputation"
+msgstr "تمديد الإنتداب"
+
+#. module: hr_deputation
+#: model:ir.actions.act_window,name:hr_deputation.action_hr_deputation_extension_drive_actions
+#: model:ir.actions.act_window,name:hr_deputation.hr_deputation_extension_action
+#: model:ir.actions.act_window,name:hr_deputation.hr_deputation_extension_action_my
+#: model:ir.ui.menu,name:hr_deputation.hr_deputation_extension_menu_my
+#: model:ir.ui.menu,name:hr_deputation.menu_deputation_extension
+#: model:ir.ui.menu,name:hr_deputation.menu_hr_deputation_extension_drive_actions
+msgid "Extension requests"
+msgstr "طلبات التمديد "
+
+#. module: hr_deputation
+#: model:ir.model.fields.selection,name:hr_deputation.selection__hr_deputation__type__external
+msgid "External"
+msgstr "خارجى"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_view_search
+msgid "External Deputation"
+msgstr "الانتدابات الخارجية "
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_allowance__external_deputation_amount
+msgid "External Deputation Amount"
+msgstr "بدل إنتداب خارجي"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_allowance__external_transport_amount
+msgid "External Transport Amount"
+msgstr "بدل نقل خارجي"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__fees_amount
+msgid "Fees Amount"
+msgstr "مبلغ الرسوم"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "Financial details"
+msgstr "تفاصيل المالية"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__message_follower_ids
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__message_follower_ids
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__message_follower_ids
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__message_follower_ids
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_employee_deputation_stock__message_follower_ids
+msgid "Followers"
+msgstr "متابعون"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__message_channel_ids
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__message_channel_ids
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__message_channel_ids
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__message_channel_ids
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_employee_deputation_stock__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__message_partner_ids
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__message_partner_ids
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__message_partner_ids
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__message_partner_ids
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_employee_deputation_stock__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: hr_deputation
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation__activity_type_icon
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation_cancellation__activity_type_icon
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation_cut__activity_type_icon
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation_extension__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "رمز الخط الرائع ، على سبيل المثال FA المهام"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__food
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "Food"
+msgstr "الاعاشة"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_allowance__food
+msgid "Food %"
+msgstr "%الاعاشة"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_view_form
+msgid "General Information"
+msgstr "معلومات عامة"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_employee_deputation_stock_filter
+msgid "Group by"
+msgstr "مجموعة من"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__amount_holidays
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "Holiday amount"
+msgstr "المبلغ خلال ايام العطل"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__hosing
+msgid "Hosing"
+msgstr "السكن"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_allowance__hosing
+msgid "Hosing %"
+msgstr "%السكن"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "Hosting"
+msgstr "السكن"
+
+#. module: hr_deputation
+#: model:ir.model,name:hr_deputation.model_hr_deputation_kilometer
+msgid "Hr Deputation kilometer"
+msgstr "كيلومتر الإنتداب"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__read_reviewed_policies_regulations
+msgid "I have read and reviewed the policies and regulations"
+msgstr "لقد قرات و أطلعت على السياسات و اللوائح"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_allowance__id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_kilometer__id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_location__id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_setting__id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_employee__id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_employee_deputation_stock__id
+#: model:ir.model.fields,field_description:hr_deputation.field_request_stage__id
+#: model:ir.model.fields,field_description:hr_deputation.field_request_type__id
+#: model:ir.model.fields,field_description:hr_deputation.field_res_users__id
+#: model:ir.model.fields,field_description:hr_deputation.field_travel_days__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__activity_exception_icon
+msgid "Icon"
+msgstr "أيقونة"
+
+#. module: hr_deputation
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation__activity_exception_icon
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation_cancellation__activity_exception_icon
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation_cut__activity_exception_icon
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation_extension__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr " أيقونة للإشارة إلى نشاط مستثنى ."
+
+#. module: hr_deputation
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation__message_needaction
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation__message_unread
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation_cancellation__message_needaction
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation_cancellation__message_unread
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation_cut__message_needaction
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation_cut__message_unread
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation_extension__message_needaction
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation_extension__message_unread
+#: model:ir.model.fields,help:hr_deputation.field_hr_employee_deputation_stock__message_needaction
+#: model:ir.model.fields,help:hr_deputation.field_hr_employee_deputation_stock__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم تحديد ذلك ، فإن الرسائل الجديدة تتطلب اهتمامك."
+
+#. module: hr_deputation
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation__message_has_error
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation_cancellation__message_has_error
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation_cut__message_has_error
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation_extension__message_has_error
+#: model:ir.model.fields,help:hr_deputation.field_hr_employee_deputation_stock__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده ، فبعض الرسائل بها خطأ في التسليم."
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__include_ticket_total_amount
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "Include ticket price in total amount"
+msgstr "إحتساب مبلغ التذكرة في إجمالي الإنتداب"
+
+#. module: hr_deputation
+#: model:ir.actions.server,name:hr_deputation.cron_initialize_deputation_balance_ir_actions_server
+#: model:ir.cron,cron_name:hr_deputation.cron_initialize_deputation_balance
+#: model:ir.cron,name:hr_deputation.cron_initialize_deputation_balance
+msgid "Initialize Deputation Balance"
+msgstr "تهيئة رصيد الإنتداب"
+
+
+#. module: hr_deputation
+#: model:ir.model.fields.selection,name:hr_deputation.selection__hr_deputation__type__internal
+msgid "Internal"
+msgstr "داخلى"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_view_search
+msgid "Internal Deputation"
+msgstr "الانتدابات الداخلية "
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_allowance__internal_deputation_amount
+msgid "Internal Deputation Amount"
+msgstr "بدل إنتداب داخلي"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_allowance__internal_transport_amount
+msgid "Internal Transport Amount"
+msgstr "بدل نقل داخلي"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__is_cut
+msgid "Is Cut"
+msgstr "مقطوع"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__is_extended
+msgid "Is Extended"
+msgstr "ممددة"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__is_finished
+msgid "Is Finished"
+msgstr "منتهي "
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__message_is_follower
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__message_is_follower
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__message_is_follower
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__message_is_follower
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_employee_deputation_stock__message_is_follower
+msgid "Is Follower"
+msgstr "هو متابع"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__is_started
+msgid "Is Started"
+msgstr "بدأت"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_allowance__is_amount_kilometers
+msgid "Is amount kilometer"
+msgstr "احتساب المبلغ بالكيلومترات"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__is_paid
+msgid "Is paid"
+msgstr "مدفوع"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__job_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__job_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__job_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__job_id
+msgid "Job"
+msgstr "الوظيفة"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "Job Number"
+msgstr "الرقم الوظيفي"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__number
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__number
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__number
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__number
+msgid "Job number"
+msgstr "الرقم الوظيفي"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "Job title"
+msgstr "المسمى الوظيفي"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__kanban_color
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__kanban_color
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__kanban_color
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__kanban_color
+msgid "Kanban Color Index"
+msgstr "مؤشر لون كانبان"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_allowance__kilometer_amount
+msgid "Kilometer Amount Overland"
+msgstr "مبلغ الكيلومترات"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_allowance__kilometer_limit
+msgid "Kilometer limit Overland"
+msgstr "الحد الأقصى للكيلومترات"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation____last_update
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_allowance____last_update
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation____last_update
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut____last_update
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension____last_update
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_kilometer____last_update
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_location____last_update
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_setting____last_update
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_employee_deputation_stock____last_update
+#: model:ir.model.fields,field_description:hr_deputation.field_request_stage____last_update
+#: model:ir.model.fields,field_description:hr_deputation.field_request_type____last_update
+#: model:ir.model.fields,field_description:hr_deputation.field_res_users____last_update
+#: model:ir.model.fields,field_description:hr_deputation.field_travel_days____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__write_uid
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_allowance__write_uid
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__write_uid
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__write_uid
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__write_uid
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_kilometer__write_uid
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_location__write_uid
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_setting__write_uid
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_employee_deputation_stock__write_uid
+#: model:ir.model.fields,field_description:hr_deputation.field_travel_days__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__write_date
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_allowance__write_date
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__write_date
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__write_date
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__write_date
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_kilometer__write_date
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_location__write_date
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_setting__write_date
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_employee_deputation_stock__write_date
+#: model:ir.model.fields,field_description:hr_deputation.field_travel_days__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__location_ids
+msgid "Locations"
+msgstr "مكان الانتداب"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_employee_deputation_stock__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__manager_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__manager_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__manager_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__manager_id
+#: model:res.groups,name:hr_deputation.group_hr_deputation_manager
+msgid "Manager"
+msgstr "المدير"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__message_has_error
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__message_has_error
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__message_has_error
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__message_has_error
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_employee_deputation_stock__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__message_ids
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__message_ids
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__message_ids
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__message_ids
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_employee_deputation_stock__message_ids
+msgid "Messages"
+msgstr "رسائل"
+
+#. module: hr_deputation
+#: model:request.type,name:hr_deputation.request_type_hr_deputation_mission
+msgid "Mission"
+msgstr "مهمة"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "Mission details"
+msgstr "تفاصيل المهمة"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__my_activity_date_deadline
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__my_activity_date_deadline
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__my_activity_date_deadline
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: hr_deputation
+#: model:ir.actions.act_window,name:hr_deputation.hr_deputation_action
+#: model:ir.ui.menu,name:hr_deputation.deputation_my_request_menu
+msgid "My Requests"
+msgstr "طلباتي"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "Name:"
+msgstr "الإسم:"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__need_fees
+#: model:ir.model.fields,field_description:hr_deputation.field_request_type__need_fees
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "Need Fees"
+msgstr "تتطلب رسوم"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_extension_view_kanban
+msgid "New Duration:"
+msgstr ":المدة الجديدة"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "أخر موعد لنشاط التالي"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__activity_summary
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__activity_summary
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__activity_summary
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__activity_type_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__activity_type_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__activity_type_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__amount_normal_days
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "Normal days amount"
+msgstr "المبلغ خلال الأيام العادية"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__note
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_view_form
+msgid "Notes"
+msgstr "توضيح"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__name
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__name
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__name
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__name
+msgid "Number"
+msgstr "رقم"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "Number Of Days"
+msgstr "عدد الأيام"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_employee_deputation_stock__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_request_type__after_mission_days_external
+msgid "Number of days after an external mission"
+msgstr "عدد أيام بعد مهمة خارجية"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_request_type__after_mission_days_internal
+msgid "Number of days after an internal mission"
+msgstr "عدد أيام بعد مهمة داخلية"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_request_type__before_mission_days_external
+msgid "Number of days before an external mission"
+msgstr "عدد أيام قبل مهمة خارجية"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_request_type__before_mission_days_internal
+msgid "Number of days before an internal mission"
+msgstr "عدد أيام قبل مهمة داخلية"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_employee_deputation_stock__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: hr_deputation
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation__message_needaction_counter
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation_cancellation__message_needaction_counter
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation_cut__message_needaction_counter
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation_extension__message_needaction_counter
+#: model:ir.model.fields,help:hr_deputation.field_hr_employee_deputation_stock__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: hr_deputation
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation__message_has_error_counter
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation_cancellation__message_has_error_counter
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation_cut__message_has_error_counter
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation_extension__message_has_error_counter
+#: model:ir.model.fields,help:hr_deputation.field_hr_employee_deputation_stock__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل مع خطأ التسليم"
+
+#. module: hr_deputation
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation__message_unread_counter
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation_cancellation__message_unread_counter
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation_cut__message_unread_counter
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation_extension__message_unread_counter
+#: model:ir.model.fields,help:hr_deputation.field_hr_employee_deputation_stock__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل غير المقروءة"
+
+#. module: hr_deputation
+#: model:ir.model,name:hr_deputation.model_request_type
+msgid "Objection Evaluation Type"
+msgstr "النوع"
+
+#. module: hr_deputation
+#: model:res.groups,name:hr_deputation.group_hr_deputation_user
+msgid "Officer"
+msgstr "موظف"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_extension_view_kanban
+msgid "Old Duration:"
+msgstr "المدة القديمة:"
+
+#. module: hr_deputation
+#: model:ir.model.fields.selection,name:hr_deputation.selection__hr_deputation__transportation_type__overland
+msgid "Overland"
+msgstr "برا"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_view_form
+msgid "Paid"
+msgstr "مدفوع"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "Payroll management"
+msgstr "إدارة الرواتب"
+
+#. module: hr_deputation
+#: code:addons/hr_deputation/models/hr_deputation_extension.py:0
+#, python-format
+msgid "Please check the extension time."
+msgstr "يرجى التحقق من مدة التمديد."
+
+#. module: hr_deputation
+#: model:ir.actions.server,name:hr_deputation.cron_allow_stock_deputation_ir_actions_server
+#: model:ir.cron,cron_name:hr_deputation.cron_allow_stock_deputation
+#: model:ir.cron,name:hr_deputation.cron_allow_stock_deputation
+msgid "Prepare Deputation balance"
+msgstr "إعداد رصيد الإنتداب"
+
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_view_form
+msgid "Print Deputation"
+msgstr "طباعة تقرير الإنتداب"
+
+#. module: hr_deputation
+#: model:ir.actions.report,name:hr_deputation.hr_deputation_report_action
+msgid "Print Deputation Report"
+msgstr "طباعة تقرير الإنتداب"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_setting__count_public_holidays
+msgid "Public holidays included"
+msgstr "المدة تشمل العطلات الرسمية"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__reason
+msgid "Reason"
+msgstr "السبب"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__refuse_reason
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__refuse_reason
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__refuse_reason
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__refuse_reason
+msgid "Refusal reason"
+msgstr "سبب الرفض "
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_cancellation_view_form
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_cut_view_form
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_extension_view_form
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_view_form
+#: model:ir.actions.server,name:hr_deputation.action_refuse_deputation_requests
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: hr_deputation
+#: model:mail.message.subtype,name:hr_deputation.mt_hr_deputation_cancellation_refused
+#: model:mail.message.subtype,name:hr_deputation.mt_hr_deputation_cut_refused
+#: model:mail.message.subtype,name:hr_deputation.mt_hr_deputation_extension_refused
+#: model:mail.message.subtype,name:hr_deputation.mt_hr_deputation_refused
+#: model:request.stage,name:hr_deputation.hr_deputation_cancel_stage_refused
+#: model:request.stage,name:hr_deputation.hr_deputation_cut_stage_refused
+#: model:request.stage,name:hr_deputation.hr_deputation_extension_stage_refused
+#: model:request.stage,name:hr_deputation.hr_deputation_stage_refused
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__remaining_duration
+msgid "Remaining Duration"
+msgstr "المدة المتبقية"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_cut_view_kanban
+msgid "Remaining Duration:"
+msgstr ":المدة المتبقية"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "Request Number"
+msgstr "رقم الطلب"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_view_kanban
+msgid "Request Number :"
+msgstr "رقم الطلب :"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__date
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__date
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__date
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__date
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "Request date"
+msgstr "تاريخ الطلب"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "Requester"
+msgstr "صاحب الطلب"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__activity_user_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__activity_user_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__activity_user_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_view_form
+msgid "Return to previous stage"
+msgstr "إعادة للمرحلة السابقة"
+
+#. module: hr_deputation
+#: model:res.city,name:hr_deputation.res_city_hr_deputation_riadh
+msgid "Riadh"
+msgstr "الرياض"
+
+#. module: hr_deputation
+#: model:request.stage,name:hr_deputation.hr_deputation_cancel_stage_send
+#: model:request.stage,name:hr_deputation.hr_deputation_cut_stage_send
+#: model:request.stage,name:hr_deputation.hr_deputation_extension_stage_send
+#: model:request.stage,name:hr_deputation.hr_deputation_stage_send
+msgid "Send"
+msgstr "إرسال"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_allowance__deputation_setting_id
+#: model:ir.ui.menu,name:hr_deputation.menu_hr_deputation_setting
+msgid "Setting"
+msgstr "الإعدادات "
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "Signature:"
+msgstr "التوقيع:"
+
+#. module: hr_deputation
+#: model:ir.model,name:hr_deputation.model_request_stage
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__stage_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__stage_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__stage_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__stage_id
+msgid "Stage"
+msgstr "مرحلة"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "Start Date"
+msgstr "تاريخ البداية"
+
+#. module: hr_deputation
+#: code:addons/hr_deputation/models/hr_deputation.py:0
+#, python-format
+msgid "Start date must be less than the end date."
+msgstr ""
+"تاريخ المباشرة يجب ان يكون بين اول يوم في الإنتداب و اليوم قبل الاخير منها"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__state
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__state
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__state
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: hr_deputation
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation__activity_state
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation_cancellation__activity_state
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation_cut__activity_state
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation_extension__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__task_name
+msgid "Task"
+msgstr "المهمة"
+
+#. module: hr_deputation
+#: code:addons/hr_deputation/models/hr_deputation.py:0
+#, python-format
+msgid "The annual deputation balance has been exceeded!"
+msgstr "لقد تم تجاوز الرصيد السنوي للإنتداب!"
+
+#. module: hr_deputation
+#: code:addons/hr_deputation/models/hr_deputation_cut.py:0
+#, python-format
+msgid "The cutoff date must be equal to or greater than today's date"
+msgstr "تاريخ القطع يجب أن يكون مساوي أو أكبر من تاريخ اليوم"
+
+#. module: hr_deputation
+#: code:addons/hr_deputation/models/hr_deputation_cut.py:0
+#, python-format
+msgid ""
+"The start date must be between the first day of the deputation and the day "
+"before the last of it"
+msgstr ""
+"تاريخ المباشرة يجب ان يكون بين اول يوم في الإنتداب و اليوم قبل الاخير منها"
+
+#. module: hr_deputation
+#: code:addons/hr_deputation/models/hr_deputation.py:0
+#: code:addons/hr_deputation/models/hr_deputation_extension.py:0
+#, python-format
+msgid "There is an overlap of dates with a deputation"
+msgstr "هناك تداخل في التواريخ مع إنتداب"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "Ticket"
+msgstr "التذكرة"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__ticket_price
+msgid "Ticket Price"
+msgstr "مبلغ التذكرة"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__ticket_type
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_allowance__ticket_type
+msgid "Ticket Type"
+msgstr "نوع التذكرة"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_employee_deputation_stock__token_deputation_sum
+msgid "Token Days"
+msgstr "الأيام المأخوذة"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__total
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "Total amount"
+msgstr "المبلغ الإجمالي "
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__transport
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "Transport"
+msgstr "النقل "
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_allowance__transport
+msgid "Transport %"
+msgstr "%النقل"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__transportation_type
+msgid "Transportation means"
+msgstr "وسيلة النقل"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_setting__deputation_with_travel_dates
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_view_form
+msgid "Travel Dates"
+msgstr "تواريخ السفر"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__travel_days_setting
+msgid "Travel Day Date Settings"
+msgstr "إعدادات تواريخ السفر"
+
+#. module: hr_deputation
+#: model:ir.model,name:hr_deputation.model_travel_days
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_allowance__travel_days_ids
+#: model:ir.model.fields,field_description:hr_deputation.field_travel_days__travel_days
+#: model_terms:ir.ui.view,arch_db:hr_deputation.view_hr_deputation_setting
+msgid "Travel Days"
+msgstr "أيام السفر"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__travel_days
+msgid "Travel days"
+msgstr "أيام السفر"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__type
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__request_type_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__request_type_id
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__request_type_id
+msgid "Type"
+msgstr "النوع"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "Type of Request"
+msgstr "نوع الطلب"
+
+#. module: hr_deputation
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation__activity_exception_decoration
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation_cancellation__activity_exception_decoration
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation_cut__activity_exception_decoration
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation_extension__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع نشاط المستثنى في السجل."
+
+#. module: hr_deputation
+#: model:ir.actions.act_window,name:hr_deputation.hr_deputation_type_action
+msgid "Types"
+msgstr " أنواع الإنتداب"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__message_unread
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__message_unread
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__message_unread
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__message_unread
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_employee_deputation_stock__message_unread
+msgid "Unread Messages"
+msgstr "رسائل غير مقروءة"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__message_unread_counter
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__message_unread_counter
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__message_unread_counter
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__message_unread_counter
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_employee_deputation_stock__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عداد الرسائل غير المقروءة"
+
+#. module: hr_deputation
+#: model:ir.model,name:hr_deputation.model_res_users
+msgid "Users"
+msgstr "المستخدمون"
+
+#. module: hr_deputation
+#: model:request.stage,name:hr_deputation.hr_deputation_cancel_stage_validate
+#: model:request.stage,name:hr_deputation.hr_deputation_cut_stage_validate
+#: model:request.stage,name:hr_deputation.hr_deputation_extension_stage_validate
+#: model:request.stage,name:hr_deputation.hr_deputation_stage_validate
+msgid "Validate"
+msgstr "التأكيد"
+
+#. module: hr_deputation
+#: code:addons/hr_deputation/models/hr_deputation_cut.py:0
+#: code:addons/hr_deputation/models/hr_deputation_cut.py:0
+#, python-format
+msgid "Warning!"
+msgstr "تحذير!"
+
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__website_message_ids
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cancellation__website_message_ids
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_cut__website_message_ids
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_extension__website_message_ids
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_employee_deputation_stock__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: hr_deputation
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation__website_message_ids
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation_cancellation__website_message_ids
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation_cut__website_message_ids
+#: model:ir.model.fields,help:hr_deputation.field_hr_deputation_extension__website_message_ids
+#: model:ir.model.fields,help:hr_deputation.field_hr_employee_deputation_stock__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_setting__deputation_with_kilometer
+msgid "With kilometer"
+msgstr "احتساب البدل بالكيلومتر"
+
+#. module: hr_deputation
+#: code:addons/hr_deputation/models/hr_deputation.py:0
+#, python-format
+msgid "You must read and reviewed the policies regulations"
+msgstr "يجب عليك قراءة ومراجعة السياسات و الوائح"
+
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__kilometer_amount
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_kilometer__kilometer_amount
+msgid "kilometer Amount"
+msgstr "ثمن الكيلومتر "
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation__kilometer_amount_overland
+msgid "kilometer Amount Overland"
+msgstr "مبلغ الكيلومترات"
+
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_allowance__deputation_kilometer_ids
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+#: model_terms:ir.ui.view,arch_db:hr_deputation.view_hr_deputation_setting
+msgid "kilometer Amounts"
+msgstr "مبلغ الكيلومترات"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_kilometer__kilometer_from
+msgid "kilometer From"
+msgstr "كيلومتر من "
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_kilometer__kilometer_to
+msgid "kilometer To"
+msgstr "كيلومتر إلى"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "logo"
+msgstr "أيقونة"
+
+#. module: hr_deputation
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_allowance__name
+#: model:ir.model.fields,field_description:hr_deputation.field_hr_deputation_setting__name
+msgid "name"
+msgstr "إعدادات الانتدابات"
+
+#. module: hr_deputation
+#: model:ir.actions.report,print_report_name:hr_deputation.hr_deputation_report_action
+msgid ""
+"'Print Deputation Report for - %s' % (object.name).replace('/', '')\n"
+"        "
+msgstr "'طباعة تقرير الانتداب - %s' % (object.name)"
+
+#. module: hr_deputation
+#: model:ir.actions.server,name:hr_deputation.cron_allow_stock_deputation_ir_actions_server
+#: model:ir.cron,cron_name:hr_deputation.cron_allow_stock_deputation
+#: model:ir.cron,name:hr_deputation.cron_allow_stock_deputation
+msgid "Prepare Deputation balance"
+msgstr "تحيين رصيد الإنتداب "
+
+#. module: hr_deputation
+#: model:ir.actions.server,name:hr_deputation.cron_initialize_deputation_balance_ir_actions_server
+#: model:ir.cron,cron_name:hr_deputation.cron_initialize_deputation_balance
+#: model:ir.cron,name:hr_deputation.cron_initialize_deputation_balance
+msgid "Initialize Deputation Balance"
+msgstr "تهيئة رصيد الإنتداب"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "Stages Of Request Approval"
+msgstr "مراحل الموافقة على الطلب"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "Kilometers Number"
+msgstr "عدد الكيلومترات"
+
+#. module: hr_deputation
+#: model_terms:ir.ui.view,arch_db:hr_deputation.hr_deputation_report_template
+msgid "Kilometer Amount"
+msgstr "مبلغ الكيلومتر"
+
+#. module: hr_deputation
+#: model:ir.actions.server,name:hr_deputation.action_accept_deputation_requests
+msgid "Accept"
+msgstr "موافقة"

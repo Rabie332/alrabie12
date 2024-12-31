@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+<record id="action_report_hr_authorization_resume" model="ir.actions.report">
+        <field name="name">Hr Authorization Resume</field>
+        <field name="model">hr.authorization.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hr_authorization.report_hr_authorization_resume</field>
+        <field name="report_file">hr_authorization.report_hr_authorization_resume</field>
+        <field name="print_report_name">'Hr Authorization Resume'</field>
+        <field name="binding_type">report</field>
+    </record>
+
+         <record id="hr_authorization_report_xlsx" model="ir.actions.report">
+        <field name="name">Hr Authorizations Resume Excel</field>
+         <field name="report_type">xlsx</field>
+        <field name="model">report.hr_authorization.report_hr_authorization_xlsx</field>
+        <field name="report_name">hr_authorization.report_hr_authorization_xlsx</field>
+        <field name="report_file">hr_authorization.report_hr_authorization_xlsx</field>
+    </record>
+
+     <record id="paperformat_hr_authorization" model="report.paperformat">
+        <field name="name">Hr Authorization Resume</field>
+        <field name="default" eval="True" />
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Landscape</field>
+        <field name="margin_top">28</field>
+        <field name="margin_bottom">5</field>
+        <field name="margin_left">5</field>
+        <field name="margin_right">5</field>
+        <field name="header_line" eval="False" />
+        <field name="header_spacing">16</field>
+    </record>
+</odoo>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+
+    <record id="installment_template_form_view_inherit_farha_custom" model="ir.ui.view">
+        <field name="name">installment.template.form</field>
+        <field name="model">installment.template</field>
+        <field name="inherit_id" ref="real_estate.installment_template_form_view" />
+        <field name="arch" type="xml">
+
+            <field name="deduct" position="after">
+                <field name="product_id" required="1" />
+            </field>
+
+        </field>
+    </record>
+
+
+    <record id="realestate_contract_view_form_inherit_farha_custom" model="ir.ui.view">
+        <field name="name">realestate.contract.form</field>
+        <field name="model">realestate.contract</field>
+        <field name="inherit_id" ref="real_estate.realestate_contract_view_form" />
+        <field name="arch" type="xml">
+           <field name="name" position="after">
+                <field name="unified_contract_number" />
+                <field name="invoice_ids" invisible="1" />
+                <field name="invoices_count" invisible="1" />
+            </field>
+            <div name="button_box" position="attributes">
+                <attribute name="attrs" />
+            </div>
+             <button name="create_invoice" position="attributes">
+                  <attribute
+                    name="attrs"
+                >{'invisible':['|','|',('state', 'not in',['cancel','confirmed']),('invoice_id','!=',False),('invoices_count','!=',0)]}</attribute>
+             </button>
+
+            <button name="action_view_invoice" position="attributes">
+                 <attribute name="attrs">{'invisible': [('state', '=', 'draft')]}</attribute>
+                 <attribute name="string">Invoices</attribute>
+             </button>
+            <button name="action_view_invoice" position="after">
+
+                    <button name="attachment_tree_view" type="object" icon="fa-files-o">
+                        <field name="attachment_count" class="o_stat_value" string="Attachments" widget="statinfo" />
+                    </button>
+            </button>
+            <xpath expr="//field[@name='contract_line_ids']//field[@name='date']" position="before">
+                <field name="invoice_id" invisible="1" />
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="Services">
+                    <field name="services_ids">
+                        <tree editable="bottom">
+                            <field name="name" />
+                            <field name="amount" />
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

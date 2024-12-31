@@ -1,0 +1,394 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-14 15:14+0000\n"
+"PO-Revision-Date: 2020-04-14 15:14+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account
+#: model:ir.model.fields,field_description:account.field_account_reconcile_model__past_months_limit
+msgid "Past Months Limit"
+msgstr "حد الأشهر الماضية "
+
+#. module: account
+#: model_terms:ir.ui.view,arch_db:account.view_account_reconcile_model_form
+msgid "Match Invoice/bill with"
+msgstr "مطابقة الفاتورة / الفاتورة مع "
+
+#. module: account
+#: model:ir.model.fields.selection,name:account.selection__account_reconcile_model__rule_type__writeoff_button
+#: model:ir.model.fields.selection,name:account.selection__account_reconcile_model_template__rule_type__writeoff_button
+msgid "Manually create a write-off on clicked button."
+msgstr "إعداد عملية شطب يدويًا على الزر المنقور."
+
+#. module: account
+#: model:ir.model.fields,field_description:account.field_account_reconcile_model__matching_order
+#: model:ir.model.fields,field_description:account.field_account_reconcile_model_template__matching_order
+msgid "Matching Order"
+msgstr "ترتيب المطابقة "
+
+#. module: account
+#: model_terms:ir.ui.view,arch_db:account.view_account_journal_form
+msgid "Incoming Payments"
+msgstr "المدفوعات الواردة "
+
+#. module: account
+#: model_terms:ir.ui.view,arch_db:account.view_account_journal_form
+msgid "Payments Configuration"
+msgstr "تكوين المدفوعات"
+
+#. module: account
+#: model_terms:ir.ui.view,arch_db:account.view_account_journal_form
+msgid "Outgoing Payments"
+msgstr "المدفوعات الصادرة"
+
+#. module: account
+#: model:ir.model.fields,field_description:account.field_account_bank_statement_line__restrict_mode_hash_table
+#: model:ir.model.fields,field_description:account.field_account_journal__restrict_mode_hash_table
+#: model:ir.model.fields,field_description:account.field_account_move__restrict_mode_hash_table
+#: model:ir.model.fields,field_description:account.field_account_payment__restrict_mode_hash_table
+msgid "Lock Posted Entries with Hash"
+msgstr "قفل الإدخالات المرسلة مع التجزئة "
+
+#. module: account
+#: model:ir.model.fields,field_description:account.field_account_journal_group__excluded_journal_ids
+msgid "Excluded Journals"
+msgstr "الدفاتر اليومية المستبعدة"
+
+#. module: account
+#: model:ir.model.fields.selection,name:account.selection__account_move__payment_state__partial
+#: model_terms:ir.ui.view,arch_db:account.view_account_invoice_filter
+msgid "Partially Paid"
+msgstr "المدفوعة جزئيا"
+
+#. module: account
+#: model_terms:ir.ui.view,arch_db:account.account_automatic_entry_wizard_form
+msgid "The following Journal Entries will be generated"
+msgstr "سيتم إنشاء إدخالات دفتر اليومية التالية"
+
+#. module: account
+#: model:ir.model.fields.selection,name:account.selection__account_move__payment_state__reversed
+#: model_terms:ir.ui.view,arch_db:account.view_account_invoice_filter
+#: model_terms:ir.ui.view,arch_db:account.view_account_move_filter
+#: model_terms:ir.ui.view,arch_db:account.view_move_form
+msgid "Reversed"
+msgstr "معكوسة"
+
+#. module: account
+#: model:ir.model.fields,field_description:account.field_account_bank_statement_line__partner_bank_id
+#: model:ir.model.fields,field_description:account.field_account_move__partner_bank_id
+msgid "Recipient Bank"
+msgstr "البنك المستلم"
+
+#. module: account
+#: model:ir.model.fields,field_description:account.field_account_bank_statement_line__inalterable_hash
+#: model:ir.model.fields,field_description:account.field_account_move__inalterable_hash
+#: model:ir.model.fields,field_description:account.field_account_payment__inalterable_hash
+msgid "Inalterability Hash"
+msgstr "تجزئة غير قابلة للتغيير"
+
+#. module: account
+#: model:ir.model.fields.selection,name:account.selection__account_move_reversal__refund_method__cancel
+msgid "Full Refund"
+msgstr "استرداد كامل"
+
+#. module: account
+#: model:ir.model.fields.selection,name:account.selection__account_move_reversal__refund_method__modify
+msgid "Full refund and new draft invoice"
+msgstr "استرداد كامل ومسودة فاتورة جديدة"
+
+#. module: account
+#: model:ir.model.fields.selection,name:account.selection__account_move_reversal__date_mode__custom
+msgid "Specific"
+msgstr "محددة"
+
+
+#. module: account
+#: model:ir.model.fields,field_description:account.field_account_bank_statement_cashbox__start_bank_stmt_ids
+msgid "Start Bank Stmt"
+msgstr "بدء البنك Stmt"
+
+#. module: account
+#: model:ir.model.fields.selection,name:account.selection__account_move_reversal__date_mode__entry
+msgid "Journal Entry Date"
+msgstr "تاريخ قيد اليومية"
+
+#. module: account
+#: model_terms:ir.ui.view,arch_db:account.view_account_payment_register_form
+msgid "Create Payment"
+msgstr "إنشاء الدفع"
+
+#. module: account
+#: model_terms:ir.ui.view,arch_db:account.view_account_payment_form
+msgid "Unmark as Sent"
+msgstr "إلغاء العلامة المرسلة"
+
+
+#. module: account
+#: model_terms:ir.ui.view,arch_db:account.view_account_payment_form
+msgid "Mark as Sent"
+msgstr "تحديد على أنه مرسل"
+
+#. module: account
+#: model:ir.model.fields.selection,name:account.selection__account_payment_register__payment_difference_handling__reconcile
+msgid "Mark as fully paid"
+msgstr "وضع علامة على أنها مدفوعة بالكامل "
+
+#. module: account
+#. openerp-web
+#: code:addons/account/static/src/js/tours/account.js:0
+#, python-format
+msgid "Once your invoice is ready, press CONFIRM."
+msgstr "بمجرد أن تصبح فاتورتك جاهزة ، اضغط على تأكيد"
+
+#. module: account
+#: code:addons/account/models/account_bank_statement.py:0
+#, python-format
+msgid "Only Validated statements can be reset to new."
+msgstr "يمكن إعادة تعيين البيانات التي تم التحقق من صحتها فقط إلى الجديد. "
+
+#. module: account
+#: model:ir.actions.act_window,name:account.action_account_resequence
+msgid "Resequence"
+msgstr "التسلسل"
+
+#. module: account
+#: model:ir.model.fields.selection,name:account.selection__account_reconcile_model_template__rule_type__writeoff_suggestion
+msgid "Suggest a write-off"
+msgstr "اقترح شطب "
+
+#. module: account
+#: model:ir.model.fields.selection,name:account.selection__account_reconcile_model__rule_type__writeoff_suggestion
+msgid "Suggest counterpart values"
+msgstr "اقترح القيم النظيرة "
+
+#. module: account
+#: model:ir.model.fields,field_description:account.field_account_reconcile_model__match_text_location_reference
+#: model:ir.model.fields,field_description:account.field_account_reconcile_model_template__match_text_location_reference
+msgid "Match Text Location Reference"
+msgstr "مرجع موقع النص المطابق "
+
+#. module: account
+#: model:ir.model.fields.selection,name:account.selection__account_reconcile_model__rule_type__invoice_matching
+#: model:ir.model.fields.selection,name:account.selection__account_reconcile_model_template__rule_type__invoice_matching
+msgid "Match existing invoices/bills"
+msgstr "مطابقة الفواتير / الفواتير الحالية "
+
+#. module: account
+#: model:ir.model.fields,field_description:account.field_account_tax_repartition_line_template__tag_ids
+msgid "Financial Tags"
+msgstr "العلامات المالية "
+
+#. module: account
+#: model:ir.model.fields,field_description:account.field_account_reconcile_model_partner_mapping__payment_ref_regex
+msgid "Find Text in Label"
+msgstr "البحث عن نص في التسمية"
+
+
+#. module: account
+#: model:ir.model.fields,field_description:account.field_account_reconcile_model_partner_mapping__narration_regex
+msgid "Find Text in Notes"
+msgstr "ابحث عن نص في الملاحظات"
+
+#. module: account
+#: model_terms:ir.ui.view,arch_db:account.view_account_payment_form
+msgid "Reset To Draft"
+msgstr "إعادة التعيين إلى المسودة"
+
+#. module: account
+#: model_terms:ir.ui.view,arch_db:account.view_account_reconcile_model_form
+msgid "Partner Mapping"
+msgstr "مخطط الشريك "
+
+#. module: account
+#: model:ir.model.fields,field_description:account.field_account_payment__is_internal_transfer
+msgid "Is Internal Transfer"
+msgstr "تحويل داخلي"
+
+#. module: account
+#: model:ir.model.fields,field_description:account.field_account_bank_statement_line__reversed_entry_id
+#: model:ir.model.fields,field_description:account.field_account_move__reversed_entry_id
+#: model:ir.model.fields,field_description:account.field_account_payment__reversed_entry_id
+msgid "Reversal of"
+msgstr "عكس"
+
+#. module: account
+#: code:addons/account/wizard/account_move_reversal.py:0
+#, python-format
+msgid "Reversal of: %(move_name)s, %(reason)s"
+msgstr "عكس: %(move_name)s, %(reason)s"
+
+#. module: account
+#: model:ir.model.fields,field_description:account.field_account_move_line__cumulated_balance
+msgid "Cumulated Balance"
+msgstr "الرصيد المتراكم "
+
+#. module: account
+#. openerp-web
+#: code:addons/account/static/src/js/tours/account.js:0
+#, python-format
+msgid "Customize your layout."
+msgstr "تخصيص التخطيط الخاص بك."
+
+#. module: account
+#: model_terms:ir.ui.view,arch_db:account.view_move_form
+msgid "Cut-Off"
+msgstr "قطع"
+
+#. module: account
+#: model_terms:ir.ui.view,arch_db:account.account_journal_dashboard_kanban_view
+msgid "New Transaction"
+msgstr "معاملة جديدة"
+
+#. module: account
+#: code:addons/account/models/account_move.py:0
+#, python-format
+msgid "Draft Purchase Receipt"
+msgstr "مسودة إيصال الشراء"
+
+#. module: account
+#: code:addons/account/models/account_move.py:0
+#, python-format
+msgid "Draft Sales Receipt"
+msgstr "مسودة إيصال المبيعات"
+
+#. module: account
+#: code:addons/account/models/account_move.py:0
+#, python-format
+msgid "Draft Vendor Credit Note"
+msgstr "مسودة مذكرة ائتمان البائع"
+
+
+
+#. module: account
+#: model:ir.ui.menu,name:account.menu_action_account_invoice_report_all
+msgid "Invoice Analysis"
+msgstr "تحليل الفاتورة "
+
+#. module: account
+#: code:addons/account/models/chart_template.py:0
+#, python-format
+msgid "Miscellaneous Operations"
+msgstr "عمليات متنوعة"
+
+
+#. module: account
+#: code:addons/account/models/chart_template.py:0
+#, python-format
+msgid "Cash Basis Taxes"
+msgstr "ضرائب بأساس نقدي"
+
+
+#. module: account
+#: code:addons/account/models/chart_template.py:0
+#: model_terms:ir.ui.view,arch_db:account.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:account.res_partner_view_search
+#, python-format
+msgid "Customer Invoices"
+msgstr "فواتير العملاء"
+
+#. module: account
+#: model:ir.model.fields,field_description:account.field_res_config_settings__income_currency_exchange_account_id
+msgid "Gain Account"
+msgstr "حساب المكسب"
+
+#. module: account
+#: model_terms:ir.ui.view,arch_db:account.onboarding_fiscal_year_step
+msgid "Define your fiscal years &amp; tax returns periodicity."
+msgstr "تحديد السنوات المالية الخاصة بك  و دورية الإقرارات الضريبية. "
+
+#. module: account
+#: model_terms:ir.ui.view,arch_db:account.dashboard_onboarding_bill_step
+msgid "Digitalize your vendor bills with OCR and Artificial Intelligence."
+msgstr "قم برقمنة فواتير البائع باستخدام تقنية التعرف الضوئي على الحروف والذكاء الاصطناعي."
+
+#. module: account
+#: model_terms:ir.ui.view,arch_db:account.dashboard_onboarding_bill_step
+msgid "First Bill"
+msgstr "الفاتورة الأولى"
+
+#. module: account
+#: model:ir.model.fields,field_description:account.field_account_tax__type_tax_use
+#: model:ir.model.fields,field_description:account.field_account_tax_template__type_tax_use
+#: model_terms:ir.ui.view,arch_db:account.view_account_tax_search
+msgid "Tax Type"
+msgstr "نوع الضريبة"
+
+#. module: account
+#: model_terms:ir.ui.view,arch_db:account.view_tax_form
+msgid "Distribution for Credit Notes"
+msgstr "توزيع سندات الائتمان"
+
+#. module: account
+#: model:ir.model.fields,field_description:account.field_account_tax__invoice_repartition_line_ids
+#: model_terms:ir.ui.view,arch_db:account.view_tax_form
+msgid "Distribution for Invoices"
+msgstr "توزيع الفواتير"
+
+#. module: account
+#: model:ir.model.fields,field_description:account.field_account_tax__refund_repartition_line_ids
+msgid "Distribution for Refund Invoices"
+msgstr "توزيع فواتير الاسترجاع "
+
+#. module: account
+#: model_terms:ir.ui.view,arch_db:account.account_automatic_entry_wizard_form
+msgid "Recognition Date"
+msgstr "تاريخ الاعتراف"
+
+#. module: account
+#: model_terms:ir.ui.view,arch_db:account.account_automatic_entry_wizard_form
+msgid "Create Journal Entries"
+msgstr "إنشاء إدخالات دفتر اليومية"
+
+#. module: account
+#: code:addons/account/models/account_move.py:0
+#: code:addons/account/wizard/account_move_reversal.py:0
+#, python-format
+msgid "Reversal of: %s"
+msgstr "مرتجع فاتورة: %s"
+
+#. module: account
+#: code:addons/account/wizard/account_move_reversal.py:0
+#, python-format
+msgid "Reversal of: %s, %s"
+msgstr "مرتجع فاتورة: %s, %s"
+
+#. module: account
+#: model_terms:ir.ui.view,arch_db:account.view_move_form
+msgid "Add Credit Note"
+msgstr "إرجاع فاتورة"
+
+#. module: account
+#: model:ir.actions.act_window,name:account.action_move_out_refund_type
+#: model:ir.ui.menu,name:account.menu_action_move_out_refund_type
+#: model_terms:ir.ui.view,arch_db:account.account_journal_dashboard_kanban_view
+#: model_terms:ir.ui.view,arch_db:account.view_account_invoice_report_search
+msgid "Credit Notes"
+msgstr "المرتجع"
+
+#. module: account
+#: model:ir.actions.act_window,name:account.action_move_in_refund_type
+#: model:ir.ui.menu,name:account.menu_action_move_in_refund_type
+msgid "Refunds"
+msgstr "استرجاع"
+
+#. module: account
+#: model:ir.ui.menu,name:account.menu_finance
+msgid "Invoicing"
+msgstr "المالية"
+
+#. module: account
+#: code:addons/account/models/account_payment.py:0
+#, python-format
+msgid "Please define a payment method on your payment."
+msgstr "يرجى تحديد طريقة الدفع."
+

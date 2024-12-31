@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="request_stage_from_view_inherit_hr_deputation" model="ir.ui.view">
+        <field name="name">request.stage.form.inherit</field>
+        <field name="model">request.stage</field>
+        <field name="inherit_id" ref="request.request_stage_from_view" />
+        <field name="arch" type="xml">
+                <field name="fold" position="after">
+                    <field
+                    name="appears_in_deputation_report"
+                    attrs="{'invisible': [('res_model', '!=', 'hr.deputation')]}"
+                />
+                </field>
+        </field>
+    </record>
+
+
+    <record id="hr_deputation_stage_action" model="ir.actions.act_window">
+        <field name="name">Deputation Stages</field>
+        <field name="res_model">request.stage</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="domain">[('res_model_id.model', '=', 'hr.deputation')]</field>
+        <field name="context">{'default_res_model':'hr.deputation'}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new stage in the task pipeline
+            </p>
+            <p>
+                Define the steps that will be used in the project from the
+                creation of the task, up to the closing of the task or issue.
+                You will use these stages in order to track the progress in
+                solving a task or an issue.
+            </p>
+        </field>
+    </record>
+
+    <menuitem
+        id="menu_hr_deputation_stage"
+        action="hr_deputation_stage_action"
+        name="Deputation Stages"
+        groups="request.group_stages_manager"
+        parent="menu_hr_deputation_setting"
+        sequence="4"
+    />
+
+    <record id="hr_deputation_cut_stage_action" model="ir.actions.act_window">
+        <field name="name">Deputation Cut Stages</field>
+        <field name="res_model">request.stage</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="domain">[('res_model_id.model', '=', 'hr.deputation.cut')]</field>
+        <field name="context">{'default_res_model':'hr.deputation.cut'}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new stage in the task pipeline
+            </p>
+            <p>
+                Define the steps that will be used in the project from the
+                creation of the task, up to the closing of the task or issue.
+                You will use these stages in order to track the progress in
+                solving a task or an issue.
+            </p>
+        </field>
+    </record>
+
+
+    <menuitem
+        id="menu_hr_deputation_cut_stage"
+        action="hr_deputation_cut_stage_action"
+        name="Deputation Cut Stages"
+        groups="request.group_stages_manager"
+        parent="menu_hr_deputation_setting"
+        sequence="5"
+    />
+
+    <record id="hr_deputation_extension_stage_action" model="ir.actions.act_window">
+        <field name="name">Deputation Extension Stages</field>
+        <field name="res_model">request.stage</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="domain">[('res_model_id.model', '=', 'hr.deputation.extension')]</field>
+        <field name="context">{'default_res_model':'hr.deputation.extension'}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new stage in the task pipeline
+            </p>
+            <p>
+                Define the steps that will be used in the project from the
+                creation of the task, up to the closing of the task or issue.
+                You will use these stages in order to track the progress in
+                solving a task or an issue.
+            </p>
+        </field>
+    </record>
+
+
+    <menuitem
+        id="menu_hr_deputation_extension_stage"
+        action="hr_deputation_extension_stage_action"
+        name="Deputation Extension Stages"
+        groups="request.group_stages_manager"
+        parent="menu_hr_deputation_setting"
+        sequence="6"
+    />
+
+    <record id="hr_deputation_cancellation_stage_action" model="ir.actions.act_window">
+        <field name="name">Deputation Cancellation Stages</field>
+        <field name="res_model">request.stage</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="domain">[('res_model_id.model', '=', 'hr.deputation.cancellation')]</field>
+        <field name="context">{'default_res_model':'hr.deputation.cancellation'}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new stage in the task pipeline
+            </p>
+            <p>
+                Define the steps that will be used in the project from the
+                creation of the task, up to the closing of the task or issue.
+                You will use these stages in order to track the progress in
+                solving a task or an issue.
+            </p>
+        </field>
+    </record>
+
+
+    <menuitem
+        id="menu_hr_deputation_cancellation_stage"
+        action="hr_deputation_cancellation_stage_action"
+        name="Deputation Cancellation Stages"
+        groups="request.group_stages_manager"
+        parent="menu_hr_deputation_setting"
+        sequence="7"
+    />
+</odoo>

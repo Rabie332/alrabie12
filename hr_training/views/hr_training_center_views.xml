@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Training center -->
+
+
+    <record id="hr_training_center_tree_view" model="ir.ui.view">
+        <field name="name">hr.training.center.tree</field>
+        <field name="model">hr.training.center</field>
+        <field name="arch" type="xml">
+            <tree name="Training center" editable="top">
+                <field name="name" />
+                <field name="active" invisible="1" />
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="hr_training_center_action" model="ir.actions.act_window">
+        <field name="name">Training Centers</field>
+        <field name="res_model">hr.training.center</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem
+        id="hr_training_center_menu"
+        name="Training Centers"
+        parent="menu_hr_training_setting"
+        sequence="2"
+        action="hr_training_center_action"
+    />
+</odoo>

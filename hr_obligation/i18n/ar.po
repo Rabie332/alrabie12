@@ -1,0 +1,79 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_obligation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-14 18:33+0000\n"
+"PO-Revision-Date: 2021-07-14 18:33+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_obligation
+#: model:ir.model.fields,field_description:hr_obligation.field_hr_obligation_setting__attachment_ids
+#: model_terms:ir.ui.view,arch_db:hr_obligation.view_hr_obligation_setting
+msgid "Attachments"
+msgstr "المرفقات"
+
+#. module: hr_obligation
+#: model:ir.model.fields,field_description:hr_obligation.field_hr_obligation_setting__create_uid
+msgid "Created by"
+msgstr "انشأ من قبل"
+
+#. module: hr_obligation
+#: model:ir.model.fields,field_description:hr_obligation.field_hr_obligation_setting__create_date
+msgid "Created on"
+msgstr "تم إنشاؤها من قبل"
+
+#. module: hr_obligation
+#: model:ir.model.fields,field_description:hr_obligation.field_hr_obligation_setting__display_name
+msgid "Display Name"
+msgstr "المسمى"
+
+#. module: hr_obligation
+#: model:ir.model.fields,field_description:hr_obligation.field_hr_obligation_setting__id
+msgid "ID"
+msgstr ""
+
+#. module: hr_obligation
+#: model:ir.model.fields,field_description:hr_obligation.field_hr_obligation_setting____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_obligation
+#: model:ir.model.fields,field_description:hr_obligation.field_hr_obligation_setting__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_obligation
+#: model:ir.model.fields,field_description:hr_obligation.field_hr_obligation_setting__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_obligation
+#: code:addons/hr_obligation/models/hr_obligation_setting.py:0
+#: code:addons/hr_obligation/models/hr_obligation_setting.py:0
+#: model:ir.model,name:hr_obligation.model_hr_obligation_setting
+#, python-format
+msgid "Obligation Setting"
+msgstr "إعدادات"
+
+#. module: hr_obligation
+#: model:hr.obligation.setting,name:hr_obligation.data_hr_obligation_setting
+#: model:ir.actions.server,name:hr_obligation.ir_actions_button_hr_obligation_self_service
+#: model:ir.actions.server,name:hr_obligation.ir_actions_button_hr_obligation_setting
+#: model:ir.ui.menu,name:hr_obligation.hr_obligation_menu_self_service
+#: model:ir.ui.menu,name:hr_obligation.hr_obligation_setting_menu
+msgid "Policies and Regulations"
+msgstr "السياسات و اللوائح"
+
+#. module: hr_obligation
+#: model:ir.model.fields,field_description:hr_obligation.field_hr_obligation_setting__name
+msgid "Name"
+msgstr "المسمى"

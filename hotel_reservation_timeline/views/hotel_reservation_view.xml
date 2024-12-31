@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- ======== Reservation ======== -->
+        <!-- Timeline view of quick room reservation -->
+    <record id="quick_room_reservation_view_timeline1" model="ir.ui.view">
+            <field name="model">quick.room.reservation</field>
+            <field name="type">timeline</field>
+            <field name="arch" type="xml">
+                <timeline
+                date_start="check_in"
+                date_stop="check_out"
+                string="Rooms"
+                default_group_by="room_id"
+                event_open_popup="true"
+                colors="#53BF9D:is_checked_in==false;#34B3F1:is_checked_in==true;#FFB562:reservation_type=='collective';#F2EBE9:reservation_state=='cancel';#EB1D36:under_maintenance==true;"
+                zoomKey="ctrlKey"
+            >
+            >
+                    <field name="room_id" />
+                    <field name="partner_id" />
+                    <field name="check_in" />
+                    <field name="check_out" />
+                    <field name="reservation_id" />
+                    <field name="housekeeping_id" />
+                    <templates>
+                        <div t-name="timeline-item">
+                            <span t-if="record.reservation_id">Reserved to:</span><span
+                            t-if="record.housekeeping_id"
+                        >Maintenance:</span>
+                            <span t-esc="record.check_in" /> - <span t-esc="record.check_out" />
+                        </div>
+                    </templates>
+                </timeline>
+            </field>
+        </record>
+    <!-- Action for Room Reservation Summary -->
+    <record id="hotel_reservation.action_hotel_reservation_summary" model="ir.actions.act_window">
+        <field name="res_model">quick.room.reservation</field>
+        <field name="view_mode">timeline</field>
+    </record>
+</odoo>

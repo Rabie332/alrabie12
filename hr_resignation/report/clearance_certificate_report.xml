@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="clearance_certificate_report">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <div class="header">
+                    <br />
+                    <br />
+                    <br />
+                    <div class="row">
+                        <div class="col-3">التاريخ
+                            <span t-esc="datetime.date.today()" />
+                            م
+                        </div>
+                        <div class="col-6" />
+                        <div class="col-3">
+                            <img
+                                t-att-src="image_data_uri(o.company_id.logo)"
+                                style="padding: height: 140px; width: 140px;"
+                                alt="logo"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="row" style="font-size:13px; color:gray">
+                        <div class="col-4 text-center" style="direction:ltr;">
+                            <span style="font-size:20px; color:gray">
+                                Email:
+                            </span>
+                            <br />
+                            <br />
+                            <span t-field="o.company_id.email" />
+                            <br />
+                        </div>
+                        <div class="col-4 text-center" style="direction:ltr;">
+                            <span style="font-size:20px; color:gray">
+                                Phone:
+                            </span>
+                            <br />
+                            <br />
+                            <span t-field="o.company_id.phone" />
+                            <br />
+                        </div>
+                        <div class="col-4 text-center" style="direction:ltr;">
+                            <span style="font-size:20px; color:gray">
+                                Address:
+                            </span>
+                            <br />
+                            <br />
+                            <span t-field="o.company_id.street" />
+                            <span t-field="o.company_id.zip" />
+                            <span t-field="o.company_id.city" />
+                            <br />
+                            <span t-field="o.company_id.website" />
+                            <br />
+                        </div>
+                    </div>
+                </div>
+                <t t-call="web.external_layout">
+                    <div class="page" style="font-size: 18px;">
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <div class="row">
+                            <div class="col-2" />
+                            <div class="col-8 text-center">
+                                <span style="font-size:22px; font-weight:bold;">
+                                شـهادة خـدمة وإخلاء طرف
+                                </span>
+                            </div>
+                            <div class="col-2" />
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-2" />
+                            <div class="col-8 text-center">
+                                <span style="font-size:22px; font-weight:bold;">
+                                Service and Clearance Certificate
+                                </span>
+                            </div>
+                            <div class="col-2" />
+                        </div>
+                        <br />
+                        <br />
+                        <table class="table table-bordered" width="100%">
+                            <tr>
+                                <td style="padding:5px; direction:rtl;" width="50%">
+                                    تفــيد شــركة
+                                   <t t-if="o.company_id.with_context(lang='ar_001').name">
+                                        <span
+                                            style="font-weight:bold;"
+                                            t-field="o.company_id.with_context(lang='ar_001').name"
+                                        />
+                                    </t>
+                                    <t t-else="">
+                                        .................................
+                                    </t>
+                                    <br />
+                                    بــأن السـيد
+                                    <t t-if="o.employee_id.name">
+                                        <span style="font-weight:bold;" t-field="o.employee_id.name" />
+                                    </t>
+                                    <t t-else="">
+                                        .................................
+                                    </t>
+                                    ,
+                                    <br />
+                                    الجنسـية:
+                                    <t t-if="o.employee_id.country_id.with_context(lang='ar_001').name">
+                                        <span
+                                            style="font-weight:bold;"
+                                            t-field="o.employee_id.country_id.with_context(lang='ar_001').name"
+                                        />
+                                    </t>
+                                    <t t-else="">
+                                        .................................
+                                    </t>
+                                    <br />
+                                    بـرقم الهويـة
+                                    <t t-if="o.employee_id.identification_id and o.employee_id.country_id.code=='SA'">
+                                        <span style="font-weight:bold;" t-field="o.employee_id.identification_id" />
+                                    </t>
+                                    <t t-elif="o.employee_id.residence_id and o.employee_id.country_id.code!='SA'">
+                                        <span style="font-weight:bold;" t-field="o.employee_id.residence_id" />
+                                    </t>
+                                    <t t-else="">
+                                        .....................
+                                    </t>
+                                    ،
+                                    <br />
+                                     قـد عمــل لـدينا بوظيفـة
+                                    <t t-if="o.company_id.with_context(lang='ar_001').name">
+                                        <span
+                                            style="font-weight:bold;"
+                                            t-field="o.job_id.with_context(lang='ar_001').name"
+                                        />
+                                    </t>
+                                    <t t-else="">
+                                        .................................
+                                    </t>
+                                    ،
+                                    <br />
+                                     خـلال الفتـرة مـن
+                                    <t t-if="o.employee_id.date_direct_action">
+                                        <span
+                                            style="font-weight:bold;"
+                                            t-field="o.employee_id.date_direct_action"
+                                            t-options='{"format": "YYYY/MM/dd"}'
+                                        />
+                                    </t>
+                                    <t t-else="">
+                                        .................................
+                                    </t>
+                                    م حتى
+                                    <br />
+                                    <t t-if="o.last_worked_date">
+                                        <span
+                                            style="font-weight:bold;"
+                                            t-field="o.last_worked_date"
+                                            t-options='{"format": "YYYY/MM/dd"}'
+                                        />
+                                    </t>
+                                    <t t-else="">
+                                        .................................
+                                    </t>
+                                    م.
+                                    <br />
+                                    <br />
+                                    وكان المذكور طيلة فترة عمله بالشركة حسن السيرة والسلوك.
+                                    <br />
+                                    <br />
+                                    ومن خلال هذا تؤكد الشركة انه قد تم إبراء
+                                    ذمته من كل ما عليه من إلتزامات للشركة ولم
+                                    يعد لها من طرفه أي دعوى أو طلب.
+                                    <br />
+                                    <br />
+                                    وقد أعطيت له هذه الشهادة بناءً على طلبه
+                                    دون أدنى مسؤولية على الشركة.
+                                    <br />
+
+                                </td>
+                                <td style="padding:5px; direction:ltr;" class="text-right" width="50%">
+                                   <t t-if="o.company_id.with_context(lang='EN').name">
+                                        <span
+                                            style="font-weight:bold;"
+                                            t-field="o.company_id.with_context(lang='EN').name"
+                                        />
+                                    </t>
+                                    <t t-else="">
+                                        .................................
+                                    </t>
+                                    Company
+                                    <br />
+                                    certifies that Mr.
+                                    <t t-if="o.employee_id.display_name_en">
+                                        <span style="font-weight:bold;" t-field="o.employee_id.display_name_en" />
+                                    </t>
+                                    <t t-else="">
+                                        .................................
+                                    </t>
+                                    ,
+                                    <br />
+                                    citizen:
+                                    <t t-if="o.employee_id.country_id.with_context(lang='en_US').name">
+                                        <span
+                                            style="font-weight:bold;"
+                                            t-field="o.employee_id.country_id.with_context(lang='en_US').name"
+                                        />
+                                    </t>
+                                    <t t-else="">
+                                        .................................
+                                    </t>
+                                    <br />
+                                    ID No.
+                                    <t t-if="o.employee_id.identification_id and o.employee_id.country_id.code=='SA'">
+                                        <span style="font-weight:bold;" t-field="o.employee_id.identification_id" />
+                                    </t>
+                                    <t t-elif="o.employee_id.residence_id and o.employee_id.country_id.code">
+                                        <span style="font-weight:bold;" t-field="o.employee_id.residence_id" />
+                                    </t>
+                                    <t t-else="">
+                                        .....................
+                                    </t>
+                                    ،
+                                    <br />
+                                     Has worked as
+                                    <t t-if="o.job_id.with_context(lang='en_US').name">
+                                        <span
+                                            style="font-weight:bold;"
+                                            t-field="o.job_id.with_context(lang='en_US').name"
+                                        />
+                                    </t>
+                                    <t t-else="">
+                                        .................................
+                                    </t>
+                                    ،
+                                    <br />
+                                     for the period from
+                                    <t t-if="o.employee_id.date_direct_action">
+                                        <span
+                                            style="font-weight:bold;"
+                                            t-field="o.employee_id.date_direct_action"
+                                            t-options='{"format": "dd/MM/YYYY"}'
+                                        />
+                                    </t>
+                                    <t t-else="">
+                                        .................................
+                                    </t>
+                                    up to
+                                    <br />
+                                    <t t-if="o.last_worked_date">
+                                        <span
+                                            style="font-weight:bold;"
+                                            t-field="o.last_worked_date"
+                                            t-options='{"format": "dd/MM/YYYY"}'
+                                        />
+                                    </t>
+                                    <t t-else="">
+                                        .................................
+                                    </t>
+                                    .
+                                    <br />
+                                    <br />
+                                    Throughout his service, we found discipline, good conduct as his behavior.
+                                    <br />
+                                    <br />
+                                    Through this company emphasizes that he had been discharged from all its
+                                    obligations to the company no longer has the tip of any claim or demand.
+                                    <br />
+                                    <br />
+                                    This certificate is issued upon his request
+                                    without any obligation on our part.
+                                    <br />
+
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="row">
+                            <div class="col-12">
+                                <span style="font-size:28px; font-weight:bold;">
+                                والله الموفق...
+                                </span>
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="row">
+                            <div class="col-8" />
+                            <div class="col-4 text-center">
+                                <span style="font-size:22px; font-weight:bold;">
+                                    Ch. Executive Officer
+                                </span>
+                            </div>
+                        </div>
+
+                        <br />
+
+                        <t t-set="approver" t-value="o.get_approvals('المدير التنفيذي')" />
+                        <t t-if="not approver">
+                            <t t-set="approver" t-value="o.get_approvals('Executive Manager')" />
+                        </t>
+
+                        <div class="row">
+                            <div class="col-8" />
+                            <div class="col-4 text-center">
+                                <t t-if="approver">
+                                        <span style="font-size:22px; font-weight:bold;" t-esc="approver" />
+                                    </t>
+                                    <t t-else="">
+                                        .................................
+                                    </t>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <record id="paperformat_clearance_certificate" model="report.paperformat">
+        <field name="name">Direct Action paperformat</field>
+        <field name="default" eval="True" />
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">4</field>
+        <field name="margin_bottom">20</field>
+        <field name="margin_left">20</field>
+        <field name="margin_right">20</field>
+        <field name="header_line" eval="False" />
+        <field name="header_spacing">0</field>
+        <field name="dpi">90</field>
+    </record>
+    <record id="action_report_clearance_certificate" model="ir.actions.report">
+        <field name="name">Service and Clearance Certificate - شـهادة خـدمة وإخلاء طرف</field>
+        <field name="print_report_name">(object.employee_id.name + '_clearance_certificate.pdf')</field>
+        <field name="model">hr.resignation</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hr_resignation.clearance_certificate_report</field>
+        <field name="report_file">hr_resignation.clearance_certificate_report</field>
+        <field name="binding_model_id" eval="False" />
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="paperformat_clearance_certificate" />
+    </record>
+</odoo>

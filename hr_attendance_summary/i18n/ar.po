@@ -1,0 +1,453 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_attendance_summary
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-30 14:25+0000\n"
+"PO-Revision-Date: 2022-05-30 14:25+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+
+#. module: hr_attendance_summary
+#: code:addons/hr_attendance_summary/report/hr_attendance_summary_report.py:0
+#, python-format
+msgid ""
+"<div> <h4>Hello %s  </h4><br /><br />the Attendance Summary Report has been "
+"attached to you,We also inform you of the following: <ul><li>Worked hours "
+"are considered only between 9AM and 5PM. </li><li> If there is only one "
+"fingerprint, whether, for entry or exit, you will be considered that you "
+"worked only half of the day, which are four hours. </li><li>Absences days "
+"will be deducted. </li><li>Late hours will be deducted. </li><li>You will "
+"find everything mentioned in the system, including permissions and "
+"deputation, in the notes.</li><li>We hope that you will add the hours of "
+"delay, early departure or leaves in the system, and if there is no "
+"justification within two working days, it will be deducted according to the "
+"system.</li></ul><br /> If you have any questions or comments, we are happy "
+"to contact you. <br /> <h4>Cordially </h4><br /></div>"
+msgstr ""
+"<div> عزيزي الموظف %s <br />"
+"السلام عليكم ورحمة الله وبركاته <br />"
+"<br /><br />مرفق لكم كشف الحضور والانصراف للفترة "
+"الموضحة في التقرير، كما نحيطكم بما يلي: <ul><li>تم حساب ساعات العمل  "
+"فقط بين الساعة التاسعة صباحاً والساعة الخامسة مساءًا. </li><li> في حال وجود بصمة واحدة "
+"فقط سواءاً للدخول أو الخروج فيتم تسجيل ذلك اليوم بنصف ساعات العمل "
+"وهي أربع ساعات . </li><li>بخصوص أيام الغياب،  "
+" سيتم خصمها. </li><li>بخصوص ساعات التأخير، سيتم خصمها. </li><li> "
+"تم تسجيل كل ماورد في النظام الإلكتروني من إجازات واستئذانات  "
+"وانتدابات في خانة الملاحظات.</li><li>نأمل منكم رفع ساعات "
+" التأخير أو الخروج المبكر أو الاجازات في النظام  "
+"وفي حال عدم وجود أي مبرر خلال يومي عمل سيتم خصمها حسب  "
+"النظام.</li></ul><br /> وفي حال وجود أي استفسار أو ملاحظة نسعد  "
+"بتواصلكم. <br /> <h4>مع التحية والتقدير </h4><br /></div>"
+
+
+#. module: hr_attendance_summary
+#: model_terms:ir.ui.view,arch_db:hr_attendance_summary.res_config_settings_view_form_inherit_hr_attendance_summary
+msgid "<span class=\"o_form_label\">Manual pointing</span>"
+msgstr "<span class=\"o_form_label\">إضافة البصمة يدويا</span>"
+
+#. module: hr_attendance_summary
+#: model_terms:ir.ui.view,arch_db:hr_attendance_summary.hr_attendance_summary_template
+msgid ""
+"<strong>\n"
+"                                                            Attendance Summary Report\n"
+"                                                        </strong>\n"
+"\n"
+"                                                        <br/>"
+msgstr ""
+"<strong>\n"
+"                                                            تقرير الحضور والإنصراف\n"
+"                                                        </strong>\n"
+"\n"
+"                                                        <br/>"
+
+#. module: hr_attendance_summary
+#: model_terms:ir.ui.view,arch_db:hr_attendance_summary.hr_attendance_summary_template
+msgid "<strong>Period</strong>"
+msgstr "<strong>الفترة</strong>"
+
+#. module: hr_attendance_summary
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_summary_line__absence_hours
+#: model_terms:ir.ui.view,arch_db:hr_attendance_summary.hr_attendance_summary_template
+msgid "Absence Hours"
+msgstr "ساعات الغياب"
+
+#. module: hr_attendance_summary
+#: model:ir.model.fields.selection,name:hr_attendance_summary.selection__hr_attendance_summary_line__presence_state__absent
+msgid "Absent"
+msgstr "غائب"
+
+#. module: hr_attendance_summary
+#: model:ir.model,name:hr_attendance_summary.model_hr_attendance
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_summary_line__attendance_ids
+msgid "Attendance"
+msgstr "الحضور و الإنصراف"
+
+#. module: hr_attendance_summary
+#: model:ir.model,name:hr_attendance_summary.model_hr_attendance_report
+msgid "Attendance Report"
+msgstr "تقرير الحضور والإنصراف"
+
+#. module: hr_attendance_summary
+#: model_terms:ir.ui.view,arch_db:hr_attendance_summary.res_config_settings_view_form_inherit_hr_attendance_summary
+msgid "Attendance Summary"
+msgstr "ملخص الحضور و الإنصراف"
+
+#. module: hr_attendance_summary
+#: code:addons/hr_attendance_summary/report/hr_attendance_summary_report.py:0
+#: code:addons/hr_attendance_summary/report/hr_attendance_summary_report.py:0
+#: model:ir.actions.act_window,name:hr_attendance_summary.hr_attendance_report_action
+#: model:ir.actions.report,name:hr_attendance_summary.hr_attendance_summary_report
+#: model:ir.ui.menu,name:hr_attendance_summary.hr_attendance_report__menu
+#, python-format
+msgid "Attendance Summary Report"
+msgstr "تقرير الحضور والإنصراف"
+
+#. module: hr_attendance_summary
+#: model:ir.actions.report,name:hr_attendance_summary.hr_attendance_summary_report_xlsx
+msgid "Attendance Summary Report Excel"
+msgstr "تقرير ملخص الحضور و الإنصراف اكسيل"
+
+#. module: hr_attendance_summary
+#: model:ir.model,name:hr_attendance_summary.model_report_hr_attendance_summary_hr_attendance_summary_template
+msgid "Attendance Summary Reports"
+msgstr "تقرير ملخص الحضور و الإنصراف"
+
+#. module: hr_attendance_summary
+#: model_terms:ir.ui.view,arch_db:hr_attendance_summary.hr_attendance_summary_template
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_summary_line__check_in_date
+msgid "Check In"
+msgstr "الدخول"
+
+#. module: hr_attendance_summary
+#: model_terms:ir.ui.view,arch_db:hr_attendance_summary.hr_attendance_summary_template
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_summary_line__check_out_date
+msgid "Check Out"
+msgstr "الخروج"
+
+#. module: hr_attendance_summary
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_summary_line__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: hr_attendance_summary
+#: model:ir.model,name:hr_attendance_summary.model_res_config_settings
+msgid "Config Settings"
+msgstr "ضبط الاعدادات"
+
+#. module: hr_attendance_summary
+#: model:ir.actions.server,name:hr_attendance_summary.cron_attendance_summary_ir_actions_server
+#: model:ir.cron,cron_name:hr_attendance_summary.cron_attendance_summary
+#: model:ir.cron,name:hr_attendance_summary.cron_attendance_summary
+msgid "Create summary for employees"
+msgstr "إنشاء ملخص للموظفين"
+
+#. module: hr_attendance_summary
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_report__create_uid
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_summary__create_uid
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_summary_line__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hr_attendance_summary
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_report__create_date
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_summary__create_date
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_summary_line__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hr_attendance_summary
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_summary__date
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_summary_line__date
+#: model_terms:ir.ui.view,arch_db:hr_attendance_summary.hr_attendance_summary_template
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: hr_attendance_summary
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_summary_line__delay_hours
+#: model_terms:ir.ui.view,arch_db:hr_attendance_summary.hr_attendance_summary_template
+msgid "Delay"
+msgstr "تأخير"
+
+#. module: hr_attendance_summary
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_summary_line__delay_hours_manuel
+msgid "Manual Delay"
+msgstr "التأخير المدخل يدويا"
+
+#. module: hr_attendance_summary
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_report__department_id
+#: model_terms:ir.ui.view,arch_db:hr_attendance_summary.hr_attendance_summary_template
+msgid "Department"
+msgstr "الادارة"
+
+#. module: hr_attendance_summary
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance__display_name
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_report__display_name
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_summary__display_name
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_summary_line__display_name
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_leave__display_name
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_report_hr_attendance_summary_hr_attendance_summary_template__display_name
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_report_hr_attendance_summary_report_attendance_summary_xlsx__display_name
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_attendance_summary
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_report__employee_id
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_summary_line__employee_id
+#: model_terms:ir.ui.view,arch_db:hr_attendance_summary.hr_attendance_summary_template
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_attendance_summary
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_report__date_from
+msgid "From"
+msgstr "تاريخ من"
+
+#. module: hr_attendance_summary
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_summary_line__worked_hours
+#: model_terms:ir.ui.view,arch_db:hr_attendance_summary.hr_attendance_summary_template
+msgid "Hours worked"
+msgstr "ساعات العمل"
+
+#. module: hr_attendance_summary
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_summary_line__worked_hours_manuel
+msgid "Manual Hours worked"
+msgstr "ساعات العمل المدخلة يدويا"
+
+#. module: hr_attendance_summary
+#: model:ir.model,name:hr_attendance_summary.model_hr_attendance_summary
+msgid "Hr attendance summary"
+msgstr "ملخص الحضور و الإنصراف"
+
+#. module: hr_attendance_summary
+#: model:ir.model,name:hr_attendance_summary.model_hr_attendance_summary_line
+msgid "Hr attendance summary line"
+msgstr "خط ملخص الحضور و الإنصراف"
+
+#. module: hr_attendance_summary
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance__id
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_report__id
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_summary__id
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_summary_line__id
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_leave__id
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_report_hr_attendance_summary_hr_attendance_summary_template__id
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_report_hr_attendance_summary_report_attendance_summary_xlsx__id
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_res_config_settings__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_attendance_summary
+#: model:ir.model.fields.selection,name:hr_attendance_summary.selection__hr_attendance_summary_line__presence_state__service
+msgid "In service"
+msgstr "في الخدمة"
+
+#. module: hr_attendance_summary
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance____last_update
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_report____last_update
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_summary____last_update
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_summary_line____last_update
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_leave____last_update
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_report_hr_attendance_summary_hr_attendance_summary_template____last_update
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_report_hr_attendance_summary_report_attendance_summary_xlsx____last_update
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_res_config_settings____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_attendance_summary
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_report__write_uid
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_summary__write_uid
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_summary_line__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_attendance_summary
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_report__write_date
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_summary__write_date
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_summary_line__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_attendance_summary
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_res_config_settings__group_attendance_manual_pointing
+#: model:res.groups,name:hr_attendance_summary.group_manual_pointing
+msgid "Manual pointing"
+msgstr "إضافة البصمة يدويا"
+
+#. module: hr_attendance_summary
+#: model:ir.model.fields.selection,name:hr_attendance_summary.selection__hr_attendance_summary_line__presence_state__leave
+msgid "On leave"
+msgstr "في الإجازة"
+
+#. module: hr_attendance_summary
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_summary_line__overtime_hours
+#: model_terms:ir.ui.view,arch_db:hr_attendance_summary.hr_attendance_summary_template
+msgid "Overtime"
+msgstr "العمل الإضافي"
+
+#. module: hr_attendance_summary
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_summary_line__overtime_hours_manuel
+msgid "Manual Overtime"
+msgstr "العمل الإضافي المدخل يدويا"
+
+#. module: hr_attendance_summary
+#: model_terms:ir.ui.view,arch_db:hr_attendance_summary.hr_attendance_report_view_form
+msgid "Period"
+msgstr "الفترة"
+
+#. module: hr_attendance_summary
+#: model_terms:ir.ui.view,arch_db:hr_attendance_summary.hr_attendance_summary_template
+msgid "Presence State"
+msgstr "حالة الحضور"
+
+#. module: hr_attendance_summary
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_summary_line__presence_state
+msgid "Presence state"
+msgstr "حالة الحضور"
+
+#. module: hr_attendance_summary
+#: model_terms:ir.ui.view,arch_db:hr_attendance_summary.hr_attendance_report_view_form
+msgid "Print Attendance Summary PDF"
+msgstr "طباعة تقرير الحضور والإنصراف PDF"
+
+#. module: hr_attendance_summary
+#: model_terms:ir.ui.view,arch_db:hr_attendance_summary.hr_attendance_report_view_form
+msgid "Print Attendance Summary XLS"
+msgstr "طباعة تقرير الحضور والإنصراف XLS"
+
+#. module: hr_attendance_summary
+#: model:ir.ui.menu,name:hr_attendance_summary.hr_attendance_report_menu_root
+msgid "Reporting"
+msgstr "التقارير"
+
+#. module: hr_attendance_summary
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance__summary_id
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_summary_line__summary_id
+msgid "Summary"
+msgstr "الملخص"
+
+#. module: hr_attendance_summary
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_summary__line_ids
+msgid "Summary lines"
+msgstr "التلخيص"
+
+#. module: hr_attendance_summary
+#: model:ir.actions.act_window,name:hr_attendance_summary.hr_attendance_summary_action
+#: model:ir.ui.menu,name:hr_attendance_summary.hr_attendance_summary_menu
+msgid "Summary of attendances"
+msgstr "ملخص الحضور و الإنصراف"
+
+#. module: hr_attendance_summary
+#: model_terms:ir.ui.view,arch_db:hr_attendance_summary.hr_attendance_summary_view_form
+msgid "Summary of employee attendance"
+msgstr "ملخص الحضور و الإنصراف للموظف"
+
+#. module: hr_attendance_summary
+#: model:ir.model.constraint,message:hr_attendance_summary.constraint_hr_attendance_summary_unique_date
+msgid "The date of summary must be unique!"
+msgstr "يجب أن يكون كل تاريخ فريد من نوعه!"
+
+#. module: hr_attendance_summary
+#: model:ir.model,name:hr_attendance_summary.model_hr_leave
+msgid "Time Off"
+msgstr "الاجازات"
+
+#. module: hr_attendance_summary
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_report__date_to
+msgid "To"
+msgstr "تاريخ إلى"
+
+#. module: hr_attendance_summary
+#: model_terms:ir.ui.view,arch_db:hr_attendance_summary.hr_attendance_summary_template
+msgid "Total"
+msgstr "المجموع"
+
+#. module: hr_attendance_summary
+#: model_terms:ir.ui.view,arch_db:hr_attendance_summary.res_config_settings_view_form_inherit_hr_attendance_summary
+msgid "Use group manual pointing to edit attendance summary manual"
+msgstr "استخدم دليل المجموعة لتعديل دليل ملخص الحضور و الإنصراف"
+
+#. module: hr_attendance_summary
+#: model_terms:ir.ui.view,arch_db:hr_attendance_summary.hr_attendance_summary_template
+msgid "Not  completed"
+msgstr "غير مكتملة"
+
+#. module: hr_attendance_summary
+#: model_terms:ir.ui.view,arch_db:hr_attendance_summary.hr_attendance_summary_template
+msgid "Completed"
+msgstr "مكتملة"
+
+#. module: hr_attendance_summary
+#: model_terms:ir.ui.view,arch_db:hr_attendance_summary.hr_attendance_summary_template
+msgid "Worked hours state"
+msgstr "حالة إكتمال ساعات العمل"
+
+#. module: hr_attendance
+#: model:ir.ui.menu,name:hr_attendance.menu_hr_attendance_manage_attendances
+msgid "Manage Attendances"
+msgstr "إدارة الحضور"
+
+#. module: hr_attendance_summary
+#: model:ir.actions.act_window,name:hr_attendance_summary.hr_attendance_summary_line_action
+#: model:ir.ui.menu,name:hr_attendance_summary.hr_attendance_summary_line_menu
+msgid "Detail Summary Line"
+msgstr "تفاصيل ملخص الحضور و الإنصراف"
+
+#. module: hr_attendance_summary
+#: model_terms:ir.ui.view,arch_db:hr_attendance_summary.hr_attendance_summary_line_view_search
+msgid "Today"
+msgstr "اليوم"
+
+#. module: hr_attendance_summary
+#: model_terms:ir.ui.view,arch_db:hr_attendance_summary.hr_attendance_summary_line_view_search
+msgid "Grouped by"
+msgstr "تجميع حسب"
+
+#. module: hr_attendance_summary
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_resource_calendar__late
+msgid "Delay Hours Allowed"
+msgstr "عدد ساعات التأخير المسموح بها"
+
+#. module: hr_attendance_summary
+#: model:ir.ui.menu,name:hr_attendance_summary.resource_calendar_menu_attendance
+msgid "Working Times"
+msgstr "فترات العمل"
+
+#. module: hr_attendance_summary
+#: model:ir.actions.act_window,name:hr_attendance_summary.hr_attendance_report_notification
+#: model:ir.ui.menu,name:hr_attendance_summary.hr_attendance_notification_menu
+msgid "Attendance Notification"
+msgstr "اشعارات الحضور و الانصراف"
+
+#. module: hr_attendance_summary
+#: model_terms:ir.ui.view,arch_db:hr_attendance_summary.hr_attendance_report_view_form
+msgid "Send Attendance Summary to employees"
+msgstr " إرسال تقرير الحضور والانصراف للموظفين"
+
+#. module: hr_attendance_summary
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_resource_calendar__early_exit
+msgid "Early Exit Allowed"
+msgstr "عدد  دقائق الإنصراف المبكر المسموح بها"
+
+#. module: hr_attendance_summary
+#: model:ir.model.fields,field_description:hr_attendance_summary.field_hr_attendance_summary_line__early_exit_hours
+msgid "Early Exit Hours"
+msgstr "خروج مبكر"
+
+#. module: hr_attendance
+#: model:ir.ui.menu,name:hr_attendance.menu_hr_attendance_root
+msgid "Attendances And Departures"
+msgstr "الحضور و الإنصراف"
+
+#. module: hr_attendance_summary
+#: model:ir.actions.act_window,name:hr_attendance_summary.hr_attendance_action_my
+msgid "Attendances"
+msgstr "الحضور"

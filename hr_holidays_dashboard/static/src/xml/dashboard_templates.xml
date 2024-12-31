@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+    <t t-extend="hr_dashboard.graphs">
+        <t t-jquery="div.row_hr" t-operation="before">
+            <div class="col-md-4 col-sm-4 col-xs-4">
+                <div class="box box-success  pull-left">
+                    <div class="box-header with-border">
+                        <strong>holidays by types</strong>
+                    </div>
+                    <div class="box-body">
+                          <div class="chart">
+                              <canvas id="bar_hr_holiday_dashboard" />
+                          </div>
+                      </div>
+                </div>
+            </div>
+        </t>
+    </t>
+
+</templates>

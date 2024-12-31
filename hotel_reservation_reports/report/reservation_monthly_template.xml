@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="report_reservation_monthly">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <div class="header" />
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="row">
+                            <div class="col-3">
+                            </div>
+                            <div class="col-6 text-center">
+                                <center>
+                                    <h1 style="color:#507298;padding-top:20px;">
+                                        <strong style="font-size: 25px;" t-if="o.report_type == 'collection'">
+                                             Monthly revenue and receipts report
+                                        </strong>
+                                           <strong style="font-size: 25px;" t-if="o.report_type == 'total'">
+                                             Report of total monthly revenues and receipts
+                                        </strong>
+                                    </h1>
+                                </center>
+                            </div>
+                            <div class="col-3">
+                                <img
+                                    style="max-height:120px !important;"
+                                    width="80%"
+                                    t-att-src="'data:image/png;base64,%s' % to_text(user.company_id.sudo().logo)"
+                                />
+
+                            </div>
+                        </div>
+                        <div class="oe_structure" />
+                         <div class="col-12 text-center">
+                              <strong>Month :</strong>
+                            <span t-field="o.month" />
+                            <br />
+                            <br />
+
+                        </div>
+                        <br />
+                        <t t-if="o.report_type == 'collection'">
+                        <t t-set="companies" t-value="get_lines(o)[0].mapped('company_id')" />
+                         <t t-foreach="companies" t-as="company">
+                        <table class="table nowrap table-bordered">
+                            <tr style="background-color: #00b7ff;
+  color: #fff;">
+                                <td><strong>Company</strong></td>
+                                <td><strong>Operation</strong></td>
+                                 <t t-foreach="range(1, 32)" t-as="num">
+                                         <td><t t-esc="num" /></td>
+                                    </t>
+<!--                                <td><strong>Room number</strong></td>-->
+<!--                                <td><strong>Invoice Date</strong></td>-->
+<!--                                <td><strong>Date From</strong></td>-->
+<!--                                <td><strong>Date To</strong></td>-->
+<!--                                <td><strong>Days Number</strong></td>-->
+<!--                                <td><strong>Type</strong></td>-->
+<!--                                 <td><strong>Amount Total</strong></td>-->
+<!--                                 <td><strong>Amount without Tax/Fees</strong></td>-->
+<!--                                 <td><strong>Tax/Fees</strong></td>-->
+                            </tr>
+                                <tr>
+
+                                    <td><span t-esc="company.name" /></td>
+                                    <td><span>Revenue</span></td>
+                                         <t t-foreach="range(1, 32)" t-as="num">
+                                     <td>
+<!--                                                 <t t-esc="get_lines(o)[0].filtered(lambda line: line.company_id == company and line.create_date.day == num)"/>-->
+<!--                                 <t t-foreach="res" t-as="get_lines(o)[0].filtered(lambda line: line.company_id == company and line.create_date.day == num)">-->
+<!--                                     <span t-esc="res.create_date"/>-->
+<!--                                 </t>-->
+                                         <t
+                                                    t-esc="'%.2f' % sum(get_lines(o)[0].filtered(lambda line: line.company_id == company and int(line.create_date.day) == int(num))
+                                     .mapped('final_cost'))"
+                                                />
+
+                                     </td>
+                                    </t>
+
+                                </tr>
+
+                              <tr>
+
+                                    <td><span t-esc="company.name" /></td>
+                                    <td><span>Service</span></td>
+                                         <t t-foreach="range(1, 32)" t-as="num">
+                                     <td>
+<!--                                                 <t t-esc="get_lines(o)[0].filtered(lambda line: line.company_id == company and line.create_date.day == num)"/>-->
+<!--                                 <t t-foreach="res" t-as="get_lines(o)[0].filtered(lambda line: line.company_id == company and line.create_date.day == num)">-->
+<!--                                     <span t-esc="res.create_date"/>-->
+<!--                                 </t>-->
+                                        <span>0</span>
+
+                                     </td>
+                                    </t>
+
+                                </tr>
+
+                              <tr>
+
+                                    <td><span t-esc="company.name" /></td>
+                                    <td><span>Inbound</span></td>
+                                         <t t-foreach="range(1, 32)" t-as="num">
+                                     <td>
+<!--                                                 <t t-esc="get_lines(o)[0].filtered(lambda line: line.company_id == company and line.create_date.day == num)"/>-->
+<!--                                 <t t-foreach="res" t-as="get_lines(o)[0].filtered(lambda line: line.company_id == company and line.create_date.day == num)">-->
+<!--                                     <span t-esc="res.create_date"/>-->
+<!--                                 </t>-->
+                                         <t
+                                                    t-esc="'%.2f' % sum(get_lines(o)[2].filtered(lambda line: line.company_id == company and int(line.create_date.day) == int(num))
+                                     .mapped('amount'))"
+                                                />
+
+                                     </td>
+                                    </t>
+
+                                </tr>
+
+                              <tr>
+
+                                    <td><span t-esc="company.name" /></td>
+                                    <td><span>Outbound</span></td>
+                                         <t t-foreach="range(1, 32)" t-as="num">
+                                     <td>
+<!--                                                 <t t-esc="get_lines(o)[0].filtered(lambda line: line.company_id == company and line.create_date.day == num)"/>-->
+<!--                                 <t t-foreach="res" t-as="get_lines(o)[0].filtered(lambda line: line.company_id == company and line.create_date.day == num)">-->
+<!--                                     <span t-esc="res.create_date"/>-->
+<!--                                 </t>-->
+                                         <t
+                                                    t-esc="'%.2f' % sum(get_lines(o)[1].filtered(lambda line: line.company_id == company and int(line.create_date.day) == int(num))
+                                     .mapped('amount'))"
+                                                />
+
+                                     </td>
+                                    </t>
+
+                                </tr>
+
+
+                        </table>
+                         </t>
+                        </t>
+                         <t t-else="">
+                             <t t-set="companies" t-value="get_lines(o)[1].mapped('company_id')" />
+                         <t t-foreach="companies" t-as="company">
+                        <table class="table nowrap table-bordered">
+                            <tr style="background-color: #00b7ff;
+  color: #fff;">
+                                <td><strong>Company</strong></td>
+                                <td><strong>Operation</strong></td>
+                                 <t t-foreach="range(1, 32)" t-as="num">
+                                         <td><t t-esc="num" /></td>
+                                    </t>
+<!--                                <td><strong>Room number</strong></td>-->
+<!--                                <td><strong>Invoice Date</strong></td>-->
+<!--                                <td><strong>Date From</strong></td>-->
+<!--                                <td><strong>Date To</strong></td>-->
+<!--                                <td><strong>Days Number</strong></td>-->
+<!--                                <td><strong>Type</strong></td>-->
+<!--                                 <td><strong>Amount Total</strong></td>-->
+<!--                                 <td><strong>Amount without Tax/Fees</strong></td>-->
+<!--                                 <td><strong>Tax/Fees</strong></td>-->
+                            </tr>
+
+                              <tr>
+
+                                    <td><span t-esc="company.name" /></td>
+                                    <td><span>Inbound</span></td>
+                                         <t t-foreach="range(1, 32)" t-as="num">
+                                     <td>
+<!--                                                 <t t-esc="get_lines(o)[0].filtered(lambda line: line.company_id == company and line.create_date.day == num)"/>-->
+<!--                                 <t t-foreach="res" t-as="get_lines(o)[0].filtered(lambda line: line.company_id == company and line.create_date.day == num)">-->
+<!--                                     <span t-esc="res.create_date"/>-->
+<!--                                 </t>-->
+                                         <t
+                                                    t-esc="'%.2f' % sum(get_lines(o)[2].filtered(lambda line: line.company_id == company and int(line.create_date.day) == int(num))
+                                     .mapped('amount'))"
+                                                />
+
+                                     </td>
+                                    </t>
+
+                                </tr>
+
+                              <tr>
+
+                                    <td><span t-esc="company.name" /></td>
+                                    <td><span>Outbound</span></td>
+                                         <t t-foreach="range(1, 32)" t-as="num">
+                                     <td>
+<!--                                                 <t t-esc="get_lines(o)[0].filtered(lambda line: line.company_id == company and line.create_date.day == num)"/>-->
+<!--                                 <t t-foreach="res" t-as="get_lines(o)[0].filtered(lambda line: line.company_id == company and line.create_date.day == num)">-->
+<!--                                     <span t-esc="res.create_date"/>-->
+<!--                                 </t>-->
+                                         <t
+                                                    t-esc="'%.2f' % sum(get_lines(o)[1].filtered(lambda line: line.company_id == company and int(line.create_date.day) == int(num))
+                                     .mapped('amount'))"
+                                                />
+
+                                     </td>
+                                    </t>
+
+                                </tr>
+
+                              <tr>
+
+                                    <td><span t-esc="company.name" /></td>
+                                    <td><span>To Bank</span></td>
+                                         <t t-foreach="range(1, 32)" t-as="num">
+                                     <td>
+<!--                                                 <t t-esc="get_lines(o)[0].filtered(lambda line: line.company_id == company and line.create_date.day == num)"/>-->
+<!--                                 <t t-foreach="res" t-as="get_lines(o)[0].filtered(lambda line: line.company_id == company and line.create_date.day == num)">-->
+<!--                                     <span t-esc="res.create_date"/>-->
+<!--                                 </t>-->
+                                         <t
+                                                    t-esc="'%.2f' % sum(get_lines(o)[4].filtered(lambda line: line.company_id == company and int(line.write_date.day) == int(num))
+                                     .mapped('amount'))"
+                                                />
+
+                                     </td>
+                                    </t>
+
+                                </tr>
+
+                              <tr>
+
+                                    <td><span t-esc="company.name" /></td>
+                                    <td><span>From Bank</span></td>
+                                         <t t-foreach="range(1, 32)" t-as="num">
+                                     <td>
+<!--                                                 <t t-esc="get_lines(o)[0].filtered(lambda line: line.company_id == company and line.create_date.day == num)"/>-->
+<!--                                 <t t-foreach="res" t-as="get_lines(o)[0].filtered(lambda line: line.company_id == company and line.create_date.day == num)">-->
+<!--                                     <span t-esc="res.create_date"/>-->
+<!--                                 </t>-->
+                                         <t
+                                                    t-esc="'%.2f' % sum(get_lines(o)[3].filtered(lambda line: line.company_id == company and int(line.write_date.day) == int(num))
+                                     .mapped('amount'))"
+                                                />
+
+                                     </td>
+                                    </t>
+
+                                </tr>
+
+
+                        </table>
+                         </t>
+
+
+                         </t>
+
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

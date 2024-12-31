@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="assets" inherit_id="point_of_sale.assets">
+        <xpath expr="." position="inside">
+            <script
+                type="text/javascript"
+                src="/pos_partner_info/static/src/js/models.js"
+            />
+            <script
+                type="text/javascript"
+                src="/pos_partner_info/static/src/js/db.js"
+            />
+            <script
+                type="text/javascript"
+                src="/pos_partner_info/static/src/js/OrderManagementControlPanel.js"
+            />
+            <script
+                type="text/javascript"
+                src="/pos_partner_info/static/src/js/OrderManagementScreen.js"
+            />
+        </xpath>
+    </template>
+</odoo>

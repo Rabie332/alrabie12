@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <menuitem id="menu_housing_root"
+              name="Employee Housing"
+              web_icon="employee_housing,static/description/icon.png"
+              sequence="0"/>
+  <record id="housing_building_action" model="ir.actions.act_window">
+    <field name="name">Buildings</field>
+    <field name="res_model">housing.building</field>
+    <field name="view_mode">kanban,tree,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">
+                Create your first building
+            </p>
+      <p>
+                here you can add all buildings
+            </p>
+    </field>
+  </record>
+  <menuitem id="menu_housing_buildings"
+              name="Buildings"
+              parent="menu_housing_root"
+              action="housing_building_action"
+              sequence="1"
+              />
+  <record id="housing_building_form_view" model="ir.ui.view">
+    <field name="name">housing.building.form.view</field>
+    <field name="model">housing.building</field>
+    <field name="arch" type="xml">
+      <form string="building">
+        <sheet>
+          <div class="oe_title">
+            <h1>
+              <field name="name"/>
+            </h1>
+          </div>
+          <group>
+            <group>
+              <field name="number_of_units"/>
+            </group>
+            <group>
+              <field name="occupancy" widget="percentpie"/>
+            </group>
+            <group>
+              <field name="responsible_id" options="{'no_open': True}"/>
+            </group>
+          </group>
+          <notebook>
+            <page string="Attachments">
+              <group>
+                <!-- widget="many2many_binary" -->
+                <field name="attachmentss" widget="many2many_binary"/>
+              </group>
+            </page>
+            <page string="Address">
+              <group>
+                <field name="city"/>
+                <field name="district"/>
+                <field name="national_address" string="National Address"/>
+              </group>
+            </page>
+            <page string="Units">
+              <group>
+                <field name="unit_ids" string="Units"/>
+              </group>
+            </page>
+            <page string="Map'">
+              <group>
+                <field name="latitude" string="latitude"/>
+                <field name="longitude" string="longitude"/>
+                <field name="location" widget="html"/>
+              </group>
+            </page>
+          </notebook>
+        </sheet>
+        <div class="oe_chatter">
+          <field name="message_follower_ids" widget="mail_followers"/>
+          <field name="activity_ids" widget="mail_activity"/>
+          <field name="message_ids" widget="mail_thread"/>
+        </div>
+      </form>
+    </field>
+  </record>
+  <record id="housing_building_tree_view" model="ir.ui.view">
+    <field name="name">housing.building.tree.view</field>
+    <field name="model">housing.building</field>
+    <field name="arch" type="xml">
+      <tree string="">
+        <field name="name"/>
+        <field name="city"/>
+        <field name="district"/>
+        <field name="number_of_units"/>
+      </tree>
+    </field>
+  </record>
+  <record id="housing_building_kanban_view" model="ir.ui.view">
+    <field name="name">housing.building.kanban.view</field>
+    <field name="model">housing.building</field>
+    <field name="arch" type="xml">
+      <kanban records_draggable="false" quick_create="false" group_create="false"
+                    group_delete="false" group_edit="false">
+        <field name="name"/>
+        <field name="city"/>
+        <field name="district"/>
+        <field name="number_of_units"/>
+        <field name="occupancy"/>
+        <field name="max_rate"/>
+        <!-- <field name="total_busy_units"/> -->
+        <templates>
+          <t t-name="kanban-box">
+            <div class="oe_kanban_global_click">
+              <div class="text-center">
+                <h1>
+                  <field name="name"/>
+                </h1>
+              </div>
+              <hr class="mt8 mb8"/>
+              <div>
+                <field name="occupancy" widget="gauge"
+                        options="{'max_field': 'max_rate', 'style':'width:100%; height: 150px;',
+                        'title': 'Occupancy Rate %',}">
+                </field>
+              </div>
+              <hr class="mt8 mb8"/>
+              <div>
+                <strong>Total Units:
+                  <field name="number_of_units"/>
+                </strong>
+                <br/>
+                <strong class="text-danger">Full Units:
+                  <field name="total_full_units"/>
+                </strong>
+                <br/>
+                <strong class="text-success">Available Units:
+                  <field name="total_available_units"/>
+                </strong>
+                <br/>
+                <strong class="text-warning">Partially Full:
+                  <field name="total_partially_full_units"/>
+                </strong>
+                <br/>
+              </div>
+            </div>
+          </t>
+        </templates>
+      </kanban>
+    </field>
+  </record>
+</odoo>

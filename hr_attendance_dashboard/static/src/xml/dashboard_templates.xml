@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t t-name="hr_attendance_dashboard.graphs">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="chart">
+                                    <canvas id="pieChartAttendance" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="progress-group" style="direction: rtl!important;">
+                                    <span class="progress-text"> &#160; On duty</span>
+                                    <span class="progress-number"><span class="all_employees_count"> 0</span>/<b
+                                            class="onduty"
+                                        >0</b>
+                                    </span>
+
+                                    <div class="progress sm">
+                                        <div class="progress-bar progress-bar-green" id="onduty_percentage" />
+                                    </div>
+                                </div>
+                                <div class="progress-group">
+                                    <span class="progress-text"> &#160; Delays</span>
+                                    <span class="progress-number"><span class="all_employees_count">0</span>/<b
+                                            class="delays"
+                                        >0</b>
+                                    </span>
+
+                                    <div class="progress sm">
+                                        <div class="progress-bar progress-bar-yellow" id="delays_percentage" />
+                                    </div>
+                                </div>
+                                <div class="progress-group">
+                                    <span class="progress-text"> &#160; Absences</span>
+                                    <span class="progress-number"><span class="all_employees_count">0</span>/<b
+                                            class="absences"
+                                        >0</b>
+                                    </span>
+
+                                    <div class="progress sm">
+                                        <div class="progress-bar progress-bar-red" id="absences_percentage" />
+                                    </div>
+                                </div>
+                                <div class="progress-group">
+                                    <span class="progress-text"> &#160; Justified absences</span>
+                                    <span class="progress-number"><span class="all_employees_count">0</span>/<b
+                                            class="justified_absences"
+                                        >0</b>
+                                    </span>
+
+                                    <div class="progress sm">
+                                        <div
+                                            class="progress-bar progress-bar-forestgreen-me"
+                                            id="justified_absences_percentage"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="progress-group">
+                                    <span class="progress-text"> &#160; Public holidays</span>
+                                    <span class="progress-number"><b class="public-holidays">0</b>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-footer">
+                        <div class="row">
+                            <div class="col-sm-2 col-xs-6">
+                                <div class="description-block border-right">
+                                    <h5 style="color:#00c0ef;font-size: 25px;" id="worked_hours">00:00</h5>
+                                    <span class="description-text">Scheduled working hours</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 col-xs-6">
+                                <div class="description-block border-right">
+                                    <h5 style="color:#00a65a;font-size: 25px;" id="real_worked_hours">00:00</h5>
+                                    <span class="description-text">Real worked hours</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-1 col-xs-6">
+                                <div class="description-block">
+                                    <h5 style="color:#00a65a;font-size: 25px;" id="overtime_hours">0</h5>
+                                    <span class="description-text">Overtime hours</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 col-xs-6">
+                                <div class="description-block border-right">
+                                    <h5 style="color:#ef7f00;font-size: 25px;" id="delay_hours">00:00</h5>
+                                    <span class="description-text">Delay hours</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-1 col-xs-6">
+                                <div class="description-block border-right">
+                                    <h5 style="color:#a7acb8;font-size: 25px;" id="authorization_hours">00:00</h5>
+                                    <span class="description-text">Authorizations hours</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-1 col-xs-6">
+                                <div class="description-block">
+                                    <h5 style="color:#a7acb8;font-size: 25px;" id="authorizations">0</h5>
+                                    <span class="description-text">Authorization</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>

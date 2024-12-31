@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="view_yard_container_tree" model="ir.ui.view">
+    <field name="name">tree_container_view</field>
+    <field name="model">yard.container</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="name"/>
+        <field name="display_name"/>
+        <field name="zone_id"/>
+        <field name="is_occupied"/>
+        <field name="occupied_by"/>
+      </tree>
+    </field>
+  </record>
+  <record id="view_yard_container_form" model="ir.ui.view">
+    <field name="name">form_container_view</field>
+    <field name="model">yard.container</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <group>
+            <field name="name"/>
+            <field name="display_name"/>
+            <field name="zone_id"/>
+            <field name="is_occupied"/>
+            <field name="occupied_by"/>
+          </group>
+        </sheet>
+        <div class="oe_chatter">
+          <field name="message_follower_ids" widget="mail_followers"/>
+          <field name="activity_ids" widget="mail_activity"/>
+          <field name="message_ids" widget="mail_thread"/>
+        </div>
+      </form>
+    </field>
+  </record>
+  <menuitem id="yard_root_menu" name="Yard"/>
+</odoo>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+  <!-- Add parent to search view of groups-->
+    <record
+        id="view_account_group_search_inherit_account_group"
+        model="ir.ui.view"
+    >
+        <field name="name">account.group.search.inherit</field>
+        <field name="model">account.group</field>
+        <field name="inherit_id" ref="account.view_account_group_search" />
+        <field name="arch" type="xml">
+            <search position="inside">
+                <filter
+                    string="Parent"
+                    name="parent"
+                    context="{'group_by':'parent_id'}"
+                />
+            </search>
+        </field>
+    </record>
+      <!-- Add parent to form view of groups-->
+
+     <record id="view_account_group__inherit_account_group" model="ir.ui.view">
+        <field name="name">account.group.form</field>
+        <field name="model">account.group</field>
+        <field name="inherit_id" ref="account.view_account_group_form" />
+        <field name="arch" type="xml">
+            <field name="company_id" position="before">
+               <field
+                    name="parent_id"
+                    readonly="0"
+                    options="{'no_create_edit': True}"
+                />
+
+            </field>
+        </field>
+    </record>
+  <!-- Create action for account group-->
+
+    <record id="action_account_group_all" model="ir.actions.act_window">
+        <field name="name">Groups</field>
+        <field name="res_model">account.group</field>
+        <field name="view_mode">tree,form</field>
+        <field
+            name="search_view_id"
+            ref="view_account_group_search_inherit_account_group"
+        />
+        <field name="view_id" ref="account.view_account_group_tree" />
+    </record>
+
+  <!-- Create menu for account group-->
+
+    <menuitem
+        id="account_group_menu"
+        name="Groups"
+        parent="account.account_account_menu"
+        action="action_account_group_all"
+        sequence="15"
+        groups="account.group_account_manager"
+    />
+</odoo>

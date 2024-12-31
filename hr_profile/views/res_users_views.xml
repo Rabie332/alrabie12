@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+     <record id="hr_user_view_form_inherit_hr_profile" model="ir.ui.view">
+        <field name="name">hr.user.preferences.view.form.profile.inherit</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="hr.res_users_view_form_profile" />
+        <field name="arch" type="xml">
+              <field name="employee_bank_account_id" position="attributes">
+                <attribute name="attrs">{}</attribute>
+                <attribute name="readonly">1</attribute>
+            </field>
+        </field>
+     </record>
+
+
+    <record id="hr_profile_res_users_view_form_inherit" model="ir.ui.view">
+        <field name="name">res.users.view.form.inherit.profile</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="hr_holidays.res_users_view_form" />
+        <field name="priority" eval="0" />
+        <field name="arch" type="xml">
+            <button name='%(hr_holidays.hr_leave_allocation_action_my)d' position="attributes">
+                <attribute name="invisible">1</attribute>
+            </button>
+            <field name="address_home_id" position="attributes">
+                <attribute name="attrs">{}</attribute>
+                 <attribute name="readonly">1</attribute>
+            </field>
+            <field name="private_email" position="attributes">
+                <attribute name="attrs">{'invisible': [('address_home_id', '=', False)]}
+                </attribute>
+            </field>
+            <field name="employee_phone" position="attributes">
+                <attribute name="attrs">{'invisible': [('address_home_id', '=', False)]}
+                </attribute>
+            </field>
+
+            <field name="km_home_work" position="attributes">
+                <attribute name="attrs">{}</attribute>
+            </field>
+
+            <field name="marital" position="attributes">
+                <attribute name="attrs">{}</attribute>
+            </field>
+            <field name="spouse_complete_name" position="attributes">
+                <attribute name="attrs">{'invisible': [('marital', 'not in', ['married', 'cohabitant'])]}
+                </attribute>
+            </field>
+            <field name="spouse_birthdate" position="attributes">
+                <attribute name="attrs">{'invisible': [('marital', 'not in', ['married', 'cohabitant'])]}
+                </attribute>
+            </field>
+
+            <field name="children" position="attributes">
+                <attribute name="attrs">{}</attribute>
+            </field>
+
+            <field name="emergency_contact" position="attributes">
+                <attribute name="attrs">{}</attribute>
+            </field>
+            <field name="emergency_phone" position="attributes">
+                <attribute name="attrs">{}</attribute>
+            </field>
+        </field>
+    </record>
+</odoo>

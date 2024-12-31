@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+     <data noupdate="1">
+        <record id="user_template_today_transaction" model="mail.template">
+            <field name="name">Today's Transaction Report</field>
+            <field name="model_id" ref="base.model_res_users" />
+             <field name="report_template" ref="clearance_reports.action_clearance_request_transport" />
+            <field name="report_name">Today's Transaction Report ${(object.name or '')}</field>
+
+            <field name="subject">Today's Transaction Report</field>
+            <field
+                name="email_from"
+            >${object.company_id.name|safe} &lt;${(object.company_id.email or user.email)|safe}&gt;</field>
+            <field name="email_to">${object.email_from|safe}</field>
+            <field name="body_html" type="html">
+                <tbody>
+                    <tr>
+                        <td align="center" style="min-width: 590px;">
+                            <table
+                                border="0"
+                                cellpadding="0"
+                                cellspacing="0"
+                                width="590"
+                                style="min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;"
+                            >
+                                <tr>
+                                    <td valign="top" style="font-size: 13px;">
+                                        <div>
+                                            Gentlemen of the Department of Transportation / Respected,
+                                            <br />
+                                            <br />
+                                            Attached to you the daily report of the new transactions in the transfer phase.
+                                            <br />
+                                            You can find more details by entering the transportation system.
+                                            <br />
+                                            Gratefully
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                 </tbody>
+             </field>
+            <field name="lang">${object.partner_id.lang}</field>
+            <field name="auto_delete" eval="False" />
+        </record>
+
+         <record id="mail_template_send_clearance_reports" model="mail.template">
+            <field name="name">Clearance Reports</field>
+            <field name="model_id" ref="base.model_res_partner" />
+            <field name="subject">${object.name} Report</field>
+            <field name="email_to">${(object.email) |safe}</field>
+            <field name="partner_to">${object.id}</field>
+            <field name="lang">${object.lang}</field>
+            <field name="body_html" type="html">
+                <tbody>
+                    <tr>
+                        <td align="center" style="min-width: 590px;">
+                            <table
+                                border="0"
+                                cellpadding="0"
+                                cellspacing="0"
+                                width="590"
+                                style="min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;"
+                            >
+                                <tr>
+                                    <td valign="top" style="font-size: 13px;">
+                                        <div>
+                                            <br />
+                                        Send Clearance request report
+                                            <br />
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </field>
+            <field name="report_template" ref="clearance_reports.clearance_request_partner_xlsx" />
+            <field name="auto_delete" eval="False" />
+        </record>
+     </data>
+</odoo>

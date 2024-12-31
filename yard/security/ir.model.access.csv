@@ -1,0 +1,6 @@
+id,name,model_id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+yard_user,Base User,yard.container,base.group_user,1,1,1,1
+yard_user1,Base User,yard.zone,base.group_user,1,1,1,1
+yard_user2,Base User,yard.blocks,base.group_user,1,1,1,1
+yard_user3,Base User,yard.block.line,base.group_user,1,1,1,1
+yard_user4,Base User,yard.truck.line,base.group_user,1,1,1,1

@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_clearance_request_portal,name_clearance_request_portal,clearance.model_clearance_request,base.group_portal,1,1,0,0
+access_clearance_request_shipment_type_portal,name_clearance_request_shipment_type_portal,clearance.model_clearance_request_shipment_type,base.group_portal,1,1,0,0
+access_clearance_shipment_type_size_portal,name_clearance_shipment_type_size_portal,clearance.model_clearance_shipment_type_size,base.group_portal,1,1,0,0

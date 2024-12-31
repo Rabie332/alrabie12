@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Upload a new version of the file -->
+    <record id="ir_attachment_version_upload_view_form" model="ir.ui.view">
+        <field name="model">ir.attachment.version.upload</field>
+        <field name="arch" type="xml">
+            <form string="Upload a new version of the file">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="datas" filename="name" />
+                            <field name="name" />
+                        </group>
+                    </group>
+                </sheet>
+                <footer>
+                    <button
+                        name="upload_version"
+                        string="Upload version"
+                        type="object"
+                        icon="fa-floppy-o"
+                        class="oe_inline"
+                    />
+                    <button string="Cancel" class="oe_link" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="ir_attachment_version_upload_action" model="ir.actions.act_window">
+        <field name="name">Upload new version</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ir.attachment.version.upload</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="ir_attachment_version_upload_view_form" />
+        <field name="target">new</field>
+    </record>
+
+    <!--Show versions-->
+    <record id="ir_attachment_version_list_view_form" model="ir.ui.view">
+        <field name="model">ir.attachment.version.list</field>
+        <field name="arch" type="xml">
+            <form string="Version" create="0" edite="0">
+                <sheet>
+                    <group>
+                        <field name="version_ids" nolabel="1" readonly="1">
+                            <tree>
+                                <field name="version" />
+                                <field name="create_date" />
+                                <field name="create_uid" />
+                                <button
+                                    name="download_attachment"
+                                    string="Download"
+                                    type="object"
+                                    icon="fa-cloud-download"
+                                    class="oe_inline"
+                                    style="color:#008000;"
+                                />
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+                <footer>
+                    <button string="Cancel" class="oe_link" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="ir_attachment_version_list_action" model="ir.actions.act_window">
+        <field name="name">Show versions</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ir.attachment.version.list</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="ir_attachment_version_list_view_form" />
+        <field name="target">new</field>
+    </record>
+</odoo>

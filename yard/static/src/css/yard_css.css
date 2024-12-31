@@ -1,0 +1,17 @@
+.yard_zone_container_ids {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.yard_zone_container_ids_lines {
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: center;
+  justify-content: center;
+  align-content: center; */
+}
+
+
+.oe_kanban_button{
+  width: 5rem;
+}

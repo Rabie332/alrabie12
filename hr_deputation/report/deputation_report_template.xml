@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="hr_deputation_report_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <div class="header">
+                    <div class="row">
+                        <div class="col-9" />
+                        <div class="col-3">
+                            <img
+                                t-att-src="image_data_uri(o.company_id.logo)"
+                                style="padding: height: 140px; width: 140px;"
+                                alt="logo"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <t t-call="web.internal_layout">
+                    <div class="page" style="font-size: 17px;">
+                        <div class="row">
+                            <div class="col-10 text-left">
+                                <span style="font-size:34px; font-weight:bold;">Deputation Request -
+                                    <t t-if="o.name" t-esc="o.name" />
+                                </span>
+                            </div>
+                            <div class="col-2" />
+                        </div>
+                        <br />
+                        <br />
+
+                        <table class="table-sm" width="100%" style="font-size:16px; padding:15px">
+                            <tr>
+                                <td
+                                    width="20%"
+                                    style="background-color:#F0EFEF; color:#A79559; border:none; padding:15px"
+                                >Requester
+                                </td>
+                                <td width="30%" style="background-color:#F0EFEF; padding:15px;">
+                                    <t t-if="o.name" t-esc="o.employee_id.name" />
+                                </td>
+                                <td
+                                    width="20%"
+                                    style="background-color:#F0EFEF; color:#A79559; padding:15px;"
+                                >Type of Request
+                                </td>
+                                <td width="30%" style="background-color:#F0EFEF; border:none; padding:15px;">
+                                    <span
+                                        t-if="o.with_context(lang='ar_001').type"
+                                        t-field="o.with_context(lang='ar_001').type"
+                                    />
+                                </td>
+                            </tr>
+                            <tr style="padding:15px;">
+                                <td
+                                    style="background-color:#F0EFEF; color:#A79559; border:none; padding:15px;"
+                                >Job Number
+                                </td>
+                                <td style="background-color:#F0EFEF; padding:15px;">
+                                    <t t-if="o.number" t-esc="o.number" />
+                                </td>
+                                <td style="background-color:#F0EFEF; color:#A79559; padding:15px;">Request Number
+                                </td>
+                                <td style="background-color:#F0EFEF; border:none; padding:15px;">
+                                    <t t-if="o.name" t-esc="o.name" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    style="background-color:#F0EFEF; color:#A79559; border:none; padding:15px;"
+                                >Job title
+                                </td>
+                                <td style="background-color:#F0EFEF; padding:15px;">
+                                    <t t-if="o.job_id.name" t-esc="o.job_id.name" />
+                                </td>
+                                <td style="background-color:#F0EFEF; color:#A79559; padding:15px;">Request date
+                                </td>
+                                <td style="background-color:#F0EFEF; border:none; padding:15px;">
+                                    <t t-if="o.date" t-esc="o.date" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    style="background-color:#F0EFEF; color:#A79559; border:none; padding:15px;"
+                                >Department
+                                </td>
+                                <td style="background-color:#F0EFEF; padding:15px;">
+                                    <t t-if="o.department_id.name" t-esc="o.department_id.name" />
+                                </td>
+                                <td style="background-color:#F0EFEF; color:#A79559; border:none; padding:15px;" />
+                                <td style="background-color:#F0EFEF; border:none; padding:15px;" />
+                            </tr>
+                        </table>
+
+                        <br />
+
+                        <table class="table table-sm table-bordered" width="100%" style="font-size:16px; border:none;">
+                            <tr>
+                                <t t-if="o.type=='internal'">
+                                    <td
+                                        width="25%"
+                                        style="background-color:#282D61; font-weight:bold; font-weight:bold; color:#FFFFFF; border:none;"
+                                    >
+                                        City
+                                    </td>
+                                </t>
+                                <t t-elif="o.type=='external'">
+                                    <t t-if="o.location_ids">
+                                        <td
+                                            width="25%"
+                                            style="background-color:#282D61; font-weight:bold; font-weight:bold; color:#FFFFFF; border:none;"
+                                        >
+                                            Country
+                                        </td>
+                                        <td
+                                            width="25%"
+                                            style="background-color:#282D61; font-weight:bold; font-weight:bold; color:#FFFFFF; border:none;"
+                                        >
+                                            City
+                                        </td>
+                                    </t>
+                                </t>
+                                <td
+                                    width="25%"
+                                    style="background-color:#282D61; font-weight:bold; font-weight:bold; color:#FFFFFF; border:none;"
+                                >
+                                    Start Date
+                                </td>
+                                <td
+                                    width="25%"
+                                    style="background-color:#282D61; font-weight:bold; font-weight:bold; color:#FFFFFF; border:none;"
+                                >End Date
+                                </td>
+                                <td
+                                    width="25%"
+                                    style="background-color:#282D61; font-weight:bold; font-weight:bold; color:#FFFFFF; border:none;"
+                                >
+                                    Number Of Days
+                                </td>
+                            </tr>
+                            <tr>
+                                <t t-if="o.type=='internal'">
+                                    <td style="background-color:#F0EFEF; border:none;">
+                                        <t t-esc="o.city_id.name" />
+                                    </td>
+                                </t>
+                                <t t-elif="o.type=='external'">
+                                    <t t-if="o.location_ids">
+                                        <td style="background-color:#F0EFEF; border:none;">
+                                            <t t-foreach="o.location_ids" t-as="location">
+                                                <t t-esc="location.country_id.name" />
+                                                <br />
+                                            </t>
+                                        </td>
+                                        <td style="background-color:#F0EFEF; border:none;">
+                                            <t t-foreach="o.location_ids" t-as="location">
+                                                <t t-esc="location.city_name" />
+                                                <br />
+                                            </t>
+                                        </td>
+                                    </t>
+                                </t>
+                                <td style="background-color:#F0EFEF;">
+                                    <t t-if="o.date_from" t-esc="o.date_from" />
+                                </td>
+                                <td style="background-color:#F0EFEF;">
+                                    <t t-if="o.date_to" t-esc="o.date_to" />
+                                </td>
+                                <td style="background-color:#F0EFEF; border:none;">
+                                    <t t-esc="o.duration" />
+                                </td>
+                            </tr>
+                        </table>
+
+                        <table class="table table-sm table-bordered" width="100%" style="font-size:16px; border:none;">
+                            <tr>
+                                <td
+                                    width="50%"
+                                    style="background-color:#282D61; font-weight:bold; color:#FFFFFF; border:none;"
+                                >Deputation Mission
+                                </td>
+                                <td
+                                    width="50%"
+                                    style="background-color:#282D61; font-weight:bold; color:#FFFFFF; border:none;"
+                                >
+                                    Mission details
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="background-color:#F0EFEF; border-left:none;">
+                                    <t t-esc="o.task_name" />
+                                </td>
+                                <td style="background-color:#F0EFEF; border-right:none;">
+                                    <t t-esc="o.note" />
+                                </td>
+                            </tr>
+                        </table>
+
+                        <t t-set="approvals" t-value="o.sudo().get_approvals()" />
+                        <table class="table table-sm table-bordered" width="100%" style="font-size:16px; border:none;">
+                            <tr>
+                                <td
+                                    colspan="4"
+                                    width="40%"
+                                    style="background-color:#282D61; color:#FFFFFF; font-weight:bold; border:none;"
+                                >Stages Of Request Approval
+                                </td>
+                            </tr>
+                            <t t-foreach="approvals" t-as="approval">
+                                <tr>
+                                    <td style="background-color:#F0EFEF; color:#A79559; border-left:none;">
+                                        <t t-esc="approval.get('stage', false)" />
+                                    </td>
+                                    <td style="background-color:#F0EFEF;">
+                                        <t t-esc="approval.get('date', False)" />
+                                    </td>
+                                    <td style="background-color:#F0EFEF; border-right:none;">
+                                        <t t-esc="approval.get('approver_name', false)" />
+                                    </td>
+                                    <td style="background-color:#F0EFEF;">
+                                        <img
+                                            t-if="approval.get('signature', false)"
+                                            t-att-src="image_data_uri(approval.get('signature', false))"
+                                            width="150px"
+                                            height="50px"
+                                        />
+                                    </td>
+
+                                </tr>
+                            </t>
+                        </table>
+
+
+                        <table class="table table-sm table-bordered" width="100%" style="font-size:16px; border:none;">
+                            <tr>
+                                <td
+                                    t-if="o.duration_holiday_days !=0"
+                                    colspan="12"
+                                    width="100%"
+                                    style="background-color:#282D61; font-weight:bold; color:#FFFFFF; border:none;"
+                                >Financial details
+                                </td>
+
+                                <td
+                                    t-if="o.duration_holiday_days ==0"
+                                    colspan="11"
+                                    width="100%"
+                                    style="background-color:#282D61; font-weight:bold; color:#FFFFFF; border:none;"
+                                >Financial details
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td
+                                    t-if="not o.distance"
+                                    width="10%"
+                                    style="color:#A79559; background-color:#F0EFEF; border-left:none;"
+                                >
+                                    Daily Entitlement
+                                </td>
+                                <td t-if="not o.distance" width="8%" style="color:#A79559; background-color:#F0EFEF;">
+                                    Days Due
+                                </td>
+                                <td
+                                    t-if="o.duration_holiday_days !=0"
+                                    width="13%"
+                                    style="color:#A79559; background-color:#F0EFEF;"
+                                >
+                                    Holiday amount
+                                </td>
+                                <td
+                                    t-if="o.duration_holiday_days !=0"
+                                    width="13%"
+                                    style="color:#A79559; background-color:#F0EFEF;"
+                                >
+                                    Normal days amount
+                                </td>
+                                <td
+                                    t-if="o.duration_holiday_days ==0"
+                                    width="13%"
+                                    style="color:#A79559; background-color:#F0EFEF;"
+                                >
+                                    Deputation Cost
+                                </td>
+                                <td t-if="not o.distance" width="10%" style="color:#A79559; background-color:#F0EFEF;">
+                                    kilometer Amounts
+                                </td>
+                                <td t-if="o.distance" width="14%" style="color:#A79559; background-color:#F0EFEF;">
+                                    Kilometers Number
+                                </td>
+                                <td t-if="o.distance" width="13%" style="color:#A79559; background-color:#F0EFEF;">
+                                    Kilometer Amount
+                                </td>
+                                <td width="10%" style="color:#A79559; background-color:#F0EFEF;">
+                                    Ticket
+                                </td>
+                                <td width="8%" style="color:#A79559; background-color:#F0EFEF;">
+                                    Food
+                                </td>
+                                <td width="5%" style="color:#A79559; background-color:#F0EFEF;">
+                                    Hosting
+                                </td>
+                                <td width="5%" style="color:#A79559; background-color:#F0EFEF;">
+                                    Transport
+                                </td>
+                                <td width="8%" style="color:#A79559; background-color:#F0EFEF;">
+                                    Need Fees
+                                </td>
+                                <td width="18%" style="color:#A79559; background-color:#F0EFEF;">
+                                    Include ticket price in total amount
+                                </td>
+                                <td width="15%" style="color:#A79559; background-color:#F0EFEF; border-right:none;">
+                                    Total amount
+                                </td>
+                            </tr>
+                            <tr style="background-color:#DADCE0; text-align:center">
+                                <td t-if="not o.distance">
+                                    <t t-esc="o.deputation_allowance" />
+                                </td>
+                                <td t-if="not o.distance">
+                                    <t t-esc="o.duration + int(o.travel_days)" />
+                                </td>
+                                <td t-if="o.duration_holiday_days !=0">
+                                    <t t-esc="o.amount_holidays" />
+                                </td>
+                                <td t-if="o.duration_holiday_days !=0">
+                                    <t t-esc="o.amount_normal_days" />
+                                </td>
+                                <td t-if="o.duration_holiday_days == 0">
+                                    <t t-esc="o.deputation_allowance * (o.duration + int(o.travel_days))" />
+                                </td>
+                                <td t-if="not o.distance">
+                                    <t t-esc="o.kilometer_amount_overland" />
+                                </td>
+                                <td t-if="o.distance">
+                                    <t t-esc="o.distance" />
+                                </td>
+                                <td t-if="o.distance">
+                                    <t t-esc="o.kilometer_amount" />
+                                </td>
+                                <td>
+                                    <t t-esc="o.ticket_price" />
+                                </td>
+                                <td>
+                                    <t t-if="o.food">
+                                        <input type="checkbox" id="food" name="food" checked="checked" />
+                                    </t>
+                                    <t t-else="">
+                                        <input type="checkbox" id="food" name="food" />
+                                    </t>
+                                </td>
+                                <td>
+                                    <t t-if="o.hosing">
+                                        <input type="checkbox" id="hosting" name="hosting" checked="checked" />
+                                    </t>
+                                    <t t-else="">
+                                        <input type="checkbox" id="hosing" name="hosing" />
+                                    </t>
+                                </td>
+                                <td>
+                                    <t t-if="o.transport">
+                                        <input type="checkbox" id="transport" name="transport" checked="checked" />
+                                    </t>
+                                    <t t-else="">
+                                        <input type="checkbox" id="transport" name="transport" />
+                                    </t>
+                                </td>
+                                <td>
+                                    <t t-if="o.need_fees">
+                                        <input type="checkbox" id="need_fees" name="need_fees" checked="checked" />
+                                    </t>
+                                    <t t-else="">
+                                        <input type="checkbox" id="need_fees" name="need_fees" />
+                                    </t>
+                                </td>
+                                <td>
+                                    <t t-if="o.include_ticket_total_amount">
+                                        <input
+                                            type="checkbox"
+                                            id="include_ticket_total_amount"
+                                            name="include_ticket_total_amount"
+                                            checked="checked"
+                                        />
+                                    </t>
+                                    <t t-else="">
+                                        <input
+                                            type="checkbox"
+                                            id="include_ticket_total_amount"
+                                            name="include_ticket_total_amount"
+                                        />
+                                    </t>
+                                </td>
+                                <td>
+                                        <t t-esc="o.total" />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <record id="hr_deputation_report_action" model="ir.actions.report">
+        <field name="name">Print Deputation Report</field>
+        <field name="model">hr.deputation</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hr_deputation.hr_deputation_report_template</field>
+        <field name="report_file">hr_deputation.hr_deputation_report_template</field>
+        <field name="print_report_name">'Print Deputation Report for - %s' % (object.name).replace('/', '')
+        </field>
+        <field name="binding_model_id" eval="False" />
+    </record>
+</odoo>

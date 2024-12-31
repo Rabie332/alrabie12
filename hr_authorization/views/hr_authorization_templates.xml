@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="report_authorization">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="text-center col-xs-12">
+                            <h2>
+                                <strong>EXIT AUTHORIZATION
+                                </strong>
+                            </h2>
+                        </div>
+
+                        <br />
+                        <br />
+                        <br />
+                        <div class="row">
+                            <div class="col-xs-10 text-left" style="font-size:20px;">
+                                <p>
+                                    Last name and First name :
+                                    <strong>
+                                        <span t-field="o.employee_id" />
+                                    </strong>
+                                </p>
+                                <p>
+                                    Function :
+                                    <strong>
+                                        <span t-field="o.employee_id.job_id" />
+                                    </strong>
+                                </p>
+                                <p>
+                                    I request authorization to leave my work:
+
+                                </p>
+                                <p>
+                                    Date :
+                                    <strong>
+                                        <span t-field="o.date" />
+                                    </strong>
+                                    From
+                                    <strong>
+                                        <t
+                                            t-esc="'%s:%s' % ( (str(o.hour_start).split('.')[0]).zfill(2), str(int(float(str('%.2f'
+                                                                            % o.hour_start).split('.')[1])/100*60)).zfill(2))"
+                                        />
+                                    </strong>
+                                    To
+                                    <strong>
+                                        <t
+                                            t-esc="'%s:%s' % ( (str(o.hour_stop).split('.')[0]).zfill(2),
+                                                                            str(int(float(str('%.2f' % o.hour_stop).split('.')[1])/100*60)).zfill(2))"
+                                        />
+                                    </strong>
+                                    <br />
+                                </p>
+                                <p>
+                                    For the following reason: <span t-field="o.request_type_id" />
+                                </p>
+                                <br />
+                            </div>
+
+
+                        </div>
+
+                        <table class="table table-condensed">
+                            <tr>
+                                <td>
+                                    <strong>Signature of the employee :</strong>
+                                </td>
+                                <td class="text-right">
+                                    <strong>Human Resources Coordinator:</strong>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>..........................................</td>
+                                <td class="text-right">
+                                    ................................................................
+                                </td>
+                            </tr>
+                        </table>
+                        <center
+                        >--------------------------------------------------------------------------------------------------------</center>
+                        <br />
+                        <div class="text-center col-xs-12">
+                            <h2>
+                                <strong>EXIT AUTHORIZATION
+                                </strong>
+                            </h2>
+                        </div>
+                        <br />
+                        <br />
+                        <div class="row">
+                            <div class="col-xs-10 text-left" style="font-size:20px;">
+                                <p>
+                                    Last name and First name :
+                                    <strong>
+                                        <span t-field="o.employee_id" />
+                                    </strong>
+                                </p>
+                                <p>
+                                    Function :
+                                    <strong>
+                                        <span t-field="o.employee_id.job_id" />
+                                    </strong>
+                                </p>
+                                <p>
+                                    I request authorization to leave my work:
+                                </p>
+                                <p>
+                                    Date :
+                                    <strong>
+                                        <span t-field="o.date" />
+                                    </strong>
+                                    From :
+                                    <strong>
+                                        <t
+                                            t-esc="'%s:%s' % ( (str(o.hour_start).split('.')[0]).zfill(2), str(int(float(str('%.2f'
+                                                    % o.hour_start).split('.')[1])/100*60)).zfill(2))"
+                                        />
+                                    </strong>
+                                    To
+                                    <strong>
+                                        <t
+                                            t-esc="'%s:%s' % ( (str(o.hour_stop).split('.')[0]).zfill(2),
+                                                    str(int(float(str('%.2f' % o.hour_stop).split('.')[1])/100*60)).zfill(2))"
+                                        />
+                                    </strong>
+                                    <br />
+                                </p>
+                                <p>
+                                    For the following reason: <span t-field="o.request_type_id" />
+                                </p>
+                                <br />
+                            </div>
+                        </div>
+                        <table class="table table-condensed">
+                            <tr>
+                                <td>
+                                    <strong>Signature of the employee :</strong>
+                                </td>
+                                <td class="text-right">
+                                    <strong>Human Resources Coordinator:</strong>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>..........................................</td>
+                                <td class="text-right">
+                                    ................................................................
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <record id="action_report_authorization" model="ir.actions.report">
+        <field name="name">Authorization</field>
+        <field name="model">hr.authorization</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hr_authorization.report_authorization</field>
+        <field name="report_file">hr_authorization.report_authorization</field>
+    </record>
+</odoo>

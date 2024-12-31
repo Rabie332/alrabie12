@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+ <record id="hr_payment_request_stage_action" model="ir.actions.act_window">
+        <field name="name">Stages</field>
+        <field name="res_model">request.stage</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="domain">[('res_model_id.model', '=', 'hr.payment.request')]</field>
+        <field name="context">{'default_res_model':'hr.payment.request'}</field>
+    </record>
+
+    <menuitem
+        id="hr_payment_request_stage_menu"
+        action="hr_payment_request_stage_action"
+        name="Stages"
+        groups="request.group_stages_manager"
+        parent="menu_payment_request_setting"
+        sequence="4"
+    />
+</odoo>

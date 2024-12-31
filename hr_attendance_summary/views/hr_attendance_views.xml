@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+
+     <record id="hr_attendance_action_my" model="ir.actions.act_window">
+            <field name="name">Attendances</field>
+            <field name="res_model">hr.attendance</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'create': False, 'edit': False}</field>
+             <field name="domain">[('employee_id.user_id', '=', uid)]</field>
+        </record>
+     <record id="res_users_view_form_inherit_hr_attendance_summary" model="ir.ui.view">
+        <field name="name">res.users.view.form.inherit.attendance.summary</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="hr_attendance.hr_user_view_form" />
+        <field name="arch" type="xml">
+            <button name="%(hr_attendance.hr_attendance_action_my_attendances)d" position="attributes">
+                <attribute name="name">%(hr_attendance_action_my)d</attribute>
+            </button>
+        </field>
+     </record>
+</odoo>

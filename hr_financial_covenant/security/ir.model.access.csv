@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_hr_financial_covenant_user,name_hr_financial_covenant_user,model_hr_financial_covenant,base.group_user,1,1,1,0
+access_hr_financial_covenant_move_user,name_hr_financial_covenant_move_user,model_hr_financial_covenant_move,base.group_user,1,1,1,0
+access_hr_financial_covenant_setting_user,name_hr_financial_covenant_setting_user,model_hr_financial_covenant_setting,base.group_user,1,1,1,0

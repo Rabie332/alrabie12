@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="hr_dashboard.graphs">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 col-xs-12 row_hr">
+                            <div class="box box-success pull-right">
+                                <div class="box-header with-border" name="EmployeesByDepartment">
+                                    <strong>Employees by departments</strong>
+                                </div>
+                                <div class="box-body">
+                                    <div class="chart">
+                                        <canvas id="pieChartEmployeesByDepartment" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="box box-success pull-right">
+                        <div class="box-header with-border">
+                            <strong>Contracts By States</strong>
+                        </div>
+                        <div class="box-body">
+                            <div class="chart">
+                                <canvas id="pieChartContractsByStates" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4" id="last_employees">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Last 5 employees</h3>
+                            <table id="list_employees" class="table">
+                                <tbody>
+                                    <tr t-foreach="widget.data.list_last_employees" t-as="employee">
+                                        <td>
+                                            <img
+                                                    id="my_img"
+                                                    style="max-width:60px;"
+                                                    class="img img-responsive img-circle"
+                                                    t-if="employee and employee.image_1920"
+                                                    t-attf-src="data:image/jpeg;base64,{{employee.image_1920}}"
+                                                    alt="Profile image"
+                                                />
+                                        </td>
+                                        <td>
+                                            <t t-esc="employee.name" />
+                                        </td>
+                                        <td>
+                                            <t t-esc="employee.job_name" />
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4" id="last_employees">
+                    <div class="box box-success pull-right">
+            <div class="box-header with-border">
+                <h3 class="box-title">Latest requests</h3>
+                <div class="box-body">
+                    <ul id="list-activity" class="products-list product-list-in-box">
+                        <t t-foreach="widget.data.requests" t-as="request">
+                            <li class="item">
+                                <div class="product-info">
+                                    <a>
+                                        <i id="icon" t-att-class="request.icon" />
+                                    </a>
+                                    <span id="activity-type" class="product-title">
+                                         <a t-att-href="request.details_url">
+                                             <t t-esc="request.name" />
+                                         </a>
+                                    </span>
+                                </div>
+                            </li>
+                        </t>
+                    </ul>
+                </div>
+            </div>
+        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</t>
+    </templates>

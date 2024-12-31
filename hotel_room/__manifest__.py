@@ -1,0 +1,22 @@
+{
+    "name": "Hotel Room",
+    "version": "14.0.1.0.0",
+    "category": "Human Resources",
+    "author": "Hadooc",
+    "summary": "Hotel Management",
+    "depends": ["hotel_customer", "hotel_reservation"],
+    "data": [
+        "security/ir.model.access.csv",
+        "security/hotel_room_security.xml",
+        "data/hotel_room_data.xml",
+        "report/partner_reclamation_template.xml",
+        "report/empty_room_template.xml",
+        "views/menu.xml",
+        "views/partner_reclamation_views.xml",
+        "views/hotel_room_sla_views.xml",
+        "wizard/partner_reclamation_wizard.xml",
+        "wizard/empty_room_wizard.xml",
+    ],
+    "installable": True,
+    "license": "AGPL-3",
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <odoo>
+        <data noupdate="1">
+            <!-- Definition of the module category -->
+            <record id="module_category_loans_management" model="ir.module.category">
+                <field name="name">Company Loans</field>
+                <field name="description">Manage all aspects related to company loans.</field>
+            </record>
+            <!-- Creating Security Group for Employee Housing -->
+            <record id="group_loan_manager" model="res.groups">
+                <field name="name">Loan Manager</field>
+                <field name="category_id" ref="loans_management.module_category_loans_management"/>
+                <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            </record>
+            <record id="group_loan_user" model="res.groups">
+                <field name="name">Loan User</field>
+                <field name="category_id" ref="loans_management.module_category_loans_management"/>
+                <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            </record>
+        </data>
+    </odoo>
+</odoo>

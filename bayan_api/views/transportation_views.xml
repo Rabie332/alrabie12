@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="shipping_order_view_form_inherit" model="ir.ui.view">
+            <field name="name">bayan.transportation.form</field>
+            <field name="model">shipping.order</field>
+            <field name="inherit_id" ref="transportation.shipping_order_view_form" />
+            <field name="arch" type="xml">
+
+                <xpath expr="//button[@name='set_to_draft']" position="replace">
+                    <button
+                        name="set_to_draft"
+                        type="object"
+                        string="Set To Draft"
+                        class="btn-primary"
+                        attrs="{'invisible': [('is_set_to_draft','=',False)]}"
+                        groups="transportation.group_set_to_draft_responsible"
+                        confirm="Are you sure you want to set this record to draft?"
+                    />
+                </xpath>
+                <xpath expr="//button[@name='action_cancel']" position="replace">
+                    <button
+                        name="action_cancel"
+                        string="Cancel"
+                        type="object"
+                        attrs="{'invisible':[('state', '=','canceled')]}"
+                        class="btn btn-danger"
+                        groups="clearance.group_responsible_cancel"
+                        confirm="Are you sure you want to cancel this record?"
+                    />
+                </xpath>
+                <xpath expr="//button[@name='action_done']" position="replace">
+                    <button
+                        name="action_done"
+                        string="Confirm"
+                        type="object"
+                        states="draft"
+                        class="btn-success"
+                        groups="transportation.group_transportation_responsible"
+                        confirm="Are you sure you want to confirm this record?"
+                    />
+                </xpath>
+                <xpath expr="//button[@name='action_closed']" position="replace">
+                    <button
+                        name="action_closed"
+                        string="Close"
+                        type="object"
+                        states="done"
+                        class="btn-success"
+                        groups="transportation.group_transportation_responsible"
+                        confirm="Are you sure you want to close this record?"
+                    />
+                </xpath>
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="action_view_attachments" type="object" class="oe_stat_button" icon="fa-paperclip" string="Attachments - Waybills"/>
+                </xpath>
+
+                <xpath expr="//button[@name='send_whatsapp_message']" position="after">
+                    <field name='print_way_bill_report_done' invisible='1'/>
+                    <button name="print_way_bill_bayan" type="object" class='btn btn-outline-primary' string="Bayan Waybill" attrs="{'invisible': [('print_way_bill_report_done', '=', False)]}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
+

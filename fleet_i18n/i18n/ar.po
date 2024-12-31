@@ -1,0 +1,180 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-02 16:29+0000\n"
+"PO-Revision-Date: 2020-09-02 16:29+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: fleet
+#: model:ir.module.category,name:fleet.module_fleet_category
+#: model:ir.ui.menu,name:fleet.menu_root
+#: model_terms:ir.ui.view,arch_db:fleet.res_config_settings_view_form
+msgid "Fleet"
+msgstr "إدارة المركبات"
+
+#. module: fleet
+#: model:ir.model,name:fleet.model_fleet_vehicle_cost_report
+msgid "Fleet Analysis Report"
+msgstr "تقرير تحليل المركبات"
+
+#. module: fleet
+#: model:ir.actions.act_window,name:fleet.fleet_vehicle_odometer_action
+#: model:ir.ui.menu,name:fleet.fleet_vehicle_odometer_menu
+msgid "Odometers"
+msgstr "عداد المسافات"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle__brand_id
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_model__brand_id
+msgid "Manufacturer of the vehicle"
+msgstr "الشركة المصنعة للمركبة"
+
+#. module: fleet
+#: model:ir.actions.act_window,name:fleet.fleet_vehicle_model_brand_action
+#: model:ir.ui.menu,name:fleet.fleet_vehicle_model_brand_menu
+msgid "Manufacturers"
+msgstr "المصنّعين"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__future_driver_id
+msgid "Future Driver"
+msgstr "السائق مستقبلي"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_kanban
+msgid "Future Driver :"
+msgstr "السائق مستقبلي:"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__plan_to_change_car
+#: model:ir.model.fields,field_description:fleet.field_res_partner__plan_to_change_car
+#: model:ir.model.fields,field_description:fleet.field_res_users__plan_to_change_car
+msgid "Plan To Change Car"
+msgstr "خطة لتغيير المركبة"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "Planned for Change"
+msgstr "مخطط للتغيير"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__next_assignation_date
+msgid "Assignment Date"
+msgstr "تاريخ التكليف"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__log_drivers
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_assignation_log_view_list
+msgid "Assignment Logs"
+msgstr "سجلات التكليف"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__net_car_value
+msgid "Purchase Value"
+msgstr "قيمة الشراء"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle__net_car_value
+msgid "Purchase value of the vehicle"
+msgstr "قيمة شراء المركبة"
+
+#. module: fleet
+#: model_terms:ir.actions.act_window,help:fleet.fleet_vehicle_action
+msgid "Ready to manage your fleet more efficiently ?"
+msgstr "هل أنت جاهز لإدارة أسطولك بكفاءة أكبر؟"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__cost_generated
+msgid "Recurring Cost"
+msgstr "التكلفة المتكررة"
+
+#. module: fleet
+#: model:fleet.vehicle.state,name:fleet.fleet_vehicle_state_to_order
+msgid "To Order"
+msgstr "للطلب"
+
+#. module: fleet
+#: model:ir.model,name:fleet.model_fleet_vehicle_log_contract
+msgid "Vehicle Contract"
+msgstr "عقد المركبة"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__description
+msgid "Vehicle Description"
+msgstr "وصف المركبة"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_form
+msgid "Vehicle Information"
+msgstr "معلومات المركبة"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_cost_report__name
+msgid "Vehicle Name"
+msgstr "اسم المركبة"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__vehicle_type
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_model__vehicle_type
+msgid "Vehicle Type"
+msgstr "نوع المركبة"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_form
+msgid "Write here any other information related to this vehicle"
+msgstr "اكتب هنا أي معلومات أخرى تتعلق بهذه المركبة"
+
+#. module: fleet
+#: model:ir.model.fields.selection,name:fleet.selection__fleet_vehicle__odometer_unit__miles
+msgid "mi"
+msgstr "أميال"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_model__manager_id
+msgid "Fleet Manager"
+msgstr "مدير المركبات"
+
+#. module: fleet
+#: model:ir.model.fields.selection,name:fleet.selection__fleet_vehicle__fuel_type__lpg
+msgid "LPG"
+msgstr "LPG"
+
+#. module: fleet
+#: model_terms:ir.actions.act_window,help:fleet.fleet_vehicle_action
+msgid "Let's create your first vehicle."
+msgstr "لنقم بإنشاء مركبتك الأولى."
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_model_brand_view_kanban
+msgid "MODELS"
+msgstr "نماذج"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__purchaser_id
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "Current Driver"
+msgstr "السائق الحالي"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">End Date Contract Alert</span>"
+msgstr "<span class=\"o_form_label\">تنبيه تاريخ انتهاء العقد</span>"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.res_config_settings_view_form
+msgid "<span> days before the end date</span>"
+msgstr "<span> أيام قبل تاريخ الانتهاء</span>"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.res_config_settings_view_form
+msgid "<span>Send an alert </span>"
+msgstr "<span>إرسال تنبيه </span>"

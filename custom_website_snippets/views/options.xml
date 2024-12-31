@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="s_custom_list_group_options" inherit_id="website.snippet_options">
+        <xpath expr="." position="inside">
+            <div data-js="CustomBlock" data-selector=".s_dynamic_text_image_slider, .s_custom_list_group, .s_custom_block">
+                <we-select string="Background Color" data-attribute-name="class" data-no-preview="true">
+                    <we-button data-select-class="bg-primary">Blue</we-button>
+                    <we-button data-select-class="bg-success">Green</we-button>
+                    <we-button data-select-class="bg-warning">Yellow</we-button>
+                    <we-button data-select-class="bg-danger">Red</we-button>
+                </we-select>
+            </div>
+            <div data-js="CustomBlock1" data-selector=".s_dynamic_text_image_slider, .s_custom_list_group, .s_custom_block">
+                <we-button-group string="Alignment">
+                    <we-button title="Left" data-select-class="text-left">
+                        <i class="fa fa-fw fa-align-left"/>
+                    </we-button>
+                    <we-button title="Center" data-select-class="text-center">
+                        <i class="fa fa-fw fa-align-center"/>
+                    </we-button>
+                    <we-button title="Right" data-select-class="text-right">
+                        <i class="fa fa-fw fa-align-right"/>
+                    </we-button>
+                </we-button-group>
+            </div>
+            <div data-js="CustomBlock2" data-selector=".s_dynamic_text_image_slider, .s_custom_list_group, .s_custom_block">
+                <we-colorpicker string="Color"
+            data-select-style="true"
+            data-css-property="background-color"
+            data-color-prefix="bg-"/>
+            </div>
+            <div data-js="CustomBlock3" data-selector=".s_dynamic_text_image_slider, .s_custom_list_group, .s_custom_block">
+                <we-select string="Width">
+                    <we-button data-select-class="w-25">25%</we-button>
+                    <we-button data-select-class="w-50">50%</we-button>
+                    <we-button data-select-class="w-75">75%</we-button>
+                    <we-button data-select-class="w-100" data-name="so_width_100">100%</we-button>
+                </we-select>
+            </div>
+            <div id="CustomBlock4" data-selector=".s_dynamic_text_image_slider, .s_custom_list_group, .s_custom_block">
+                <we-button-group string="Alignment" data-dependencies="!so_width_100">
+                    <we-button title="Left" data-select-class="mr-auto">
+                        <i class="fa fa-fw fa-align-left"/>
+                    </we-button>
+                    <we-button title="Center" data-select-class="mx-auto">
+                        <i class="fa fa-fw fa-align-center"/>
+                    </we-button>
+                    <we-button title="Right" data-select-class="ml-auto">
+                        <i class="fa fa-fw fa-align-right"/>
+                    </we-button>
+                </we-button-group>
+            </div>
+        </xpath>
+    </template>
+</odoo>

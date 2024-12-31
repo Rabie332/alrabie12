@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_employee_filter_inherit_hr_employee_number" model="ir.ui.view">
+        <field name="name">hr.employee.search</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_filter" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="number" />
+            </field>
+        </field>
+    </record>
+
+    <record id="hr_employee_view_tree_inherit_hr_employee_number" model="ir.ui.view">
+        <field name="name">hr.employee.tree</field>
+        <field name="model">hr.employee</field>
+        <field name="mode">extension</field>
+        <field name="inherit_id" ref="hr.view_employee_tree" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="number" />
+            </field>
+        </field>
+    </record>
+
+    <record id="hr_employee_view_form_inherit_hr_employee_number" model="ir.ui.view">
+        <field name="name">hr.employee.view.form.inherit</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form" />
+        <field name="mode">extension</field>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="compute_job_number_seq" invisible="1" />
+            </field>
+             <xpath expr="//h1" position="after">
+                <h2>
+                <field
+                        name="number"
+                        placeholder="Job number"
+                        attrs="{'required':[('compute_job_number_seq', '=', False)],'readonly':[('compute_job_number_seq', '=', True)]}"
+                    />
+                </h2>
+            </xpath>
+        </field>
+    </record>
+</odoo>

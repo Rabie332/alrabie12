@@ -1,0 +1,1712 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* real_estate
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-11 09:47+0000\n"
+"PO-Revision-Date: 2020-12-11 09:47+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_installment_template__message_needaction
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__message_needaction
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__message_needaction
+msgid "Action Needed"
+msgstr "Nécessite une action"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__active
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission__active
+msgid "Active"
+msgstr "Active"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__activity_ids
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__activity_ids
+msgid "Activities"
+msgstr "Activitiés"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__activity_exception_decoration
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Décoration d'exception d'activité"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__activity_state
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__activity_state
+msgid "Activity State"
+msgstr "État de l'activité"
+
+#. module: real_estate
+#: model_terms:ir.ui.view,arch_db:real_estate.building_unit_view_form
+#: model_terms:ir.ui.view,arch_db:real_estate.realestate_building_view_form
+msgid "Additional Information"
+msgstr "Informations Complémentaires"
+
+#. module: real_estate
+#: model_terms:ir.ui.view,arch_db:real_estate.building_unit_view_form
+#: model_terms:ir.ui.view,arch_db:real_estate.realestate_building_view_form
+#: model_terms:ir.ui.view,arch_db:real_estate.realestate_contract_view_form
+msgid "Address"
+msgstr "Adresse"
+
+#. module: real_estate
+#: code:addons/real_estate/models/realestate_contract.py:0
+#: code:addons/real_estate/models/unit_reservation.py:0
+#, python-format
+msgid "Advance Payment"
+msgstr "Acompte"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_installment_template__adv_payment_rate
+msgid "Advance Payment %"
+msgstr "Acompte %"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__air_condition
+#: model:ir.model.fields,field_description:real_estate.field_product_template__air_condition
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__air_condition
+msgid "Air Condition"
+msgstr "Climatisation"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__alarm
+#: model:ir.model.fields,field_description:real_estate.field_product_template__alarm
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__alarm
+msgid "Alarm"
+msgstr "Alarme"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission_line__amount
+msgid "Amount"
+msgstr "Montant"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_installment_template__annual_raise
+msgid "Annual Raise %"
+msgstr "Augmentation annuelle %"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission__apply_to
+msgid "Apply to"
+msgstr "Appliquer à"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_installment_template__message_attachment_count
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__message_attachment_count
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__message_attachment_count
+msgid "Attachment Count"
+msgstr "Nombre de pièces jointes"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__balance
+msgid "Balance"
+msgstr "Balance"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__balcony
+#: model:ir.model.fields,field_description:real_estate.field_product_template__balcony
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__balcony
+msgid "Balconies m²"
+msgstr "Balcons m²"
+
+#. module: real_estate
+#: model_terms:ir.ui.view,arch_db:real_estate.building_unit_view_form
+#: model_terms:ir.ui.view,arch_db:real_estate.realestate_building_view_form
+msgid "Basic Information"
+msgstr "Information basique"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__product_template__state__blocked
+#: model:ir.model.fields.selection,name:real_estate.selection__realestate_building__state__blocked
+msgid "Blocked"
+msgstr "Bloquée"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__building_id
+#: model:ir.model.fields,field_description:real_estate.field_product_template__building_id
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__building_id
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__building_id
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation_line__building_id
+#: model_terms:ir.ui.view,arch_db:real_estate.realestate_contract_view_form
+#: model_terms:ir.ui.view,arch_db:real_estate.realestate_contract_view_search
+#: model_terms:ir.ui.view,arch_db:real_estate.unit_reservation_form_view
+msgid "Building"
+msgstr "Bâtiment"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__building_area
+msgid "Building Area m²"
+msgstr "Surface du bâtiment m²"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__building_code
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__building_code
+msgid "Building Code"
+msgstr "Code de construction"
+
+#. module: real_estate
+#: model:ir.model,name:real_estate.model_building_component
+msgid "Building Component"
+msgstr "Composant de construction"
+
+#. module: real_estate
+#: model:ir.model,name:real_estate.model_building_component_line
+msgid "Building Component Line"
+msgstr "Composant de construction"
+
+#. module: real_estate
+#: model:ir.actions.act_window,name:real_estate.building_furniture_action
+#: model:ir.model,name:real_estate.model_building_furniture
+#: model:ir.ui.menu,name:real_estate.building_furniture_menu
+msgid "Building Furniture"
+msgstr "Meubles de construction"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__building_type_id
+#: model:ir.model.fields,field_description:real_estate.field_product_template__building_type_id
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__building_type_id
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__building_type_id
+msgid "Building Type"
+msgstr "Type de bâtiment"
+
+#. module: real_estate
+#: model:ir.actions.act_window,name:real_estate.building_type_action
+#: model:ir.ui.menu,name:real_estate.building_type_menu
+msgid "Building Types"
+msgstr "Types de bâtiment"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_building_component_line__unit_id
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__building_unit_id
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__building_unit_id
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation_line__building_unit_id
+#: model_terms:ir.ui.view,arch_db:real_estate.realestate_contract_view_form
+#: model_terms:ir.ui.view,arch_db:real_estate.unit_reservation_form_view
+msgid "Building Unit"
+msgstr "Unité du bâtiment"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__building_area
+#: model:ir.model.fields,field_description:real_estate.field_product_template__building_area
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__building_area
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__building_area
+msgid "Building Unit Area m²"
+msgstr "Surface de l'unité de bâtiment m²"
+
+#. module: real_estate
+#: model:ir.actions.act_window,name:real_estate.building_component_action
+#: model:ir.ui.menu,name:real_estate.building_component_menu
+msgid "Building Unit Components"
+msgstr "Composants Unité du bâtiment"
+
+#. module: real_estate
+#: model_terms:ir.ui.view,arch_db:real_estate.unit_reservation_form_view
+msgid "Building Unit Reservation"
+msgstr "Réservation d'unité de construction"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__building_type_id
+msgid "Building Unit Type"
+msgstr "Type Unité du bâtiment"
+
+#. module: real_estate
+#: model:ir.actions.act_window,name:real_estate.building_unit_action
+#: model:ir.ui.menu,name:real_estate.building_unit_menu
+msgid "Building Units"
+msgstr "Unités du bâtiment"
+
+#. module: real_estate
+#: code:addons/real_estate/models/realestate_building.py:0
+#, python-format
+msgid "Building code already exists !"
+msgstr "Le code du bâtiment existe déjà !"
+
+#. module: real_estate
+#: code:addons/real_estate/models/building_unit.py:0
+#, python-format
+msgid "Building unit code already exists !"
+msgstr "Le code de l'unité de bâtiment existe déjà!"
+
+#. module: real_estate
+#: model:ir.actions.act_window,name:real_estate.realestate_building_action
+#: model:ir.ui.menu,name:real_estate.realestate_building_menu
+msgid "Buildings"
+msgstr "Bâtiments"
+
+#. module: real_estate
+#: model:ir.ui.menu,name:real_estate.realestate_building_management_menu
+msgid "Buildings Management"
+msgstr "Gestion des bâtiments"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__sale_commission__commission_type__section
+msgid "By sections"
+msgstr "Par sections"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__tv_cable
+#: model:ir.model.fields,field_description:real_estate.field_product_template__tv_cable
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__tv_cable
+msgid "Cable TV"
+msgstr "Cable TV"
+
+#. module: real_estate
+#: model_terms:ir.ui.view,arch_db:real_estate.realestate_contract_view_form
+#: model_terms:ir.ui.view,arch_db:real_estate.unit_reservation_form_view
+msgid "Cancel"
+msgstr "Fermer"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__realestate_contract__state__cancel
+#: model:ir.model.fields.selection,name:real_estate.selection__unit_reservation__state__canceled
+msgid "Canceled"
+msgstr "Fermé"
+
+#. module: real_estate
+#: model:ir.ui.menu,name:real_estate.res_city_menu
+msgid "Cities"
+msgstr "Villes"
+
+#. module: real_estate
+#: model:ir.model,name:real_estate.model_res_city
+#: model:ir.model.fields,field_description:real_estate.field_product_product__city_id
+#: model:ir.model.fields,field_description:real_estate.field_product_template__city_id
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__city_id
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__city_id
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__city_id
+#: model_terms:ir.ui.view,arch_db:real_estate.realestate_building_view_search
+msgid "City"
+msgstr "Ville"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__code
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__unit_code
+msgid "Code"
+msgstr "Code"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission_section__commission_id
+msgid "Commission"
+msgstr "Commission"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__commission_line_ids
+msgid "Commission Line"
+msgstr "Ligne de Commission"
+
+#. module: real_estate
+#: model:ir.actions.act_window,name:real_estate.action_commission_lines
+#: model:ir.ui.menu,name:real_estate.menu_sale_commissions_lines
+#: model_terms:ir.ui.view,arch_db:real_estate.res_users_form_view
+msgid "Commission Lines"
+msgstr "Lignes de Commission"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission__commission_section_ids
+msgid "Commission Section"
+msgstr "Section de commission"
+
+#. module: real_estate
+#: model:ir.model,name:real_estate.model_sale_commission
+msgid "Commission in sales"
+msgstr "Commission sur les ventes"
+
+#. module: real_estate
+#: model:ir.actions.act_window,name:real_estate.sale_commission_action
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__commission_total
+#: model:ir.ui.menu,name:real_estate.sale_commission_menu
+#: model:ir.ui.menu,name:real_estate.sale_commission_menu_root
+#: model_terms:ir.ui.view,arch_db:real_estate.res_users_form_view
+#: model_terms:ir.ui.view,arch_db:real_estate.sale_commission_line_tree
+msgid "Commissions"
+msgstr "Commissions"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract_line__company_id
+msgid "Company"
+msgstr "Société"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_building_furniture__component_id
+msgid "Component"
+msgstr "Composant"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_building_component_line__component_id
+msgid "Components"
+msgstr "Composants"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__component_ids
+#: model:ir.model.fields,field_description:real_estate.field_product_template__component_ids
+#: model_terms:ir.ui.view,arch_db:real_estate.building_unit_view_form
+msgid "Components List"
+msgstr "Liste des Composants"
+
+#. module: real_estate
+#: model_terms:ir.ui.view,arch_db:real_estate.realestate_contract_view_form
+#: model_terms:ir.ui.view,arch_db:real_estate.unit_reservation_form_view
+msgid "Confirm"
+msgstr "Confirmer"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__realestate_contract__state__confirmed
+#: model:ir.model.fields.selection,name:real_estate.selection__unit_reservation__state__confirmed
+msgid "Confirmed"
+msgstr "Confirmé"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__constructed
+msgid "Construction Year"
+msgstr "Année de construction"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__contact_ids
+#: model:ir.model.fields,field_description:real_estate.field_product_template__contact_ids
+#: model_terms:ir.ui.view,arch_db:real_estate.building_unit_view_form
+msgid "Contacts"
+msgstr "Contacts"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission_line__commission_id
+#: model_terms:ir.ui.view,arch_db:real_estate.unit_reservation_form_view
+msgid "Contract"
+msgstr "Contrat"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__sale_commission__contract_state__open
+msgid "Contract Based"
+msgstr "Basé sur un contrat"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__contract_count
+msgid "Contract Count"
+msgstr "Nombre de contrats"
+
+#. module: real_estate
+#: model_terms:ir.ui.view,arch_db:real_estate.realestate_contract_view_form
+msgid "Contract Data"
+msgstr "Données du contrat"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__contract_line_ids
+msgid "Contract Lines"
+msgstr "Lignes de contrat"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission__contract_state
+msgid "Contract Status"
+msgstr "Statut du contrat"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__unit_reservation__state__contracted
+msgid "Contracted"
+msgstr "Contracté"
+
+#. module: real_estate
+#: model:ir.actions.act_window,name:real_estate.realestate_contract_action
+#: model:ir.ui.menu,name:real_estate.contract_menu_root
+#: model:ir.ui.menu,name:real_estate.realestate_contract_menu
+msgid "Contracts"
+msgstr "Contrats"
+
+#. module: real_estate
+#: model_terms:ir.ui.view,arch_db:real_estate.unit_reservation_form_view
+msgid "Convert to Contract"
+msgstr "Convertir en contrat"
+
+#. module: real_estate
+#: model:ir.ui.menu,name:real_estate.res_country_menu
+msgid "Countries"
+msgstr "Pays"
+
+#. module: real_estate
+#: model:ir.model,name:real_estate.model_res_country
+#: model:ir.model.fields,field_description:real_estate.field_product_product__country_id
+#: model:ir.model.fields,field_description:real_estate.field_product_template__country_id
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__country_id
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__country_id
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__country_id
+#: model_terms:ir.ui.view,arch_db:real_estate.realestate_building_view_search
+msgid "Country"
+msgstr "Pays"
+
+#. module: real_estate
+#: model_terms:ir.ui.view,arch_db:real_estate.realestate_contract_view_form
+msgid "Create invoice"
+msgstr "Créer facture"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_building_component__create_uid
+#: model:ir.model.fields,field_description:real_estate.field_building_component_line__create_uid
+#: model:ir.model.fields,field_description:real_estate.field_building_furniture__create_uid
+#: model:ir.model.fields,field_description:real_estate.field_building_type__create_uid
+#: model:ir.model.fields,field_description:real_estate.field_installment_template__create_uid
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__create_uid
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__create_uid
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract_line__create_uid
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission__create_uid
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission_line__create_uid
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission_section__create_uid
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__create_uid
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation_line__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_building_component__create_date
+#: model:ir.model.fields,field_description:real_estate.field_building_component_line__create_date
+#: model:ir.model.fields,field_description:real_estate.field_building_furniture__create_date
+#: model:ir.model.fields,field_description:real_estate.field_building_type__create_date
+#: model:ir.model.fields,field_description:real_estate.field_installment_template__create_date
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__create_date
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__create_date
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract_line__create_date
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission__create_date
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission_line__create_date
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission_section__create_date
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__create_date
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation_line__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__date
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission_line__date
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__date
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation_line__date
+msgid "Date"
+msgstr "Date"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__date_added
+#: model:ir.model.fields,field_description:real_estate.field_product_template__date_added
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__date_added
+msgid "Date Added to Notarization"
+msgstr "Date d'ajout à la notarisation"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_installment_template__deduct
+msgid "Deducted from amount?"
+msgstr "Déduit du montant?"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__description
+msgid "Description"
+msgstr "Description"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_building_component__display_name
+#: model:ir.model.fields,field_description:real_estate.field_building_component_line__display_name
+#: model:ir.model.fields,field_description:real_estate.field_building_furniture__display_name
+#: model:ir.model.fields,field_description:real_estate.field_building_type__display_name
+#: model:ir.model.fields,field_description:real_estate.field_installment_template__display_name
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__display_name
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__display_name
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract_line__display_name
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission__display_name
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission_line__display_name
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission_section__display_name
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__display_name
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation_line__display_name
+msgid "Display Name"
+msgstr "Afficher le nom"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__product_template__heating_source__district
+#: model:ir.model.fields.selection,name:real_estate.selection__realestate_building__heating_source__district
+msgid "District Heating"
+msgstr "Chauffage urbain"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__realestate_contract__state__draft
+#: model:ir.model.fields.selection,name:real_estate.selection__unit_reservation__state__draft
+msgid "Draft"
+msgstr "Brouillon"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract_line__date
+msgid "Due Date"
+msgstr "Date d'échéance"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__east
+#: model:ir.model.fields,field_description:real_estate.field_product_template__east
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__east
+msgid "Eastern border by"
+msgstr "Frontière Est"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__product_template__heating_source__electricity
+#: model:ir.model.fields.selection,name:real_estate.selection__realestate_building__heating_source__electricity
+msgid "Electricity"
+msgstr "Électricité"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__electricity_meter
+#: model:ir.model.fields,field_description:real_estate.field_product_template__electricity_meter
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__electricity_meter
+msgid "Electricity meter"
+msgstr "Compteur d'électricité"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__date_payment
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__date_payment
+msgid "First Payment Date"
+msgstr "Date du premier paiement"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission__fix_qty
+#: model:ir.model.fields.selection,name:real_estate.selection__sale_commission__commission_type__fixed
+msgid "Fixed percentage"
+msgstr "Pourcentage fixe"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__product_template__usage__flat
+#: model:ir.model.fields.selection,name:real_estate.selection__realestate_building__usage__flat
+msgid "Flat"
+msgstr "Appartement"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__floor
+#: model:ir.model.fields,field_description:real_estate.field_product_template__floor
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__floor
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__floor
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__floor
+msgid "Floor"
+msgstr "Sol"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_installment_template__message_follower_ids
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__message_follower_ids
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__message_follower_ids
+msgid "Followers"
+msgstr "Abonnés"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_installment_template__message_channel_ids
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__message_channel_ids
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Abonnés (Canaux)"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_installment_template__message_partner_ids
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__message_partner_ids
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Abonnés (Partenaires)"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__product_template__state__free
+#: model:ir.model.fields.selection,name:real_estate.selection__realestate_building__state__free
+msgid "Free"
+msgstr "Libre"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission_section__amount_from
+msgid "From"
+msgstr "De"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__product_template__air_condition__full
+#: model:ir.model.fields.selection,name:real_estate.selection__realestate_building__air_condition__full
+msgid "Full"
+msgstr "Plein"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_building_furniture__product_id
+#: model:ir.model.fields,field_description:real_estate.field_product_product__furniture
+#: model:ir.model.fields,field_description:real_estate.field_product_template__furniture
+msgid "Furniture"
+msgstr "Meubles"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_building_component__furniture_details_ids
+msgid "Furniture List"
+msgstr "Liste des meubles"
+
+#. module: real_estate
+#: model_terms:ir.ui.view,arch_db:real_estate.building_component_form_view
+msgid "Furniture list"
+msgstr "Liste des meubles"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__garden
+#: model:ir.model.fields,field_description:real_estate.field_product_template__garden
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__garden
+msgid "Garden m²"
+msgstr "Jardin m²"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__product_template__heating_source__gas
+#: model:ir.model.fields.selection,name:real_estate.selection__realestate_building__heating_source__gas
+msgid "Gas"
+msgstr "Gaz"
+
+#. module: real_estate
+#: model_terms:ir.ui.view,arch_db:real_estate.sale_commission_view_form
+msgid "General information"
+msgstr "informations générales"
+
+#. module: real_estate
+#: model_terms:ir.ui.view,arch_db:real_estate.res_users_form_view
+msgid "Get commission"
+msgstr "Obtenez commission"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__handicap
+#: model:ir.model.fields,field_description:real_estate.field_product_template__handicap
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__handicap
+msgid "Handicap Accessible"
+msgstr "Accessible aux handicapés"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__heating
+#: model:ir.model.fields,field_description:real_estate.field_product_template__heating
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__heating
+msgid "Heating"
+msgstr "Chauffage"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__heating_source
+#: model:ir.model.fields,field_description:real_estate.field_product_template__heating_source
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__heating_source
+msgid "Heating Source"
+msgstr "Source de chauffage"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_building_component__id
+#: model:ir.model.fields,field_description:real_estate.field_building_component_line__id
+#: model:ir.model.fields,field_description:real_estate.field_building_furniture__id
+#: model:ir.model.fields,field_description:real_estate.field_building_type__id
+#: model:ir.model.fields,field_description:real_estate.field_installment_template__id
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__id
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__id
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract_line__id
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission__id
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission_line__id
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission_section__id
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__id
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation_line__id
+msgid "ID"
+msgstr "ID"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__activity_exception_icon
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__activity_exception_icon
+msgid "Icon"
+msgstr "Icone"
+
+#. module: real_estate
+#: model:ir.model.fields,help:real_estate.field_realestate_building__activity_exception_icon
+#: model:ir.model.fields,help:real_estate.field_unit_reservation__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icône pour indiquer une activité d'exception."
+
+#. module: real_estate
+#: model:ir.model.fields,help:real_estate.field_installment_template__message_needaction
+#: model:ir.model.fields,help:real_estate.field_installment_template__message_unread
+#: model:ir.model.fields,help:real_estate.field_realestate_building__message_needaction
+#: model:ir.model.fields,help:real_estate.field_realestate_building__message_unread
+#: model:ir.model.fields,help:real_estate.field_unit_reservation__message_needaction
+#: model:ir.model.fields,help:real_estate.field_unit_reservation__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Si coché, les nouveaux messages requièrent votre attention."
+
+#. module: real_estate
+#: model:ir.model.fields,help:real_estate.field_installment_template__message_has_error
+#: model:ir.model.fields,help:real_estate.field_installment_template__message_has_sms_error
+#: model:ir.model.fields,help:real_estate.field_realestate_building__message_has_error
+#: model:ir.model.fields,help:real_estate.field_realestate_building__message_has_sms_error
+#: model:ir.model.fields,help:real_estate.field_unit_reservation__message_has_error
+#: model:ir.model.fields,help:real_estate.field_unit_reservation__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si coché, certains messages ont une erreur de livraison."
+
+#. module: real_estate
+#: model:ir.model.fields,help:real_estate.field_realestate_building__active
+msgid ""
+"If the active field is set to False, it will allow you to hide the top "
+"without removing it."
+msgstr ""
+"Si le champ actif est défini sur False, cela vous permettra de masquer le "
+"hautsans l'enlever."
+
+#. module: real_estate
+#: model:ir.model,name:real_estate.model_installment_template
+msgid "Installment Template"
+msgstr "Modèle de versement"
+
+#. module: real_estate
+#: model:ir.actions.act_window,name:real_estate.installment_template_action
+#: model:ir.ui.menu,name:real_estate.menu_installment_template_menu
+msgid "Installment Templates"
+msgstr "Modèles de versement"
+
+#. module: real_estate
+#: model_terms:ir.ui.view,arch_db:real_estate.realestate_contract_view_form
+#: model_terms:ir.ui.view,arch_db:real_estate.unit_reservation_form_view
+msgid "Installments"
+msgstr "Versements"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__insurance_fee
+#: model:ir.model.fields,field_description:real_estate.field_product_template__insurance_fee
+msgid "Insurance fee"
+msgstr "Frais d'assurance"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__internet
+#: model:ir.model.fields,field_description:real_estate.field_product_template__internet
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__internet
+msgid "Internet"
+msgstr "Internet"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__invoice_id
+#: model_terms:ir.ui.view,arch_db:real_estate.realestate_contract_view_form
+msgid "Invoice"
+msgstr "Facture"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_installment_template__message_is_follower
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__message_is_follower
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__message_is_follower
+msgid "Is Follower"
+msgstr "Est un suiveur"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__land_area
+#: model:ir.model.fields,field_description:real_estate.field_product_template__land_area
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__land_area
+#: model:ir.model.fields,field_description:real_estate.field_res_city__land_area
+#: model:ir.model.fields,field_description:real_estate.field_res_country__land_area
+msgid "Land Area m²"
+msgstr "Surface du terrain m²"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_building_component____last_update
+#: model:ir.model.fields,field_description:real_estate.field_building_component_line____last_update
+#: model:ir.model.fields,field_description:real_estate.field_building_furniture____last_update
+#: model:ir.model.fields,field_description:real_estate.field_building_type____last_update
+#: model:ir.model.fields,field_description:real_estate.field_installment_template____last_update
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building____last_update
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract____last_update
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract_line____last_update
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission____last_update
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission_line____last_update
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission_section____last_update
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation____last_update
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation_line____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_building_component__write_uid
+#: model:ir.model.fields,field_description:real_estate.field_building_component_line__write_uid
+#: model:ir.model.fields,field_description:real_estate.field_building_furniture__write_uid
+#: model:ir.model.fields,field_description:real_estate.field_building_type__write_uid
+#: model:ir.model.fields,field_description:real_estate.field_installment_template__write_uid
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__write_uid
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__write_uid
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract_line__write_uid
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission__write_uid
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission_line__write_uid
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission_section__write_uid
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__write_uid
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation_line__write_uid
+msgid "Last Updated by"
+msgstr "Dernière modification par"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_building_component__write_date
+#: model:ir.model.fields,field_description:real_estate.field_building_component_line__write_date
+#: model:ir.model.fields,field_description:real_estate.field_building_furniture__write_date
+#: model:ir.model.fields,field_description:real_estate.field_building_type__write_date
+#: model:ir.model.fields,field_description:real_estate.field_installment_template__write_date
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__write_date
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__write_date
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract_line__write_date
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission__write_date
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission_line__write_date
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission_section__write_date
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__write_date
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation_line__write_date
+msgid "Last Updated on"
+msgstr "Dernière modification en"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__latitude
+#: model:ir.model.fields,field_description:real_estate.field_product_template__latitude
+msgid "Latitude"
+msgstr "Latitude"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission__leader_fix_qty
+msgid "Leader Fixed percentage"
+msgstr "Leader Pourcentage fixe"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission_section__leader_percent
+msgid "Leader Percent"
+msgstr "Pourcentage de leader"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__license_code
+#: model:ir.model.fields,field_description:real_estate.field_product_template__license_code
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__license_code
+msgid "License Code"
+msgstr "Code de licence"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__license_date
+#: model:ir.model.fields,field_description:real_estate.field_product_template__license_date
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__license_date
+msgid "License Date"
+msgstr "Date de licence"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__license_location
+#: model:ir.model.fields,field_description:real_estate.field_product_template__license_location
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__license_location
+msgid "License Notarization"
+msgstr "Notarisation de licence"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__lift
+#: model:ir.model.fields,field_description:real_estate.field_product_template__lift
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__lift
+msgid "Lift"
+msgstr "Ascenseur"
+
+#. module: real_estate
+#: code:addons/real_estate/models/unit_reservation.py:0
+#, python-format
+msgid "Loan Installment"
+msgstr "Versement de prêt"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__longitude
+#: model:ir.model.fields,field_description:real_estate.field_product_template__longitude
+msgid "Longitude"
+msgstr "Longitude"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_installment_template__message_main_attachment_id
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__message_main_attachment_id
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Pièce jointe principale"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_installment_template__message_has_error
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__message_has_error
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__message_has_error
+msgid "Message Delivery error"
+msgstr "Erreur d'envoi de message"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_installment_template__message_ids
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__message_ids
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__message_ids
+msgid "Messages"
+msgstr "Messages"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_installment_template__duration_month
+msgid "Month"
+msgstr "Mois"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_building_component__name
+#: model:ir.model.fields,field_description:real_estate.field_installment_template__name
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__name
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__name
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract_line__name
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission__name
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__name
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation_line__name
+#: model_terms:ir.ui.view,arch_db:real_estate.installment_template_form_view
+msgid "Name"
+msgstr "Nom"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__building_area_net
+#: model:ir.model.fields,field_description:real_estate.field_product_template__building_area_net
+msgid "Net Area m²"
+msgstr "Surface nette en m²"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__activity_date_deadline
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Date limite de la prochaine activité"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__activity_summary
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__activity_summary
+msgid "Next Activity Summary"
+msgstr "Résumé de l'activité suivante"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__activity_type_id
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__activity_type_id
+msgid "Next Activity Type"
+msgstr "Type d'activité suivant"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__product_template__air_condition__none
+#: model:ir.model.fields.selection,name:real_estate.selection__realestate_building__air_condition__none
+msgid "None"
+msgstr "Aucun"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__north
+#: model:ir.model.fields,field_description:real_estate.field_product_template__north
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__north
+msgid "Northen border by"
+msgstr "Frontière nord"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__note_sales
+msgid "Note Sales Folder"
+msgstr "Note Dossier de vente"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__note
+#: model:ir.model.fields,field_description:real_estate.field_product_template__note
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__note
+#: model_terms:ir.ui.view,arch_db:real_estate.building_unit_view_form
+#: model_terms:ir.ui.view,arch_db:real_estate.realestate_building_view_form
+msgid "Notes"
+msgstr ""
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__garage
+#: model:ir.model.fields,field_description:real_estate.field_product_template__garage
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__garage
+msgid "Number Garage(s)"
+msgstr "Nombre Garage(s)"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_installment_template__message_needaction_counter
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__message_needaction_counter
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Nombre d'actions"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_installment_template__message_has_error_counter
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__message_has_error_counter
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__message_has_error_counter
+msgid "Number of errors"
+msgstr "Nombre d'erreurs"
+
+#. module: real_estate
+#: model:ir.model.fields,help:real_estate.field_installment_template__message_needaction_counter
+#: model:ir.model.fields,help:real_estate.field_realestate_building__message_needaction_counter
+#: model:ir.model.fields,help:real_estate.field_unit_reservation__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Nombre de messages exigeant une action"
+
+#. module: real_estate
+#: model:ir.model.fields,help:real_estate.field_installment_template__message_has_error_counter
+#: model:ir.model.fields,help:real_estate.field_realestate_building__message_has_error_counter
+#: model:ir.model.fields,help:real_estate.field_unit_reservation__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Nombre de messages avec des erreurs d'envoi"
+
+#. module: real_estate
+#: model:ir.model.fields,help:real_estate.field_installment_template__message_unread_counter
+#: model:ir.model.fields,help:real_estate.field_realestate_building__message_unread_counter
+#: model:ir.model.fields,help:real_estate.field_unit_reservation__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Nombre de messages non lus"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__product_template__usage__office
+#: model:ir.model.fields.selection,name:real_estate.selection__realestate_building__usage__office
+msgid "Office"
+msgstr "Bureau"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__product_template__heating_source__oil
+#: model:ir.model.fields.selection,name:real_estate.selection__realestate_building__heating_source__oil
+msgid "Oil"
+msgstr "Pétrole"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__old_building
+#: model:ir.model.fields,field_description:real_estate.field_product_template__old_building
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__old_building
+msgid "Old Building"
+msgstr "Ancien bâtiment"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__partner_id
+#: model:ir.model.fields,field_description:real_estate.field_product_template__partner_id
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__partner_id
+msgid "Owner"
+msgstr "Propriétaire"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__realestate_contract__type__ownership
+#: model:ir.model.fields.selection,name:real_estate.selection__unit_reservation__type__ownership
+msgid "Ownership"
+msgstr "Possession"
+
+#. module: real_estate
+#: code:addons/real_estate/models/unit_reservation.py:0
+#: code:addons/real_estate/models/unit_reservation.py:0
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__contract_id
+#, python-format
+msgid "Ownership Contract"
+msgstr "Contrat de propriété"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__paid
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract_line__paid
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation_line__paid
+msgid "Paid"
+msgstr "Payé"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__product_template__usage__parking
+#: model:ir.model.fields.selection,name:real_estate.selection__realestate_building__usage__parking
+msgid "Parking"
+msgstr "Parking"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__parking_place_rentable
+#: model:ir.model.fields,field_description:real_estate.field_product_template__parking_place_rentable
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__parking_place_rentable
+msgid "Parking rentable"
+msgstr "Parking louable"
+
+#. module: real_estate
+#: model:ir.model.fields,help:real_estate.field_product_product__parking_place_rentable
+#: model:ir.model.fields,help:real_estate.field_product_template__parking_place_rentable
+#: model:ir.model.fields,help:real_estate.field_realestate_building__parking_place_rentable
+msgid "Parking rentable in the location if available"
+msgstr "Parking louable sur place si disponible"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__product_template__air_condition__partial
+#: model:ir.model.fields.selection,name:real_estate.selection__realestate_building__air_condition__partial
+msgid "Partial"
+msgstr "Partiel"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__partner_id
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__partner_id
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation_line__partner_id
+#: model_terms:ir.ui.view,arch_db:real_estate.realestate_contract_view_search
+msgid "Partner"
+msgstr "Partenaire"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract_line__amount
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation_line__amount
+msgid "Payment"
+msgstr "Paiement"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__sale_commission__contract_state__paid
+msgid "Payment Based"
+msgstr "Paiement basé"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__template_id
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__template_id
+msgid "Payment Template"
+msgstr "Modèle de paiement"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__product_template__heating_source__pellets
+#: model:ir.model.fields.selection,name:real_estate.selection__realestate_building__heating_source__pellets
+msgid "Pellets"
+msgstr "Granulés"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission_section__percent
+msgid "Percent"
+msgstr "Pourcentage"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__phone
+#: model:ir.model.fields,field_description:real_estate.field_product_template__phone
+msgid "Phone"
+msgstr "Téléphone"
+
+#. module: real_estate
+#: code:addons/real_estate/models/realestate_contract.py:0
+#: code:addons/real_estate/models/unit_reservation.py:0
+#, python-format
+msgid "Please select first payment date!"
+msgstr "Veuillez sélectionner la date du premier paiement!"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_res_city__population_density
+#: model:ir.model.fields,field_description:real_estate.field_res_country__population_density
+msgid "Population Density"
+msgstr "Densité de population"
+
+#. module: real_estate
+#: model_terms:ir.ui.view,arch_db:real_estate.building_unit_view_form
+#: model_terms:ir.ui.view,arch_db:real_estate.realestate_building_view_form
+#: model_terms:ir.ui.view,arch_db:real_estate.realestate_contract_view_form
+msgid "Postal Code"
+msgstr "Code postal"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__zip
+#: model:ir.model.fields,field_description:real_estate.field_product_template__zip
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__zip
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__zip
+msgid "Postal code"
+msgstr "Code postal"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__price
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__pricing
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__price
+msgid "Price"
+msgstr "Prix"
+
+#. module: real_estate
+#: model:ir.model,name:real_estate.model_product_template
+#: model:ir.model.fields,field_description:real_estate.field_product_product__is_property
+#: model:ir.model.fields,field_description:real_estate.field_product_template__is_property
+msgid "Property"
+msgstr "Propriété"
+
+#. module: real_estate
+#: model_terms:ir.ui.view,arch_db:real_estate.building_unit_view_form
+msgid "Property Code"
+msgstr "Code de propriété"
+
+#. module: real_estate
+#: model_terms:ir.ui.view,arch_db:real_estate.building_unit_view_form
+msgid "Property Name"
+msgstr "Nom de la propriété"
+
+#. module: real_estate
+#: model:ir.model,name:real_estate.model_unit_reservation
+msgid "Property Reservation"
+msgstr "Réservation de propriété"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__purchase_date
+#: model:ir.model.fields,field_description:real_estate.field_product_template__purchase_date
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__purchase_date
+msgid "Purchase Date"
+msgstr "Date d'achat"
+
+#. module: real_estate
+#: model_terms:ir.ui.view,arch_db:real_estate.sale_commission_view_form
+msgid "Rates definition"
+msgstr "Définition des tarifs"
+
+#. module: real_estate
+#: model:ir.module.category,name:real_estate.real_estate_category
+#: model:ir.ui.menu,name:real_estate.real_estate_menu_root
+msgid "Real Estate"
+msgstr "Immobilier"
+
+#. module: real_estate
+#: model:ir.model,name:real_estate.model_realestate_building
+msgid "Real Estate Building"
+msgstr "Immobilier"
+
+#. module: real_estate
+#: model:ir.model,name:real_estate.model_realestate_contract
+msgid "Real Estate Contract"
+msgstr "Contrat d'immobilier"
+
+#. module: real_estate
+#: model:res.groups,name:real_estate.group_real_estate_manager
+msgid "Real estate Manager"
+msgstr "Directeur immobilier"
+
+#. module: real_estate
+#: model:ir.model,name:real_estate.model_realestate_contract_line
+msgid "Realestate Contract Line"
+msgstr "Ligne de contrat immobilier"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__realestate_contract__type__rental
+#: model:ir.model.fields.selection,name:real_estate.selection__unit_reservation__type__rental
+msgid "Rental"
+msgstr "Location"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__rental_fee
+#: model:ir.model.fields,field_description:real_estate.field_product_template__rental_fee
+msgid "Rental fee"
+msgstr "Frais de location"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_installment_template__repetition_rate
+msgid "Repetition Rate (month)"
+msgstr "Taux de répétition (mois)"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__reservation_id
+msgid "Reservation"
+msgstr "Réservation"
+
+#. module: real_estate
+#: model_terms:ir.ui.view,arch_db:real_estate.unit_reservation_form_view
+msgid "Reservation Data"
+msgstr "Données de réservation"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__reservation_line_ids
+msgid "Reservation Line"
+msgstr "Ligne de réservation"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__product_template__state__reserved
+#: model:ir.model.fields.selection,name:real_estate.selection__realestate_building__state__reserved
+msgid "Reserved"
+msgstr "Réservé"
+
+#. module: real_estate
+#: model:ir.ui.menu,name:real_estate.menu_reservation_main
+msgid "Resevations"
+msgstr "Réservations"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__user_id
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__user_id
+#: model_terms:ir.ui.view,arch_db:real_estate.realestate_contract_view_search
+msgid "Responsible"
+msgstr "Responsable"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__activity_user_id
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__activity_user_id
+msgid "Responsible User"
+msgstr "Utilisateur responsable"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__product_template__usage__rural
+#: model:ir.model.fields.selection,name:real_estate.selection__realestate_building__usage__rural
+msgid "Rural Property"
+msgstr "Propriété rurale"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__tv_sat
+msgid "SAT TV"
+msgstr "TV SAT"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_installment_template__message_has_sms_error
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__message_has_sms_error
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Erreur d'envoi de message"
+
+#. module: real_estate
+#: model:ir.model,name:real_estate.model_sale_commission_line
+msgid "Sale Commission line"
+msgstr "Ligne de commission de vente"
+
+#. module: real_estate
+#: model:ir.model,name:real_estate.model_sale_commission_section
+msgid "Sale Commission section"
+msgstr "Section de commission de vente"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__sale_date
+#: model:ir.model.fields,field_description:real_estate.field_product_template__sale_date
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__sale_date
+msgid "Sale Date"
+msgstr "Date de vente"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__team_id
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__team_id
+msgid "Sales Channel"
+msgstr "Canal des ventes"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission__sales_team_ids
+#: model:ir.model.fields.selection,name:real_estate.selection__sale_commission__apply_to__team
+msgid "Sales Team"
+msgstr "Équipe de vente"
+
+#. module: real_estate
+#: model_terms:ir.ui.view,arch_db:real_estate.sale_commission_view_form
+msgid "Sales representatives"
+msgstr "Représentants des ventes"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__sale_commission__apply_to__salesman
+msgid "Salesman"
+msgstr "Vendeur"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission__salesmen_ids
+msgid "Salesmen"
+msgstr "Vendeurs"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__tv_sat
+#: model:ir.model.fields,field_description:real_estate.field_product_template__tv_sat
+msgid "Sat TV"
+msgstr "Sat TV"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__sequence
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation_line__serial
+msgid "Serial"
+msgstr "Série"
+
+#. module: real_estate
+#: model:ir.ui.menu,name:real_estate.building_setting_menu
+#: model:ir.ui.menu,name:real_estate.real_estate_settings_menu
+msgid "Settings"
+msgstr "Configurations"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__product_template__usage__shop
+#: model:ir.model.fields.selection,name:real_estate.selection__realestate_building__usage__shop
+msgid "Shop"
+msgstr "Magasin"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__solar_electric
+#: model:ir.model.fields,field_description:real_estate.field_product_template__solar_electric
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__solar_electric
+msgid "Solar Electric System"
+msgstr "Système électrique solaire"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__solar_heating
+#: model:ir.model.fields,field_description:real_estate.field_product_template__solar_heating
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__solar_heating
+msgid "Solar Heating System"
+msgstr "Système de chauffage solaire"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__product_template__state__sold
+#: model:ir.model.fields.selection,name:real_estate.selection__realestate_building__state__sold
+msgid "Sold"
+msgstr "Vendu"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__origin
+msgid "Source Document"
+msgstr "Document source"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__south
+#: model:ir.model.fields,field_description:real_estate.field_product_template__south
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__south
+msgid "Southern border by"
+msgstr "Frontière sud"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__staircase
+#: model:ir.model.fields,field_description:real_estate.field_product_template__staircase
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__staircase
+msgid "Staircase"
+msgstr "Escalier"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__state
+#: model:ir.model.fields,field_description:real_estate.field_product_template__state
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__state
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__state
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__state
+#: model_terms:ir.ui.view,arch_db:real_estate.realestate_building_view_search
+#: model_terms:ir.ui.view,arch_db:real_estate.realestate_contract_view_search
+msgid "State"
+msgstr "Etat"
+
+#. module: real_estate
+#: model:ir.model.fields,help:real_estate.field_realestate_building__activity_state
+#: model:ir.model.fields,help:real_estate.field_unit_reservation__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Statut basé sur les activités\n"
+"En retard: la date d'échéance est déjà dépassée\n"
+"Aujourd'hui: la date de l'activité est aujourd'hui\n"
+"Prévu: activités futures."
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__street
+#: model:ir.model.fields,field_description:real_estate.field_product_template__street
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__street
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__street
+msgid "Street"
+msgstr "Rue"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__street2
+#: model:ir.model.fields,field_description:real_estate.field_product_template__street2
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__street2
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__street2
+msgid "Street 2"
+msgstr "Rue 2"
+
+#. module: real_estate
+#: model_terms:ir.ui.view,arch_db:real_estate.building_unit_view_form
+#: model_terms:ir.ui.view,arch_db:real_estate.realestate_building_view_form
+#: model_terms:ir.ui.view,arch_db:real_estate.realestate_contract_view_form
+msgid "Street...."
+msgstr "Rue ..."
+
+#. module: real_estate
+#: model_terms:ir.ui.view,arch_db:real_estate.building_unit_view_form
+#: model_terms:ir.ui.view,arch_db:real_estate.realestate_building_view_form
+#: model_terms:ir.ui.view,arch_db:real_estate.realestate_contract_view_form
+msgid "Street2"
+msgstr "Rue 2"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__surface
+#: model:ir.model.fields,field_description:real_estate.field_product_template__surface
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__surface
+msgid "Surface"
+msgstr "Surface"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__telephone
+msgid "Telephone"
+msgstr "Téléphone"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__terrace
+#: model:ir.model.fields,field_description:real_estate.field_product_template__terrace
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__terrace
+msgid "Terraces m²"
+msgstr "Terrasses m²"
+
+#. module: real_estate
+#: code:addons/real_estate/models/sale_commission.py:0
+#, python-format
+msgid "The lower limit cannot be greater than upper one."
+msgstr ""
+"La limite inférieure ne peut pas être supérieure à la limite supérieure."
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission_section__amount_to
+msgid "To"
+msgstr "À"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__total_amount
+msgid "Total Amount"
+msgstr "Montant total"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_building_type__name
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission__commission_type
+msgid "Type"
+msgstr "Type"
+
+#. module: real_estate
+#: model:ir.model.fields,help:real_estate.field_realestate_building__activity_exception_decoration
+#: model:ir.model.fields,help:real_estate.field_unit_reservation__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Type d'activité d'exception enregistrée."
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__unit_code
+msgid "Unit Code"
+msgstr "Unité Code"
+
+#. module: real_estate
+#: model:ir.actions.act_window,name:real_estate.unit_reservation_action
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation_line__unit_reservation_id
+msgid "Unit Reservation"
+msgstr "Réservation d'unité"
+
+#. module: real_estate
+#: model:ir.model,name:real_estate.model_unit_reservation_line
+msgid "Unit Reservation Line"
+msgstr "Ligne de réservation d'unité"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__product_template__air_condition__unknown
+#: model:ir.model.fields.selection,name:real_estate.selection__realestate_building__air_condition__unknown
+msgid "Unknown"
+msgstr "Inconnue"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_installment_template__message_unread
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__message_unread
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__message_unread
+msgid "Unread Messages"
+msgstr "Messages non lus"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_installment_template__message_unread_counter
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__message_unread_counter
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Compteur de messages non lus"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__usage
+#: model:ir.model.fields,field_description:real_estate.field_product_template__usage
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__usage
+msgid "Usage"
+msgstr ""
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission_line__user_id
+msgid "User"
+msgstr "Utilisateur"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__water_meter
+#: model:ir.model.fields,field_description:real_estate.field_product_template__water_meter
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__water_meter
+msgid "Water meter"
+msgstr "Compteur d'eau"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_installment_template__website_message_ids
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__website_message_ids
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__website_message_ids
+msgid "Website Messages"
+msgstr "Messages du site Web"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__url
+#: model:ir.model.fields,field_description:real_estate.field_product_template__url
+msgid "Website URL"
+msgstr ""
+
+#. module: real_estate
+#: model:ir.model.fields,help:real_estate.field_installment_template__website_message_ids
+#: model:ir.model.fields,help:real_estate.field_realestate_building__website_message_ids
+#: model:ir.model.fields,help:real_estate.field_unit_reservation__website_message_ids
+msgid "Website communication history"
+msgstr "Historique des communications sur le site Web"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_product_product__west
+#: model:ir.model.fields,field_description:real_estate.field_product_template__west
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__west
+msgid "Western border by"
+msgstr "Frontière ouest"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__product_template__heating_source__wood
+#: model:ir.model.fields.selection,name:real_estate.selection__realestate_building__heating_source__wood
+msgid "Wood"
+msgstr "Bois"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_installment_template__duration_year
+msgid "Year"
+msgstr "Année"
+
+#. module: real_estate
+#: model:ir.model,name:real_estate.model_building_type
+msgid "building type"
+msgstr "Type de bâtiment"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__product_template__heating__central
+#: model:ir.model.fields.selection,name:real_estate.selection__realestate_building__heating__central
+msgid "central heating"
+msgstr "chauffage central"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract_line__contract_id
+msgid "contract"
+msgstr "Contrat"
+
+#. module: real_estate
+#: code:addons/real_estate/models/realestate_contract.py:0
+#, python-format
+msgid "contract Installment"
+msgstr "Versement du contrat"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__product_template__heating__none
+#: model:ir.model.fields.selection,name:real_estate.selection__realestate_building__heating__none
+msgid "none"
+msgstr "aucun"
+
+#. module: real_estate
+#: model_terms:ir.ui.view,arch_db:real_estate.sale_commission_view_form
+msgid "sections"
+msgstr "sections"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__product_template__heating__self_contained_central
+#: model:ir.model.fields.selection,name:real_estate.selection__realestate_building__heating__self_contained_central
+msgid "self-contained central heating"
+msgstr "chauffage central autonome"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__product_template__heating__stove
+#: model:ir.model.fields.selection,name:real_estate.selection__realestate_building__heating__stove
+msgid "stove"
+msgstr "Fourneau"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__product_template__heating__tiled_stove
+#: model:ir.model.fields.selection,name:real_estate.selection__realestate_building__heating__tiled_stove
+msgid "tiled stove"
+msgstr "Poêle en faïence"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__type
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__type
+msgid "type"
+msgstr "type"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__product_template__heating__unknown
+#: model:ir.model.fields.selection,name:real_estate.selection__product_template__heating_source__unknown
+#: model:ir.model.fields.selection,name:real_estate.selection__realestate_building__heating__unknown
+#: model:ir.model.fields.selection,name:real_estate.selection__realestate_building__heating_source__unknown
+msgid "unknown"
+msgstr "inconnue"
+
+#. module: real_estate
+#: model:ir.model.fields.selection,name:real_estate.selection__product_template__usage__unlimited
+#: model:ir.model.fields.selection,name:real_estate.selection__realestate_building__usage__unlimited
+msgid "unlimited"
+msgstr "illimité"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_building__company_id
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__company_id
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract_line__company_id
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission__company_id
+#: model:ir.model.fields,field_description:real_estate.field_sale_commission_line__company_id
+#: model:ir.model.fields,field_description:real_estate.field_unit_reservation__company_id
+msgid "Company"
+msgstr "Société"
+
+#. module: real_estate
+#: model:ir.model.fields,field_description:real_estate.field_realestate_contract__duration
+msgid "Contract Duration"
+msgstr "Durée de contrat"

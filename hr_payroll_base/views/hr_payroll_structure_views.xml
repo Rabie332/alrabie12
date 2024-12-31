@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+     <record
+        id="view_hr_employee_grade_form_inherit_hr_payroll_base"
+        model="ir.ui.view"
+    >
+        <field name="name">hr.payroll.structure.form.inherit</field>
+        <field name="model">hr.payroll.structure</field>
+         <field name="inherit_id" ref="hr_payroll.view_hr_employee_grade_form" />
+        <field name="arch" type="xml">
+            <form position="attributes">
+                <attribute name="delete">0</attribute>
+            </form>
+            <field name="name" position="after">
+                <field name="active" invisible="1" />
+            </field>
+        </field>
+     </record>
+
+      <record
+        id="view_hr_payroll_structure_tree_inherit_hr_payroll_base"
+        model="ir.ui.view"
+    >
+        <field name="name">hr.payroll.structure.tree.inherit</field>
+        <field name="model">hr.payroll.structure</field>
+        <field name="inherit_id" ref="hr_payroll.view_hr_payroll_structure_list_view" />
+        <field name="arch" type="xml">
+            <tree position="attributes">
+                <attribute name="delete">0</attribute>
+            </tree>
+              <field name="name" position="after">
+                  <field name="active" invisible="1" />
+              </field>
+        </field>
+      </record>
+
+        <record
+        id="view_hr_payroll_structure_filter_inherit_hr_payroll_base"
+        model="ir.ui.view"
+    >
+        <field name="name">hr.payroll.structure.select.inherit</field>
+        <field name="model">hr.payroll.structure</field>
+         <field name="inherit_id" ref="hr_payroll.view_hr_payroll_structure_filter" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <filter
+                    name="inactive"
+                    string="Archived"
+                    domain="[('active','=',False)]"
+                />
+            </field>
+        </field>
+        </record>
+</odoo>

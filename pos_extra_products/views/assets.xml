@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template
+        id="pos_extra_products_assets"
+        name="pos_extra_products assets"
+        inherit_id="point_of_sale.assets"
+    >
+        <xpath expr="." position="inside">
+            <link
+                rel="stylesheet"
+                href="/pos_extra_products/static/src/scss/custom.scss"
+            />
+            <script
+                type="text/javascript"
+                src="/pos_extra_products/static/src/js/Orderline.js"
+            />
+            <script
+                type="text/javascript"
+                src="/pos_extra_products/static/src/js/ProductNotesPopup.js"
+            />
+            <script
+                type="text/javascript"
+                src="/pos_extra_products/static/src/js/models.js"
+            />
+            <script
+                type="text/javascript"
+                src="/pos_extra_products/static/src/js/db.js"
+            />
+            <script
+                type="text/javascript"
+                src="/pos_extra_products/static/src/js/ProductsWidget.js"
+            />
+            <script
+                type="text/javascript"
+                src="/pos_extra_products/static/src/js/ProductsWidgetControlPanel.js"
+            />
+        </xpath>
+    </template>
+
+
+</odoo>
